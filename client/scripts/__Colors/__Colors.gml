@@ -1,0 +1,6 @@
+#macro c_dkblue merge_color(c_navy, c_dkgray, 0.1)
+#macro c_dkblue2 merge_color(c_navy, c_dkgray, 0.5)
+#macro c_dkblue3 merge_color(c_dkblue2, c_black, 0.2)
+#macro c_sans make_color_rgb(70, 140, 255)
+#macro c_error make_color_rgb(220, 20, 20)
+#macro c_rainbow make_color_hsv((current_time / 10) % 255, 255, 255)

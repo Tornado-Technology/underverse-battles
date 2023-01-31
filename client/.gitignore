@@ -1,0 +1,8 @@
+# about .gitignore - https://tyapk.ru/blog/post/gitignore
+# folders
+___yyp_maker_trash/
+
+# extensions
+*.txt
+
+# files

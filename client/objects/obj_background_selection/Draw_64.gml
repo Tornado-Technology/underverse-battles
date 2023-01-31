@@ -1,0 +1,57 @@
+draw_reset();
+draw_set_font(font_determination);
+
+if (!show)
+	exit;
+
+// List songs
+
+/* Draw soundtrack */
+draw_name_song(background_x, background_y, text_color_standart, background_id);
+
+for (var i = 1; i <= list_size - list_middle; i++) {
+	if (background_id - i >= 0) {
+		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
+		draw_name_song(background_x, background_y - button_step_y * i, color, background_id - i);
+	}
+	
+	if (background_id + i < background_counts) {
+		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
+		draw_name_song(background_x, background_y + button_step_y * i, color, background_id + i);
+	}
+}
+
+// Buttons
+for (var i = 0; i < button_count; i++) {
+	var button = buttons[i];
+	var new_button_y = button_y + button_step_y * 2 + button_step_y * i;
+	var alpha = tab == 1 ? 1 : 0.1;
+	
+	button.draw(button_x - button.width / 2, new_button_y + button.height / 2, alpha);
+	button.is_enable_interaction = tab == 1;
+}
+
+// Line
+draw_rectangle(line_x - line_width / 2, line_y + line_height / 2, line_x + line_width / 2, line_y - line_height / 2, false);
+
+// Arrows
+if (background_id > 0) {
+	arrow_vertical.up.draw(arrow_x, arrow_y_up, 1, 0);
+}
+
+if (background_id < background_counts - 1) {
+	arrow_vertical.down.draw(arrow_x, arrow_y_down, 1, 180);
+}
+
+arrow_horizontal.left.draw(arrow_x_left, arrow_y, 1, 90);
+arrow_horizontal.right.draw(arrow_x_right, arrow_y, 1, 270);
+
+// Background
+var scale_size = 0.25;
+var bg_sprite = background_get(background_info.sprite, background_id);
+var border_scale_x = ((sprite_get_width(bg_sprite))  * scale_size + 14) / sprite_get_width(spr_bg_border);
+var border_scale_y = ((sprite_get_height(bg_sprite)) * scale_size + 14) / sprite_get_height(spr_bg_border);
+draw_sprite_ext(bg_sprite,     0, 50,     85,     scale_size,     scale_size,     0, c_white, 1);
+draw_sprite_ext(spr_bg_border, 0, 50 - 7, 85 - 7, border_scale_x, border_scale_y, 0, c_white, 1);
+
+draw_reset();

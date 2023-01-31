@@ -1,0 +1,97 @@
+event_inherited();
+
+if (!moveable && !is_stunned) {
+	is_stunned = true;
+	effect_fade(0.1, 1, c_blue, c_blue, true, 0);
+	battle_border_set_color(false, false, c_blue)
+}
+
+if (!moveable)
+	exit;
+	
+
+var SPD = 1.8;
+var SPD = (ability ? SPD / 2 : SPD);
+
+/* control */
+if (is_desktop && !mobile_mode) {
+	if(input_check_held(input.up)) 
+		movement_speed_y = -SPD; 
+
+	if(input_check_held(input.down)) 
+		movement_speed_y = SPD;
+
+	if(input_check_held(input.right)) 
+		movement_speed_x = SPD;
+	if(input_check_held(input.left)) 
+		movement_speed_x = -SPD;
+	
+	if(!input_check_held(input.up) && !input_check_held(input.down)) 
+		movement_speed_y=0;
+	
+	if(!input_check_held(input.right) && !input_check_held(input.left)) 
+		movement_speed_x=0;
+}
+
+if (is_mobile || mobile_mode) {
+	if (instance_exists(obj_ui_controls)) {
+		var joystick = get_joystick();
+		movement_speed_x = SPD * joystick.input_vector.x;
+		movement_speed_y = SPD * joystick.input_vector.y;
+	}
+}
+
+/* pushing */
+var pusher_inst = noone;
+if (place_meeting(x, y, obj_battle_pusher)) {
+	
+	pusher_inst = instance_place(x, y, obj_battle_pusher);
+	var blast_angle = pusher_inst._angle;
+	
+	var cos_blast_angle = cos(degtorad(blast_angle));
+	var sin_blast_angle = sin(degtorad(blast_angle));
+
+	outside_force_x = 8 * cos_blast_angle;
+	outside_force_y = -8 * sin_blast_angle;
+	
+	movement_speed_x = 0;
+	movement_speed_y = 0;
+} else {
+	outside_force_x = 0;
+	outside_force_y = 0;
+}
+
+if (place_meeting(x + movement_speed_x + outside_force_x, y, obj_solid)) {
+	while(!place_meeting(x + sign(movement_speed_x + outside_force_x), y, obj_solid)) 
+		x += sign(movement_speed_x + outside_force_x);
+	
+	movement_speed_x = 0;
+	
+	if (outside_force_x != 0)
+		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
+	
+	outside_force_x = 0;
+	border_force_x = border_delta_x;
+}
+else {
+	border_force_x = 0;
+}
+
+if (place_meeting(x, y + movement_speed_y + outside_force_y, obj_solid)) {
+	while(!place_meeting(x, y + sign(movement_speed_y+outside_force_y), obj_solid)) 
+		y += sign(movement_speed_y + outside_force_y);
+	
+	movement_speed_y = 0;
+	
+	if (outside_force_y != 0)
+		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
+		
+	outside_force_y = 0;
+	border_force_y = border_delta_y;
+}
+else {
+	border_force_y = 0;
+}
+
+x += movement_speed_x + outside_force_x + border_force_x;
+y += movement_speed_y + outside_force_y + border_force_y;

@@ -1,0 +1,67 @@
+{
+  "Settings": {
+    "Fullscreen": false,
+    "Language": 0,
+    "UI": {
+      "FpsStyle": 0,
+      "PingStyle": 0,
+      "Fight": {
+        "StatbarStyle": 1,
+        "TurnText": true
+      }
+    },
+    "MobileControls": {
+      "Controller": {
+        "Position": {
+          "X": 61,
+          "Y": 214
+        },
+        "Scale": 1.3
+      },
+      "Buttons": {
+        "X": {
+          "Position": {
+            "X": 113,
+            "Y": 250
+          },
+          "Scale": 1
+        },
+        "Action": {
+          "Position": {
+            "X": 427,
+            "Y": 209
+          },
+          "Scale": 1.25
+        }
+      }
+    },
+    "Gain": {
+      "Sound": 1,
+      "Music": 0.5,
+      "MenuMusic": 0.5
+    },
+    "Fight": {
+      "SpeerunMode": false,
+      "ResetDelay": true
+    },
+    "Control": {
+      "Up": 87,
+      "Down": 83,
+      "Left": 65,
+      "Right": 68,
+      "Action": 90,
+      "Skip": 88
+    },
+    "Data": {
+      "Autolog": true,
+      "SaveSoundtrack": true,
+      "SaveBackground": true
+    }
+  },
+  "Data": {
+    "FirstGame": false,
+    "Soundtrack": -1,
+    "Background": 0,
+    "Achievements": []
+  }
+}

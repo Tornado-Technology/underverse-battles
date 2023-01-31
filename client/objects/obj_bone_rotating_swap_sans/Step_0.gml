@@ -1,0 +1,1 @@
+image_angle = (image_angle + angle_speed) % 360;

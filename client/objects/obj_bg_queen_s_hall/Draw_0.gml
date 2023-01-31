@@ -1,0 +1,1 @@
+draw_sprite(spr_background_dark_fountain, frame, room_width / 2, 0);

@@ -1,0 +1,1 @@
+if (background_animator != noone) instance_destroy(background_animator);

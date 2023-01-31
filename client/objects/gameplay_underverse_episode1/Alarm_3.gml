@@ -1,0 +1,1 @@
+player_.moveable = true;

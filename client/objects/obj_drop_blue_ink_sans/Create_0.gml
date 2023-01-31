@@ -1,0 +1,7 @@
+event_inherited();
+
+time = 0;
+
+time_create_ink = 100;
+time_create_ink_step = 0.5;
+time_create_ink_max = 100;

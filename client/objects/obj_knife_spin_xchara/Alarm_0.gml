@@ -1,0 +1,1 @@
+_rotating = false;

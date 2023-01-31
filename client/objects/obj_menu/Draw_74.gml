@@ -1,0 +1,68 @@
+// Reset
+draw_reset();
+
+// Background
+draw_set_alpha(background_alpha);
+draw_sprite(background, 0, 0, background_y);
+
+background_alpha = approach(background_alpha, background_target_alpha, 0.08);
+background_y = approach(background_y, background_target_y, 0.2);
+
+// Anykey
+draw_set_font(font_determination);
+draw_set_halign(fa_center);
+	
+anykey_y = lerp(anykey_y, elements_show ? anykey_target_y : anykey_start_y, 0.1);
+anykey_alpha = wave(1, 0, 2, 0);
+
+draw_set_alpha(anykey_alpha);
+draw_text_outlined(width / 2, anykey_y, c_white, c_black, anykey_text);
+
+// Reset
+draw_reset();
+
+// Logo
+draw_set_alpha(logo_alpha);
+logo_y = lerp(logo_y, is_logo_open ? logo_start_y : logo_target_y, 0.1);
+draw_sprite(logo, 0, logo_x, logo_y);
+
+draw_reset();
+
+// Blackout
+draw_set_alpha(blackout_alpha);
+draw_set_color(c_black);
+draw_rectangle(0, 0, width, height, false);
+
+draw_reset();
+
+// Game Version
+if (page_index >= menu_page.settings && page_index <= menu_page.settings_beta) {
+	draw_set_font(font_console_mini);
+	draw_set_halign(fa_left);
+	
+	if (game_hash != undefined) {
+		draw_text_outlined(4, height - 20, c_grey, c_black, "Hash: " + string(game_hash));
+	}
+	
+	draw_text_outlined(4, height - 10, c_grey, c_black, game_version + " " + game_build);
+	draw_reset();
+}
+
+// User Data
+var account = network_account;
+var profile = network_profile;
+if (account != undefined && profile != undefined) {
+	if (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings) {
+		draw_set_font(font_console_mini);
+		draw_set_halign(fa_left);
+		draw_text_outlined(4, height - 20, c_grey, c_black, "Current Account: " + account.username);
+		draw_text_outlined(4, height - 10, c_grey, c_black, string(profile.rating) + " RP");
+	}
+}
+
+// Draw elements in page
+if (pause) exit;
+
+for (var i = 0; i < elements_count; i++) {
+	get_element_in_page(i).draw(page_x, page_y + page_element_offset * i, id);
+}

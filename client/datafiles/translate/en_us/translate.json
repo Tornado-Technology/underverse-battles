@@ -1,0 +1,974 @@
+{
+  "Name": "English",
+  "Game": {},
+  "Gold": "G",
+  "Splashes": [
+    "Hello, world!",
+    "Alt + f4",
+    "Hello Juju!",
+    "Change Vectors!",
+    "You cool!",
+    "Sans take your socks off",
+    "What? :|",
+    "Turtles are cool",
+    "Cactus",
+    "Have you heard about... Warp?",
+    "More than you think",
+    "Are you talking to this world with your hands? Yes?",
+    "Gaster was here - Gaster",
+    "Until dawn!",
+    "Now the world is asynchronous, Jevil are you happy?!",
+    "Undefined",
+    "Be yourself!",
+    "The players are covered! Are you a player?",
+    "Yes.",
+    ".sans",
+    "error x ink",
+    "Who invented the Underverse? I'm serious. I don't remember",
+    "Do you want to become a BIG SHOT?",
+    "[[Hyperlink Blocked]]",
+    "[[Hipperslink Unblocked]]",
+    "[[Hipperslink NOT Blocked]]",
+    "Why are you reading this?",
+    "CHAOS, CHAOS!!!",
+    "It's not leak Deltarune chapter 7... and 6... and 5... and... I'm too lazy to write further",
+    "by TornadoTech",
+    "by Marsilies",
+    "is cool!",
+    "Play in Terraria",
+    "Play in Minecraft",
+    "Toby Fox, where is Deltarune?",
+    "1 + 1 = 3",
+    "Can be divided by zero",
+    "Danil not founded!",
+    "TornadoTech#3699",
+    "0x00000001",
+    "I don't like Fatal Errors - Danil",
+    "Subscribe on Marsilies",
+    "Waiting for HalfLife 3...",
+    "Also play DF Connect",
+    "Try it without the damage!",
+    "Empty",
+    "Draw like Sock_Police",
+    "A CYBER'S WORLD?",
+    "GLaDOS",
+    "Divide by zero!",
+    "Generating cyber fields",
+    "Look for the references!",
+    "BOUNDLESSNESS",
+    "101%",
+    "Infinity + 1",
+    "Now Online",
+    "Mouse (sneaking around)",
+    "Mhhh, I have to rewrite everything again",
+    "*The dog ate this text*"
+  ],
+  "DiscordApp": {
+    "Undefined": "Not founded!",
+    "States": {
+      "Online": "Online",
+      "Offline": "Offline"
+    },
+    "Actions": {
+      "InMenu": "In Menu",
+      "InFight": "Fights",
+      "InStorymode": "Play Story Mode"
+    }
+  },
+  "AchievementGet": "Achievement get!",
+  "Achievements": {
+    "FirstEnemy": {
+      "Name": "Kill +1",
+      "Description": "Defeat any character"
+    },
+    "DefeatInk": {
+      "Name": "The universe is defenseless!",
+      "Description": "Defeat Ink Sans"
+    },
+    "DefeatError": {
+      "Name": "The errors have been cleaned up!",
+      "Description": "Defeat Error Sans"
+    },
+    "Link": {
+      "Name": "Hyperlink not blocked",
+      "Description": "Click on any link-button"
+    },
+    "Balance": {
+      "Name": "Perfect balance",
+      "Description": "Defeat the destroyer and creator"
+    },
+    "DefeatSans": {
+      "Name": "The End or The Beginning?",
+      "Description": "Defeat Sans"
+    },
+    "DefeatFellSans": {
+      "Name": "Anomaly #13",
+      "Description": "Defeat Fell Sans"
+    },
+    "DefeatSwapSans": {
+      "Name": "No fun",
+      "Description": "Defeat Swap Sans"
+    },
+    "DefeatSwapPapyrus": {
+      "Name": "Why is it so hard to live?",
+      "Description": "Defeat Swap Papyrus"
+    },
+    "DefeatXChara": {
+      "Name": "X-Treme",
+      "Description": "Defeat X-Chara"
+    },
+    "ACybersWorld": {
+      "Name": "A cyber world?",
+      "Description": "Login to the online game account"
+    }
+  },
+  "Backgrounds": {
+    "LastCoridor": {
+      "Name": "Last corridor",
+      "Description": ""
+    },
+    "UnderverseForest": {
+      "Name": "Forest park",
+      "Description": ""
+    },
+    "WinterForestPark": {
+      "Name": "Winter forest park",
+      "Description": ""
+    },
+    "DeltaruneBattle": {
+      "Name": "Deltarune battle",
+      "Description": ""
+    },
+    "QueensHall": {
+      "Name": "Queen's hall",
+      "Description": ""
+    },
+    "Jevil": {
+      "Name": "",
+      "Description": ""
+    },
+    "DoodleSphere": {
+      "Name": "Doodle sphere",
+      "Description": ""
+    },
+    "UndertaleBattle": {
+      "Name": "Undertale battle",
+      "Description": ""
+    }
+  },
+  "Menu": {
+    "Main": {
+      "SingleBattle": "Single Battle",
+      "Multiplayer": "Multiplayer",
+      "Characters": "Characters",
+      "Achievements": "Achievements",
+      "Credits": "Credits",
+      "Settings": "Settings",
+      "Modifications": "Modifications",
+      "DebugRooms": "Debug rooms",
+      "Exit": "Exit"
+    },
+    "PressAnyKey": "Press any key to continue...",
+    "CompleteTutorial": "Complete the tutorial",
+    "SingleBattle": {
+      "Title": "Single Battle",
+      "StoryMode": "Story mode",
+      "CustomBattle": "Battle versus bot",
+      "CustomSound": "Select soundtrack",
+      "SelectBackground": "Select background",
+      "MiniGame": "Mini-game: Get the banana"
+    },
+    "CustomSound": {
+      "CustomSoundSet": "Selected soundtrack: ",
+      "Undefined": "not installed",
+      "Default": "Reset soundtrack",
+      "Composer": "Composer",
+      "Cancel": "Exit"
+    },
+    "Background": {
+      "SelectedLocation": "Selected location: "
+    },
+    "StoryMode": {
+      "Title": "Story Mode",
+      "Tutorial": "Tutorial",
+      "Tutoriel": "Tutoriel",
+      "StartTutorial": "Start the tutorial",
+      "Battle1": "Ink Sans vs X-Chara",
+      "Battle2": "Error Sans vs Ink Sans",
+      "Battle3": "Sans vs Fell Sans",
+      "Battle4": "Swap Papyrus vs Cross",
+      "Battle5": "Swap Sans vs X-Chara",
+      "Battle6": "Dream vs Nightmare",
+      "Battle7": "Ink Sans vs Error Sans",
+      "Battle8": "Cross vs Killer Sans",
+      "Battle9": "Dream vs Killer Sans",
+      "Battle10": "Cross & Dream vs Nightmare"
+    },
+    "Control": {
+      "Title": "Control",
+      "Movement": "Movement",
+      "Up": "Up",
+      "Down": "Down",
+      "Left": "Left",
+      "Right": "Right",
+      "Action": "Action",
+      "Skip": "Additional action",
+      "Inventory": "Inventory",
+      "Fullscreen": "Fullscreen",
+      "Default": "Reset to default",
+      "FullscreenButtons": "F11",
+      "Message": {
+        "Binded": "This button is already binded",
+        "Forbidden": "Forbidden bind"
+      }
+    },
+    "StandardButtons": {
+      "OK": "OK",
+      "Yes": "Yes",
+      "No": "No",
+      "Cancel": "Cancel",
+      "Accept": "Accept",
+      "Apply": "Apply",
+      "Back": "Back"
+    },
+    "Multiplayer": {
+      "Title": "Multiplayer in BETA NOW",
+      "SignUp": "Sign up",
+      "LogIn": "Log in",
+      "Reconnect": "Reconnect",
+      "Reconnecting": "Reconnecting",
+      "SuccessfulReconnection": "Successful reconnection",
+      "FailedReconnection": "No connection to server",
+      "Battle1v1": "Start a battle",
+      "PlayOpenWorld": "Go to Omega Timeline",
+      "Statistics": "Statistics",
+      "LogOut": "Log out",
+      "SuccessfulLogOut": "You have successfully logged out",
+      "Matchmaking": "Matchmaking",
+      "NoPlayers": "There are no players looking for a match. You can wait or cancel the search."
+    },
+    "SignUp": {
+      "Title": "Sign up",
+      "Login": "Username",
+      "Password": "Password",
+      "EMail": "EMail",
+      "WriteLogin": "Write your login",
+      "WritePassword": "Write your password",
+      "ConfirmPassword": "Confirm your password",
+      "WriteEmail": "Write your email",
+      "Rules": "Username must be written without spaces. The password must contain at least 6 characters, have at least one uppercase letter, one capital letter and a number",
+      "MessageCode": "A verification code sent on your email. Write this code here.",
+      "WaitingForRegistration": "Waiting for registration"
+    },
+    "LogIn": {
+      "Title": "Log in",
+      "Login": "Username",
+      "Password": "Password",
+      "EMail": "E-mail",
+      "WriteLogin": "Write your username",
+      "WritePassword": "Write your password",
+      "WaitingForLogin": "Waiting for log in"
+    },
+    "LogInMessage": {
+      "RegistrationSuccessful": "Registration successful! Now you can log in.",
+      "LoginSuccessful": "Account login successful!",
+      "RegistrationInvalid": "Registration invalid (connect error)",
+      "LoginInvalid": "Account login invalid (connect error)",
+      "Error": [
+        "Data base is not working",
+        "Unknown error",
+        "Account corrupted",
+        "Account is blocked",
+        "Account does not exist",
+        "Account already exist",
+        "Account already online",
+        "Account ID is taken",
+        "Username is busy",
+        "Username does not match the rules",
+        "Incorrect password",
+        "Password does not comply with rules",
+        "E-mail is already used",
+        "E-mail does not comply with rules",
+        "E-mail does not exist",
+        "The profile is not exist",
+        "The profile already exist",
+        "The profile not found",
+        "The profile corrupted",
+        "Verification already in progress",
+        "Verification code is wrong",
+        "The second password does not match the first"
+      ]
+    },
+    "AccountOptions": {
+      "Title": "Account options",
+      "ChangeNickname": "Change nickname",
+      "ChangePassword": "Change password",
+      "ChangeEmail": "Change email",
+      "DeleteAccount": "Delete account"
+    },
+    "Statistics": {
+      "Title": "Statistics",
+      "Battle1v1": "Matches played",
+      "Battle1v1Wins": "Total wins",
+      "Battle1v1Defeats": "Total defeats",
+      "Rating": "Rating",
+      "Rank": "Rank",
+      "RankType": {
+        "Empty": "No rank",
+        "Gray": "Rookie",
+        "Green": "Candidate",
+        "Yellow": "Warrior",
+        "Blue": "Royal Guard",
+        "Cyan": "Royal Officer",
+        "Violet": "Veteran",
+        "Orange": "King",
+        "Red": "God of Hyperdeath"
+      },
+      "Gold": "Gold",
+      "FavoriteChar": "Favorite character"
+    },
+    "Settings": {
+      "Title": "Settings",
+      "Main": "Main",
+      "Control": "Control",
+      "MobileControl": "Change control",
+      "Sound": "Sound",
+      "Fullscreen": "Fullscreen:",
+      "Language": "Language:",
+      "DisplayTurnText": "Display \"Turn\" hints",
+      "DisplayPing": "Display Ping:",
+      "DisplayFPS": "Display FPS:",
+      "HUDTransparence": "HUD transparence:",
+      "SoundVolume": "Sound volume:",
+      "MusicVolume": "Fight music volume:",
+      "MenuMusicVolume": "Menu music volume:",
+      "LanguageName": [
+        "English",
+        "Russian"
+      ],
+      "Data": {
+        "Title": "Game data",
+        "Autolog": "Autolog",
+        "Save": {
+          "Soundtrack": "Save selected soundtrack",
+          "Background": "Save selected location"
+        },
+        "Reset": {
+          "All": "Clear game data...",
+          "Achivments": "Reset Achievements",
+          "Settings": "Reset Settings"
+        }
+      },
+      "MobileControls": {
+        "Description": "Here you can set a position and size of controlers. Click on the controler to change",
+        "Position": "Position",
+        "Size": "Size",
+        "Ready": "Ready",
+        "Elements": {
+          "Joystick": {
+            "Name": "Joystick"
+          },
+          "Buttons": {
+            "X": {
+              "Name": "Button X"
+            },
+            "Action": {
+              "Name": "Button action"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Credits": {
+    "Developers": "DEVELOPERS",
+    "Artists": "ARTISTS",
+    "Localizer": "LOCALIZER",
+    "StoryCreator": "STORY CREATOR",
+    "Composers": "COMPOSERS",
+    "Based": "Based on the videogame",
+    "By": "by",
+    "Sponsors": "SPONSORS",
+    "YouTubers": "YOUTUBERS AND STREAMERS",
+    "SpecialThanks": "SPECIAL THANKS",
+    "AndYou": "And YOU, player"
+  },
+  "Character": {
+    "InkSans": {
+      "Name": "Ink Sans",
+      "Description": "The artist",
+      "Bio": "Guardian of the Multiverse, deemed an outcode character. He endorses other creators to keep developing their AUs. Ink doesn't have an AU of his own, so he's given to travel across different universes, as well as attend to the Doodle Sphere - the 'intersection' between all the existing AUs. Ink is soulless, thus locking himself from feeling things on his own. That's where his paint flasks come in handy, endowing him with emotions when consumed over time. Thanks to that, he commonly appears as a cheerful and playful being, always ready to help. Ink wields a brush as a primary weapon, which he calls Broomie. He's able to form different attacks by using his ink.",
+      "PassiveSkill": {
+        "Name": "Soulless heart",
+        "Description": "Ink Sans is not affected by blue attack and orange attack. Instead, he dodges another attack." },
+      "Attack": [
+        {
+          "Name": "Inks",
+          "Description": "Colored droplets dripping from above" },
+        {
+          "Name": "Broomie",
+          "Description": "Swinging damaging brush" },
+        {
+          "Name": "Ink Gasterblasters",
+          "Description": "Gasterblasters knocking back the soul to the box border and dealing damage" }
+      ],
+      "SpecialAttack": {
+        "Name": "Ink blast",
+        "Description": "Droplets of ink fly out of the center of the arena while you are attacked by Ink gasterblasters and Broomie" }
+    },
+    "ErrorSans": {
+      "Name": "Error Sans",
+      "Description": "The glitch guy",
+      "Bio": "Exterminator of Alternate Universes, ruins others' lives for his amusement, including taking human souls and other characters to the Anti-Void. Error can shift between the Universes via glitched portals. Error's origin is unknown; even Error himself has no clue how he ended up in the Anti-Void. Error is a selfish introvert, confirmed to be haphephobic, which means being afraid of others' touches, in addition to being myopic.",
+      "PassiveSkill": {
+        "Name": "Glitches",
+        "Description": "Error Sans has a 6% chance to take no damage when Karmic damage occurs" },
+      "Attack": [
+        {
+          "Name": "Error bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Strings",
+          "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" }
+      ],
+      "SpecialAttack": {
+        "Name": "Panic attack",
+        "Description": "A strong volley of dice followed by multiple shots from the gasterblasters" }
+    },
+    "ClassicSans": {
+      "Name": "Sans",
+      "Description": "The comedian skeleton",
+      "Bio": "The origin of all the other Sanses. Sans lived with other monsters in the Underground sealed by The Barrier until a human named Frisk helped them all escape to The Surface one day. Thenceforth Sans lives there along with humans and monsters. This skeleton is best described as a humorous jester. He's fond of dad jokes and loves drinking ketchup, cuz, why not. However, Sans is often lazy and procrastinating, and sleeping is his jam.",
+      "PassiveSkill": {
+        "Name": "Rest",
+        "Description": "If Sans misses a turn, then he recovers 10 magic" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" },
+        {
+          "Name": "Blue attack",
+          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
+      ],
+      "SpecialAttack": {
+        "Name": "Bad time",
+        "Description": "" }
+    },
+    "FellSans": {
+      "Name": "Fell Sans",
+      "Description": "Nervous",
+      "Bio": "Sans's edgy version, belonging to Underfell AU and living in the Underground, where all monsters are more aggressive version of their original counterparts. This skeleton is pretty similar to the original Sans except for the appearance, rough temper and passion towards mustard.",
+      "PassiveSkill": {
+        "Name": "Energy potential",
+        "Description": "Fell Sans gets 1 additional magic for bringing soul closer to attacks" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" },
+        {
+          "Name": "Blue attack",
+          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
+      ],
+      "SpecialAttack": {
+        "Name": "Great time",
+        "Description": "" }
+    },
+    "SwapSans": {
+      "Name": "Swap Sans",
+      "Description": "You can call me Blue",
+      "Bio": "Sans that belongs to Underswap AU, where everybody's personality is swapped with one of another related character. So the Sans has the personality of Papyrus from original universe hence being cheerful, beaming and energetic. Wishes to join the Royal Guard and has a personally handmade Battle Body, which he never takes off even while showering. Ink Sans calls him Blueberry, or Blue for short. Ink met him in his house after Blue had accidentally spilled color paints. Swap Sans loves Mexican food, especially taco. Cooks for himself.",
+      "PassiveSkill": {
+        "Name": "Dodge master",
+        "Description": "Swap Sans only takes 8 damage per hit" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Spinning bones",
+          "Description": "Spinning bones targeting the SOUL and dealing damage on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" }
+      ],
+      "SpecialAttack": {
+        "Name": "Bone strike",
+        "Description": "" }
+    },
+    "SwapPapyrus": {
+      "Name": "Swap Papyrus",
+      "Description": "Smoking is harmful",
+      "Bio": "SwapSans's big brother. Belongs to UnderSwap AU. His personality is similar to the OG Sans's, he's joking, yet lazy. He wears an orange hoodie, black shorts and also red sneakers, for some reason. Tends to stoop a lot not to embarrass his brother by his height, also keeps a сigarette in his mouth all the time. Papyrus sincerely loves his brother and is always ready to support and protect him by all means.",
+      "PassiveSkill": {
+        "Name": "Smoke break",
+        "Description": "If Swap Papyrus misses a turn, then he recovers 10 magic" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" },
+        {
+          "Name": "Orange attack",
+          "Description": "The soul turns orange and gravitate to one side of the box with bones" }
+      ],
+      "SpecialAttack": {
+        "Name": "Bad time",
+        "Description": "" }
+    },
+    "Cross": {
+      "Name": "Cross",
+      "Description": "Wants his world back",
+      "Bio": "An alternate version of Sans from the XTale universe that was destroyed through his fault. He believed that by killing his family and friends, he would be able to get the Overwrite power and create the world anew. Instead, he was left alone along with X Chara's spirit, who was able to take control of Cross's body when Error stole their soul. He got the name Cross by X Frisk because he looked like a big cross with legs. Cross is no longer upbeat and playful. He is mostly sullen or aggressive. His favorite foods are tacos and chocolate. Afraid of cows.",
+      "PassiveSkill": {
+        "Name": "Cross of destiny",
+        "Description": "Cross's Special Attack accumulates by 4% per turn" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" },
+        {
+          "Name": "Blue attack",
+          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
+      ],
+      "SpecialAttack": {
+        "Name": "The Crusader",
+        "Description": "" }
+    },
+    "CrossXEvent": {
+      "Name": "Cross",
+      "Description": "Wants his world back",
+      "Bio": "An alternate version of Sans from the XTale universe that was destroyed through his fault. He believed that by killing his family and friends, he would be able to get the Overwrite power and create the world anew. Instead, he was left alone along with X Chara's spirit, who was able to take control of Cross's body when Error stole their soul. He got the name Cross by X Frisk because he looked like a big cross with legs. Cross is no longer upbeat and playful. He is mostly sullen or aggressive. His favorite foods are tacos and chocolate. Afraid of cows.",
+      "PassiveSkill": {
+        "Name": "Cross of destiny",
+        "Description": "Cross's Special Attack accumulates by 4% per turn" },
+      "Attack": [
+        {
+          "Name": "Bones",
+          "Description": "Bones targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Big knife",
+          "Description": "A big knife that swings and does damage" },
+        {
+          "Name": "Gasterblasters",
+          "Description": "Firing damaging gasterblasters" }
+      ],
+      "SpecialAttack": {
+        "Name": "X Event",
+        "Description": "" }
+    },
+    "XtaleChara": {
+      "Name": "X Chara",
+      "Description": "The unstable child",
+      "Bio": "A child from the XTale Universe who managed to survive in a monster body after genocide and destruction of his Universe. Due to his soul having been taken by Error Sans, he had to seek a replacement to it, so in searches, he made his way to the Original Universe as the only place he could reach. X!Chara is strong-willed and confident, although with occasional rage breakdowns. He loves chocolate.",
+      "PassiveSkill": {
+        "Name": "Magical surge",
+        "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
+      "Attack": [
+        {
+          "Name": "Knives",
+          "Description": "Damaging knives targeting the soul" },
+        {
+          "Name": "Damage wave",
+          "Description": "Damaging wave targeting the soul" },
+        {
+          "Name": "",
+          "Description": "" }
+      ],
+      "SpecialAttack": {
+        "Name": "Save",
+        "Description": "Restores HP depending on the amount of magic" }
+    },
+    "Green": {
+      "Name": "Green",
+      "Description": "The code editor",
+      "Bio": "Outcode and non-multiverse editor that roams the worlds in search of inspiration. He is the creation of Error 404. He was created to eliminate buggy anomalies by having the ability to edit code. He independently created the most secure timeline that thrives to this day. Due to one incident during creation, his soul was twisted into a non-standard form, and Green himself gained a one-of-a-kind editing power, which he developed over time. He knows perfectly well what is in the game and sees all the players that control the characters. Unlike the others, he is not her prisoner, because he himself often comes here to challenge the players.",
+      "PassiveSkill": {
+        "Name": "Two types of damage",
+        "Description": "Green can deal 1 damage with karma and 5 damage without karma" },
+      "Attack": [
+        {
+          "Name": "Bones and spikes",
+          "Description": "Bones and spikes targeting the soul and dealing damage on impact" },
+        {
+          "Name": "Strings",
+          "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
+        {
+          "Name": "Turbo blaster",
+          "Description": "One moving turbo blaster that shoots toward the soul" }
+      ],
+      "SpecialAttack": {
+        "Name": "Edit",
+        "Description": "" }
+    },
+    "Delta": {
+      "Name": "Delta",
+      "Description": "Tea boy",
+      "Bio": "Danil did'nt make a description of the character, because he has no time. He's making a game, get away from the boy!",
+      "PassiveSkill": {
+        "Name": "Passive ability",
+        "Description": "Description of the passive ability" },
+      "Attack": [
+        {
+          "Name": "Attack 1",
+          "Description": "Description 1" },
+        {
+          "Name": "Attack 2",
+          "Description": "Description 2" },
+        {
+          "Name": "Attack 3",
+          "Description": "Description 3" }
+      ],
+      "SpecialAttack": {
+        "Name": "Special attack",
+        "Description": "Description of the special attack" }
+    }
+  },
+  "CharactersDescription": {
+    "CharactersList": "Characters list",
+    "SelectYourCharacter": "Select your character",
+    "SelectEnemyCharacter": "Select enemy character",
+    "Description": "Description",
+    "HP": "HP",
+    "SP": "Stamina",
+    "Damage": "Damage",
+    "Karma": "karma",
+    "Regeneration": "Regeneration",
+    "Creator": "Creator",
+    "Soundtrack": "Soundtrack",
+    "Skins": "Skins",
+    "Attacks": "Attacks",
+    "Stamines": "stamina",
+    "StoryMode": "Story mode"
+  },
+  "CharactersStyles": {
+    "Standard": "Standard",
+    "Classic": "Classic",
+    "OldClothes": "Old clothes",
+    "NewClothes": "New clothes",
+    "Jacket": "Jacket",
+    "SansaClaus": "Sansa Claus",
+    "Christmas": "Christmas",
+    "Xmas": "Xmas",
+    "RoyalGuardian": "Royal guardian",
+    "XEvent": "X-event",
+    "Overalls": "Overalls",
+    "Negative": "Negative",
+    "Child": "Child",
+    "Adult": "Adult",
+    "Experiment": "Experiment",
+    "Coat": "Coat",
+    "Vest": "Vest",
+    "Lord": "Lord"
+  },
+  "Attacks": {
+    "Atk1": "Attack 1",
+    "Atk2": "Attack 2",
+    "Atk3": "Attack 3",
+    "Broomie": "Broomie",
+    "Inks": "Inks",
+    "InkGasterblasters": "Ink Gasterblasters",
+    "ErrorBones": "Error bones",
+    "Strings": "Strings",
+    "Bones": "Bones",
+    "Gasterblasters": "Gasterblasters",
+    "BlueAttack": "Blue attack",
+    "RotatingBones": "Rotating bones",
+    "OrangeAttack": "Orange attack",
+    "StarRod": "Star rod",
+    "DreamsBow": "Dream's Bow",
+    "PositiveAttitude": "Positive attitude",
+    "Fireballs": "Fireballs",
+    "FieryVeil": "Fiery veil",
+    "Trident": "Trident",
+    "BigKnife": "Big knife",
+    "SwordAndShield": "Sword and shield",
+    "DamageWave": "Damage wave",
+    "Save": "Save",
+    "MiniMettatons": "Mini-Mettatons",
+    "Bombs": "Bombs",
+    "PlasmaBeam": "Plasma beam",
+    "Tentacles": "Tentacles",
+    "NegativeSpades": "Negative spades",
+    "NegativeVampire": "Negative vampire",
+    "Knives": "Knives",
+    "SmokeBombs": "SmokeBombs",
+    "Knife": "Knife",
+    "KillerGasterblaster": "Killer Gasterblaster",
+    "Overwrite": "Overwrite",
+    "CardDeck": "Card deck",
+    "BonesAndSpikes": "Bones and spikes",
+    "TurboBlaster": "Turbo blaster",
+    "Tea": "Tea rainstorm"
+  },
+  "AttacksDescription": {
+    "Broomie": "Swinging damaging brush",
+    "Inks": "Colored droplets dripping from above",
+    "InkGasterblasters": "Gasterblasters knocking back the soul to the box border and dealing damage",
+    "ErrorBones": "Bones targeting the soul and dealing damage on impact",
+    "Strings": "Strings targeting the soul. Damage and paralyze opponent on impact",
+    "Bones": "Bones targeting the soul and dealing damage on impact",
+    "Gasterblasters": "Firing damaging Gasterblasters",
+    "RotatingBones": "Spinning bones targeting the SOUL and dealing damage on impact",
+    "BlueAttack": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box",
+    "BlueAttackFellSans": "The soul turns blue, gravitation flips and moving bones emerge from different sides of the box",
+    "OrangeAttack": "The soul turns orange and gravitate to one side of the box with bones",
+    "BigKnife": "Swinging damaging big knife",
+    "Knives": "Damaging knives targeting the soul",
+    "DamageWave": "Damaging wave targeting the soul",
+    "Save": "Restores HP, but requires lots of stamina",
+    "CardDeck": "Falling boxes cause havoc and all 4 suits to the soul"
+  },
+  "Battle": {
+    "Target": "Target",
+    "YoureAttacking": "You're attacking",
+    "YoureDodging": "You're dodging",
+    "Miss": "Miss",
+    "Dodge": "Dodge",
+    "Max": "Max",
+    "ChooseYourAttack": "Choose your attack",
+    "Skip": "Skip",
+    "Rating": "RP",
+    "Disconnected": "disconnected",
+    "DisconnectedFromTheBattle": "The player was disconnected from the battle!",
+    "AttemptingToReconnect": "Attempting to reconnect..."
+  },
+  "Pause": {
+    "Title": "Menu",
+    "Return": "Return",
+    "GiveUp": "Give up",
+    "ReportPlayer": "Report the player",
+    "ExitToMenu": "Exit to menu"
+  },
+  "Gameover": {
+    "Restart": "Restart",
+    "Menu": "Menu",
+    "Next": "Next",
+    "RatingPoint": "RP"
+  },
+  "MiniGame": {
+    "Scores": "Scores",
+    "BackToMenu": "Back to menu"
+  },
+  "Dialog": {
+    "Underverse_Episode1": {
+      "Dialog1": [
+        "{Sans:normal}Emm... hi.",
+        "{Sans:normal}Who are you?",
+        "{C:secretive}You will not need for this information soon.",
+        "{Sans:normal}What are you meaning, dude?"
+      ],
+      "Dialog2": [
+        "{C:satisfied}Never let your guard down. You should listen to Undyne when she gives you advice.",
+        "{C:satisfied}That was much easier than being nice to you. Thank you, Sans."
+      ],
+      "Dialog3": [
+        "{Ink:combat}You will never find happiness in someone else's universe, Cross.",
+        "{C:angry}You again! Get lost! Or I'm gonna destroy his soul! No more of your pacifist crap!",
+        "{Ink:combat}Stop fooling around, Chara. Give him his soul back and then we can go home, ok?",
+        "{C:angry}GET LOST NOW!",
+        "{Ink:normal}Oh, are you serious?",
+        "{Ink:normal}Welp. You asked for it.",
+        "{Ink:normal}Sans, stay behind me. I'll try to make this quick."
+      ],
+      "Dialog4": [
+        "{Ink:normal}Greetings, player. Welcome to Underverse Battles.",
+        "{Ink:normal}Now I will learn you, how to fight in this game.",
+        "{Ink:normal}Do you see those bars?",
+        "{Ink:normal}Red bar is HP, white one is stamina, cyan one is magic.",
+        "{Ink:normal}Each player takes turns.",
+        "{Ink:surprised}Oh, no. Chara is attacking first. Dodge his attacks using a soul!"
+      ],
+      "Dialog5": [
+        "{Ink:normal}Well done, you're good at it!",
+        "{Ink:normal}Damn, we lost a little HP.",
+        "{Ink:normal}Now it's our turn.",
+        "{C:angry}Who are you talking to?",
+        "{Ink:proud}It's not your business.",
+        "{Ink:normal}I have three attacks: Inks, Broomie and Ink Gasterblasters.",
+        "{Ink:normal}Choose Inks."
+      ],
+      "Dialog6": [
+        "{Ink:glad}Perfect, we hit!",
+        "{Ink:normal}Every time you choose an attack, your stamina is lost.",
+        "{Ink:normal}Now Chara is attacking again.",
+        "{Ink:normal}You can try to predict the enemy attack so we don't lose HP and restore our stamina.",
+        "{Ink:normal}Choose one of the opponent attacks."
+      ],
+      "Dialog7": [
+        "{Ink:glad}Perfect, you dodged!",
+        "{Ink:normal}Now you know, how stamina is working.",
+        "{Ink:normal}If your stamina is low you won't be able to attack, so save it.",
+        "{Ink:normal}Now I will tell you about magic.",
+        "{Ink:normal}It allows you to strengthen your attack.",
+        "{Ink:normal}The stronger the attack, the more likely it is to do serious damage.",
+        "{Ink:normal}This indicator shows how strong your attack is.",
+        "{Ink:normal}Try to select any attack and power up it."
+      ],
+      "WrongAttack": [
+        "{Ink:confused}Emm... you chose the wrong attack. Choose Inks."
+      ],
+      "WrongPower": [
+        "{Ink:confused}You forgot to power up our attack. Press right."
+      ],
+      "WrongSkip": [
+        "{Ink:confused}No need to choose an attack. Press [X]."
+      ],
+      "Dialog8": [
+        "{Ink:glad}Good work!",
+        "{Ink:normal}Magic is restored when you hit an enemy or get close to attack.",
+        "{Ink:normal}What means \"get close to attack\"?",
+        "{Ink:normal}When your soul is close to taking damage, it lights up. Do you see?",
+        "{Ink:normal}Now Chara attacks. Try to predict the attack again."
+      ],
+      "Dialog9": [
+        "{Ink:surprised}Oops, it looks like Chara has decided to attack you with another attack!",
+        "{Ink:combat}Dodge with your soul!"
+      ],
+      "Dialog10": [
+        "{Ink:normal}By the way, you don't have to attack. You can press [X] to skip your turn.",
+        "{Ink:normal}This is useful when your stamina is low.",
+        "{Ink:normal}Try to skip your turn."
+      ],
+      "Dialog11": [
+        "{Ink:glad}Perfect!",
+        "{Ink:normal}One more point. The enemy won't wait long for your turn.",
+        "{Ink:normal}Each player has 10 seconds to choose an attack.",
+        "{Ink:normal}If time ran out and you don't choose an attack, then you will miss a turn.",
+        "{Ink:glad}Well, let's play with time!"
+      ],
+      "Dialog12": [
+        "{Sans:tired}Look, bud. I dunno what's happening but you don't belong here.",
+        "{Sans:tired}You gotta stop this. Now.",
+        "{Sans:tired}Please, give me back my soul.",
+        "{Sans:tired}I'm sure this artist me will help ya.",
+        "{Ink:calm}Chara, Cross, let's go home. We'll find a better way to...",
+        "{C:secretive}I just don't want to die... I just... I need...",
+        "{C:satisfied}WE NEED OUR OWN UNIVERSE!",
+        "{Ink:surprised}No, wait!",
+        "{Ink:confused}This is bad...",
+        "{Sans:tired}..."
+      ]
+    },
+    "Underverse_Episode2": {
+      "Dialog1": [
+        "{Sans:tired}So... your name's Ink, huh?",
+        "{Ink:combat}...Yup. Nice to meet ya."
+      ],
+      "Dialog2": [
+        "{Ink:calm}I-I'm sorry Sans, I never thought this could happen...",
+        "{Sans:tired}Ot's ok bud. I'm not dead... At least not yet.",
+        "{Sans:tired}I shouldn't have slept here.",
+        "{Sans:tired}Looks like that guy loves to cause trouble.",
+        "{Ink:calm}Actually, this is the first time he's done something like this.",
+        "{Ink:calm}He's scared since... Will... It's a long story..."
+      ],
+      "Choise1": [
+        "The artist version of Sans wants to talk with someone.",
+        "Listen",
+        "Nope. Get outta here"
+      ],
+      "Dialog3_1": [
+        "{Sans:tired}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
+      ],
+      "Dialog4_1": [
+        "{Ink:glad}DO YOU WANNA KNOW MORE ABOUT C!? GREAT!!",
+        "{Ink:normal}Ehem! Sorry for that, heh...",
+        "{Ink:normal}Alright... All started with a simple drop in a far universe..."
+      ],
+      "Dialog5_1": [
+        "{Ink:none}Everything seemed to be normal. Your universe and the thousands of existing variations still continued peacefully.",
+        "{Ink:none}Suddenly, I felt the appearance of a new universe. It had a very strong presence...",
+        "{Ink:none}...despite having the sound of dripping water.",
+        "{Ink:none}I couldn't contain my excitement, so I decided to go there.",
+        "{Ink:none}I was eager to meet this new world and its inhabitants...",
+        "{Ink:none}...But there was absolutely nothing except for one person.",
+        "{Ink:none}And actually... those drops were his tears.",
+        "{Ink:none}He was very scared. His mind was invaded by horror.",
+        "{Ink:none}He noticed there was someone else... me.",
+        "{Ink:none}However, soon we broke the ice, and he told me his name.",
+        "{Ink:none}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities.",
+        "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
+        "{Ink:combat}Chara is sealed inside his body. How did it happen? He never told me...",
+        "{Ink:none}At first they acted as two separate beings.",
+        "{Ink:none}However, as I visited Cross to keep him company, he won full control of both souls."
+      ],
+      "Dialog6_1": [
+        "{Ink:none}One day, while were drawing stuff, he stood up.",
+        "{Ink:none}He looked pretty down in the dumps.",
+        "{Ink:none}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him.",
+        "{Ink:calm}He refused to go, because he was convinced that his world was still alive.",
+        "{Ink:calm}Cross thought he could restore everything with my help.",
+        "{Ink:calm}But when I told him that can't resurrect the dead...",
+        "{Ink:emotionless}His face..."
+      ],
+      "Dialog3_2": [
+        "{Sans:tired}Look, you better go. I'm not interested in your clowning.",
+        "{Ink:surprised}But Sans... Half of your soul was stolen from you.",
+        "{Sans:tired}I will survive. And you do your own shit.",
+        "{Ink:calm}OK, I get it. After all, it was my fault.",
+        "{Ink:combat}Don't worry Sans. I will do anything to get your half of your soul back."
+      ],
+      "Dialog4_2": [
+        "{Ink:combat}Emm... Good luck."
+      ],
+      "Dialog5_2": [
+        "{Sans:tired}Hmm ... What's a day.",
+        "{Papyrus:none}SANS! WHERE ARE YOU!?",
+        "{Sans:tired}Time to go."
+      ],
+      "Dialog7": [
+        "{Ink:calm}C, please! You know I can't create a new world... are you OK?",
+        "{Cross:angry}Get away from me!",
+        "{Ink:combat}Ok... I'll go, C... just don't be sad... because...",
+        "{Ink:combat}You're like my brother... and I don't want my brother being sad."
+      ],
+      "Dialog8": [
+        "{Cross:calm}Ink? Is that you?"
+      ],
+      "Dialog9": [
+        "{Error:normal}Humm... This place is pretty big for a single person.",
+        "{Error:normal}This is kinda selfish y'know?"
+      ],
+      "Dialog10": [
+        "{Error:normal}Ink... Ink... Why do you on protecting this anomaly?",
+        "{Error:normal}You know you can't help them anymore.",
+        "{Error:normal}Let me give him a happy ending this time.",
+        "{Ink:angry}NO! THAT'S NOT YOUR WORK!",
+        "{Error:normal}Welp...",
+        "{Error:normal}I tried to be friendly."
+      ],
+      "Dialog11": [
+        "{Error:normal}Ink, don't resist. I'm not going to kill him.",
+        "{Ink:combat}I won't let you do whatever you want!",
+        "{Error:normal}Looks like you forgot about our truce."
+      ],
+      "Dialog12": [
+        "{Error:normal}Damn, Ink is good at dodging my attacks.",
+        "{Error:normal}I need to use my special attack.",
+        "{Error:normal}I'm tired of these games."
+      ],
+      "Dialog13": [
+        "{C:satisfied}I'M FREE!",
+        "{Cross:angry}NO! WAIT!",
+        "{Ink:injured}C-Cross? Are you alright?"
+      ],
+      "Dialog14": [
+        "{Ink:injured}This is bad."
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// They forgot to add polymorphism - Tesmi
+/// @desc All code here!
+
+input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
+
+// Actualy player don't chose yet
+if (fight_get_enemy_action(0) != -1) exit;
+
+// All input in keyboard
+var input_raw_v = input_check_pressed(input.down) - input_check_pressed(input.up);
+var input_raw_h = input_check_pressed(input.right) - input_check_pressed(input.left);
+var input_select = input_check_pressed(input.action);
+var input_skip = input_check_pressed(input.skip);
+
+// Power bar
+if (can_select) {
+	if (abs(input_raw_h)) {
+		var power_min = 0;
+		var power_max = 4;
+	
+		// Next uograde cost
+		var can_select_power = fight_get_enemy_mana(0) >= fight_get_enemy_action_mana_cost(0, clamp(selected_power + 1, power_min, power_max));
+	
+		// Can add power if we have some mana or if we below manabar
+		if (can_select_power || input_raw_h < 0) {
+			selected_power = clamp(selected_power + input_raw_h, power_min, power_max);
+		}
+	
+		audio_play_sound(sound_click, 0, false);
+	}
+}
+
+// TODO: Напишу так что-бы передать точность, нужно сделать 
+// перепрыгивания черех неправельные варианты которые нельзя выбрать
+
+// Action bar
+if (can_select) {
+	if (abs(input_raw_v)) {
+		var action_min = 0;
+		var action_max = 2;
+	
+		selected_action += input_raw_v;
+		selected_action = selected_action > action_max ? 0 : selected_action;
+		selected_action = selected_action < action_min ? action_max : selected_action;
+
+		audio_play_sound(sound_click, 0, false);
+	}
+}
+
+if (input_select && can_select) {
+	confirm_action_and_power();
+}
+
+// Skiping (no comments)
+if (input_skip && can_skip) {
+	skip();
+}
