@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_megalovania",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -17,8 +20,4 @@
     "name": "Underverse",
     "path": "folders/Sounds/Soundtracks/Underverse.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_megalovania",
-  "tags": [],
-  "resourceType": "GMSound",
 }

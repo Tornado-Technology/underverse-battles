@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_gameover",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -12,13 +15,9 @@
     "path": "audiogroups/music",
   },
   "soundFile": "snd_gameover.ogg",
-  "duration": 142.680817,
+  "duration": 142.68082,
   "parent": {
     "name": "Underverse",
     "path": "folders/Sounds/Soundtracks/Underverse.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_gameover",
-  "tags": [],
-  "resourceType": "GMSound",
 }

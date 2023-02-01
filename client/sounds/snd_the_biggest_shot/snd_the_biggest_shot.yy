@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_the_biggest_shot",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -12,13 +15,9 @@
     "path": "audiogroups/music",
   },
   "soundFile": "snd_the_biggest_shot.ogg",
-  "duration": 153.027573,
+  "duration": 153.02757,
   "parent": {
     "name": "Deltarune",
     "path": "folders/Sounds/Soundtracks/Deltarune.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_the_biggest_shot",
-  "tags": [],
-  "resourceType": "GMSound",
 }

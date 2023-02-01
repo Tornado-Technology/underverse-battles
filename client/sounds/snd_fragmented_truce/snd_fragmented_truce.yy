@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "snd_fragmented_truce",
   "ConfigValues": {},
-  "conversionMode": 0,
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,

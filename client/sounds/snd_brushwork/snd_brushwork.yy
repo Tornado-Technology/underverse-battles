@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_brushwork",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -12,13 +15,9 @@
     "path": "audiogroups/music",
   },
   "soundFile": "snd_brushwork.ogg",
-  "duration": 154.044083,
+  "duration": 154.04408,
   "parent": {
     "name": "Underverse",
     "path": "folders/Sounds/Soundtracks/Underverse.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_brushwork",
-  "tags": [],
-  "resourceType": "GMSound",
 }

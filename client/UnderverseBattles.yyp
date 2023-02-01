@@ -657,7 +657,6 @@
     {"id":{"name":"snd_swing","path":"sounds/snd_swing/snd_swing.yy",},"order":16,},
     {"id":{"name":"snd_teleport","path":"sounds/snd_teleport/snd_teleport.yy",},"order":17,},
     {"id":{"name":"snd_the_biggest_shot","path":"sounds/snd_the_biggest_shot/snd_the_biggest_shot.yy",},"order":3,},
-    {"id":{"name":"snd_the_ender_dragon","path":"sounds/snd_the_ender_dragon/snd_the_ender_dragon.yy",},"order":9,},
     {"id":{"name":"snd_the_world_revolving","path":"sounds/snd_the_world_revolving/snd_the_world_revolving.yy",},"order":4,},
     {"id":{"name":"snd_thread","path":"sounds/snd_thread/snd_thread.yy",},"order":18,},
     {"id":{"name":"snd_tick","path":"sounds/snd_tick/snd_tick.yy",},"order":19,},

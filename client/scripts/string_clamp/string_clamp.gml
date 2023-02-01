@@ -5,3 +5,4 @@
 function string_clamp(str, length, ending = ""){
 	return string_length(str) <= length ? str : string_copy(str, 1, length - string_length(ending)) + ending;
 }
+	

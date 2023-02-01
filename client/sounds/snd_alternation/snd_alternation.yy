@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_alternation",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -12,13 +15,9 @@
     "path": "audiogroups/menu_music",
   },
   "soundFile": "snd_alternation.ogg",
-  "duration": 104.620407,
+  "duration": 104.62041,
   "parent": {
     "name": "Underverse",
     "path": "folders/Sounds/Soundtracks/Underverse.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_alternation",
-  "tags": [],
-  "resourceType": "GMSound",
 }

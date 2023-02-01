@@ -1,5 +1,8 @@
 {
-  "conversionMode": 0,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "snd_rude_buster",
+  "conversionMode": 1,
   "compression": 1,
   "volume": 1.0,
   "preload": false,
@@ -12,13 +15,9 @@
     "path": "audiogroups/music",
   },
   "soundFile": "snd_rude_buster.ogg",
-  "duration": 174.262863,
+  "duration": 174.26286,
   "parent": {
     "name": "Deltarune",
     "path": "folders/Sounds/Soundtracks/Deltarune.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "snd_rude_buster",
-  "tags": [],
-  "resourceType": "GMSound",
 }
