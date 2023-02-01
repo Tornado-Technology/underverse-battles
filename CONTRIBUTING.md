@@ -1,40 +1,40 @@
 # Client Contributing
-Here is a guidelines about client code contributions, for translations see [Translate](TRANSLATING.md).
-This article is about the client. For server contributions see [Contributing-Server](CONTRIBUTING-SERVER.md)
+Here is a guidelines about client code contributions.<br>
+For translations see [Translate](TRANSLATING.md).<br>
+For server contributions see [Contributing to Server](CONTRIBUTING-SERVER.md)
 
 ## Basic Guidelines
 
 ### Use an IDE.
-GameMaker Studio 2 with same version declared in the `client/UnderverseBattles.yyp`. 
-Also, you can use GMEdit without its new features.
+GameMaker Studio 2 with same version declared in the `client/UnderverseBattles.yyp` file. 
+Also, when you use [GMEdit](https://yellowafterlife.itch.io/gmedit) you must not use these [features](https://github.com/YellowAfterlife/GMEdit/wiki).
 
 ### Always test your changes.
-Do not submit something without at least running the game to see if it compiles.  
-If you are submitting a new block, make sure it has a name and description, and that it works correctly in-game. If you are changing existing block mechanics, test them out first. Do not use methods that do not work or conflict with different platforms, and if necessary, use the operating system constants `is_desktop`, `is_mobile`, `is_html`.
+Do not submit your changes at least without running the game to see that it compiles and it works correctly in-game.  
+When you are submitting new commits or new pull requests (PR), make sure it has a name and description. When you are changing existing block mechanics, test them out first. Do not use methods that do not work or conflict with different platforms, and if necessary, use the operating system constants `is_desktop`, `is_mobile`, `is_html`.
 
 ### Do not make formatting changes.
-Yes, there are spaces, extra new lines, blank indents, and other minor errors.
-If you implement Pull Request with *actual code* changes,
+Yes, there are occurrences of trailing spaces, extra new lines, blank indents, and other minor errors.
+If you implement PR with *actual code* changes,
 feel free to fix the formatting in the immediate vicinity of your changes,
 but please don't waste everyone's time with meaningless changes.
 
 ### Say yes to JSDocs
 When declaring function specify its return and input values via [JSDocs](https://manual.yoyogames.com/The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm),
 example argument1: `/// @param {Real} argumnet1`.<br>
-Don't leave bare functions, they are very long to deal with later, comment parameters or add description to functions if needed.
+Don't leave bare functions, they are very long to deal with later, comment parameters or add description to functions if it is needed.
 
 ### Name things correctly
-Never abbreviate, write the titles in full.
+Never abbreviate the names of variables and functions, except for the use of recognized acronyms and abbreviations (GUI, IP, TCP, info, config). Write the names in full.
 It is not convenient and informative when your player instance variable is called `plr`, in which case it should be called `player_instance`.
-And it's important to remember that any asset is a noun as well as variables, but methods are verbs,
-and all events start with `on` Try not to forget about the importance of good naming of methods and other content.
+It's important to remember that any asset names is a noun as well as variables and constructors. Function, method and event names are verbs,
+wherein event names start with `on`. Do not forget the importance of good naming of any content.
 
 ### Do not make large changes before discussing them first.
 If you are interested in adding a major mechanic/feature or changing a large amount of code,
 contact me (TornadoTech) first via [Discord](https://discord.gg/2Nuas5NKj8).
 For most changes, this is not necessary.
-I just want to know if you're doing something big,
-so I can offer advice and/or make sure you're not wasting your time on it.
+I should to know you're going to make something major and important, so I can give advice and make sure you don't waste your time.
 
 ## Style Guidelines
 
@@ -56,10 +56,10 @@ Do not use or add assets such as: `Sequence`, `Path`, `Timeline`. They are too u
 
 ### Audio formatting guidelines.
 When adding sound files, make sure:
-- They are converted to `.ogg`.
-- You've compressed them as much as possible without losing any quality
-- You have set them to the correct audio group
-- You have set the default settings for this group (See table below)
+- They converted to `.ogg`
+- You compressed the files without losing any quality
+- You set them to the correct audio group
+- You set the default settings for this group (See table below)
 
 | Audio group | Conversion | Attributes     | Output | Sample Rate | Quality | BitRate |
 |-------------|------------|----------------|--------|-------------|---------|---------|
@@ -69,12 +69,14 @@ When adding sound files, make sure:
 
 ### Follow the code formatting guidelines.
 This means:
-- Spaces around parentheses: `if (condition) {`, `var string = object.to_string()`
-- Same-line braces.
+- Spaces around parentheses: `if (condition) {`, `var string = object.to_string();`
+- Write `;` in the end of lines
+- Do not use `and`, `or`, `not`. Instead of this use `&&`, `||`, `!` respectively.
+- Same-line braces
 - 4 spaces indentation
-- Use `snake_case` for all names, except `constructor` functions. Constructors are called `PascalCase`.
-- Do not use braceless `if/else` statements. `if (condition) statement else statement2` should **never** be done.
-- In very specific situations, having braceless if-statements on one line is allowed: `if (condition) return;` would be valid.
+- Use `snake_case` for all names, except `constructor` functions. Constructors are called `PascalCase`
+- Do not use braceless `if/else` statements. `if (condition) statement else statement2` should **never** be done
+- In very specific situations, having braceless if-statements on one line is allowed: `if (condition) return;` would be valid
 
 ### Use game solutions when possible.
 Instead of using `DsList`, `DsMap`, `DsGrid` collections.<br>
