@@ -7,3 +7,5 @@ if (follow_board) {
 invincibility_update();
 
 ability = global.fight_instance.required_components.input.input_ability;
+
+soul_strategy.update(id);
