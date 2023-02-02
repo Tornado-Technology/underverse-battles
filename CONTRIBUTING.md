@@ -1,17 +1,17 @@
 # Client Contributing
-Here is a guidelines about client code contributions.<br>
+These are the guidelines on client code contributions.<br>
 For translations see [Translate](TRANSLATING.md).<br>
 For server contributions see [Contributing to Server](CONTRIBUTING-SERVER.md)
 
 ## Basic Guidelines
 
 ### Use an IDE.
-GameMaker Studio 2 with same version declared in the `client/UnderverseBattles.yyp` file. 
-Also, when you use [GMEdit](https://yellowafterlife.itch.io/gmedit) you must not use these [features](https://github.com/YellowAfterlife/GMEdit/wiki).
+GameMaker Studio 2's version must be as stated in the `client/UnderverseBattles.yyp` file.
+Alternatively, if you use [GMEdit](https://yellowafterlife.itch.io/gmedit), do not use these [features](https://github.com/YellowAfterlife/GMEdit/wiki).
 
 ### Always test your changes.
-Do not submit your changes at least without running the game to see that it compiles and it works correctly in-game.  
-When you are submitting new commits or new pull requests (PR), make sure it has a name and description. When you are changing existing block mechanics, test them out first. Do not use methods that do not work or conflict with different platforms, and if necessary, use the operating system constants `is_desktop`, `is_mobile`, `is_html`.
+Do not submit your changes without at least running the game once to check if it compiles and works correctly in-game.
+When you submit new commits or pull requests (PR), make sure it has a name and description. When you are changing existing block mechanics, test them out first. Do not use methods that would conflict or not work with different platforms, and if necessary, use the operating system constants `is_desktop`, `is_mobile`, `is_html`.
 
 ### Do not make formatting changes.
 Yes, there are occurrences of trailing spaces, extra new lines, blank indents, and other minor errors.
@@ -20,14 +20,14 @@ feel free to fix the formatting in the immediate vicinity of your changes,
 but please don't waste everyone's time with meaningless changes.
 
 ### Say yes to JSDocs
-When declaring function specify its return and input values via [JSDocs](https://manual.yoyogames.com/The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm),
+When declaring a function specify its return and input values via [JSDocs](https://manual.yoyogames.com/The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm),
 example argument1: `/// @param {Real} argumnet1`.<br>
-Don't leave bare functions, they are very long to deal with later, comment parameters or add description to functions if it is needed.
+Don't leave bare functions, they are very long to deal with later. Comment parameters and add description to functions when needed.
 
 ### Name things correctly
 Never abbreviate the names of variables and functions, except for the use of recognized acronyms and abbreviations (GUI, IP, TCP, info, config). Write the names in full.
 It is not convenient and informative when your player instance variable is called `plr`, in which case it should be called `player_instance`.
-It's important to remember that any asset names is a noun as well as variables and constructors. Function, method and event names are verbs,
+It's important to remember that any asset name is a noun as well as variables and constructors. Function, method and event names are verbs,
 wherein event names start with `on`. Do not forget the importance of good naming of any content.
 
 ### Do not make large changes before discussing them first.
@@ -56,10 +56,10 @@ Do not use or add assets such as: `Sequence`, `Path`, `Timeline`. They are too u
 
 ### Audio formatting guidelines.
 When adding sound files, make sure:
-- They converted to `.ogg`
-- You compressed the files without losing any quality
-- You set them to the correct audio group
-- You set the default settings for this group (See table below)
+- They are converted to `.ogg`
+- You've compressed the files without losing any quality
+- You've set them to the correct audio group
+- You've set the default settings for this group (See table below)
 
 | Audio group | Conversion | Attributes     | Output | Sample Rate | Quality | BitRate |
 |-------------|------------|----------------|--------|-------------|---------|---------|
@@ -70,8 +70,8 @@ When adding sound files, make sure:
 ### Follow the code formatting guidelines.
 This means:
 - Spaces around parentheses: `if (condition) {`, `var string = object.to_string();`
-- Write `;` in the end of lines
-- Do not use `and`, `or`, `not`. Instead of this use `&&`, `||`, `!` respectively.
+- Write `;` at the end of lines
+- Do not use `and`, `or`, `not`. Instead use `&&`, `||`, `!` respectively.
 - Same-line braces
 - 4 spaces indentation
 - Use `snake_case` for all names, except `constructor` functions. Constructors are called `PascalCase`
