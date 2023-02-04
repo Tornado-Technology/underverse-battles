@@ -32,6 +32,14 @@ class Server {
       Logger.info(`Client ${client.uuid} disconnected`)
       await Client.remove(client);
     });
+
+    socket.on('error', (exception) => {
+      if (exception.message.includes('ECONNRESET')) {
+        Logger.info('Socket violently disconnected');
+        return;
+      }
+      Logger.error(`Socket error handled: ${exception}`);
+    });
   }
 
   public async loadInitializers(): Promise<void> {
@@ -43,7 +51,6 @@ class Server {
       Logger.info(`Initialize: ${file}...`);
       await import(`file://${directory}/initializers/${file}`);
     }
-
     Logger.info('Initialize done');
   }
 }

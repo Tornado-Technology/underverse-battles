@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_tea_delta",
   "spriteId": {
     "name": "spr_tea",
     "path": "sprites/spr_tea/spr_tea.yy",
@@ -25,16 +28,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Delta/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Tornado/Attacks/Bullets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_tea_delta",
-  "tags": [],
-  "resourceType": "GMObject",
 }

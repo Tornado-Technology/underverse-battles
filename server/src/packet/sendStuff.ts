@@ -17,7 +17,6 @@ export default class SendStuff {
   public account: IAccount;
   public profile: IProfile;
   public statistic: IStatistic;
-  public friendRequest: IFriendRequest;
 
   // Client components
   public fight: ClientFight = null;
@@ -29,7 +28,7 @@ export default class SendStuff {
     this.uuid = uuid;
   }
 
-  protected send(index: string, data: any): void {
+  protected send(index: string, data: any = {}): void {
     data.index = index;
     this.socket.write(Packet.build(data));
   }
@@ -60,6 +59,29 @@ export default class SendStuff {
     });
   }
 
+  public sendChangeNickname(status: number): void {
+    this.send('changeNickname', {
+      status,
+    })
+  }
+
+
+  public sendChangeUsername(status: number): void {
+    this.send('changeUsername', {
+      status,
+    })
+  }
+
+  public sendDeleteAccount(status: number): void {
+    this.send('deleteAccount', {
+      status,
+    })
+  }
+
+  public sendVerification(): void {
+    this.send('verification');
+  }
+
   /**
    * Packs all the information from the database into objects in JSON format, to send to the client.
    */
@@ -68,13 +90,12 @@ export default class SendStuff {
       account: this.account?.toJSON(),
       profile: this.profile?.toJSON(),
       statistic: this.statistic?.toJSON(),
-      friendRequest: this.friendRequest?.toJSON(),
     };
   }
 
   public sendPing(): void {
     this.send('ping', {
-      time: new Date().getTime() - App.pingStartTime
+      time: new Date().getTime() - App.pingStartTime,
     });
   }
 

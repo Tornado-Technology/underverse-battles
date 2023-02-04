@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = get_char_damage(char_tornado);
+damage = get_char_damage(obj_char_tornado);
 
 image_alpha = 0;
 image_xscale = 0.5;

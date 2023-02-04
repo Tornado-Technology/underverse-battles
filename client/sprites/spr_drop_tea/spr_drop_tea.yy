@@ -72,6 +72,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Delta/Sprites/Bullets.yy",
+    "path": "folders/Characteres/Tornado/Sprites/Bullets.yy",
   },
 }

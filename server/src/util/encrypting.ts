@@ -1,4 +1,4 @@
-import { randomBytes, scrypt, timingSafeEqual } from 'crypto';
+import { randomBytes, scrypt, timingSafeEqual, randomInt } from 'crypto';
 
 export const hashPassword = async (password: string): Promise<string> => (
   new Promise((resolve, reject) => {
@@ -29,3 +29,7 @@ export const verifyPassword = async (password: string, value: string): Promise<b
     })
   })
 );
+
+export const generateVerificationCode = (): string => {
+  return randomInt(1000000).toString().padStart(8, '0');
+};

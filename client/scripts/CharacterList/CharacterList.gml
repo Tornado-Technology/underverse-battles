@@ -52,46 +52,49 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 function CharacterList() {
 	global.characters = [
 		[
-			new Character(char_ink_sans, "InkSans",	"Classic", spr_ink_sans_frame)
+			new Character(obj_char_ink_sans, "InkSans",	"Classic", spr_ink_sans_frame)
 		],
 	
 		[
-			new Character(char_error_sans, "ErrorSans",	"Classic", spr_error_sans_frame)
+			new Character(obj_char_error_sans, "ErrorSans",	"Classic", spr_error_sans_frame)
 		],
 		[
-			new Character(char_sans, "ClassicSans",	"Classic", spr_sans_frame),
-			new Character(char_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame)
+			new Character(obj_char_sans, "ClassicSans",	"Classic", spr_sans_frame),
+			new Character(obj_char_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame)
 		],
 		[
-			new Character(char_fell_sans, "FellSans", "Classic", spr_fell_sans_frame)
+			new Character(obj_char_fell_sans, "FellSans", "Classic", spr_fell_sans_frame)
 		],
 		[
-			new Character(char_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
+			new Character(obj_char_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
 		],
 		[
-			new Character(char_swap_papyrus, "SwapPapyrus", "Classic", spr_swap_papyrus_frame),
-			new Character(char_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
+			new Character(obj_char_swap_papyrus, "SwapPapyrus", "Classic", spr_swap_papyrus_frame),
+			new Character(obj_char_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
 		],
 		[
-			new Character(char_xchara_uv00, "XtaleChara", "Standard", spr_xchara_frame),
-			new Character(char_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
+			new Character(obj_char_xchara_uv00, "XtaleChara", "Standard", spr_xchara_frame),
+			new Character(obj_char_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
 		],
 
 	];
 
 	if (development_mode) {
-		array_push(global.characters, 
-		[
-			new Character(char_cross_xtale, "Cross", "Standard", spr_cross_frame),
-			new Character(char_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
+		array_push(global.characters, [
+			new Character(obj_char_cross_xtale, "Cross", "Standard", spr_cross_frame),
+			new Character(obj_char_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
 		]);
 		
 		array_push(global.characters, [
-			new Character(char_green, "Green", "Standard", spr_green_frame)
+			new Character(obj_char_green, "Green", "Standard", spr_green_frame)
 		]);
 		
 		array_push(global.characters, [
-			new Character(char_tornado, "Delta", "Standard", spr_delta_frame)
+			new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
+		]);
+		
+		array_push(global.characters, [
+			new Character(obj_char_tornado, "Tornado", "Standard", spr_tornado_frame)
 		]);
 	}
 	

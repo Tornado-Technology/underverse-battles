@@ -6,11 +6,11 @@ audio_stop_all();
 // Добавить эмбиент леса
 
 // Создание персонажей
-sans = instance_create_depth(223, 197, fight_depth.enemy, char_sans, {
+sans = instance_create_depth(223, 197, fight_depth.enemy, obj_char_sans, {
 	sprite_index: spr_sans_sitting0
 });
 
-ink_sans = instance_create_depth(255, 197, fight_depth.enemy, char_ink_sans, {
+ink_sans = instance_create_depth(255, 197, fight_depth.enemy, obj_char_ink_sans, {
 	sprite_index: spr_ink_sans_sitting0
 });
 

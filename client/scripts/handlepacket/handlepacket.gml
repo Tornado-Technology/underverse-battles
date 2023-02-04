@@ -5,9 +5,9 @@ global.ping_instance = noone;
 
 /// @param {Struct} data - Data from server for handle
 function handle_packet(data) {
-	var cmd = string_lower(data.cmd)	
+	var index = string_lower(data.index)	
 	
-	switch(cmd) {
+	switch(index) {
 		case "connection":
 			var status = data.status;
 			var code = data.code;
@@ -31,11 +31,7 @@ function handle_packet(data) {
 			break;
 			
 		case "pong":
-			var t  = data.time;
-			var new_t = round(get_timer() / 1000);
-			var ping = new_t - t;
-			
-			network_ping = ping;
+			network_ping = round(get_timer() / 1000) - data.time;
 			break;
 
 		case "logout":
@@ -44,62 +40,30 @@ function handle_packet(data) {
 			break;
 
 		case "login":
-			var status = data.status;
-			
-			switch (status) {
-				case "success":
-					network_profile = data.profile;
-					network_account = data.account;
-					logger.info("Login success");
-					display_show_message_info(translate_get("Menu.LogInMessage.LoginSuccessful"), c_lime);
-					break;
-				
-				case "fail":
-					var reason = data.reason;
-					logger.error("Login failed. Error: ", reason);
-					display_show_message_info(translate_get("Menu.LogInMessage.Error")[reason - 300], c_red);
-					break;
+			if (data.status == 100) {
+				network_profile = data.profile;
+				network_account = data.account;
+				logger.info("Login success");
+				display_show_message_info(translate_get("Menu.LogInMessage.LoginSuccessful"), c_lime);
+				on_network_login.invoke(data.status);
+				break;
 			}
-		
-			on_network_login.invoke(status);
+
+			logger.error("Login failed. Error: ", data.status);
+			display_show_message_info(translate_get("Menu.LogInMessage.Error")[data.status - 300], c_red);
+			on_network_login.invoke(data.status);
 			break;
-		
-		case "email_change":
-			var status = data.status;
-			
-			if (status == "fail") {
-				var reason = data.reason;
-				// logger.error("Email chage failed. Error: " + reason);
-				display_show_message_info(translate_get("Menu.LogInMessage.Error")[reason - 300], c_red);
-				break;
-			} 
-			
-			if (status == "success") {
-				logger.info("Email change success!. New email: " + data.email);
-				display_show_message_info(translate_get("Menu.LogInMessage.LoginInvalid"), c_red);
-				break;
-			}
-			
-			logger.error("email change invalid");
-			break;	
-			
+
 		case "register":
-			var status = data.status;
-			if (status == "fail") {
-				var reason = data.reason;
-				failed_registration(reason);
-				logger.error("Registration failed!");
-				break;
-			} 
-			
-			if (status == "success") {
+			if (data.status == 100) {
 				successful_registration();
 				logger.info("Registration successful! You can login now.");
 				break;
-			} 
+			}
 			
-			invalid_registration();
-			logger.error("Error: invalid registration status")
+
+			failed_registration(data.status);
+			logger.error("Registration failed!");
 			break;
 			
 		case "account":
@@ -110,17 +74,20 @@ function handle_packet(data) {
 			network_profile = data.profile;
 			break;
 			
-		case "register_verification":
+		case "verification":
 			if (is_desktop) {
-				var code = get_integer(translate_get("Menu.SignUp.MessageCode"), "");
-				send_register_verification(code);
+				send_verification(get_string(translate_get("Menu.SignUp.MessageCode"), ""));
+				break;
 			}
+			
 			if (is_mobile) {
 				_id = undefined;
 				
 				global.verify_code_connection = global.virtual_keyboard.on_data.connect(function(args) {
-					if (args[1] != _id) { return; }
-					send_register_verification(args[0]);
+					if (args[1] != _id) { 
+						return; 
+					}
+					send_verification(args[0]);
 					global.virtual_keyboard.on_data.disconnect(global.verify_code_connection);
 				})
 				
@@ -254,7 +221,7 @@ function handle_packet(data) {
 		
 		// Global client freaking out from an invalid command
 		default:
-			logger.warning("Unknown network command: {0}.", data.cmd);
+			logger.warning("Unknown network command: {0}.", data.index);
 			break;
 	}
 }

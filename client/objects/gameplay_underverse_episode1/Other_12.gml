@@ -4,7 +4,7 @@ if (!instance_exists(dlg))
 	start_delay();
 	
 if (_delay == 150) {
-	ink_sans_ = instance_create_depth(player_.x - 250, player_.y - 80, fight_depth.enemy, char_ink_sans);
+	ink_sans_ = instance_create_depth(player_.x - 250, player_.y - 80, fight_depth.enemy, obj_char_ink_sans);
 	ink_sans_.sprite_index = spr_char_ink_sans_flip;
 }
 

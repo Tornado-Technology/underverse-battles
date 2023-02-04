@@ -24,7 +24,7 @@ function sign_up_apply() {
 		if (password1 != password2) {
 			failed_registration(321);
 		} else {
-			send_register(inputbox_login.text, inputbox_login.text, inputbox_password.text, inputbox_email.text);
+			send_register(inputbox_login.text, inputbox_password.text, inputbox_email.text);
 			alarm[0] = waiting_time;
 		}
 	}

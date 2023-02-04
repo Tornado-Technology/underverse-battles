@@ -16,9 +16,17 @@ export default class App {
   public static readonly status = {
     socketClosed: 0,
     success: 100,
-    unknownAccountError: 301,
+    unknownError: 301,
+    accountNotFound: 304,
     accountExists: 305,
     profileNotFound: 317,
+    usernameBusy: 308,
+    usernameNotMatchRules: 309,
+    incorrectPassword: 310,
+    passwordNotMatchRules: 311,
+    emailBusy: 312,
+    verificationCodeIncorrect: 320,
+    verificationTimeHasExpired: 321,
   };
 
   public static applyConfig(config: config): void {

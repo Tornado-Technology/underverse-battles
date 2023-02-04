@@ -42,7 +42,7 @@ export default class ClientFight {
 
     this.client.profile.fight.id = id;
     this.client.profile.fight.index = index;
-    this.client.setState(Client.states.inFight);
+    //this.client.setState(Client.states.inFight);
   }
 
   public get hasInstance(): boolean {

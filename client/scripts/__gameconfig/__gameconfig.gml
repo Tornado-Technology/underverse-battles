@@ -3,7 +3,9 @@
 #macro game_build "Windows x64"
 
 #macro default_mode (os_get_config() == "Default")
-#macro development_mode (os_get_config() == "Development")
+#macro development_mode (os_get_config() == "Development" || os_get_config() == "Localserver")
+#macro localserver_mode (os_get_config() == "Localserver")
+
 // Used to test mobile features for Desktop
 #macro mobile_mode false
 

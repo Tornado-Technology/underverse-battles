@@ -14,8 +14,8 @@ required_components = {
 };
 
 // CHARActer
-enemy_object[0] = char_ink_sans;
-enemy_object[1] = char_xchara_uv00;
+enemy_object[0] = obj_char_ink_sans;
+enemy_object[1] = obj_char_xchara_uv00;
 
 // Background
 var bg_id = _background.deltarune_battle;
