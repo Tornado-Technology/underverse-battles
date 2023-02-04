@@ -19,12 +19,12 @@ If you implement PR with *actual code* changes,
 feel free to fix the formatting in the immediate vicinity of your changes,
 but please don't waste everyone's time with meaningless changes.
 
-### Say yes to JSDocs
+### Say yes to JSDocs.
 When declaring a function specify its return and input values via [JSDocs](https://manual.yoyogames.com/The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm),
 example argument1: `/// @param {Real} argumnet1`.<br>
 Don't leave bare functions, they are very long to deal with later. Comment parameters and add description to functions when needed.
 
-### Name things correctly
+### Name things correctly.
 Never abbreviate the names of variables and functions, except for the use of recognized acronyms and abbreviations (GUI, IP, TCP, info, config). Write the names in full.
 It is not convenient and informative when your player instance variable is called `plr`, in which case it should be called `player_instance`.
 It's important to remember that any asset name is a noun as well as variables and constructors. Function, method and event names are verbs,
@@ -33,8 +33,8 @@ wherein event names start with `on`. Do not forget the importance of good naming
 ### Do not make large changes before discussing them first.
 If you are interested in adding a major mechanic/feature or changing a large amount of code,
 contact me (TornadoTech) first via [Discord](https://discord.gg/2Nuas5NKj8).
-For most changes, this is not necessary.
-I should to know you're going to make something major and important, so I can give advice and make sure you don't waste your time.
+This is not necessary for most changes.
+I should know if you're going to make something major and important, so I can give advice and make sure you don't waste your time.
 
 ## Style Guidelines
 
@@ -78,7 +78,7 @@ This means:
 - Do not use braceless `if/else` statements. `if (condition) statement else statement2` should **never** be done
 - In very specific situations, having braceless if-statements on one line is allowed: `if (condition) return;` would be valid
 
-### Use game solutions when possible.
+### Use game solutions if possible.
 Instead of using `DsList`, `DsMap`, `DsGrid` collections.<br>
 Use `struct`, `array`, `constructor` and other equivalents form `scripts`.
 - `DsMap` -> `Struct`

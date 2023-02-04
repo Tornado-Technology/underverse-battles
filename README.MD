@@ -3,12 +3,12 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ### What is this?
-Underverse Battles© — MMO BulletHell game based on Undertale, made with GameMaker Studio 2 and NodeJS(TypeScript)
+Underverse Battles© — MMO BulletHell game based on Undertale, made with GameMaker Studio 2 and NodeJS(TypeScript).
 
 ## Building
 All stable versions are available for download at [Releases](https://github.com/UnderverseBattles/underverse-battles/releases)
 
-### Client - Android or Windows x64
+### Client - Windows x64 and Android
 - Download GameMaker Studio 2
 - Open `client/UnderverseBattles.yyp`
 - Set project config (`development` for testing or `Default` for release)
