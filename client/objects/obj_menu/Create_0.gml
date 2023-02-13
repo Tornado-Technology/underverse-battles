@@ -17,6 +17,11 @@ enum menu_page {
 	credits,
 	modifications,
 	
+	// Account settings
+    account_change_nickname,
+    account_change_password,
+    account_change_email,
+	
 	// Setings group
 	settings,
 	settings_main,
@@ -380,12 +385,52 @@ create_page([
 ], menu_page.statistics);
 
 // Account settings
+account_settings_inputbox_change_nickname = InputBox("TODO: add key");
+account_settings_inputbox_change_password = InputBox("TODO: add key");
+account_settings_inputbox_change_email = InputBox("TODO: add key");
 create_page([
-	Transfer("AccountOptions.ChangeNickname", menu_page.account_settings),
-	Transfer("AccountOptions.ChangePassword", menu_page.account_settings),
-	Transfer("AccountOptions.ChangeEmail", menu_page.account_settings),
-	Transfer("AccountOptions.DeleteAccount", menu_page.account_settings),
+    Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname, function() {
+        instance_create(obj_menu_account_changes_nickname, {
+            input_box: account_settings_inputbox_change_nickname
+        });
+    }),
+    Transfer("AccountOptions.ChangePassword", menu_page.account_change_password, function() {
+        instance_create(obj_menu_account_changes_password, {
+            input_box: account_settings_inputbox_change_password
+        });
+    }),
+    Transfer("AccountOptions.ChangeEmail", menu_page.account_change_email, function() {
+        instance_create(obj_menu_account_changes_email, {
+            input_box: account_settings_inputbox_change_email
+        });
+    }),
+    Transfer("AccountOptions.DeleteAccount", menu_page.account_settings),
+    Transfer("StandardButtons.Back", menu_page.multiplayer_account),
 ], menu_page.account_settings);
+
+// Account change nickname
+create_page([
+    account_settings_inputbox_change_nickname,
+    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
+        instance_destroy(obj_menu_account_changes_nickname)
+    }),
+], menu_page.account_change_nickname);
+
+// Account change password
+create_page([
+    account_settings_inputbox_change_password,
+    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
+        instance_destroy(obj_menu_account_changes_password)
+    }),
+], menu_page.account_change_password);
+
+// Account change email
+create_page([
+    account_settings_inputbox_change_nickname,
+    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
+        instance_destroy(obj_menu_account_changes_email)
+    }),
+], menu_page.account_change_email);
 
 // Achivments
 create_page([
