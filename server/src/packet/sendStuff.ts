@@ -62,13 +62,21 @@ export default class SendStuff {
   public sendChangeNickname(status: number): void {
     this.send('changeNickname', {
       status,
+      ...this.schemesPack,
     })
   }
 
+  public sendChangePassword(status: number): void {
+    this.send('changePassword', {
+      status,
+      ...this.schemesPack,
+    })
+  }
 
   public sendChangeUsername(status: number): void {
     this.send('changeUsername', {
       status,
+      ...this.schemesPack,
     })
   }
 

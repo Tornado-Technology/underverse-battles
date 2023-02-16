@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongoose';
 import { v4 as uuid4 } from 'uuid';
 import { Socket } from 'net';
-import { generateVerificationCode } from '../util/encrypting.js';
+import {generateVerificationCode, hashPassword} from '../util/encrypting.js';
 import { freshProfile, IProfile, Profile } from '../schemas/profile.js';
 import { FriendRequest } from '../schemas/friendRequest.js';
 import { IAccount } from '../schemas/account.js';
@@ -178,6 +178,29 @@ export default class Client extends SendStuff {
 
   public update(): void {
     this.sendSchemes();
+  }
+
+  public async setUsername(username: string): Promise<void> {
+    if (!this.isLogin) {
+      return;
+    }
+    this.account.username = username;
+    await this.save();
+  }
+
+  public async setNickname(nickname: string): Promise<void> {
+    if (!this.isLogin) {
+      return;
+    }
+    this.account.nickname = nickname;
+    await this.save();
+  }
+  public async setPassword(password: string): Promise<void> {
+    if (!this.isLogin) {
+      return;
+    }
+    this.account.password = await hashPassword(password);
+    await this.save();
   }
 
   public get ip(): string {

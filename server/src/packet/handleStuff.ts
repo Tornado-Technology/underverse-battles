@@ -90,6 +90,13 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'changePassword':
+      if (!client.isLogin) {
+        client.sendChangePassword(App.status.unknownError);
+        break
+      }
+      // TODO: Make validation
+      await client.setPassword(data.password);
+      client.sendChangePassword(App.status.success)
       break;
 
     case 'changeUsername':
@@ -98,7 +105,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break
       }
       // TODO: Make validation
-      client.account.username = data.username;
+      await client.setUsername(data.username);
       client.sendChangeUsername(App.status.success);
       break;
 
@@ -108,7 +115,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break
       }
       // TODO: Make validation
-      client.account.nickname = data.nickname;
+      await client.setNickname(data.nickname);
       client.sendChangeNickname(App.status.success);
       break;
 

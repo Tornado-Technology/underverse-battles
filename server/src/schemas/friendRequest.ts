@@ -24,29 +24,26 @@ export interface IFriendRequestModel extends Model<IFriendRequest> {
 }
 
 const schema = new Schema({
-  sender: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  receiver: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  senderId: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  receiverId: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
   collection: 'FriendRequests',
 });
 
-schema.statics.findIncoming = async function(profile_id: string): Promise<IProfile[]> {
- return [];
-  // return await (await FriendRequest.find({ receiver: profile_id }).populate<{ sender: IProfile }>('sender')).map(req => req.sender);
+schema.statics.findIncoming = async function(profileId: string): Promise<IProfile[]> {
+  return await (await FriendRequest.find({ receiverId: profileId }).populate<{ senderId: IProfile }>('senderId')).map(req => req.senderId);
 }
 
-schema.statics.findOutgoing = async function(profile_id: string): Promise<IProfile[]> {
-  return [];
-  // return (await FriendRequest.find({ sender: profile_id }).populate<{ receiver: IProfile }>('receiver')).map(req => req.receiver);
+schema.statics.findOutgoing = async function(profileId: string): Promise<IProfile[]> {
+  return (await FriendRequest.find({ senderId: profileId }).populate<{ receiverId: IProfile }>('receiverId')).map(req => req.receiverId);
 }
 
-schema.statics.findRequestId = async function(sender: string, receiver: string): Promise<IFriendRequest> {
-  return  new Promise((resolve) => {});
-  //return (await FriendRequest.exists({ sender, receiver }))._id;
+schema.statics.findRequestId = async function(senderId: string, receiverId: string): Promise<IFriendRequest> {
+  return (await FriendRequest.exists({ senderId, receiverId }))._id;
 }
 
-schema.statics.requestExists = async function(sender: string, receiver: string): Promise<boolean> {
-  return !!await FriendRequest.exists({ sender, receiver });
+schema.statics.requestExists = async function(senderId: string, receiverId: string): Promise<boolean> {
+  return !!await FriendRequest.exists({ senderId, receiverId });
 }
 
 schema.statics.accept = async function(_id: ObjectId | string): Promise<void> {

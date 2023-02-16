@@ -12,6 +12,7 @@ export interface IProfile extends Document {
   online: boolean,
   lastOnline: Date,
   friends: ObjectId[],
+  unlockingCharacters: number[],
   rating: number,
   gold: number,
   fight: {
