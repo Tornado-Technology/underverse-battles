@@ -17,7 +17,7 @@ text_title =  translate_get("Menu.LogIn.Title");
 
 on_login = on_network_login.connect(function(args) {
 	switch(args[0]) {
-		case "success":
+		case 100:
 			autolog_save(inputbox_login.text, inputbox_password.text);
 			show_loading = false;
 			buttons_show = true;
@@ -26,7 +26,7 @@ on_login = on_network_login.connect(function(args) {
 			instance_destroy();
 			break;
 		
-		case "fail":
+		default:
 			show_loading = false;
 			buttons_show = true;
 			menu_switch_pause(false);
@@ -35,5 +35,5 @@ on_login = on_network_login.connect(function(args) {
 });
 
 if (network_account != undefined) {
-	on_login(["success"]);
+	on_login([100]);
 }

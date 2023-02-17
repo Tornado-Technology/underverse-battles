@@ -1,7 +1,7 @@
 event_inherited();
 depth = fight_depth.bullet_outside_hight;
 
-damage = get_char_damage(char_swap_sans);
+damage = get_char_damage(obj_char_swap_sans);
 soul_invulnerability = 20;
 destructible = false;
 

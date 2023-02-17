@@ -1,8 +1,8 @@
 event_inherited();
 depth = fight_depth.bullet_outside_hight;
 
-damage = get_char_damage(char_cross_xtale);
-soul_invulnerability = get_char_invulnerability(char_cross_xtale) ? 20 : 1;
+damage = get_char_damage(obj_char_cross_xtale);
+soul_invulnerability = get_char_invulnerability(obj_char_cross_xtale) ? 20 : 1;
 destructible = false;
 
 _angle = 0;

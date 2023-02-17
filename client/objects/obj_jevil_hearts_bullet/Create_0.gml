@@ -1,5 +1,5 @@
 depth = fight_depth.bullet_outside_hight;
-damage = get_char_damage(char_jevil);
+damage = get_char_damage(obj_char_jevil);
 _speed = 0;
 _angle = 0;
 _angle_hearts = 0;

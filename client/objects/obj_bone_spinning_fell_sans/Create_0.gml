@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = get_char_damage(char_fell_sans);
+damage = get_char_damage(obj_char_fell_sans);
 
 can_move = true;
 _speed = 0;

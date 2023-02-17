@@ -12,6 +12,7 @@ export interface IProfile extends Document {
   online: boolean,
   lastOnline: Date,
   friends: ObjectId[],
+  unlockingCharacters: number[],
   rating: number,
   gold: number,
   fight: {
@@ -25,10 +26,10 @@ export interface IProfile extends Document {
 }
 
 const schema = new Schema({
-  accountId:  { type: Schema.Types.ObjectId, ref: 'accounts' },
+  accountId:  { type: Schema.Types.ObjectId, ref: 'Account' },
   online:     { type: Boolean, default: false },
   lastOnline: { type: Date, default: Date.now },
-  friends:    [{ type: Schema.Types.ObjectId, ref: 'accounts' }],
+  friends:    [{ type: Schema.Types.ObjectId, ref: 'Account' }],
   rating:     { type: Number, default: 0 },
   gold:       { type: Number, default: 0 },
   fight: {
@@ -44,9 +45,12 @@ const schema = new Schema({
 });
 
 export const Profile: Model<IProfile> = model('Profile', schema);
-export const freshProfile = (account: IAccount): IProfile => (
-  // For when just registered
-  new Profile({
+
+export const freshProfile = async (account: IAccount): Promise<IProfile> => {
+  const profile = new Profile({
     accountId: account._id,
   })
-);
+
+  await profile.save();
+  return profile;
+};

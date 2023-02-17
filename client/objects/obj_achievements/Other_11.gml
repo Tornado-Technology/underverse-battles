@@ -9,31 +9,31 @@ if (hp <= 0) {
 	achievement_give(achievement_id.first_kill);
 	
 	switch (parent) {
-		case char_sans:
+		case obj_char_sans:
 			achievement_give(achievement_id.defeat_sans);
 			break;
 				
-		case char_error_sans:
+		case obj_char_error_sans:
 			achievement_give(achievement_id.defeat_error);
 			break;
 				
-		case char_ink_sans:
+		case obj_char_ink_sans:
 			achievement_give(achievement_id.defeat_ink);
 			break;
 			
-		case char_fell_sans:
+		case obj_char_fell_sans:
 			achievement_give(achievement_id.defeat_fell);
 			break;
 				
-		case char_swap_sans:
+		case obj_char_swap_sans:
 			achievement_give(achievement_id.defeat_swap);
 			break;
 				
-		case char_swap_papyrus:
+		case obj_char_swap_papyrus:
 			achievement_give(achievement_id.defeat_swap_papyrus);
 			break;
 		
-		case char_xchara_uv00:
+		case obj_char_xchara_uv00:
 			achievement_give(achievement_id.defeat_xchara);
 			break;
 	}

@@ -29,7 +29,7 @@
   "origin": 1,
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Delta/Sprites/Bullets.yy",
+    "path": "folders/Characteres/Tornado/Sprites/Bullets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -25,9 +25,12 @@ global.__event_on_network_disconnect = new Event();
 global.__event_on_network_login = new Event();
 
 // Macros
-#macro network_offical_ip "82.146.34.152"
+#macro Default:network_offical_ip "82.146.34.152"
+#macro Development:network_offical_ip "82.146.34.152"
+#macro Localserver:network_offical_ip "localhost"
 #macro Default:network_offical_port "1338"
 #macro Development:network_offical_port "1337"
+#macro Localserver:network_offical_port "1337"
 #macro network_connect_interval 120
 #macro network_connect_timeout 420
 #macro network_disconnect_timeout 600

@@ -371,6 +371,9 @@ create_page([
 	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
 		instance_create(obj_profile_statistics);
 	}),
+	Transfer("Multiplayer.DeleteAccount", menu_page.multiplayer, function() {
+		send_delete_account();
+	}),
 	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
 		send_logout();
 	}),

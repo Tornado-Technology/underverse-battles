@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Delta/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Tornado/Attacks/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_battle_bullet",
