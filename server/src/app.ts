@@ -1,3 +1,4 @@
+import * as Mongoose from 'mongoose';
 import { config } from './config.js';
 import Logger from './util/logging.js';
 import Client from './concepts/client.js';
@@ -7,7 +8,7 @@ export default class App {
   public static readonly fights: Fight[] = [];
   public static readonly clients: Client[] = [];
 
-  public static database: any;
+  public static database: Mongoose.Connection;
   public static pingStartTime: number;
   public static pingInterval: NodeJS.Timeout;
 

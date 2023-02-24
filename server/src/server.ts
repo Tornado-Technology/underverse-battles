@@ -7,6 +7,7 @@ import Client from './concepts/client.js';
 import Packet from './packet/packet.js';
 import Logger from './util/logging.js';
 import App from './app.js';
+import { connect } from './util/database.js';
 
 const { ip, port } = App.config.main;
 
@@ -59,3 +60,4 @@ const server = new Server();
 server.loadInitializers().then(() => {
   server.init();
 });
+

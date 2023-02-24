@@ -3,7 +3,6 @@ import { SocketType } from '../concepts/client.js';
 import { IAccount } from '../schemas/account.js';
 import { IProfile } from '../schemas/profile.js';
 import { IStatistic } from '../schemas/statistic.js';
-import { IFriendRequest } from '../schemas/friendRequest.js';
 import ClientFight from '../concepts/clientFight.js';
 import Packet from './packet.js';
 import App from '../app.js';

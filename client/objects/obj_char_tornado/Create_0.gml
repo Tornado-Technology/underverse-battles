@@ -8,18 +8,18 @@ universe	= "No";
 creator	    = "TornadoTech";
 
 // HP
-max_hp = 50;
-hp = 50;
+max_hp = 70;
+hp = 70;
 
 // Damage
-damage = 3;
+damage = 1;
 invulnerability = false;
 
 // Stamina
-stamina = 200;
-max_stamina = 200;
+stamina = 150;
+max_stamina = 150;
 stamina_regen = 45;
-action_stamina_cost = [25, 65, 125];
+action_stamina_cost = [10, 15, 20];
 
 // Mana
 mana = 175;
@@ -52,3 +52,12 @@ actions = [
 // Soundtrack
 soundtrack_name = "The Delta"; 
 soundtrack = snd_delta;
+
+on_taking_damage = function(damage) {
+	if (stamina >= 3 * damage) {
+		stamina -= 3 * damage;
+		return 0;
+	}
+	
+	return damage;
+}

@@ -1,8 +1,8 @@
-import { Account } from '../schemas/account.js';
 import { send as mailSend } from '../util/mail.js';
 import Client from '../concepts/client.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
+import {Account, infoValidate, login, register} from '../schemas/account.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -30,12 +30,12 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'login':
       try {
-        const account = await Account.login(data.username, data.password);
+        const account = await login(data.username, data.password);
         await client.tryLogin(account);
         client.onLogin();
         Logger.info(`Client login: ${client?.account.username}`)
       } catch (exception) {
-        Logger.error(`Account login failed: ${exception}`);
+        Logger.error(`Account ${data.username} login failed: ${exception}`);
       }
       break;
 
@@ -49,7 +49,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'register':
       try {
-        const status = await Account.infoValidate(data.username, data.password, data.email);
+        const status = await infoValidate(data.username, data.password, data.email);
         if (status !== App.status.success) {
           client.sendRegister(status);
           return;
@@ -62,7 +62,7 @@ export const handlePacket = async (client: Client, data: any) => {
           }
 
           try {
-            const account = await Account.register(data.username, data.password, data.email);
+            const account = await register(data.username, data.password, data.email);
             await client.register(account);
           } catch (exception) {
             client.sendRegister(App.status.unknownError);

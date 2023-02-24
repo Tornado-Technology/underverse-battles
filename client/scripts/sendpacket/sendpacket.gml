@@ -10,7 +10,7 @@ function send_ping() {
 	});
 }
 
-/// @param {Number} time
+/// @param {Real} time
 function send_pong(time) {
     send("pong", {
 		time: time,
@@ -26,7 +26,7 @@ function send_logout() {
 function send_login(username, password) {
 	send("login", {
 		username: username,
-		password: password,
+		password: password
 	});
 }
 

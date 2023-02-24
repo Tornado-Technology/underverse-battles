@@ -1,8 +1,7 @@
-import { Model, Document, ObjectId } from 'mongoose';
+import { Document, ObjectId, Model } from 'mongoose';
 import { createRequire } from 'module';
 import { IAccount } from './account.js';
 
-// @ts-ignore
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
@@ -26,18 +25,18 @@ export interface IProfile extends Document {
 }
 
 const schema = new Schema({
-  accountId:  { type: Schema.Types.ObjectId, ref: 'Account' },
-  online:     { type: Boolean, default: false },
+  accountId: { type: Schema.Types.ObjectId, ref: 'Account' },
+  online: { type: Boolean, default: false },
   lastOnline: { type: Date, default: Date.now },
-  friends:    [{ type: Schema.Types.ObjectId, ref: 'Account' }],
-  rating:     { type: Number, default: 0 },
-  gold:       { type: Number, default: 0 },
+  friends: [{ type: Schema.Types.ObjectId, ref: 'Account' }],
+  rating: { type: Number, default: 0 },
+  gold: { type: Number, default: 0 },
   fight: {
-    id:          { type: String, default: '' },
-    index:       { type: Number, default: -1 },
-    hp:          { type: Number, default: -1 },
-    mana:        { type: Number, default: -1 },
-    stamina:     { type: Number, default: -1 },
+    id: { type: String, default: '' },
+    index: { type: Number, default: -1 },
+    hp: { type: Number, default: -1 },
+    mana: { type: Number, default: -1 },
+    stamina: { type: Number, default: -1 },
     characterId: { type: Number, default: -1 },
   },
 }, {
