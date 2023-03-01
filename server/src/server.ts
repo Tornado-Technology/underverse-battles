@@ -1,13 +1,12 @@
-import { createServer, Socket, Server as NetServer } from 'net';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import {createServer, Server as NetServer, Socket} from 'net';
+import {dirname} from 'path';
+import {fileURLToPath} from 'url';
 import fs from 'fs';
 import './config.js';
-import Client from './concepts/client.js';
+import Client, { socketType } from './concepts/client.js';
 import Packet from './packet/packet.js';
 import Logger from './util/logging.js';
 import App from './app.js';
-import { connect } from './util/database.js';
 
 const { ip, port } = App.config.main;
 
@@ -15,15 +14,16 @@ class Server {
   private netServer: NetServer = null;
 
   public init(): void {
-    this.netServer = createServer(this.connectionListener);
+    this.netServer = createServer(this.connectionListener.bind(this));
     this.netServer.listen(Number(port), () => {
       Logger.info(`Server started on ${ip}:${port}`);
     });
   }
 
   private connectionListener(socket: Socket): void {
-    const client = Client.create(socket, 'tcp');
-    Logger.info(`Client ${client.uuid} connected`)
+    const client = Client.create(socket, socketType.tcp);
+    Logger.info(`Client ${client.uuid} connected`);
+    this.verifyClient(client);
 
     socket.on('data', async (data) => {
       await Packet.parse(client, data);
@@ -53,6 +53,20 @@ class Server {
       await import(`file://${directory}/initializers/${file}`);
     }
     Logger.info('Initialize done');
+  }
+
+  private verifyClient(client: Client): void {
+    if (!App.config.client.verification.enabled) {
+      client.verify();
+    }
+
+    setTimeout(() => {
+      if (!client.verified && !client.verifying) {
+        Logger.info(`Client connection blocked, reason: Not send verification packet`);
+        client.sendConnection(App.status.unknownError);
+        client.destroy();
+      }
+    }, App.config.client.verification.timeout);
   }
 }
 

@@ -10,23 +10,42 @@ import SendStuff from '../packet/sendStuff.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
 import {clearTimeout} from "timers";
+import {satisfies} from "semver";
 
-export type SocketType = 'tcp' | 'udp' | 'ws';
+export enum socketType {
+  tcp = 'tcp',
+  udp = 'udp',
+  ws = 'ws',
+}
+
+export enum state {
+  undefined,
+  inMenu,
+  waitFight,
+  inFight,
+  waitWorld,
+  inWorld,
+}
 
 export default class Client extends SendStuff {
   public readonly verificationCodeClearingTime: number = 50000;
 
   public ping: number;
   public verificationCode: string;
+  public verified: boolean;
+  public verifying: boolean;
   public verificationCodeTimeout: NodeJS.Timeout;
   public verificationCodeCallback: Function;
 
-  constructor(socket: Socket, type: SocketType, uuid: string) {
+  protected _state: state;
+
+  constructor(socket: Socket, type: socketType, uuid: string) {
     super(socket, type, uuid);
     this.fight = new ClientFight(this);
+    this.state = state.inMenu;
   }
 
-  static create(socket: Socket, type: SocketType) {
+  static create(socket: Socket, type: socketType) {
     const client = new Client(socket, type, uuid4());
     App.clients.push(client);
     return client;
@@ -35,6 +54,11 @@ export default class Client extends SendStuff {
   static async remove(client: Client): Promise<void> {
     await client.onDisconnect(App.status.socketClosed);
     App.clients.splice(App.clients.indexOf(client), 1);
+  }
+
+  verify() {
+    this.verified = true;
+    Logger.info(`Client verified, UUID: ${this.uuid}.`);
   }
 
   public startVerification(callback: Function): void {
@@ -56,8 +80,15 @@ export default class Client extends SendStuff {
     this.verificationCode = null;
   }
 
-  public destroy(): void {
+  public destroy(forced: boolean = false, timeout = 5_000): void {
+    if (forced) {
+      this.socket.destroy();
+      return;
+    }
 
+    setTimeout(() => {
+      this.socket.destroy();
+    }, timeout);
   }
 
   public async onDisconnect(status: number): Promise<void> {
@@ -221,5 +252,14 @@ export default class Client extends SendStuff {
 
   public get hasProfile(): boolean {
     return Boolean(this.profile);
+  }
+
+  public set state(state: state) {
+    this._state = state;
+    Logger.info(`Client set new state "${state}"`);
+  }
+
+  public get state(): state {
+    return this._state;
   }
 }

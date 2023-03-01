@@ -2,7 +2,7 @@ import * as Mongoose from 'mongoose';
 import { config } from './config.js';
 import Logger from './util/logging.js';
 import Client from './concepts/client.js';
-import Fight from './fight/fight.js';
+import Fight from './game/fight.js';
 
 export default class App {
   public static readonly fights: Fight[] = [];

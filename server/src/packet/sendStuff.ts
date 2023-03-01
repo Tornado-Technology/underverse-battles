@@ -1,15 +1,16 @@
 import { Socket } from 'net';
-import { SocketType } from '../concepts/client.js';
+import { socketType } from '../concepts/client.js';
 import { IAccount } from '../schemas/account.js';
 import { IProfile } from '../schemas/profile.js';
 import { IStatistic } from '../schemas/statistic.js';
+import { target } from '../game/fight.js';
 import ClientFight from '../concepts/clientFight.js';
 import Packet from './packet.js';
 import App from '../app.js';
 
 export default class SendStuff {
   public readonly socket: Socket;
-  public readonly type: SocketType;
+  public readonly type: socketType;
   public readonly uuid: string;
 
   // MongoDB schemes
@@ -21,7 +22,7 @@ export default class SendStuff {
   public fight: ClientFight = null;
   public halfpack: (Buffer | null) = null;
 
-  constructor(socket: Socket, type: SocketType, uuid: string) {
+  constructor(socket: Socket, type: socketType, uuid: string) {
     this.socket = socket;
     this.type = type;
     this.uuid = uuid;
@@ -30,6 +31,12 @@ export default class SendStuff {
   protected send(index: string, data: any = {}): void {
     data.index = index;
     this.socket.write(Packet.build(data));
+  }
+
+  public sendConnection(code = 0): void {
+    this.send('connection', {
+      code
+    });
   }
 
   // MongoDB packets
@@ -109,6 +116,20 @@ export default class SendStuff {
   public sendPong(time: number): void {
     this.send('pong', {
       time,
+    });
+  }
+
+  // Fight stuff
+  public sendFightJoin(status: number, data: any): void {
+    this.send('fightJoin', {
+      status,
+      data: JSON.stringify(data),
+    });
+  }
+
+  public sendFightInitiative(initiative: target): void {
+    this.send('fightInitiative', {
+      initiative
     });
   }
 }

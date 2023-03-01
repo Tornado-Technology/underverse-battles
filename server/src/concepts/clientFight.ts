@@ -1,5 +1,7 @@
 import Client from './client.js';
-import Fight from '../fight/fight.js';
+import Fight from '../game/fight.js';
+import { characterInfoGetById}  from "../content/character/chracterInfoList";
+import CharacterInfo from "../data/characterInfo";
 
 export default class ClientFight {
   private readonly client: Client = null;
@@ -17,6 +19,9 @@ export default class ClientFight {
   protected action: number;
   protected power: number;
 
+  protected characterId: number;
+  protected characterSkinId: number;
+  protected characterInfo: CharacterInfo;
 
   constructor(client: Client) {
     this.client = client;
@@ -31,7 +36,7 @@ export default class ClientFight {
    //}
   }
 
-  init(id: string, index: number): void {
+  public init(id: string, index: number): void {
     this.id = id;
     this.index = index;
     this.hp = this.hpMax;
@@ -39,10 +44,38 @@ export default class ClientFight {
     this.stamina = this.staminaMax;
     this.action = -1;
     this.power = 0;
-
     this.client.profile.fight.id = id;
     this.client.profile.fight.index = index;
-    //this.client.setState(Client.states.inFight);
+  }
+
+  public setCharacter(characterId: number, skinId: number): void {
+    this.characterId = characterId;
+    this.characterSkinId = skinId;
+    this.characterInfo = characterInfoGetById(characterId);
+
+    if (this.characterInfo.skins) {
+      if (this.characterInfo.skins[skinId] !== undefined) {
+        this.characterInfo = this.characterInfo.skins[skinId];
+      }
+    }
+
+    if (this.characterInfo !== undefined) {
+      this.hpMax = this.characterInfo.hpMax;
+      this.manaMax = this.characterInfo.manaMax;
+      this.staminaMax = this.characterInfo.staminaMax;
+    }
+  }
+
+  public get info() {
+    return {
+      id: this.id,
+      characterId: this.characterId,
+      skinId: this.characterSkinId,
+      name: this.client?.account.username,
+      rating: this.client?.profile.rating,
+      type: this.client?.account.type,
+      badgeId: this.client?.account?.badgeId,
+    };
   }
 
   public get hasInstance(): boolean {

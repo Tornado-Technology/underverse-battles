@@ -1,5 +1,5 @@
 interface Math {
-  getRandomRange(min: number, max: number): number;
+  randomRange(min: number, max: number): number;
   clamp(val: number, min: number, max: number): number;
   lerp(start: number, target: number, amount: number): number;
   approach(start: number, target: number, amount: number): number;
@@ -7,7 +7,7 @@ interface Math {
   radtodeg(rad: number): number;
 }
 
-Math.getRandomRange = (min, max) => {
+Math.randomRange = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;

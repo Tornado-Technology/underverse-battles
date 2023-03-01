@@ -16,6 +16,7 @@ export interface IAccount extends Document {
   email: string,
   data: Date,
   type: AccountType,
+  badgeId: number,
 }
 
 const schema = new Schema({

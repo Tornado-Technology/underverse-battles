@@ -6,6 +6,13 @@ import App from './app.js';
 const args = minimist(process.argv.slice(2));
 const environment = args.env || 'development';
 
+export const versions = {};
+versions['Windows x64'] = {};
+versions['Android'] = {};
+
+versions['Windows x64']['v2.0.11'] = true;
+versions['Windows x64']['v2.1.0'] = true;
+
 const commonConfig = {
   environment: 'common',
   meta: {
@@ -24,9 +31,7 @@ const commonConfig = {
     necessaryLogin: true,
     pingInterval: 3000,
     verification: {
-      build: true,
-      version: true,
-      hash: true,
+      enabled: false,
       timeout: 3000,
     },
   },
@@ -72,9 +77,7 @@ const developmentConfig = {
   },
   client: {
     verification: {
-      build: false,
-      version: false,
-      hash: false,
+      enabled: false,
     }
   },
   database: {
@@ -84,16 +87,16 @@ const developmentConfig = {
 
 export type config = typeof commonConfig & typeof productionConfig & typeof developmentConfig;
 
-// The place where you must register your costume config
+// The place where you must register your custom config
 const configs = [
   productionConfig,
   developmentConfig
 ];
 
 const config: config = {...commonConfig};
-const assignConfig = configs.find((conf) => conf.environment == environment);
+const assignConfig = configs.find((conf) => conf.environment === environment);
 if (!assignConfig) {
-  throw new Error(`Config ${environment} does not exist`);
+  throw new Error(`Config ${environment} doesn't exist`);
 }
 
 mergeDeep(config, assignConfig);
