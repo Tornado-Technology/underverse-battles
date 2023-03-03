@@ -1,6 +1,6 @@
 import Client from './client.js';
 import Fight from '../game/fight.js';
-import { characterInfoGetById}  from "../content/character/chracterInfoList";
+import { characterInfoGetById}  from "../content/chracterInfoList";
 import CharacterInfo from "../data/characterInfo";
 
 export default class ClientFight {
@@ -8,20 +8,20 @@ export default class ClientFight {
   public instance: Fight;
 
   // Fight info
-  protected id: string;
-  protected index: number;
-  protected hp: number;
-  protected hpMax: number;
-  protected mana: number;
-  protected manaMax: number;
-  protected stamina: number;
-  protected staminaMax: number;
-  protected action: number;
-  protected power: number;
+  public id: string;
+  public index: number;
+  public hp: number;
+  public hpMax: number;
+  public mana: number;
+  public manaMax: number;
+  public stamina: number;
+  public staminaMax: number;
+  public action: number;
+  public power: number;
 
-  protected characterId: number;
-  protected characterSkinId: number;
-  protected characterInfo: CharacterInfo;
+  public characterId: number;
+  public characterSkinId: number;
+  public characterInfo: CharacterInfo;
 
   constructor(client: Client) {
     this.client = client;
@@ -46,6 +46,10 @@ export default class ClientFight {
     this.power = 0;
     this.client.profile.fight.id = id;
     this.client.profile.fight.index = index;
+  }
+
+  public unit(): void {
+
   }
 
   public setCharacter(characterId: number, skinId: number): void {

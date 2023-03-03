@@ -1,7 +1,7 @@
-import CharacterInfo from '../../data/characterInfo.js';
+import CharacterInfo from '../data/characterInfo.js';
 
-const characterInfoList = {
-  InkSans: new CharacterInfo(
+export const characterInfoList = {
+  inkSans: new CharacterInfo(
     0,
     100,
     100,
@@ -10,7 +10,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  ErrorSans: new CharacterInfo(
+  errorSans: new CharacterInfo(
     1,
     100,
     100,
@@ -19,7 +19,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  ClassicSans: new CharacterInfo(
+  classicSans: new CharacterInfo(
     2,
     100,
     100,
@@ -28,7 +28,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  FellSans: new CharacterInfo(
+  fellSans: new CharacterInfo(
     3,
     100,
     100,
@@ -37,7 +37,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  SwapSans: new CharacterInfo(
+  swapSans: new CharacterInfo(
     4,
     120,
     100,
@@ -46,7 +46,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  SwapPapyrus: new CharacterInfo(
+  swapPapyrus: new CharacterInfo(
     5,
     100,
     100,
@@ -55,7 +55,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  XTaleChara: new CharacterInfo(
+  xtaleChara: new CharacterInfo(
     6,
     60,
     100,
@@ -64,7 +64,7 @@ const characterInfoList = {
     [5, 10, 50],
     [0, 10, 25, 40, 60]
   ),
-  Cross: new CharacterInfo(
+  cross: new CharacterInfo(
     7,
     100,
     100,
@@ -84,7 +84,7 @@ const characterInfoList = {
       )
     ]
   ),
-  Green: new CharacterInfo(
+  green: new CharacterInfo(
     8,
     60,
     100,
@@ -93,7 +93,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  Jevil: new CharacterInfo(
+  jevil: new CharacterInfo(
     -1,
     100,
     100,
@@ -102,7 +102,7 @@ const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  Tornado: new CharacterInfo(
+  tornado: new CharacterInfo(
     -3,
     100,
     100,

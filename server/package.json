@@ -11,7 +11,8 @@
   "scripts": {
     "build": "npx tsc",
     "development": "node . --env=development",
-    "production": "node . --env=production"
+    "production": "node . --env=production",
+    "test": "tsc && mocha build/test/**/*.test.js"
   },
   "dependencies": {
     "@msgpack/msgpack": "^2.3.0",
@@ -31,19 +32,25 @@
     "process": "^0.11.10",
     "rbush": "3.0.1",
     "semver": "^7.3.8",
-    "typescript": "^4.9.4",
     "uuid": "^8.3.2",
     "ws": "^8.3.0"
   },
   "devDependencies": {
+    "@testdeck/mocha": "^0.3.3",
     "@tsconfig/node16": "^1.0.3",
+    "@types/chai": "^4.3.4",
     "@types/minimist": "^1.2.2",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.18",
     "@types/rbush": "^3.0.0",
     "@types/semver": "^7.3.13",
     "@types/uuid": "^8.3.1",
     "@types/ws": "^8.5.3",
     "0x": "^5.0.0",
-    "typescript": "^4.5.4"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   }
 }

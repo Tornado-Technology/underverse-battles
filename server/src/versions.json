@@ -1,0 +1,10 @@
+{
+  "Windows x64": {
+    "v2.0.11": true,
+    "v2.1.0": true
+  },
+  "Android": {
+    "v2.0.11": true,
+    "v2.1.0": true
+  }
+}

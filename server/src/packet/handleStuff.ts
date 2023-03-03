@@ -210,7 +210,7 @@ export const handlePacket = async (client: Client, data: any) => {
         client.fight.setCharacter(data.characterId, data.skinId);
 
         if (clients.length < 1) {
-          client.state = state.waitFight;
+          client.setState(state.inMenu);
           client.sendFightJoin(App.status.success, undefined);
           Logger.info('Clients not found, wait...');
           break;
@@ -219,7 +219,7 @@ export const handlePacket = async (client: Client, data: any) => {
         const opponent = clients[clients.length - 1];
         Matchmaker.makeMatch(client, opponent);
       } catch (exception) {
-        client.state = state.inMenu;
+        client.setState(state.inMenu);
         client.sendFightJoin(App.status.unknownError, undefined);
         Logger.info(`Fight join failed, reason: ${exception.stack}`);
       }

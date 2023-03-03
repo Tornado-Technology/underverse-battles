@@ -1,6 +1,7 @@
-import Client from '../concepts/client.js';
+import Client, { state as clientState } from '../concepts/client.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
+import Matchmaker from '../util/matchmaker.js';
 
 export enum state {
   wait,
@@ -60,12 +61,30 @@ export default class Fight {
     Fight.destroy(this);
   }
 
-  protected setState(state): void {
+  public finish(winner: Client): void {
+    const loserClient = this.getOtherClient(winner);
+
+    const rating = Matchmaker.addRating(winner, loserClient);
+    winner?.fight.unit();
+    loserClient?.fight.unit();
+    winner?.setState(clientState.inMenu);
+    loserClient?.setState(clientState.inMenu);
+    //winner?.sendFightFinished(rating, true);
+    //loserClient?.sendFightFinished(-rating, false);
+
+    this.destroy();
+  }
+
+  protected hasClient(client: Client): boolean {
+    return client && (client === this.clients[0] || client === this.clients[1]);
+  }
+
+  protected setState(state: state): void {
     this.state = state;
     Logger.debug(`Fight[${this.id}] set new state "${state}"`);
   }
 
-  protected setInitiative(initiative) {
+  protected setInitiative(initiative: number): void {
     this.initiative = initiative;
     this.clients[0]?.sendFightInitiative(this.initiative);
     this.clients[1]?.sendFightInitiative(1 - this.initiative);
@@ -74,5 +93,21 @@ export default class Fight {
 
   protected getOtherClient(client: Client): Client {
     return (client === this.clients[target.self]) ? this.clients[target.opponent] : this.clients[target.self];
+  }
+
+  protected get activeClient(): Client {
+    return this.clients[this.initiative];
+  }
+
+  protected get inactiveClient(): Client {
+    return this.clients[1 - this.initiative];
+  }
+
+  protected onHpModify(client: Client): void {
+    const health = client?.fight.hp ?? 0;
+
+    if (health <= 0) {
+      this.finish(this.getOtherClient(client));
+    }
   }
 }

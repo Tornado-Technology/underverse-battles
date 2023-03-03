@@ -42,7 +42,7 @@ export default class Client extends SendStuff {
   constructor(socket: Socket, type: socketType, uuid: string) {
     super(socket, type, uuid);
     this.fight = new ClientFight(this);
-    this.state = state.inMenu;
+    this.setState(state.inMenu);
   }
 
   static create(socket: Socket, type: socketType) {
@@ -254,7 +254,7 @@ export default class Client extends SendStuff {
     return Boolean(this.profile);
   }
 
-  public set state(state: state) {
+  public setState(state: state) {
     this._state = state;
     Logger.info(`Client set new state "${state}"`);
   }
