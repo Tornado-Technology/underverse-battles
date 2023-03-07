@@ -392,19 +392,16 @@ account_settings_inputbox_change_email = InputBox("TODO: add key");
 
 create_page([
     Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname, function() {
-        instance_create(obj_menu_account_changes_nickname, {
-            input_box: account_settings_inputbox_change_nickname
-        });
+        var instance = instance_create(obj_menu_account_changes_nickname);
+		instance.input_box = account_settings_inputbox_change_nickname;
     }),
     Transfer("AccountOptions.ChangePassword", menu_page.account_change_password, function() {
-        instance_create(obj_menu_account_changes_password, {
-            input_box: account_settings_inputbox_change_password
-        });
+        var instance = instance_create(obj_menu_account_changes_password);
+		instance.input_box = account_settings_inputbox_change_password;
     }),
     Transfer("AccountOptions.ChangeEmail", menu_page.account_change_email, function() {
-        instance_create(obj_menu_account_changes_email, {
-            input_box: account_settings_inputbox_change_email
-        });
+        var instance = instance_create(obj_menu_account_changes_email);
+		instance.input_box = account_settings_inputbox_change_email;
     }),
     Transfer("AccountOptions.DeleteAccount", menu_page.account_settings),
     Transfer("StandardButtons.Back", menu_page.multiplayer_account),
