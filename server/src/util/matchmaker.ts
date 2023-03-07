@@ -19,11 +19,27 @@ export default class Matchmaker {
     return App.clients.filter((client) => client.state === state);
   }
 
-
-  public static addRating(winner: Client, looser: Client): void {
+  public static addRating(winner: Client, looser: Client): number {
     const winnerRating = winner.profile.rating;
     const looserRating = looser.profile.rating;
     let difference = 0;
+
+    if (winnerRating < looserRating) {
+      difference = this.ratingCalculation(winnerRating, looserRating);
+    }
+
+    if (winnerRating > looserRating) {
+      difference = 1;
+    }
+
+    if (winnerRating === looserRating) {
+      difference = 2;
+    }
+
+    difference = looser.rank.clamp(looserRating, difference);
+    winner?.addRating(difference);
+    looser?.removeRating(difference);
+    return difference;
   }
 
   protected static createMatch(client1: Client, client2: Client) {

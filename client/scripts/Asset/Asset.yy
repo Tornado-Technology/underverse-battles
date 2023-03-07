@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Modification",
-    "path": "folders/Scripts/Local/Content/Modification.yy",
+    "path": "folders/Scripts/Local/Data/Modification.yy",
   },
 }

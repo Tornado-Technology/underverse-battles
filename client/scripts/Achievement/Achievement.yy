@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Achievement",
-    "path": "folders/Scripts/Local/Content/Achievement.yy",
+    "path": "folders/Scripts/Local/Data/Achievement.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Background",
-    "path": "folders/Scripts/Local/Content/Background.yy",
+    "path": "folders/Scripts/Local/Data/Background.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "DSGrid",
-    "path": "folders/Scripts/Local/Utils/Base/DSGrid.yy",
+    "path": "folders/Scripts/Local/Utils/DSGrid.yy",
   },
 }

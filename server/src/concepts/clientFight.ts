@@ -1,7 +1,7 @@
 import Client from './client.js';
 import Fight from '../game/fight.js';
-import { characterInfoGetById}  from "../content/chracterInfoList";
-import CharacterInfo from "../data/characterInfo";
+import { characterInfoGetById }  from '../content/chracterInfoList.js';
+import CharacterInfo from '../data/characterInfo.js';
 
 export default class ClientFight {
   private readonly client: Client = null;

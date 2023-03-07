@@ -80,14 +80,14 @@ function CharacterList() {
 	];
 
 	if (development_mode) {
-		array_push(global.characters, [
-			new Character(obj_char_cross_xtale, "Cross", "Standard", spr_cross_frame),
-			new Character(obj_char_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
-		]);
+		//array_push(global.characters, [
+		//	new Character(obj_char_cross_xtale, "Cross", "Standard", spr_cross_frame),
+		//	new Character(obj_char_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
+		//]);
 		
-		array_push(global.characters, [
-			new Character(obj_char_green, "Green", "Standard", spr_green_frame)
-		]);
+		//array_push(global.characters, [
+		//	new Character(obj_char_green, "Green", "Standard", spr_green_frame)
+		//]);
 		
 		array_push(global.characters, [
 			new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
@@ -96,6 +96,10 @@ function CharacterList() {
 		array_push(global.characters, [
 			new Character(obj_char_tornado, "Tornado", "Standard", spr_tornado_frame)
 		]);
+		
+		//array_push(global.characters, [
+		//	new Character(obj_char_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
+		//]);
 	}
 	
 	// Скины, которвые выйдут в 2.1.0

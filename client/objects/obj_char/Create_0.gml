@@ -63,11 +63,13 @@ on_selected_attack = function(attack_id, enemy_id) {};
 
 // Dev
 player_num = -1;
-
 offset_x = 0;
 offset_y = 0;
-
+enemy_id = -1;
 play_animation_after_battle = false;
+
+total_damage = 0;
+total_heal = 0;
 
 // Soundtrack
 soundtrack_name = "Megalorchestra"; 

@@ -21,4 +21,4 @@ export const send = async (receiver: string, title: string, message: string, htm
   }, (error) => {
     Logger.info(`Mail send failed: ${error.message}`);
   });
-};
+}

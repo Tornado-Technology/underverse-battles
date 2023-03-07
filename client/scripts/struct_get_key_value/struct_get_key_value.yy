@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Struct",
-    "path": "folders/Scripts/Local/Utils/Base/Struct.yy",
+    "path": "folders/Scripts/Local/Utils/Struct.yy",
   },
 }

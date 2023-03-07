@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "AudioGroup",
-    "path": "folders/Scripts/Local/Utils/Base/AudioGroup.yy",
+    "path": "folders/Scripts/Local/Utils/AudioGroup.yy",
   },
 }

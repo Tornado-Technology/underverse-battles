@@ -1,13 +1,7 @@
+/// @description Searches for a specific element by predicate.
 /// @param {Array<Any>} array
 /// @param {Function} predicate
-/// @param {Array<Any>} args
-function array_find(array, predicate, args = []) {
-	for (var i = 0; i < array_length(array); i++) {
-		var value = array[i];
-		if (predicate(value, i, args)) {
-			return value;
-		}
-	}
-	
-	return undefined;
+/// @return {Any}
+function array_find(array, predicate) {
+	return array[array_find_index(array, predicate)];
 }

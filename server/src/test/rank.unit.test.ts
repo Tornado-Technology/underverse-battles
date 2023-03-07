@@ -30,7 +30,7 @@ describe('Rank', () => {
     });
   });
 
-  describe('List', () => {
+  describe('Rank List', () => {
     it('Testing detecting', () => {
       expect(getRank(-1)).to.be.equals(undefined);
       expect(getRank(0)).to.be.equals(rankList.not);

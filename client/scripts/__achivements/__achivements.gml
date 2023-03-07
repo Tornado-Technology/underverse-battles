@@ -15,6 +15,8 @@ Achievement("DefeatFellSans", spr_achivement_defeatfellsans);
 Achievement("DefeatSwapSans", spr_achivement_defeatswapsans);
 Achievement("DefeatSwapPapyrus", spr_achivement_defeatswappapyrus);
 Achievement("ACybersWorld", spr_achivement_a_cybers_world);
+Achievement("NotScratch", spr_achivement_a_cybers_world);
+Achievement("Immortality", spr_achivement_immortality);
 
 // Main loader
 function achivements_load() {
@@ -45,5 +47,7 @@ enum achievement_id {
 	defeat_fell,
 	defeat_swap,
 	defeat_swap_papyrus,
-	a_cybers_world
+	a_cybers_world,
+	not_scratch,
+	immortality,
 }

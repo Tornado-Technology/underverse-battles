@@ -51,8 +51,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Tornado/Sprites/Bullets.yy",
+    "name": "Bullet",
+    "path": "folders/Characteres/Tornado/Sprites/Bullet.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

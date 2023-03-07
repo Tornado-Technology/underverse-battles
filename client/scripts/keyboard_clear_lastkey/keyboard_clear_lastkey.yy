@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Base",
-    "path": "folders/Scripts/Local/Utils/Base.yy",
+    "name": "Utils",
+    "path": "folders/Scripts/Local/Utils.yy",
   },
 }

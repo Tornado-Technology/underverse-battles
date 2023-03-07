@@ -1,4 +1,4 @@
-/// @desc Load all game audiogroups
+/// @description Load all game audiogroups.
 function audio_group_load_all() {
 	audio_group_load(sound);
 	audio_group_load(music);

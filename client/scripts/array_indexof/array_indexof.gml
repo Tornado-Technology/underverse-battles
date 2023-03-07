@@ -1,11 +1,10 @@
-/// @desc Find the element index in the array, if not found return -1.
-/// @param {Array<Any>} array - The array which we want to check
-/// @param {Any} element - The element whose index we want to find
-/// @return {Real} Element index or -1
+/// @description Searches for the `index` (ordinal number) of an array element.
+/// @param {Array<Any>} array
+/// @param {Any} element
+/// @return {Real}
 function array_indexof(array, element) {
 	for (var i = 0; i < array_length(array); i++) {
-		var value = array[i];
-		if (value == element) {
+		if (array[i] == element) {
 			return i;
 		}
 	}

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Soundtrack",
-    "path": "folders/Scripts/Local/Content/Soundtrack.yy",
+    "path": "folders/Scripts/Local/Data/Soundtrack.yy",
   },
 }

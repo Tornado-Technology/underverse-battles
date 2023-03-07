@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Effect",
-    "path": "folders/Scripts/Local/Content/Effect.yy",
+    "path": "folders/Scripts/Local/Data/Effect.yy",
   },
 }

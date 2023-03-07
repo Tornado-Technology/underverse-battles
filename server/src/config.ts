@@ -1,17 +1,20 @@
 // @ts-ignore
+import { fileURLToPath } from 'url';
+import { readFileSync, existsSync } from 'fs';
 import minimist from 'minimist';
+import { dirname } from 'path';
 import { mergeDeep } from './util/deepMerge.js';
 import App from './app.js';
 
 const args = minimist(process.argv.slice(2));
 const environment = args.env || 'development';
 
-export const versions = {};
-versions['Windows x64'] = {};
-versions['Android'] = {};
+const versionsPath = `${dirname(fileURLToPath(import.meta.url))}/../versions.json`;
+if (!existsSync(versionsPath)) {
+  throw new Error(`File versions.json not found!`);
+}
 
-versions['Windows x64']['v2.0.11'] = true;
-versions['Windows x64']['v2.1.0'] = true;
+export const versions = JSON.parse(readFileSync(versionsPath).toString());
 
 const commonConfig = {
   environment: 'common',
@@ -39,7 +42,7 @@ const commonConfig = {
     enabled: true,
     address: 'mongodb://127.0.0.1:27017/main',
   },
-};
+}
 
 const productionConfig = {
   environment: 'common',
@@ -57,7 +60,7 @@ const productionConfig = {
   main: {
     port: '1338',
   },
-};
+}
 
 const developmentConfig = {
   environment: 'development',
@@ -83,7 +86,7 @@ const developmentConfig = {
   database: {
     address: 'mongodb://127.0.0.1:27017/development',
   },
-};
+}
 
 export type config = typeof commonConfig & typeof productionConfig & typeof developmentConfig;
 

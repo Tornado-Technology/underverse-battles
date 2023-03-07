@@ -9,10 +9,9 @@ function handle_packet(data) {
 	
 	switch(index) {
 		case "connection":
-			var status = data.status;
 			var code = data.code;
 			
-			if (status == success) {
+			if (code == 100) {
 				logger.info("Client connection success.");
 				break;
 			}

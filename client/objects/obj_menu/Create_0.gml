@@ -371,9 +371,7 @@ create_page([
 	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
 		instance_create(obj_profile_statistics);
 	}),
-	Transfer("Multiplayer.DeleteAccount", menu_page.multiplayer, function() {
-		send_delete_account();
-	}),
+	Transfer("Multiplayer.Settings", menu_page.account_settings),
 	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
 		send_logout();
 	}),
@@ -391,6 +389,7 @@ create_page([
 account_settings_inputbox_change_nickname = InputBox("TODO: add key");
 account_settings_inputbox_change_password = InputBox("TODO: add key");
 account_settings_inputbox_change_email = InputBox("TODO: add key");
+
 create_page([
     Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname, function() {
         instance_create(obj_menu_account_changes_nickname, {

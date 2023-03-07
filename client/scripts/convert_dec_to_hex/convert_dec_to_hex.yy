@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Conversion",
-    "path": "folders/Scripts/Local/Utils/Base/Conversion.yy",
+    "path": "folders/Scripts/Local/Utils/Conversion.yy",
   },
 }

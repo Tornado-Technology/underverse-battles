@@ -15,9 +15,6 @@ if (soul_instance == noone) {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 }
 
-
-
-
-if (_time >= 480) {
+if (time >= 480) {
 	instance_destroy();
 }

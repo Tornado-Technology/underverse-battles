@@ -3,46 +3,32 @@ interface Math {
   clamp(val: number, min: number, max: number): number;
   lerp(start: number, target: number, amount: number): number;
   approach(start: number, target: number, amount: number): number;
-  degtorad(deg: number): number;
-  radtodeg(rad: number): number;
+  degToRad(deg: number): number;
+  radToDeg(rad: number): number;
 }
 
-Math.randomRange = (min, max) => {
+Math.randomRange = (min: number, max: number): number => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+}
 
-Math.clamp = (val, min, max) => {
-  if (val < min) {
-    return min;
-  }
+Math.clamp = (val: number, min: number, max: number): number  => {
+  return val < min ? min : max;
+}
 
-  if (val > max) {
-    return max;
-  }
-
-  return val;
-};
-
-Math.lerp = (start, target, amount) => {
+Math.lerp = (start: number, target: number, amount: number): number  => {
   return start + (target - start) * amount;
-};
+}
 
-Math.approach = (start, target, amount) => {
-  if (start < target) {
-    return Math.min(start + amount, target);
-  }
-  if (start > target) {
-    return Math.max(start - amount, target);
-  }
-  return start;
-};
+Math.approach = (start: number, target: number, amount: number): number  => {
+  return start < target ? Math.min(start + amount, target) : Math.max(start - amount, target);
+}
 
-Math.degtorad = (deg) => {
+Math.degToRad = (deg: number): number  => {
   return (deg * Math.PI) / 180;
 }
 
-Math.radtodeg = (rad) => {
+Math.radToDeg = (rad: number): number  => {
   return (rad * 180) / Math.PI;
 }

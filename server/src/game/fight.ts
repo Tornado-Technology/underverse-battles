@@ -62,16 +62,13 @@ export default class Fight {
   }
 
   public finish(winner: Client): void {
-    const loserClient = this.getOtherClient(winner);
-
-    const rating = Matchmaker.addRating(winner, loserClient);
-    winner?.fight.unit();
-    loserClient?.fight.unit();
-    winner?.setState(clientState.inMenu);
-    loserClient?.setState(clientState.inMenu);
-    //winner?.sendFightFinished(rating, true);
-    //loserClient?.sendFightFinished(-rating, false);
-
+    const rating = Matchmaker.addRating(winner, this.getOtherClient(winner));
+    this.clients.forEach((client) => {
+      const isWinner = client === winner;
+      client.fight.unit();
+      client.setState(clientState.inMenu);
+      client.sendFightEnd(isWinner ? rating : -rating, isWinner);
+    });
     this.destroy();
   }
 

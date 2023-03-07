@@ -2,6 +2,7 @@
 #region Fight
 if (global.fight_instance == noone) exit;
 if (global.fight_instance.story_mode) exit;
+
 var parent = get_main_char(fight_get_enemy_obj(1));
 var hp = fight_get_enemy_hp(1);
 	
@@ -37,5 +38,13 @@ if (hp <= 0) {
 			achievement_give(achievement_id.defeat_xchara);
 			break;
 	}
+	
+	var player = fight_get_enemy(0);
+	if (player.total_damage == 0) {
+		achievement_give(achievement_id.not_scratch);
+	}
+	
+	if (player.total_heal > player.max_hp) {
+		achievement_give(achievement_id.immortality);
+	}
 }
-#endregion

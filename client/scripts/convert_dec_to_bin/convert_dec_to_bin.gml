@@ -1,24 +1,33 @@
-/// @desc convert_dec_to_bin
-/// @arg value
-/// @arg [digits]
-function convert_dec_to_bin(dec) {
-	dec = abs(dec);
-	var res = "";
+/// @description
+/// Return: Binary string.
+/// @param {Real} value - A positive integer, attempts to feed other numbers will cause the project to crash.
+/// @param {Real} length - The total length of the string. Extra characters will be filled with 0.
+/// @return {String}
+function convert_dec_to_bin(value, length = undefined) {
+	if (value < 0) {
+		logger.fatal("Incorrect value `{0}` of argument `value` function `convert_dec_to_bin` takes only positive integers.", value);
+		return "";
+	}
+	
+	var result = "";
 
-	while (dec != 0) {
-	    res = string(dec & 1) + res;
-	    dec = dec >> 1;
+	while (value != 0) {
+	    result = string(value & 1) + result;
+	    value = value >> 1;
 	}
 
-	if res = "" res = "0";
-
-	if argument_count > 1
-	{
-	    while (string_length(res) < argument[1])
-	    {
-	        res = "0" + res;
+	if (result == "") {
+		result = "0";
+	}
+	
+	if (length != undefined){
+	    while (string_length(result) < length) {
+	        result = string("0{0}", result);
 	    }
 	}
 
-	return res;
+	return result;
 }
+
+show_debug_message(convert_dec_to_bin(10))
+show_debug_message(convert_dec_to_bin(10, 10))

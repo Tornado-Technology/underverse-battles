@@ -127,6 +127,13 @@ export default class SendStuff {
     });
   }
 
+  public sendFightEnd(rating: number, winner: boolean): void {
+    this.send('fightEnd', {
+      rating,
+      winner,
+    });
+  }
+
   public sendFightInitiative(initiative: target): void {
     this.send('fightInitiative', {
       initiative

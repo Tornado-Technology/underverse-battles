@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Instance",
-    "path": "folders/Scripts/Local/Utils/Base/Instance.yy",
+    "path": "folders/Scripts/Local/Utils/Instance.yy",
   },
 }

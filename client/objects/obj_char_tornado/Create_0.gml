@@ -26,7 +26,7 @@ mana = 175;
 max_mana = 200;
 action_mana_upgrade_cost = [0, 40, 60, 100, 175];
 mana_given = 2;
-mana_cooldown = 10;
+mana_cooldown = 9;
 
 // Soul
 soul = spr_tornado_soul;
@@ -38,7 +38,7 @@ frame = spr_tornado_frame;
 // Animations
 idle_animation = spr_tornado_idle;
 after_battle_animation = spr_tornado_idle;
-defeated_animation = spr_tornado_idle;
+defeated_animation = spr_tornado_dodge;
 
 // Actions
 passive_skill_name = translate_get("Character.Tornado.PassiveSkill.Name");
@@ -53,9 +53,14 @@ actions = [
 soundtrack_name = "The Delta"; 
 soundtrack = snd_delta;
 
+dodging = false;
+dodging_time = 0;
 on_taking_damage = function(damage) {
-	if (stamina >= 3 * damage) {
-		stamina -= 3 * damage;
+	if (stamina > 0) {
+		fight_remove_enemy_stamina(player_num, 3 * damage)
+		dodging = true;
+		dodging_time = 0;
+		sprite_index = spr_tornado_dodge;
 		return 0;
 	}
 	

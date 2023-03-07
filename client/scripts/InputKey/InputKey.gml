@@ -17,7 +17,7 @@ function InputKey(target, keys, rebinding = true, data_key = undefined) {
 /// @param {Bool} rebinding
 function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	self.target = target;
-	self.defaultKeys = keys;
+	self.default_keys = keys;
 	self.rebinding = rebinding;
 	self.data_key = data_key;
 	working_key = undefined;
@@ -29,8 +29,8 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 			if (callback(working_key)) return true;
 		}
 		
-		for (var i = 0; i < array_length(defaultKeys); i++) {
-			if (callback(defaultKeys[i])) {
+		for (var i = 0; i < array_length(default_keys); i++) {
+			if (callback(default_keys[i])) {
 				return true;
 			}
 		}
@@ -61,16 +61,16 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	
 	/// @param {struct.Key} key
 	static has_key = function(key) {
-		return array_find_index(defaultKeys, function(founded_key, i) {
+		return method(self, array_find_index(default_keys, function(founded_key, i) {
 			return key.value == founded_key.value && key.device_type == founded_key.device_type;
-		}) != undefined
+		})) != -1;
 	}
 	
 	/// @param {struct.Key} key
 	static key_index = function(key) {
-		return array_find_index(defaultKeys, function(founded_key, i) {
+		return method(self, array_find_index(default_keys, function(founded_key, i) {
 			return key.value == founded_key.value && key.device_type == founded_key.device_type;
-		});
+		}));
 	}
 	
 	/// @param {struct.Key} key
@@ -82,7 +82,7 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 			return;
 		}
 		
-		array_push(defaultKeys, key);
+		array_push(default_keys, key);
 	}
 	
 	/// @param {struct.Key} key
@@ -94,11 +94,11 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 			return;
 		}
 
-		array_delete(defaultKeys, key_index(key), 1);
+		array_delete(default_keys, key_index(key), 1);
 	}
 		
 	static clear_default_keys = function() {
-		array_clear(defaultKeys);
+		array_clear(default_keys);
 	}
 	
 	static clear_key = function() {

@@ -10,7 +10,8 @@ import SendStuff from '../packet/sendStuff.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
 import {clearTimeout} from "timers";
-import {satisfies} from "semver";
+import Rank from '../data/rank.js';
+import { getRank } from '../content/rankList.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -261,5 +262,9 @@ export default class Client extends SendStuff {
 
   public get state(): state {
     return this._state;
+  }
+
+  public get rank(): Rank {
+    return this.isLogin ? getRank(this.profile.rating) : undefined;
   }
 }

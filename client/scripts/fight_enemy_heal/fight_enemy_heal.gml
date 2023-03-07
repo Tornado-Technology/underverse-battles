@@ -12,7 +12,7 @@ function fight_enemy_heal(enemy_id, value) {
 	fight_add_enemy_hp(enemy_id, value);
 	battle_remove_damage(value);
 	fight_update_death();
-	
+	fight_get_enemy(enemy_id).total_heal += value;
 	fight_draw_heal_number(enemy_id, hp != max_hp ? value : 0);
 
 	// Some network sync
