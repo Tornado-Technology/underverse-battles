@@ -39,7 +39,13 @@ function create_soul(px, py, type) {
 	}
 }
 
-function fight_set_soul_data(enemyId, px, py, angle, ability) {
+function change_soul(old_soul, px, py, type) {
+	instance_destroy(old_soul);
+	audio_play_sound_once(snd_swing);
+	return create_soul(px, py, type);
+}
+
+function fight_set_soul_data(playerId, px, py, angle, ability) {
 	if (!instance_exists(obj_battle_soul_otherplayer)) return;
 	var soul = obj_battle_soul_otherplayer;
 	soul.next_x = px;

@@ -14,7 +14,7 @@ if (_time == 1) {
 	switch (_power) {
 		default:
 		case 0:
-			_period = 80;
+			_period = 75;
 			_time_step = [30, 35, 60, 65];
 			final_time = _period*5;
 			break;
@@ -24,17 +24,17 @@ if (_time == 1) {
 			final_time = _period*6;
 			break;
 		case 2:
-			_period = 65;
+			_period = 66;
 			_time_step = [25, 30, 55, 60];
 			final_time = _period*6;
 			break;
 		case 3:
-			_period = 60;
+			_period = 62;
 			_time_step = [20, 25, 50, 55];
 			final_time = _period*7;
 			break;
 		case 4:
-			_period = 55;
+			_period = 58;
 			if (attack_num == 0) _time_step = [18, 22, 40, 44];
 			if (attack_num == 1) _time_step = [15, 20, 45, 50];
 			final_time = _period*10;
@@ -75,8 +75,8 @@ if(_time % _period == 0) {
 	character_instance.change_sprite_hand_dir(side);
 }
 
-bone_scale_speed = 0.3;
-if (attack_num == 1) bone_scale_speed = 0.65;
+bone_scale_speed = _power > 2 ? 0.2 : 0.3;
+if (attack_num == 1) bone_scale_speed = 0.64;
 
 if (attack_num == 0) {
 	var warning_scale = 5;
@@ -87,7 +87,7 @@ if (attack_num == 0) {
 	}
 }
 else {
-	var warning_scale = 12;
+	var warning_scale = _power > 2 ? 10 : 12;
 	if(new_warning) {
 		draw_warning(side, warning_scale);
 		audio_play_sound_plugging(snd_warning);

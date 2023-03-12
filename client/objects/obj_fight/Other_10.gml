@@ -1,40 +1,42 @@
 /// @desc Fight update
 if (pause) exit;
 
-event_user(15); // Ai
-
-// Called in fight_update_state()
-
-// TODO: Update AI in fight_set_enemy_action / fight_reset_enemy_action
-// TODO: Remake timer
+if (player_are_selecting(1)) {
+	var player_id_current = initiative;
+	if (player_id_current == 1)
+		ai_select_attack();
+	else
+		ai_select_dodge();
+}
 
 switch(state) {
 	case fight_state.wait:
 		break;
 
 	case fight_state.choosing:
-		if (fight_enemys_chosen()) break;
+		if (players_are_selecting()) break;
 			
 			timer_stop();
 			
-			var current_enemy = fight_get_initiative();
-			
-			if (!fight_enemy_skip()) {
-				// TODO: add method fight_remove_enemy_stamina_cost
-				// TODO: add method fight_remove_enemy_mana_cost
-				// TODO: add method fight_remove_enemy_stats_cost
-				fight_remove_enemy_stamina(current_enemy, fight_get_enemy_action_stamina_cost(current_enemy, enemy_action[current_enemy]));
-				fight_remove_enemy_mana(current_enemy, fight_get_enemy_action_mana_cost(current_enemy, enemy_power[current_enemy]));
+			var player_id_current = initiative;
+			if (player_is_acting(player_id_current)) {
+				fight_remove_player_stamina(player_id_current, fight_get_player_action_stamina_cost(player_id_current, fight_get_player_action(player_id_current)));
+				fight_remove_player_mana(player_id_current, fight_get_player_action_mana_cost(player_id_current, fight_get_player_power(player_id_current)));
 			}
-			else
-				fight_get_enemy(current_enemy).on_skipping(current_enemy);
+			else if (player_is_skipping(player_id_current))
+				player[player_id_current].on_skipping(player_id_current);
+				
+			fight_player_add_special_action_percent(player_id_current);
 			
-			statistics_set_selection_attacks(fight_get_enemy_action(0), fight_get_enemy_action(1));
-			var dodged = fight_enemys_defended() || fight_enemy_skip();
+			statistics_set_selection_attacks(player_action[you], player_action[_opponent]);
+			
+			var dodged = players_dodged(you, _opponent) || player_is_skipping(player_id_current);
 			fight_set_state(dodged ? fight_state.dodge : fight_state.battle);
 		break;
 
 	case fight_state.dodge:
+		var player_id_dodging = 1 - initiative;
+		player[player_id_dodging].on_dodged(player_id_dodging);
 		fight_draw_dodge();
 		statistics_set_damage(0);
 
@@ -44,57 +46,40 @@ switch(state) {
 
 	case fight_state.battle:
 		// If that AI turn and us attack is really attacking then
-		if (1 - initiative == 1 && fight_enemy_action_is_attack()) {
+		if (initiative == you) {
 			
-			// Make hurt AI
-			with (obj_ai) {
-				event_user(11);
-				fight_enemy_hurt(1, _damage);
-				fight_draw_damage_number(1, _damage);
-				statistics_set_damage(_damage);
-			}
+			var damage = ai_make_damage();
+			fight_draw_damage_number(_opponent, damage);
+			statistics_set_damage(damage);
 			
-			var type = fight_get_enemy_action_type(initiative, enemy_action[initiative]);
-			if (type != fight_action_type.attack_with_healing) {
-				// Do reset
-				fight_set_state(fight_state.reset);
-				break;
-			}
+			fight_set_state(fight_state.reset);
+			break;
 		}
 			
 		// Create battle
 		instance_create_one(obj_battle);
 		break;
-
+	
 	case fight_state.reset:
-		// Regen stamina both enemys if someone skiping
-		if (fight_enemy_skip()) {
-			fight_regen_enemys_stamina();
+		// Regen stamina both players if someone skiping
+		if (player_is_skipping(initiative)) {
+			fight_regen_players_stamina();
 		} 
 		
-		// Regen stamina dodged enemy
-		if (fight_enemys_defended()) {
-			var next = fight_get_next_initiative();
-			fight_regrn_enemy_stamina(next)
+		// Regen stamina dodged player
+		if (players_dodged(you, _opponent)) {
+			fight_regrn_player_stamina(fight_get_next_initiative());
 		}
 		
 		// Some reset actions
 		fight_reset_fight_ui();
-		fight_set_next_initiative();
+		set_next_initiative();
+		reset_players_action();
 		
-		// Reset actions
-		fight_reset_enemys_action();
-		fight_reset_enemys_power();
+		timer_start();
 		
 		// Return to choosing
 		fight_set_state(fight_state.choosing);
-		break;
-		
-	case fight_state.ending:
-		// TODO: Maybe me need destroy this obj, but idk 
-		// Go to gameover screen
-		global.fight_instance = noone;
-		room_goto(room_fight_end);
 		break;
 
 	default:

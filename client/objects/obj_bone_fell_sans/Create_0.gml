@@ -1,3 +1,3 @@
 event_inherited();
 
-damage = get_char_damage(obj_char_fell_sans);
+damage = get_char_damage(obj_character_fell_sans);

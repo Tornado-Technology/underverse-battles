@@ -1,5 +1,5 @@
-function fight_add_enemy_mana(enemy, mana){
-	fight_get_enemy(enemy).mana += mana;
-	fight_get_enemy(enemy).mana = clamp(fight_get_enemy(enemy).mana, 0, fight_get_enemy_max_mana(enemy));
+function fight_add_player_mana(player, mana){
+	fight_get_player(player).mana += mana;
+	fight_get_player(player).mana = clamp(fight_get_player(player).mana, 0, fight_get_player_max_mana(player));
 	return true;
 }

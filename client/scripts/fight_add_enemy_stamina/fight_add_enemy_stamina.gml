@@ -1,13 +1,13 @@
 ///@arg id
 ///@arg value
-function fight_add_enemy_stamina(){
-	var enemy_stamina = fight_get_enemy_stamina(argument[0]);
-	var enemy_stamina_max = fight_get_enemy_max_stamina(argument[0]);
+function fight_add_player_stamina(){
+	var player_stamina = fight_get_player_stamina(argument[0]);
+	var player_stamina_max = fight_get_player_max_stamina(argument[0]);
 	
-	enemy_stamina += argument[1];
-	if (enemy_stamina_max < enemy_stamina)
-		fight_set_enemy_stamina(argument[0], enemy_stamina_max);
+	player_stamina += argument[1];
+	if (player_stamina_max < player_stamina)
+		fight_set_player_stamina(argument[0], player_stamina_max);
 	else
-		fight_set_enemy_stamina(argument[0], enemy_stamina);
+		fight_set_player_stamina(argument[0], player_stamina);
 	return true;
 }

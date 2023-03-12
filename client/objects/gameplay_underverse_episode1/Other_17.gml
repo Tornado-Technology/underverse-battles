@@ -4,7 +4,7 @@ if (instance_exists(dlg))
 	exit;
 
 /* Fight */
-fight_set_enemy_action(1, 3);
+fight_set_player_skip(1);
 fight_set_initiative(0);
 				
 /* Options */

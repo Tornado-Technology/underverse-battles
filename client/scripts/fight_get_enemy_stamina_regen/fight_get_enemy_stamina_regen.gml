@@ -1,4 +1,4 @@
 ///@arg id
-function fight_get_enemy_stamina_regen(){
-	return fight_get_enemy(argument[0]).stamina_regen;
+function fight_get_player_stamina_regen(){
+	return fight_get_player(argument[0]).stamina_regen;
 }

@@ -14,7 +14,7 @@ ability = false;
 next_x = x;
 next_y = y;
 
-enemyId = 0;
+playerId = 0;
 
 skip_frame = 0;
 

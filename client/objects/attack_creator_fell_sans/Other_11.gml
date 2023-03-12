@@ -7,18 +7,32 @@ switch (attack_num) {
 	case 0: // Наводящиеся гастербластеры
 		
 		// Create border
-		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+		_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left + 10, battle_border.right + 10);
 		if (battle_border_start_animation_end()) exit;
 		
 		// Create soul
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (65 - _power * 6) == 1 && _time <= (65 - _power * 6) * (5 + _power)) {
-			repeat (_power > 2 ? 2 : 1) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+		var period = 50 - _power * 5;
+		var amount = 7 + _power;
+		if (_time == 1)
+			stage = irandom_range(1, 2);
+		
+		if (stage == 1) {
+			if(_time % period == 1 && _time <= period * amount) {
+				create_aiming_gasterblaster(aim_gb_obj, _soul);
+			}
+		}
+		else {
+			period = 54 - _power * 4;
+			amount = 6 + _power;
+			if(_time % period == 1 && _time <= period * amount) {
+				repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+			}
 		}
 		
-		if(_time == (65 - _power * 6) * (5 + _power) + 60) instance_destroy();
+		if(_time == period * amount + 60) instance_destroy();
 		break;
 	
 	case 1: // Крестовые гастербластеры
@@ -76,7 +90,7 @@ switch (attack_num) {
 	case 2: // Гастербластеры сверху
 	
 		// Create border
-		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left - 42, battle_border.right - 42);
+		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left - 43, battle_border.right - 43);
 		if (battle_border_start_animation_end()) exit;
 		
 		// Create soul

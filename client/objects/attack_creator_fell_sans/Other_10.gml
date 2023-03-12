@@ -27,7 +27,7 @@ switch (attack_num) {
 		
 		// Attack
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
-		var period = 33 - 3 * _power;
+		var period = 33 - 2 * _power;
 		var per_num = 10 + _power * 2;
 		if(_time % period == 1 && _time < per_num * period) {
 			var side = irandom_range(0, 1);

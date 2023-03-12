@@ -1,6 +1,5 @@
-///@arg id
+///@arg player_id
 ///@arg value
-function fight_set_enemy_stamina(){
-	fight_get_enemy(argument[0]).stamina=argument[1];
-	return true;
+function fight_set_player_stamina(player_id, value){
+	fight_get_player(player_id).stamina = value;
 }

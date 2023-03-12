@@ -1,4 +1,4 @@
-function fight_regen_enemys_stamina() {
-	fight_regrn_enemy_stamina(0);
-	fight_regrn_enemy_stamina(1);
+function fight_regen_players_stamina() {
+	fight_regrn_player_stamina(0);
+	fight_regrn_player_stamina(1);
 }

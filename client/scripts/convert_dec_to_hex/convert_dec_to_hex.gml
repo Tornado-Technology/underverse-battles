@@ -20,7 +20,7 @@ function convert_dec_to_hex(value, length = undefined) {
 
 	if (length != undefined) {
 	    while (string_length(hex) < length) {
-	        hex = string("0{0}", hex);
+	        hex = "0" + string(hex);
 	    }
 	}
 

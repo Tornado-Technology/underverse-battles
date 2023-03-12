@@ -1,7 +1,7 @@
 room_width = 1280;
 
-player_ = instance_create_depth(240, room_height / 2, fight_depth.enemy, player_sans);
-xchara_ = instance_create_depth(1000, room_height / 2, fight_depth.enemy, obj_char_xchara_uv00);
+player_ = instance_create_depth(240, room_height / 2, fight_depth.player, player_sans);
+xchara_ = instance_create_depth(1000, room_height / 2, fight_depth.player, obj_character_xchara);
 xchara_.sprite_index = spr_xchara_secretive;
 
 wall_left = instance_create_depth(0, 0, 0, obj_wall);

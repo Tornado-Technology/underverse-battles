@@ -1,7 +1,5 @@
 x_dir = x;
 y_dir = y;
-x_start = x;
-y_start = y;
 
 time = 0;
 

@@ -7,26 +7,24 @@ story_mode = true;
 required_components = {
 	ui: obj_fight_ui,
 	input: obj_fight_input,
-	bg: obj_fight_bg, 
-	bgm: obj_fight_bgm, 
+	bg: obj_fight_background, 
+	bgm: obj_fight_soundtrack, 
 	timer: obj_fight_timer, 
 	uv: obj_ai_uv00
 };
 
 // CHARActer
-enemy_object[0] = obj_char_ink_sans;
-enemy_object[1] = obj_char_xchara_uv00;
-
-// Background
-var bg_id = _background.deltarune_battle;
-background = background_get(background_info.sprite, bg_id);
-background_obj = background_get(background_info.animator, bg_id);
+player_object[0] = obj_character_ink_sans;
+player_object[1] = obj_character_xchara;
 
 /* Position */
-center_enemy_position_x[0] = obj_camera.camera_position.x + obj_camera.view_width / 6;
-center_enemy_position_x[1] = obj_camera.camera_position.x + obj_camera.view_width / 1.2;
-center_enemy_position_y[0] = obj_camera.camera_position.y + obj_camera.view_height / 1.5;
-center_enemy_position_y[1] = obj_camera.camera_position.y + obj_camera.view_height / 1.5;
+center_player_position_x[0] = obj_camera.camera_position.x + obj_camera.view_width / 6;
+center_player_position_x[1] = obj_camera.camera_position.x + obj_camera.view_width / 1.2;
+center_player_position_y[0] = obj_camera.camera_position.y + obj_camera.view_height / 1.5;
+center_player_position_y[1] = obj_camera.camera_position.y + obj_camera.view_height / 1.5;
+
+// Background
+background_id = _background.deltarune_battle;
 
 // Soundtrack
 soundtrack = snd_megalovania;

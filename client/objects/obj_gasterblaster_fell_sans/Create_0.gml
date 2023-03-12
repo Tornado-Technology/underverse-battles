@@ -1,7 +1,4 @@
-x_dir = x;
-y_dir = y;
-x_start = x;
-y_start = y;
+event_inherited();
 
 time = 0;
 

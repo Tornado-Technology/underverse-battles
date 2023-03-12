@@ -1,1 +1,1 @@
-fight_enemy_hurt(0, fight_get_enemy_hp(0));
+fight_player_hurt(0, fight_get_player_hp(0));

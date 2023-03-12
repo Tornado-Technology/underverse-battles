@@ -5,7 +5,7 @@ if (input_check_held(input.up))
 		shift -= 4;
 	}
 if (input_check_held(input.down))
-	if (shift < array_length(selection_attacks_0) * 20 - 120) {
+	if (shift < action_list_size * 20 - 120) {
 		shift += 4;
 	}
 

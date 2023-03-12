@@ -1,9 +1,9 @@
-///@arg enemy_id
+///@arg player_id
 ///@arg x
 ///@arg y
-function fight_move_enemy_position(){
-	var ENEMY=obj_fight.enemy[argument[0]];
-	ENEMY.x+=argument[1];
-	ENEMY.y+=argument[2];
+function fight_move_player_position(){
+	var player=obj_fight.player[argument[0]];
+	player.x+=argument[1];
+	player.y+=argument[2];
 	return true;
 }

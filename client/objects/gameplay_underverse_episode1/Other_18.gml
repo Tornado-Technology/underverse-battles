@@ -1,7 +1,7 @@
 ///@desc Инк - Про уворот
 
-if (fight_get_enemy_action(0) > 0) {
-	fight_set_enemy_action(0, -1);
+if (fight_get_player_action(0) > 0) {
+	fight_set_player_action(0, -1);
 	
 	dlg = dialog_create(episode + "WrongAttack");
 	
@@ -13,7 +13,7 @@ if (fight_get_enemy_action(0) > 0) {
 	exit;
 }
 
-if (fight_get_enemy_action(0) == 0) {
+if (fight_get_player_action(0) == 0) {
 	/* Options */
 	fight_set_ui_showing_action_box(false);
 	fight_set_player_input(false);

@@ -10,7 +10,7 @@ if (shift > 0) {
 	arrows.up.draw(width - 12, surface_cord.y + 8);
 }
 
-if (shift < array_length(selection_attacks_0) * 20 - 120) {
+if (shift < action_list_size * 20 - 120) {
 	arrows.down.draw(width - 12, surface_cord.y + surface_size.y - 8, 1, 180);
 }
 
@@ -31,7 +31,7 @@ surface_set_target(surface) {
 draw_clear_alpha(c_white, 0);
 
 #region Surface
-var i = 0; repeat(array_length(selection_attacks_0)) {
+var i = 0; repeat(action_list_size) {
 	var width = surface_size.x;
 	var text_y = 20 * i - shift;
 	
@@ -44,21 +44,26 @@ var i = 0; repeat(array_length(selection_attacks_0)) {
 		draw_text(0, text_y, string(i div 2 + 1)+".");
 	}
 	
+	// Player 0 actions
+	var player_id = 0;
+	
+	draw_set_halign(fa_left);
 	draw_set_color(c_white);
+	
 	if (i < array_length(initiative)) {
-		if (initiative[i] == 0) {
+		if (initiative[i] == player_id) {
 			draw_set_color(c_yellow);
 		}
 	}
 	
-	if (i < array_length(selection_attacks_0)) {
-		if (selection_attacks_0[i] != 3 && selection_attacks_0[i] != -1) {
-			draw_text(20, text_y, character_attack[initiative[i], selection_attacks_0[i]]);
-		} else {
-			draw_text(20, text_y, lang_skip);
-		}
-	}
+	var text_x = 20;
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack1, i);
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack2, i);
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack3, i);
+	draw_selected_action(text_x , text_y, character_special_attack[initiative[i]], player_id, fight_action_type.special_attack, i);
+	draw_selected_action(text_x , text_y, lang_skip, player_id, fight_action_type.skip, i);
 	
+	// Actions
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	
@@ -71,29 +76,31 @@ var i = 0; repeat(array_length(selection_attacks_0)) {
 			draw_set_color(c_white);
 		}
 		if (getting_damage[i] == 0) {
-			if (selection_attacks_0[i] == selection_attacks_1[i])
+			if (selected_action[0, i] == selected_action[1, i])
 				draw_text(width / 2, text_y, lang_dodge);
 			else
 				draw_text(width / 2, text_y, lang_miss);
 		}
 	}
 	
+	// Player 1 actions
+	player_id = 1;
+	
 	draw_set_halign(fa_right);
 	draw_set_color(c_white);
 	
 	if (i < array_length(initiative)) {
-		if (initiative[i] == 1) {
+		if (initiative[i] == player_id) {
 			draw_set_color(c_yellow);
 		}
 	}
 	
-	if (i < array_length(selection_attacks_1)) {
-		if (selection_attacks_1[i] != 3 && selection_attacks_1[i] != -1) {
-			draw_text(width, text_y, character_attack[initiative[i], selection_attacks_1[i]]);
-		} else {
-			draw_text(width, text_y, lang_skip);
-		}
-	}
+	var text_x = width;
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack1, i);
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack2, i);
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack3, i);
+	draw_selected_action(text_x, text_y, character_special_attack[initiative[i]], player_id, fight_action_type.special_attack, i);
+	draw_selected_action(text_x, text_y, lang_skip, player_id, fight_action_type.skip, i);
 	
 	i++;
 }

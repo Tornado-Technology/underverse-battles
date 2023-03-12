@@ -12,13 +12,13 @@ switch (attack_num) {
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (20 - 2 * _power) == 1 and _time < 240 + 20 * _power) {
+		if(_time % (18 - 2 * _power) == 1 and _time < 250 + 20 * _power) {
 			var rand_place = irandom_range(0, 2);
 			if (rand_place == 0)
-				_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, obj_bone_error_sans);
+				_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
 			else {
 				var rand_x = irandom_range(obj_battle_border.x - obj_battle_border.left, obj_battle_border.x + obj_battle_border.right);
-				_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, obj_bone_error_sans);
+				_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
 			}
 			_bones[num].image_angle = 180;
 			_bones[num]._delay = 0;
@@ -63,7 +63,7 @@ switch (attack_num) {
 		if(_time % (20 - 2 * _power) == 1 and _time < 240 + 20 * _power) {
 			var coord = [];
 			coord = rand_side_from(_border.x - _border.left - 40, _border.y - _border.up - 40, _border.x + _border.right + 40, _border.y + _border.down + 40);
-			_bones[num] = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside, obj_bone_error_sans);
+			_bones[num] = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside, bone_obj);
 			_bones[num].direction = point_direction(_bones[num].x, _bones[num].y, _border.x, _border.y);
 			_bones[num].image_angle = _bones[num].direction - 90;
 			_bones[num].image_yscale = 3.2;
@@ -108,7 +108,9 @@ switch (attack_num) {
 		}
 		
 		// Attack
-		if(_time % (60 - 5 * _power) == 1 and _time < (60 - 5 * _power) * (5 + _power)) {
+		var period =  58 - 4 * _power;
+		var amount = 5 + _power;
+		if(_time % period == 1 and _time < period * amount) {
 			var bone_speed = 1.5 + 0.5*_power;
 			var bone_size = 5.5;
 			if (_side == 0) {
@@ -125,7 +127,7 @@ switch (attack_num) {
 			}
 		}
 		
-		if(_time > (60 - 5 * _power) * (6 + _power)) {
+		if(_time > period * (amount + 1)) {
 			instance_destroy();
 		}
 
@@ -140,7 +142,7 @@ switch (attack_num) {
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 		// Attack
-		main_speed = 1 + _power * 0.2
+		var main_speed = 1 + _power * 0.2;
 		create_moving_platforms(obj_battle_border.x - obj_battle_border.left - 40, obj_battle_border.y + 20, 2, 10, 120, main_speed, 0);
 		create_moving_platforms(obj_battle_border.x + obj_battle_border.right + 40, obj_battle_border.y - 20, 2, 10, 120, -main_speed, 1);
 		if(_time % (32 - 2 * _power) == 1 and _time < 250 + 20 * _power) {
@@ -149,16 +151,16 @@ switch (attack_num) {
 				var rand_place = irandom_range(0, 2);
 				if (rand_place == 0) {
 					if (i == 0)
-						_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, obj_bone_error_sans);
+						_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
 					else
-						_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y + obj_battle_border.down + 20, fight_depth.bullet_outside, obj_bone_error_sans);
+						_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y + obj_battle_border.down + 20, fight_depth.bullet_outside, bone_obj);
 				}
 				else {
 					var rand_x = irandom_range(obj_battle_border.x - obj_battle_border.left, obj_battle_border.x + obj_battle_border.right);
 					if (i == 0)
-						_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, obj_bone_error_sans);
+						_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
 					else
-						_bones[num] = instance_create_depth(rand_x, obj_battle_border.y + obj_battle_border.up + 20, fight_depth.bullet_outside, obj_bone_error_sans);
+						_bones[num] = instance_create_depth(rand_x, obj_battle_border.y + obj_battle_border.up + 20, fight_depth.bullet_outside, bone_obj);
 				}
 				if (i == 0)
 					_bones[num].image_angle = 180;

@@ -1,6 +1,6 @@
 var anim_create = false;
 if (global.fight_instance != noone) {
-	anim_create = global.fight_instance.battle_continues;
+	anim_create = true;
 }
 
 if (animation_id == "Create" && anim_create) {

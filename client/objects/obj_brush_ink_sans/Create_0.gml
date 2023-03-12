@@ -11,4 +11,4 @@ timing = [];
 
 side = -1;
 
-damage = get_char_damage(obj_char_ink_sans);
+damage = get_char_damage(obj_character_ink_sans);

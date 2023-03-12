@@ -24,5 +24,30 @@ invincibility_update = function() {
 	}
 }
 
+// Tremble
+trembles = false;
+tremble_time = 0;
+tremble_time_max = 180;
+tremble_force_x = 0;
+tremble_force_y = 0;
+tremble_update = function() {
+	if (trembles) {
+		var rand_side = choose(dir.up, dir.down, dir.left, dir.right);
+		tremble_force_x = 0;
+		tremble_force_y = 0;
+		if (rand_side == dir.up) tremble_force_y = -1;
+		if (rand_side == dir.down) tremble_force_y = 1;
+		if (rand_side == dir.left) tremble_force_x = -1;
+		if (rand_side == dir.right) tremble_force_x = 1;
+		tremble_time++;
+		if (tremble_time == tremble_time_max) {
+			trembles = false;
+			tremble_time = 0;
+			tremble_force_x = 0;
+			tremble_force_y = 0;
+		}
+	}
+}
+
 // Create collider soul
 collider_soul = instance_create_depth(x, y, depth, obj_battle_collider_soul);

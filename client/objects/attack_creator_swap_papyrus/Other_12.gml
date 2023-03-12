@@ -85,6 +85,7 @@ switch (attack_num) {
 			}
 			++i;
 		}
+		//character_instance.change_sprite_hand_dir(side);
 		audio_play_sound_plugging(snd_spare_up);
 	}
 
@@ -98,7 +99,7 @@ switch (attack_num) {
 	if(_time % _period >= _time_step and _time % _period <= _time_step + 2) {
 		var i = 0;
 		repeat(num) {
-			_bones[i].image_yscale -= 0.3;
+			_bones[i].image_yscale -= 0.4;
 			++i;
 		}
 	}
@@ -180,7 +181,7 @@ switch (attack_num) {
 		//character_instance.change_sprite_hand_dir(side);
 	}
 
-	bone_scale_speed = 0.65;
+	bone_scale_speed = 0.64;
 
 	if (attack_num == 0) {
 		var warning_scale = 5;

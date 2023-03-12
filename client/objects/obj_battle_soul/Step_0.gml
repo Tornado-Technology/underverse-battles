@@ -5,5 +5,6 @@ if (follow_board) {
 }
 
 invincibility_update();
+tremble_update();
 
 ability = global.fight_instance.required_components.input.input_ability;

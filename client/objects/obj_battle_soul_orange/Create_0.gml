@@ -16,3 +16,10 @@ invulnerability = false;
 
 side = 0;
 changeable_direction = false;
+
+new_image_angle = 0;
+
+
+is_changing_side = false;
+side_controller = undefined;
+side_controller_previous = undefined;

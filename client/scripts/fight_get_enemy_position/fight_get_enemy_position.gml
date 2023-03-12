@@ -1,5 +1,5 @@
-///@arg enemy_id
-function fight_get_enemy_position(){
-	var ENEMY=obj_fight.enemy[argument[0]];
-	return [ENEMY.x,ENEMY.y];
+///@arg player_id
+function fight_get_player_position(){
+	var player=obj_fight.player[argument[0]];
+	return [player.x,player.y];
 }

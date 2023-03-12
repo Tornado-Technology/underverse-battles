@@ -9,59 +9,43 @@ story_mode = false;
 required_components = {
 	ui: obj_fight_ui,
 	input: obj_fight_input,
-	bg: obj_fight_bg, 
-	bgm: obj_fight_bgm, 
+	bg: obj_fight_background, 
+	bgm: obj_fight_soundtrack, 
 	timer: obj_fight_timer, 
 	ai: obj_ai
 };
 
 // Character
-enemy_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_char_tornado);
-enemy_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_char_tornado);
+player_ammount = 2;
+you = 0;
+_opponent = 1;
 
-// Background
-var bg_id = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.BACKGROUND_CUSTOM, 0);
-background = background_get(background_info.sprite, bg_id);
-background_obj = background_get(background_info.animator, bg_id);
+player_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_character_tornado);
+player_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_character_tornado);
 
-// Soundtrack
-var _soundtrack	= memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.SOUNDTRACK);
-var _soundtrack_custom = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.SOUNDTRACK_CUSTOM);
+center_player_position_x = [room_width / 6, room_width / 1.2];
+center_player_position_y = [room_height / 1.5, room_height / 1.5];
 
-soundtrack = _soundtrack_custom;
-if (_soundtrack_custom == undefined) {
-	soundtrack = _soundtrack;
+for (var player_id = 0; player_id < player_ammount; player_id++) {
+	player_can_input[player_id] = true;
+	player_action[player_id] = fight_action_type.empty;
+	player_power[player_id] = 0;
 }
-
-// Other
-x_shift = 1;
-time = 0;
-battle_continues = true;
-battle_death_animation = false;
-enemy_death_id = -1;
-
-// Discord
-if (is_desktop) discord_set_info_action(discord_action.in_fight);
-
-// Next
-// Main create
-enemy = [noone, noone];
-enemy_can_input = [true, true];
-enemy_action = [-1, -1];
-enemy_power = [0, 0];
 
 // initiative 
 initiative = 0;
 
+// Time source
+end_battle_timesource = 0;
+
+// Other
+x_shift = 1;
+
+// Discord
+if (is_desktop) discord_set_info_action(discord_action.in_fight);
+
 // State
 state = fight_state.choosing;
-
-// Position
-center_enemy_position_x = [room_width / 6, room_width / 1.2];
-center_enemy_position_y = [room_height / 1.5, room_height / 1.5];
-
-// Timer
-time = 0;
 
 // Dev
 pause = false;
@@ -70,24 +54,73 @@ _time = 0;
 // Ending room
 ending_room = room_fight_end;
 
-#region Some useful methods
-function fight_enemys_chosen() {
-	return enemy_action[0] == -1 || enemy_action[1] == -1;
+// Background
+background_id = undefined;
+
+// Soundtrack
+soundtrack = undefined;
+
+#region Methods
+player_are_selecting = function(player_id) {
+	if (player_action[player_id] != fight_action_type.empty)
+		return false;
+	return true;
 }
 
-function fight_enemys_defended() {
-	return enemy_action[0] == enemy_action[1];
+players_are_selecting = function() {
+	for (var player_id = 0; player_id < player_ammount; player_id++) {
+		if (player_action[player_id] == fight_action_type.empty)
+			return true;
+	}
+	return false;
 }
 
-function fight_enemy_skip() {
-	return enemy_action[initiative] == 3;
+set_next_initiative = function(){
+	initiative = 1 - initiative;
 }
 
-function fight_enemy_action_is_attack() {
-	var type = fight_get_enemy_action_type(initiative, enemy_action[initiative]);
-	return type == fight_action_type.attack || type == fight_action_type.attack_with_healing;
+player_is_acting = function(player_id) {
+	return player_action[player_id] == fight_action_type.attack1 ||
+		player_action[player_id] == fight_action_type.attack2 ||
+		player_action[player_id] == fight_action_type.attack3;
+}
+
+player_is_special_acting = function(player_id) {
+	return player_action[player_id] == fight_action_type.special_attack;
+}
+
+player_is_skipping = function(player_id) {
+	return player_action[player_id] == fight_action_type.skip;
+}
+
+players_dodged = function(player_id1, player_id2) {
+	return player_action[player_id1] == player_action[player_id2];
+}
+
+reset_players_action = function () {
+	for (var player_id = 0; player_id < player_ammount; player_id++) {
+		player_action[player_id] = fight_action_type.empty;
+		player_power[player_id] = 0;
+	}
+}
+
+check_player_lose = function() {
+	if (player[you].is_defeated() || player[_opponent].is_defeated())
+		finish_battle();
+}
+
+finish_battle = function () {
+	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, player[you].defeated ? gameover.lose :  gameover.win);
+	time_source_start(end_battle_timesource);
+	instance_destroy(obj_battle);
+	audio_stop_all();
+}
+
+goto_ending_room = function() {
+	global.fight_instance = noone;
+	room_goto(ending_room);
 }
 #endregion
 
-// Setup obj_fight
-alarm[1] = 1;
+// Instance create
+event_user(1);

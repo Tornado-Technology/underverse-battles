@@ -1,12 +1,25 @@
-/// @desc Death
-var player_hp = fight_get_enemy_hp(0);
+/// @description Instance create
 
-if (player_hp <= 0) {
-	enemy_death_id = player_hp;
-}
+// Create fights components
+instance_create_struct(required_components);
 
-if (enemy_death_id == -1) exit;
+//Starting value for Underverse 0.0 obj_fight
+fight_set_player_input(false);
+fight_ui_set_player_can_input_skip(false);
+fight_set_ui_showing_action_box(false);
+fight_set_showing_special_action(false);
+timer_switch(false);
 
-memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, gameover.lose);
+// Create players
+player[0] = player_object[0];
+player[1] = player_object[1];
 
-battle_death_animation = true;
+// Offseting players
+//for (var _id = 0; _id < 2; _id++) {
+//	fight_move_player_position_x(_id, fight_get_player_offset_x(_id));
+//	fight_move_player_position_y(_id, fight_get_player_offset_y(_id));
+//}
+
+// Fliping player
+fight_flip_player(1);
+

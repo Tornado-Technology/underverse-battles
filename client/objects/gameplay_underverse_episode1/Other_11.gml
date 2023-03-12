@@ -4,7 +4,7 @@ if (!instance_exists(dlg))
 	start_delay();
 	
 if (_delay == 150) {
-	sans_soul_ = instance_create_depth(player_.x + 20, player_.y - player_.sprite_height / 2, fight_depth.enemy, obj_scene_soul);
+	sans_soul_ = instance_create_depth(player_.x + 20, player_.y - player_.sprite_height / 2, fight_depth.player, obj_scene_soul);
 	sans_soul_.sprite_index = spr_monster_soul;
 	sans_soul_.animation_switch = false;
 	xchara_.sprite_index = spr_xchara_hand_forward;
@@ -43,10 +43,10 @@ if (_delay == 270) {
 	
 	instance_destroy(sans_soul_);
 	
-	sans_soul_half_1 = instance_create_depth(xchara_.x + xchara_.sprite_width / 2, xchara_.y - 25, fight_depth.enemy, obj_scene_soul);
+	sans_soul_half_1 = instance_create_depth(xchara_.x + xchara_.sprite_width / 2 - 6, xchara_.y - 25, fight_depth.player, obj_scene_soul);
 	scene_soul_set_sprite(sans_soul_half_1, spr_monster_soul_half2);
 	
-	sans_soul_half_ = instance_create_depth(player_.x + 16, player_.y - player_.sprite_height / 2, fight_depth.enemy, obj_scene_soul);
+	sans_soul_half_ = instance_create_depth(player_.x + 16, player_.y - player_.sprite_height / 2, fight_depth.player, obj_scene_soul);
 	scene_soul_set_sprite(sans_soul_half_, spr_monster_soul_half1);
 	effect_blackout_end();
 }

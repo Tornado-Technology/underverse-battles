@@ -28,13 +28,16 @@ if (time == charge_time) {
 }
 
 if (time > charge_time) {
-	x = lerp(x, x_start, 0.1);
-	y = lerp(y, y_start, 0.1);
+	x = lerp(x, xstart, 0.1);
+	y = lerp(y, ystart, 0.1);
 	if (instance_exists(blast)) {
 		blast.x = x;
 		blast.y = y;
 	}
-	image_alpha -= 0.05;
+}
+
+if (time > charge_time + 15) {
+	image_alpha -= 0.1;
 }
 
 if (image_alpha <= 0)

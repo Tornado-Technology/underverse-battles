@@ -1,14 +1,4 @@
-x_dir = x;
-y_dir = y;
-x_start = x;
-y_start = y;
-
-blast_max_scale = 3;
-
-time = 0;
-
-fly_time = 10;
-charge_time = 40;
+event_inherited();
 
 charge_sprite = spr_gasterblaster_charging_error_sans;
 shot_sprite = spr_gasterblaster_shooting_error_sans;

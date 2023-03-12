@@ -52,6 +52,7 @@ enum fight_state {
 enum fight_depth {
 	bg = -100,
 	enemy = -200,
+	player = -200,
 	ui = -300,
 	bullet = -500,
 	border = -600,
@@ -62,9 +63,13 @@ enum fight_depth {
 }
 
 enum fight_action_type {
-	attack,
-	healing,
-	attack_with_healing
+	empty,
+	skip,
+	attack1,
+	attack2,
+	attack3,
+	special_attack,
+	healing
 }
 
 enum battle_border {

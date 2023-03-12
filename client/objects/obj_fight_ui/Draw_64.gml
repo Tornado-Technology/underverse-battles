@@ -8,17 +8,17 @@ var initiative      = fight_get_initiative();
 var initiative_next = fight_get_next_initiative();
 var is_player_turn  = initiative == 0;
 
-// Enemy 
-var enemy_position = Vector2(fight_get_enemy_position_x(initiative_next), fight_get_enemy_position_y(initiative_next));
-var enemy_height   = fight_get_enemy(initiative_next).sprite_height;
+// player 
+var player_position = Vector2(fight_get_player_position_x(initiative_next), fight_get_player_position_y(initiative_next));
+var player_height   = fight_get_player(initiative_next).sprite_height;
 
 // GUI
 var size = display_get_gui_size();
 var size_center = display_get_gui_size().divis(2, 2);
 
 // Player things
-var selected_button = fight_get_enemy_input_action();
-var selected_power = fight_get_enemy_input_power();
+var selected_button = fight_get_player_input_action();
+var selected_power = fight_get_player_input_power();
 
 // Controller(Mobile)
 var controller = global.__ui_controls_instance;
@@ -45,18 +45,18 @@ if (showing_option_bar_bg) {
 draw_set_font(font_console_mini);
 
 draw_set_halign(fa_right);
-draw_text_outlined(size_center.x - 136, 10, c_red,   c_black, fight_get_enemy_hp(0));
-draw_text_outlined(size_center.x - 135, 18, c_white, c_black, fight_get_enemy_stamina(0));
+draw_text_outlined(size_center.x - 136, 10, c_red,   c_black, fight_get_player_hp(0));
+draw_text_outlined(size_center.x - 135, 18, c_white, c_black, fight_get_player_stamina(0));
 
 draw_set_halign(fa_middle);
-draw_text_outlined(size_center.x - 126, 22, c_aqua,  c_black, fight_get_enemy_mana(0));
+draw_text_outlined(size_center.x - 126, 22, c_aqua,  c_black, fight_get_player_mana(0));
 
 draw_set_halign(fa_left);
-draw_text_outlined(size_center.x + 136, 10, c_red,   c_black, fight_get_enemy_hp(1));
-draw_text_outlined(size_center.x + 135, 18, c_white, c_black, fight_get_enemy_stamina(1));
+draw_text_outlined(size_center.x + 136, 10, c_red,   c_black, fight_get_player_hp(1));
+draw_text_outlined(size_center.x + 135, 18, c_white, c_black, fight_get_player_stamina(1));
 
 draw_set_halign(fa_middle);
-draw_text_outlined(size_center.x + 126, 22, c_aqua,  c_black, fight_get_enemy_mana(1));
+draw_text_outlined(size_center.x + 126, 22, c_aqua,  c_black, fight_get_player_mana(1));
 
 // Main darw
 var color = c_white;
@@ -75,10 +75,10 @@ draw_reset();
 draw_set_font(font_determination);
 
 // Positions values
-var soul = fight_get_enemy_soul(0);
+var soul = fight_get_player_soul(0);
 
 // Draw Action border
-if (action_box_show && ui_showing_action_box_power && is_player_turn) { 
+if (action_box_show && showing_special_action && is_player_turn) { 
 	draw_sprite(spr_fight_ui_bar_power, selected_power, action_box_position.x + action_box_size.x / 2, action_box_position.y);
 }
 
@@ -89,7 +89,7 @@ if (action_box_show) {
 	for (var i = 0; i < 3; i++) {
 		
 		var action    = fight_get_action_name(initiative, i);
-		var is_tried  = fight_get_enemy_stamina(initiative, i) >= fight_get_enemy_action_stamina_cost(initiative, i); 
+		var is_tried  = fight_get_player_stamina(initiative) >= fight_get_player_action_stamina_cost(initiative, i); 
 		var is_selcet = selected_button == i;
 		var offset_postion = Vector2(0, i * 18);
 		
@@ -127,8 +127,17 @@ if (action_box_show) {
 	}
 }
 
+// Special action
+if (action_box_show && showing_special_action && is_player_turn) {
+	draw_sprite(fight_get_player_special_action_icon(0), fight_get_player_special_action_percent(0) == 100 ? 0 : 1, room_width - 90, room_height - 40);
+	
+	draw_set_font(font_console_mini);
+	draw_set_halign(fa_center);
+	draw_text_outlined(room_width - 90, room_height - 20, text_simple_color, c_black, string(fight_get_player_special_action_percent(0))+"%");
+}
+
 // Skip
-if (ui_showing_skip && is_player_turn && fight_get_enemy_stamina(0) < fight_get_enemy_action_stamina_cost(0, 2) && in_chouse) {
+if (showing_skip && is_player_turn && fight_get_player_stamina(0) < fight_get_player_action_stamina_cost(0, 2) && in_chouse) {
 	draw_set_font(font_mini);
 	draw_text_outlined(40, room_height - 20, c_gray, c_black, text_skip);
 }

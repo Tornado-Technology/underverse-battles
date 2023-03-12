@@ -7,15 +7,29 @@ switch (attack_num) {
 	case 0: // Наводящиеся гастербластеры
 		
 		// Create border
-		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+		_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left + 10, battle_border.right + 10);
 		if (battle_border_start_animation_end()) exit;
 		
 		// Create soul
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (65 - _power * 6) == 1 && _time <= (65 - _power * 6) * (5 + _power)) {
-			repeat (_power > 2 ? 2 : 1) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+		var period = 50 - _power * 5;
+		var amount = 7 + _power;
+		if (_time == 1)
+			stage = irandom_range(1, 2);
+		
+		if (stage == 1) {
+			if(_time % period == 1 && _time <= period * amount) {
+				create_aiming_gasterblaster(aim_gb_obj, _soul);
+			}
+		}
+		else {
+			period = 54 - _power * 4;
+			amount = 6 + _power;
+			if(_time % period == 1 && _time <= period * amount) {
+				repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+			}
 		}
 		
 		if(_time == (65 - _power * 6) * (5 + _power) + 60) instance_destroy();
@@ -86,7 +100,7 @@ switch (attack_num) {
 			_soul = create_soul(_border.x, _border.y - _border.up / 2, battle_soul_type.orange);
 		
 		// Attack
-		if(_time % (60 - _power * 5) == 1 && _time < 240 + 20 * _power) {
+		if(_time % (60 - _power * 4) == 1 && _time < 240 + 20 * _power) {
 			var bone_speed = 1 + _power * 0.1
 			var _inst = create_bone(_border.x - _border.left - 4, _border.y - 15, bone_obj,
 					bone_speed, 2, 0, 90);
@@ -94,21 +108,18 @@ switch (attack_num) {
 					bone_speed, 2, 180, 270);
 		}
 		
-		var period = 65 - _power * 6;
+		var period = 65 - _power * 5;
 		var _gb_pos = irandom_range(0, 2);
 		var border_dist = 180;
 		if(_time % period == 1 && _time <= period * (5 + _power)) {
 			switch (_gb_pos) {
 				case 0:
 					create_gasterblaster(gb_obj, _border.x + border_dist, _border.y + 28, _border.x, _border.y + 30,  270);
-					if (_power > 3) create_gasterblaster(gb_obj, _border.x + border_dist, _border.y, _border.x, _border.y,  270);
 					break;
 				case 1:
 					create_gasterblaster(gb_obj, _border.x + border_dist, _border.y, _border.x, _border.y,  270);
-					if (_power > 3) create_gasterblaster(gb_obj, _border.x + border_dist, _border.y - 28, _border.x, _border.y - 30,  270);
 					break;
 				case 2:
-					if (_power > 3) create_gasterblaster(gb_obj, _border.x + border_dist, _border.y + 28, _border.x, _border.y + 30,  270);
 					create_gasterblaster(gb_obj, _border.x + border_dist, _border.y - 28, _border.x, _border.y - 30,  270);
 					break;
 			}

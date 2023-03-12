@@ -1,4 +1,3 @@
-function fight_set_enemy_mana(enemy, mana){
-	fight_get_enemy(enemy).mana = mana;
-	return true;
+function fight_set_player_mana(player, mana){
+	fight_get_player(player).mana = mana;
 }

@@ -1,3 +1,3 @@
-function fight_get_enemy_soul(enemy_id) {
-	return fight_get_enemy(enemy_id).soul;
+function fight_get_player_soul(player_id) {
+	return fight_get_player(player_id).soul;
 }

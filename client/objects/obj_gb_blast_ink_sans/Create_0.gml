@@ -1,7 +1,7 @@
 event_inherited();
 depth = fight_depth.bullet_outside_hight;
 
-damage = get_char_damage(obj_char_ink_sans);
+damage = get_char_damage(obj_character_ink_sans);
 
 _angle = 0;
 

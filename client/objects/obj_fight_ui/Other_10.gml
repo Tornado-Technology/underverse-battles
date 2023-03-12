@@ -1,14 +1,14 @@
 /// @desc Line Step
-var enemy_hp_line = [];
-var enemy_stamina_line = [];
-var enemy_mana_line = [];
+var player_hp_line = [];
+var player_stamina_line = [];
+var player_mana_line = [];
 
-var enemy_id = 0; repeat (2) {
-	enemy_hp_line[enemy_id] = option_bar_width[0] / fight_get_enemy_max_hp(enemy_id) * fight_get_enemy_hp(enemy_id);
-	enemy_stamina_line[enemy_id] =  option_bar_width[1] / fight_get_enemy_max_stamina(enemy_id) * fight_get_enemy_stamina(enemy_id);
-	enemy_mana_line[enemy_id] =  option_bar_width[2] / fight_get_enemy_max_mana(enemy_id) * fight_get_enemy_mana(enemy_id);
+var player_id = 0; repeat (2) {
+	player_hp_line[player_id] = option_bar_width[0] / fight_get_player_max_hp(player_id) * fight_get_player_hp(player_id);
+	player_stamina_line[player_id] =  option_bar_width[1] / fight_get_player_max_stamina(player_id) * fight_get_player_stamina(player_id);
+	player_mana_line[player_id] =  option_bar_width[2] / fight_get_player_max_mana(player_id) * fight_get_player_mana(player_id);
 	
-	enemy_id++;
+	player_id++;
 }
 
 var bar_id = 0; repeat (3) {
@@ -18,9 +18,9 @@ var bar_id = 0; repeat (3) {
 	bar_id++;
 }
 
-current_hp_line[0] = lerp(current_hp_line[0], enemy_hp_line[0], 0.2);
-current_hp_line[1] = lerp(current_hp_line[1], enemy_hp_line[1], 0.2);
-current_mana_line[0] = lerp(current_mana_line[0], enemy_mana_line[0], 0.2);
-current_mana_line[1] = lerp(current_mana_line[1], enemy_mana_line[1], 0.2);
-current_stamina_line[0] = lerp(current_stamina_line[0], enemy_stamina_line[0], 0.2);
-current_stamina_line[1] = lerp(current_stamina_line[1], enemy_stamina_line[1], 0.2);
+current_hp_line[0] = lerp(current_hp_line[0], player_hp_line[0], 0.2);
+current_hp_line[1] = lerp(current_hp_line[1], player_hp_line[1], 0.2);
+current_mana_line[0] = lerp(current_mana_line[0], player_mana_line[0], 0.2);
+current_mana_line[1] = lerp(current_mana_line[1], player_mana_line[1], 0.2);
+current_stamina_line[0] = lerp(current_stamina_line[0], player_stamina_line[0], 0.2);
+current_stamina_line[1] = lerp(current_stamina_line[1], player_stamina_line[1], 0.2);

@@ -1,4 +1,4 @@
 ///@arg id
-function fight_get_enemy_max_stamina(){
-	return fight_get_enemy(argument[0]).max_stamina;
+function fight_get_player_max_stamina(){
+	return fight_get_player(argument[0]).max_stamina;
 }

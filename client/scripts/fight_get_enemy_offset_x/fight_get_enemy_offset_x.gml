@@ -1,4 +1,4 @@
-///@arg enemy_id
-function fight_get_enemy_offset_x(){
-	return obj_fight.enemy[argument[0]].offset_x;
+///@arg player_id
+function fight_get_player_offset_x(){
+	return fight_get_player(argument[0]).offset_x;
 }

@@ -6,6 +6,7 @@ enum input {
 	action,
 	menu,
 	skip,
+	special,
 	anykey,
 	back,
 	fullscreen,

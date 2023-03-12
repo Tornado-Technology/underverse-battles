@@ -75,7 +75,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Char",
-    "path": "folders/Characteres/Ink Sans/Sprites/Char.yy",
+    "name": "Stoty Mode",
+    "path": "folders/Characteres/Ink Sans/Sprites/Char/Stoty Mode.yy",
   },
 }

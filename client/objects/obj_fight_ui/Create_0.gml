@@ -54,8 +54,9 @@ player_can_input_skip = true;
 showing_option_bar	  = true;
 showing_option_bar_bg = true;
 
-ui_showing_action_box_power = true;
-ui_showing_skip				= true;
+showing_action_box_power	= true;
+showing_special_action		= true;
+showing_skip				= true;
 
 text_simple_color = c_white;
 text_select_color = c_yellow;

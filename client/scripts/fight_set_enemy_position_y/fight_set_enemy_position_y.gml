@@ -1,6 +1,6 @@
-///@arg enemy_id
+///@arg player_id
 ///@arg y
-function fight_set_enemy_position_y(){
-	obj_fight.enemy[argument[0]].y=argument[1];
+function fight_set_player_position_y(){
+	obj_fight.player[argument[0]].y=argument[1];
 	return true;
 }

@@ -21,3 +21,5 @@ _border = noone;
 side = 0;
 
 new_warning = false;
+
+show_debug_message("attack ink sans");

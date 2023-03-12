@@ -1,45 +1,45 @@
 /// @desc Checker
-#region Fight
+
 if (global.fight_instance == noone) exit;
 if (global.fight_instance.story_mode) exit;
 
-var parent = get_main_char(fight_get_enemy_obj(1));
-var hp = fight_get_enemy_hp(1);
+var parent = get_main_char(fight_get_player_obj(1));
+var hp = fight_get_player_hp(1);
 	
 if (hp <= 0) {
 	achievement_give(achievement_id.first_kill);
 	
 	switch (parent) {
-		case obj_char_sans:
+		case obj_character_sans:
 			achievement_give(achievement_id.defeat_sans);
 			break;
 				
-		case obj_char_error_sans:
+		case obj_character_error_sans:
 			achievement_give(achievement_id.defeat_error);
 			break;
 				
-		case obj_char_ink_sans:
+		case obj_character_ink_sans:
 			achievement_give(achievement_id.defeat_ink);
 			break;
 			
-		case obj_char_fell_sans:
+		case obj_character_fell_sans:
 			achievement_give(achievement_id.defeat_fell);
 			break;
 				
-		case obj_char_swap_sans:
+		case obj_character_swap_sans:
 			achievement_give(achievement_id.defeat_swap);
 			break;
 				
-		case obj_char_swap_papyrus:
+		case obj_character_swap_papyrus:
 			achievement_give(achievement_id.defeat_swap_papyrus);
 			break;
 		
-		case obj_char_xchara_uv00:
+		case obj_character_xchara:
 			achievement_give(achievement_id.defeat_xchara);
 			break;
 	}
 	
-	var player = fight_get_enemy(0);
+	var player = fight_get_player(0);
 	if (player.total_damage == 0) {
 		achievement_give(achievement_id.not_scratch);
 	}

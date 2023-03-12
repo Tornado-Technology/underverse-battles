@@ -1,5 +1,4 @@
-instance_destroy(obj_battle_soul);
-instance_destroy(obj_battle_soul_otherplayer);
+instance_destroy(attack_creator);
 statistics_set_damage(damage);
 battle_border_start_animation("Destroy");
 

@@ -14,8 +14,22 @@ switch (attack_num) {
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (65 - _power * 6) == 1 && _time <= (65 - _power * 6) * (5 + _power)) {
-			repeat (_power > 2 ? 2 : 1) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+		var period = 50 - _power * 5;
+		var amount = 7 + _power;
+		if (_time == 1)
+			stage = irandom_range(1, 2);
+		
+		if (stage == 1) {
+			if(_time % period == 1 && _time <= period * amount) {
+				create_aiming_gasterblaster(aim_gb_obj, _soul);
+			}
+		}
+		else {
+			period = 54 - _power * 4;
+			amount = 6 + _power;
+			if(_time % period == 1 && _time <= period * amount) {
+				repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+			}
 		}
 		
 		if(_time == (65 - _power * 6) * (5 + _power) + 60) instance_destroy();

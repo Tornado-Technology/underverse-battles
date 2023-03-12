@@ -1,5 +1,5 @@
-///@arg enemy_id
+///@arg player_id
 ///@arg action_id
-function fight_get_enemy_action_stamina_cost(){
-	return fight_get_enemy(argument[0]).action_stamina_cost[argument[1]];
+function fight_get_player_action_stamina_cost(player_id, action_id){
+	return fight_get_player(player_id).action_stamina_cost[action_id];
 }

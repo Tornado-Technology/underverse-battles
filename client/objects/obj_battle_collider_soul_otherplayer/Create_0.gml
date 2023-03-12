@@ -1,4 +1,4 @@
-enemy = fight_get_next_initiative();
+player = fight_get_next_initiative();
 
 cooldown = 0;
 cooldown_max = 13;

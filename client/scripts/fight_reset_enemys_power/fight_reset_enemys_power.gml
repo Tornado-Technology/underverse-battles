@@ -1,4 +1,4 @@
-function fight_reset_enemys_power() {
-	fight_reset_enemy_power(0);
-	fight_reset_enemy_power(1);
+function fight_reset_players_power() {
+	fight_reset_player_power(0);
+	fight_reset_player_power(1);
 }

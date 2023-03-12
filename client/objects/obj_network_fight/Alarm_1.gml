@@ -3,20 +3,20 @@
 // Create fights components
 instance_create_struct(required_components);
 
-// Create enemys
-enemy[0] = instance_create_depth(center_enemy_position_x[0], center_enemy_position_y[0], fight_depth.enemy, enemy_object[0]);
-enemy[1] = instance_create_depth(center_enemy_position_x[1], center_enemy_position_y[1], fight_depth.enemy, enemy_object[1]);
+// Create players
+player[0] = instance_create_depth(center_player_position_x[0], center_player_position_y[0], fight_depth.player, player_object[0]);
+player[1] = instance_create_depth(center_player_position_x[1], center_player_position_y[1], fight_depth.player, player_object[1]);
 
 // Statistics
 instance_create(obj_statistics);
 
-// Offseting enemys
-for (var enemy_id = 0; enemy_id < 2; enemy_id++) {
-	enemy[enemy_id].player_num = enemy_id;
-	fight_move_enemy_position_x(enemy_id, fight_get_enemy_offset_x(enemy_id));
-	fight_move_enemy_position_y(enemy_id, fight_get_enemy_offset_y(enemy_id));
+// Offseting players
+for (var player_id = 0; player_id < 2; player_id++) {
+	player[player_id].player_num = player_id;
+	fight_move_player_position_x(player_id, fight_get_player_offset_x(player_id));
+	fight_move_player_position_y(player_id, fight_get_player_offset_y(player_id));
 }
 
-// Fliping enemy
-fight_flip_enemy(1);
+// Fliping player
+fight_flip_player(1);
 send_fight_joined();

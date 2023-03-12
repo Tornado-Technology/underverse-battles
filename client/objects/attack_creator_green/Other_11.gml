@@ -29,7 +29,7 @@ if (_time % 38 - _power * 3 == 0) {
 	thread.y_dir = _soul.y;
 	thread.scale_speed = 3.2 + _power * 0.2;
 	
-	audio_play_sound_plugging(snd_thread);
+	audio_play_sound_plugging(snd_string);
 }
 
 if (_time >= 300 + _power * 20) instance_destroy();

@@ -394,6 +394,26 @@
     "AndYou": "And YOU, player"
   },
   "Character": {
+    "Empty": {
+      "Name": "Name",
+      "Description": "Description",
+      "Bio": "Description",
+      "PassiveSkill": {
+        "Name": "Passive skill",
+        "Description": "Passive skill description" },
+      "Attack0": {
+        "Name": "Attack 1",
+        "Description": "Attack 1 description" },
+      "Attack1": {
+        "Name": "Attack 2",
+        "Description": "Attack 2 description" },
+      "Attack2": {
+        "Name": "Attack 3",
+        "Description": "Attack 3 description" },
+      "SpecialAttack": {
+        "Name": "Special attack",
+        "Description": "Description of the special attack" }
+    },
     "InkSans": {
       "Name": "Ink Sans",
       "Description": "The artist",
@@ -401,17 +421,15 @@
       "PassiveSkill": {
         "Name": "Soulless heart",
         "Description": "Ink Sans is not affected by blue attack and orange attack. Instead, he dodges another attack." },
-      "Attack": [
-        {
-          "Name": "Inks",
-          "Description": "Colored droplets dripping from above" },
-        {
-          "Name": "Broomie",
-          "Description": "Swinging damaging brush" },
-        {
-          "Name": "Ink Gasterblasters",
-          "Description": "Gasterblasters knocking back the soul to the box border and dealing damage" }
-      ],
+      "Attack0": {
+        "Name": "Inks",
+        "Description": "Colored droplets dripping from above" },
+      "Attack1": {
+        "Name": "Broomie",
+        "Description": "Swinging damaging brush" },
+      "Attack2": {
+        "Name": "Ink Gasterblasters",
+        "Description": "Gasterblasters knocking back the soul to the box border and dealing damage" },
       "SpecialAttack": {
         "Name": "Ink blast",
         "Description": "Droplets of ink fly out of the center of the arena while you are attacked by Ink gasterblasters and Broomie" }
@@ -423,17 +441,15 @@
       "PassiveSkill": {
         "Name": "Glitches",
         "Description": "Error Sans has a 6% chance to take no damage when Karmic damage occurs" },
-      "Attack": [
-        {
-          "Name": "Error bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Strings",
-          "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" }
-      ],
+      "Attack0": {
+        "Name": "Error bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Strings",
+        "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
       "SpecialAttack": {
         "Name": "Panic attack",
         "Description": "A strong volley of dice followed by multiple shots from the gasterblasters" }
@@ -445,17 +461,15 @@
       "PassiveSkill": {
         "Name": "Rest",
         "Description": "If Sans misses a turn, then he recovers 10 magic" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" },
-        {
-          "Name": "Blue attack",
-          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
+      "Attack2": {
+        "Name": "Blue attack",
+        "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "Bad time",
         "Description": "" }
@@ -467,17 +481,15 @@
       "PassiveSkill": {
         "Name": "Energy potential",
         "Description": "Fell Sans gets 1 additional magic for bringing soul closer to attacks" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" },
-        {
-          "Name": "Blue attack",
-          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
+      "Attack2": {
+        "Name": "Blue attack",
+        "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "Great time",
         "Description": "" }
@@ -489,20 +501,18 @@
       "PassiveSkill": {
         "Name": "Dodge master",
         "Description": "Swap Sans only takes 8 damage per hit" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Spinning bones",
-          "Description": "Spinning bones targeting the SOUL and dealing damage on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Spinning bones",
+        "Description": "Spinning bones targeting the SOUL and dealing damage on impact" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
       "SpecialAttack": {
-        "Name": "Bone strike",
-        "Description": "" }
+        "Name": "Bone veil",
+        "Description": "The bones cover the arena completely, moving in all directions. In addition, small bones targeting the soul" }
     },
     "SwapPapyrus": {
       "Name": "Swap Papyrus",
@@ -511,17 +521,15 @@
       "PassiveSkill": {
         "Name": "Smoke break",
         "Description": "If Swap Papyrus misses a turn, then he recovers 10 magic" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" },
-        {
-          "Name": "Orange attack",
-          "Description": "The soul turns orange and gravitate to one side of the box with bones" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
+      "Attack2": {
+        "Name": "Orange attack",
+        "Description": "The soul turns orange and gravitate to one side of the box with bones" },
       "SpecialAttack": {
         "Name": "Bad time",
         "Description": "" }
@@ -533,17 +541,15 @@
       "PassiveSkill": {
         "Name": "Cross of destiny",
         "Description": "Cross's Special Attack accumulates by 4% per turn" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" },
-        {
-          "Name": "Blue attack",
-          "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
+      "Attack2": {
+        "Name": "Blue attack",
+        "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "The Crusader",
         "Description": "" }
@@ -555,17 +561,15 @@
       "PassiveSkill": {
         "Name": "Cross of destiny",
         "Description": "Cross's Special Attack accumulates by 4% per turn" },
-      "Attack": [
-        {
-          "Name": "Bones",
-          "Description": "Bones targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Big knife",
-          "Description": "A big knife that swings and does damage" },
-        {
-          "Name": "Gasterblasters",
-          "Description": "Firing damaging gasterblasters" }
-      ],
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Big knife",
+        "Description": "A big knife that swings and does damage" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "Firing damaging gasterblasters" },
       "SpecialAttack": {
         "Name": "X Event",
         "Description": "" }
@@ -577,19 +581,17 @@
       "PassiveSkill": {
         "Name": "Magical surge",
         "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
-      "Attack": [
-        {
-          "Name": "Knives",
-          "Description": "Damaging knives targeting the soul" },
-        {
-          "Name": "Damage wave",
-          "Description": "Damaging wave targeting the soul" },
-        {
-          "Name": "",
-          "Description": "" }
-      ],
+      "Attack0": {
+        "Name": "Knives",
+        "Description": "Damaging knives targeting the soul" },
+      "Attack1": {
+        "Name": "Damage wave",
+        "Description": "Damaging wave targeting the soul" },
+      "Attack2": {
+        "Name": "Psychological attack",
+        "Description": "Circular zones appear that deal damage and make the soul tremble" },
       "SpecialAttack": {
-        "Name": "Save",
+        "Name": "Healing magic",
         "Description": "Restores HP depending on the amount of magic" }
     },
     "Green": {
@@ -599,39 +601,35 @@
       "PassiveSkill": {
         "Name": "Two types of damage",
         "Description": "Green can deal 1 damage with karma and 5 damage without karma" },
-      "Attack": [
-        {
-          "Name": "Bones and spikes",
-          "Description": "Bones and spikes targeting the soul and dealing damage on impact" },
-        {
-          "Name": "Strings",
-          "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
-        {
-          "Name": "Turbo blaster",
-          "Description": "One moving turbo blaster that shoots toward the soul" }
-      ],
+      "Attack0": {
+        "Name": "Bones and spikes",
+        "Description": "Bones and spikes targeting the soul and dealing damage on impact" },
+      "Attack1": {
+        "Name": "Strings",
+        "Description": "Strings targeting the soul. Damage and paralyze opponent on impact" },
+      "Attack2": {
+        "Name": "Turbo blaster",
+        "Description": "One moving turbo blaster that shoots toward the soul" },
       "SpecialAttack": {
         "Name": "Edit",
         "Description": "" }
     },
-    "Delta": {
-      "Name": "Delta",
-      "Description": "Tea boy",
-      "Bio": "Danil did'nt make a description of the character, because he has no time. He's making a game, get away from the boy!",
+    "Tornado": {
+      "Name": "Tornado",
+      "Description": "Wet developer",
+      "Bio": "Danil didn't make a description of the character, because he has no time. He's making a game, get away from the boy!",
       "PassiveSkill": {
-        "Name": "Passive ability",
-        "Description": "Description of the passive ability" },
-      "Attack": [
-        {
-          "Name": "Attack 1",
-          "Description": "Description 1" },
-        {
-          "Name": "Attack 2",
-          "Description": "Description 2" },
-        {
-          "Name": "Attack 3",
-          "Description": "Description 3" }
-      ],
+        "Name": "Fast fins",
+        "Description": "Tornado is able to dodge any damage, but every 1 damage spent 3 stamina" },
+      "Attack0": {
+        "Name": "Attack 1",
+        "Description": "Attack 1 description" },
+      "Attack1": {
+        "Name": "Attack 2",
+        "Description": "Attack 2 description" },
+      "Attack2": {
+        "Name": "Attack 3",
+        "Description": "Attack 3 description" },
       "SpecialAttack": {
         "Name": "Special attack",
         "Description": "Description of the special attack" }
@@ -661,6 +659,7 @@
     "NewClothes": "New clothes",
     "Jacket": "Jacket",
     "SansaClaus": "Sansa Claus",
+    "OnByke": "On byke",
     "Christmas": "Christmas",
     "Xmas": "Xmas",
     "RoyalGuardian": "Royal guardian",
@@ -673,64 +672,6 @@
     "Coat": "Coat",
     "Vest": "Vest",
     "Lord": "Lord"
-  },
-  "Attacks": {
-    "Atk1": "Attack 1",
-    "Atk2": "Attack 2",
-    "Atk3": "Attack 3",
-    "Broomie": "Broomie",
-    "Inks": "Inks",
-    "InkGasterblasters": "Ink Gasterblasters",
-    "ErrorBones": "Error bones",
-    "Strings": "Strings",
-    "Bones": "Bones",
-    "Gasterblasters": "Gasterblasters",
-    "BlueAttack": "Blue attack",
-    "RotatingBones": "Rotating bones",
-    "OrangeAttack": "Orange attack",
-    "StarRod": "Star rod",
-    "DreamsBow": "Dream's Bow",
-    "PositiveAttitude": "Positive attitude",
-    "Fireballs": "Fireballs",
-    "FieryVeil": "Fiery veil",
-    "Trident": "Trident",
-    "BigKnife": "Big knife",
-    "SwordAndShield": "Sword and shield",
-    "DamageWave": "Damage wave",
-    "Save": "Save",
-    "MiniMettatons": "Mini-Mettatons",
-    "Bombs": "Bombs",
-    "PlasmaBeam": "Plasma beam",
-    "Tentacles": "Tentacles",
-    "NegativeSpades": "Negative spades",
-    "NegativeVampire": "Negative vampire",
-    "Knives": "Knives",
-    "SmokeBombs": "SmokeBombs",
-    "Knife": "Knife",
-    "KillerGasterblaster": "Killer Gasterblaster",
-    "Overwrite": "Overwrite",
-    "CardDeck": "Card deck",
-    "BonesAndSpikes": "Bones and spikes",
-    "TurboBlaster": "Turbo blaster",
-    "Tea": "Tea rainstorm"
-  },
-  "AttacksDescription": {
-    "Broomie": "Swinging damaging brush",
-    "Inks": "Colored droplets dripping from above",
-    "InkGasterblasters": "Gasterblasters knocking back the soul to the box border and dealing damage",
-    "ErrorBones": "Bones targeting the soul and dealing damage on impact",
-    "Strings": "Strings targeting the soul. Damage and paralyze opponent on impact",
-    "Bones": "Bones targeting the soul and dealing damage on impact",
-    "Gasterblasters": "Firing damaging Gasterblasters",
-    "RotatingBones": "Spinning bones targeting the SOUL and dealing damage on impact",
-    "BlueAttack": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box",
-    "BlueAttackFellSans": "The soul turns blue, gravitation flips and moving bones emerge from different sides of the box",
-    "OrangeAttack": "The soul turns orange and gravitate to one side of the box with bones",
-    "BigKnife": "Swinging damaging big knife",
-    "Knives": "Damaging knives targeting the soul",
-    "DamageWave": "Damaging wave targeting the soul",
-    "Save": "Restores HP, but requires lots of stamina",
-    "CardDeck": "Falling boxes cause havoc and all 4 suits to the soul"
   },
   "Battle": {
     "Target": "Target",

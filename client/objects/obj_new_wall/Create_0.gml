@@ -1,4 +1,4 @@
 event_inherited();
 
-damage = get_char_damage(obj_char_cross_xtale);
-soul_invulnerability = get_char_invulnerability(obj_char_cross_xtale) ? 20 : 1;
+damage = get_char_damage(obj_character_cross);
+soul_invulnerability = get_char_invulnerability(obj_character_cross) ? 20 : 1;

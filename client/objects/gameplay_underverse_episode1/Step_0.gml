@@ -2,16 +2,16 @@ if (delay_working)
 	_delay++;
 
 if (fight_position_event) {
-	ink_sans_.x = lerp(ink_sans_.x, fight_underverse_00.center_enemy_position_x[0], 0.1);
-	ink_sans_.y = lerp(ink_sans_.y, fight_underverse_00.center_enemy_position_y[0] - 40, 0.1);
-	xchara_.x = lerp(xchara_.x, fight_underverse_00.center_enemy_position_x[1], 0.1);
-	xchara_.y = lerp(xchara_.y, fight_underverse_00.center_enemy_position_y[1] - 40, 0.1);
-	player_.x = lerp(player_.x, fight_underverse_00.center_enemy_position_x[0] - 30, 0.1);
+	ink_sans_.x = lerp(ink_sans_.x, fight_underverse_00.center_player_position_x[0], 0.1);
+	ink_sans_.y = lerp(ink_sans_.y, fight_underverse_00.center_player_position_y[0] - 40, 0.1);
+	xchara_.x = lerp(xchara_.x, fight_underverse_00.center_player_position_x[1], 0.1);
+	xchara_.y = lerp(xchara_.y, fight_underverse_00.center_player_position_y[1] - 40, 0.1);
+	player_.x = lerp(player_.x, fight_underverse_00.center_player_position_x[0] - 30, 0.1);
 	player_.y = lerp(player_.y, ink_sans_.y + 10, 0.1);
 	
 	xchara_.image_xscale = -1;
 	
-	if (ink_sans_.x < fight_underverse_00.center_enemy_position_x[0] + 0.1) {
+	if (ink_sans_.x < fight_underverse_00.center_player_position_x[0] + 0.1) {
 		alarm[0] = 30;
 		fight_position_event = false;
 	}
@@ -51,7 +51,7 @@ else if (scenario == 17) {
 	
 	/* Fight */
 	fight_set_initiative(0);
-	fight_set_enemy_stamina(0, 20);
+	fight_set_player_stamina(0, 20);
 				
 	/* Options */
 	fight_set_ui_showing_action_box(true);
@@ -64,10 +64,10 @@ else if (scenario == 17) {
 	scenario = 18;
 }
 else if (scenario == 18) {
-	if (fight_get_enemy_action(0) != 3 && fight_get_enemy_action(0) != -1) {
+	if (fight_get_player_action(0) != fight_action_type.skip && fight_get_player_action(0) != fight_action_type.empty) {
 		dlg = dialog_create(episode + "WrongSkip");
 		
-		fight_set_enemy_action(0, -1);
+		fight_set_player_action(0, -1);
 	
 		/* Options */
 		fight_ui_set_player_can_input_skip(false);
@@ -79,7 +79,7 @@ else if (scenario == 18) {
 		scenario = 17;
 	}
 	else {
-		if (fight_get_enemy_action(0) == 3) {
+		if (fight_get_player_action(0) == 3) {
 			/* Options */
 			fight_ui_set_player_can_input_skip(false);
 			fight_set_ui_showing_action_box(false);
@@ -113,7 +113,8 @@ else if (scenario == 19) {
 	fight_set_ui_showing_action_box(true);
 	fight_set_player_input(true);
 	fight_set_pause(false);
-	timer_switched_on();
+	timer_switch(true);
+	timer_start();
 
 	/* Next scenario */
 	scenario = 20;
@@ -139,7 +140,7 @@ else if (scenario == 21) {
 		instance_destroy(fight_underverse_00);
 		
 		player_.sprite_index = spr_char_sans_idle;
-		ink_sans_.sprite_index = spr_char_ink_sans_end3;
+		ink_sans_.sprite_index = spr_char_ink_sans_attack_finish;
 		xchara_.sprite_index = spr_xchara_defeated;
 		
 		bg_disappearance(obj_bg_deltarune);

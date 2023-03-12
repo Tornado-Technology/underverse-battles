@@ -18,28 +18,51 @@ if (ability && delay_ == 0) {
 
 if (delay_ > 10) { SPD *= 2; }
 
+var input_up = input_check_held(input.up);
+var input_down = input_check_held(input.down);
+var input_left = input_check_held(input.left);
+var input_right = input_check_held(input.right);
+
+if (side_controller_previous != side_controller) {
+	is_changing_side = false;
+	side_controller_previous = undefined;
+}
+
+if(input_up) {
+	side_controller = input.up;
+}
+if(input_down) {
+	side_controller = input.down;
+}
+if(input_left) {
+	side_controller = input.left;
+}
+if(input_right) {
+	side_controller = input.right;
+}
+
 /* control */
-if (!is_dashing) { 
-	if(input_check_held(input.up)) {
-		if(!input_check_held(input.down) && !input_check_held(input.right) && !input_check_held(input.left)) {
+if (!is_dashing && !is_changing_side) {
+	if(input_up) {
+		if(!input_down && !input_left && !input_left) {
 			movement_speed_y = -SPD;
 			movement_speed_x = 0;
 		}
 	}
-	if(input_check_held(input.down)) {
-		if(!input_check_held(input.up) && !input_check_held(input.right) && !input_check_held(input.left)) {
+	if(input_down) {
+		if(!input_up && !input_left && !input_left) {
 			movement_speed_y = SPD;
 			movement_speed_x = 0;
 		}
 	}
-	if(input_check_held(input.left)) {
-		if(!input_check_held(input.up) && !input_check_held(input.down) && !input_check_held(input.right)) {
+	if(input_left) {
+		if(!input_up && !input_down && !input_right) {
 			movement_speed_x = -SPD;
 			movement_speed_y = 0;
 		}
 	}
-	if(input_check_held(input.right)) {
-		if(!input_check_held(input.up) && !input_check_held(input.down) && !input_check_held(input.left)) {
+	if(input_right) {
+		if(!input_up && !input_down && !input_left) {
 			movement_speed_x = SPD;
 			movement_speed_y = 0;
 		}
@@ -74,7 +97,13 @@ if (changeable_direction) {
 			audio_play_sound_plugging(snd_emergence);
 			break;
 	}
-	side = 0;
+	
+	if (side != 0) {
+		side = 0;
+		is_changing_side = true;
+		side_controller_previous = side_controller;
+	}
+	
 	/* image angle */
 	if (image_angle != new_image_angle) {
 		if (image_angle + 360 - new_image_angle < image_angle - new_image_angle)

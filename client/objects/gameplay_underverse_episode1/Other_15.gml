@@ -17,8 +17,8 @@ if (instance_exists(dlg))
 	
 /* Fight */
 fight_set_initiative(1);
-fight_set_enemy_action(0, 3);
-fight_set_enemy_action(1, irandom_range(0, 1));
+fight_set_player_action(0, 3);
+fight_set_player_action(1, irandom_range(0, 1));
 				
 /* Options */
 fight_set_pause(false);

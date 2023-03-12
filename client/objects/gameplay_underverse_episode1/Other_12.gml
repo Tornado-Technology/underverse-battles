@@ -4,7 +4,7 @@ if (!instance_exists(dlg))
 	start_delay();
 	
 if (_delay == 150) {
-	ink_sans_ = instance_create_depth(player_.x - 250, player_.y - 80, fight_depth.enemy, obj_char_ink_sans);
+	ink_sans_ = instance_create_depth(player_.x - 250, player_.y - 80, fight_depth.player, obj_character_ink_sans);
 	ink_sans_.sprite_index = spr_char_ink_sans_flip;
 }
 
@@ -15,7 +15,7 @@ if (_delay > 150 and _delay < 225) {
 }
 
 if (_delay == 180) {
-	flying_inks_ = instance_create_depth(ink_sans_.x, ink_sans_.y - 15, fight_depth.enemy - 1, obj_npc);
+	flying_inks_ = instance_create_depth(ink_sans_.x, ink_sans_.y - 15, fight_depth.player - 1, obj_npc);
 	flying_inks_.sprite_index = spr_flying_inks;
 	audio_play_sound_plugging(snd_stab);
 }

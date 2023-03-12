@@ -1,5 +1,5 @@
-///@arg enemy_id
+///@arg player_id
 ///@arg power_id
-function fight_get_enemy_action_mana_cost(){
-	return fight_get_enemy(argument[0]).action_mana_upgrade_cost[argument[1]];
+function fight_get_player_action_mana_cost(player_id, power_id){
+	return fight_get_player(player_id).action_mana_upgrade_cost[power_id];
 }

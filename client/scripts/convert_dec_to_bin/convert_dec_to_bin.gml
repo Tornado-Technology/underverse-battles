@@ -22,7 +22,7 @@ function convert_dec_to_bin(value, length = undefined) {
 	
 	if (length != undefined){
 	    while (string_length(result) < length) {
-	        result = string("0{0}", result);
+	        result = "0" + string(result);
 	    }
 	}
 

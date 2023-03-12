@@ -5,7 +5,7 @@ achievements_give = global.__achievement_list_buffer;
 get_main_char = function(enemy) {
 	var parent = object_get_parent(enemy);
 	
-	if (!object_exists(enemy) || !object_exists(parent) || parent == obj_char) {
+	if (!object_exists(enemy) || !object_exists(parent) || parent == obj_character) {
 		return enemy;
 	}
 	
@@ -14,7 +14,7 @@ get_main_char = function(enemy) {
 	while (true) {
 		new_parent = object_get_parent(parent);
 		
-		if (!object_exists(new_parent) || new_parent == obj_char) break;
+		if (!object_exists(new_parent) || new_parent == obj_character) break;
 		parent = new_parent;
 	}
 	

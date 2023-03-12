@@ -1,6 +1,6 @@
 event_user(0); // Line Step
 
-if (fight_get_enemy_action(0) == -1) {
+if (fight_player_selecting(0)) {
 	
 	channel_position = approach(channel_position, 0, channel_speed);
 	var precent = animcurve_channel_evaluate(channel_action_box_start_y, channel_position);

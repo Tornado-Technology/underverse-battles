@@ -5,15 +5,15 @@ shift = lerp(shift, 0, 0.2);
 
 // Players info
 var player_id = 0;
-var player = fight_get_enemy(player_id);
+var player = fight_get_player(player_id);
 var player_frame = player.frame;
 
-var enemy_id = 1;
-var enemy = fight_get_enemy(enemy_id);
-var opp_x = enemy.x;
-var opp_y = enemy.y;
-var opp_h = enemy.sprite_height;
-var opp_frame = enemy.frame;
+var player_id = 1;
+var player = fight_get_player(player_id);
+var opp_x = player.x;
+var opp_y = player.y;
+var opp_h = player.sprite_height;
+var opp_frame = player.frame;
 
 // Colors
 var color_text_opp = c_white;

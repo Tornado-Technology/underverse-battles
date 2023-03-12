@@ -14,11 +14,25 @@ switch (attack_num) {
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (65 - _power * 6) == 1 && _time <= (65 - _power * 6) * (5 + _power)) {
-			repeat (_power > 2 ? 2 : 1) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+		var period = 50 - _power * 5;
+		var amount = 7 + _power;
+		if (_time == 1)
+			stage = irandom_range(1, 2);
+		
+		if (stage == 1) {
+			if(_time % period == 1 && _time <= period * amount) {
+				create_aiming_gasterblaster(aim_gb_obj, _soul);
+			}
+		}
+		else {
+			period = 54 - _power * 4;
+			amount = 6 + _power;
+			if(_time % period == 1 && _time <= period * amount) {
+				repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+			}
 		}
 		
-		if(_time == (65 - _power * 6) * (5 + _power) + 60) instance_destroy();
+		if(_time == period * amount + 60) instance_destroy();
 		break;
 	
 	case 1: // Крестовые гастербластеры
@@ -72,42 +86,49 @@ switch (attack_num) {
 	case 2: // Платформы и гастербластеры
 	
 		// Create border
-		_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
+		_border = battle_border_create(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
 		if (battle_border_start_animation_end()) exit;
 		
-		// Create soul
-		var _soul_pos = irandom_range(0, 2);
+		var sector_y_step = 35;
+		var sector_y = _border.y - _border.up + 25;
 		
-		if (_soul_pos == 0)
-			_soul = create_soul(_border.x, _border.y + 30, battle_soul_type.blue);
-		if (_soul_pos == 1)
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.blue);
-		if (_soul_pos == 2)
-			_soul = create_soul(_border.x, _border.y - _border.up + 10, battle_soul_type.blue);
+		// Create soul
+		var soul_offset = 5;
+		var soul_position = choose(Vector2(_border.x - 38, sector_y - soul_offset), Vector2(_border.x + 12, sector_y + sector_y_step - soul_offset), Vector2(_border.x - 38, sector_y + sector_y_step * 2 - soul_offset));
+		_soul = create_soul(soul_position.x, soul_position.y, battle_soul_type.blue);
+		
+		var main_speed = 0.5 + _power * 0.1
+		create_moving_platforms(_border.x - _border.left - 40, sector_y, 4, 6, 60, main_speed, 0);
+		create_moving_platforms(_border.x + _border.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed, 1);
+		create_moving_platforms(_border.x - _border.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed, 2);
+		
+		// Platforms and bones
+		if (_time == 1) {
+			var i = 0; repeat(20) {
+				create_bone(_border.x - _border.left + i * 8, _border.y + _border.down + 3, bone_obj, 0, 1, 0, 0);
+				i++;
+			}
+		}
 		
 		// Attack
-		var main_speed = 0.5 + _power * 0.1
-		create_moving_platforms(_border.x - _border.left - 40, _border.y - 15, 4, 6, 60, main_speed, 0);
-		create_moving_platforms(_border.x + _border.right + 40, _border.y + 15, 4, 6, 60, -main_speed, 1);
-		
 		repeat (_power == 5 ? 1 : 1) {
 			var _gb_pos = irandom_range(0, 2);
 			var border_dist = 180;
 			if(_time % (65 - _power * 6) == 1 && _time <= (65 - _power * 6) * (5 + _power)) {
 				switch (_gb_pos) {
 					case 0:
-						create_gasterblaster(gb_obj, _border.x + border_dist, _border.y + 35, _border.x, _border.y + 30,  270);
+						create_gasterblaster(gb_obj, _border.x + border_dist, sector_y - 5, _border.x, sector_y - 5,  270);
 						break;
 					case 1:
-						create_gasterblaster(gb_obj, _border.x + border_dist, _border.y + 5, _border.x, _border.y,  270);
+						create_gasterblaster(gb_obj, _border.x + border_dist, sector_y + sector_y_step - 5, _border.x, sector_y + sector_y_step - 5,  270);
 						break;
 					case 2:
-						create_gasterblaster(gb_obj, _border.x + border_dist, _border.y - 25, _border.x, _border.y - 30,  270);
+						create_gasterblaster(gb_obj, _border.x + border_dist, sector_y + sector_y_step * 2 - 5, _border.x, sector_y + sector_y_step * 2 - 5,  270);
 						break;
 				}
 			}
 		}
 		
-		if(_time == (65 - _power * 6) * (5 + _power) + 60) { instance_destroy(); }
+		if(_time == (70 - _power * 6) * (5 + _power) + 60) { instance_destroy(); }
 		break;
 }

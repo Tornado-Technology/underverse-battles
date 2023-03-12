@@ -3,6 +3,7 @@ _power = 0;
 _time = 0;
 _period = 1;
 attack_num = 0;
+stage = 0;
 
 character_instance = noone;
 
@@ -22,3 +23,6 @@ _soul = noone;
 _border = noone;
 
 new_warning = false;
+
+_angle = 0;
+angle_step = 0;

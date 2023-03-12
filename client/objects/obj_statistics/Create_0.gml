@@ -2,16 +2,19 @@ surface_cord = Vector2(25,  110);
 surface_size = Vector2(430, 120);
 surface = surface_create(surface_size.x, surface_size.y);
 
-character_name[0] = obj_fight.enemy[0].name;
-character_name[1] = obj_fight.enemy[1].name;
-character_attack[0, 0] = obj_fight.enemy[0].actions[0].name;
-character_attack[0, 1] = obj_fight.enemy[0].actions[1].name;
-character_attack[0, 2] = obj_fight.enemy[0].actions[2].name;
-character_attack[1, 0] = obj_fight.enemy[1].actions[0].name;
-character_attack[1, 1] = obj_fight.enemy[1].actions[1].name;
-character_attack[1, 2] = obj_fight.enemy[1].actions[2].name;
-selection_attacks_0 = [];
-selection_attacks_1 = [];
+action_list_size = 0;
+
+character_name[0] = obj_fight.player[0].name;
+character_name[1] = obj_fight.player[1].name;
+character_attack[0, 0] = obj_fight.player[0].actions[0].name;
+character_attack[0, 1] = obj_fight.player[0].actions[1].name;
+character_attack[0, 2] = obj_fight.player[0].actions[2].name;
+character_attack[1, 0] = obj_fight.player[1].actions[0].name;
+character_attack[1, 1] = obj_fight.player[1].actions[1].name;
+character_attack[1, 2] = obj_fight.player[1].actions[2].name;
+character_special_attack[0] = obj_fight.player[0].special_action.name;
+character_special_attack[1] = obj_fight.player[1].special_action.name;
+selected_action = [];
 initiative = [];
 getting_damage = [];
 
@@ -47,7 +50,12 @@ scroll_up = function(coef = 1) {
 }
 
 scroll_down = function(coef = 1) {
-	if (shift < array_length(selection_attacks_0) * 20 - 120) {
+	if (shift < action_list_size * 20 - 120) {
 		shift += 4 * coef;
 	}
+}
+
+draw_selected_action = function(text_x, text_y, text, player_id, action_type, step) {
+	if (selected_action[player_id, step] == action_type)
+			draw_text(text_x, text_y, text);
 }

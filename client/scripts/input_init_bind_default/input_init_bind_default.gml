@@ -5,7 +5,7 @@ function input_init_bind_default() {
 	input_bind_default(input.right, [Key(device.keyboard, vk_right), Key(device.gamepad, gp_padr), Key(device.virtual_arrows, vk_right), Key(device.virtual_joystick, vk_right)]);
 	input_bind_default(input.action, [Key(device.keyboard, vk_enter), Key(device.gamepad, gp_face1)]);
 	input_bind_default(input.skip, [Key(device.keyboard, vk_shift), Key(device.gamepad, gp_face2)]);
-	input_bind_default(input.menu, Key(device.keyboard, "C"));
+	input_bind_default(input.special, Key(device.keyboard, "C"));
 	input_bind_default(input.anykey, [Key(device.keyboard, vk_anykey), Key(device.gamepad, gp_face1)]);
 	input_bind_default(input.back, Key(device.keyboard, vk_escape));
 	input_bind_default(input.fullscreen, Key(device.keyboard, vk_f11));

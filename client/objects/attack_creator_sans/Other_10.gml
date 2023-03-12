@@ -67,8 +67,10 @@ switch (attack_num) {
 			_side = irandom_range(0, 1);
 		}
 
-		if(_time % (60 - 5 * _power) == 1 && _time < (60 - 5 * _power) * (5 + _power)) {
-			var bone_speed = 1.5 + 0.5*_power;
+		var period = 60 - 5 * _power;
+		var amount = 5 + _power;
+		if(_time % period == 1 && _time < period * amount) {
+			var bone_speed = 1.5 + 0.3*_power;
 			var bone_size = 5.5;
 			if (_side == 0) {
 				create_bone(_border.x - _border.left - 20, _border.y - _border.up - 20, bone_obj, bone_speed, bone_size, 0, 180);
@@ -80,7 +82,7 @@ switch (attack_num) {
 			}
 		}
 		
-		if(_time > (60 - 5 * _power) * (6 + _power)) { instance_destroy(); }
+		if(_time > period * (amount + 1)) { instance_destroy(); }
 		break;
 	
 	case 3: // Платформы и кости

@@ -1,46 +1,32 @@
 /// @param {String} key
-/// @param {Real} type
-/// @param {Function} callabck
+/// @param {Function} callback
 /// @return {Struct.ActionClass}
-function Action(key, type, callback = undefined) {
-	var action = new ActionClass("Attacks." + key, "AttacksDescription." + key, type, callback);
+function Action(key, callback = undefined) {
+	var action = new ActionClass(key + ".Name", key + ".Description", callback);
 	action.init();
 	return action;
 }
 
-/// @param {String} name_key
-/// @param {String} desc_key
-/// @param {Real} type
-/// @param {Function} callabck
-function ActionClass(name_key, desc_key, type, callback) constructor {
-	self.name_key = name_key;
-	self.desc_key = desc_key;
-	self.type = type;
+/// @param {String} key_name
+/// @param {String} key_description
+/// @param {Function} callback
+function ActionClass(key_name, key_description, callback) constructor {
+	self.key_name = key_name;
+	self.key_description = key_description;
 	self.callback = callback;
 	
 	name = "";
-	desc = "";
+	description = "";
 	
 	static init = function() {
-		name = translate_get(name_key);
-		desc = translate_get(desc_key);
+		name = translate_get(key_name);
+		description = translate_get(key_description);
 	}
 	
 	/// @param {Id.Instance} character
 	/// @param {Real} power
 	static invoke = function(character, pow) {
-		if (callback == undefined) {
-			return;
-		}
-		
+		if (callback == undefined) return;
 		callback(pow, character);
 	}
-}
-
-function Cost() {
-	var arr = [];
-	for (var i = 0; i < argument_count; i++) {
-		array_push(arr, real(argument[i]));	
-	}
-	return arr;
 }

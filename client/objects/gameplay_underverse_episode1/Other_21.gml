@@ -11,13 +11,13 @@ if (instance_exists(dlg))
 	exit;
 	
 /* Fight */
-fight_set_enemy_action(1, 3);
+fight_set_player_skip(1);
 fight_set_initiative(0);
 				
 /* Options */
 bar_power_disappearance();
 fight_set_ui_showing_action_box(true);
-fight_set_ui_showing_action_box_power(true);
+fight_set_showing_special_action(true);
 fight_set_player_input(true);
 fight_set_pause(true);
 			

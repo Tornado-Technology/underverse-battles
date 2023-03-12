@@ -3,7 +3,7 @@ is_collided = place;
 
 if (cooldown <= 0 && place) {
 	cooldown = cooldown_max;
-	fight_add_enemy_mana(initiative, mana_give);
+	fight_add_player_mana(initiative, mana_give);
 	audio_play_sound_plugging(snd_graze);
 	
 	if (fight_network_mode) {

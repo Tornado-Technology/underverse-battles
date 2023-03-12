@@ -1,7 +1,12 @@
-var enemy_id = fight_get_initiative();
-var attack_id = fight_get_enemy_action(enemy_id);
-var attack_power = fight_get_enemy_power(enemy_id);
+var player_id = fight_get_initiative();
+var attack_id = fight_get_player_action(player_id);
+var attack_power = fight_get_player_power(player_id);
 
-fight_get_enemy(1 - enemy_id).on_selected_attack(attack_id, enemy_id);
+fight_get_player(1 - player_id).on_selected_attack(attack_id, player_id);
 
-fight_call_attack(enemy_id, attack_id, attack_power);
+if (fight_player_using_special_action(1)) {
+	fight_call_special_attack(player_id);
+	exit;
+}
+
+fight_call_attack(player_id, attack_id, attack_power);

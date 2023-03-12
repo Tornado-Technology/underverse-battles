@@ -1,6 +1,6 @@
 /// @desc All code here!
 // Actualy player don't chose yet
-if (fight_get_enemy_action(0) != -1) exit;
+if (fight_get_player_action(0) != -1) exit;
 
 // All input in keyboard
 var input_raw_v = input_check_pressed(input.down) - input_check_pressed(input.up);
@@ -16,7 +16,7 @@ if (abs(input_raw_h)) {
 	var power_max = 4;
 	
 	// Next uograde cost
-	var can_select_power = fight_get_enemy_mana(0) >= fight_get_enemy_action_mana_cost(0, clamp(selected_power + 1, power_min, power_max));
+	var can_select_power = fight_get_player_mana(0) >= fight_get_player_action_mana_cost(0, clamp(selected_power + 1, power_min, power_max));
 	
 	// Can add power if we have some mana or if we below manabar
 	if (can_select_power || input_raw_h < 0) {

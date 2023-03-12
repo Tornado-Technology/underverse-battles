@@ -7,8 +7,8 @@ else if (stage == 0)
 	stage = 1;
 
 if (stage == 1 and image_alpha > 0) {
-	image_yscale -= 0.1;
-	image_alpha -= 0.05;
+	image_yscale -= 0.2;
+	image_alpha -= 0.1;
 }
 else if (stage == 1)
 	instance_destroy();

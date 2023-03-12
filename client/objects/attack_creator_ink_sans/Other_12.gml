@@ -11,12 +11,12 @@ switch (attack_num) {
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 		var period = 65 - _power * 5;
-		var ammount = 4 + _power;
-		if(_time % period == 1 and _time <= period * ammount) {
+		var amount = 4 + _power;
+		if(_time % period == 1 and _time <= period * amount) {
 			repeat (_power > 3 ? 2 : 1) { create_aiming_gasterblaster(obj_gasterblaster_aiming_ink_sans, _soul); }
 		}
 		
-		if(_time == period * ammount + 60) { instance_destroy(); }
+		if(_time == period * amount + 60) { instance_destroy(); }
 	break;
 	
 	case 1: // Крестовые гастербластеры
@@ -30,8 +30,8 @@ switch (attack_num) {
 		
 		// Attack
 		var period = 65 - _power * 4;
-		var ammount = 4 + _power;
-		if(_time % period == 1 && _time <= period * ammount) {
+		var amount = 4 + _power;
+		if(_time % period == 1 && _time <= period * amount) {
 			var _gb;
 			var x_gb, y_gb;
 			var gb_size = 60;
@@ -66,7 +66,7 @@ switch (attack_num) {
 			}
 		}
 		
-		if (_time == period * ammount + 60)
+		if (_time == period * amount + 60)
 			instance_destroy();
 		break;
 }

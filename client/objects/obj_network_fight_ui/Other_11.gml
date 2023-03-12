@@ -3,21 +3,21 @@ var size = display_get_gui_size();
 
 // Players info
 var player_id = 0;
-var player = fight_get_enemy(player_id);
+var player = fight_get_player(player_id);
 var player_frame = player.frame;
 
-var enemy_id = 1;
-var enemy = fight_get_enemy(enemy_id);
-var opp_x = enemy.x;
-var opp_y = enemy.y;
-var opp_h = enemy.sprite_height;
-var opp_frame = enemy.frame;
+var player_id = 1;
+var player = fight_get_player(player_id);
+var opp_x = player.x;
+var opp_y = player.y;
+var opp_h = player.sprite_height;
+var opp_frame = player.frame;
 
-enemy = fight_get_enemy(0);
-var chr_x = enemy.x;
-var chr_y = enemy.y;
-var chr_h = enemy.sprite_height;
-var chr_frame = enemy.frame;
+player = fight_get_player(0);
+var chr_x = player.x;
+var chr_y = player.y;
+var chr_h = player.sprite_height;
+var chr_frame = player.frame;
 
 // Colors
 var color_text_opp = c_white;
@@ -59,20 +59,20 @@ if (account != undefined && profile != undefined) {
 draw_sprite(opp_frame, 0, size.x - frame_x - frame_w, frame_y);
 
 color = opp_rp_values[1];
-if (opponent_get_type(enemy_id) == "creator") {
+if (opponent_get_type(player_id) == "creator") {
 	color = c_rainbow;
 }
 
 draw_set_font(font_mini);
 draw_set_halign(fa_right);
-draw_text_outlined(size.x - frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, opponent_get_name(enemy_id));
+draw_text_outlined(size.x - frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, opponent_get_name(player_id));
 draw_text_outlined(size.x - frame_x, frame_y + frame_w + 25, color_text_opp, color_text_outline_opp, string(opp_rp) + " " + translate_get("Battle.Rating"));
 
 // Opponent name
 draw_set_font(font_console_mini);
 draw_set_halign(fa_center);
 
-var badge_name = opponent_get_name(enemy_id);
+var badge_name = opponent_get_name(player_id);
 if (opp_badge != 0) {
 	draw_sprite(spr_badges, opp_badge, opp_x - string_width(badge_name) / 2 - 10, opp_y - opp_h - 14);
 }

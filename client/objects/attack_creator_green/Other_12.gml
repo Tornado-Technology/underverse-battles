@@ -20,8 +20,8 @@ switch (attack_num) {
 
 		// Attack
 		var period = 65 - _power * 5;
-		var ammount = (5 + _power);
-		if (_time % period == 1 && _time <= period * ammount) {
+		var amount = (5 + _power);
+		if (_time % period == 1 && _time <= period * amount) {
 			var coord_new = rand_side_from(_border.x - _border.left, _border.y - _border.up, _border.x + _border.right, _border.y + _border.down);
 			
 			if (inst_turboblaster == noone) {
@@ -37,7 +37,7 @@ switch (attack_num) {
 			inst_turboblaster.target = _soul;
 		}
 		
-		if(_time == period * (ammount + 1)) instance_destroy();
+		if(_time == period * (amount + 1)) instance_destroy();
 		break;
 		
 	case 1: // турбо бластер сверху
@@ -49,8 +49,8 @@ switch (attack_num) {
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 		var period = 65 - _power * 5;
-		var ammount = (5 + _power);
-		if (_time % period == 1 && _time <= period * ammount) {
+		var amount = (5 + _power);
+		if (_time % period == 1 && _time <= period * amount) {
 			var border_dist = 180;
 			var rand_pos = irandom_range(0, 2)
 			var gb_x = _border.x - 12;
@@ -65,6 +65,6 @@ switch (attack_num) {
 				inst_turboblaster.x_dir = gb_x;
 		}
 		
-		if(_time == period * (ammount + 1)) instance_destroy();
+		if(_time == period * (amount + 1)) instance_destroy();
 		break;
 }

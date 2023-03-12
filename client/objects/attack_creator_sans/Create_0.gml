@@ -2,6 +2,7 @@ _id = 0;
 _power = 0;
 _time = 0;
 _period = 1;
+stage = 0;
 attack_num = 0;
 
 character_instance = noone;
@@ -24,3 +25,6 @@ side = dir.left;
 num = 0;
 bone_scale_speed = 0.3;
 new_warning = false;
+
+_angle = 0;
+angle_step = 0;

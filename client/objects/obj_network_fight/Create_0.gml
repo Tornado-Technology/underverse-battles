@@ -9,14 +9,14 @@ story_mode = false;
 required_components = {
 	ui: obj_network_fight_ui,
 	input: obj_network_fight_input,
-	bg: obj_fight_bg, 
-	bgm: obj_fight_bgm,
+	bg: obj_fight_background, 
+	bgm: obj_fight_soundtrack,
 	timer: obj_fight_timer
 };
 
 // Character
-enemy_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_char_tornado);
-enemy_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_char_tornado);
+player_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_character_tornado);
+player_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_character_tornado);
 
 // Background
 var bg_id = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.BACKGROUND_CUSTOM, 0);
@@ -35,17 +35,16 @@ if (_soundtrack_custom == undefined) {
 // Other
 x_shift = 1;
 time = 0;
-battle_continues = true;
-battle_death_animation = false;
-enemy_death_id = -1;
+battle_ends = false;
+player_death_id = -1;
 
 
 // Next
 // Main create
-enemy = [noone, noone];
-enemy_can_input = [true, true];
-enemy_action = [-1, -1];
-enemy_power = [0, 0];
+player = [noone, noone];
+player_can_input = [true, true];
+player_action = [-1, -1];
+player_power = [0, 0];
 
 // initiative 
 var buffer = global.fight_network_buffer_initiative;
@@ -56,8 +55,8 @@ buffer = undefined;
 state = fight_state.choosing;
 
 // Position
-center_enemy_position_x = [room_width / 6, room_width / 1.2];
-center_enemy_position_y = [room_height / 1.5, room_height / 1.5];
+center_player_position_x = [room_width / 6, room_width / 1.2];
+center_player_position_y = [room_height / 1.5, room_height / 1.5];
 
 // Timer
 time = 0;
@@ -66,21 +65,17 @@ time = 0;
 pause = false;
 _time = 0;
 
-#region Some useful methods
-function fight_enemys_chosen() {
-	return enemy_action[0] == -1 || enemy_action[1] == -1;
+#region Methods
+players_chosen = function() {
+	return player_action[0] == -1 || player_action[1] == -1;
 }
 
-function fight_enemys_defended() {
-	return enemy_action[0] == enemy_action[1];
+players_defended = function() {
+	return player_action[0] == player_action[1];
 }
 
-function fight_enemy_skip() {
-	return enemy_action[initiative] == 3;
-}
-
-function fight_enemy_action_is_attack() {
-	return fight_get_enemy_action_type(initiative, enemy_action[initiative]) == fight_action_type.attack;
+player_is_skipping = function() {
+	return player_action[initiative] == fight_action_type.skip;
 }
 #endregion
 

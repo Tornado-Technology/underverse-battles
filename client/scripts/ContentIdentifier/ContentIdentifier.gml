@@ -25,6 +25,6 @@ function ContentIdentifier(source, key, index) constructor {
 	/// @description Returns a string in the format "suource:key".
 	/// @param {String} 
 	static to_string = function() {
-		return string("{0}:{1}", source, key);
+		return string(source) + ":" + string(key);
 	}
 }

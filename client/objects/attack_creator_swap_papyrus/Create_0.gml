@@ -5,6 +5,7 @@ character_instance = noone;
 
 _time = 0;
 _period = 1;
+stage = 0;
 attack_num = 0;
 
 bone_obj = obj_bone_swap_papyrus;
@@ -25,3 +26,6 @@ _soul = noone;
 _border = noone;
 
 border_decrease = 25 + _power*3;
+
+_angle = 0;
+angle_step = 0;

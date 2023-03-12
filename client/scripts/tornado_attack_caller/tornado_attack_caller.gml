@@ -18,3 +18,8 @@ function dan_attack_2(_power, _enemy) {
 	attack._power = _power;
 	attack._id = 2;
 }
+
+function dan_special_attack(_enemy) {
+	var attack = instance_create(obj_tornado_attack_creator);
+	attack._id = 3;
+}

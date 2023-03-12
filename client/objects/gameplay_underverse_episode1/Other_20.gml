@@ -1,7 +1,7 @@
 ///@desc Инк - Усиление
 
-if (fight_get_enemy_action(0) > -1) {
-	fight_set_enemy_action(1, fight_get_enemy_action(0));
+if (fight_get_player_action(0) > -1) {
+	fight_set_player_action(1, fight_get_player_action(0));
 	
 	/* Options */
 	fight_set_ui_showing_action_box(false);

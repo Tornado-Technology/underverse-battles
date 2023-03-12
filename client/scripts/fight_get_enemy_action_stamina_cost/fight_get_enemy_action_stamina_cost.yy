@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "fight_get_enemy_action_stamina_cost",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Get",
-    "path": "folders/Scripts/Local/Fight/Fight/Enemy/Stamina/Get.yy",
+    "path": "folders/Scripts/Local/Fight/Fight/Player/Stamina/Get.yy",
   },
 }

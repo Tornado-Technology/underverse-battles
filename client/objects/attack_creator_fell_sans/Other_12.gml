@@ -44,7 +44,7 @@ if (_time == 1) {
 }
 
 if(_time % _period == 0) {
-	side = choose(dir.up, dir.down, dir.left, dir.right);
+	var side = choose(dir.up, dir.down, dir.left, dir.right);
 	new_warning = true;
 	if (attack_num == 0) {
 		_soul.gravity_force = side;
@@ -96,6 +96,6 @@ if(_time % _period == _time_step_end) {
 	}
 }
 if (_time % final_time == 0) {
-	character_instance.sprite_index = spr_fell_sans_idle;
+	character_instance.stop_hand_wave();
 	instance_destroy();
 }

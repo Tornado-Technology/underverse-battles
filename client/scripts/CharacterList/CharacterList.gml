@@ -52,59 +52,58 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 function CharacterList() {
 	global.characters = [
 		[
-			new Character(obj_char_ink_sans, "InkSans",	"Classic", spr_ink_sans_frame)
+			new Character(obj_character_ink_sans, "InkSans",	"Classic", spr_ink_sans_frame)
 		],
 	
 		[
-			new Character(obj_char_error_sans, "ErrorSans",	"Classic", spr_error_sans_frame)
+			new Character(obj_character_error_sans, "ErrorSans",	"Classic", spr_error_sans_frame),
+			new Character(obj_character_error_sans_new_clothes, "ErrorSans",	"NewClothes", spr_error_sans_new_clothes_frame),
+			new Character(obj_character_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame),
 		],
 		[
-			new Character(obj_char_sans, "ClassicSans",	"Classic", spr_sans_frame),
-			new Character(obj_char_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame)
+			new Character(obj_character_sans, "ClassicSans",	"Classic", spr_sans_frame),
+			new Character(obj_character_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame),
+			new Character(obj_character_sans_on_byke, "ClassicSans", "OnByke", spr_sans_on_byke_frame)
 		],
 		[
-			new Character(obj_char_fell_sans, "FellSans", "Classic", spr_fell_sans_frame)
+			new Character(obj_character_fell_sans, "FellSans", "Classic", spr_fell_sans_frame)
 		],
 		[
-			new Character(obj_char_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
+			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
 		],
 		[
-			new Character(obj_char_swap_papyrus, "SwapPapyrus", "Classic", spr_swap_papyrus_frame),
-			new Character(obj_char_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
+			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Classic", spr_swap_papyrus_frame),
+			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
 		],
 		[
-			new Character(obj_char_xchara_uv00, "XtaleChara", "Standard", spr_xchara_frame),
-			new Character(obj_char_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
+			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
+			new Character(obj_character_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
 		],
 
 	];
 
 	if (development_mode) {
-		//array_push(global.characters, [
-		//	new Character(obj_char_cross_xtale, "Cross", "Standard", spr_cross_frame),
-		//	new Character(obj_char_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
-		//]);
-		
-		//array_push(global.characters, [
-		//	new Character(obj_char_green, "Green", "Standard", spr_green_frame)
-		//]);
-		
 		array_push(global.characters, [
-			new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
+			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
+			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
 		]);
 		
 		array_push(global.characters, [
-			new Character(obj_char_tornado, "Tornado", "Standard", spr_tornado_frame)
+			new Character(obj_character_green, "Green", "Standard", spr_green_frame)
 		]);
 		
 		//array_push(global.characters, [
-		//	new Character(obj_char_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
+		//	new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
+		//]);
+		
+		array_push(global.characters, [
+			new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame)
+		]);
+		
+		//array_push(global.characters, [
+		//	new Character(obj_character_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
 		//]);
 	}
-	
-	// Скины, которвые выйдут в 2.1.0
-	//Character(char_error_sans_new_clothes, "ErrorSans",	"NewClothes", spr_error_sans_new_clothes_frame),
-	//Character(char_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame)
 }
 
 function init_characters() {

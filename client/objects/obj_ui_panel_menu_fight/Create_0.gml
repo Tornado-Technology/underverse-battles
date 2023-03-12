@@ -7,21 +7,21 @@ text_giveup = translate_get("Pause.GiveUp");
 text_exit = translate_get("Pause.ExitToMenu");
 
 add_button(text_return, function() {
+	if (!fight_network_mode) {
+		timer_resume();
+	}
 	close();
 });
 
 add_button(text_giveup, function() {
-	var damage = fight_get_enemy_hp(0);
+	var damage = fight_get_player_hp(0);
 	if (damage > 0) {
-		fight_set_enemy_hp(0, 0);
-		fight_update_death();
+		fight_set_player_hp(0, 0);
 		fight_draw_damage_number(0, damage);
 		
 		if (fight_network_mode) {
 			send_fight_kill();			
 		}
-		
-		audio_play_sound_plugging(snd_soul_damage);
 	}
 	close();
 });
@@ -31,7 +31,7 @@ if (!fight_network_mode) {
 		room_goto(room_menu);
 	});
 	
-	fight_timer_set_state(TIMER_STATE.DISABLED);
+	timer_pause();
 }
 
 fight_set_player_input(false);
