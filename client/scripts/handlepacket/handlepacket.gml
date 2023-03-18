@@ -19,7 +19,7 @@ function handle_packet(data) {
 			logger.error("Client connectin rejected, code: {0}.", code);
 			global.network_blocking = true;
 			network_disconnect(false);
-			display_show_message_info("Connection Rejected[" + string(code) + "]", c_red);
+			display_show_message_info(string("Connection Rejected[{0}]", code), c_red);
 			break;
 		
 		case "ping":
@@ -162,7 +162,7 @@ function handle_packet(data) {
 		case "fight_hp":
 			var data_enemy = data.enemy;
 			if (data_enemy != 0) {
-				var damage = fight_get_player_hp(data_enemy) - data.value;
+				var damage = fight_get_enemy_hp(data_enemy) - data.value;
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)

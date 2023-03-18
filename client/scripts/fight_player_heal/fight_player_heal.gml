@@ -13,6 +13,7 @@ function fight_player_heal(player_id, value) {
 	battle_remove_damage(value);
 	
 	fight_draw_heal_number(player_id, hp != max_hp ? value : 0);
+	fight_get_player(player_id).total_heal += value;
 
 	// Some network sync
 	if (fight_network_mode) {
