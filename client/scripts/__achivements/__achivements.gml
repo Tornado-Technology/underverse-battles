@@ -15,7 +15,9 @@ Achievement("DefeatFellSans", spr_achivement_defeatfellsans);
 Achievement("DefeatSwapSans", spr_achivement_defeatswapsans);
 Achievement("DefeatSwapPapyrus", spr_achivement_defeatswappapyrus);
 Achievement("ACybersWorld", spr_achivement_a_cybers_world);
-Achievement("NotScratch", spr_achivement_a_cybers_world);
+Achievement("DefeatCross", spr_achivement_defeatswappapyrus);
+Achievement("DefeatGreen", spr_achivement_defeatswappapyrus);
+Achievement("NoScretches", spr_achivement_a_cybers_world);
 Achievement("Immortality", spr_achivement_immortality);
 
 // Main loader
@@ -48,6 +50,8 @@ enum achievement_id {
 	defeat_swap,
 	defeat_swap_papyrus,
 	a_cybers_world,
+	defeat_cross,
+	defeat_green,
 	not_scratch,
 	immortality,
 }

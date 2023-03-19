@@ -48,7 +48,8 @@ cutscenes = [
 		[cutscene_wait_dialog_end],
 		[effect_fade, 4, 1, c_white, c_white, true, 0],
 		[cutscene_wait, 4],
-		[cutscene_execute, function () { instance_destroy(sans); ink_sans.x -= 30; ink_sans.sprite_index = spr_ink_sans_pukes; }],
+		[cutscene_execute, function () { audio_play_sound(snd_into_clear_void, 2, true); }],
+		[cutscene_execute, function () { instance_destroy(sans); ink_sans.x -= 20; ink_sans.y -= 50; ink_sans.sprite_index = spr_ink_sans_flying_painting; }],
 		[layer_background_sprite, background_id, spr_background_doodle_sphere],
 		[cutscene_wait, 1],
 		[cutscene_dialog_async, episode + "Dialog5_1"]

@@ -117,9 +117,25 @@
       "Name": "X-Treme",
       "Description": "Defeat X-Chara"
     },
+    "DefeatCross": {
+      "Name": "Cross placed",
+      "Description": "Defeat Cross"
+    },
+    "DefeatGreen": {
+      "Name": "Editing completed",
+      "Description": "Defeat Green"
+    },
     "ACybersWorld": {
       "Name": "A cyber world?",
       "Description": "Login to the online game account"
+    },
+    "NoScretches": {
+      "Name": "No scretches",
+      "Description": "Defeat an enemy without taking damage"
+    },
+    "Immortality": {
+      "Name": "Immortality",
+      "Description": "Defeat an enemy recovering more HP in total than maximum HP"
     }
   },
   "Backgrounds": {
@@ -193,16 +209,8 @@
       "Tutorial": "Tutorial",
       "Tutoriel": "Tutoriel",
       "StartTutorial": "Start the tutorial",
-      "Battle1": "Ink Sans vs X-Chara",
-      "Battle2": "Error Sans vs Ink Sans",
-      "Battle3": "Sans vs Fell Sans",
-      "Battle4": "Swap Papyrus vs Cross",
-      "Battle5": "Swap Sans vs X-Chara",
-      "Battle6": "Dream vs Nightmare",
-      "Battle7": "Ink Sans vs Error Sans",
-      "Battle8": "Cross vs Killer Sans",
-      "Battle9": "Dream vs Killer Sans",
-      "Battle10": "Cross & Dream vs Nightmare"
+      "Episode1": "Episode 1 - Penetration",
+      "Episode2": "Episode 2 - Cross"
     },
     "Control": {
       "Title": "Control",
@@ -682,6 +690,7 @@
     "Max": "Max",
     "ChooseYourAttack": "Choose your attack",
     "Skip": "Skip",
+    "LittleStamina": "You have little stamina",
     "Rating": "RP",
     "Disconnected": "disconnected",
     "DisconnectedFromTheBattle": "The player was disconnected from the battle!",

@@ -1,7 +1,7 @@
 ///@desc Инк - Про уворот
 
 if (fight_get_player_action(0) > 0) {
-	fight_set_player_action(0, -1);
+	fight_reset_player_action(0);
 	
 	dlg = dialog_create(episode + "WrongAttack");
 	

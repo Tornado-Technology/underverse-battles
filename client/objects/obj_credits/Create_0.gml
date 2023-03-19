@@ -38,7 +38,7 @@ credits = [
 	"AX_233",
 	"",
 	str_yellow + translate_get(key + "StoryCreator"),
-	"Jael Penaloza (Jakei)",
+	"Jael Peñaloza (Jakei)",
 	"",
 	str_yellow + translate_get(key + "Composers"),
 	"NyxTheShield",

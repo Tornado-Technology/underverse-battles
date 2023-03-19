@@ -19,7 +19,7 @@ function handle_packet(data) {
 			logger.error("Client connectin rejected, code: {0}.", code);
 			global.network_blocking = true;
 			network_disconnect(false);
-			display_show_message_info(string("Connection Rejected[{0}]", code), c_red);
+			display_show_message_info("Connection Rejected[" + string(code) + "]", c_red);
 			break;
 		
 		case "ping":

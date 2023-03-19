@@ -33,7 +33,7 @@ option_bar_width  = [0, 0, 0];
 option_bar_height = [0, 0, 0];
 
 // New code
-text_skip = "[X] - " + translate_get("Battle.Skip");
+text_skip = translate_get("Battle.LittleStamina") + "\n[X] - " + translate_get("Battle.Skip");
 
 // Shows
 show_ui = true;

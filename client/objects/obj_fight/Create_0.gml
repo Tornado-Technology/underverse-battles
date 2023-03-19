@@ -121,6 +121,3 @@ goto_ending_room = function() {
 	room_goto(ending_room);
 }
 #endregion
-
-// Instance create
-event_user(1);

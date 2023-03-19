@@ -9,6 +9,7 @@ sound_click = snd_click;
 
 // Utils
 can_select = true;
+can_select_power = true;
 can_skip = true;
 
 input_ability = false;

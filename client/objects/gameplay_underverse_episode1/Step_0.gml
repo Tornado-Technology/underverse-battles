@@ -51,7 +51,7 @@ else if (scenario == 17) {
 	
 	/* Fight */
 	fight_set_initiative(0);
-	fight_set_player_stamina(0, 20);
+	fight_set_player_stamina(0, 0);
 				
 	/* Options */
 	fight_set_ui_showing_action_box(true);
@@ -64,10 +64,10 @@ else if (scenario == 17) {
 	scenario = 18;
 }
 else if (scenario == 18) {
-	if (fight_get_player_action(0) != fight_action_type.skip && fight_get_player_action(0) != fight_action_type.empty) {
+	if (fight_get_player_action(0) >= 0) {
 		dlg = dialog_create(episode + "WrongSkip");
 		
-		fight_set_player_action(0, -1);
+		fight_reset_player_action(0);
 	
 		/* Options */
 		fight_ui_set_player_can_input_skip(false);
@@ -79,7 +79,7 @@ else if (scenario == 18) {
 		scenario = 17;
 	}
 	else {
-		if (fight_get_player_action(0) == 3) {
+		if (fight_get_player_is_skipping(0)) {
 			/* Options */
 			fight_ui_set_player_can_input_skip(false);
 			fight_set_ui_showing_action_box(false);

@@ -78,7 +78,7 @@ draw_set_font(font_determination);
 var soul = fight_get_player_soul(0);
 
 // Draw Action border
-if (action_box_show && showing_special_action && is_player_turn) { 
+if (action_box_show && showing_action_box_power && is_player_turn) { 
 	draw_sprite(spr_fight_ui_bar_power, selected_power, action_box_position.x + action_box_size.x / 2, action_box_position.y);
 }
 
@@ -137,9 +137,10 @@ if (action_box_show && showing_special_action && is_player_turn) {
 }
 
 // Skip
-if (showing_skip && is_player_turn && fight_get_player_stamina(0) < fight_get_player_action_stamina_cost(0, 2) && in_chouse) {
+if (showing_skip && is_player_turn && fight_get_player_stamina(0) < fight_get_player_action_stamina_cost(0, 1) && in_chouse) {
 	draw_set_font(font_mini);
-	draw_text_outlined(40, room_height - 20, c_gray, c_black, text_skip);
+	draw_set_halign(fa_center);
+	draw_text_outlined(size_center.x, room_height - 120, text_simple_color, c_black, text_skip);
 }
 
 // initiative
