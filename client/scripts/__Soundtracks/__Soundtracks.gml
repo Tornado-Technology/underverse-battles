@@ -5,7 +5,9 @@ Soundtrack(snd_asgore, "Asgore", "NyxTheShield OFFICIAL", "Original Undertale OS
 Soundtrack(snd_black_apple, "Black Apple", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 Soundtrack(snd_bones_shake, "Bones Shake", "Marsilies", "Underverse Battles OST", universe.underverse);
 Soundtrack(snd_brushwork, "Brushwork", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
+Soundtrack(snd_cross_theme, "Cross Theme", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 Soundtrack(snd_disappointment, "Disappointment", "Marsilies", "Underverse Battles OST", universe.underverse);
+Soundtrack(snd_edit_the_battle, "Edit The Battle", "Marsilies", "Underverse Battles OST", universe.underverse);
 Soundtrack(snd_megalorchestra, "Megalorchestra", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 Soundtrack(snd_megalovania, "Megalovania", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 Soundtrack(snd_megalovania_fell_sans, "M.E.G.A.L.O.V.A.N.I.A", "Marsilies", "Underverse Battles OST", universe.underverse);
@@ -24,8 +26,6 @@ Soundtrack(snd_burning_in_hell, "Burning in Hell", "NyxTheShield OFFICIAL", "Met
 Soundtrack(snd_triple_the_threat, "Triple The Threat", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.badtimetrio);
 
 if (development_mode) {
-	Soundtrack(snd_cross_theme, "Cross Theme", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
-	Soundtrack(snd_edit_the_battle, "Edit The Battle", "Marsilies", "Underverse Battles OST", universe.underverse);
 	Soundtrack(snd_delta, "The Delta", "ReStart", "Underverse Battles OST", universe.no);
 	Soundtrack(snd_vs_tesmi, "vsTesmi", "TornadoTech", "Underverse Battles OST", universe.no);
 }
