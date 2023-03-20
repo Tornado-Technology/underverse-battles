@@ -277,7 +277,7 @@ create_page([
 
 // SingleBattle
 create_page([
-	Transfer("StoryMode.Tutorial", menu_page.storymode),
+	Transfer("StoryMode.Title", menu_page.storymode),
 	Execute("SingleBattle.CustomBattle", [], function() {
 		instance_create(obj_menu_custom_battle_characters);
 	}),
@@ -295,8 +295,11 @@ create_page([
 
 // Story Mode
 create_page([
-	Execute("StoryMode.StartTutorial", [], function() {
+	Execute("StoryMode.Episode1", [], function() {
 		room_goto(room_story_mode);
+	}),
+	Execute("StoryMode.Episode2", [], function() {
+		room_goto(room_underverse_episode2);
 	}),
 	Transfer("StandardButtons.Back", menu_page.singleplayer),
 ], menu_page.storymode);

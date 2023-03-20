@@ -1,27 +1,17 @@
 /// @desc Set frame
-if (name == "Sans")
-	frame = spr_sans_frame;
-if (name == "Sans" and name == "tired")
-	frame = spr_sans_frame_tired;
-if (name == "Ink")
-	frame = spr_ink_sans_frame;
-if (name == "Ink" and image_type == "combat")
-	frame = spr_ink_sans_frame_combat;
-if (name == "Ink" and image_type == "glad")
-	frame = spr_ink_sans_frame_glad;
-if (name == "Ink" and image_type == "proud")
-	frame = spr_ink_sans_frame_proud;
-if (name == "Ink" and image_type == "surprised")
-	frame = spr_ink_sans_frame_surprised;
-if (name == "Ink" and image_type == "confused")
-	frame = spr_ink_sans_frame_confused;
-if (name == "Ink" and image_type == "calm")
-	frame = spr_ink_sans_frame_calm;
-if (name == "C")
-	frame = spr_xchara_frame;
-if (name == "C" and image_type == "secretive")
-	frame = spr_xchara_frame_secretive;
-if (name == "C" and image_type == "angry")
-	frame = spr_xchara_frame_angry;
-if (name == "C" and image_type == "satisfied")
-	frame = spr_xchara_frame_satisfied;
+// Sans
+set_frame("Sans", "normal", spr_sans_frame);
+set_frame("Sans","tired", spr_sans_frame_tired);
+// Ink
+set_frame("Ink", "normal", spr_ink_sans_frame);
+set_frame("Ink", "combat", spr_ink_sans_frame_combat);
+set_frame("Ink", "glad", spr_ink_sans_frame_glad);
+set_frame("Ink", "proud", spr_ink_sans_frame_proud);
+set_frame("Ink", "surprised", spr_ink_sans_frame_surprised);
+set_frame("Ink", "confused", spr_ink_sans_frame_surprised);
+set_frame("Ink", "calm", spr_ink_sans_frame_confused);
+// C (XChara/Cross)
+set_frame("C", "normal", spr_xchara_frame);
+set_frame("C", "secretive", spr_xchara_frame_secretive);
+set_frame("C", "angry", spr_xchara_frame_angry);
+set_frame("C", "satisfied", spr_xchara_frame_satisfied);

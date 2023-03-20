@@ -117,9 +117,25 @@
       "Name": "X-Treme",
       "Description": "Defeat X-Chara"
     },
+    "DefeatCross": {
+      "Name": "Cross placed",
+      "Description": "Defeat Cross"
+    },
+    "DefeatGreen": {
+      "Name": "Editing completed",
+      "Description": "Defeat Green"
+    },
     "ACybersWorld": {
       "Name": "A cyber world?",
       "Description": "Login to the online game account"
+    },
+    "NoScretches": {
+      "Name": "No scretches",
+      "Description": "Defeat an enemy without taking damage"
+    },
+    "Immortality": {
+      "Name": "Immortality",
+      "Description": "Defeat an enemy recovering more HP in total than maximum HP"
     }
   },
   "Backgrounds": {
@@ -193,16 +209,8 @@
       "Tutorial": "Tutorial",
       "Tutoriel": "Tutoriel",
       "StartTutorial": "Start the tutorial",
-      "Battle1": "Ink Sans vs X-Chara",
-      "Battle2": "Error Sans vs Ink Sans",
-      "Battle3": "Sans vs Fell Sans",
-      "Battle4": "Swap Papyrus vs Cross",
-      "Battle5": "Swap Sans vs X-Chara",
-      "Battle6": "Dream vs Nightmare",
-      "Battle7": "Ink Sans vs Error Sans",
-      "Battle8": "Cross vs Killer Sans",
-      "Battle9": "Dream vs Killer Sans",
-      "Battle10": "Cross & Dream vs Nightmare"
+      "Episode1": "Episode 1 - Penetration",
+      "Episode2": "Episode 2 - Cross"
     },
     "Control": {
       "Title": "Control",
@@ -682,6 +690,7 @@
     "Max": "Max",
     "ChooseYourAttack": "Choose your attack",
     "Skip": "Skip",
+    "LittleStamina": "You have little stamina",
     "Rating": "RP",
     "Disconnected": "disconnected",
     "DisconnectedFromTheBattle": "The player was disconnected from the battle!",
@@ -823,7 +832,7 @@
         "Nope. Get outta here"
       ],
       "Dialog3_1": [
-        "{Sans:tired}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
+        "{Sans:normal}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
       ],
       "Dialog4_1": [
         "{Ink:glad}DO YOU WANNA KNOW MORE ABOUT C!? GREAT!!",
@@ -831,26 +840,26 @@
         "{Ink:normal}Alright... All started with a simple drop in a far universe..."
       ],
       "Dialog5_1": [
-        "{Ink:none}Everything seemed to be normal. Your universe and the thousands of existing variations still continued peacefully.",
-        "{Ink:none}Suddenly, I felt the appearance of a new universe. It had a very strong presence...",
-        "{Ink:none}...despite having the sound of dripping water.",
-        "{Ink:none}I couldn't contain my excitement, so I decided to go there.",
-        "{Ink:none}I was eager to meet this new world and its inhabitants...",
-        "{Ink:none}...But there was absolutely nothing except for one person.",
-        "{Ink:none}And actually... those drops were his tears.",
-        "{Ink:none}He was very scared. His mind was invaded by horror.",
-        "{Ink:none}He noticed there was someone else... me.",
-        "{Ink:none}However, soon we broke the ice, and he told me his name.",
-        "{Ink:none}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities.",
+        "{Ink:}Everything seemed to be normal. Your universe and the thousands of existing variations still continued peacefully.",
+        "{Ink:}Suddenly, I felt the appearance of a new universe. It had a very strong presence...",
+        "{Ink:}...despite having the sound of dripping water.",
+        "{Ink:}I couldn't contain my excitement, so I decided to go there.",
+        "{Ink:}I was eager to meet this new world and its inhabitants...",
+        "{Ink:}...But there was absolutely nothing except for one person.",
+        "{Ink:}And actually... those drops were his tears.",
+        "{Ink:}He was very scared. His mind was invaded by horror.",
+        "{Ink:}He noticed there was someone else... me.",
+        "{Ink:}However, soon we broke the ice, and he told me his name.",
+        "{Ink:}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities.",
         "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
         "{Ink:combat}Chara is sealed inside his body. How did it happen? He never told me...",
-        "{Ink:none}At first they acted as two separate beings.",
-        "{Ink:none}However, as I visited Cross to keep him company, he won full control of both souls."
+        "{Ink:}At first they acted as two separate beings.",
+        "{Ink:}However, as I visited Cross to keep him company, he won full control of both souls."
       ],
       "Dialog6_1": [
-        "{Ink:none}One day, while were drawing stuff, he stood up.",
-        "{Ink:none}He looked pretty down in the dumps.",
-        "{Ink:none}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him.",
+        "{Ink:}One day, while were drawing stuff, he stood up.",
+        "{Ink:}He looked pretty down in the dumps.",
+        "{Ink:}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him.",
         "{Ink:calm}He refused to go, because he was convinced that his world was still alive.",
         "{Ink:calm}Cross thought he could restore everything with my help.",
         "{Ink:calm}But when I told him that can't resurrect the dead...",
@@ -868,7 +877,7 @@
       ],
       "Dialog5_2": [
         "{Sans:tired}Hmm ... What's a day.",
-        "{Papyrus:none}SANS! WHERE ARE YOU!?",
+        "{Papyrus:}SANS! WHERE ARE YOU!?",
         "{Sans:tired}Time to go."
       ],
       "Dialog7": [

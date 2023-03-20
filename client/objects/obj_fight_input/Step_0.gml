@@ -19,16 +19,16 @@ var input_skip = input_check_pressed(input.skip);
 var input_special = input_check_pressed(input.special);
 
 // Power bar
-if (can_select && is_player_turn) {
+if (can_select && can_select_power && is_player_turn) {
 	if (abs(input_raw_h)) {
 		var power_min = 0;
 		var power_max = 4;
 	
 		// Next uograde cost
-		var can_select_power = fight_get_player_mana(0) >= fight_get_player_action_mana_cost(0, clamp(selected_power + 1, power_min, power_max));
+		var can_select_next_power = fight_get_player_mana(0) >= fight_get_player_action_mana_cost(0, clamp(selected_power + 1, power_min, power_max));
 	
 		// Can add power if we have some mana or if we below manabar
-		if (can_select_power || input_raw_h < 0) {
+		if (can_select_next_power || input_raw_h < 0) {
 			selected_power = clamp(selected_power + input_raw_h, power_min, power_max);
 		}
 	

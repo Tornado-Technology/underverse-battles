@@ -68,8 +68,7 @@ enum fight_action_type {
 	attack1,
 	attack2,
 	attack3,
-	special_attack,
-	healing
+	special_attack
 }
 
 enum battle_border {

@@ -21,5 +21,37 @@ shift = 184;
 death_name_function = "";
 
 voice = snd_voice_main;
-dialog_font = font_determination;
-dialog_color = c_white;
+font = font_determination;
+text_color = c_white;
+
+#region Methods
+set_frame = function (character_name, character_emote, character_frame) {
+	if (name == character_name && character_emote == "") {
+		frame = character_frame;
+		return;
+	}
+	if (name == character_name && image_type == character_emote)
+		frame = character_frame;
+}
+
+set_voice = function (character_name, character_emote, character_voice) {
+	if (name == character_name && character_emote == "") {
+		voice = character_voice;
+		return;
+	}
+	if (name == character_name && image_type == character_emote)
+		voice = character_voice;
+}
+
+set_font = function (character_name, character_emote, character_font, color) {
+	if (name == character_name && character_emote == "") {
+		font = character_font;
+		text_color = color;
+		return;
+	}
+	if (name == character_name && image_type == character_emote) {
+		font = character_font;
+		text_color = color;
+	}
+}
+#endregion

@@ -1,4 +1,6 @@
-function statistics_set_selection_attacks(attack0, attack1){
+function statistics_set_selection_attacks(attack0, attack1) {
+	if (!instance_exists(obj_statistics))
+		exit;
 	var size = obj_statistics.action_list_size;
 	obj_statistics.selected_action[0, size] = attack0;
 	obj_statistics.selected_action[1, size] = attack1;

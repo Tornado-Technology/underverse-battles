@@ -31,3 +31,6 @@ soundtrack = snd_megalovania;
 
 // Ending room
 ending_room = room_menu;
+
+// Instance create
+event_user(1);

@@ -17,7 +17,7 @@ fight_set_initiative(0);
 /* Options */
 bar_power_disappearance();
 fight_set_ui_showing_action_box(true);
-fight_set_showing_special_action(true);
+fight_set_showing_action_box_power(true);
 fight_set_player_input(true);
 fight_set_pause(true);
 			

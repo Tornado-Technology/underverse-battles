@@ -114,6 +114,14 @@
       "Name": "Почему так сложно жить?",
       "Description": "Победите Свап Папируса"
     },
+    "DefeatCross": {
+      "Name": "Крест поставлен",
+      "Description": "Победите Кросса"
+    },
+    "DefeatGreen": {
+      "Name": "Редактирование завершено",
+      "Description": "Победите Грина"
+    },
     "DefeatXChara": {
       "Name": "ИКС-Тремально",
       "Description": "Победите Икс Чару"
@@ -121,6 +129,14 @@
     "ACybersWorld": {
       "Name": "Кибер мир?",
       "Description": "Войдите в аккаунт сетевой игры"
+    },
+    "NoScretches": {
+      "Name": "Ни царапины",
+      "Description": "Победите противника, не получив урона"
+    },
+    "Immortality": {
+      "Name": "Бессмертный",
+      "Description": "Победите противника, восстановив в общей сложности больше ХП, чем максимальное"
     }
   },
   "Backgrounds": {
@@ -193,7 +209,9 @@
       "Title": "Сюжет",
       "Tutorial": "Туториал",
       "Tutoriel": "Туториель",
-      "StartTutorial": "Начать туториал"
+      "StartTutorial": "Начать туториал",
+      "Episode1": "Эпизод 1 - Проникновение",
+      "Episode2": "Эпизод 2 - Кросс"
     },
     "Control": {
       "Title": "Управление",
@@ -674,6 +692,7 @@
     "Max": "Макс",
     "ChooseYourAttack": "Выберите атаку",
     "Skip": "Пропустить",
+    "LittleStamina": "У вас мало стамины",
     "Rating": "RP",
     "Disconnected": "отключился",
     "DisconnectedFromTheBattle": "Игрок отключился от битвы!",

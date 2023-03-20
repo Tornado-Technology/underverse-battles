@@ -47,13 +47,15 @@ switch(state) {
 	case fight_state.battle:
 		// If that AI turn and us attack is really attacking then
 		if (initiative == you) {
+			if (!player_is_special_acting(you) || player_is_special_acting(you) && fight_get_player_special_action_is_damage_attack(you))
+			{
+				var damage = ai_make_damage();
+				fight_draw_damage_number(1, damage);
+				statistics_set_damage(damage);
 			
-			var damage = ai_make_damage();
-			fight_draw_damage_number(_opponent, damage);
-			statistics_set_damage(damage);
-			
-			fight_set_state(fight_state.reset);
-			break;
+				fight_set_state(fight_state.reset);
+				break;
+			}
 		}
 			
 		// Create battle

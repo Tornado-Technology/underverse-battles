@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "attack_creator",
-    "path": "objects/attack_creator/attack_creator.yy",
+    "name": "obj_character",
+    "path": "objects/obj_character/obj_character.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

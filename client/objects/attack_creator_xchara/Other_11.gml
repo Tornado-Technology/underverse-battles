@@ -8,7 +8,7 @@ va_x2_ = obj_camera.view_width + obj_camera.camera_position.x;
 va_y1_ = obj_camera.camera_position.y;
 va_y2_ = obj_camera.view_height + obj_camera.camera_position.y;
 
-var wave_count = (70 - _power * 10) * (6 + _power * 2);
+var wave_count = (70 - _power * 10) * (6 + _power);
 var wave_speed = 3.2 + _power * 0.2;
 var wave_last_time = convert_seconds_to_steps(1.5);
 

@@ -37,6 +37,14 @@ if (hp <= 0) {
 		case obj_character_xchara:
 			achievement_give(achievement_id.defeat_xchara);
 			break;
+		
+		case obj_character_cross:
+			achievement_give(achievement_id.defeat_cross);
+			break;
+		
+		case obj_character_green:
+			achievement_give(achievement_id.defeat_green);
+			break;
 	}
 	
 	var player = fight_get_player(0);
