@@ -107,4 +107,30 @@ export default class Fight {
       this.finish(this.getOtherClient(client));
     }
   }
+  public setClientAction(client: Client, action: number): void {
+    client?.fight.setAction(action);
+    this.getOtherClient(client)?.sendFightAction(action, target.opponent);
+    Logger.debug(`Action: ${action} "${client?.account.username}"`);
+  }
+
+  public setAction(client: Client, action: Number): void {
+    if (this.state !== state.choose) {
+      Logger.warn(`The client tries to send his action in other state, client: ${client.uuid}.`);
+      return;
+    }
+
+    if (client.fight.isChosen) {
+      Logger.warn(`The client tries to send a second time his actions, client: ${client.uuid}.`);
+      return;
+    }
+
+    this.setClientAction(client, action);
+    this.updateAction();
+  }
+
+  resetAction(client) {
+    this.setClientAction(client, -1);
+    this.updateAction();
+  }
+
 }

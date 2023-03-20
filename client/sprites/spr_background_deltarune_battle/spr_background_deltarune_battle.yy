@@ -72,6 +72,6 @@
   "nineSlice": null,
   "parent": {
     "name": "DeltaruneBattle",
-    "path": "folders/Sprites/Fight/Background/DeltaruneBattle.yy",
+    "path": "folders/Sprites/Fight/Backgrounds/DeltaruneBattle.yy",
   },
 }

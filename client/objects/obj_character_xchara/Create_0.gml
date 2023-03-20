@@ -8,8 +8,8 @@ universe	= "XTale";
 creator		= "Jakei";
 
 // HP
-max_hp = 60;
-hp = 60;
+max_hp = 6000000;
+hp = 6000000;
 damage = 5;
 invulnerability = true;
 
@@ -20,8 +20,8 @@ stamina_regen = 15;
 action_stamina_cost = Cost(5, 10, 20);
 
 // Mana
-mana = 50;
-max_mana = 100;
+mana = 500000;
+max_mana = 1000000;
 action_mana_upgrade_cost = Cost(0, 10, 25, 40, 60);
 
 // Soul

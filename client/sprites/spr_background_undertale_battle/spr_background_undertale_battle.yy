@@ -72,6 +72,6 @@
   "nineSlice": null,
   "parent": {
     "name": "UndertaleBattle",
-    "path": "folders/Sprites/Fight/Background/UndertaleBattle.yy",
+    "path": "folders/Sprites/Fight/Backgrounds/UndertaleBattle.yy",
   },
 }
