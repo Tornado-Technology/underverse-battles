@@ -56,3 +56,7 @@ if (_delay == 350) {
 	pause_delay();
 	scenario = 2;
 }
+
+if (is_mobile || mobile_mode) {
+	global.__ui_controls_instance.enable = false;
+}

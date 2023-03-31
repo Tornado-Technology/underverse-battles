@@ -54,4 +54,18 @@ set_font = function (character_name, character_emote, character_font, color) {
 		text_color = color;
 	}
 }
+
+skip_arrow = UIImageButton(spr_stat_arrow);
+skip_arrow.on_press = function() {
+	keyboard_key_press(vk_enter);
+	
+	if (pos < string_length(cur_text)) {
+	    keyboard_key_press(vk_shift);
+	}
+}
+skip_arrow.on_release = function() {
+	keyboard_key_release(vk_enter);
+	keyboard_key_release(vk_shift);
+}
+
 #endregion

@@ -7,7 +7,7 @@
 #macro localserver_mode (os_get_config() == "Localserver")
 
 // Used to test mobile features for Desktop
-#macro mobile_mode false
+#macro mobile_mode true
 
 enum particles_graphics_level {
 	highly,
