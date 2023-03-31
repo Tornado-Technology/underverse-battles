@@ -9,3 +9,5 @@ for (var i = 0; i < 3; i++) {
 	text_name_actions_width[i] = string_width(name);
 	text_name_actions_height[i] = string_height(name);
 }
+
+special_button.set_image(fight_get_player_special_action_icon(0));

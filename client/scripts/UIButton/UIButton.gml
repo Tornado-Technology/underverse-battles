@@ -85,6 +85,14 @@ function UIButtonClass(text, sprite, callback) constructor {
 		height = char_get_height("W") / 2;
 	}
 	
+	static set_image = function(sprite) {
+		width = sprite_get_width(sprite);
+		height = sprite_get_height(sprite);
+		offset_x = sprite_get_xoffset(sprite);
+		offset_y = sprite_get_yoffset(sprite);
+		image = sprite;
+	}
+	
 	/// @param {Real} x
 	/// @param {Real} y
 	static draw = function(position_x, position_y, alpha = image_default_alpha, image_rotation = 0, update_position_x = position_x, update_position_y = position_y) {
