@@ -225,6 +225,70 @@ export const handlePacket = async (client: Client, data: any) => {
       }
       break;
 
+    case 'fightJoined':
+      client.fight.instance.syncClient(client);
+      break;
+
+    case 'fightJoinReject':
+      client.setState(state.inMenu);
+      break;
+
+    case 'fightAction':
+      client.fight.instance?.setAction(client, data.action);
+      break;
+
+    case 'fightPower':
+      client.fight.instance?.setPower(client, data.power);
+      break;
+
+    case 'fightSoul':
+      client.fight.instance?.setSoulData(client, data.x, data.y, data.angle, data.ability);
+      break;
+
+    case 'fightKill':
+      client.fight.instance?.finish(client.fight.instance?.getOtherClient(client));
+      break;
+
+    case 'fightDamage':
+      client.fight.instance?.removeHp(client, data.damage);
+      // fight.addMana(fight.getOtherClient(client), data.damage);
+      break;
+
+    case 'fightHp':
+      client.fight.instance?.setHp(client, data.hp ?? 0);
+      break;
+
+    case 'fightStun':
+      fight = MatchMaker.findClientFight(client);
+      if (fight === undefined) break;
+
+      if (!fight.isMyClient(client) || fight.state !== Fight.states.battle) {
+        break;
+      }
+
+      fight.getOtherClient(client)?.sendFightStun(Fight.target.opponent);
+      break;
+
+    case 'colliderSoul':
+      client.fight.instance?.addMana(client, 2);
+
+      //if (!fight.isMyClient(client) || fight.state !== Fight.states.battle) {
+      //  break;
+      //}
+      //fight.getOtherClient(client)?.sendFightCollider(Fight.target.opponent);
+      break;
+
+    case 'healAction':
+      client.fight.instance?.addHp(client, data.hp ?? 0);
+      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd();
+      break;
+
+    case 'battle_finish':
+      if (client.fight.instance?.unactivePlayer === client) {
+        client.fight.instance?.battleFinish();
+      }
+      break;
+
     default:
       Logger.warn(`Handled unknown command index: ${index}`);
       break;

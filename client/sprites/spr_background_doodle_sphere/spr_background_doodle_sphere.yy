@@ -70,6 +70,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Doodle sphere",
-    "path": "folders/Sprites/Fight/Background/Doodle sphere.yy",
+    "path": "folders/Sprites/Fight/Backgrounds/Doodle sphere.yy",
   },
 }

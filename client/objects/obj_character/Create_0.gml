@@ -85,7 +85,7 @@ player_num = -1;
 
 offset_x = 0;
 offset_y = 0;
-x_shift = 3;
+x_shift = 0;
 y_shift = 0;
 
 play_animation_after_battle = false;

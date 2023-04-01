@@ -71,7 +71,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background",
-    "path": "folders/Sprites/Fight/Background.yy",
+    "name": "Backgrounds",
+    "path": "folders/Sprites/Fight/Backgrounds.yy",
   },
 }

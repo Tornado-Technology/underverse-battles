@@ -1,5 +1,5 @@
 import Client from './client.js';
-import Fight from '../game/fight.js';
+import Fight, { target } from '../game/fight.js';
 import { characterInfoGetById }  from '../content/chracterInfoList.js';
 import CharacterInfo from '../data/characterInfo.js';
 
@@ -52,6 +52,11 @@ export default class ClientFight {
 
   }
 
+  public setAction(action: number): void {
+    this.action = action;
+    this.client.sendFightAction(action, target.self);
+  }
+
   public setCharacter(characterId: number, skinId: number): void {
     this.characterId = characterId;
     this.characterSkinId = skinId;
@@ -84,5 +89,9 @@ export default class ClientFight {
 
   public get hasInstance(): boolean {
     return Boolean(this.instance);
+  }
+
+  public get isChosen(): boolean {
+    return this.action !== -1;
   }
 }

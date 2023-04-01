@@ -72,6 +72,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Queen's hall",
-    "path": "folders/Sprites/Fight/Background/Queen's hall.yy",
+    "path": "folders/Sprites/Fight/Backgrounds/Queen's hall.yy",
   },
 }
