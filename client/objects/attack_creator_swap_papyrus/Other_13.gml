@@ -1,7 +1,3 @@
-if (live_call()) {
-    return live_result;
-}
-
 /// @desc Bad time
 _time++;
 

@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_battle_bullet",
-    "path": "objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name": "obj_bone_cross",
+    "path": "objects/obj_bone_cross/obj_bone_cross.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,9 +27,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

@@ -28,12 +28,14 @@ switch (attack_num) {
 				var gb_size = 60;
 				var con = room_height + gb_size;
 				var coord = rand_side_from(-gb_size, -gb_size, con, con);
-				inst_turboblaster = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, gb_aim_obj);
-				inst_turboblaster.shoot_time = period;
-				inst_turboblaster.charge_time = period - 20;
+				inst_turboblaster = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, gb_aim_obj, {
+					target_time: (period - 25) / 60,
+					charge_time: (period - 15) / 60,
+					destroy_time: 15 / 60
+				});
 			}
-			inst_turboblaster.x_new = coord_new[0];
-			inst_turboblaster.y_new = coord_new[1];
+			inst_turboblaster.x_dir = coord_new[0];
+			inst_turboblaster.y_dir = coord_new[1];
 			inst_turboblaster.target = _soul;
 		}
 		
@@ -57,9 +59,11 @@ switch (attack_num) {
 			if (rand_pos == 1) gb_x = _border.x;
 			if (rand_pos == 2) gb_x = _border.x + 12;
 			if (inst_turboblaster == noone) {
-				inst_turboblaster = create_gasterblaster(gb_obj, gb_x, _border.y - border_dist, gb_x, _border.y - _border.up - 10,  0);
-				inst_turboblaster.shoot_time = period;
-				inst_turboblaster.charge_time = period - 20;
+				inst_turboblaster = create_gasterblaster(gb_obj, gb_x, _border.y - border_dist, gb_x, _border.y - _border.up - 10,  0, {
+					target_time: (period - 25) / 60,
+					charge_time: (period - 15) / 60,
+					destroy_time: 15 / 60
+				});
 			}
 			else
 				inst_turboblaster.x_dir = gb_x;

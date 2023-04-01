@@ -11,9 +11,11 @@ _target_angle = -1;
 _speed = 3.7;
 _speed_rotate = 14;
 
-/* particle system */
-_use_particle = false;
-
-alarm[0] = 30;
-
 audio_play_sound_plugging(snd_emergence);
+
+time_source_spin_end = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {
+	image_angle = _target_angle;
+	_rotating = false;
+	audio_play_sound_plugging(snd_projectile);
+});
+time_source_start(time_source_spin_end);

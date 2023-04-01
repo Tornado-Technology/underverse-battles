@@ -15,10 +15,6 @@ left = false;
 up = false;
 down = false;
 
-HSPD = 1.8;
-VSPD = 2.5;
-FALL_SPD = 3;
-
 fly_time = 60;
 max_fly_time = 60;
 

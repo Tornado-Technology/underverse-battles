@@ -1,5 +1,10 @@
-if (fight_get_initiative() == 1)
-	alarm[0] = 30;
-else
-	alarm[0] = 30 + ceil(network_ping / 1000 * room_speed);
+start_time = 0.5;
 damage = 0;
+
+started = false;
+
+time_sourse = time_source_create(time_source_game, start_time, time_source_units_seconds, function() {
+	event_user(0);
+});
+
+time_source_start(time_sourse);

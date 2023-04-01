@@ -6,38 +6,42 @@ right = input_check_held(input.right);
 left = input_check_held(input.left);
 up = input_check_held(input.up) && !input_check_held(input.down);
 
+var HSPD = 1.8;
+var VSPD = 2.5;
+var FALL_SPD = 3;
+
 
 if (place_meeting(x, y + 1, obj_solid)) {
     vspd = 0;
 	fly_time = 0;
 	addit_spd = 0;
 } else if (place_meeting(x, y + 1, obj_platform) && !place_meeting(x, y, obj_platform) && vspd >= 0) {
-	hspd_inert = instance_place(x, y + 1, obj_platform)._speed;
+	hspd_inert = instance_place(x, y + 1, obj_platform).speed;
 	fly_time = 0;
 	addit_spd = 0;
 	vspd = 0;
 } else {
 	hspd_inert = 0;
-    vspd += grav + addit_spd;
+    vspd += (grav + addit_spd) * dtime;
 }
         
 if (vspd > FALL_SPD + addit_spd) {
-	vspd = FALL_SPD + addit_spd;
+	vspd = (FALL_SPD + addit_spd) * dtime;
 }
 
 
 if (right) {
-	hspd = HSPD;
+	hspd = HSPD * dtime;
 }
 
 if (left) {
-	hspd = -HSPD;
+	hspd = -HSPD * dtime;
 }
 
 
 if (up && fly_time < max_fly_time && (place_meeting(x, y + 1, obj_solid) || (place_meeting(x, y + 1, obj_platform) && !place_meeting(x, y, obj_platform) && vspd >= 0))) {
-	vspd = -VSPD;
-	fly_time++;
+	vspd = -VSPD * dtime;
+	fly_time += dtime;
 }
 
 if (!up && vspd < 0) {

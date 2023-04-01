@@ -9,6 +9,8 @@
 // Used to test mobile features for Desktop
 #macro mobile_mode false
 
+#macro dtime delta_time / 1000000 * 60
+
 enum particles_graphics_level {
 	highly,
 	medium,

@@ -1,13 +1,6 @@
 event_inherited();
 
-_id = 0;
-_power = 0;
-
-character_instance = noone;
-
-_time = 0;
 _period = 1;
-attack_num = 0;
 
 bone_obj = obj_bone_cross;
 bone_topref_obj = obj_bone_topref_cross;
@@ -21,7 +14,8 @@ first = [];
 last = [];
 _shift = 0;
 
-_soul = noone;
-_border = noone;
-
+side_random = dir.up;
 num = 0;
+
+event_user(4);
+event_user(5);

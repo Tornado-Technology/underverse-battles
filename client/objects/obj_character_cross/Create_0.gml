@@ -65,6 +65,7 @@ actions = [
 special_action = SpecialAction("Character.Cross.SpecialAttack", spr_special_attack_cross, cross_special_attack, 4);
 
 // Special
+hand_dir_previous = dir.left;
 use_gravity_attack = true;
 
 change_sprite_hand_dir = function(hand_dir) {

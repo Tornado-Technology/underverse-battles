@@ -98,4 +98,3 @@ stop_hand_wave = function() {
 // Soundtrack
 soundtrack_name = "Megalovania"; 
 soundtrack = snd_megalovania;
-#endregion

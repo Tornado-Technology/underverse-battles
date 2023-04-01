@@ -1,6 +1,5 @@
 function create_soul(px, py, type) {
 	if (instance_exists(obj_battle_soul)) return obj_battle_soul;
-	if (instance_exists(obj_battle_soul_otherplayer)) return obj_battle_soul_otherplayer;
 	if (fight_get_initiative() != 0) {
 		var soul_ = obj_battle_soul_standart;
 		switch (type) {
@@ -42,7 +41,9 @@ function create_soul(px, py, type) {
 function change_soul(old_soul, px, py, type) {
 	instance_destroy(old_soul);
 	audio_play_sound_once(snd_swing);
-	return create_soul(px, py, type);
+	var new_soul = create_soul(px, py, type);
+	new_soul.change_effect();
+	return new_soul;
 }
 
 function fight_set_soul_data(playerId, px, py, angle, ability) {
