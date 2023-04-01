@@ -1,7 +1,3 @@
-// GUI
-var width = display_get_gui_width();
-// ###
-
 draw_reset();
 
 // Main

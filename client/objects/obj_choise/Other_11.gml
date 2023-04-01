@@ -8,13 +8,13 @@ if (act == 2) {
 		
 		if (input_check_pressed(input.left)) {
 			if (current_option > 0) {
-				current_option--;
+				input_on_press(-1);
 				audio_play_sound_plugging(snd_click);
 			}
 		}
 		if (input_check_pressed(input.right)) {
 			if (current_option < answers_amount - 1) {
-				current_option++;
+				input_on_press(1);
 				audio_play_sound_plugging(snd_click);
 			}
 		}

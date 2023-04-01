@@ -24,10 +24,14 @@ function UIButtonClass(text, sprite, callback) constructor {
 	text_height = 0;
 	offset_x = 0;
 	offset_y = 0;
+	is_separate = false;
+	sep = 0;
+	w = 9999999;
 	
 	if (text != "") {
 		width = string_real_width(text, font_determination);
-		height = char_get_height("W") / 2;
+		height = char_get_height("W");
+		sep = 4;
 	}
 	
 	if (sprite != spr_empty) {
@@ -110,12 +114,21 @@ function UIButtonClass(text, sprite, callback) constructor {
 			draw_set_font(font_determination);
 			draw_set_color(c_black);
 			draw_set_alpha(alpha);
-			draw_text_transformed(position_x + 1, position_y, text, scale_x, scale_y, 0);
-			draw_text_transformed(position_x - 1, position_y, text, scale_x, scale_y, 0);
-			draw_text_transformed(position_x, position_y + 1, text, scale_x, scale_y, 0);
-			draw_text_transformed(position_x, position_y - 1, text, scale_x, scale_y, 0);
-			draw_set_color(color);
-			draw_text_transformed(position_x, position_y, text, scale_x, scale_y, 0);
+			if (is_separate) {
+				draw_text_ext_transformed(position_x + 1, position_y, text, sep, w, scale_x, scale_y, 0);
+				draw_text_ext_transformed(position_x - 1, position_y, text, sep, w, scale_x, scale_y, 0);
+				draw_text_ext_transformed(position_x, position_y + 1, text, sep, w, scale_x, scale_y, 0);
+				draw_text_ext_transformed(position_x, position_y - 1, text, sep, w, scale_x, scale_y, 0);
+				draw_set_color(color);
+				draw_text_ext_transformed(position_x, position_y, text, sep, w, scale_x, scale_y, 0);
+			} else {
+				draw_text_transformed(position_x + 1, position_y, text, scale_x, scale_y, 0);
+				draw_text_transformed(position_x - 1, position_y, text, scale_x, scale_y, 0);
+				draw_text_transformed(position_x, position_y + 1, text, scale_x, scale_y, 0);
+				draw_text_transformed(position_x, position_y - 1, text, scale_x, scale_y, 0);
+				draw_set_color(color);
+				draw_text_transformed(position_x, position_y, text, scale_x, scale_y, 0);
+			}
 			draw_reset();
 		}
 		
@@ -129,10 +142,10 @@ function UIButtonClass(text, sprite, callback) constructor {
 	static update = function(position_x, position_y) {
 		if (!is_enable_interaction) return;
 		
-		var point_x1 = position_x - width * scale_x / 2;
-		var point_y1 = position_y - height * scale_y / 2;
-		var point_x2 = position_x + width * scale_x / 2;
-		var point_y2 = position_y + height * scale_y / 2;
+		var point_x1 = position_x - (is_separate ? (width > w ? w : width) : width) * scale_x / 2;
+		var point_y1 = position_y - (is_separate ? (height * (width / w) + sep * (width / w)) / 2 : height) * scale_y;
+		var point_x2 = position_x + (is_separate ? (width > w ? w : width) : width) * scale_x / 2;
+		var point_y2 = position_y + (is_separate ? (height * (width / w) + sep * (width / w)) / 2 : height) * scale_y / 2;
 		
 		if (image != spr_empty && is_animation_pressed) {
 			point_x1 = position_x - offset_x * scale_x;
