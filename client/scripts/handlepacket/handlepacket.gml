@@ -5,7 +5,7 @@ global.ping_instance = noone;
 
 /// @param {Struct} data - Data from server for handle
 function handle_packet(data) {
-	var index = string_lower(data.index)	
+	var index = data.index;	
 	
 	switch(index) {
 		case "connection":
