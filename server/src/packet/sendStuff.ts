@@ -241,6 +241,14 @@ export default class SendStuff {
     });
   }
 
+  public sendFightResetAction(): void {
+    this.send('fightResetAction')
+  }
+
+  public sendFightResetPower(): void {
+    this.send('fightResetPower')
+  }
+
   public sendFightBattleEnd(): void {
     this.send('battleEnd');
   }

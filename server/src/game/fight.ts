@@ -138,7 +138,7 @@ export default class Fight {
   }
 
   public resetAction(client: Client): void {
-    this.setClientAction(client, -1);
+    client?.sendFightResetAction();
     this.updateAction();
   }
 
@@ -154,7 +154,7 @@ export default class Fight {
   }
 
   public resetPower(client: Client): void {
-    this.setClientPower(client, 0);
+    client?.sendFightResetPower();
   }
 
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
