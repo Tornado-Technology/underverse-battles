@@ -144,6 +144,14 @@ function handle_packet(data) {
 			// Send obj_fight this info
 			fight_set_player_special_action_persent(data.playerId, data.charge);
 			break;
+		
+		case "fightResetAction":
+			// Send obj_fight this info
+			fight_set_state(fight_state.reset);
+			break;
+		
+		case "fightResetPower":
+			break;
 			
 		case "fightSoul":
 			// Send obj_fight this info
