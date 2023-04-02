@@ -1,3 +1,5 @@
+event_inherited();
+
 _period = 1;
 
 bone_obj = obj_bone_cross;

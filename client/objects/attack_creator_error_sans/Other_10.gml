@@ -1,5 +1,5 @@
 /// @description Error bones
-_time++;
+if (started) exit;
 
 switch (attack_num) {
 	case 0:	// Падающие кости
@@ -21,9 +21,7 @@ switch (attack_num) {
 				_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
 			}
 			_bones[num].image_angle = 180;
-			_bones[num]._delay = 0;
-			_bones[num]._hspd = 0;
-			_bones[num]._falling_sound = true;
+			_bones[num].get_stuck_floor(2, 0.04 + _power * 0.02);
 			++num;
 		}
 		var i = 0;
@@ -209,3 +207,5 @@ switch (attack_num) {
 		if(_time > 280 + 20 * _power) instance_destroy();
 		break;
 }
+
+started = true;

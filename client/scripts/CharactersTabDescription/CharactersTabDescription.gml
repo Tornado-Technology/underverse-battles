@@ -39,36 +39,53 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 		base_init();
 	}
 	
+	static draw_action = function(text_height, name, description, text_stamina = undefined) {
+		var sep = 15;
+		var w = 280;
+		var offset_x = 10;
+		var offset_y = 10;
+		var offset_from_text = 10;
+		
+		var text = description;
+		if (text_stamina != undefined) {
+			text += "\n" + text_stamina + " " + menu_instance.text.stamines;
+		}
+		text_height += offset_y;
+			
+		draw_set_font(font_determination);
+		text_height = draw_text_scroll(name, offset_x, text_height, sep, w);
+				
+		draw_set_font(font_mini);
+		text_height = draw_text_scroll(text, offset_x, text_height, sep, w);
+			
+		text_height += offset_from_text;
+		return text_height;
+	}
+	
+	static draw_text_scroll = function(text, x, y, sep, w) {
+		var height = string_height_ext(text, sep, w);
+		if (y + height > 0) { draw_text_ext(x, y, text, sep, w); }
+		
+		return y + height;
+	}
+	
 	static init_scrolls = function() {
 		scrolls[0] = UIScroll(scroll_width, scroll_height, function(scr, shift) {
 			var character = characters[selected_character];
+			var passive_skill = character.statistics.passive_skill;
 			var actions = character.statistics.actions;
-			var sep = 15;
-			var w = 280;
-			var offset_x = 10;
-			var offset_y = 10;
-			var offset_from_text = 10;
-			var text_height = 0;
+			var action_cost = character.statistics.action_stamina_cost;
+			var special_action = character.statistics.special_action;
+			var text_height = -shift;
 			
-			for (var i = 0; i < array_length(actions); i++) {
-				var text = actions[i].desc + "\n" + string(character.statistics.action_stamina_cost[0]) + " " + menu_instance.text.stamines;
-				var title_height = string_height(actions[i].name);
-				var y1 = offset_y + text_height - shift;
-				var y2 = offset_y + text_height + title_height - shift;
-				var height = string_height_ext(text, sep, w);
-				
-				draw_set_font(font_determination);
-				if (y1 + char_height > 0) { draw_text_outlined(offset_x, y1, c_white, c_black, actions[i].name); }
-				
-				draw_set_font(font_mini);
-				if (y2 + height > 0) { draw_text_ext(offset_x, y2, text, sep, w); }
-				
-				text_height += height;
-				text_height += title_height;
-				text_height += offset_from_text;
+			text_height = draw_action(text_height, passive_skill.name, passive_skill.description);
+			var i = 0;
+			repeat (array_length(actions)) {
+				text_height = draw_action(text_height, actions[i].name, actions[i].description, string(action_cost[i]));
+				i++;
 			}
-			
-			return offset_y + text_height;
+			text_height = draw_action(text_height, special_action.name, special_action.description);
+			return text_height + shift;
 		});
 		
 		scrolls[1] = UIScroll(scroll_width, scroll_height, function(scr, shift) {

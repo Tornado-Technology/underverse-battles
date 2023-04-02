@@ -41,36 +41,6 @@ if (_id == 0 && attack_num == 2) {
 	}
 }
 
-// Платформы и кости
-if (_id == 0 && attack_num == 3) {
-	update_0_3 = function(pow) {
-		var chance = irandom_range(0, 6);
-		if (chance % 2 == 0) {
-			create_bone(_border.x - _border.left, _border.y + _border.down, bone_obj, main_speed, 1.4, 0, 0);
-		}
-		if (chance > 2 && chance != 5) {
-			create_bone(_border.x + _border.right, _border.y + 15, bone_obj, -main_speed, 1.4, 0, 0);
-		}
-		if (chance > 4 || chance == 1) {
-			create_bone(_border.x - _border.left, _border.y - 15, bone_obj, main_speed, 1.4, 0, 0);
-		}
-	}
-	
-	update_0_3_2 = function(pow) {
-		if (pow >= 3) {
-			create_aiming_gasterblaster(obj_gasterblaster_aiming_sans, _soul);
-			time_source_start(time_source_attack_0_3_2);
-		}
-	}
-	
-	update_0_3_3 = function(pow) {
-		var main_speed = 1 + pow * 0.1;
-		create_next_moving_platform(_border.x - _border.left - 40, _border.y - 15, 4, 6, 60, main_speed);
-		create_next_moving_platform(_border.x + _border.right + 40, _border.y + 15, 4, 6, 60, -main_speed);
-		time_source_start(time_source_attack_0_3_3);
-	}
-}
-
 // Синяя душа и гастербластеры
 if (_id == 1 && attack_num == 1) {
 	update_1_1 = function(pow) {

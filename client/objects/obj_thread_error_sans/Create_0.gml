@@ -1,4 +1,7 @@
 event_inherited();
+
+can_move = true;
+
 depth = fight_depth.bullet_outside_hight;
 image_xskew = 0;
 image_yskew = 0;

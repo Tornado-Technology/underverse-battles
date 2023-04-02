@@ -1,3 +1,5 @@
+if (!can_move) exit;
+
 speed = speed_const * dtime;
 
 if (scale_time > 0) {

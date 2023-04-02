@@ -1,6 +1,17 @@
 /// @description Methods
 event_inherited();
 
+// Обстрел костями сверху
+if (_id == 0 && attack_num == 2 || _id == 1 && attack_num == 0) {
+	update_0_2 = function(pow) {
+		var rand_x = choose(_border.x - _border.left - 10, _border.x + _border.right + 10);
+		var bone_dir = point_direction(rand_x, _border.y - _border.up - 10, _soul.x, _soul.y);
+		var bone_speed = 2 + 0.2 * pow;
+		create_bone(rand_x, _border.y - _border.up - 5, bone_topref_obj, bone_speed, 1, bone_dir, bone_dir - 90);
+		audio_play_sound_plugging(snd_projectile);
+	}
+}
+
 // Нож режет арену и кости вылетают справа и слева
 if (_id == 1 && attack_num == 0) {
 	update_1_0 = function(pow) {
@@ -25,8 +36,8 @@ if (_id == 1 && attack_num == 0) {
 // Нож летает справа-слева
 if (_id == 1 && attack_num == 1) {
 	update_1_1 = function(pow) {
-		spin();
-		move(3 + pow * 0.2);
+		knife.spin(choose(-1, 1) * (3 + pow * 0.2));
+		knife.move(3 + pow * 0.2);
 		audio_play_sound_once(snd_projectile);
 	}
 }
@@ -34,7 +45,8 @@ if (_id == 1 && attack_num == 1) {
 // Перепрыгивание через кости с большим ножом
 if (_id == 1 && attack_num == 2) {
 	update_1_2 = function(pow) {
-		move(3 + pow * 0.2);
+		knife.move(3 + pow * 0.2);
+		knife.move_up();
 		audio_play_sound_once(snd_projectile);
 	}
 	
@@ -66,7 +78,7 @@ if (_id == 2 && attack_num == 0) {
 
 // Синяя душа и гастербластеры
 if (_id == 2 && attack_num == 1) {
-update_2_1 = function(pow) {
+	update_2_1 = function(pow) {
 		repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
 	}
 }
@@ -98,7 +110,6 @@ if (_id == 2 && attack_num == 2) {
 		create_next_moving_platform(_border.x - _border.left - 40, sector_y, 4, 6, 60, main_speed);
 		create_next_moving_platform(_border.x + _border.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed);
 		create_next_moving_platform(_border.x - _border.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
-		time_source_start(time_source_update_1_2_2);
 	}
 }
 

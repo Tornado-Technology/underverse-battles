@@ -7,6 +7,7 @@ soul_invulnerability = get_char_invulnerability(obj_character_cross) ? 20 : 1;
 
 is_spining = false;
 is_moving = false;
+is_moving_up = false;
 
 step = 0;
 
@@ -22,8 +23,9 @@ point_stop_y = 0;
 audio_play_sound_once(snd_emergence);
 
 // Methods
-spin = function() {
+spin = function(spd) {
 	is_spining = true;
+	speed_angle = spd;
 }
 
 spin_stop = function() {
@@ -37,4 +39,8 @@ move = function(spd) {
 
 move_stop = function() {
 	is_moving = false;
+}
+
+move_up = function() {
+	is_moving_up = true;
 }

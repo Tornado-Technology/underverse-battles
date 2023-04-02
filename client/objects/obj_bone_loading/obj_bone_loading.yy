@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_bone_loading",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_bone_rotating_swap_sans",
+    "path": "sprites/spr_bone_rotating_swap_sans/spr_bone_rotating_swap_sans.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

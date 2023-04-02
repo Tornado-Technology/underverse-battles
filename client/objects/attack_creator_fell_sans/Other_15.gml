@@ -74,7 +74,7 @@ if (_id == 1 && attack_num == 1) {
 	time_source_update_1_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 		update_1_1(pow);
 	}, [_power], amount - 1);
-	time_source_update_destroy_1_1 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+	time_source_update_destroy_1_1 = time_source_create(time_source_game, period * amount / 60 + 0.5, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }
@@ -86,7 +86,7 @@ if (_id == 1 && attack_num == 2) {
 	time_source_update_1_2 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 		update_1_2(pow);
 	}, [_power], amount - 1);
-	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 0.5, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 	period += 30;

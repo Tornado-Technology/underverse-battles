@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_battle_bullet",
-    "path": "objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name": "obj_bone_error_sans",
+    "path": "objects/obj_bone_error_sans/obj_bone_error_sans.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,8 +29,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],

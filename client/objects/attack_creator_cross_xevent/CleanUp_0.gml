@@ -23,9 +23,8 @@ if (_id == 0 && attack_num == 3) {
 
 if (_id == 1 && attack_num == 0) {
 	time_source_destroy(time_source_update_1_0);
-	time_source_destroy(time_source_update_destroy_1_0);
 	time_source_destroy(time_source_update_1_0_2);
-	time_source_destroy(time_source_update_destroy_1_0_2);
+	time_source_destroy(time_source_update_destroy_1_0);
 }
 
 if (_id == 1 && attack_num == 1) {
@@ -39,14 +38,25 @@ if (_id == 1 && attack_num == 2) {
 	time_source_destroy(time_source_update_destroy_1_2);
 }
 
-if (_id == 2) {
+if (_id == 2 && attack_num == 0) {
 	time_source_destroy(time_source_update_2_0);
+	time_source_destroy(time_source_update_destroy_2_0);
+	time_source_destroy(time_source_update_2_0_2);
+	time_source_destroy(time_source_update_destroy_2_0_2);
+}
+
+if (_id == 2 && attack_num == 1) {
 	time_source_destroy(time_source_update_2_1);
+	time_source_destroy(time_source_update_destroy_2_1);
+}
+
+if (_id == 2 && attack_num == 2) {
 	time_source_destroy(time_source_update_2_2);
+	time_source_destroy(time_source_update_2_2_2);
 	time_source_destroy(time_source_update_destroy_2_2);
 }
 
 if (_id == 3) {
-	time_source_destroy(time_source_update_3_0);
-	time_source_destroy(time_source_update_destroy_3_0);
+	//time_source_destroy(time_source_update_3_0);
+	//time_source_destroy(time_source_update_destroy_3_0);
 }

@@ -20,8 +20,8 @@ switch (attack_num) {
 			time_source_start(time_source_update_destroy_2_0_2);
 		}
 		break;
-	case 1: // Синяя душа и гастербластеры
 		
+	case 1: // Синяя душа и гастербластеры	
 		_border = battle_border_create(battle_border.up - 40, battle_border.down - 40, battle_border.left, battle_border.right);
 		if (battle_border_start_animation_end()) exit;
 		
@@ -31,8 +31,8 @@ switch (attack_num) {
 		time_source_start(time_source_update_2_1);
 		time_source_start(time_source_update_destroy_2_1);
 		break;
+		
 	case 2: // Платформы и гастербластеры
-	
 		_border = battle_border_create(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
 		if (battle_border_start_animation_end()) exit;
 		

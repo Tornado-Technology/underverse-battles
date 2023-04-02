@@ -173,7 +173,6 @@ if (_id == 1 && attack_num == 2) {
 		create_next_moving_platform(_border.x - _border.left - 40, sector_y, 4, 6, 60, main_speed);
 		create_next_moving_platform(_border.x + _border.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed);
 		create_next_moving_platform(_border.x - _border.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
-		time_source_start(time_source_update_1_2_2);
 	}
 }
 
