@@ -38,15 +38,21 @@ if (can_select && can_select_power && is_player_turn) {
 // перепрыгивания черех неправельные варианты которые нельзя выбрать
 
 // Action bar
-if (abs(input_raw_v)) {
-	var action_min = 0;
-	var action_max = 2;
+if (can_select) {
+	if (abs(input_raw_v)) {
+		var action_min = 0;
+		var action_max = 2;
 	
-	selected_action += input_raw_v;
-	selected_action = selected_action > action_max ? 0 : selected_action;
-	selected_action = selected_action < action_min ? action_max : selected_action;
+		selected_action += input_raw_v;
+		selected_action = selected_action > action_max ? 0 : selected_action;
+		selected_action = selected_action < action_min ? action_max : selected_action;
 
-	audio_play_sound(sound_click, 0, false);
+		audio_play_sound(sound_click, 0, false);
+	}
+}
+
+if (input_select && can_select) {
+	confirm_action_and_power();
 }
 
 // Skiping (no comments)

@@ -1,7 +1,7 @@
 event_inherited();
 
 // Set mode
-fight_network_mode = false;
+fight_network_mode = true;
 
 // Required
 required_components = {
