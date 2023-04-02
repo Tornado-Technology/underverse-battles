@@ -45,6 +45,7 @@ export default class Fight {
 
   public initializeClients(): void {
     this.clients.forEach((client, index) => {
+      client.fight.instance = this;
       client.fight.init(this.id, index);
       client.sendFightJoin(App.status.success, this.getOtherClient(client).fight.info);
     });
@@ -121,7 +122,7 @@ export default class Fight {
   }
 
   public setAction(client: Client, action: number): void {
-    if (this._state !== state.choose) {
+    if (this.state !== state.choose) {
       Logger.warn(`The client tries to send his action in other state, client: ${client.uuid}.`);
       return;
     }
@@ -131,6 +132,7 @@ export default class Fight {
       return;
     }
 
+    Logger.debug(`Fight client: ${client?.account.username}, set action: ${action}`);
     this.setClientAction(client, action);
     this.updateAction();
   }
