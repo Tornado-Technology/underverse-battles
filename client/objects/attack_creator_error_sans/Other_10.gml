@@ -12,18 +12,10 @@ switch (attack_num) {
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 		// Attack
-		if(_time % (18 - 2 * _power) == 1 and _time < 250 + 20 * _power) {
-			var rand_place = irandom_range(0, 2);
-			if (rand_place == 0)
-				_bones[num] = instance_create_depth(_soul.x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
-			else {
-				var rand_x = irandom_range(obj_battle_border.x - obj_battle_border.left, obj_battle_border.x + obj_battle_border.right);
-				_bones[num] = instance_create_depth(rand_x, obj_battle_border.y - obj_battle_border.up - 20, fight_depth.bullet_outside, bone_obj);
-			}
-			_bones[num].image_angle = 180;
-			_bones[num].get_stuck_floor(2, 0.04 + _power * 0.02);
-			++num;
-		}
+		update_0_0();
+		time_source_start(time_source_update_0_0);
+		time_source_start(time_source_update_destroy_0_0);
+		
 		var i = 0;
 		repeat (num) {
 			if (_bones[i].image_yscale == 1)
@@ -44,8 +36,6 @@ switch (attack_num) {
 			}
 			++i;
 		}
-
-		if(_time > 300 + 20 * _power) instance_destroy();
 		break;
 		
 	case 1: // Тыкающие кости

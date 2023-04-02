@@ -12,9 +12,9 @@ if (state == fight_state.dodge) {
 	statistics_set_selection_attacks(fight_get_player_action(0), fight_get_player_action(1));
 	statistics_set_damage(0);
 	timer_stop();
-	state = fight_state.reset;
 }
 
 if (state == fight_state.reset) {
+	reset_players_action();
 	state = fight_state.choosing;
 }
