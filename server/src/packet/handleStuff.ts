@@ -255,7 +255,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightSkip':
-      // TODO: ADD SOMETHING { data.playerId }
+      client.fight.instance?.setAction(client, 3);
       break;
 
     case 'fightHp':
