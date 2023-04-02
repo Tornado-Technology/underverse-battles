@@ -134,9 +134,114 @@ export default class SendStuff {
     });
   }
 
+  public sendFightAction(action: number, playerId: number): void {
+    this.send('fightAction', {
+      action,
+      playerId,
+    });
+  }
+
+  public sendFightPower(power: number, playerId: number): void {
+    this.send('fightPower', {
+      power,
+      playerId,
+    });
+  }
+
+  public sendFightCharacter(characterId = this.fight.characterId, skinId = this.fight.characterSkinId) {
+    this.send('fightCharacter', {
+      characterId,
+      skinId
+    });
+  }
+
+  public sendFightSpecialAction(playerId: number): void {
+    this.send('fightSpecialAction', {
+      playerId,
+    });
+  }
+
+  public sendFightSpecialActionCharge(charge: number, playerId: number): void {
+    this.send('fightSpecialActionCharge', {
+      charge,
+      playerId,
+    });
+  }
+
   public sendFightInitiative(initiative: target): void {
     this.send('fightInitiative', {
       initiative
     });
+  }
+
+
+  public sendFightStartBattle(seed: number): void {
+    this.send('battleStart', {
+      seed,
+    });
+  }
+
+  public sendFightSoul(x: number, y: number, angle: number, ability: number, playerId: number): void {
+    this.send('fightSoul', {
+      x,
+      y,
+      angle,
+      ability,
+      playerId,
+    });
+  }
+
+  public sendFightHp(hp: number, playerId: number): void {
+    this.send('fightHp', {
+      hp,
+      playerId,
+    });
+  }
+
+  public sendFightMana(mana: number, playerId: number): void {
+    this.send('fightMana', {
+      mana,
+      playerId,
+    });
+  }
+
+  public sendFightStamina(stamina: number, playerId: number): void {
+    this.send('fightStamina', {
+      stamina,
+      playerId,
+    });
+  }
+
+  public sendFightDodge(): void {
+    this.send('fightDodge');
+  }
+
+  public sendFightStun(playerId: number): void {
+    this.send('fightStun', {
+      playerId,
+    });
+  }
+
+  public sendFightCollider(playerId: number): void {
+    this.send('fightColliderSoul', {
+      playerId,
+    });
+  }
+
+  public sendFightDisconnect(playerId: number): void {
+    this.send('fightDisconnect', {
+      playerId,
+    });
+  }
+
+  public sendFightFinished(rating: number, winner: boolean): void {
+    this.send('fightFinished', {
+      rating,
+      winner,
+    });
+  }
+
+  public sendFightBattleEnd(): void {
+    this.send('battleEnd');
   }
 }

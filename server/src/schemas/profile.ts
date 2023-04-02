@@ -21,6 +21,7 @@ export interface IProfile extends Document {
     mana: number,
     stamina: number,
     characterId: number,
+    specialActionCharge: number,
   }
 }
 
@@ -38,6 +39,7 @@ const schema = new Schema({
     mana: { type: Number, default: -1 },
     stamina: { type: Number, default: -1 },
     characterId: { type: Number, default: -1 },
+    specialActionCharge: { type: Number, default: -1 },
   },
 }, {
   collection: 'profiles',

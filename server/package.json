@@ -10,8 +10,8 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "development": "node . --env=development",
-    "production": "node . --env=production",
+    "development": "npx tsc && node . --env=development",
+    "production": "npx tsc && node . --env=production",
     "test": "tsc && mocha build/test/**/*.test.js"
   },
   "dependencies": {

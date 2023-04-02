@@ -1,5 +1,6 @@
 import { send as mailSend } from '../util/mail.js';
 import Client, { state } from '../concepts/client.js';
+import {state as fightState, target} from '../game/fight.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
 import { infoValidate, login, register } from '../schemas/account.js';
@@ -53,6 +54,7 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'eval':
       if (client?.account.type !== 'developer') {
         Logger.warn(`Client ${client.account.username ?? client.uuid} try to use eval command!`);
+        break;
       }
 
       try {
@@ -78,6 +80,7 @@ export const handlePacket = async (client: Client, data: any) => {
         client.logout();
         break;
       }
+
       client.sendLogout(App.status.accountNotFound);
       break;
 
@@ -108,19 +111,20 @@ export const handlePacket = async (client: Client, data: any) => {
       }
 
       await mailSend(data.email, 'Registration confirmation', '', `
-          <div color=black>  
-            <p>
-              Hi <b>${data.username}</b>,<br>
-              Heeey! Thanks for registering an account for <b>Underverse Battles</b><br>
-              But you still have to confirm it by entering the code.<br>
-              Your personal code: <b>${client.verificationCode}</b><br>
-              Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
-            </p>
-          </div>
-        `);
+        <div color=black>  
+          <p>
+            Hi <b>${data.username}</b>,<br>
+            Heeey! Thanks for registering an account for <b>Underverse Battles</b><br>
+            But you still have to confirm it by entering the code.<br>
+            Your personal code: <b>${client.verificationCode}</b><br>
+            Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
+          </p>
+        </div>
+      `);
       break;
 
     case 'changeEmail':
+      // TODO: Make changing email
       break;
 
     case 'changePassword':
@@ -225,12 +229,12 @@ export const handlePacket = async (client: Client, data: any) => {
       }
       break;
 
-    case 'fightJoined':
-      client.fight.instance.syncClient(client);
-      break;
-
     case 'fightJoinReject':
       client.setState(state.inMenu);
+      break;
+
+    case 'fightJoined':
+      client.fight.instance.sync();
       break;
 
     case 'fightAction':
@@ -241,8 +245,32 @@ export const handlePacket = async (client: Client, data: any) => {
       client.fight.instance?.setPower(client, data.power);
       break;
 
+    case 'fightSpecialAction':
+      // TODO: ADD SOMETHING { data.playerId }
+      break;
+
+    case 'fightHealAction':
+      client.fight.instance?.addHp(client, data.hp);
+      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd();
+      break;
+
+    case 'fightSkip':
+      // TODO: ADD SOMETHING { data.playerId }
+      break;
+
+    case 'fightHp':
+      client.fight.instance?.setHp(client, data.hp);
+      break;
+
     case 'fightSoul':
       client.fight.instance?.setSoulData(client, data.x, data.y, data.angle, data.ability);
+      break;
+
+    case 'fightColliderSoul':
+      if (client.fight.instance.state === fightState.battle) {
+        client.fight.instance?.addMana(client, 2);
+        client.fight.instance?.getOtherClient(client)?.sendFightCollider(target.opponent);
+      }
       break;
 
     case 'fightKill':
@@ -251,40 +279,17 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightDamage':
       client.fight.instance?.removeHp(client, data.damage);
-      // fight.addMana(fight.getOtherClient(client), data.damage);
-      break;
-
-    case 'fightHp':
-      client.fight.instance?.setHp(client, data.hp ?? 0);
+      client.fight.instance?.addMana(client.fight.instance?.getOtherClient(client), data.damage);
       break;
 
     case 'fightStun':
-      fight = MatchMaker.findClientFight(client);
-      if (fight === undefined) break;
-
-      if (!fight.isMyClient(client) || fight.state !== Fight.states.battle) {
-        break;
+      if (client.fight.instance.state === fightState.battle) {
+        client.fight.instance.getOtherClient(client)?.sendFightStun(target.opponent);
       }
-
-      fight.getOtherClient(client)?.sendFightStun(Fight.target.opponent);
       break;
 
-    case 'colliderSoul':
-      client.fight.instance?.addMana(client, 2);
-
-      //if (!fight.isMyClient(client) || fight.state !== Fight.states.battle) {
-      //  break;
-      //}
-      //fight.getOtherClient(client)?.sendFightCollider(Fight.target.opponent);
-      break;
-
-    case 'healAction':
-      client.fight.instance?.addHp(client, data.hp ?? 0);
-      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd();
-      break;
-
-    case 'battle_finish':
-      if (client.fight.instance?.unactivePlayer === client) {
+    case 'battleFinish':
+      if (client.fight.instance?.inactiveClient === client) {
         client.fight.instance?.battleFinish();
       }
       break;
