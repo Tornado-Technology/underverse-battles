@@ -138,6 +138,7 @@ export default class Fight {
   }
 
   public resetAction(client: Client): void {
+    client?.fight.setAction(-1);
     client?.sendFightResetAction();
     this.updateAction();
   }
@@ -154,6 +155,7 @@ export default class Fight {
   }
 
   public resetPower(client: Client): void {
+    client?.fight.setPower(0);
     client?.sendFightResetPower();
   }
 
