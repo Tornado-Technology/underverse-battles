@@ -8,12 +8,12 @@ time_max = 10;
 
 #region Functions
 timeout = function () {
-	fight_set_player_skip(0);
-	
 	if (fight_network_mode) {
 		send_fight_skip();
-		timer_switch(false);
+		return;
 	}
+	
+	fight_set_player_skip(0);
 }
 
 function timer_get_id() {
