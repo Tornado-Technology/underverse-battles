@@ -118,6 +118,7 @@ function handle_packet(data) {
 		case "fightInitiative":
 			// Send obj_fight this info
 			fight_set_initiative(data.initiative);
+			timer_switch(true);
 			break;
 
 		case "fightAction":

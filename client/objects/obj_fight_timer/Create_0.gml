@@ -11,8 +11,8 @@ timeout = function () {
 	fight_set_player_skip(0);
 	
 	if (fight_network_mode) {
-		send_fight_action(3);
-		timer_stop();
+		send_fight_skip();
+		timer_switch(false);
 	}
 }
 

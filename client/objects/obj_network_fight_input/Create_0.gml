@@ -8,3 +8,8 @@ send_attack = function() {
 set_action_power = function() {
 	send_attack();
 }
+
+special_action = function() {
+	send_fight_special_action();
+	audio_play_sound(sound_select, 0, false);
+}
