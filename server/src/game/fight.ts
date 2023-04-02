@@ -131,6 +131,7 @@ export default class Fight {
       return;
     }
 
+    Logger.debug(`Fight client: ${client?.account.username}, set action: ${action}`);
     this.setClientAction(client, action);
     this.updateAction();
   }
