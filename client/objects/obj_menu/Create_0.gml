@@ -413,6 +413,9 @@ create_page([
 // Account change nickname
 create_page([
     account_settings_inputbox_change_nickname,
+	Execute("TODO: key применить", [], function() {
+			audio_play_sound_once(snd_selection);
+	}),
     Transfer("StandardButtons.Back", menu_page.account_settings, function() {
         instance_destroy(obj_menu_account_changes_nickname)
     }),
@@ -421,6 +424,9 @@ create_page([
 // Account change password
 create_page([
     account_settings_inputbox_change_password,
+	Execute("TODO: key применить", [], function() {
+			audio_play_sound_once(snd_selection);
+	}),
     Transfer("StandardButtons.Back", menu_page.account_settings, function() {
         instance_destroy(obj_menu_account_changes_password)
     }),
@@ -429,6 +435,9 @@ create_page([
 // Account change email
 create_page([
     account_settings_inputbox_change_nickname,
+	Execute("TODO: key применить", [], function() {
+			audio_play_sound_once(snd_selection);
+	}),
     Transfer("StandardButtons.Back", menu_page.account_settings, function() {
         instance_destroy(obj_menu_account_changes_email)
     }),
