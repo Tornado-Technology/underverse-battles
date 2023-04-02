@@ -1,3 +1,5 @@
+event_inherited();
+
 // Set mode
 fight_network_mode = false;
 
