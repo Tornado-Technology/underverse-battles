@@ -2,12 +2,16 @@
 // Actualy player don't chose yet
 if (fight_get_player_action(0) != -1) exit;
 
+// Inciative
+var initiative      = fight_get_initiative();
+var initiative_next = fight_get_next_initiative();
+var is_player_turn  = initiative == 0;
+
 // All input in keyboard
 var input_raw_v = input_check_pressed(input.down) - input_check_pressed(input.up);
 var input_raw_h = input_check_pressed(input.right) - input_check_pressed(input.left);
 var input_select = input_check_pressed(input.action);
 var input_skip = input_check_pressed(input.skip);
-var is_player_turn = initiative == 0;
 
 input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
 
