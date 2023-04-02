@@ -214,7 +214,7 @@ export const handlePacket = async (client: Client, data: any) => {
         client.fight.setCharacter(data.characterId, data.skinId);
 
         if (clients.length < 1) {
-          client.setState(state.inMenu);
+          client.setState(state.waitFight);
           client.sendFightJoin(App.status.success, undefined);
           Logger.info('Clients not found, wait...');
           break;
