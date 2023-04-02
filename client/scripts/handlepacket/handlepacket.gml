@@ -65,11 +65,8 @@ function handle_packet(data) {
 			logger.error("Registration failed!");
 			break;
 			
-		case "account":
+		case "schemes":
 			network_account = data.account;
-			break;
-			
-		case "profile":
 			network_profile = data.profile;
 			break;
 			
@@ -94,12 +91,11 @@ function handle_packet(data) {
 			}
 			break;
 
-		case "fight_join":
+		case "fightJoin":
 			var status = data.status;
-			var msg = data.msg; 
 
-			if (status == "success") {
-				logger.info("Successful join to fight, message: {0}.", msg);
+			if (status == 100) {
+				logger.info("Successful join to fight");
 				var opponent_data = json_parse(data.data);
 				var inst_opponent = instance_create(obj_opponent);
 				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.skinId, opponent_data.rating, opponent_data.type, opponent_data.badgeId);
@@ -110,7 +106,7 @@ function handle_packet(data) {
 			break;
 		
 		// Set object character
-		case "fight_character":
+		case "fightCharacter":
 			var character = data.characterId;
 			var skin = data.skinId;
 			logger.debug("Get new characterInfo: {0}.", character);
@@ -119,103 +115,110 @@ function handle_packet(data) {
 			memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, character_object);
 			break;
 		
-		case "fight_timer":	
+		case "fightInitiative":
 			// Send obj_fight this info
-			timer_set_time(data.time);
-			break;
-		
-		case "fight_initiative":
-			// Send obj_fight this info
-			fight_set_initiative(data.init);
+			fight_set_initiative(data.initiative);
 			break;
 
-		case "fight_action":
+		case "fightAction":
 			// Send obj_fight this info
-			fight_set_enemy_action(data.enemy, data.action);
+			fight_set_player_action(data.playerId, data.action);
 			break;
 		
-		case "fight_power":
+		case "fightPower":
 			// Send obj_fight this info
-			fight_set_enemy_power(data.enemy, data.power);
+			fight_set_enemy_power(data.playerId, data.power);
+			break;
+		
+		case "fightSkip":
+			// Send obj_fight this info
+			fight_set_player_skip(data.playerId);
 			break;
 			
-		case "fight_soul":
+		case "fightSpecialAction":
 			// Send obj_fight this info
-			fight_set_soul_data(data.enemy, data.x, data.y, data.ang, data.abil);
+			fight_set_player_special_action(data.playerId);
 			break;
 			
-		case "battle_start":
-			logger.info("battle begins");
+		case "fightSpecialActionCharge":
+			// Send obj_fight this info
+			fight_set_player_special_action_persent(data.playerId, data.charge);
+			break;
+			
+		case "fightSoul":
+			// Send obj_fight this info
+			fight_set_soul_data(data.playerId, data.x, data.y, data.angle, data.ability);
+			break;
+			
+		case "battleStart":
+			logger.info("Battle begins");
 			
 			// Send obj_fight this info
 			random_set_seed(data.seed);
 			fight_set_state(fight_state.battle);
 			break;
 			
-		case "fight_dodge":
+		case "fightDodge":
 			logger.info("dodging");
 			
 			// Send obj_fight this info
 			fight_set_state(fight_state.dodge);
 			break;
 		
-		case "fight_hp":
-			var data_enemy = data.enemy;
+		case "fightHp":
+			var data_enemy = data.playerId;
 			if (data_enemy != 0) {
-				var damage = fight_get_enemy_hp(data_enemy) - data.value;
+				var damage = fight_get_enemy_hp(data_enemy) - data.hp;
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)
 					fight_network_heal(data_enemy, -damage);
 			}
 			
-			fight_set_enemy_hp(data_enemy, data.value);
+			fight_set_enemy_hp(data_enemy, data.hp);
 			break;
 			
-		case "battle_end":
-			instance_destroy(attack_creator_xchara);
-			
-		case "fight_mana":
-			fight_set_enemy_mana(data.enemy, data.value);
+		case "battleEnd":
+			instance_destroy(attack_creator);
 			break;
 			
-		case "fight_stamina":
-			fight_set_enemy_stamina(data.enemy, data.value);
+		case "fightMana":
+			fight_set_enemy_mana(data.playerId, data.mana);
 			break;
 			
-		case "fight_stun":
-			fight_network_stun(data.enemy);
+		case "fightStamina":
+			fight_set_enemy_stamina(data.playerId, data.stamina);
 			break;
 			
-		case "collider_soul":
-			fight_network_collider(data.enemy);
+		case "fightStun":
+			fight_network_stun(data.playerId);
 			break;
 			
-		case "fight_disconnect":
+		case "fightColliderSoul":
+			fight_network_collider(data.playerId);
+			break;
+			
+		case "fightDisconnect":
 			instance_destroy(obj_network_fight_ui_disconnect);
-			fight_network_disconnect(data.enemy);
-			fight_timer_set_state(TIMER_STATE.STOP);
+			fight_network_disconnect(data.playerId);
+			timer_stop();
 			break;
 			
-		case "fight_finished":
+		case "fightFinished":
 			instance_destroy(obj_network_fight_ui_disconnect);
-			fight_network_finished(data.isWin, data.rating);
-			fight_timer_set_state(TIMER_STATE.STOP);
+			fight_network_finished(data.winner, data.rating);
+			timer_stop();
 			break;
 			
-		case "fight_client_remove":
+		case "fightClientRemove":
 			instance_create_one(obj_network_fight_ui_disconnect);
-			fight_timer_set_state(TIMER_STATE.DISABLED);
+			timer_switch(false);
 			break;
 			
-		case "fight_client_add":
+		case "fightClientAdd":
 			instance_destroy(obj_network_fight_ui_disconnect);
-			fight_timer_set_state(TIMER_STATE.START);
-			break;
-			
-		case "clients_with_state_count":
-			var count = data[$ "count"];
-			var state = data[$ "state"];
+			timer_switch(true);
+			timer_start();
 			break;
 		
 		// Global client freaking out from an invalid command

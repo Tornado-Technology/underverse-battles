@@ -30,7 +30,7 @@ switch (attack_num) {
 			}
 		}
 
-		if (_time > 320 + 20 * _power) instance_destroy();
+		if (_time > 320 + 20 * _power) { instance_destroy(); }
 		break;
 		
 	case 1:	// Парные шипы

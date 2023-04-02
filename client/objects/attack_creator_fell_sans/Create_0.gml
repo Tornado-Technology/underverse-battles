@@ -1,11 +1,6 @@
-_id = 0;
-_power = 0;
-_time = 0;
-_period = 1;
-attack_num = 0;
-stage = 0;
+event_inherited();
 
-character_instance = noone;
+_period = 1;
 
 bone_obj = obj_bone_fell_sans;
 gb_obj = obj_gasterblaster_fell_sans;
@@ -19,10 +14,10 @@ last = [];
 _shift = 0;
 wave_time = random_range(0, 2*pi);
 
-_soul = noone;
-_border = noone;
-
 new_warning = false;
 
 _angle = 0;
 angle_step = 0;
+
+event_user(4);
+event_user(5);

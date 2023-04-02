@@ -10,7 +10,7 @@ if (!moveable)
 	exit;
 	
 
-var SPD = 1.8;
+var SPD = 1.8 * dtime;
 var SPD = (ability ? SPD / 2 : SPD);
 
 /* control */
@@ -48,8 +48,8 @@ if (place_meeting(x, y, obj_battle_pusher)) {
 	pusher_inst = instance_place(x, y, obj_battle_pusher);
 	var blast_angle = pusher_inst._angle;
 	
-	var cos_blast_angle = cos(degtorad(blast_angle));
-	var sin_blast_angle = sin(degtorad(blast_angle));
+	var cos_blast_angle = dcos(blast_angle);
+	var sin_blast_angle = dsin(blast_angle);
 
 	outside_force_x = 8 * cos_blast_angle;
 	outside_force_y = -8 * sin_blast_angle;

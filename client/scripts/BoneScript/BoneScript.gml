@@ -1,7 +1,7 @@
 function move_bone(_inst, _spd, _size, _dir, _ang){
 	if (!instance_exists(_inst))
 		return undefined;
-	_inst.speed = _spd;
+	_inst.speed_const = _spd;
 	_inst.image_yscale = _size;
 	_inst.direction = _dir;
 	_inst.image_angle = _ang;

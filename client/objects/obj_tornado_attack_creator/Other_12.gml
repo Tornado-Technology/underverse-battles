@@ -1,8 +1,4 @@
 // Create border
-if (live_call()) {
-	return live_result;
-}
-
 if (border_instance == noone) {
 	border_instance = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 }

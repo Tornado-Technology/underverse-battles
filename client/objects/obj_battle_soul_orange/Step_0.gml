@@ -124,8 +124,8 @@ if (ability && delay_ == 0) {
 
 /* dash end */
 if (delay_ > 10) {
-	var particle = instance_create_depth(x, y, depth, obj_soul_particle);
-	particle.sprite_index = sprite_index;
+	part_type_orientation(part_type_tail, image_angle, image_angle, 0, 0, false);
+	part_particles_create(global.part_system_bullet, x, y, part_type_tail, 1);
 	delay_--;
 }
 else if (delay_ == 10) {

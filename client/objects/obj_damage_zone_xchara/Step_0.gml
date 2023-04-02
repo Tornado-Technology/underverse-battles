@@ -1,16 +1,8 @@
-time++;
-
-if (time <= 20) {
-	image_xscale += 0.05;
-	image_yscale += 0.05;
+if (time_source_get_state(time_source_zone) == time_source_state_active) {
+	image_xscale += 0.05 * dtime;
+	image_yscale += 0.05 * dtime;
 }
-else if (time > 21) {
-	image_xscale -= 0.05;
-	image_yscale -= 0.05;
-	if (image_xscale <= 0 || image_yscale <= 0)
-		instance_destroy();
-}
-
-if (time == 21) {
-	instance_destroy(warning);
+if (time_source_get_state(time_source_end) == time_source_state_active) {
+	image_xscale -= 0.05 * dtime;
+	image_yscale -= 0.05 * dtime;
 }

@@ -1,9 +1,7 @@
-_id = 0;
-_power = 0;
 _time = 0;
-attack_num = 0;
+stage = 0;
 
-character_instance = noone;
+started = false;
 
 _inst = noone;
 _soul = noone;

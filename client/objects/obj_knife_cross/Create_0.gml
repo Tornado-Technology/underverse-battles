@@ -12,8 +12,29 @@ step = 0;
 
 direction = 0;
 image_alpha = 0;
+speed_max = 0;
 speed_angle = 0;
+speed_const = 0.2;
 
 point_stop_x = 0;
+point_stop_y = 0;
 
 audio_play_sound_once(snd_emergence);
+
+// Methods
+spin = function() {
+	is_spining = true;
+}
+
+spin_stop = function() {
+	is_spining = false;
+}
+
+move = function(spd) {
+	is_moving = true;
+	speed_max = spd;
+}
+
+move_stop = function() {
+	is_moving = false;
+}

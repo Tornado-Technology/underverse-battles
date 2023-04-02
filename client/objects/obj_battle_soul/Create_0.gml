@@ -10,12 +10,15 @@ ability = false;
 is_otherplayer_soul = false;
 skip_frame = 0;
 
+
+blue_attack = false;
+
 // Invincibility
 invincibility = 0;
 invincibility_update = function() {
 	image_blend = c_white;
 	if (invincibility > 0) {
-		invincibility = approach(invincibility, 0, 1);
+		invincibility = approach(invincibility, 0, round(dtime));
 		
 		var color_index = wave(1, -1, 1, 0); 
 		if (color_index > 0) {
@@ -47,6 +50,17 @@ tremble_update = function() {
 			tremble_force_y = 0;
 		}
 	}
+}
+
+// Particles
+change_effect = function () {
+	part_type_change = part_type_create();
+	part_type_sprite(part_type_change, sprite_index, false, false, false);
+	part_type_alpha2(part_type_change, 1, 0);
+	part_type_life(part_type_change, 20, 20);
+	part_type_orientation(part_type_change, image_angle, image_angle, 0, 0, false);
+	part_type_size(part_type_change, 1, 1, 0.1, 0);
+	part_particles_create(global.part_system_bullet, x, y, part_type_change, 1);
 }
 
 // Create collider soul

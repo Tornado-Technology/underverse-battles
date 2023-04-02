@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Action",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Action.yy",
+    "name": "Special Action",
+    "path": "folders/Scripts/Local/Fight/Fight/Player/Special Action.yy",
   },
 }

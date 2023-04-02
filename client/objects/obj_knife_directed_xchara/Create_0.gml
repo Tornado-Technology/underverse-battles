@@ -10,9 +10,6 @@ _target_angle = 0;
 _speed = 3.7;
 _speed_rotate = 14;
 
-/* particle system */
-_use_particle = false;
-
 /* alpha */
 alpha_step = 0.05;
 

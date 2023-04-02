@@ -20,10 +20,4 @@ if (soundtrack == undefined) {
 	exit;
 }
 
-if (is_struct(soundtrack)) {
-	soundtrack.set_gain(0.5, 0);
-	soundtrack.play(1, true);
-	exit;
-}
-
-audio_play_sound(soundtrack, 1, true);
+audio_play_sound(soundtrack, 2, true);
