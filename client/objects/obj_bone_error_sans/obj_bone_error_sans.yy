@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_bone_error_sans",
   "spriteId": {
-    "name": "spr_bone_sharp_error_sans",
-    "path": "sprites/spr_bone_sharp_error_sans/spr_bone_sharp_error_sans.yy",
+    "name": "spr_bone_error_sans",
+    "path": "sprites/spr_bone_error_sans/spr_bone_error_sans.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

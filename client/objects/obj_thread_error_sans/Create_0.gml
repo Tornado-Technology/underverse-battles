@@ -10,5 +10,3 @@ x_dir = 0;
 y_dir = 0;
 
 scale_speed = 4;
-is_stunned = false;
-

@@ -31,7 +31,7 @@ switch (attack_num) {
 		
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
-		_side = choose(dir.up, dir.down);
+		_side = choose(dir.up, dir.left);
 		update_0_2(_power);
 		time_source_start(time_source_update_0_2);
 		time_source_start(time_source_update_destroy_0_2);

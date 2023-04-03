@@ -47,11 +47,11 @@ if (_id == 0 && attack_num == 2 || _id == 3) {
 	update_0_2 = function(pow) {
 		var bone_speed = 1.5 + 0.3;
 		var bone_size = _id == 0 ? 5.4 : 4.2;
-		if (_side == dir.up) {
+		if (_side == dir.left) {
 			create_bone(_border.x - _border.left - 20, _border.y - _border.up - 20, bone_obj, bone_speed, bone_size, 0, 180);
 			create_bone(_border.x + _border.right + 20, _border.y + _border.right + 20, bone_obj, bone_speed, bone_size, 180, 0);
 		}
-		if (_side == dir.down) {
+		if (_side == dir.up) {
 			create_bone(_border.x - _border.left - 20, _border.y - _border.up - 20, bone_obj, bone_speed, bone_size, 270, 270);
 			create_bone(_border.x + _border.right + 20, _border.y + _border.down + 20, bone_obj, bone_speed, bone_size, 90, 90);
 		}
@@ -85,7 +85,6 @@ if (_id == 0 && attack_num == 3) {
 		var main_speed = 1 + pow * 0.1;
 		create_next_moving_platform(_border.x - _border.left - 40, _border.y - 15, 4, 6, 60, main_speed);
 		create_next_moving_platform(_border.x + _border.right + 40, _border.y + 15, 4, 6, 60, -main_speed);
-		time_source_start(time_source_update_0_3_3);
 	}
 }
 

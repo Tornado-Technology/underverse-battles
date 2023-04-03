@@ -65,7 +65,7 @@ if (opponent_get_type(player_id) == "creator") {
 
 draw_set_font(font_mini);
 draw_set_halign(fa_right);
-draw_text_outlined(size.x - frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, opponent_get_name(player_id));
+draw_text_outlined(size.x - frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, account.username);
 draw_text_outlined(size.x - frame_x, frame_y + frame_w + 25, color_text_opp, color_text_outline_opp, string(opp_rp) + " " + translate_get("Battle.Rating"));
 
 // Opponent name

@@ -66,6 +66,7 @@ export default class Client extends SendStuff {
     this.verificationCodeCallback = callback;
     this.generateVerificationCode();
     this.sendVerification();
+    Logger.info(this.verificationCode);
   }
 
   public generateVerificationCode(): void {

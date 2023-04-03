@@ -13,5 +13,3 @@ border_delta_y = 0;
 
 border_force_x = 0;
 border_force_y = 0;
-
-is_stunned = false;

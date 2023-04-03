@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_bone_error_sans",
-    "path": "objects/obj_bone_error_sans/obj_bone_error_sans.yy",
+    "name": "obj_bone_sharp_error_sans",
+    "path": "objects/obj_bone_sharp_error_sans/obj_bone_sharp_error_sans.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

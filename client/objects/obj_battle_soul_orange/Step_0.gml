@@ -1,11 +1,5 @@
 event_inherited();
 
-if (!moveable && !is_stunned) {
-	is_stunned = true;
-	effect_fade(0.1, 1, c_blue, c_blue, true, 0);
-	battle_border_set_color(false, false, c_blue)
-}
-
 if (!moveable)
 	exit;
 
