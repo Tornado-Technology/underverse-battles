@@ -176,7 +176,7 @@ function handle_packet(data) {
 		case "fightHp":
 			var data_enemy = data.playerId;
 			if (data_enemy != 0) {
-				var damage = fight_get_enemy_hp(data_enemy) - data.hp;
+				var damage = fight_get_player_hp(data_enemy) - data.hp;
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)

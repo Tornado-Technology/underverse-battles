@@ -1,6 +1,6 @@
 /// @desc All code here!
 // Actualy player don't chose yet
-if (fight_get_player_choose(0)) exit;
+if (!fight_get_player_choose(0)) exit;
 
 // Inciative
 var initiative      = fight_get_initiative();
