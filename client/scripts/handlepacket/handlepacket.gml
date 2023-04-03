@@ -98,7 +98,7 @@ function handle_packet(data) {
 				logger.info("Successful join to fight");
 				var opponent_data = json_parse(data.data);
 				var inst_opponent = instance_create(obj_opponent);
-				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.skinId, opponent_data.rating, opponent_data.type, opponent_data.badgeId);
+				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.skinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
 				var character_object = global.characters[opponent_data.characterId, opponent_data.skinId].object;
 				memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, character_object);
 				room_goto(room_fight_1v1);
