@@ -27,7 +27,7 @@ const schema = new Schema({
   senderId: { type: Schema.Types.ObjectId, ref: 'Profile' },
   receiverId: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
-  collection: 'FriendRequests',
+  collection: 'friendRequests',
 });
 
 schema.statics.findIncoming = async function(profileId: string): Promise<IProfile[]> {

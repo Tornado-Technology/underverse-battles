@@ -63,12 +63,30 @@ export default class ClientFight {
     this.action = -1;
     this.power = 0;
     this.specialActionCharge = 0;
-    this.client.profile.fight.id = id;
-    this.client.profile.fight.index = index;
+
+    const fight = this.client.profile.fight;
+    fight.id = id;
+    fight.index = index;
+    fight.hp = this.hp;
+    fight.mana = this.mana;
+    fight.stamina = this.stamina;
+    fight.characterId = this.characterId;
+    fight.specialActionCharge = this.specialActionCharge;
+    this.client.profile.save();
   }
 
   public unit(): void {
-
+    this.id = null;
+    this.index = null;
+    this.hp = null;
+    this.hpMax = null;
+    this.mana = null;
+    this.manaMax = null;
+    this.stamina = null;
+    this.staminaMax = null;
+    this.action = null;
+    this.power = null;
+    this.specialActionCharge = null;
   }
 
   public setCharacter(characterId: number, skinId: number): void {

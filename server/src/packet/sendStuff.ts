@@ -86,6 +86,13 @@ export default class SendStuff {
     })
   }
 
+  public sendChangeEmail(status: number): void {
+    this.send('changeEmail', {
+      status,
+      ...this.schemesPack,
+    })
+  }
+
   public sendDeleteAccount(status: number): void {
     this.send('deleteAccount', {
       status,
@@ -124,13 +131,6 @@ export default class SendStuff {
     this.send('fightJoin', {
       status,
       data: JSON.stringify(data),
-    });
-  }
-
-  public sendFightEnd(rating: number, winner: boolean): void {
-    this.send('fightEnd', {
-      rating,
-      winner,
     });
   }
 

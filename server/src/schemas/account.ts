@@ -26,7 +26,7 @@ const schema = new Schema({
   password: { type: String },
   date: { type: Date, default: Date.now },
   type: { type: String, default: 'user' },
-  badgeId: { type: Number, default: 0 },
+  badge: { type: Number, default: null },
 }, {
   collection: 'accounts',
 });

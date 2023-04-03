@@ -77,7 +77,7 @@ export default class Fight {
       const isWinner = client === winner;
       client.fight.unit();
       client.setState(clientState.inMenu);
-      client.sendFightEnd(isWinner ? rating : -rating, isWinner);
+      client.sendFightFinished(isWinner ? rating : -rating, isWinner);
     });
     this.destroy();
   }

@@ -216,6 +216,7 @@ export default class Client extends SendStuff {
     if (!this.isLogin) {
       return;
     }
+
     this.account.username = username;
     await this.save();
   }
@@ -224,14 +225,25 @@ export default class Client extends SendStuff {
     if (!this.isLogin) {
       return;
     }
+
     this.account.nickname = nickname;
     await this.save();
   }
+
   public async setPassword(password: string): Promise<void> {
     if (!this.isLogin) {
       return;
     }
+
     this.account.password = await hashPassword(password);
+    await this.save();
+  }
+
+  public async setEmail(email: string): Promise<void> {
+    if (!this.isLogin) {
+      return;
+    }
+    this.account.email = email;
     await this.save();
   }
 

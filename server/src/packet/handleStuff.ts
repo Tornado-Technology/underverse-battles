@@ -3,7 +3,7 @@ import Client, { state } from '../concepts/client.js';
 import {state as fightState, target} from '../game/fight.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
-import { infoValidate, login, register } from '../schemas/account.js';
+import {Account, infoValidate, login, passwordRegex, register, usernameRegex} from '../schemas/account.js';
 import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 
@@ -124,15 +124,57 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'changeEmail':
-      // TODO: Make changing email
+      if (!client.isLogin) {
+        client.sendChangeEmail(App.status.unknownError);
+        break;
+      }
+
+      if (await Account.findOne({ email: data.email })) {
+        client.sendChangeEmail(App.status.emailBusy);
+        break;
+      }
+
+      client.startVerification((status) => {
+        if (status !== App.status.success) {
+          client.sendChangeEmail(status);
+          return;
+        }
+
+        try {
+          client.setEmail(data.email);
+          client.sendChangeEmail(App.status.success);
+        } catch (exception) {
+          client.sendChangeEmail(App.status.unknownError);
+          Logger.error(`Account change email failed: ${exception}`);
+        }
+      });
+
+      await mailSend(client.account.email, 'Account change email confirmation', '', `
+        <div color=black>  
+          <p>
+            Hi <b>${client.account.username}</b>,<br>
+            Heeey! We heard that you have a desire to change your mail.<br>
+            For the security of your account, we sent you this email.
+            <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account .<br>
+            If it is you, then confirm by entering the code.<br>
+            Your personal code: <b>${client.verificationCode}</b><br>
+            Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
+          </p>
+        </div>
+      `);
       break;
 
     case 'changePassword':
       if (!client.isLogin) {
         client.sendChangePassword(App.status.unknownError);
-        break
+        break;
       }
-      // TODO: Make validation
+
+      if (!passwordRegex.test(data.password)) {
+        client.sendChangePassword(App.status.passwordNotMatchRules);
+        break;
+      }
+
       await client.setPassword(data.password);
       client.sendChangePassword(App.status.success)
       break;
@@ -140,9 +182,19 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'changeUsername':
       if (!client.isLogin) {
         client.sendChangeUsername(App.status.unknownError);
-        break
+        break;
       }
-      // TODO: Make validation
+
+      if (!usernameRegex.test(data.username)) {
+        client.sendChangeUsername(App.status.usernameNotMatchRules);
+        break;
+      }
+
+      if (await Account.findOne({ username: data.username })) {
+        client.sendChangeUsername(App.status.usernameBusy);
+        break;
+      }
+
       await client.setUsername(data.username);
       client.sendChangeUsername(App.status.success);
       break;
@@ -150,9 +202,14 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'changeNickname':
       if (!client.isLogin) {
         client.sendChangeNickname(App.status.unknownError);
-        break
+        break;
       }
-      // TODO: Make validation
+
+      if (!usernameRegex.test(data.username)) {
+        client.sendChangeNickname(App.status.usernameNotMatchRules);
+        break;
+      }
+
       await client.setNickname(data.nickname);
       client.sendChangeNickname(App.status.success);
       break;
@@ -173,7 +230,7 @@ export const handlePacket = async (client: Client, data: any) => {
         }
       });
 
-      await mailSend(client.account.email, 'Registration confirmation', '', `
+      await mailSend(client.account.email, 'Account delete confirmation', '', `
         <div color=black>  
           <p>
             Hi <b>${client.account.username}</b>,<br>
