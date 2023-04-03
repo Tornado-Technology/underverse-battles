@@ -272,7 +272,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
         if (clients.length < 1) {
           client.setState(state.waitFight);
-          client.sendFightJoin(App.status.success, undefined);
+          client.sendFightJoin(App.status.unknownError, undefined);
           Logger.info('Clients not found, wait...');
           break;
         }
