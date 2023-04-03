@@ -3,7 +3,7 @@
 
 input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
 
-// Actualy player don't chose yet
+// Actualy player don't choose yet
 if (!fight_player_selecting(0)) exit;
 
 // Inciative

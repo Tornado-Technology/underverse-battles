@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "timer_destroy",
+  "name": "fight_get_player_choose",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Timer",
-    "path": "folders/Scripts/Local/Fight/Fight/Timer.yy",
+    "name": "Action",
+    "path": "folders/Scripts/Local/Fight/Fight/Player/Action.yy",
   },
 }

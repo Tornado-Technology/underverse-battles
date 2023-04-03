@@ -9,7 +9,7 @@ required_components = {
 	input: obj_network_fight_input,
 	bg: obj_fight_background, 
 	bgm: obj_fight_soundtrack, 
-	timer: obj_fight_timer
+	timer: obj_network_fight_timer
 };
 
 on_into_fight.invoke(opponent_get_name(1));

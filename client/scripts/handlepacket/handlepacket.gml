@@ -5,7 +5,7 @@ global.ping_instance = noone;
 
 /// @param {Struct} data - Data from server for handle
 function handle_packet(data) {
-	var index = data.index;	
+	var index = data.index;
 	
 	switch(index) {
 		case "connection":
@@ -146,11 +146,11 @@ function handle_packet(data) {
 			break;
 		
 		case "fightResetAction":
-			// Send obj_fight this info
-			fight_set_state(fight_state.reset);
+			fight_reset_player_action(0);
 			break;
 		
 		case "fightResetPower":
+			fight_reset_player_power(0);
 			break;
 			
 		case "fightSoul":
