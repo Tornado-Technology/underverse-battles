@@ -168,7 +168,7 @@ export default class ClientFight {
       name: this.client?.account.username,
       rating: this.client?.profile.rating,
       type: this.client?.account.type,
-      badgeId: this.client?.account?.badgeId,
+      badge: this.client?.account?.badge,
     };
   }
 
