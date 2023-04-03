@@ -1,4 +1,4 @@
-function opponent_set_values(inst, id_, name_, char_name, char_skin, rating, type, badge_id){
+function opponent_set_values(inst, id_, name_, char_name, char_skin, rating, type, badge){
 	if (!instance_exists(inst) || inst == obj_opponent) return noone;
 	inst.id_ = id_;
 	inst.name = name_;
@@ -6,7 +6,7 @@ function opponent_set_values(inst, id_, name_, char_name, char_skin, rating, typ
 	inst.character_skin = char_skin;
 	inst.rating = rating;
 	inst.type = type;
-	inst.badge_id = badge_id;
+	inst.badge = badge;
 	return 0;
 }
 
@@ -75,5 +75,5 @@ function opponent_destroy(id_){
 function opponent_get_badge(id_){
 	if (!instance_exists(obj_opponent)) return noone;
 	if (obj_opponent.id_ == id_)
-		return obj_opponent.badge_id;
+		return obj_opponent.badge;
 }

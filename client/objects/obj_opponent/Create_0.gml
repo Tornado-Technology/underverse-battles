@@ -4,4 +4,4 @@ character_name = "";
 character_skin = "";
 rating = -1;
 type = "user";
-badge_id = 0;
+badge = 0;
