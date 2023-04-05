@@ -1,9 +1,4 @@
-_id = 0;
-_power = 0;
-_time = 0;
-attack_num = 0;
-
-character_instance = noone;
+event_inherited();
 
 bone_obj = obj_bone_green;
 spike_obj = obj_spear_green;
@@ -12,9 +7,6 @@ gb_aim_obj = obj_turboblaster_aiming_green;
 
 inst_turboblaster = noone;
 _shift = 0;
-
-_soul = noone;
-_border = noone;
 
 new_warning = false;
 
@@ -25,3 +17,7 @@ border_decrease = 0;
 first = false;
 
 num = 0;
+sum_num = 0;
+
+event_user(4);
+event_user(5);

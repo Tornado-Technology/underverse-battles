@@ -1,9 +1,4 @@
-_id = 0;
-_power = 0;
-_time = 0;
-attack_num = 0;
-
-character_instance = noone;
+event_inherited();
 
 gb_obj = obj_gasterblaster_ink_sans;
 
@@ -15,11 +10,9 @@ _shift = 0;
 
 _inst = noone;
 
-_soul = noone;
-_border = noone;
-
 side = 0;
 
 new_warning = false;
 
-show_debug_message("attack ink sans");
+event_user(4);
+event_user(5);

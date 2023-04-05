@@ -108,7 +108,7 @@ if (_id == 1 && attack_num == 2) {
 		update_1_2_2(pow);
 	}, [_power], -1);
 		
-	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 0.5, time_source_units_seconds, function () {
+	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }

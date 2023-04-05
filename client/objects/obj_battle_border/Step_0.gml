@@ -1,3 +1,5 @@
+speed = speed_const * dtime;
+
 _angle = angle;
 
 // Position

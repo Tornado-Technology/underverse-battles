@@ -2,7 +2,6 @@ event_inherited();
 
 if (!moveable)
 	exit;
-	
 
 var SPD = 1.8 * dtime;
 var SPD = (ability ? SPD / 2 : SPD);

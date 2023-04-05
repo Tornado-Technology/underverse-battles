@@ -6,7 +6,7 @@
     "Development": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
   },
   "bboxMode": 0,
-  "collisionKind": 0,
+  "collisionKind": 5,
   "type": 0,
   "origin": 7,
   "preMultiplyAlpha": false,

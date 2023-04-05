@@ -10,6 +10,8 @@ down  = battle_border.down;
 left  = battle_border.left;
 right = battle_border.right;
 
+speed_const = 0;
+
 angle = 0;
 
 alpha	 = 1;

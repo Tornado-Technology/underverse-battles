@@ -17,8 +17,10 @@ repeat(3) {
 	}
 	i--;
 	
-	if (i == -1)
-		result = 3;
+	if (i == -1) {
+		fight_set_player_skip(1);
+		exit;
+	}
 }
 
 var i = max_power;
