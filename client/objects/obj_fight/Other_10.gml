@@ -70,7 +70,7 @@ switch(state) {
 		
 		// Regen stamina dodged player
 		if (players_dodged(you, _opponent)) {
-			fight_regrn_player_stamina(fight_get_next_initiative());
+			fight_regen_player_stamina(fight_get_next_initiative());
 		}
 		
 		// Some reset actions

@@ -124,7 +124,7 @@ function handle_packet(data) {
 		
 		case "fightPower":
 			// Send obj_fight this info
-			fight_set_enemy_power(data.playerId, data.power);
+			fight_set_player_power(data.playerId, data.power);
 			break;
 		
 		case "fightSkip":
@@ -174,6 +174,7 @@ function handle_packet(data) {
 			var data_enemy = data.playerId;
 			if (data_enemy != 0) {
 				var damage = fight_get_player_hp(data_enemy) - data.hp;
+				show_debug_message(damage);
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)
@@ -188,11 +189,11 @@ function handle_packet(data) {
 			break;
 			
 		case "fightMana":
-			fight_set_enemy_mana(data.playerId, data.mana);
+			fight_set_player_mana(data.playerId, data.mana);
 			break;
 			
 		case "fightStamina":
-			fight_set_enemy_stamina(data.playerId, data.stamina);
+			fight_set_player_stamina(data.playerId, data.stamina);
 			break;
 			
 		case "fightStun":
