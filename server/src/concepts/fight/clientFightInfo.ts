@@ -16,6 +16,7 @@ export default class ClientFightInfo {
     this.characterSkinId = fight.characterSkinId;
     this.name = fight.client.username;
     this.rating = fight.client.rating;
+    this.type = fight.client.account.type;
     this.badge = fight.client.badge;
   }
 }
