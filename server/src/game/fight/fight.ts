@@ -1,7 +1,8 @@
-import Client, { state as clientState } from '../concepts/client.js';
-import Logger from '../util/logging.js';
-import App from '../app.js';
-import Matchmaker from '../util/matchmaker.js';
+import Client, { state as clientState } from '../../concepts/client.js';
+import Logger from '../../util/logging.js';
+import App from '../../app.js';
+import Matchmaker from '../../util/matchmaker.js';
+import { statusCode } from '../../status.js';
 
 export enum state {
   wait,
@@ -27,12 +28,11 @@ export default class Fight {
   public static create(client1: Client, client2: Client): void {
     const fight = new Fight(client1, client2, String(Date.now()));
     App.fights.push(fight);
-    Logger.info(`Fight "${fight.id}" created, ${client1?.account.username} vs ${client2?.account.username}`);
   }
 
   public static destroy(fight: Fight): void {
     App.fights.splice(App.fights.indexOf(fight), 1);
-    Logger.info(`Fight "${fight.id}" destroyed`);
+    Logger.info(`Fight[${fight.id}] destroyed`);
   }
 
   constructor(client1: Client, client2: Client, id: string) {
@@ -40,14 +40,14 @@ export default class Fight {
     this._state = state.wait;
     this.clients = [client1, client2];
     this.initiative = Math.randomRange(0, 1);
+    Logger.info(`Fight[${this.id}] created, ${client1?.account.username} vs ${client2?.account.username}`);
     this.initializeClients();
   }
 
   public initializeClients(): void {
     this.clients.forEach((client, index) => {
-      client.fight.instance = this;
-      client.fight.init(this.id, index);
-      client.sendFightJoin(App.status.success, this.getOtherClient(client).fight.info);
+      client.fight.init(this, index);
+      client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
     });
 
     this.setState(state.choose);

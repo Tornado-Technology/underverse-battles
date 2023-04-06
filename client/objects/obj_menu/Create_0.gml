@@ -406,7 +406,9 @@ create_page([
         var instance = instance_create(obj_menu_account_changes_email);
 		instance.input_box = account_settings_inputbox_change_email;
     }),
-    Transfer("AccountOptions.DeleteAccount", menu_page.account_settings),
+    Execute("AccountOptions.DeleteAccount", menu_page.account_settings, function() {
+		send_delete_account();
+	}),
     Transfer("StandardButtons.Back", menu_page.multiplayer_account),
 ], menu_page.account_settings);
 
@@ -425,7 +427,7 @@ create_page([
 create_page([
     account_settings_inputbox_change_password,
 	Execute("TODO: key применить", [], function() {
-			audio_play_sound_once(snd_selection);
+		audio_play_sound_once(snd_selection);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings, function() {
         instance_destroy(obj_menu_account_changes_password)
@@ -434,9 +436,9 @@ create_page([
 
 // Account change email
 create_page([
-    account_settings_inputbox_change_nickname,
+    account_settings_inputbox_change_email,
 	Execute("TODO: key применить", [], function() {
-			audio_play_sound_once(snd_selection);
+		send_eamil_change(obj_menu_account_changes_email.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings, function() {
         instance_destroy(obj_menu_account_changes_email)

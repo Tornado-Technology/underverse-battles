@@ -1,7 +1,5 @@
 global.verify_code_connection = undefined;
 global.ping_instance = noone;
-#macro success "success"
-#macro fail "fail"
 
 /// @param {Struct} data - Data from server for handle
 function handle_packet(data) {
@@ -10,8 +8,7 @@ function handle_packet(data) {
 	switch(index) {
 		case "connection":
 			var code = data.code;
-			
-			if (code == 100) {
+			if (code == status_code.success) {
 				logger.info("Client connection success.");
 				break;
 			}
@@ -39,7 +36,7 @@ function handle_packet(data) {
 			break;
 
 		case "login":
-			if (data.status == 100) {
+			if (data.status == status_code.success) {
 				network_profile = data.profile;
 				network_account = data.account;
 				logger.info("Login success");
@@ -54,7 +51,7 @@ function handle_packet(data) {
 			break;
 
 		case "register":
-			if (data.status == 100) {
+			if (data.status == status_code.success) {
 				successful_registration();
 				logger.info("Registration successful! You can login now.");
 				break;
@@ -94,7 +91,7 @@ function handle_packet(data) {
 		case "fightJoin":
 			var status = data.status;
 
-			if (status == 100) {
+			if (status == status_code.success) {
 				logger.info("Successful join to fight");
 				var opponent_data = json_parse(data.data);
 				var inst_opponent = instance_create(obj_opponent);

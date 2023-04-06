@@ -1,7 +1,6 @@
 import { Model, Document, ObjectId } from 'mongoose';
 import { createRequire } from 'module';
 import { IProfile, Profile } from './profile.js';
-import App from '../app.js';
 
 // @ts-ignore
 const require = createRequire(import.meta.url);

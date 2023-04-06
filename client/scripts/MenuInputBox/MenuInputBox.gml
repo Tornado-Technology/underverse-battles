@@ -2,7 +2,6 @@ function MenuInputBox(key_translate, show_text = true, inputbox = undefined, def
 	var instance = new ClassMenuInputBox(key_translate, show_text, inputbox, defaultText);
 	instance.translate_update();
 	instance.init();
-	
 	return instance;
 }
 

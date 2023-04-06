@@ -3,10 +3,11 @@ import { socketType } from '../concepts/client.js';
 import { IAccount } from '../schemas/account.js';
 import { IProfile } from '../schemas/profile.js';
 import { IStatistic } from '../schemas/statistic.js';
-import { target } from '../game/fight.js';
+import { target } from '../game/fight/fight.js';
 import ClientFight from '../concepts/clientFight.js';
 import Packet from './packet.js';
 import App from '../app.js';
+import { statusCode } from '../status.js';
 
 export default class SendStuff {
   public readonly socket: Socket;
@@ -33,9 +34,9 @@ export default class SendStuff {
     this.socket.write(Packet.build(data));
   }
 
-  public sendConnection(code = 0): void {
+  public sendConnection(code: statusCode): void {
     this.send('connection', {
-      code
+      code,
     });
   }
 
@@ -46,54 +47,54 @@ export default class SendStuff {
     });
   }
 
-  public sendLogin(status: number): void {
+  public sendLogin(status: statusCode): void {
     this.send('login',{
       status,
       ...this.schemesPack,
     })
   }
 
-  public sendLogout(status: number): void {
+  public sendLogout(status: statusCode): void {
     this.send('logout', {
       status,
     });
   }
 
-  public sendRegister(status: number): void {
+  public sendRegister(status: statusCode): void {
     this.send('register', {
       status,
     });
   }
 
-  public sendChangeNickname(status: number): void {
+  public sendChangeNickname(status: statusCode): void {
     this.send('changeNickname', {
       status,
       ...this.schemesPack,
     })
   }
 
-  public sendChangePassword(status: number): void {
+  public sendChangePassword(status: statusCode): void {
     this.send('changePassword', {
       status,
       ...this.schemesPack,
     })
   }
 
-  public sendChangeUsername(status: number): void {
+  public sendChangeUsername(status: statusCode): void {
     this.send('changeUsername', {
       status,
       ...this.schemesPack,
     })
   }
 
-  public sendChangeEmail(status: number): void {
+  public sendChangeEmail(status: statusCode): void {
     this.send('changeEmail', {
       status,
       ...this.schemesPack,
     })
   }
 
-  public sendDeleteAccount(status: number): void {
+  public sendDeleteAccount(status: statusCode): void {
     this.send('deleteAccount', {
       status,
     })
@@ -127,7 +128,7 @@ export default class SendStuff {
   }
 
   // Fight stuff
-  public sendFightJoin(status: number, data: any): void {
+  public sendFightJoin(status: statusCode, data: any = undefined): void {
     this.send('fightJoin', {
       status,
       data: JSON.stringify(data),

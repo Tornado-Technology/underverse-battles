@@ -7,6 +7,7 @@ import Client, { socketType } from './concepts/client.js';
 import Packet from './packet/packet.js';
 import Logger from './util/logging.js';
 import App from './app.js';
+import { statusCode } from './status.js';
 
 const { ip, port } = App.config.main;
 
@@ -63,7 +64,7 @@ class Server {
     setTimeout(() => {
       if (!client.verified && !client.verifying) {
         Logger.info(`Client connection blocked, reason: Not send verification packet`);
-        client.sendConnection(App.status.unknownError);
+        client.sendConnection(statusCode.error);
         client.destroy();
       }
     }, App.config.client.verification.timeout);

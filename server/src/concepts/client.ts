@@ -4,14 +4,14 @@ import { Socket } from 'net';
 import {generateVerificationCode, hashPassword} from '../util/encrypting.js';
 import { freshProfile, IProfile, Profile } from '../schemas/profile.js';
 import { FriendRequest } from '../schemas/friendRequest.js';
-import { IAccount } from '../schemas/account.js';
+import {IAccount, usernameDefault} from '../schemas/account.js';
 import ClientFight from './clientFight.js';
 import SendStuff from '../packet/sendStuff.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
-import {clearTimeout} from "timers";
 import Rank from '../data/rank.js';
 import { getRank } from '../content/rankList.js';
+import {statusCode} from '../status.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -53,7 +53,7 @@ export default class Client extends SendStuff {
   }
 
   static async remove(client: Client): Promise<void> {
-    await client.onDisconnect(App.status.socketClosed);
+    await client.onDisconnect(statusCode.serverSocketClosed);
     App.clients.splice(App.clients.indexOf(client), 1);
   }
 
@@ -103,7 +103,7 @@ export default class Client extends SendStuff {
     this.account = null;
     this.profile = null;
     this.statistic = null;
-    this.sendLogout(App.status.success);
+    this.sendLogout(statusCode.success);
   }
 
   public onLogin(): void {
@@ -117,10 +117,10 @@ export default class Client extends SendStuff {
     }).then((profile) => {
       if (profile) {
         this.profile = profile;
-        this.sendLogin(App.status.success);
+        this.sendLogin(statusCode.success);
         return;
       }
-      this.sendLogin(App.status.profileNotFound);
+      this.sendLogin(statusCode.databaseProfileNotExists);
       throw new Error(`Couldn't find a profile with these credentials`);
     });
   }
@@ -129,7 +129,7 @@ export default class Client extends SendStuff {
     this.account = account;
     this.profile = await freshProfile(account);
     this.onLogin();
-    this.sendRegister(App.status.success);
+    this.sendRegister(statusCode.success);
   }
 
   public async save(): Promise<void> {
@@ -244,6 +244,7 @@ export default class Client extends SendStuff {
     if (!this.isLogin) {
       return;
     }
+
     this.account.email = email;
     await this.save();
   }
@@ -268,16 +269,28 @@ export default class Client extends SendStuff {
     return Boolean(this.profile);
   }
 
-  public setState(state: state) {
+  public setState(state: state): void {
     this._state = state;
-    Logger.info(`Client set new state "${state}"`);
+    Logger.debug(`Client set new state "${state}"`);
   }
 
   public get state(): state {
     return this._state;
   }
 
-  public get rank(): Rank {
-    return this.isLogin ? getRank(this.profile.rating) : undefined;
+  public get rank(): Rank | undefined {
+    return this.isLogin ? getRank(this.rating) : undefined;
+  }
+
+  public get rating(): number {
+    return this.isLogin ? this.profile.rating : 0;
+  }
+
+  public get badge(): number | null {
+    return this.isLogin ? this.account.badge : null;
+  }
+
+  public get username(): string {
+    return this.isLogin ? this.account.username : usernameDefault;
   }
 }
