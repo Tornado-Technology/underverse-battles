@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "fight_set_enemy_position_y",
+  "name": "fight_set_player_position_y",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
