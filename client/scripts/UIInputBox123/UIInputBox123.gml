@@ -1,11 +1,11 @@
-function UIInputBox(image, default_text, width, height, show_text = true) {
+function UIInput1Box(image, default_text, width, height, show_text = true) {
 	var instance = new ClassUIInputBox(image, default_text, width, height, show_text);
 	instance.init();
 	
 	return instance;
 }
 
-function ClassUIInputBox(image, default_text, width, height, show_text) constructor {
+function ClassUIInput1Box(image, default_text, width, height, show_text) constructor {
 	self.image = image;
 	self.default_text = default_text;
 	self.width = width;
@@ -314,6 +314,7 @@ function ClassUIInputBox(image, default_text, width, height, show_text) construc
 	
 	static input_char = function() {
 		if (!string_is_empty(keyboard_string)) {
+			show_debug_message(keyboard_string)
 			show_cursor = true;
 			cursor_blink_time = 0;
 			

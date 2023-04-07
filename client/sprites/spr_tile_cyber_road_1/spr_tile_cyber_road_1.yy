@@ -96,6 +96,6 @@
   },
   "parent": {
     "name": "Mingames",
-    "path": "folders/Sprites/Mingames.yy",
+    "path": "folders/Sprites/Icons/Mingames.yy",
   },
 }

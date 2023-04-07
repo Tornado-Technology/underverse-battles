@@ -5,7 +5,7 @@
   "ConfigValues": {
     "Development": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
   },
-  "bboxMode": 1,
+  "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
   "origin": 7,

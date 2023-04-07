@@ -29,7 +29,7 @@ function __class_timer(_delay, _method) constructor {
 	static update = function() {
 		if (pause) return;	
 	
-		time = approach(time, 0, 1);
+		time--;
 		
 		if (time == 0) {
 			reset();

@@ -9,6 +9,8 @@ function ClassMenuElement(key_translate) constructor {
 	index = -1;
 	text_color_render = c_white;
 	on_click = function() {};
+	on_focus = function() {};
+	on_unfocus = function() {};
 	is_shift = true;
 	
 	static text_color = c_white;
@@ -22,10 +24,12 @@ function ClassMenuElement(key_translate) constructor {
 	static focus = function() {
 		audio_play_sound(snd_click, 0, false);
 		hover = true;
+		on_focus();
 	}
 	
 	static unfocus = function() {
 		hover = false;
+		on_unfocus();
 	}
 	
 	static check_collision = function(position_x, position_y, menu_instance) {

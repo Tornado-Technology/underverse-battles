@@ -12,6 +12,7 @@ function __InputTextBox() {
 
 function __ClassInputTextBox(keys) constructor {
 	self.keys = keys;
+	keys_count = array_length(keys)
 	
 	is_holding = false;
 	time_until_holdimg = 15;
@@ -37,6 +38,7 @@ function __ClassInputTextBox(keys) constructor {
 	
 	static check_holding_keys = function() {	
 		if (is_mouse) return false;
+		if (!keyboard_check(vk_anykey)) return false;
 		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
@@ -58,6 +60,7 @@ function __ClassInputTextBox(keys) constructor {
 	
 	static check_pressed_keys = function() {
 		if (is_mouse) return false;
+		if (!keyboard_check_pressed(vk_anykey)) return false;
 		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
@@ -78,6 +81,8 @@ function __ClassInputTextBox(keys) constructor {
 	}
 	
 	static check_mouse_holding_keys = function() {
+		if (!is_mouse) return false;
+		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
 			
@@ -88,6 +93,8 @@ function __ClassInputTextBox(keys) constructor {
 	}
 	
 	static check_mouse_pressed_keys = function() {
+		if (!is_mouse) return false;
+		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
 			
@@ -98,13 +105,18 @@ function __ClassInputTextBox(keys) constructor {
 	}
 	
 	static update = function() {
-		if (((array_length(keys) == 0 ? check_pressed_keys() : check_holding_keys()) || check_mouse_pressed_keys()) && !pressed && !only_holding) {
+		var is_holding_keys = check_holding_keys;
+		var is_pressed_keys = check_pressed_keys;
+		var is_mouse_pressed = check_mouse_pressed_keys();
+		var is_mouse_holding = check_mouse_holding_keys();
+		
+		if (((keys_count == 0 ? is_pressed_keys : is_holding_keys) || is_mouse_pressed) && !pressed && !only_holding) {
 			on_input();
 			pressed = true;
 			return;
 		}
 		
-		if (!check_holding_keys() && !check_mouse_holding_keys()) {
+		if (!is_holding_keys && !is_mouse_holding) {
 			is_holding = false;
 			holding_time_source.stop(true);
 			pressed = false;
@@ -121,7 +133,11 @@ function __ClassInputTextBox(keys) constructor {
 			input_time_source.start(true);
 		}
 		
-		input_time_source.update();
-		holding_time_source.update();
+		if (!input_time_source.pause) {
+			input_time_source.update();
+		}
+		if (!holding_time_source.pause) {
+			holding_time_source.update();
+		}
 	}
 }
