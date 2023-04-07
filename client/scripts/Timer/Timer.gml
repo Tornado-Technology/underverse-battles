@@ -31,6 +31,10 @@ function __class_timer(_delay, _method) constructor {
 	
 		time--;
 		
+		if (time <= 0) { 
+			time = 0;
+		}
+		
 		if (time == 0) {
 			reset();
 			callback();

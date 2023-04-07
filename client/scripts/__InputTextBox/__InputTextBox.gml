@@ -38,7 +38,7 @@ function __ClassInputTextBox(keys) constructor {
 	
 	static check_holding_keys = function() {	
 		if (is_mouse) return false;
-		if (!keyboard_check(vk_anykey)) return false;
+		if (!__keyboard_check(vk_anykey)) return false;
 		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
@@ -60,7 +60,7 @@ function __ClassInputTextBox(keys) constructor {
 	
 	static check_pressed_keys = function() {
 		if (is_mouse) return false;
-		if (!keyboard_check_pressed(vk_anykey)) return false;
+		if (!__keyboard_check_pressed(vk_anykey)) return false;
 		
 		for (var i = 0; i < array_length(keys); i++) {
 			var key = keys[i];
@@ -105,8 +105,8 @@ function __ClassInputTextBox(keys) constructor {
 	}
 	
 	static update = function() {
-		var is_holding_keys = check_holding_keys;
-		var is_pressed_keys = check_pressed_keys;
+		var is_holding_keys = check_holding_keys();
+		var is_pressed_keys = check_pressed_keys();
 		var is_mouse_pressed = check_mouse_pressed_keys();
 		var is_mouse_holding = check_mouse_holding_keys();
 		
@@ -133,11 +133,7 @@ function __ClassInputTextBox(keys) constructor {
 			input_time_source.start(true);
 		}
 		
-		if (!input_time_source.pause) {
-			input_time_source.update();
-		}
-		if (!holding_time_source.pause) {
-			holding_time_source.update();
-		}
+		input_time_source.update();
+		holding_time_source.update();
 	}
 }

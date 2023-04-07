@@ -85,26 +85,27 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 			}
 		
 			inputs.deleting_left.on_input = function() {
+				remove_char(cursor_position);
 			}
 		
 			inputs.deleting_right.on_input = function() {
-				
+				remove_char(cursor_position + 1, false);
 			}
 		
 			inputs.cursor_moving_right.on_input = function() {
-				
+				move_cursor_right();
 			}
 		
 			inputs.cursor_moving_left.on_input = function() {
-				
+				move_cursor_left();
 			}
 		
 			inputs.home.on_input = function() {
-				
+				change_cursor_position(0);
 			}
 		
 			inputs._end.on_input = function() {
-				
+				change_cursor_position(text_length);
 			}
 		
 			inputs.all_select.on_input = function() {
@@ -170,7 +171,6 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	
 	static draw = function(position_x, position_y) {
 		var draw_text_position_x = position_x + default_text_offset_x;
-		var draw_text_position_y = position_y + default_text_offset_y;
 		
 		// box
 		draw_sprite_stretched_ext(image, 0, position_x, position_y, width, height, image_color, image_alpha);
@@ -199,7 +199,7 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 			result_text = string_repeat("*", string_length(text_rendering));
 		}
 		
-		draw_text(-text_left_shift, height / 2, text_rendering);
+		draw_text(-text_left_shift, height / 2, result_text);
 		
 		// default text
 		if (string_is_empty(text) && !is_active) {
@@ -237,8 +237,6 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		var text2 = "";
 		var index = cursor_position;
 		
-		show_debug_message(index)
-		
 		while (lenght < real_width) {
 			start_rendering_char_index = index;
 			
@@ -257,18 +255,13 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		index = cursor_position + 1;
 		
 		while (lenght < real_width) {
-			if (index >= text_length) break; 
+			if (index > text_length) break; 
 			
 			var char = string_char_at(text, index);
 			lenght += char_get_width(char, font, true);
 			text2 += char;
 			index++;
 		}
-		
-		text2 = string_reverse(text2);
-		
-		show_debug_message(text)
-		show_debug_message(text1 + text2)
 		
 		return text1 + text2;
 	}
@@ -297,6 +290,9 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	
 	static add_char = function(char, position) {
 		text = string_insert(char, text, position);
+		is_show_cursor = true;
+		cursor_blink_time = 0;
+		
 		update_state();
 	}
 	
@@ -308,8 +304,28 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		remove_char(1);
 	}
 	
-	static remove_char = function(position) {
+	static remove_char = function(position, is_move_cursor = true) {
+		if (position <= 0 || position > text_length) return;
+		
 		text = string_delete(text, position, 1);
+		if (is_move_cursor || cursor_position == text_length) {
+			cursor_position--;
+		}
+		update_state();
+	}
+	
+	static move_cursor_right = function() {
+		change_cursor_position(cursor_position + 1);
+	}
+	
+	static move_cursor_left = function() {
+		change_cursor_position(cursor_position - 1);
+	}
+	
+	static change_cursor_position = function(position) {
+		if (position < 0 || position > text_length) return;
+		
+		cursor_position = position;
 		update_state();
 	}
 	
