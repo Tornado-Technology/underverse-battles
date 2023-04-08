@@ -215,7 +215,11 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		}
 		
 		// mouse selection
-		show_debug_message(find_char_from_mouse());
+		var founded_index = find_char_from_mouse();
+		
+		if (founded_index != undefined && mouse_check_button(mb_left)) {
+			founded_index--;
+		}
 		
 		// input char
 		if (keyboard_check_pressed(vk_anykey)) {
@@ -472,12 +476,9 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		var first = 0;
 		var value = mouse_gui_x;
 	    var last = array_length(list) - 1;
-	    var position = -1;
+	    var position = undefined;
 	    var found = false;
 	    var middle = undefined;
-		
-		show_debug_message(char_rendering_position_x)
-		show_debug_message(value)
 		
 	    while (!found && first <= last) {
 	        middle = floor((first + last) / 2);
@@ -510,6 +511,11 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	}
 	
 	static get_selecting_text = function() {
+		if (selecting_position.ending != 0 && selecting_position.beginning != 0) {
+			if (selecting_position.ending == selecting_position.beginning) {
+				return string_char_at(text, selecting_position.ending);
+			}
+		}
 		var count = selecting_position.ending - selecting_position.beginning;
 		return string_copy(text, selecting_position.beginning, count) + (count != 0 ? string_char_at(text, selecting_position.ending) : "");
 	}
@@ -519,25 +525,24 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	}
 	
 	static update_selecting_rectangle_position = function() {
-		var i = 0;
-		var x_beginning = 0;
-		var x_ending = 0;
+		var beggining = selecting_rendering_position.beginning;
+		var ending = selecting_rendering_position.ending;
+		var surface_position =  position_x + default_text_offset_x;
 		
-		repeat(array_length(char_rendering_widths)) {
-			if (i + 1 <= selecting_rendering_position.beginning) {
-				x_beginning += char_rendering_widths[i];
-				x_ending += char_rendering_widths[i];
-			}
-			
-			if (i <= selecting_rendering_position.ending) {
-				x_ending += char_rendering_widths[i];
-			}
-			
-			i++;
+		if (beggining == 0 || ending == 0) {
+			selecting_rectangle_position.beginning = 0;
+			selecting_rectangle_position.ending = 0;
+			return;
 		}
 		
-		selecting_rectangle_position.beginning = x_beginning;
-		selecting_rectangle_position.ending = x_ending;
+		if (beggining == ending) {
+			selecting_rectangle_position.beginning = char_rendering_position_x[beggining - 1] - surface_position;
+			selecting_rectangle_position.ending = char_rendering_position_x[beggining - 1] + char_rendering_widths[beggining - 1] - surface_position;
+			return;
+		}
+		
+		selecting_rectangle_position.beginning = char_rendering_position_x[beggining - 1] - surface_position;
+		selecting_rectangle_position.ending = char_rendering_position_x[ending - 1] + char_rendering_widths[ending - 1] - surface_position;
 	}
 	
 	static reset_selecting = function() {
