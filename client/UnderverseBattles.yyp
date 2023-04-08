@@ -883,6 +883,7 @@
     {"id":{"name":"spr_cross_xevent_attack1_start","path":"sprites/spr_cross_xevent_attack1_start/spr_cross_xevent_attack1_start.yy",},"order":3,},
     {"id":{"name":"spr_achivement_defeaterror","path":"sprites/spr_achivement_defeaterror/spr_achivement_defeaterror.yy",},"order":4,},
     {"id":{"name":"spr_sans_on_byke_attack2_right_up","path":"sprites/spr_sans_on_byke_attack2_right_up/spr_sans_on_byke_attack2_right_up.yy",},"order":11,},
+    {"id":{"name":"Object220","path":"objects/Object220/Object220.yy",},"order":8,},
     {"id":{"name":"obj_knife_blast_xchara","path":"objects/obj_knife_blast_xchara/obj_knife_blast_xchara.yy",},"order":4,},
     {"id":{"name":"spr_achivement_defeatfellsans","path":"sprites/spr_achivement_defeatfellsans/spr_achivement_defeatfellsans.yy",},"order":5,},
     {"id":{"name":"spr_achivement_defeatink","path":"sprites/spr_achivement_defeatink/spr_achivement_defeatink.yy",},"order":6,},

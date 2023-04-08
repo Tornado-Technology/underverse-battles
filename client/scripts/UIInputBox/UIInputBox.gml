@@ -6,6 +6,9 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	self.text = "";
 	self.is_show_text = is_show_text;
 	
+	self.position_x = 0;
+	self.position_y = 0;
+	
 	halign = fa_left;
 	valign = fa_middle;
 	
@@ -31,6 +34,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		beginning: 0,
 		ending: 0,
 	}
+	
+	selecting_alpha = 0.7;
 	
 	is_show_cursor = true;
 	cursor_position = 0;
@@ -60,11 +65,15 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	mouse_hover = false;
 	
 	char_rendering_widths = [];
+	char_rendering_position_x = [];
 	
 	on_activating_mouse = function() {}
 	on_deactivating_mouse = function() {}
 	
 	beginning_rendering_char_index = 0;
+	
+	// mouse selecting
+	is_clicked = false;
 	
 	time_to_fast_input_char = 15;
 	delay_fast_input_char = 3;
@@ -86,7 +95,6 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		home: __InputTextBox(vk_home),
 		_end: __InputTextBox(vk_end),
 		all_select: __InputTextBox(ord("A"), vk_control),
-		all_select_mouse: __InputTextBox(mb_left),
 		copy_text: __InputTextBox(ord("C"), vk_control),
 		paste_text: __InputTextBox(ord("V"), vk_control),
 	}
@@ -149,9 +157,6 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 				var position = !has_selecting_text() ? cursor_position + 1 : selecting_position.beginning;
 				paste_text(text, position);
 			}
-		
-			inputs.all_select_mouse.is_mouse = true;
-			inputs.all_select_mouse.only_holding = true;
 		}
 		
 		if (is_mobile) {
@@ -163,6 +168,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	}
 	
 	static update = function(position_x, position_y) {
+		self.position_x = position_x;
+		self.position_y = position_y
 		var is_click = mouse_check_button_pressed(mb_left);
 		mouse_hover = point_in_rectangle_gui(position_x, position_y, position_x + width, position_y + height);
 		
@@ -197,6 +204,18 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		for (var i = 0; i < array_length(array_inputs); i++) {
 			inputs[$ array_inputs[i]].update();
 		}
+		
+		// all selecting mouse
+		if (mouse_check_button_pressed(mb_left) && !string_is_empty(text)) {
+			if (is_clicked) {
+				selecting_all();
+			}
+			
+			is_clicked = true;
+		}
+		
+		// mouse selection
+		show_debug_message(find_char_from_mouse());
 		
 		// input char
 		if (keyboard_check_pressed(vk_anykey)) {
@@ -247,9 +266,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		}
 		
 		// Selecting
-		
 		if (has_selecting_text()) {
-			draw_set_alpha(0.7);
+			draw_set_alpha(selecting_alpha);
 			draw_rectangle(selecting_rectangle_position.beginning, 0, selecting_rectangle_position.ending, height, false);
 			draw_set_alpha(1);
 		}
@@ -334,9 +352,15 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		return !(text_width > get_real_width());
 	}
 	
-	static update_char_widths = function() {
+	static update_char_widths_and_position = function() {
+		var _x = position_x + default_text_offset_x - text_left_shift;
+		char_rendering_widths = [];
+		char_rendering_position_x = [];
+		
 		for (var i = 1; i <= text_rendering_length; i++) {
-			char_rendering_widths[i] = string_width(string_char_at(text_rendering, i));
+			char_rendering_widths[i - 1] = string_width(string_char_at(text_rendering, i));
+			char_rendering_position_x[i - 1] = _x;
+			_x += char_rendering_widths[i - 1];
 		}
 	}
 	
@@ -442,6 +466,49 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		update_selecting_rectangle_position();
 	}
 	
+	// binary search
+	static find_char_from_mouse = function() {
+	    var list = char_rendering_position_x;
+		var first = 0;
+		var value = mouse_gui_x;
+	    var last = array_length(list) - 1;
+	    var position = -1;
+	    var found = false;
+	    var middle = undefined;
+		
+		show_debug_message(char_rendering_position_x)
+		show_debug_message(value)
+		
+	    while (!found && first <= last) {
+	        middle = floor((first + last) / 2);
+		
+			if (list[middle] <= value) {
+				var is_next_element = array_length(list) > middle + 1;
+			
+				if (!is_next_element && list[middle] + char_rendering_widths[middle] >= value) {
+					found = true;
+					position = middle;
+					continue;
+				}
+			
+				if (is_next_element && list[middle + 1] > value) {
+					found = true;
+					position = middle;
+					continue;
+				}
+			} 
+		
+			if (list[middle] > value) {
+			    last = middle - 1;
+				continue;
+			}
+		
+			first = middle + 1;
+	    }
+	
+	    return position;
+	}
+	
 	static get_selecting_text = function() {
 		var count = selecting_position.ending - selecting_position.beginning;
 		return string_copy(text, selecting_position.beginning, count) + (count != 0 ? string_char_at(text, selecting_position.ending) : "");
@@ -478,6 +545,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	}
 	
 	static update_position_cursor = function() {
+		is_clicked = false;
 		var rendrering_symbols_count = cursor_position - beginning_rendering_char_index + 1;
 		var rendering_text = string_copy(text, beginning_rendering_char_index, rendrering_symbols_count);
 		cursor_position_x = string_width(rendering_text) + cursor_offset;
@@ -492,9 +560,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		text_rendering_width = string_width(text_rendering);
 		text_rendering_length = string_length(text_rendering);
 		text_left_shift = 0;
-		char_rendering_widths = [];
 		
-		update_char_widths();
+		update_char_widths_and_position();
 		update_position_cursor();
 		
 		if (!has_empty_space()) {
