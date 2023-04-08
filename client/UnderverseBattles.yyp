@@ -969,7 +969,7 @@
     {"id":{"name":"obj_battle","path":"objects/obj_battle/obj_battle.yy",},"order":2,},
     {"id":{"name":"obj_battle_platform_purple","path":"objects/obj_battle_platform_purple/obj_battle_platform_purple.yy",},"order":0,},
     {"id":{"name":"obj_string_green","path":"objects/obj_string_green/obj_string_green.yy",},"order":4,},
-    {"id":{"name":"UIInputBox1","path":"scripts/UIInputBox1/UIInputBox1.yy",},"order":2,},
+    {"id":{"name":"UIInputBox","path":"scripts/UIInputBox/UIInputBox.yy",},"order":2,},
     {"id":{"name":"spr_character_frame","path":"sprites/spr_character_frame/spr_character_frame.yy",},"order":2,},
     {"id":{"name":"spr_character_frame_target1","path":"sprites/spr_character_frame_target1/spr_character_frame_target1.yy",},"order":0,},
     {"id":{"name":"spr_character_frame_target2","path":"sprites/spr_character_frame_target2/spr_character_frame_target2.yy",},"order":1,},

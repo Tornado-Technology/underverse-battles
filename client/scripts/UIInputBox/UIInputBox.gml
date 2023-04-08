@@ -1,11 +1,4 @@
-function UIInputBox(image, default_text, width, height, is_show_text = true) {
-	var instance = new ClassUIInputBox(image, default_text, width, height, is_show_text);
-	instance.init();
-	
-	return instance;
-}
-
-function ClassUIInputBox(image, default_text, width, height, is_show_text) constructor {
+function UIInputBox(image, default_text, width, height, is_show_text) constructor {
 	self.image = image;
 	self.default_text = default_text;
 	self.width = width;
@@ -24,6 +17,21 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	text_rendering_length = 0;
 	text_rendering_width = 0;
 	
+	selecting_position = {
+		beginning: 0,
+		ending: 0,
+	}
+	
+	selecting_rendering_position = {
+		beginning: 0,
+		ending: 0,
+	}
+	
+	selecting_rectangle_position = {
+		beginning: 0,
+		ending: 0,
+	}
+	
 	is_show_cursor = true;
 	cursor_position = 0;
 	cursor_blink_delay = 30;
@@ -33,8 +41,8 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	cursor_height = char_get_height("W", font) < height ? height : char_get_height("W", font);
 	cursor_offset = 1;
 	cursor_position_x = 0;
-	cursor_position_y_first = 0;
-	cursor_position_y_second = 0;
+	cursor_position_y_first = height / 2 - cursor_height;
+		cursor_position_y_second = height / 2 + cursor_height / 2;
 	
 	is_active = false;
 	
@@ -42,6 +50,7 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	image_alpha = 1;
 	
 	surface = undefined;
+	surface_width = 0;
 	
 	default_text_offset_x = 5;
 	default_text_offset_y = height / 2;
@@ -55,10 +64,21 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	on_activating_mouse = function() {}
 	on_deactivating_mouse = function() {}
 	
-	start_rendering_char_index = 0;
+	beginning_rendering_char_index = 0;
+	
+	time_to_fast_input_char = 15;
+	delay_fast_input_char = 3;
+	is_fast_input = false;
+	is_can_input = false;
+	
+	timer_fast_input_char = Timer(time_to_fast_input_char, function() {
+		is_fast_input = true;
+	});
+	timer_fast_input_char_delay = Timer(delay_fast_input_char, function() {
+		is_can_input = true;
+	});
 	
 	inputs = {
-		input_char: __InputTextBox(vk_anykey),
 		cursor_moving_right: __InputTextBox(vk_right),
 		cursor_moving_left: __InputTextBox(vk_left),
 		deleting_left: __InputTextBox(vk_backspace),
@@ -70,25 +90,29 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		copy_text: __InputTextBox(ord("C"), vk_control),
 		paste_text: __InputTextBox(ord("V"), vk_control),
 	}
-	
+
+	self.init();
+
 	static init = function() {
 		surface = surface_create(width - default_text_offset_x * 2, height);
+		surface_width = surface_get_width(surface);
 		
 		if (is_desktop) {
-			inputs.input_char.on_input = function() {
-				if (!string_is_empty(keyboard_string)) {
-					cursor_position++;
-					add_char(string_char_at(keyboard_string, 1), cursor_position);
-					
-					keyboard_string = "";
-				}
-			}
-		
 			inputs.deleting_left.on_input = function() {
+				if (has_selecting_text()) {
+					remove_selected_text();
+					return;
+				}
+				
 				remove_char(cursor_position);
 			}
 		
 			inputs.deleting_right.on_input = function() {
+				if (has_selecting_text()) {
+					remove_selected_text();
+					return;
+				}
+				
 				remove_char(cursor_position + 1, false);
 			}
 		
@@ -109,15 +133,21 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 			}
 		
 			inputs.all_select.on_input = function() {
-				
+				selecting_all();
 			}
 		
 			inputs.copy_text.on_input = function() {
+				if (!has_selecting_text()) return;
 				
+				return clipboard_set_text(get_selecting_text());
 			}
 		
 			inputs.paste_text.on_input = function() {
+				var text = clipboard_get_text();
+				if (string_is_empty(text)) return;
 				
+				var position = !has_selecting_text() ? cursor_position + 1 : selecting_position.beginning;
+				paste_text(text, position);
 			}
 		
 			inputs.all_select_mouse.is_mouse = true;
@@ -167,6 +197,29 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		for (var i = 0; i < array_length(array_inputs); i++) {
 			inputs[$ array_inputs[i]].update();
 		}
+		
+		// input char
+		if (keyboard_check_pressed(vk_anykey)) {
+			var str = keyboard_string;
+			is_fast_input = false;
+			input_char();
+			
+			if (get_char(text_length) != str) {
+				timer_fast_input_char.stop(true);
+				return;
+			}
+			
+			timer_fast_input_char.start();
+		}
+		
+		if (keyboard_check(vk_anykey) && is_can_input && is_fast_input) {
+			is_can_input = false;
+			timer_fast_input_char_delay.reset();
+			input_char();
+		}
+		
+		timer_fast_input_char.update();
+		timer_fast_input_char_delay.update();
 	}
 	
 	static draw = function(position_x, position_y) {
@@ -191,6 +244,14 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		// Cursor
 		if (is_active && is_show_cursor) {
 			draw_line_width(cursor_position_x, cursor_position_y_first, cursor_position_x, cursor_position_y_second, cursor_width);
+		}
+		
+		// Selecting
+		
+		if (has_selecting_text()) {
+			draw_set_alpha(0.7);
+			draw_rectangle(selecting_rectangle_position.beginning, 0, selecting_rectangle_position.ending, height, false);
+			draw_set_alpha(1);
 		}
 		
 		result_text = text_rendering;
@@ -222,62 +283,65 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	
 	static input_char = function() {
 		if (!string_is_empty(keyboard_string)) {
-			is_show_cursor = true;
-			cursor_blink_time = 0;
-				
-			add_text_in_position_in_text(string_char_at(keyboard_string, string_length(keyboard_string)), cursor_position);
+			var position = !has_selecting_text() ? cursor_position + 1 : selecting_position.beginning;
+			
+			add_char(string_char_at(keyboard_string, 1), position);				
 			keyboard_string = "";
 		}
 	}
 	
 	static get_rendering_text = function() {
 		var real_width = get_real_width();
-		var lenght = 0;
-		var text1 = "";
-		var text2 = "";
+		var rendering_width = 0;
+		var text_part_1 = "";
+		var text_part_2 = "";
 		var index = cursor_position;
 		
-		while (lenght < real_width) {
-			start_rendering_char_index = index;
+		while (rendering_width < real_width) {
+			beginning_rendering_char_index = index;
 			
 			if (index <= 0) { 
-				start_rendering_char_index = 1;
+				beginning_rendering_char_index = 1;
 				break;
 			}
 			
 			var char = string_char_at(text, index);
-			lenght += char_get_width(char, font, true);
-			text1 += char;
+			rendering_width += char_get_width(char, font, true);
+			text_part_1 += char;
 			index--;
 		}
 		
-		text1 = string_reverse(text1);
+		text_part_1 = string_reverse(text_part_1);
 		index = cursor_position + 1;
 		
-		while (lenght < real_width) {
+		while (rendering_width < real_width) {
 			if (index > text_length) break; 
 			
 			var char = string_char_at(text, index);
-			lenght += char_get_width(char, font, true);
-			text2 += char;
+			rendering_width += char_get_width(char, font, true);
+			text_part_2 += char;
 			index++;
 		}
 		
-		return text1 + text2;
+		return text_part_1 + text_part_2;
 	}
 	
 	static get_real_width = function() {
 		return width - default_text_offset_x * 2;
 	}
 	
-	static check_free_box = function() {
+	static has_empty_space = function() {
 		return !(text_width > get_real_width());
 	}
 	
 	static update_char_widths = function() {
 		for (var i = 1; i <= text_rendering_length; i++) {
-			char_rendering_widths[i] = string_char_at(text_rendering, i);
+			char_rendering_widths[i] = string_width(string_char_at(text_rendering, i));
 		}
+	}
+	
+	static get_char = function(index) {
+		return string_char_at(text, index);
 	}
 	
 	static add_char_in_end = function(char) {
@@ -289,9 +353,21 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	}
 	
 	static add_char = function(char, position) {
+		remove_selected_text();
 		text = string_insert(char, text, position);
 		is_show_cursor = true;
 		cursor_blink_time = 0;
+		cursor_position += 1;
+		
+		update_state();
+	}
+	
+	static paste_text = function(str, position) {
+		remove_selected_text();
+		text = string_insert(str, text, position);
+		is_show_cursor = true;
+		cursor_blink_time = 0;
+		cursor_position += string_length(str);
 		
 		update_state();
 	}
@@ -311,6 +387,21 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		if (is_move_cursor || cursor_position == text_length) {
 			cursor_position--;
 		}
+		
+		reset_selecting();
+		update_state();
+	}
+	
+	static remove_selected_text = function() {
+		if (!has_selecting_text()) return;
+		remove_part_text(selecting_position.beginning, selecting_position.ending);
+	}
+	
+	static remove_part_text = function(beginning, ending) {
+		text = string_delete(text, beginning, ending - beginning + 1);
+		cursor_position = beginning - 1;
+		reset_selecting();
+		
 		update_state();
 	}
 	
@@ -325,18 +416,72 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 	static change_cursor_position = function(position) {
 		if (position < 0 || position > text_length) return;
 		
+		var old_position = cursor_position;
+		
 		cursor_position = position;
+		is_show_cursor = true;
+		cursor_blink_time = 0;
+		
+		if (has_selecting_text()) {
+			cursor_position = position > old_position ? selecting_position.ending : selecting_position.beginning - 1;
+			reset_selecting();
+		}
+		
 		update_state();
 	}
 	
-	static update_position_cursor = function() {
-		cursor_position_x = string_width(string_copy(text, start_rendering_char_index, cursor_position - (start_rendering_char_index - 1))) + cursor_offset;
-		cursor_position_y_first = height / 2 - cursor_height;
-		cursor_position_y_second = height / 2 + cursor_height / 2;
+	static selecting_all = function() {
+		change_selection(1, text_length)
+	}
+	
+	static change_selection = function(beginning, ending) {
+		selecting_position.beginning = beginning;
+		selecting_position.ending = ending;
+		selecting_rendering_position.beginning = beginning - beginning_rendering_char_index + beginning_rendering_char_index - beginning + 1;
+		selecting_rendering_position.ending = ending - (text_length - text_rendering_length);
+		update_selecting_rectangle_position();
+	}
+	
+	static get_selecting_text = function() {
+		var count = selecting_position.ending - selecting_position.beginning;
+		return string_copy(text, selecting_position.beginning, count) + (count != 0 ? string_char_at(text, selecting_position.ending) : "");
+	}
+	
+	static has_selecting_text = function() {
+		return !string_is_empty(get_selecting_text());
+	}
+	
+	static update_selecting_rectangle_position = function() {
+		var i = 0;
+		var x_beginning = 0;
+		var x_ending = 0;
 		
-		if (!check_free_box() && start_rendering_char_index != 1) {
-			cursor_position_x = surface_get_width(surface) - cursor_width;
+		repeat(array_length(char_rendering_widths)) {
+			if (i + 1 <= selecting_rendering_position.beginning) {
+				x_beginning += char_rendering_widths[i];
+				x_ending += char_rendering_widths[i];
+			}
+			
+			if (i <= selecting_rendering_position.ending) {
+				x_ending += char_rendering_widths[i];
+			}
+			
+			i++;
 		}
+		
+		selecting_rectangle_position.beginning = x_beginning;
+		selecting_rectangle_position.ending = x_ending;
+	}
+	
+	static reset_selecting = function() {
+		change_selection(0, 0);
+	}
+	
+	static update_position_cursor = function() {
+		var rendrering_symbols_count = cursor_position - beginning_rendering_char_index + 1;
+		var rendering_text = string_copy(text, beginning_rendering_char_index, rendrering_symbols_count);
+		cursor_position_x = string_width(rendering_text) + cursor_offset;
+		cursor_position_x = min(cursor_position_x, surface_width - cursor_width);
 	}
 	
 	static update_state = function() {
@@ -352,7 +497,7 @@ function ClassUIInputBox(image, default_text, width, height, is_show_text) const
 		update_char_widths();
 		update_position_cursor();
 		
-		if (!check_free_box()) {
+		if (!has_empty_space()) {
 			var real_width = get_real_width();
 			text_left_shift = text_rendering_width - real_width;
 		}

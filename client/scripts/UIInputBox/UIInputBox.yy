@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "UIInputBox1",
+  "name": "UIInputBox",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

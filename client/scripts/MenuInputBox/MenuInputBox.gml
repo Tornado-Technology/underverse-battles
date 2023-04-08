@@ -24,7 +24,7 @@ function ClassMenuInputBox(key_translate, show_text, inputbox, defaultText) : Cl
 	
 	static init = function() {
 		if (inputbox == undefined) {
-			inputbox = UIInputBox(inputbox_sprite, defaultText, inputbox_width, inputbox_height, show_text);
+			inputbox = new UIInputBox(inputbox_sprite, defaultText, inputbox_width, inputbox_height, show_text);
 		}
 		
 		inputbox.show_text = show_text;

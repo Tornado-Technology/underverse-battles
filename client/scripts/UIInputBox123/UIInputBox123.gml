@@ -1,5 +1,5 @@
 function UIInput1Box(image, default_text, width, height, is_show_text = true) {
-	var instance = new ClassUIInputBox(image, default_text, width, height, is_show_text);
+	var instance = new ClassUIInp1utBox(image, default_text, width, height, is_show_text);
 	instance.init();
 	
 	return instance;
