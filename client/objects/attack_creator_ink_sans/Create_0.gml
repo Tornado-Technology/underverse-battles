@@ -10,8 +10,6 @@ _shift = 0;
 
 _inst = noone;
 
-side = 0;
-
 new_warning = false;
 
 event_user(4);

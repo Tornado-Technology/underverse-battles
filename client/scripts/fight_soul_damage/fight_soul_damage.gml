@@ -12,7 +12,7 @@ function fight_soul_damage(_damage, _destroy = false, _inst) {
 	if (soul.invincibility > 0) return;
 	
 	//Dtime check
-	if (soul_invulnerability <= 1) {
+	if (soul.invincibility <= 1) {
 		_damage *= round(dtime);
 	}
 	

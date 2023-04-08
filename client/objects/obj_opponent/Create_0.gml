@@ -1,5 +1,5 @@
 name = -1;
-id_ = -1;
+_id = -1;
 character_name = "";
 character_skin = "";
 rating = -1;
