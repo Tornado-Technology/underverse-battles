@@ -74,6 +74,9 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	
 	// mouse selecting
 	is_clicked = false;
+	previous_position_x = 0;
+	beginning_char_selecting_index = 0;
+	is_selecting_mouse = false;
 	
 	time_to_fast_input_char = 15;
 	delay_fast_input_char = 3;
@@ -170,10 +173,12 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	static update = function(position_x, position_y) {
 		self.position_x = position_x;
 		self.position_y = position_y
-		var is_click = mouse_check_button_pressed(mb_left);
+		var is_click_pressed = mouse_check_button_pressed(mb_left);
+		var is_click = mouse_check_button(mb_left);
+		var _mouse_gui_x = mouse_gui_x;
 		mouse_hover = point_in_rectangle_gui(position_x, position_y, position_x + width, position_y + height);
 		
-		if (mouse_hover && is_click && !is_active) {
+		if (mouse_hover && is_click_pressed && !is_active) {
 			enable();
 			on_activating_mouse();
 			
@@ -184,7 +189,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		
 		if (!is_active) return;
 		
-		if (!mouse_hover && is_click && is_active) {
+		if (!mouse_hover && is_click_pressed && is_active) {
 			disable();
 		}
 		
@@ -206,19 +211,52 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		}
 		
 		// all selecting mouse
-		if (mouse_check_button_pressed(mb_left) && !string_is_empty(text)) {
-			if (is_clicked) {
+		if (is_click_pressed && !string_is_empty(text)) {
+			if (is_clicked && previous_position_x == _mouse_gui_x) {
 				selecting_all();
 			}
 			
+			if (is_clicked && previous_position_x != _mouse_gui_x) {
+				is_clicked = false;
+			}
+			
 			is_clicked = true;
+			previous_position_x = _mouse_gui_x;
 		}
 		
 		// mouse selection
 		var founded_index = find_char_from_mouse();
 		
-		if (founded_index != undefined && mouse_check_button(mb_left)) {
-			founded_index--;
+		if (founded_index != undefined) {
+			founded_index++;
+		}
+		
+		if (founded_index != undefined && is_click && !is_click_pressed) {
+			if (!is_selecting_mouse && previous_position_x != _mouse_gui_x) {
+				change_selection_from_rendering(founded_index, founded_index);
+				beginning_char_selecting_index = founded_index;
+				is_selecting_mouse = true;
+			}
+			
+			if (is_selecting_mouse) {
+				var is_revers = founded_index < beginning_char_selecting_index;
+				change_selection_from_rendering(is_revers ? founded_index : beginning_char_selecting_index, is_revers ? beginning_char_selecting_index : founded_index);
+			}
+		}
+		
+		if (is_selecting_mouse && !is_click) {
+			is_selecting_mouse = false;
+		}
+		
+		// moving mouse cursor
+		if (is_click_pressed && founded_index != undefined) {
+			var pos = founded_index + beginning_rendering_char_index - 2
+			
+			if (founded_index == array_length(char_rendering_position_x)) {
+				pos = char_rendering_position_x[founded_index - 1] + char_rendering_widths[founded_index - 1] / 2 < _mouse_gui_x ? pos + 1 : pos;
+			}
+			
+			change_cursor_position(pos, false);
 		}
 		
 		// input char
@@ -441,7 +479,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		change_cursor_position(cursor_position - 1);
 	}
 	
-	static change_cursor_position = function(position) {
+	static change_cursor_position = function(position, change_position_from_selecting_text = true) {
 		if (position < 0 || position > text_length) return;
 		
 		var old_position = cursor_position;
@@ -450,10 +488,10 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		is_show_cursor = true;
 		cursor_blink_time = 0;
 		
-		if (has_selecting_text()) {
+		if (has_selecting_text() && change_position_from_selecting_text) {
 			cursor_position = position > old_position ? selecting_position.ending : selecting_position.beginning - 1;
-			reset_selecting();
 		}
+		reset_selecting();
 		
 		update_state();
 	}
@@ -466,7 +504,19 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		selecting_position.beginning = beginning;
 		selecting_position.ending = ending;
 		selecting_rendering_position.beginning = beginning - beginning_rendering_char_index + beginning_rendering_char_index - beginning + 1;
-		selecting_rendering_position.ending = ending - (text_length - text_rendering_length);
+		selecting_rendering_position.ending = ending - text_length + text_rendering_length;
+		if (beginning == 0 || ending == 0) {
+			selecting_rendering_position.beginning = beginning;
+			selecting_rendering_position.ending = ending;
+		}
+		update_selecting_rectangle_position();
+	}
+	
+	static change_selection_from_rendering = function(beginning, ending) {
+		selecting_rendering_position.beginning = beginning 
+		selecting_rendering_position.ending = ending 
+		selecting_position.beginning = beginning + beginning_rendering_char_index - 1;
+		selecting_position.ending = ending + beginning_rendering_char_index - 1;
 		update_selecting_rectangle_position();
 	}
 	
