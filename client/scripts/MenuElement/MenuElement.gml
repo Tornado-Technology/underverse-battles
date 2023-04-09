@@ -88,4 +88,6 @@ function ClassMenuElement(key_translate) constructor {
 		text = translate_get("Menu." + key_translate);
 		text_width = string_real_width(text, font_determination);
 	}
+	
+	static destroy = function() {}
 }

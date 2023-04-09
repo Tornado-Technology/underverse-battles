@@ -102,6 +102,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		paste_text: __InputTextBox(ord("V"), vk_control),
 	}
 
+	on_data_connection = undefined;
+
 	self.init();
 
 	static init = function() {
@@ -163,11 +165,19 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		}
 		
 		if (is_mobile) {
-			global.virtual_keyboard.on_data.connect(function(args) {
+			on_data_connection = global.virtual_keyboard.on_data.connect(function(args) {
 				if (!is_active) return;
 				
+				remove_part_text(1, text_length);
+				paste_text(args[0], 1);
+				is_active = false;
 			});
 		}
+	}
+	
+	static destroy = function() {
+		if (!is_mobile) return;
+		global.virtual_keyboard.on_data.disconnect(on_data_connection);
 	}
 	
 	static update = function(position_x, position_y) {
@@ -183,7 +193,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 			on_activating_mouse();
 			
 			if (is_mobile) {
-				get_string_async("Enter ", text);
+				get_string_async(default_text, text);
 			}
 		}
 		
@@ -481,6 +491,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	
 	static change_cursor_position = function(position, change_position_from_selecting_text = true) {
 		if (position < 0 || position > text_length) return;
+		if (position == cursor_position) return;
 		
 		var old_position = cursor_position;
 		
@@ -600,7 +611,6 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	}
 	
 	static update_position_cursor = function() {
-		is_clicked = false;
 		var rendrering_symbols_count = cursor_position - beginning_rendering_char_index + 1;
 		var rendering_text = string_copy(text, beginning_rendering_char_index, rendrering_symbols_count);
 		cursor_position_x = string_width(rendering_text) + cursor_offset;

@@ -62,4 +62,8 @@ function ClassMenuInputBox(key_translate, show_text, inputbox, defaultText) : Cl
 		
 		base_draw(position_x, position_y, menu_instance);
 	}
+	
+	static destroy = function() {
+		inputbox.destroy();
+	}
 }
