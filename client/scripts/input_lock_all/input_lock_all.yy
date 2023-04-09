@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "input_reset_all_working_key",
+  "name": "input_lock_all",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

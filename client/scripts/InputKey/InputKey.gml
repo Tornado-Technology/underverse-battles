@@ -20,6 +20,7 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	self.default_keys = keys;
 	self.rebinding = rebinding;
 	self.data_key = data_key;
+	is_locked = false;
 	working_key = undefined;
 
 	/// @param {Function} callabck
@@ -40,6 +41,8 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	
 	/// @return {Bool}
 	static check_pressed = function() {
+		if (is_locked) return false;
+		
 		return __check__(function(key) {
 			return key.device.check_pressed(key.value);
 		});
@@ -47,6 +50,8 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	
 	/// @return {Bool}
 	static check_held = function() {
+		if (is_locked) return false;
+		
 		return __check__(function(key) {
 			return key.device.check_held(key.value);
 		});
@@ -54,6 +59,8 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	
 	/// @return {Bool}
 	static check_released = function() {
+		if (is_locked) return false;
+		
 		return __check__(function(key) {
 			return key.device.check_released(key.value);
 		});
