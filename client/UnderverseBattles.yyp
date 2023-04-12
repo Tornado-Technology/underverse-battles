@@ -658,7 +658,6 @@
     {"id":{"name":"UIControllerJoystick","path":"scripts/UIControllerJoystick/UIControllerJoystick.yy",},"order":2,},
     {"id":{"name":"spr_bone_cross","path":"sprites/spr_bone_cross/spr_bone_cross.yy",},"order":1,},
     {"id":{"name":"UIImage","path":"scripts/UIImage/UIImage.yy",},"order":7,},
-    {"id":{"name":"UIInputBox123","path":"scripts/UIInputBox123/UIInputBox123.yy",},"order":0,},
     {"id":{"name":"spr_special_attack_sans","path":"sprites/spr_special_attack_sans/spr_special_attack_sans.yy",},"order":3,},
     {"id":{"name":"spr_sans_on_byke_attack2_up_left","path":"sprites/spr_sans_on_byke_attack2_up_left/spr_sans_on_byke_attack2_up_left.yy",},"order":14,},
     {"id":{"name":"UIScroll","path":"scripts/UIScroll/UIScroll.yy",},"order":9,},
