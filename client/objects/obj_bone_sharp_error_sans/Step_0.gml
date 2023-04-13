@@ -1,14 +1,8 @@
 event_inherited();
 
 if (is_falling) {
-	if (y < obj_battle_border.y + obj_battle_border.down - 10) {
-		hspd += acceleration;
-		speed_const = hspd;
-	}
-	else {
-		audio_play_sound_plugging(snd_projectile_hit);
-		is_falling = false;
-	}
+	if (speed_const < speed_max)
+	speed_const += acceleration;
 }
 
 if (is_moving_back) {
@@ -18,15 +12,30 @@ if (is_moving_back) {
 	}
 }
 
+if (can_stuck) {
+	if (y > obj_battle_border.y + obj_battle_border.down - 5) {
+		if (speed_const != 0) {
+			speed_const = 0;
+			is_falling = false;
+			can_stuck = false;
+			audio_play_sound_plugging(snd_projectile_hit);
+		}
+	}
+}
+
 if (place_meeting(x, y, obj_platform)) {
 	platform = instance_place(x, y, obj_platform);
 	hspd_inert = platform.const_speed;
-	if (image_angle == 0)
-		if (platform.y > y - 20)
-			can_move = false;
-	if (image_angle == 180)
-		if (platform.y < y + 20)
-			can_move = false;
+	
+	var depth_stuck = 20;
+	if (is_falling) {
+		if (image_angle == 0 && platform.y > y - depth_stuck ||
+			image_angle == 180 && platform.y < y + depth_stuck) {
+			audio_play_sound_plugging(snd_projectile_hit);
+			speed_const = 0;
+			is_falling = false;
+		}
+	}
 }
 
-x += hspd_inert;
+x += hspd_inert * dtime;

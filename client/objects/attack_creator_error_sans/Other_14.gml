@@ -2,18 +2,24 @@
 
 // Падающие кости
 if (_id == 0 && attack_num == 0 || _id == 0 && attack_num == 3) {
-	update_0_0 = function (pow) {
+	update_0_0 = function (pow, side) {
+		var bone_y = _border.y - _border.up - 15;
+		if (side == dir.down) bone_y = _border.y + _border.down + 15;
+		
 		var rand_place = irandom_range(0, 2);
 		if (rand_place == 0)
-			_bones[num] = instance_create_depth(_soul.x, _border.y - _border.up - 15, fight_depth.bullet_outside, bone_sharp_obj);
+			_bones[num] = instance_create_depth(_soul.x, bone_y, fight_depth.bullet_outside, bone_sharp_obj);
 		else {
 			var rand_x = irandom_range(_border.x - _border.left, _border.x + _border.right);
-			_bones[num] = instance_create_depth(rand_x, _border.y - _border.up - 15, fight_depth.bullet_outside, bone_sharp_obj);
+			_bones[num] = instance_create_depth(rand_x, bone_y, fight_depth.bullet_outside, bone_sharp_obj);
 		}
-		_bones[num].image_angle = 180;
-		_bones[num].direction = image_angle - 90;
-		_bones[num].set_stuck_floor(2, 0.04 + pow * 0.02);
-		++num;
+		
+		var bone_angle = 180;
+		if (side == dir.down) bone_angle = 0;
+		_bones[num].image_angle = bone_angle;
+		_bones[num].direction = bone_angle + 90;
+		_bones[num].set_fall(2, 0.04 + pow * 0.02);
+		num++;
 	}
 }
 

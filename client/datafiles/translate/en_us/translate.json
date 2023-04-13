@@ -560,7 +560,7 @@
         "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "The Crusader",
-        "Description": "" }
+        "Description": "Rotating bones appear in the center of the box, gasterblasters and small bones shoot towards the soul" }
     },
     "CrossXEvent": {
       "Name": "Cross",
@@ -579,8 +579,8 @@
         "Name": "Gasterblasters",
         "Description": "Firing damaging gasterblasters" },
       "SpecialAttack": {
-        "Name": "X Event",
-        "Description": "" }
+        "Name": "The Crusader",
+        "Description": "Rotating bones appear in the center of the box, gasterblasters and small bones shoot towards the soul" }
     },
     "XtaleChara": {
       "Name": "X Chara",

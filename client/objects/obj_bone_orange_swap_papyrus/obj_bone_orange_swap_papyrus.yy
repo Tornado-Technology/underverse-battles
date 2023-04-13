@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_battle_orange_attack",
-    "path": "objects/obj_battle_orange_attack/obj_battle_orange_attack.yy",
+    "name": "obj_bone_orange_swap_sans",
+    "path": "objects/obj_bone_orange_swap_sans/obj_bone_orange_swap_sans.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

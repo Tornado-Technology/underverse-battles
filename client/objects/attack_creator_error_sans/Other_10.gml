@@ -8,7 +8,7 @@ switch (attack_num) {
 		
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
-		update_0_0(_power);
+		update_0_0(_power, dir.up);
 		time_source_start(time_source_update_0_0);
 		time_source_start(time_source_update_destroy_0_0);
 		break;
@@ -46,8 +46,8 @@ switch (attack_num) {
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 		var main_speed = 1 + _power * 0.2;
-		create_moving_platforms(_border.x - _border.left - 40, _border.y + 20, 2, 10, 120, main_speed);
-		create_moving_platforms(_border.x + _border.right + 40, _border.y - 20, 2, 10, 120, -main_speed);
+		create_moving_platforms(_border.x - _border.left - 40, _border.y - 20, 2, 10, 120, main_speed);
+		create_moving_platforms(_border.x + _border.right + 40, _border.y + 20, 2, 10, 120, -main_speed);
 		
 		update_0_3(_power);
 		time_source_start(time_source_update_0_3);

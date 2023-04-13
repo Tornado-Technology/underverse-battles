@@ -2,7 +2,7 @@
 _time++;
 
 if (_time == 1) {
-	border_decrease = 20;
+	var  border_decrease = 20;
 	_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 	if (battle_border_start_animation_end()) exit;
 	

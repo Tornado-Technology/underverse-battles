@@ -167,15 +167,51 @@ if (_id == 2) {
 
 // Крестоносец
 if (_id == 3) {
+	time_source_update_3_0 = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
+		update_3_0();
+		time_source_start(time_source_update_3_1);
+		time_source_start(time_source_update_stop_3_1);
+	});
 	var period = 50;
 	var amount = 2;
-	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-		update_3_0();
+	time_source_update_3_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update_3_1();
 	}, [], amount);
 	
-	time_source_update_destroy_3_0 = time_source_create(time_source_game, period * (amount + 1) / 60 + 0.5, time_source_units_seconds, function () {
-		time_source_stop(time_source_update_3_0);
-		//time_source_start(time_source_update_3_1);
+	time_source_update_stop_3_1 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+		time_source_start(time_source_update_3_2);
+		time_source_start(time_source_update_stop_3_2);
+	});
+	
+	time_source_update_stop_3_3 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+		update_3_3();
+		time_source_start(time_source_update_3_4);
+	});
+	
+	period = 20;
+	amount = 5;
+	time_source_update_3_2 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update_3_2();
+	}, [], amount);
+	
+	time_source_update_stop_3_2 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+		time_source_start(time_source_update_3_1);
+		time_source_start(time_source_update_stop_3_3);
+	});
+	
+	time_source_update_3_4 = time_source_create(time_source_game, 1.2, time_source_units_seconds, function () {
+		update_3_4();
+		time_source_start(time_source_update_3_5);
+		time_source_start(time_source_update_destroy_3_5);
+	});
+	
+	period = 30;
+	amount = 3;
+	time_source_update_3_5 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update_3_5();
+	}, [], amount);
+	
+	time_source_update_destroy_3_5 = time_source_create(time_source_game, period * amount / 60 + 1.5, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }

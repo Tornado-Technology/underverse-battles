@@ -45,7 +45,7 @@ if (_id == 0 && attack_num == 1) {
 // Две кости
 if (_id == 0 && attack_num == 2 || _id == 3) {
 	update_0_2 = function(pow) {
-		var bone_speed = 1.5 + 0.3;
+		var bone_speed = 1.5 + 0.2 * pow;
 		var bone_size = _id == 0 ? 5.4 : 4.2;
 		if (_side == dir.left) {
 			create_bone(_border.x - _border.left - 20, _border.y - _border.up - 20, bone_obj, bone_speed, bone_size, 0, 180);
@@ -76,7 +76,7 @@ if (_id == 0 && attack_num == 3) {
 	
 	update_0_3_2 = function(pow) {
 		if (pow >= 3) {
-			create_aiming_gasterblaster(obj_gasterblaster_aiming_sans, _soul);
+			create_aiming_gasterblaster(aim_gb_obj, _soul);
 			time_source_start(time_source_update_0_3_2);
 		}
 	}
@@ -210,8 +210,7 @@ if (_id == 2 || _id == 3) {
 	update_2_1 = function() {
 		var i = 0;
 		repeat(num) {
-			_bones[i].scale_const = bone_scale;
-			_bones[i].scale_time = 0.2;
+			_bones[i].change_scale(bone_scale, 0.2);
 			++i;
 		}
 		instance_destroy(obj_warning);
@@ -221,8 +220,7 @@ if (_id == 2 || _id == 3) {
 	update_2_2 = function() {
 		var i = 0;
 		repeat(num) {
-			_bones[i].scale_const = 1;
-			_bones[i].scale_time = 0.2;
+			_bones[i].change_scale(1, 0.2);
 			++i;
 		}
 	}
