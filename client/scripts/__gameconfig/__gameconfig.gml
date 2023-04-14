@@ -1,5 +1,5 @@
 #macro game_name "UnderverseBattles"
-#macro game_version "v2.0.11"
+#macro game_version "v2.1.0"
 #macro game_build "Windows x64"
 
 #macro default_mode (os_get_config() == "Default")
