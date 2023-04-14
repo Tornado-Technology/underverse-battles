@@ -26,7 +26,7 @@ switch (attack_num) {
 		break;
 		
 	case 2:	// Двигающаяся арена
-		border_decrease = 40;
+		var border_decrease = 40;
 		_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 		if (battle_border_start_animation_end()) exit;
 		

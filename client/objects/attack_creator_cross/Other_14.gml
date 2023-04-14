@@ -51,10 +51,35 @@ if (_id == 1 && attack_num == 1) {
 // Крестоносец
 if (_id == 3) {
 	update_3_0 = function() {
+		var bone_angle_speed = choose(1, -1);
+		_bones[0].angle_speed = bone_angle_speed;
+		_bones[1].angle_speed = bone_angle_speed;
+	}
+	
+	update_3_1 = function() {
 		create_aiming_gasterblaster(aim_gb_obj, _soul);
 	}
 	
-	update_3_1 = function(pow) {
-		create_aiming_gasterblaster(aim_gb_obj, _soul);
+	update_3_2 = function() {
+		var rand_side = rand_side_from(_border.x - _border.left - 15, _border.y - _border.up - 15, _border.x + _border.right + 15, _border.y + _border.down + 15);
+		var bone_dir = point_direction(rand_side[0], rand_side[1], _soul.x, _soul.y);
+		var bone_speed = 2.2;
+		create_bone(rand_side[0], rand_side[1], bone_topref_obj, bone_speed, 1, bone_dir, bone_dir - 90);
+		audio_play_sound_plugging(snd_projectile);
+	}
+	
+	update_3_3 = function() {
+		_bones[0].change_scale(0, 0.1);
+		_bones[1].change_scale(0, 0.1);
+	}
+	
+	update_3_4 = function() {
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.blue);
+		instance_destroy(_bones[0]);
+		instance_destroy(_bones[1]);
+	}
+	
+	update_3_5 = function() {
+		repeat (2) create_aiming_gasterblaster(aim_gb_obj, _soul);
 	}
 }

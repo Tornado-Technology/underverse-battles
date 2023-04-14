@@ -8,8 +8,8 @@ universe	= "Gamatale";
 creator		= "Fortherehero";
 
 // HP
-max_hp = 70;
-hp = 70;
+max_hp = 80;
+hp = 80;
 
 // Damage
 damage = 1;
