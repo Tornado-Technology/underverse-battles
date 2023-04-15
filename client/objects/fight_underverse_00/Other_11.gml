@@ -16,4 +16,3 @@ timer_switch(false);
 // Create players
 player[0] = player_object[0];
 player[1] = player_object[1];
-

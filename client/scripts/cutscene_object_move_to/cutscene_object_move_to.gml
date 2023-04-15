@@ -11,5 +11,5 @@ function cutscene_object_move_to(_obj, _x, _y, _speed) {
 		return (obj_x == _x) && (obj_y == _y)
 	}
 	
-	return undefined;
+	return true;
 }

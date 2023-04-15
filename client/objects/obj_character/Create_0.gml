@@ -58,7 +58,27 @@ special_action = SpecialAction("", spr_empty);
 // Special
 use_gravity_attack = false;
 
+// Movement
+moving = false;
+x_new = x;
+y_new = y;
+speed_const = 0;
+
 // Methods
+move = function(_x, _y, _speed) {
+	moving = true;
+	x_new = x + _x;
+	y_new = y + _y;
+	speed_const = _speed;
+};
+
+skip_moving = function () {
+	moving = false;
+	x = x_new;
+	y = y_new;
+	speed_const = 0;
+};
+
 on_dodged = function(player_id) {};
 on_taking_damage = function(damage) { return damage };
 on_taking_soul_damage = function(soul, damage) { return damage };

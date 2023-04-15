@@ -7,8 +7,8 @@ function camera_set_position(vector){
         vector = Vector2(_x, _y);
     }
 	
-    camera.x = vector.x;
-    camera.y = vector.y; 
+	camera.overwrite_position = vector;
+    camera.is_using_speed = false;
 }
 
 function camera_get_position() {

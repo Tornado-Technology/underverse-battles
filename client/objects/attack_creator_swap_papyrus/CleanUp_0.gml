@@ -51,3 +51,19 @@ if (_id == 2 && attack_num == 1) {
 	time_source_destroy(time_source_update_2_1_3);
 	time_source_destroy(time_source_update_destroy_2_1);
 }
+
+if (_id == 3) {
+	time_source_destroy(time_source_update_3_0);
+	time_source_destroy(time_source_update_3_1);
+	time_source_destroy(time_source_update_3_2);
+	time_source_destroy(time_source_update_destroy_3_2);
+	
+	time_source_destroy(time_source_update_3_3);
+	time_source_destroy(time_source_update_destroy_3_3);
+
+	time_source_destroy(time_source_update_destroy_3_4);
+	
+	time_source_destroy(time_source_update_3_5);
+	time_source_destroy(time_source_update_change_3_5);
+	time_source_destroy(time_source_update_destroy_3_5);
+}

@@ -31,7 +31,6 @@ credits = [
 	"Sayki",
 	"Anastasia_Color",
 	"Sock_Police",
-	"GOS",
 	"",
 	str_yellow + translate_get(key + "Localizer"),
 	"AzzyTheTarned",

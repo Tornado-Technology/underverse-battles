@@ -13,7 +13,7 @@ if (!started) {
 	bone_scale = 2.8;
 	if (attack_num == 1) bone_scale = 4.4;
 	
-	_side = choose(dir.up, dir.down);
+	_side = choose(dir.up, dir.left);
 	
 	update_2_0(3);
 	time_source_start(time_source_update_3_0);
