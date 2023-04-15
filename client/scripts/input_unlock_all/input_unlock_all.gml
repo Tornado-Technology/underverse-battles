@@ -1,4 +1,4 @@
-function input_unlock_all(){
+function input_unlock_all() {
 	if (!variable_global_exists("__inputs")) {
 		global.__inputs = {};
 		return false;

@@ -98,6 +98,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		home: __InputTextBox(vk_home),
 		_end: __InputTextBox(vk_end),
 		all_select: __InputTextBox(ord("A"), vk_control),
+		cut_text: __InputTextBox(ord("X"), vk_control),
 		copy_text: __InputTextBox(ord("C"), vk_control),
 		paste_text: __InputTextBox(ord("V"), vk_control),
 	}
@@ -122,7 +123,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		
 			inputs.deleting_right.on_input = function() {
 				if (has_selecting_text()) {
-					remove_selected_text();
+					
 					return;
 				}
 				
@@ -154,6 +155,14 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 				
 				return clipboard_set_text(get_selecting_text());
 			}
+			
+			inputs.cut_text.on_input = function() {
+				if (!has_selecting_text()) return;
+			
+				clipboard_set_text(get_selecting_text());
+				
+				remove_selected_text();
+			}
 		
 			inputs.paste_text.on_input = function() {
 				var text = clipboard_get_text();
@@ -164,15 +173,14 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 			}
 		}
 		
-		if (is_mobile) {
-			on_data_connection = global.virtual_keyboard.on_data.connect(function(args) {
-				if (!is_active) return;
+		if (!is_mobile) return;
+		on_data_connection = global.virtual_keyboard.on_data.connect(function(args) {
+			if (!is_active) return;
 				
-				remove_part_text(1, text_length);
-				paste_text(args[0], 1);
-				is_active = false;
-			});
-		}
+			remove_part_text(1, text_length);
+			paste_text(args[0], 1);
+			is_active = false;
+		});
 	}
 	
 	static destroy = function() {
@@ -269,6 +277,10 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 			change_cursor_position(pos, false);
 		}
 		
+		if (founded_index == undefined && is_click_pressed) {
+			change_cursor_position(text_length, false);
+		}
+		
 		// input char
 		if (keyboard_check_pressed(vk_anykey)) {
 			var str = keyboard_string;
@@ -313,7 +325,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		draw_clear_alpha(0, 0);
 		
 		// Cursor
-		if (is_active && is_show_cursor) {
+		if (is_active && is_show_cursor && !has_selecting_text()) {
 			draw_line_width(cursor_position_x, cursor_position_y_first, cursor_position_x, cursor_position_y_second, cursor_width);
 		}
 		
@@ -348,16 +360,18 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	
 	static disable = function() {
 		is_active = false;
+		reset_selecting();
 		input_unlock_all();
 	}
 	
 	static input_char = function() {
-		if (!string_is_empty(keyboard_string)) {
+		if (!string_is_empty(keyboard_string) && char_is_valid(keyboard_string, font)) {
 			var position = !has_selecting_text() ? cursor_position + 1 : selecting_position.beginning;
 			
-			add_char(string_char_at(keyboard_string, 1), position);				
-			keyboard_string = "";
+			add_char(string_char_at(keyboard_string, 1), position);
 		}
+		
+		keyboard_string = "";
 	}
 	
 	static get_rendering_text = function() {
