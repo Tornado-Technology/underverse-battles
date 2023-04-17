@@ -1,8 +1,3 @@
-with(other) {
-	if (!is_stunned) audio_play_sound_plugging(snd_spare_up);
-	is_stunned = true;
-}
-
 if (other.is_otherplayer_soul) exit;
 
 if (time_create_ink == time_create_ink_max) {

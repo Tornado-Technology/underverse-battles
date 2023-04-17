@@ -1,11 +1,6 @@
-_id = 0;
-_power = 0;
+event_inherited();
 
-character_instance = noone;
-
-_time = 0;
 _period = 1;
-attack_num = 0;
 
 bone_obj = obj_bone_swap_sans;
 bone_orange_obj = obj_bone_orange_swap_sans;
@@ -18,7 +13,7 @@ rand_num = 0;
 _bones = [];
 _shift = 0;
 
-_soul = noone;
-_border = noone;
-
 num = 0;
+
+event_user(4);
+event_user(5);

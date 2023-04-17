@@ -61,8 +61,9 @@ if (place_meeting(x + full_movement_x, y, obj_solid)) {
 	
 	movement_speed_x = 0;
 	
-	if (outside_force_x != 0)
+	if (outside_force_x != 0) {
 		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
+	}
 	
 	outside_force_x = 0;
 	tremble_force_x = 0;
@@ -79,8 +80,9 @@ if (place_meeting(x, y + full_movement_y, obj_solid)) {
 	
 	movement_speed_y = 0;
 	
-	if (outside_force_y != 0)
+	if (outside_force_y != 0) {
 		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
+	}
 		
 	outside_force_y = 0;
 	tremble_force_y = 0;

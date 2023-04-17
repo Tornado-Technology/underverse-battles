@@ -6,6 +6,4 @@ destructible = false;
 _angle = 0;
 depth = fight_depth.bullet;
 
-on_soul_touch = function(soul) {
-
-}
+on_soul_touch = function(soul) {}

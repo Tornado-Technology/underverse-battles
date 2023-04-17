@@ -4,7 +4,7 @@
 if (_id == 0 && attack_num == 0) {
 	var period = 18 - 2 * _power;
 	time_source_update_0_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
-		update_0_0(pow);
+		update_0_0(pow, dir.up);
 	}, [_power], -1);
 	
 	time_source_update_destroy_0_0 = time_source_create(time_source_game, (250 + 20 * _power) / 60, time_source_units_seconds, function () {
@@ -39,9 +39,10 @@ if (_id == 0 && attack_num == 2) {
 
 // Платформы и падающие кости
 if (_id == 0 && attack_num == 3) {
-	var period = 32 - 2 * _power;
+	var period = 32 - 3 * _power;
 	time_source_update_0_3 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
-		update_0_0(pow);
+		var side = choose(dir.up, dir.down);
+		update_0_0(pow, side);
 	}, [_power], -1);
 	
 	time_source_update_0_3_2 = time_source_create(time_source_game, 2 / (1 + _power * 0.2), time_source_units_seconds, function (pow) {

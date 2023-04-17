@@ -18,18 +18,13 @@ if (side_random == dir.right) {
 }
 _soul = create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
 
-var bone_scale = 9.5;
-var bone_dir = point_direction(_border.x - _border.left - 10, _border.y - _border.up - 10, _border.x + _border.right + 10, _border.y + _border.down + 10);
-var bone = create_bone(_border.x - _border.left - 10, _border.y - _border.up - 10, bone_obj, 0, 1, bone_dir, bone_dir - 90);
-bone.scale_const = bone_scale;
-bone.scale_time = 0.1;
-bone_dir = point_direction(_border.x + _border.right + 10, _border.y - _border.up - 10, _border.x - _border.left - 10, _border.y + _border.down + 10);
-bone = create_bone(_border.x + _border.right + 10, _border.y - _border.up - 10, bone_obj, 0, 1, bone_dir, bone_dir - 90);
-bone.scale_const = bone_scale;
-bone.scale_time = 0.1;
+var bone_scale = 9.4;
+_bones[0] = create_bone(_border.x, _border.y, bone_spin_obj, 0, 0, 45, -45);
+_bones[0].change_scale(bone_scale, 0.1);
+_bones[1] = create_bone(_border.x, _border.y, bone_spin_obj, 0, 0, 135, 45);
+_bones[1].change_scale(bone_scale, 0.1);
 audio_play_sound_once(snd_spare_up);
 
 time_source_start(time_source_update_3_0);
-time_source_start(time_source_update_destroy_3_0);
 
 started = true;

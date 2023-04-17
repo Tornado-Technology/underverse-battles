@@ -10,6 +10,8 @@ ability = false;
 is_otherplayer_soul = false;
 skip_frame = 0;
 
+// Collision with projectiles
+list_projectiles = ds_list_create();
 
 blue_attack = false;
 
@@ -30,7 +32,7 @@ invincibility_update = function() {
 // Stun
 is_stunned = false;
 stun = function() {
-	//moveable = false;
+	moveable = false;
 	is_stunned = true;
 	effect_fade(0.1, 1, c_blue, c_blue, true, 0);
 	battle_border_set_color(false, false, c_blue);
