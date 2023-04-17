@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "check_char",
+  "name": "char_is_valid",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

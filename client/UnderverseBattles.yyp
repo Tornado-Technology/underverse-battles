@@ -1160,7 +1160,7 @@
     {"id":{"name":"spr_options_bar_border_outline","path":"sprites/spr_options_bar_border_outline/spr_options_bar_border_outline.yy",},"order":9,},
     {"id":{"name":"spr_options_bar_hp","path":"sprites/spr_options_bar_hp/spr_options_bar_hp.yy",},"order":10,},
     {"id":{"name":"spr_error_sans_defeated","path":"sprites/spr_error_sans_defeated/spr_error_sans_defeated.yy",},"order":8,},
-    {"id":{"name":"check_char","path":"scripts/check_char/check_char.yy",},"order":22,},
+    {"id":{"name":"char_is_valid","path":"scripts/char_is_valid/char_is_valid.yy",},"order":22,},
     {"id":{"name":"spr_options_bar_mana","path":"sprites/spr_options_bar_mana/spr_options_bar_mana.yy",},"order":11,},
     {"id":{"name":"spr_options_bar_stamina","path":"sprites/spr_options_bar_stamina/spr_options_bar_stamina.yy",},"order":12,},
     {"id":{"name":"soul_start_tremble","path":"scripts/soul_start_tremble/soul_start_tremble.yy",},"order":1,},

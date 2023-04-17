@@ -173,15 +173,14 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 			}
 		}
 		
-		if (is_mobile) {
-			on_data_connection = global.virtual_keyboard.on_data.connect(function(args) {
-				if (!is_active) return;
+		if (!is_mobile) return;
+		on_data_connection = global.virtual_keyboard.on_data.connect(function(args) {
+			if (!is_active) return;
 				
-				remove_part_text(1, text_length);
-				paste_text(args[0], 1);
-				is_active = false;
-			});
-		}
+			remove_part_text(1, text_length);
+			paste_text(args[0], 1);
+			is_active = false;
+		});
 	}
 	
 	static destroy = function() {
