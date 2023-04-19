@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "fight_set_enemy_hp",
+  "name": "send_message_in_discord",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Hp",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Hp.yy",
+    "name": "_Network_",
+    "path": "folders/Scripts/_Network_.yy",
   },
 }

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "input_joystick_check",
+  "name": "fight_set_player_power",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Joystick",
-    "path": "folders/Scripts/Local/System/Controls/Joystick.yy",
+    "name": "Power",
+    "path": "folders/Scripts/Local/Fight/Fight/Player/Power.yy",
   },
 }

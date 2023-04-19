@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "fight_remove_enemy_stamina",
+  "name": "fight_remove_player_stamina",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

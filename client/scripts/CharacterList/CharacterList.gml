@@ -30,7 +30,11 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 	
 	static init = function() {
 		var instance = instance_create(object);
-		statistics = instance.get_self();
+		try {
+			statistics = instance.get_self();
+		} catch(error) {
+			logger.warn(error);
+		}
 		
 		on_translate = on_translate_update.connect(function() {
 			name = translate_get("Character." + key + ".Name");
