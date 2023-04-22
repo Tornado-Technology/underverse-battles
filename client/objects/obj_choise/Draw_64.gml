@@ -1,11 +1,11 @@
+event_inherited();
 if (act < 1) exit;
 
 // Reset
 draw_reset();
 
 // Camera
-var camera_position = obj_camera.camera_position;
-var local_camera_position = Vector2(camera_position.x, camera_position.y);
+var local_camera_position = Vector2(0, 0);
 local_camera_position.y += shift;
 
 // Dialog window
@@ -21,8 +21,6 @@ draw_text_ext(local_camera_position.x + 83, local_camera_position.y + 10, str, 1
 //Answer options
 draw_set_halign(fa_left);
 if (act == 2 && pos == string_length(cur_text)) {
-	draw_set_color_selected_button(current_option, 0, c_yellow, c_white);
-	draw_text_ext(local_camera_position.x + 83, local_camera_position.y + 42, answer_options[0], 16, 130);
-	draw_set_color_selected_button(current_option, 1, c_yellow, c_white);
-	draw_text_ext(local_camera_position.x + 83 + 140, local_camera_position.y + 42, answer_options[1], 16, 130);
+	answer_options[0].draw(local_camera_position.x + 123, local_camera_position.y + 62);
+	answer_options[1].draw(local_camera_position.x + 123 + 140, local_camera_position.y + 62);
 }

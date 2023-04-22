@@ -74,6 +74,8 @@ else if (scenario == 18) {
 		fight_set_ui_showing_action_box(false);
 		fight_set_player_input(false);
 		fight_set_pause(true);
+		
+		disable_mobile_ui();
 	
 		/* Next scenario */
 		scenario = 17;
@@ -86,6 +88,8 @@ else if (scenario == 18) {
 			fight_set_player_input(false);
 			fight_set_pause(false);
 			fight_update_state();
+			
+			enable_mobile_ui();
 			
 			start_delay();
 		}
@@ -115,6 +119,8 @@ else if (scenario == 19) {
 	fight_set_pause(false);
 	timer_switch(true);
 	timer_start();
+	
+	enable_mobile_ui();
 
 	/* Next scenario */
 	scenario = 20;

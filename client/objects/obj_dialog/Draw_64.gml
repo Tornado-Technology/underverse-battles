@@ -5,7 +5,7 @@ draw_reset();
 
 // Camera
 var camera_position = obj_camera.camera_position;
-var local_camera_position = Vector2(camera_position.x, camera_position.y);
+var local_camera_position = Vector2(0, 0);
 local_camera_position.y += shift;
 
 // Dialog window
@@ -23,6 +23,4 @@ if (frame != noone) {
 	draw_sprite(frame, 0, local_camera_position.x + 20, local_camera_position.y + 20);
 }	
 //continue arrow
-if (pos > 0 && pos == string_length(cur_text)) {
-	draw_sprite_ext(spr_stat_arrow, 0, local_camera_position.x + 372, local_camera_position.y + 60, 1, 1, 270, c_white, 1);
-}
+skip_arrow.draw(local_camera_position.x + 372, local_camera_position.y + 60, 1, 270);
