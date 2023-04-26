@@ -2,6 +2,9 @@
 scene_id = 0;
 time = 0;
 
+object_movement_x = undefined;
+object_movement_y = undefined;
+
 // Jump
 object_jump_y = undefined;
 object_jumped = false;

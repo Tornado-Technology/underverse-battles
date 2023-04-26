@@ -72,6 +72,10 @@ shift = 100;
 text_name_actions_width = [0, 0, 0];
 text_name_actions_height = [0, 0, 0];
 
+special_button = UIImageButton(spr_empty, function() {
+	obj_fight_input.special_action();
+});
+
 if (is_mobile || mobile_mode) {
 	global.__ui_controls_instance.enable = true;
 	global.__ui_virtual_buttons_instance.is_enable = true;

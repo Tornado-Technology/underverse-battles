@@ -7,5 +7,6 @@ function input_joystick_check_pressed(_input) {
 	var controller = controls.get_controller();
 	
 	if (!controller.has_input(_input)) return false;
+	if (!variable_struct_exists(controller.get_input(_input), "pressed")) return false;
 	return controller.get_input(_input).pressed;
 }

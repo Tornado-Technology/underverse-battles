@@ -1,6 +1,6 @@
 /// @desc Flipping through dialogs
 if (act == 2) {
-	if (pos < string_length(cur_text) and input_check_pressed(input.skip)) {
+	if (pos < string_length(cur_text) && input_check_pressed(input.skip)) {
 	    str = cur_text;
 	    pos = string_length(cur_text);
 	}

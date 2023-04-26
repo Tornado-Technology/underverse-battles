@@ -19,7 +19,7 @@ if (playing_sound != soundtrack) {
 	}
 	soundtrack.stop();
 	soundtrack.set_gain(0, 0);
-	soundtrack.set_gain(0.5, 500);
+	soundtrack.set_gain(data_get("Settings.Gain.Music"), 500);
 	soundtrack.play(1, true);
 	play_soundtrack = false;
 }

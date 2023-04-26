@@ -266,7 +266,7 @@ if (_id == 2 && attack_num == 0) {
 	}
 }
 
-if (_id == 2 && attack_num == 1) {
+if (_id == 2 && attack_num == 1 || _id == 3) {
 	update_2_1 = function() {
 		side = choose(dir.up, dir.down, dir.left, dir.right);
 			new_warning = true;
@@ -312,5 +312,20 @@ if (_id == 2 && attack_num == 1) {
 			_bones[i].change_scale(1, 0.2);
 			++i;
 		}
+	}
+}
+
+// Плохое время
+if (_id == 3) {
+	update_3_5 = function() {
+		var radius = _border.up * 2;
+		var x_gb = _border.x + radius * cos(degtorad(_angle));
+		var y_gb = _border.y + radius * sin(degtorad(_angle));
+		create_gasterblaster(gb_obj, x_gb, y_gb, _border.x, _border.y, point_direction(x_gb, y_gb, _border.x, _border.y) + 90);
+		_angle -= angle_step;
+	}
+	
+	update_3_5_2 = function() {
+		angle_step = 15;
 	}
 }
