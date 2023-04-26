@@ -7,6 +7,9 @@ const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
+export const accountCollection = 'accounts';
+export const accountModelName = 'Account';
+
 export enum accountType {
   user = 0,
   betaTester = 1,
@@ -21,7 +24,6 @@ export interface IAccount extends Document {
   email: string,
   data: Date,
   type: accountType,
-  badge: number | null,
 }
 
 const schema = new Schema({
@@ -33,7 +35,7 @@ const schema = new Schema({
   type: { type: Number, default: accountType.user },
   badge: { type: Number, default: null },
 }, {
-  collection: 'accounts',
+  collection: accountCollection,
 });
 
 export const usernameDefault = 'User';
@@ -125,4 +127,4 @@ export const login = (username: string, password: string): Promise<IAccount> => 
 });
 
 
-export const Account: Model<IAccount> = model('Account', schema);
+export const Account: Model<IAccount> = model(accountModelName, schema);

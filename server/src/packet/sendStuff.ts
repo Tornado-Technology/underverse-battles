@@ -22,6 +22,7 @@ export default class SendStuff {
   // Client components
   public fight: ClientFight = null;
   public halfpack: (Buffer | null) = null;
+  public hardAddress: (string | null) = null;
 
   constructor(socket: Socket, type: socketType, uuid: string) {
     this.socket = socket;

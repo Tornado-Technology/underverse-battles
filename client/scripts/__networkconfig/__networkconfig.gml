@@ -4,13 +4,19 @@ network_set_config(network_config_connect_timeout, 4000);
 
 // Server vars in client
 enum client_state {
-    undef,
-    in_menu,
-    wait_fight,
-    in_fight,
-    wait_world,
-    in_world,
-	any = -1
+  undefined,
+  in_menu,
+  wait_fight,
+  in_fight,
+  wait_world,
+  in_world,
+}
+
+enum account_type {
+  user = 0,
+  beta_tester = 1,
+  administrator = 2,
+  developer = 3,
 }
 
 enum status_code {

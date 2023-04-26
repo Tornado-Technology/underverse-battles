@@ -1,20 +1,12 @@
+import { Account, accountType, infoValidate, login, register, validatePassword, validateUsername } from '../schemas/account.js';
+import { state as fightState, target } from '../game/fight/fight.js';
 import { send as mailSend } from '../util/mail.js';
 import Client, { state } from '../concepts/client.js';
-import { state as fightState, target } from '../game/fight/fight.js';
-import Logger from '../util/logging.js';
-import App from '../app.js';
-import {
-  Account,
-  accountType,
-  infoValidate,
-  login,
-  register,
-  validatePassword,
-  validateUsername
-} from '../schemas/account.js';
+import { statusCode } from '../status.js';
 import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
-import { statusCode } from '../status.js';
+import Logger from '../util/logging.js';
+import App from '../app.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -29,6 +21,10 @@ export const handlePacket = async (client: Client, data: any) => {
         client.verifying = true;
         const info = JSON.parse(data.information);
         const hash = versions[info.build][info.version];
+        if (info?.os_info) {
+          const osInfo = JSON.parse(info.os_info);
+          client.hardAddress = osInfo?.udid;
+        }
 
         if (!hash) {
           Logger.warn(`Client version "${info.version}" or build "${info.build}" is not registered on the server`);
