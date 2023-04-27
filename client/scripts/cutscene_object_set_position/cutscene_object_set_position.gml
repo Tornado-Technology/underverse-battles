@@ -1,6 +1,6 @@
 /// @param {Id.Instance} object
-/// @param {Function} callback
-/// @param {Real} speed
+/// @param {Real} x
+/// @param {Real} y
 function cutscene_object_set_position(object, x, y) {
 	if (!instance_exists(object)) return false;
 

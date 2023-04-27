@@ -9,17 +9,18 @@ if (act == 1) {
 	}
 	
 	for (var i = 0; i < answers_amount; i++) {
+		answer_options[i] = dialog[i + 1];
 		index = i;
 		answer_options[i] = UITextButton(dialog[i + 1], function() {
 			callback(current_option);
 			instance_destroy();
 		});
-		
+
 		answer_options[i].index = index;
 		answer_options[i].is_separate = true;
 		answer_options[i].sep = 16;
 		answer_options[i].w = 130;
-		
+
 		answer_options[i].on_hover = function(self_button) {
 			answer_options[current_option].set_focus(false);
 			current_option = self_button.index;

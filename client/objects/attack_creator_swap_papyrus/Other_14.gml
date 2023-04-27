@@ -1,26 +1,25 @@
 /// @description Methods
 
 // Кости на всю высоту
-if (_id == 0 && attack_num == 0) {
+if (_id == 0 && attack_num == 0 || _id == 3) {
 	update_0_0 = function (pow) {
 		var rand_side = choose(dir.up, dir.down, dir.left, dir.right);
 		var bone_speed = 2 + pow * 0.2;
-		var bone_size = 8.3;
 		if (rand_side == dir.left) {
 			var _inst = create_bone(_border.x - _border.left - 4, _border.y + _border.down, bone_obj,
-			bone_speed, bone_size, 0, 0);
+			bone_speed, bone_size_update_0_0, 0, 0);
 		}
 		else if (rand_side == dir.right) {
 			var _inst = create_bone(_border.x + _border.right + 4, _border.y + _border.down, bone_obj,
-			bone_speed, bone_size, 180, 0);
+			bone_speed, bone_size_update_0_0, 180, 0);
 		}
 		else if (rand_side == dir.down) {
 			var _inst = create_bone(_border.x + _border.right, _border.y + _border.down + 4, bone_obj,
-			bone_speed, bone_size, 90, 90);
+			bone_speed, bone_size_update_0_0, 90, 90);
 		}
 		else if (rand_side == dir.up) {
 			var _inst = create_bone(_border.x + _border.right, _border.y - _border.up - 4, bone_obj,
-			bone_speed, bone_size, 270, 90);
+			bone_speed, bone_size_update_0_0, 270, 90);
 		}
 	}
 }
@@ -93,6 +92,7 @@ if (_id == 0 && attack_num == 1) {
 // Вылезающие кости из стенок
 if (_id == 0 && attack_num == 2) {
 	update_0_2 = function () {
+		var sum_num = 40;
 		while (true) {
 			random_number = irandom_range(0, sum_num - 1);
 			if (_bones[random_number] != noone) break;
@@ -201,7 +201,7 @@ if (_id == 1 && attack_num == 2) {
 }
 
 // Оранжевая атака
-if (_id == 2 && attack_num == 0) {
+if (_id == 2 && attack_num == 0 || _id == 3 && attack_num == 0) {
 	update_2_0 = function() {
 		var i = 0;
 		repeat(array_length(_bones)) {
@@ -266,7 +266,7 @@ if (_id == 2 && attack_num == 0) {
 	}
 }
 
-if (_id == 2 && attack_num == 1 || _id == 3) {
+if (_id == 2 && attack_num == 1 || _id == 3 && attack_num == 1) {
 	update_2_1 = function() {
 		side = choose(dir.up, dir.down, dir.left, dir.right);
 			new_warning = true;
@@ -294,7 +294,7 @@ if (_id == 2 && attack_num == 1 || _id == 3) {
 				}
 				++i;
 			}
-			character_instance.change_sprite_hand_dir(side);
+			//character_instance.change_sprite_hand_dir(side);
 	}
 
 	update_2_1_2 = function() {

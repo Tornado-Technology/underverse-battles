@@ -35,6 +35,9 @@ for (var player_id = 0; player_id < player_ammount; player_id++) {
 // initiative 
 initiative = 0;
 
+// Turn
+turn = 0;
+
 // Time source
 end_battle_timesource = 0;
 
@@ -77,6 +80,10 @@ players_are_selecting = function() {
 
 set_next_initiative = function(){
 	initiative = 1 - initiative;
+}
+
+set_next_turn = function(){
+	turn++;
 }
 
 player_is_acting = function(player_id) {

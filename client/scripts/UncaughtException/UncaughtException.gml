@@ -8,7 +8,7 @@ exception_unhandled_handler(function(exception) {
 	var msg_for_discord = sprintf("--------------------------------------------------------------\n Unhandled exception: \n{0}\n{1}\n{2}\n\nOS: {3}\nVersion: {4}\nBuild: {5}\n--------------------------------------------------------------\n",
 	 exception.longMessage, exception.script, string_join(exception.stacktrace, "\n"), os_get_name(os_type), game_version, game_build);
 	send_message_in_discord(msg_for_discord);
-	
+
     // Write the exception struct to a file
 	var file_name = working_directory + "crash" + string_replace_all(string_replace_all(date_datetime_string(date_current_datetime()), ":", "."), " ", "-") + ".txt";
     var file = file_text_open_write(file_name);

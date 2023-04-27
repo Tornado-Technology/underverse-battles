@@ -76,6 +76,7 @@ switch(state) {
 		// Some reset actions
 		fight_reset_fight_ui();
 		set_next_initiative();
+		set_next_turn();
 		reset_players_action();
 		
 		timer_start();

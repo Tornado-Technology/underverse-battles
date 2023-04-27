@@ -4,9 +4,8 @@ if (act < 1) exit;
 draw_reset();
 
 // Camera
-var camera_position = obj_camera.camera_position;
 var local_camera_position = Vector2(0, 0);
-local_camera_position.y += shift;
+local_camera_position.y += side == dir.down ? shift : 0;
 
 // Dialog window
 draw_sprite(spr_dialog_window, 0, local_camera_position.x + 78, local_camera_position.y + 5);

@@ -1,5 +1,5 @@
 if (!moveable) {
-	if (sprite_index == spr_char_sans_walk_right or sprite_index == spr_char_sans_walk_left)
+	if (sprite_index == spr_char_sans_walk_right || sprite_index == spr_char_sans_walk_left)
 	sprite_index = spr_char_sans_idle;
 	image_speed = 1;
 	exit;

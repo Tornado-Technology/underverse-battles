@@ -8,6 +8,7 @@ switch (attack_num) {
 		
 		create_soul(_border.x, _border.y, battle_soul_type.orange);
 		
+		bone_size_update_0_0 = 8.3;
 		update_0_0(_power);
 		time_source_start(time_source_update_0_0);
 		time_source_start(time_source_update_stop_0_0);
@@ -68,7 +69,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		if (battle_border_start_animation_end()) exit;
 		
-		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
+		_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
 		
 		update_0_3(_power);
 		time_source_start(time_source_update_0_3);

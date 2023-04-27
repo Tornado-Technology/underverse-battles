@@ -1,10 +1,10 @@
-function dialog_create(str) {
+function dialog_create(str, _side = dir.up) {
 	var dialog = str;
 	if (!is_array(str)) {
 		dialog = translate_get("Dialog." + str);
 	}
 	
-	var inst = instance_create(obj_dialog);	
+	var inst = instance_create(obj_dialog, {side: _side});	
 	inst.dialog = dialog;
 	
 	return inst;

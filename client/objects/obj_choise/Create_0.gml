@@ -1,6 +1,6 @@
 event_inherited();
 
-sprite_index = -4;
+sprite_index = spr_empty;
 
 answer_options = [];
 current_option = 0;
@@ -15,10 +15,9 @@ input_on_press = function(amout) {
 		answer_options[current_option].set_focus(true);
 		return;
 	}
-	
+
 	answer_options[current_option].set_focus(false);
 	current_option += amout;
 	answer_options[current_option].set_focus(true);
 	audio_play_sound_once(snd_click);
 };
-

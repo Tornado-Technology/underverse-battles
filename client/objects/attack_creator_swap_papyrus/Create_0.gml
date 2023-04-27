@@ -16,6 +16,8 @@ _shift = 0;
 type = 0;
 random_number = 0;
 
+bone_size_update_0_0 = 1;
+
 _angle = 0;
 angle_step = 0;
 

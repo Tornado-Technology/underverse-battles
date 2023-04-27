@@ -46,22 +46,39 @@ effect_fade(0, 2, c_white, c_white, true, 0);
 logo = spr_underverse_battles_logo;
 is_logo_open = true;
 is_make_logo_open = false;
-logo_y = height / 8 - 60;
+logo_y = height / 8 - 80;
 logo_x = width  / 2;
-logo_start_y  = height / 8;
-logo_target_y = height / 8 - 60;
+logo_start_y  = height / 8 - 20;
+logo_target_y = height / 8 - 80;
 logo_alpha = 0;
 
+// Opening theme
+enum opening_theme {
+	tangled,
+	alternation
+}
+
+opening = choose(opening_theme.tangled, opening_theme.alternation);
+
 // Background
-background = spr_background_alternation;
-background_height = sprite_get_height(background);
+background = opening == opening_theme.tangled ? spr_background_tangled : spr_background_alternation;
+background_height = opening == opening_theme.tangled ? sprite_get_height(background) * 2 : sprite_get_height(background);
 background_width = sprite_get_width(background);
+
+background_color_main = opening_theme.tangled ? c_white : background_color;
 
 background_alpha = 1;
 background_target_alpha = 1;
 
 background_target_y = -background_height + height;
 background_y = 0;
+
+// Background frame animation
+
+image_frame = 0;
+time_source_start(time_source_create(time_source_game, 0.2, time_source_units_seconds, function() {
+	image_frame++;
+}, [], -1));
 
 // Anykey
 anykey_y = height - height / 8;
@@ -78,12 +95,12 @@ is_blackout = false;
 is_make_blackout = false;
 
 // Audio
-menu_soundtrack_current = snd_alternation;
+menu_soundtrack_current = opening == opening_theme.tangled ? snd_tangled : snd_alternation;
 audio_stop_all();
 
 time_source_start(time_source_create(time_source_game, 1, time_source_units_frames, function() {
 	audio_play_sound(menu_soundtrack_current, 2, true, 0.5);
-}, [], 1));
+}));
 
 elements_show = false;
 pause = false;

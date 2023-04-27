@@ -7,7 +7,7 @@ function scene_soul_set_sprite(inst, spr){
 
 function scene_soul_animation(inst, val){
 	with (inst) {
-		animation_switch = val;
+		animating = val;
 	}
 	return true;
 }

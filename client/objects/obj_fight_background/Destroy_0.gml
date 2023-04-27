@@ -1,0 +1,1 @@
+instance_destroy(background_animator);

@@ -1,4 +1,4 @@
-sprite_index = -4;
+sprite_index = spr_empty;
 
 pos = 0;
 act = 1;
@@ -61,16 +61,15 @@ skip_arrow = UIImageButton(spr_stat_arrow);
 skip_arrow.on_press = function() {
 	if (instance_exists(obj_choise)) { return; }
 	keyboard_key_press(vk_enter);
-	
+
 	if (pos < string_length(cur_text)) {
 	    keyboard_key_press(vk_shift);
 	}
 }
 skip_arrow.on_release = function() {
 	if (instance_exists(obj_choise)) { return; }
-	
+
 	keyboard_key_release(vk_enter);
 	keyboard_key_release(vk_shift);
 }
-
 #endregion

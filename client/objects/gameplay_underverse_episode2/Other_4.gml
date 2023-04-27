@@ -1,6 +1,3 @@
-// Эффект затемнения
-effect_fade(0, 3, c_black, c_black, true, 0);
-
 // Звуки
 audio_stop_all();
 // Добавить эмбиент леса
@@ -13,6 +10,9 @@ sans = instance_create_depth(223, 197, fight_depth.player, obj_character_sans, {
 ink_sans = instance_create_depth(255, 197, fight_depth.player, obj_character_ink_sans, {
 	sprite_index: spr_ink_sans_sitting0
 });
+
+// Эффекты
+effect_fade(0, 3, c_black, c_black, true, 0);
 
 // Запуск первой катсцены
 cutscene_create(cutscenes[0]);

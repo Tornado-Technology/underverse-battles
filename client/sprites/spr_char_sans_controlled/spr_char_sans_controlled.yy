@@ -88,6 +88,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Story Mode",
-    "path": "folders/Characteres/Sans/Sprites/Char/Classic/Story Mode.yy",
+    "path": "folders/Characteres/Sans/Sprites/Char/Story Mode.yy",
   },
 }

@@ -204,11 +204,77 @@ if (_id == 2 && attack_num == 1) {
 }
 
 // Плохое время
-if (_id == 3) {
+if (_id == 3 && attack_num == 0) {
+	var period = 60;
+	var amount = 3;
+	var time_step = 18;
+	var final_time = period * amount;
+	
+	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update_2_0();
+		time_source_start(time_source_update_3_1);
+	}, [], amount - 1);
+	
+	time_source_update_3_1 = time_source_create(time_source_game, time_step / 60, time_source_units_seconds, function () {
+		update_2_0_2();
+	});
+	
+	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
+		//character_instance.stop_hand_wave();
+		update_0_0(pow);
+		time_source_stop(time_source_update_3_0);
+		time_source_stop(time_source_update_3_1);
+		time_source_start(time_source_update_3_3);
+		time_source_start(time_source_update_destroy_3_3);
+	}, [3]);
+	
+	period = 45;
+	amount = 4;
+	time_source_update_3_3 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
+		update_0_0(pow);
+	}, [3], amount - 1);
+
+	time_source_update_destroy_3_3 = time_source_create(time_source_game, (period * amount / 60) + 1, time_source_units_seconds, function () {
+		update_2_0();
+		time_source_stop(time_source_update_3_3);
+		time_source_start(time_source_update_3_0);
+		time_source_start(time_source_update_3_1);
+		time_source_start(time_source_update_destroy_3_4);
+	});
+	
+	time_source_update_destroy_3_4 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
+		//character_instance.stop_hand_wave();
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red);
+		_angle = choose(0, 90, -180, -90);
+		angle_step = 10;
+		update_3_5();
+		time_source_stop(time_source_update_3_0);
+		time_source_stop(time_source_update_3_1);
+		time_source_start(time_source_update_3_5);
+		time_source_start(time_source_update_change_3_5);
+		time_source_start(time_source_update_destroy_3_5);
+	});
+	
+	period = 5;
+	amount = 118;
+	time_source_update_3_5 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update_3_5();
+	}, [], amount - 1);
+	
+	time_source_update_change_3_5 = time_source_create(time_source_game, period * amount / 120, time_source_units_seconds, function () {
+		update_3_5_2();
+	});
+	
+	time_source_update_destroy_3_5 = time_source_create(time_source_game, (period * amount / 60) + 1, time_source_units_seconds, function () {
+		instance_destroy();
+	});
+}
+
+if (_id == 3 && attack_num == 1) {
 	var period = 62;
 	var amount = 3; 
 	_time_step = [20, 5, 25, 5];
-	final_time = period * amount;
+	var final_time = period * amount;
 	
 	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_2_0();
@@ -225,18 +291,19 @@ if (_id == 3) {
 	});
 	
 	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
-		character_instance.stop_hand_wave();
-		update_0_2(pow);
+		//character_instance.stop_hand_wave();
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange);
+		update_0_0(pow);
 		time_source_stop(time_source_update_3_0);
 		time_source_stop(time_source_update_3_1);
 		time_source_start(time_source_update_3_3);
 		time_source_start(time_source_update_destroy_3_3);
 	}, [3]);
 	
-	var period = 45;
-	var amount = 4;
+	period = 45;
+	amount = 4;
 	time_source_update_3_3 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
-		update_0_2(pow);
+		update_0_0(pow);
 	}, [3], amount - 1);
 
 	time_source_update_destroy_3_3 = time_source_create(time_source_game, (period * amount / 60) + 1, time_source_units_seconds, function () {
@@ -248,7 +315,7 @@ if (_id == 3) {
 	});
 	
 	time_source_update_destroy_3_4 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
-		character_instance.stop_hand_wave();
+		//character_instance.stop_hand_wave();
 		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red);
 		_angle = choose(0, 90, -180, -90);
 		angle_step = 10;
@@ -260,8 +327,8 @@ if (_id == 3) {
 		time_source_start(time_source_update_destroy_3_5);
 	});
 	
-	var period = 5;
-	var amount = 118;
+	period = 5;
+	amount = 118;
 	time_source_update_3_5 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_3_5();
 	}, [], amount - 1);

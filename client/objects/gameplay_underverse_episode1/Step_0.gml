@@ -76,7 +76,7 @@ else if (scenario == 18) {
 		fight_set_pause(true);
 		
 		disable_mobile_ui();
-	
+		
 		/* Next scenario */
 		scenario = 17;
 	}
@@ -148,8 +148,6 @@ else if (scenario == 21) {
 		player_.sprite_index = spr_char_sans_idle;
 		ink_sans_.sprite_index = spr_char_ink_sans_attack_finish;
 		xchara_.sprite_index = spr_xchara_defeated;
-		
-		bg_disappearance(obj_bg_deltarune);
 		
 		dlg = dialog_create(episode + "Dialog12");
 		dlg.shift = 0;

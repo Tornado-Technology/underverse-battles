@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Underverse Episode 1",
-    "path": "folders/Objects/Fight/Story Mode/Underverse Episode 1.yy",
+    "name": "Story Mode",
+    "path": "folders/Objects/Fight/Story Mode.yy",
   },
 }

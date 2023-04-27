@@ -15,4 +15,4 @@ part_type_color1(part_type_ui_ink, c_black);
 part_type_alpha2(part_type_ui_ink, 1, 0);
 part_type_life(part_type_ui_ink, 580, 600);
 part_type_orientation(part_type_ui_ink, 0, 360, 0, 0, false);
-part_type_size(part_type_ui_ink, 0.9, 1, 0, 0);
+part_type_size(part_type_ui_ink, 1.4, 1.5, 0, 0);

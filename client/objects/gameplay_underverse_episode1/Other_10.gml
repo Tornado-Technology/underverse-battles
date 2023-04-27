@@ -7,7 +7,7 @@ if (player_.x >= room_width - 480) {
 	
 	/* Camera */
 	camera_set_speed(1, 1);
-	camera_set_overwrite_position(room_width - 320, y);
+	camera_set_overwrite_position(room_width - 540, y);
 	
 	start_delay();
 }

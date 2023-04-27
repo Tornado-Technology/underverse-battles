@@ -3,7 +3,8 @@ draw_reset();
 
 // Background
 draw_set_alpha(background_alpha);
-draw_sprite(background, 0, 0, background_y);
+draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), background_color_main);
+draw_sprite(background, image_frame, 0, background_y);
 
 background_alpha = approach(background_alpha, background_target_alpha, 0.08);
 background_y = approach(background_y, background_target_y, 0.2);

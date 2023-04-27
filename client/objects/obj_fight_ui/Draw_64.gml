@@ -130,18 +130,18 @@ if (action_box_show) {
 // Special action
 if (action_box_show && showing_special_action && is_player_turn) {
 	//draw_sprite(fight_get_player_special_action_icon(0), fight_get_player_special_action_percent(0) != 100, room_width - 90, room_height - 40);
-	special_button.draw(room_width - 90, room_height - 40);
+	special_button.draw(size.x - 90, size.y - 40);
 	
 	draw_set_font(font_console_mini);
 	draw_set_halign(fa_center);
-	draw_text_outlined(room_width - 90, room_height - 20, text_simple_color, c_black, string(fight_get_player_special_action_percent(0))+"%");
+	draw_text_outlined(size.x - 90, size.y - 20, text_simple_color, c_black, string(fight_get_player_special_action_percent(0))+"%");
 }
 
 // Skip
 if (showing_skip && is_player_turn && fight_get_player_stamina(0) < fight_get_player_action_stamina_cost(0, 1) && in_chouse) {
 	draw_set_font(font_mini);
 	draw_set_halign(fa_center);
-	draw_text_outlined(size_center.x, room_height - 120, text_simple_color, c_black, text_skip);
+	draw_text_outlined(size_center.x, size.y - 120, text_simple_color, c_black, text_skip);
 }
 
 // initiative
@@ -152,7 +152,7 @@ draw_set_valign(fa_bottom);
 
 // initiative
 if (!in_fight && show_initiative) {
-	draw_text_outlined(room_width / 2, 60, c_white, c_black, str_initiative);
+	draw_text_outlined(size_center.x, 60, c_white, c_black, str_initiative);
 }
 
 // Show frames

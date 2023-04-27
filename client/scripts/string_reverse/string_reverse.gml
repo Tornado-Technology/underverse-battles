@@ -1,4 +1,3 @@
-/// @param {String} str
 function string_reverse(str) {
 	var result = "";
 	var lenght = string_length(str);
@@ -10,6 +9,6 @@ function string_reverse(str) {
 			result += string_char_at(str, i - 1);
 		}
 	}
-	
+
 	return result;
 }

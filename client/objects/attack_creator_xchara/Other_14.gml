@@ -53,7 +53,7 @@ if (_id == 0 && attack_num == 3) {
 		var rY = _border.y - dist_ * sin(_side*pi/180);
 		var _knife = instance_create_depth(rX, rY, 0, obj_knife_directed_xchara);
 		_knife.image_alpha = 0;
-		_knife._target_angle = point_direction(_x, _y, _border.x, _border.y);
+		_knife._target_angle = point_direction(rX, rY, _border.x, _border.y);
 		if (rot == 0)
 			_side += step;
 		else

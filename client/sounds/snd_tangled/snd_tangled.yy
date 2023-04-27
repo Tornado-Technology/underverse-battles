@@ -2,6 +2,9 @@
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
   "name": "snd_tangled",
+  "ConfigValues": {
+    "Development": {"audioGroupId":"{\"name\":\"menu_music\",\"path\":\"audiogroups/menu_music\"}",},
+  },
   "conversionMode": 0,
   "compression": 1,
   "volume": 1.0,

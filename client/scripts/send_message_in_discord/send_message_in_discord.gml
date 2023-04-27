@@ -12,6 +12,6 @@ function send_message_in_discord(msg) {
 			}
 		]
 	}
-	
+
 	http_request(discord_logger_url, "POST", map, json_stringify(data));
 }

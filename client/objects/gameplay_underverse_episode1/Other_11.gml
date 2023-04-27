@@ -6,7 +6,7 @@ if (!instance_exists(dlg))
 if (_delay == 150) {
 	sans_soul_ = instance_create_depth(player_.x + 20, player_.y - player_.sprite_height / 2, fight_depth.player, obj_scene_soul);
 	sans_soul_.sprite_index = spr_monster_soul;
-	sans_soul_.animation_switch = false;
+	sans_soul_.animating = false;
 	xchara_.sprite_index = spr_xchara_hand_forward;
 	xchara_.image_xscale = -1;
 }
