@@ -452,7 +452,31 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 		update_state();
 	}
 	
+	static validate_string = function(str) {
+		var indexs = [];
+		var str_lenght = string_length(str);
+		var i = 1;
+		repeat (str_lenght) {
+			var symbol = string_char_at(str, i);
+			
+			if (!char_is_valid(symbol, font)) {
+				array_push(indexs, i);
+			}
+			
+			i++;
+		}
+		
+		i = array_length(indexs) - 1;
+		repeat(i + 1) {
+			str = string_delete(str, indexs[i], 1);
+			i--;
+		}
+		
+		return str;
+	}
+	
 	static paste_text = function(str, position) {
+		str = validate_string(str);
 		remove_selected_text();
 		text = string_insert(str, text, position);
 		is_show_cursor = true;
