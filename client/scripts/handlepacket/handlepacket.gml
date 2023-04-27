@@ -87,7 +87,54 @@ function handle_packet(data) {
 				_id = get_string_async(translate_get("Menu.SignUp.MessageCode"), "");
 			}
 			break;
+		
+		case "changeNickname":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change nickname successful", c_lime);
+			break;
 
+		case "changeUsername":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change username successful", c_lime);
+			break;
+
+		case "changePassword":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change password successful", c_lime);
+			break;
+
+		case "changeEmail":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change email successful", c_lime);
+			break;
+			
+		case "deleteAccount":
+			break;
+			
 		case "fightJoin":
 			var status = data.status;
 

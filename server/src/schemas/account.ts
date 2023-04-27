@@ -39,7 +39,7 @@ const schema = new Schema({
 });
 
 export const usernameDefault = 'User';
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&#]{6,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*?&#]{6,}$/;
 const usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
 const usernameBlacklist = [
   usernameDefault,

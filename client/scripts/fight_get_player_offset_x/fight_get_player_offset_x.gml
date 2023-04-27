@@ -1,4 +1,5 @@
-///@arg player_id
-function fight_get_player_offset_x(){
-	return fight_get_player(argument[0]).offset_x;
+/// @param {Real} player_id
+/// @return {Real}
+function fight_get_player_offset_x(player_id) {
+	return fight_get_player(player_id).offset_x;
 }
