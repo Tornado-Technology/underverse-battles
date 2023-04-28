@@ -1,7 +1,7 @@
 ///@desc Инк - Уворот не засчитывается
 
 if (fight_get_player_action(0) >= 0) {
-	dlg = dialog_create(episode + "Dialog9");
+	dlg = dialog_create(episode + "Dialog9", dir.down);
 	
 	/* Fight */
 	if (fight_get_player_action(0) <= 1)

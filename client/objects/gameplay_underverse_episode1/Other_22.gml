@@ -3,7 +3,7 @@
 if (fight_get_player_action(0) >= 0 and fight_get_player_power(0) == 0) {
 	fight_reset_player_action(0);
 	
-	dlg = dialog_create(episode + "WrongPower");
+	dlg = dialog_create(episode + "WrongPower", dir.down);
 	
 	/* Options */
 	fight_set_ui_showing_action_box(false);
@@ -26,7 +26,7 @@ if (fight_get_player_action(0) != -1 && fight_get_player_action(0) != 3) {
 }
 
 if (_delay == 30) {
-	dlg = dialog_create(episode + "Dialog8");
+	dlg = dialog_create(episode + "Dialog8", dir.down);
 
 	/* Options */
 	fight_set_ui_showing_action_box(false);

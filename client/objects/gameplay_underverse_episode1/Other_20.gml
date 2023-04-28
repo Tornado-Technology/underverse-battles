@@ -13,7 +13,7 @@ if (fight_get_player_action(0) > -1) {
 }
 
 if (_delay == 30) {
-	dlg = dialog_create(episode + "Dialog7");
+	dlg = dialog_create(episode + "Dialog7", dir.down);
 	
 	/* Next scenario */
 	scenario = 11;

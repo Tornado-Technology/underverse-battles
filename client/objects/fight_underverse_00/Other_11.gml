@@ -3,8 +3,6 @@
 // Create fights components
 instance_create_struct(required_components);
 
-//show_message(instance_exists(obj_fight_input));
-
 //Starting value for Underverse 0.0 obj_fight
 fight_set_player_input(false);
 fight_ui_set_player_can_input_skip(false);

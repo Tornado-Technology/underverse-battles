@@ -8,7 +8,7 @@ var text_ = translate_get("Dialog." + episode + "Dialog5");
 
 array_delete(text_, trigger, 1);
 
-dlg = dialog_create(text_);
+dlg = dialog_create(text_, dir.down);
 			
 /* Options */
 fight_set_pause(false);

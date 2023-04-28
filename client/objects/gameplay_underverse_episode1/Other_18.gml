@@ -3,7 +3,7 @@
 if (fight_get_player_action(0) > 0) {
 	fight_reset_player_action(0);
 	
-	dlg = dialog_create(episode + "WrongAttack");
+	dlg = dialog_create(episode + "WrongAttack", dir.down);
 	
 	/* Options */
 	fight_set_ui_showing_action_box(false);
@@ -24,7 +24,7 @@ if (fight_get_player_action(0) == 0) {
 }
 
 if (_delay == 30) {
-	dlg = dialog_create(episode + "Dialog6");
+	dlg = dialog_create(episode + "Dialog6", dir.down);
 
 	/* Next scenario */
 	scenario = 9;

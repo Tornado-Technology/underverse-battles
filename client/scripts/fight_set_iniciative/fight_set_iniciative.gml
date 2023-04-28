@@ -1,7 +1,6 @@
 /// @param {number} initiative
 function fight_set_initiative(_initiative) {
 	if (global.fight_instance != noone) {
-		show_message(string(_initiative));
 		global.fight_instance.initiative = _initiative;
 		return;
 	}

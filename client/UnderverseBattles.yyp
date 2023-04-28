@@ -937,7 +937,7 @@
     {"id":{"name":"bg_disappearance","path":"scripts/bg_disappearance/bg_disappearance.yy",},"order":2,},
     {"id":{"name":"spr_achivement_defeatsans","path":"sprites/spr_achivement_defeatsans/spr_achivement_defeatsans.yy",},"order":7,},
     {"id":{"name":"obj_battle_orange_attack","path":"objects/obj_battle_orange_attack/obj_battle_orange_attack.yy",},"order":2,},
-    {"id":{"name":"fight_get_player_input_power","path":"scripts/fight_get_player_input_power/fight_get_player_input_power.yy",},"order":1,},
+    {"id":{"name":"fight_get_enemy_input_power","path":"scripts/fight_get_enemy_input_power/fight_get_enemy_input_power.yy",},"order":1,},
     {"id":{"name":"spr_achivement_defeatswappapyrus","path":"sprites/spr_achivement_defeatswappapyrus/spr_achivement_defeatswappapyrus.yy",},"order":8,},
     {"id":{"name":"obj_gasterblaster_ink_sans","path":"objects/obj_gasterblaster_ink_sans/obj_gasterblaster_ink_sans.yy",},"order":7,},
     {"id":{"name":"spr_fell_sans_attack2_up","path":"sprites/spr_fell_sans_attack2_up/spr_fell_sans_attack2_up.yy",},"order":28,},

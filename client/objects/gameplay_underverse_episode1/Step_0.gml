@@ -37,7 +37,7 @@ else if (scenario == 16) {
 	if (fight_get_state() != fight_state.choosing)
 		exit;
 
-	dlg = dialog_create(episode + "Dialog10");
+	dlg = dialog_create(episode + "Dialog10", dir.down);
 			
 	/* Options */
 	fight_set_pause(false);
@@ -65,7 +65,7 @@ else if (scenario == 17) {
 }
 else if (scenario == 18) {
 	if (fight_get_player_action(0) >= 0) {
-		dlg = dialog_create(episode + "WrongSkip");
+		dlg = dialog_create(episode + "WrongSkip", dir.down);
 		
 		fight_reset_player_action(0);
 	
@@ -96,7 +96,7 @@ else if (scenario == 18) {
 	}
 
 	if (_delay == 30) {
-		dlg = dialog_create(episode + "Dialog11");
+		dlg = dialog_create(episode + "Dialog11", dir.down);
 
 		/* Next scenario */
 		scenario = 19;
