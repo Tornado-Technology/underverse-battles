@@ -83,19 +83,16 @@ function CharacterList() {
 			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
 			new Character(obj_character_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
 		],
-
+		[
+			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
+			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
+		],
+		[
+			new Character(obj_character_green, "Green", "Standard", spr_green_frame)
+		]
 	];
 
 	if (development_mode) {
-		array_push(global.characters, [
-			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
-			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
-		]);
-		
-		array_push(global.characters, [
-			new Character(obj_character_green, "Green", "Standard", spr_green_frame)
-		]);
-		
 		//array_push(global.characters, [
 		//	new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
 		//]);

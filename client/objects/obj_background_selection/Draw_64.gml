@@ -3,8 +3,18 @@ draw_set_font(font_determination);
 
 if (!show)
 	exit;
+	
+draw_reset();
+draw_set_alpha(1);
+draw_set_font(font_determination);
+draw_set_halign(fa_center);
+draw_set_color(c_white);
 
-// List songs
+var custom = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.BACKGROUND_CUSTOM);
+var _string = background_get(background_info.name, custom);
+draw_text_outlined(line_x, line_y - line_height / 2 - 30 - wave(3, -3, 1, 0), c_white, c_black, translate_get("Menu.Background.SelectedLocation") + _string);
+
+draw_reset();
 
 /* Draw soundtrack */
 draw_name_song(background_x, background_y, text_color_standart, background_id);

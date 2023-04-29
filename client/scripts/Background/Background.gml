@@ -20,9 +20,9 @@ enum _background {
 	winter_forest_park,
 	deltarune_battle,
 	queens_hall,
-	jevils_circus,
 	doodle_sphere,
-	undertale_battle
+	undertale_battle,
+	jevils_circus
 }
 
 // Custom backgrounds
@@ -31,9 +31,9 @@ Background(spr_background_underverse_forest, _background.forest_park, "Backgroun
 Background(spr_background_underverse_forest_winter, _background.winter_forest_park, "Backgrounds.WinterForestPark", "Tornado", universe.underverse);
 Background(spr_background_deltarune_battle,	_background.deltarune_battle, "Backgrounds.DeltaruneBattle", "Marsilies", universe.deltarune, obj_background_deltarune);
 Background(spr_background_queen_s_hall_background, _background.queens_hall, "Backgrounds.QueensHall", "Tornado", universe.deltarune, obj_background_queen_s_hall);
-Background(spr_background_jevil, _background.jevils_circus, "Backgrounds.Jevil", "Tornado",	universe.deltarune, obj_background_jevils_circus);
 Background(spr_background_doodle_sphere, _background.doodle_sphere, "Backgrounds.DoodleSphere", "Tornado", universe.underverse, obj_background_doodle_sphere);
 Background(spr_background_undertale_battle, _background.undertale_battle, "Backgrounds.UndertaleBattle", "Tornado", universe.undertale);
+Background(spr_background_jevil, _background.jevils_circus, "Backgrounds.Jevil", "Tornado",	universe.deltarune, obj_background_jevils_circus);
 
 /// @param {Real} info
 /// @param {Real} index
