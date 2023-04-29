@@ -189,7 +189,7 @@ if (_id == 2 && attack_num == 1) {
 	}
 }
 
-// Кости в виде платформ и гастербластеры
+// Два гастербластера в три ряда
 if (_id == 2 && attack_num == 2) {
 	update_2_2 = function() {
 		var position_number = irandom_range(0, 2);
@@ -197,21 +197,17 @@ if (_id == 2 && attack_num == 2) {
 		switch (position_number) {
 			case 0:
 				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y + 28, _border.x, _border.y + 30,  270);
+				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y, _border.x, _border.y,  270);
 				break;
 			case 1:
 				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y, _border.x, _border.y,  270);
+				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y - 28, _border.x, _border.y - 30,  270);
 				break;
 			case 2:
+				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y + 28, _border.x, _border.y + 30,  270);
 				create_gasterblaster(gb_obj, _border.x + border_distance, _border.y - 28, _border.x, _border.y - 30,  270);
 				break;
 		}
-	}
-	update_2_2_2 = function(pow) {
-		var bone_speed = 1 + pow * 0.1;
-		var bone = create_bone(_border.x - _border.left - 4, _border.y - 15, bone_obj,
-			bone_speed, 2, 0, 90);
-		var bone = create_bone(_border.x + _border.right + 4, _border.y + 15, bone_obj,
-			bone_speed, 2, 180, 270);
 	}
 }
 

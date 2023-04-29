@@ -28,7 +28,7 @@ if (!started) {
 			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
 	
 			num = 12;
-			bone_scale = 4.4;
+			bone_scale = 4.5;
 		
 			update_2_1(_power);
 			time_source_start(time_source_update_2_1);
@@ -39,7 +39,7 @@ if (!started) {
 	}
 }
 
-var warning_scale = _power > 2 ? 10 : 12;
+var warning_scale = 11;
 if(new_warning) {
 	draw_warning(side, warning_scale);
 	audio_play_sound_plugging(snd_warning);

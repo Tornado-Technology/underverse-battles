@@ -12,7 +12,7 @@ if (!started) {
 	num = 12;
 
 	bone_scale = _power > 2 ? 2.8 : 3;
-	if (attack_num == 1) bone_scale = 4.4;
+	if (attack_num == 1) bone_scale = 4.8;
 	
 	update_2_0(_power);
 	time_source_start(time_source_update_2_0);
@@ -33,7 +33,7 @@ if (attack_num == 0) {
 	}
 }
 else {
-	var warning_scale = _power > 2 ? 10 : 12;
+	var warning_scale = 12;
 	if(new_warning) {
 		draw_warning(side, warning_scale);
 		audio_play_sound_plugging(snd_warning);

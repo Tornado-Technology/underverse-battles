@@ -35,8 +35,8 @@ switch (attack_num) {
 		time_source_start(time_source_update_destroy_2_1);
 		break;
 	
-	case 2: // Кости в виде платформ и гастербластеры
-		_border = battle_border_create(battle_border.up - 35, battle_border.down - 35, battle_border.left, battle_border.right);
+	case 2: // Два гастербластера в три ряда
+		_border = battle_border_create(battle_border.up - 36, battle_border.down - 36, battle_border.left, battle_border.right);
 		if (battle_border_start_animation_end()) exit;
 		
 		var _soul_pos = irandom_range(0, 2);
@@ -49,9 +49,7 @@ switch (attack_num) {
 			_soul = create_soul(_border.x, _border.y - _border.up / 2, battle_soul_type.orange);
 		
 		update_2_2();
-		update_2_2_2(_power);
 		time_source_start(time_source_update_2_2);
-		time_source_start(time_source_update_2_2_2);
 		time_source_start(time_source_update_destroy_2_2);
 		break;
 }

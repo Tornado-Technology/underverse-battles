@@ -303,6 +303,7 @@ if (_id == 2 && attack_num == 1 || _id == 3 && attack_num == 1) {
 			_bones[i].change_scale(bone_scale, 0.2);
 			++i;
 		}
+		instance_destroy(obj_warning);
 		audio_play_sound_plugging(snd_spare_up);
 	}
 

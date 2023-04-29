@@ -172,6 +172,7 @@
     {"id":{"name":"obj_tea_delta","path":"objects/obj_tea_delta/obj_tea_delta.yy",},"order":4,},
     {"id":{"name":"spr_ui_virtual_button_Action","path":"sprites/spr_ui_virtual_button_Action/spr_ui_virtual_button_Action.yy",},"order":1,},
     {"id":{"name":"obj_ui_achievements","path":"objects/obj_ui_achievements/obj_ui_achievements.yy",},"order":2,},
+    {"id":{"name":"obj_edit_button_green","path":"objects/obj_edit_button_green/obj_edit_button_green.yy",},"order":7,},
     {"id":{"name":"obj_ui_controls","path":"objects/obj_ui_controls/obj_ui_controls.yy",},"order":4,},
     {"id":{"name":"obj_ui_panel","path":"objects/obj_ui_panel/obj_ui_panel.yy",},"order":0,},
     {"id":{"name":"obj_ui_panel_menu_fight","path":"objects/obj_ui_panel_menu_fight/obj_ui_panel_menu_fight.yy",},"order":1,},

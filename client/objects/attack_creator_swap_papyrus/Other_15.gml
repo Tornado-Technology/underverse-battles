@@ -158,47 +158,47 @@ if (_id == 2 && attack_num == 0) {
 if (_id == 2 && attack_num == 1) {
 	var period = 75;
 	var time_step = [30, 5, 25, 5];
-	var final_time = _period*5;
+	var final_time = period*5;
 	switch (_power) {
 		case 1:
 			period = 70;
 			time_step = [30, 5, 25, 5];
-			final_time = _period*6;
+			final_time = period*6;
 			break;
 		case 2:
 			period = 66;
 			time_step = [25, 5, 25, 5];
-			final_time = _period*6;
+			final_time = period*6;
 			break;
 		case 3:
 			period = 62;
 			time_step = [20, 5, 25, 5];
-			final_time = _period*7;
+			final_time = period*7;
 			break;
 		case 4:
 			_period = 58;
-			if (attack_num == 0) _time_step = [18, 4, 40, 4];
-			if (attack_num == 1) _time_step = [15, 5, 45, 5];
-			final_time = _period*10;
+			if (attack_num == 0) time_step = [18, 4, 30, 4];
+			if (attack_num == 1) time_step = [15, 5, 30, 5];
+			final_time = period*10;
 			break;
 	}
 	
-	time_source_update_2_1 = time_source_create(time_source_game, _period / 60, time_source_units_seconds, function () {
+	time_source_update_2_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_2_1();
 		time_source_start(time_source_update_2_1_2);
 	}, [], -1);
 	
-	time_source_update_2_1_2 = time_source_create(time_source_game, _time_step[0] / 60, time_source_units_seconds, function () {
+	time_source_update_2_1_2 = time_source_create(time_source_game, time_step[0] / 60, time_source_units_seconds, function () {
 		update_2_1_2();
 		time_source_start(time_source_update_2_1_3);
 	});
 	
-	time_source_update_2_1_3 = time_source_create(time_source_game, _time_step[2] / 60, time_source_units_seconds, function () {
+	time_source_update_2_1_3 = time_source_create(time_source_game, time_step[2] / 60, time_source_units_seconds, function () {
 		update_2_1_3();
 	});
 	
 	time_source_update_destroy_2_1 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
-		character_instance.stop_hand_wave();
+		//character_instance.stop_hand_wave();
 		instance_destroy();
 	});
 }

@@ -5,6 +5,8 @@ spike_obj = obj_spear_green;
 gb_obj = obj_turboblaster_green;
 gb_aim_obj = obj_turboblaster_aiming_green;
 
+edit_button = obj_edit_button_green;
+
 inst_turboblaster = noone;
 _shift = 0;
 

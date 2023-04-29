@@ -151,8 +151,8 @@ if (_id == 2) {
 			break;
 		case 4:
 			_period = 58;
-			if (attack_num == 0) _time_step = [18, 4, 40, 4];
-			if (attack_num == 1) _time_step = [15, 5, 45, 5];
+			if (attack_num == 0) _time_step = [18, 4, 30, 4];
+			if (attack_num == 1) _time_step = [15, 4, 30, 4];
 			final_time = _period*10;
 			break;
 	}
