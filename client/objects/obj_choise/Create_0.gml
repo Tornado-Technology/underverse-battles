@@ -11,6 +11,8 @@ index = undefined;
 callback = undefined;
 
 input_on_press = function(amout) {
+	audio_play_sound_once(snd_click);
+	
 	if (!answer_options[current_option].focus) {
 		answer_options[current_option].set_focus(true);
 		return;
@@ -19,5 +21,4 @@ input_on_press = function(amout) {
 	answer_options[current_option].set_focus(false);
 	current_option += amout;
 	answer_options[current_option].set_focus(true);
-	audio_play_sound_once(snd_click);
 };
