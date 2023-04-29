@@ -1,10 +1,11 @@
-import {createServer, Server as NetServer, Socket} from 'net';
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
-import fs from 'fs';
 import './config.js';
+import { createServer, Server as NetServer, Socket } from 'net';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import fs from 'fs';
 import Client, { socketType } from './concepts/client.js';
 import Packet from './packet/packet.js';
+import { statusCode } from './status.js';
 import Logger from './util/logging.js';
 import App from './app.js';
 
@@ -63,7 +64,7 @@ class Server {
     setTimeout(() => {
       if (!client.verified && !client.verifying) {
         Logger.info(`Client connection blocked, reason: Not send verification packet`);
-        client.sendConnection(App.status.unknownError);
+        client.sendConnection(statusCode.error);
         client.destroy();
       }
     }, App.config.client.verification.timeout);

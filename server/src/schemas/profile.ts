@@ -1,10 +1,13 @@
 import { Document, ObjectId, Model } from 'mongoose';
 import { createRequire } from 'module';
-import { IAccount } from './account.js';
+import { accountModelName, IAccount } from './account.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
+
+export const profileCollection = 'profiles';
+export const profileModelName = 'Profile';
 
 export interface IProfile extends Document {
   accountId: string,
@@ -14,6 +17,7 @@ export interface IProfile extends Document {
   unlockingCharacters: number[],
   rating: number,
   gold: number,
+  badge: number | null,
   fight: {
     id: string,
     index: number,
@@ -26,10 +30,10 @@ export interface IProfile extends Document {
 }
 
 const schema = new Schema({
-  accountId: { type: Schema.Types.ObjectId, ref: 'Account' },
+  accountId: { type: Schema.Types.ObjectId, ref: accountModelName },
   online: { type: Boolean, default: false },
   lastOnline: { type: Date, default: Date.now },
-  friends: [{ type: Schema.Types.ObjectId, ref: 'Account' }],
+  friends: [{ type: Schema.Types.ObjectId, ref: accountModelName }],
   rating: { type: Number, default: 0 },
   gold: { type: Number, default: 0 },
   fight: {
@@ -43,10 +47,10 @@ const schema = new Schema({
     specialActionCharge: { type: Number, default: null },
   },
 }, {
-  collection: 'profiles',
+  collection: profileCollection,
 });
 
-export const Profile: Model<IProfile> = model('Profile', schema);
+export const Profile: Model<IProfile> = model(profileModelName, schema);
 
 export const freshProfile = async (account: IAccount): Promise<IProfile> => {
   const profile = new Profile({

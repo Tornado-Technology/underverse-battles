@@ -1,13 +1,21 @@
 import { Model, Document } from 'mongoose';
 import { createRequire } from 'module';
 import { hashPassword, verifyPassword } from '../util/encrypting.js';
-import App from '../app.js';
+import { statusCode } from '../status.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
-type AccountType = 'developer' | 'admin' | 'betaTester' | 'user';
+export const accountCollection = 'accounts';
+export const accountModelName = 'Account';
+
+export enum accountType {
+  user = 0,
+  betaTester = 1,
+  administrator = 2,
+  developer = 3,
+}
 
 export interface IAccount extends Document {
   username: string,
@@ -15,8 +23,7 @@ export interface IAccount extends Document {
   password: string,
   email: string,
   data: Date,
-  type: AccountType,
-  badge: number,
+  type: accountType,
 }
 
 const schema = new Schema({
@@ -25,33 +32,52 @@ const schema = new Schema({
   nickname: { type: String },
   password: { type: String },
   date: { type: Date, default: Date.now },
-  type: { type: String, default: 'user' },
+  type: { type: Number, default: accountType.user },
   badge: { type: Number, default: null },
 }, {
-  collection: 'accounts',
+  collection: accountCollection,
 });
 
-export const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&#]{6,}$/;
-export const usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
+export const usernameDefault = 'User';
+const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*?&#]{6,}$/;
+const usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
+const usernameBlacklist = [
+  usernameDefault,
+];
+
+export const validatePassword = (password: string): number => {
+  return passwordRegex.test(password) ? statusCode.success : statusCode.databasePasswordWrong;
+}
+
+export const validateUsername = async (username: string): Promise<number> => {
+  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item !== username).length >= 0) {
+    return statusCode.databaseUsernameWrong;
+  }
+
+  return await Account.findOne({ username }) ? statusCode.databaseUsernameBusy : statusCode.success;
+}
+
+export const validateEmail = async (email: string): Promise<number> => {
+  return await Account.findOne({ email }) ? statusCode.databaseEmailBusy : statusCode.success;
+}
 
 export const infoValidate = async (username: string, password: string, email: string): Promise<number> => {
-  if (!usernameRegex.test(username)) {
-    return App.status.usernameNotMatchRules;
+  const usernameValidation = await validateUsername(username);
+  if (usernameValidation !== statusCode.success) {
+    return usernameValidation;
   }
 
-  if (!passwordRegex.test(password)) {
-    return App.status.passwordNotMatchRules;
+  const passwordValidation = validatePassword(password);
+  if (passwordValidation !== statusCode.success) {
+    return passwordValidation;
   }
 
-  if (await Account.findOne({ username })) {
-    return App.status.usernameBusy;
+  const emailValidation = await validateEmail(email);
+  if (emailValidation !== statusCode.success) {
+    return emailValidation;
   }
 
-  if (await Account.findOne({ email })) {
-    return App.status.emailBusy;
-  }
-
-  return App.status.success;
+  return statusCode.success;
 }
 
 export const register = (username: string, password: string, email: string): Promise<IAccount> => {
@@ -70,11 +96,11 @@ export const register = (username: string, password: string, email: string): Pro
       }
 
       if (error['code'] === 11000) {
-        reject(App.status.accountExists);
+        reject(statusCode.databaseAccountExists);
         return;
       }
 
-      reject(App.status.unknownError);
+      reject(statusCode.error);
     });
   });
 }
@@ -82,23 +108,23 @@ export const register = (username: string, password: string, email: string): Pro
 export const login = (username: string, password: string): Promise<IAccount> => new Promise(async (resolve, reject) => {
   await Account.findOne({ username: username }, async (error: Error, account: IAccount) => {
     if (!account) {
-      reject(App.status.accountNotFound);
+      reject(statusCode.databaseAccountNotExists);
       return;
     }
 
     if (error) {
-      reject(App.status.unknownError);
+      reject(statusCode.error);
       return;
     }
 
-    if (await verifyPassword(password, account.password)) {
-      resolve(account);
+    if (!await verifyPassword(password, account.password)) {
+      reject(statusCode.databasePasswordWrong);
       return;
     }
 
-    reject(App.status.incorrectPassword);
+    resolve(account);
   }).clone();
 });
 
 
-export const Account: Model<IAccount> = model('Account', schema);
+export const Account: Model<IAccount> = model(accountModelName, schema);
