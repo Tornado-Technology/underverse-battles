@@ -8,4 +8,7 @@ if (battle_border_start_animation_end()) exit;
 
 _soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 
+time_source_start(time_source_update_3_0);
+time_source_start(time_source_update_destroy_3_0);
+
 started = true;

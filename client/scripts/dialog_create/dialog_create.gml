@@ -16,7 +16,7 @@ function choise_create(str, callback) {
 		dialog = translate_get("Dialog." + str);
 	}
 	
-	var inst = instance_create(obj_choise);	
+	var inst = instance_create(obj_choise, {side: dir.up});	
 	inst.dialog = dialog;
 	inst.callback = callback;
 	

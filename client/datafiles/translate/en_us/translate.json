@@ -243,6 +243,7 @@
       "Title": "Multiplayer in BETA NOW",
       "SignUp": "Sign up",
       "LogIn": "Log in",
+      "RestorePassword": "Forgot password",
       "Reconnect": "Reconnect",
       "Reconnecting": "Reconnecting",
       "SuccessfulReconnection": "Successful reconnection",
@@ -264,7 +265,7 @@
       "WritePassword": "Write your password",
       "ConfirmPassword": "Confirm your password",
       "WriteEmail": "Write your email",
-      "Rules": "Username must be written without spaces. The password must contain at least 6 characters, have at least one uppercase letter, one capital letter and a number",
+      "Rules": "Username must be written without spaces. The password must contain at least 6 characters, have at least one letter and number.",
       "MessageCode": "A verification code sent on your email. Write this code here.",
       "WaitingForRegistration": "Waiting for registration"
     },
@@ -278,7 +279,7 @@
       "WaitingForLogin": "Waiting for log in"
     },
     "LogInMessage": {
-      "RegistrationSuccessful": "Registration successful! Now you can log in.",
+      "RegistrationSuccessful": "Registration successful!",
       "LoginSuccessful": "Account login successful!",
       "RegistrationInvalid": "Registration invalid (connect error)",
       "LoginInvalid": "Account login invalid (connect error)",
@@ -312,7 +313,12 @@
       "ChangeNickname": "Change nickname",
       "ChangePassword": "Change password",
       "ChangeEmail": "Change email",
-      "DeleteAccount": "Delete account"
+      "DeleteAccount": "Delete account",
+      "WriteLogin": "Write your username",
+      "WritePassword": "Write your password",
+      "WriteNewNickname": "Write new nickname",
+      "WriteNewPassword": "Write new password",
+      "WriteNewEmail": "Write new email"
     },
     "Statistics": {
       "Title": "Statistics",
@@ -831,69 +837,87 @@
         "Listen",
         "Nope. Get outta here"
       ],
-      "Dialog3_1": [
+      "Dialog3_Line1": [
         "{Sans:normal}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
       ],
-      "Dialog4_1": [
+      "Dialog4_Line1": [
         "{Ink:glad}DO YOU WANNA KNOW MORE ABOUT C!? GREAT!!",
         "{Ink:normal}Ehem! Sorry for that, heh...",
         "{Ink:normal}Alright... All started with a simple drop in a far universe..."
       ],
-      "Dialog5_1": [
-        "{Ink:}Everything seemed to be normal. Your universe and the thousands of existing variations still continued peacefully.",
-        "{Ink:}Suddenly, I felt the appearance of a new universe. It had a very strong presence...",
-        "{Ink:}...despite having the sound of dripping water.",
-        "{Ink:}I couldn't contain my excitement, so I decided to go there.",
-        "{Ink:}I was eager to meet this new world and its inhabitants...",
-        "{Ink:}...But there was absolutely nothing except for one person.",
-        "{Ink:}And actually... those drops were his tears.",
-        "{Ink:}He was very scared. His mind was invaded by horror.",
-        "{Ink:}He noticed there was someone else... me.",
-        "{Ink:}However, soon we broke the ice, and he told me his name.",
-        "{Ink:}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities.",
-        "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
-        "{Ink:combat}Chara is sealed inside his body. How did it happen? He never told me...",
-        "{Ink:}At first they acted as two separate beings.",
-        "{Ink:}However, as I visited Cross to keep him company, he won full control of both souls."
+      "Dialog5_Line1": [
+        "{Ink:none}Everything seemed to be normal. Your universe and the thousands of existing variations still continued peacefully.",
+        "{Ink:none}Suddenly, I felt the appearance of a new universe. It had a very strong presence...",
+        "{Ink:none}...despite having the sound of dripping water.",
+        "{Ink:none}I couldn't contain my excitement, so I decided to go there."
       ],
-      "Dialog6_1": [
-        "{Ink:}One day, while were drawing stuff, he stood up.",
-        "{Ink:}He looked pretty down in the dumps.",
-        "{Ink:}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him.",
+      "Dialog6_Line1": [
+        "{Ink:none}I was eager to meet this new world and its inhabitants...",
+        "{Ink:none}...But there was absolutely nothing except for one person.",
+        "{Ink:none}And actually... those drops were his tears.",
+        "{Ink:none}He was very scared. His mind was invaded by horror.",
+        "{Ink:none}He noticed there was someone else... me.",
+        "{Ink:none}However, soon we broke the ice, and he told me his name."
+      ],
+      "Dialog7_Line1": [
+        "{Ink:none}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities."
+      ],
+      "Dialog8_Line1": [
+        "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
+        "{Ink:calm}Chara is sealed inside his body. How did it happen? He never told me...",
+        "{Ink:calm}At first they acted as two separate beings.",
+        "{Ink:calm}However, as I visited Cross to keep him company, he won full control of both souls."
+      ],
+      "Dialog9_Line1": [
+        "{Ink:none}One day, while were drawing stuff, he stood up.",
+        "{Ink:none}He looked pretty down in the dumps."
+      ],
+      "Dialog10_Line2": [
+        "{Ink:none}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him."
+      ],
+      "Dialog11_Line2": [
         "{Ink:calm}He refused to go, because he was convinced that his world was still alive.",
         "{Ink:calm}Cross thought he could restore everything with my help.",
         "{Ink:calm}But when I told him that can't resurrect the dead...",
         "{Ink:emotionless}His face..."
       ],
-      "Dialog3_2": [
+      "Dialog12_Line1": [
+        "{Sans:confused}Yeah?"
+      ],
+      "Dialog13_Line1": [
+        "{Ink:emotionless}What were we talking about?",
+        "{Sans:none}Pfff, what's up with this guy?"
+      ],
+      "Dialog3_Line2": [
         "{Sans:tired}Look, you better go. I'm not interested in your clowning.",
         "{Ink:surprised}But Sans... Half of your soul was stolen from you.",
         "{Sans:tired}I will survive. And you do your own shit.",
         "{Ink:calm}OK, I get it. After all, it was my fault.",
         "{Ink:combat}Don't worry Sans. I will do anything to get your half of your soul back."
       ],
-      "Dialog4_2": [
+      "Dialog4_Line2": [
         "{Ink:combat}Emm... Good luck."
       ],
-      "Dialog5_2": [
+      "Dialog5_Line2": [
         "{Sans:tired}Hmm ... What's a day.",
-        "{Papyrus:}SANS! WHERE ARE YOU!?",
-        "{Sans:tired}Time to go."
+        "{Sans:tired}Well, time to go."
       ],
-      "Dialog7": [
+      "Dialog14": [
         "{Ink:calm}C, please! You know I can't create a new world... are you OK?",
-        "{Cross:angry}Get away from me!",
+        "{CrossXEvent:angry}Get away from me!"
+      ],
+      "Dialog15": [
         "{Ink:combat}Ok... I'll go, C... just don't be sad... because...",
         "{Ink:combat}You're like my brother... and I don't want my brother being sad."
       ],
-      "Dialog8": [
-        "{Cross:calm}Ink? Is that you?"
+      "Dialog16": [
+        "{CrossXEvent:calm}Ink? Is that you?"
       ],
-      "Dialog9": [
+      "Dialog17": [
         "{Error:normal}Humm... This place is pretty big for a single person.",
         "{Error:normal}This is kinda selfish y'know?"
       ],
-      "Dialog10": [
+      "Dialog18": [
         "{Error:normal}Ink... Ink... Why do you on protecting this anomaly?",
         "{Error:normal}You know you can't help them anymore.",
         "{Error:normal}Let me give him a happy ending this time.",
@@ -901,22 +925,31 @@
         "{Error:normal}Welp...",
         "{Error:normal}I tried to be friendly."
       ],
-      "Dialog11": [
+      "Dialog19": [
         "{Error:normal}Ink, don't resist. I'm not going to kill him.",
-        "{Ink:combat}I won't let you do whatever you want!",
-        "{Error:normal}Looks like you forgot about our truce."
+        "{Ink:combat}I won't let you do whatever you want!"
       ],
-      "Dialog12": [
+      "TakeDamage": [
+        "{Error:angry}Hey, you, player! Stop catching ink with your heart!",
+        "{Error:angry}If you can't dodge properly, then press [Shift] to move slower.",
+        "{Error:angry}If you can't dodge properly, then press active ability button to move slower."
+      ],
+      "DontTakeDamage": [
+        "{Error:normal}Good dodge, player.",
+        "{Error:normal}if you need slow movement, then press [Shift].",
+        "{Error:normal}if you need slow movement, then press active ability button."
+      ],
+      "Dialog20": [
         "{Error:normal}Damn, Ink is good at dodging my attacks.",
         "{Error:normal}I need to use my special attack.",
-        "{Error:normal}I'm tired of these games."
+        "{Error:normal}I'm tired of these games!"
       ],
-      "Dialog13": [
+      "Dialog21": [
         "{C:satisfied}I'M FREE!",
         "{Cross:angry}NO! WAIT!",
         "{Ink:injured}C-Cross? Are you alright?"
       ],
-      "Dialog14": [
+      "Dialog22": [
         "{Ink:injured}This is bad."
       ]
     }

@@ -15,7 +15,6 @@ key = "Credits.";
 credits = [
 	"UNDERVERSE BATTLES",
 	"",
-	"",
 	translate_get(key + "Based"),
 	str_yellow + "UNDERTALE",
 	translate_get(key + "By") + " Toby Fox",
@@ -52,6 +51,8 @@ credits = [
 	"Кирилл Рощин",
 	"Cityman",
 	"Zontik52",
+	"Lepeha",
+	"CrazyBanka",
 	"",
 	str_yellow + translate_get(key + "YouTubers"),
 	"ReStart",
@@ -71,7 +72,6 @@ credits = [
 	"JuJu Adams",
 	"Nik",
 	"YellowAfterlife",
-	"GOS",
 	"UNDEREVENT Team",
 	"",
 	translate_get(key + "AndYou")];

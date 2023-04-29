@@ -147,3 +147,5 @@ if (_id == 2 && attack_num == 1) {
 		inst_turboblaster.x_dir = gb_x;
 	}
 }
+
+// Редактирование
