@@ -4,6 +4,11 @@ is_can_input = true;
 
 edited_objects_number = 0;
 
+edit_button = UIImageButton(spr_edit_button_green, function() {
+	if (!is_can_input || fight_get_initiative() != 0) return;
+	press();
+});
+
 edit_objects = function() {
 	var size = array_length(attack_creator_green.editing_object);
 	var i = 1;

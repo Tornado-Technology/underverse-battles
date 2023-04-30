@@ -21,7 +21,7 @@ for (var i = 0; i < background_counts; i++) {
 		name_width: 0,
 	}
 	
-	backgrounds[i].name_width = string_width(backgrounds[i].name);
+	backgrounds[i].name_width = string_real_width(backgrounds[i].name, font_determination);
 }
 
 play_soundtrack = false;

@@ -62,7 +62,7 @@ actions = [
 	Action("Character.ClassicSans.Attack1", char_sans_attack_1),
 	Action("Character.ClassicSans.Attack2", char_sans_attack_2)
 ];
-special_action = SpecialAction("Character.ClassicSans.SpecialAttack", spr_special_attack_sans, char_sans_special_attack);
+special_action = SpecialAction("Character.ClassicSans.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, char_sans_special_attack);
 
 // Special
 hand_dir_previous = dir.left;

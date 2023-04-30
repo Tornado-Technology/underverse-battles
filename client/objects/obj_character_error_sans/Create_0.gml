@@ -48,7 +48,7 @@ actions = [
 	Action("Character.ErrorSans.Attack1", error_sans_attack1),
 	Action("Character.ErrorSans.Attack2", error_sans_attack2)
 ];
-special_action = SpecialAction("Character.ErrorSans.SpecialAttack", spr_special_attack_error_sans, error_sans_special_attack);
+special_action = SpecialAction("Character.ErrorSans.SpecialAttack", spr_special_attack_error_sans, spr_special_attack_error_sans_locked, error_sans_special_attack);
 
 // Special
 on_taking_damage = function(damage) {

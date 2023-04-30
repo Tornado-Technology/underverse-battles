@@ -45,7 +45,7 @@ actions = [
 	Action("Character.SwapPapyrus.Attack1", swap_papyrus_attack1),
 	Action("Character.SwapPapyrus.Attack2", swap_papyrus_attack2)
 ];
-special_action = SpecialAction("Character.SwapPapyrus.SpecialAttack", spr_special_attack_sans, swap_papyrus_special_attack);
+special_action = SpecialAction("Character.SwapPapyrus.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, swap_papyrus_special_attack);
 
 // Special
 use_gravity_attack = true;

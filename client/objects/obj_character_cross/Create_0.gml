@@ -62,7 +62,7 @@ actions = [
 	Action("Character.Cross.Attack1", cross_attack1),
 	Action("Character.Cross.Attack2", cross_attack2),
 ];
-special_action = SpecialAction("Character.Cross.SpecialAttack", spr_special_attack_cross, cross_special_attack, 4);
+special_action = SpecialAction("Character.Cross.SpecialAttack", spr_special_attack_cross, spr_special_attack_cross_locked, cross_special_attack, 4);
 
 // Special
 hand_dir_previous = dir.left;

@@ -160,7 +160,7 @@
       "Description": ""
     },
     "Jevil": {
-      "Name": "",
+      "Name": " ",
       "Description": ""
     },
     "DoodleSphere": {
@@ -169,6 +169,10 @@
     },
     "UndertaleBattle": {
       "Name": "Undertale battle",
+      "Description": ""
+    },
+    "DeterminationMachine": {
+      "Name": "Determination extraction machine",
       "Description": ""
     }
   },

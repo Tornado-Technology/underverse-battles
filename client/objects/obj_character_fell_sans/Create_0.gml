@@ -61,7 +61,7 @@ actions = [
 	Action("Character.FellSans.Attack1", fell_sans_attack1),
 	Action("Character.FellSans.Attack2", fell_sans_attack2)
 ];
-special_action = SpecialAction("Character.FellSans.SpecialAttack", spr_special_attack_fell_sans, char_fell_sans_special_attack);
+special_action = SpecialAction("Character.FellSans.SpecialAttack", spr_special_attack_fell_sans, spr_special_attack_fell_sans_locked, char_fell_sans_special_attack);
 
 // Special
 hand_dir_previous = dir.left;

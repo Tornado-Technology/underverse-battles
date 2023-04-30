@@ -45,7 +45,7 @@ actions = [
 	Action("Character.InkSans.Attack1", ink_sans_attack1),
 	Action("Character.InkSans.Attack2", ink_sans_attack2)
 ];
-special_action = SpecialAction("Character.InkSans.SpecialAttack", spr_special_attack_ink_sans, ink_sans_special_attack);
+special_action = SpecialAction("Character.InkSans.SpecialAttack", spr_special_attack_ink_sans, spr_special_attack_ink_sans_locked, ink_sans_special_attack);
 
 // Special
 on_selected_attack = function(attack_id, player_id) {

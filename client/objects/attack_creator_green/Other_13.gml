@@ -1,7 +1,7 @@
 /// @description Edit
 if (started) exit;
 
-instance_create(edit_button);
+instance_create_depth(edit_button);
 
 _border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 if (battle_border_start_animation_end()) exit;

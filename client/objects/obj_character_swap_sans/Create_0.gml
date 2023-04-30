@@ -45,7 +45,7 @@ actions = [
 	Action("Character.SwapSans.Attack1", swap_sans_attack1),
 	Action("Character.SwapSans.Attack2", swap_sans_attack2)
 ];
-special_action = SpecialAction("Character.SwapSans.SpecialAttack", spr_special_attack_swap_sans, swap_sans_special_attack);
+special_action = SpecialAction("Character.SwapSans.SpecialAttack", spr_special_attack_swap_sans, spr_special_attack_swap_sans_locked, swap_sans_special_attack);
 
 // Special
 damage_per_hit = 0;
@@ -66,4 +66,3 @@ on_taking_soul_damage = function(soul, damage) {
 // Soundtrack
 soundtrack_name = "Bones Shake"; 
 soundtrack = snd_bones_shake;
-#endregion

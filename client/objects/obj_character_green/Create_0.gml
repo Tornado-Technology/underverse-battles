@@ -48,7 +48,7 @@ actions = [
 	Action("Character.Green.Attack1", green_attack1),
 	Action("Character.Green.Attack2", green_attack2)
 ];
-special_action = SpecialAction("Character.Green.SpecialAttack", spr_special_attack_green, green_special_attack);
+special_action = SpecialAction("Character.Green.SpecialAttack", spr_special_attack_green, spr_special_attack_green_locked, green_special_attack);
 
 // Soundtrack
 soundtrack_name = "Edit The Battle"; 

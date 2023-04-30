@@ -10,4 +10,6 @@ for (var i = 0; i < 3; i++) {
 	text_name_actions_height[i] = string_height(name);
 }
 
-special_button.set_image(fight_get_player_special_action_icon(0));
+special_button.set_image(fight_check_player_special_action_readiness(0) ?
+	fight_get_player_special_action_icon(0) : fight_get_player_special_action_icon(0, true)
+);

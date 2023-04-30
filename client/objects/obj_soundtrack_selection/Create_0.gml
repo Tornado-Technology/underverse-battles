@@ -23,7 +23,7 @@ for (var i = 0; i < soundtrack_counts; i++) {
 		name: soundtrack_get_value(i, "name"),
 		name_width: 0,
 	}
-	soundtracks[i].name_width = string_width(soundtracks[i].name);
+	soundtracks[i].name_width = string_real_width(soundtracks[i].name, font_determination);
 }
 
 play_soundtrack = false;

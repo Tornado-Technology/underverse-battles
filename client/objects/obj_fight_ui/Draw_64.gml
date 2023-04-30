@@ -129,7 +129,6 @@ if (action_box_show) {
 
 // Special action
 if (action_box_show && showing_special_action && is_player_turn) {
-	//draw_sprite(fight_get_player_special_action_icon(0), fight_get_player_special_action_percent(0) != 100, room_width - 90, room_height - 40);
 	special_button.draw(size.x - 90, size.y - 40);
 	
 	draw_set_font(font_console_mini);

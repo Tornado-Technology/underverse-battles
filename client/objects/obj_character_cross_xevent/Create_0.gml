@@ -31,7 +31,7 @@ actions = [
 	Action("Character.CrossXEvent.Attack1", cross_xevent_attack1),
 	Action("Character.CrossXEvent.Attack2", cross_xevent_attack2),
 ];
-special_action = SpecialAction("Character.CrossXEvent.SpecialAttack", spr_special_attack_cross, cross_xevent_special_attack, 4);
+special_action = SpecialAction("Character.CrossXEvent.SpecialAttack", spr_special_attack_cross, spr_special_attack_cross_locked, cross_xevent_special_attack, 4);
 
 // Special
 has_gravity_change = false;
