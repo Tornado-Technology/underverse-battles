@@ -626,7 +626,7 @@
         "Description": "One moving turbo blaster that shoots toward the soul" },
       "SpecialAttack": {
         "Name": "Edit",
-        "Description": "" }
+        "Description": "Objects flying towards the soul change when the button is pressed" }
     },
     "Tornado": {
       "Name": "Tornado",

@@ -15,8 +15,8 @@ Achievement("DefeatFellSans", spr_achivement_defeatfellsans);
 Achievement("DefeatSwapSans", spr_achivement_defeatswapsans);
 Achievement("DefeatSwapPapyrus", spr_achivement_defeatswappapyrus);
 Achievement("ACybersWorld", spr_achivement_a_cybers_world);
-Achievement("DefeatCross", spr_achivement_defeatswappapyrus);
-Achievement("DefeatGreen", spr_achivement_defeatswappapyrus);
+Achievement("DefeatCross", spr_achivement_defeatcross);
+Achievement("DefeatGreen", spr_achivement_defeatgreen);
 Achievement("NoScretches", spr_achivement_a_cybers_world);
 Achievement("Immortality", spr_achivement_immortality);
 

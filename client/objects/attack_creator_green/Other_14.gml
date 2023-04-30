@@ -149,3 +149,42 @@ if (_id == 2 && attack_num == 1) {
 }
 
 // Редактирование
+if (_id == 3) {
+	update_3_0 = function() {
+		switch (edit_button.edit_attack_number) {
+			case 0:
+				var coord = rand_side_from(_border.x - _border.left - 20, _border.y - _border.up - 20, _border.x + _border.right + 20, _border.y + _border.down + 20);
+				var spike_direction = point_direction(coord[0], coord[1], _soul.x, _soul.y);
+				var spike = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, spike_obj);
+				spike.speed_const = 2.6;
+				spike.direction = spike_direction;
+				spike.image_angle = spike_direction;
+				array_push(editing_object, spike);
+				audio_play_sound_plugging(snd_projectile);
+				break;
+			case 1:
+				var coord = rand_side_from(_border.x - _border.left - 20, _border.y - _border.up - 20, _border.x + _border.right + 20, _border.y + _border.down + 20);
+				var bone_direction = point_direction(coord[0], coord[1], _soul.x, _soul.y);
+				var bone = create_bone(coord[0], coord[1], bone_obj, 2.6, 1, bone_direction, bone_direction - 90);
+				array_push(editing_object, bone);
+				audio_play_sound_plugging(snd_projectile);
+				break;
+			case 2:
+				var va_x1_ = obj_camera.camera_position.x;
+				var va_x2_ = obj_camera.view_width + obj_camera.camera_position.x;
+				var va_y1_ = obj_camera.camera_position.y;
+				var va_y2_ = obj_camera.view_height + obj_camera.camera_position.y;
+				var rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
+				var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+				while(point_in_rectangle(rX, rY, _border.x - _border.left, _border.y - _border.up, _border.x + _border.right, _border.y + _border.down)) {
+					var rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
+					var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+				}
+	
+				var _inst = instance_create_depth(rX, rY, 0, knife_spin_obj);
+				_inst._target_angle = point_direction(_inst.x, _inst.y, _soul.x, _soul.y);
+				array_push(editing_object, _inst);
+				break;
+		}
+	}
+}

@@ -4,7 +4,7 @@ enum input {
 	left,
 	right,
 	action,
-	menu,
+	extra,
 	skip,
 	special,
 	anykey,

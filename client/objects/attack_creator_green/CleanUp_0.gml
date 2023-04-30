@@ -40,3 +40,9 @@ if (_id == 2 && attack_num == 1) {
 	time_source_destroy(time_source_update_2_1);
 	time_source_destroy(time_source_update_destroy_2_1);
 }
+
+if (_id == 3) {
+	instance_destroy(edit_button);
+	time_source_destroy(time_source_update_3_0);
+	time_source_destroy(time_source_update_destroy_3_0);
+}

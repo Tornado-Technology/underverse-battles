@@ -1,7 +1,6 @@
 event_inherited();
 
-damage = 1;
-soul_invulnerability = 1;
+damage = 5;
 
 // Particle
 part_glitch = part_type_create();

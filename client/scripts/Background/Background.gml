@@ -22,6 +22,7 @@ enum _background {
 	queens_hall,
 	doodle_sphere,
 	undertale_battle,
+	determination_machine,
 	jevils_circus
 }
 
@@ -33,6 +34,7 @@ Background(spr_background_deltarune_battle,	_background.deltarune_battle, "Backg
 Background(spr_background_queen_s_hall_background, _background.queens_hall, "Backgrounds.QueensHall", "Tornado", universe.deltarune, obj_background_queen_s_hall);
 Background(spr_background_doodle_sphere, _background.doodle_sphere, "Backgrounds.DoodleSphere", "Tornado", universe.underverse, obj_background_doodle_sphere);
 Background(spr_background_undertale_battle, _background.undertale_battle, "Backgrounds.UndertaleBattle", "Tornado", universe.undertale);
+Background(spr_background_determination_machine, _background.determination_machine, "Backgrounds.UndertaleBattle", "Sayki", universe.undertale);
 Background(spr_background_jevil, _background.jevils_circus, "Backgrounds.Jevil", "Tornado",	universe.deltarune, obj_background_jevils_circus);
 
 /// @param {Real} info

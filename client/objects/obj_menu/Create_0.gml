@@ -532,6 +532,7 @@ if (is_desktop && !mobile_mode) {
 		MenuInput("Control.Left", input.left),
 		MenuInput("Control.Right", input.right),
 		MenuInput("Control.Action", input.action),
+		MenuInput("Control.Extra", input.extra),
 		MenuInput("Control.Skip", input.skip),
 		Execute("Control.Default", [], function() {
 			data_reset_controls();

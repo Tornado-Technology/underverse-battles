@@ -89,3 +89,15 @@ if (_id == 2 && attack_num == 1) {
 		instance_destroy();
 	});
 }
+
+// Редактирование
+if (_id == 3) {
+	var period = 7;
+	var amount = 85;
+	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
+		update_3_0();
+	}, [], amount);
+	time_source_update_destroy_3_0 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+		instance_destroy();
+	});
+}

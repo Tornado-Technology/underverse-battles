@@ -2,12 +2,12 @@
 result = -1;
 result_power = -1;
 
-if (fight_check_player_special_action_readiness(1)) {
-	if (irandom_range(0, 1) < 1) {
+//if (fight_check_player_special_action_readiness(1)) {
+	//if (irandom_range(0, 1) < 1) {
 		fight_set_player_special_action(1, true);
 		exit;
-	}
-}
+	//}
+//}
 
 var i = 2;
 repeat(3) {

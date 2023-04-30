@@ -4,8 +4,10 @@ bone_obj = obj_bone_green;
 spike_obj = obj_spear_green;
 gb_obj = obj_turboblaster_green;
 gb_aim_obj = obj_turboblaster_aiming_green;
+knife_spin_obj = obj_knife_spin_green;
 
 edit_button = obj_edit_button_green;
+editing_object = [];
 
 inst_turboblaster = noone;
 _shift = 0;
