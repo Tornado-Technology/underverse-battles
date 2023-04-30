@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SettingsMobileButton",
+  "name": "SettingsMobileCommonButton",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

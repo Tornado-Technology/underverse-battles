@@ -35,8 +35,8 @@
         },
         "SpecialAction": {
           "Position": {
-            "X": 100,
-            "Y": 100
+            "X": 380,
+            "Y": 240
           },
           "Scale": 1
         }

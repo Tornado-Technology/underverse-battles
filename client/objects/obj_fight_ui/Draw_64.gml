@@ -129,11 +129,11 @@ if (action_box_show) {
 
 // Special action
 if (action_box_show && showing_special_action && is_player_turn) {
-	special_button.draw(size.x - 90, size.y - 40);
+	special_button.draw(special_action_position_x, special_action_position_y);
 	
 	draw_set_font(font_console_mini);
 	draw_set_halign(fa_center);
-	draw_text_outlined(size.x - 90, size.y - 20, text_simple_color, c_black, string(fight_get_player_special_action_percent(0))+"%");
+	draw_text_outlined(special_action_position_x, special_action_position_y + 20, text_simple_color, c_black, string(fight_get_player_special_action_percent(0))+"%");
 }
 
 // Skip

@@ -42,3 +42,6 @@ var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
 for (var i = 0; i < array_length(buttons); i++) {
 	array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
 }
+
+// Special attack
+array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
