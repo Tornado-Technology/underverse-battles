@@ -32,6 +32,13 @@
             "Y": 209
           },
           "Scale": 1.25
+        },
+        "SpecialAction": {
+          "Position": {
+            "X": 100,
+            "Y": 100
+          },
+          "Scale": 1
         }
       }
     },

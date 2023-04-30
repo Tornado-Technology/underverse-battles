@@ -392,6 +392,9 @@
             },
             "Action": {
               "Name": "Button action"
+            },
+            "SpecialAction": {
+              "Name": "Special action"
             }
           }
         }
