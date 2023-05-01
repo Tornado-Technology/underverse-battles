@@ -27,7 +27,7 @@ var controller = global.__ui_controls_instance;
 draw_reset();
 
 // Show UI
-if (!show_ui) exit;
+if (!show_ui || cinematic_mode) exit;
 
 // Option bar
 draw_set_alpha(in_fight ? alpha_option_bar : 1);

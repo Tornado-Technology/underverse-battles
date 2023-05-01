@@ -1,6 +1,6 @@
 draw_reset();
 
-if (!switch_on) exit;
+if (!switch_on || cinematic_mode) exit;
 if (time_source_get_state(source) == time_source_state_stopped) exit;
 
 var gui_width = display_get_gui_width();

@@ -14,8 +14,8 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "menu_music",
+    "path": "audiogroups/menu_music",
   },
   "soundFile": "snd_tangled.ogg",
   "duration": 149.80841,
