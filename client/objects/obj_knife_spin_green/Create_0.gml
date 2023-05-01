@@ -5,7 +5,7 @@ damage = 5;
 // Particle
 part_glitch = part_type_create();
 part_type_shape(part_glitch, pt_shape_square);
-part_type_color1(part_glitch, c_green);
+part_type_color1(part_glitch, c_red);
 part_type_alpha1(part_glitch, 0.5);
 part_type_life(part_glitch, 5, 12);
 part_type_orientation(part_glitch, image_angle, image_angle, 0, 0, false);

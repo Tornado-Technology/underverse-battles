@@ -93,11 +93,19 @@ if (_id == 2 && attack_num == 1) {
 // Редактирование
 if (_id == 3) {
 	var period = 7;
-	var amount = 85;
+	if (edit_button != noone) {
+		if (edit_button.edit_attack_number >= 6) period = 50;
+	}
+	var final_time = 11;
+	
 	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 		update_3_0();
-	}, [], amount);
-	time_source_update_destroy_3_0 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+	}, [], -1);
+	time_source_update_stop_3_0 = time_source_create(time_source_game, final_time, time_source_units_seconds, function (pow) {
+		time_source_stop(time_source_update_3_0);
+		time_source_start(time_source_update_destroy_3_0);
+	}, [], -1);
+	time_source_update_destroy_3_0 = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }

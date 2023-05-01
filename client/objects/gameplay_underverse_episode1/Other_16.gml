@@ -3,10 +3,26 @@
 if (fight_get_state() != fight_state.choosing)
 	exit;
 
-var trigger = fight_get_player_hp(0) == fight_get_player_max_hp(0);
+var hp = fight_get_player_hp(0);
+var hp_max = fight_get_player_max_hp(0);
+
+var trigger = 0;
+if (hp < hp_max) trigger = 1;
+if (hp < 2 * hp_max / 3) trigger = 2;
+
+
 var text_ = translate_get("Dialog." + episode + "Dialog5");
 
-array_delete(text_, trigger, 1);
+var i = 0;
+repeat (3) {
+	if (i != trigger) {
+		array_delete(text_, i, 1);
+		trigger--;
+	}
+	else {
+		i++;
+	}
+}
 
 dlg = dialog_create(text_, dir.down);
 			

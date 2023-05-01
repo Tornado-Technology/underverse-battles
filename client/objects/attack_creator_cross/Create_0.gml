@@ -15,7 +15,6 @@ first = [];
 last = [];
 _shift = 0;
 
-side_random = dir.up;
 num = 0;
 
 event_user(4);

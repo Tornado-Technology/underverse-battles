@@ -68,6 +68,9 @@ draw_sprite_part_ext(option_bar_sprites[0], 0, 0, 0, current_hp_line[1],      op
 draw_sprite_part_ext(option_bar_sprites[1], 0, 0, 0, current_stamina_line[1], option_bar_height[1], size_center.x + 131, 18, -1, 1, color, alpha);
 draw_sprite_part_ext(option_bar_sprites[2], 0, 0, 0, current_mana_line[1],    option_bar_height[2], size_center.x + 118, 21, -1, 1, color, alpha);
 
+// Show frames
+event_user(1);
+
 // Reset
 draw_reset();
 
@@ -153,9 +156,6 @@ draw_set_valign(fa_bottom);
 if (!in_fight && show_initiative) {
 	draw_text_outlined(size_center.x, 60, c_white, c_black, str_initiative);
 }
-
-// Show frames
-event_user(1);
 
 // Reset
 draw_reset();

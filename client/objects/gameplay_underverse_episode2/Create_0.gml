@@ -255,34 +255,40 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[cutscene_execute, function () { sans.sprite_index = spr_sans_sitting4; }],
 		[cutscene_dialog_async, episode + "Dialog3_Line2"],
-		[cutscene_execute_by_dialog, 2, function () { 
+		[cutscene_execute_by_dialog, 2, function () {
+			ink_sans.sprite_index = spr_ink_sans_sitting1; 
 			sans.sprite_index = spr_sans_sitting3; 
 		}],
 		[cutscene_execute_by_dialog, 4, function () { 
-			sans.sprite_index = spr_sans_sitting1; 
+			sans.sprite_index = spr_sans_sitting1;
+			ink_sans.sprite_index = spr_ink_sans_sitting3;
+		}],
+		[cutscene_execute_by_dialog, 4, function () { 
+			ink_sans.sprite_index = spr_ink_sans_down_empty_eyes;
 		}],
 		[cutscene_wait_dialog_end],
 		[cutscene_wait, 3],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_right_empty_eyes],
 		[cutscene_dialog, episode + "Dialog4_Line2"],
-		[cutscene_wait, 1],
-		[cutscene_execute, function () { 
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_right_empty_eyes_walking],
+		[cutscene_character_move, ink_sans, 300, 0, 2],
+		[cutscene_wait, 3],
+		[cutscene_execute, function () {
+			instance_destroy(ink_sans);
 			sans.sprite_index = spr_sans_sitting0; 
 		}],
 		[cutscene_wait, 2],
 		[cutscene_dialog_async, episode + "Dialog5_Line2"],
 		[cutscene_execute_by_dialog, 1, function () { 
-			sans.sprite_index = spr_sans_sitting2; 
+			sans.sprite_index = spr_char_sans_left; 
 		}],
 		[cutscene_wait_dialog_end],
-		[cutscene_execute, function () {
-			sans.sprite_index = spr_char_sans_walk_left;
-			sans.speed = 2;
-			sans.direction = 180;
-		}],
+		[cutscene_object_set_sprtie, sans, spr_char_sans_walk_left],
+		[cutscene_character_move, sans, -300, 0, 2],
+		[cutscene_wait, 1],
 		[effect_fade, 2, 2, c_black, c_black, true, 0],
 		[cutscene_wait, 2],
 		[cutscene_execute, function () {
-			instance_destroy(ink_sans);
 			instance_destroy(sans);
 		}],
 		[cutscene_execute, function () { cutscene_create(cutscenes[3]); }]
@@ -339,6 +345,7 @@ cutscenes = [
 		}],
 		[cutscene_wait, 1],
 		[effect_blackout_start, c_black, true, 0],
+		[cutscene_execute, function() { instance_destroy_array(string_error_sans); }],
 		[audio_play_sound_once, snd_spare_up],
 		[cutscene_wait, 2],
 		// Cross in strings
@@ -347,7 +354,6 @@ cutscenes = [
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
 		[effect_blackout_end],
 		[cutscene_execute, function () {
-			instance_destroy_array(string_error_sans);
 			var i = 0;
 			repeat(4) {
 				string_cross[i] = instance_create_depth(cross.x - 4 + i * 2, cross.y - 26, fight_depth.player, obj_string_error_sans_story_mode, {
@@ -426,11 +432,12 @@ cutscenes = [
 		[cutscene_execute, function () {
 			ink_sans = instance_create_depth(error_sans.x + 100, error_sans.y, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_attack_flying });
 		}],
-		[cutscene_character_move, ink_sans, -100, 0, 4],
+		[cutscene_character_move, ink_sans, -90, 0, 4],
 		[cutscene_wait, 0.2],
 		[cutscene_execute, function () {
 			instance_destroy(soul_cross);
 		}],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_attack_flying_hit],
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
 		[cutscene_object_set_sprtie, error_sans, spr_error_sans_dodge_jump_back],
 		[cutscene_character_move, error_sans, -100, 0, 2],
@@ -446,43 +453,49 @@ cutscenes = [
 			player0_hp_turn2 = fight_get_player_hp(0);
 			fight_set_ui_showing_action_box(false);
 			fight_set_player_input(false);
-			fight_set_pause(false);
+			fight_set_pause(true);
 		}],
-		[cutscene_wait, 1],
+		[cutscene_wait, 0.6],
 		[cutscene_dialog, episode + "Dialog19", dir.down],
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
-			fight_set_pause(true);
+			fight_set_pause(false);
 		}],
 		[cutscene_fight_wait_turn, 4],
+		[cutscene_execute, function () {
+			fight_set_ui_showing_action_box(false);
+			fight_set_player_input(false);
+			fight_set_pause(true);
+		}],
+		[cutscene_wait, 0.6],
 		[cutscene_execute, function () {
 			if (player0_hp_turn2 > fight_get_player_hp(0)) {
 				instance_dialog = dialog_create(episode + "TakeDamage", dir.down);
 			} else {
 				instance_dialog = dialog_create(episode + "DontTakeDamage", dir.down);
 			}
-			fight_set_pause(false);
 		}],
 		[cutscene_wait_dialog_end],
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
-			fight_set_pause(true);
+			fight_set_pause(false);
 		}],
 		[cutscene_fight_wait_turn, 6],
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(false);
 			fight_set_player_input(false);
-			fight_set_pause(false);
+			fight_set_pause(true);
 		}],
+		[cutscene_wait, 0.6],
 		[cutscene_dialog, episode + "Dialog20", dir.down],
 		[cutscene_execute, function () {
 			fight_set_player_special_action_persent(0, 100);
 			fight_set_showing_special_action(true);
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
-			fight_set_pause(true);
+			fight_set_pause(false);
 		}],
 	]
 ];

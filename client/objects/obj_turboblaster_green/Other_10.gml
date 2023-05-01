@@ -24,5 +24,6 @@ time_source_target = time_source_create(time_source_game, target_time, time_sour
 
 time_source_destroying = time_source_create(time_source_game, destroy_time, time_source_units_seconds, function () {
 	sprite_index = idle_sprite;
+	is_shaked = false;
 	time_source_start(time_source_flying);
 });

@@ -1,5 +1,5 @@
 edit_attack_number = 0;
-edit_attack_number_max = 2;
+edit_attack_number_max = 7;
 is_can_input = true;
 
 edited_objects_number = 0;
@@ -26,21 +26,13 @@ cooldown = time_source_create(time_source_game, 1, time_source_units_seconds, fu
 });
 
 press = function() {
-	if (edit_attack_number == 0) {
-		edit_attack_number = choose(1, 2);
-		edit_objects();
-		exit;
+	var edit_attack_number_current = edit_attack_number;
+	while (edit_attack_number == edit_attack_number_current) {
+		edit_attack_number = irandom_range(0, edit_attack_number_max);
 	}
-	if (edit_attack_number == 1) {
-		edit_attack_number = choose(0, 2);
-		edit_objects();
-		exit;
-	}
-	if (edit_attack_number == 2) {
-		edit_attack_number = choose(0, 1);
-		edit_objects();
-		exit;
-	}
+	edit_objects();
+	with (attack_creator_green) event_user(5);
+	
 	is_can_input = false;
 	time_source_start(cooldown);
 	audio_play_sound_plugging(snd_selection);

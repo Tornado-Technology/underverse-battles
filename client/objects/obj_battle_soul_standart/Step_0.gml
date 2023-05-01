@@ -86,7 +86,6 @@ if (place_meeting(x, y + full_movement_y, obj_solid)) {
 		
 	outside_force_y = 0;
 	tremble_force_y = 0;
-	border_force_y = border_delta_y;
 }
 else {
 	border_force_y = 0;

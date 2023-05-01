@@ -129,8 +129,8 @@
       "Name": "A cyber world?",
       "Description": "Login to the online game account"
     },
-    "NoScretches": {
-      "Name": "No scretches",
+    "NoHit": {
+      "Name": "No hit",
       "Description": "Defeat an enemy without taking damage"
     },
     "Immortality": {
@@ -172,7 +172,7 @@
       "Description": ""
     },
     "DeterminationMachine": {
-      "Name": "Determination extraction machine",
+      "Name": "DT extraction machine",
       "Description": ""
     }
   },
@@ -441,7 +441,7 @@
       "Bio": "Guardian of the Multiverse, deemed an outcode character. He endorses other creators to keep developing their AUs. Ink doesn't have an AU of his own, so he's given to travel across different universes, as well as attend to the Doodle Sphere - the 'intersection' between all the existing AUs. Ink is soulless, thus locking himself from feeling things on his own. That's where his paint flasks come in handy, endowing him with emotions when consumed over time. Thanks to that, he commonly appears as a cheerful and playful being, always ready to help. Ink wields a brush as a primary weapon, which he calls Broomie. He's able to form different attacks by using his ink.",
       "PassiveSkill": {
         "Name": "Soulless heart",
-        "Description": "Ink Sans is not affected by blue attack and orange attack. Instead, he dodges another attack." },
+        "Description": "Ink Sans is not affected by gravity from blue attack and orange attack" },
       "Attack0": {
         "Name": "Inks",
         "Description": "Colored droplets dripping from above" },
@@ -493,7 +493,7 @@
         "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "Bad time",
-        "Description": "" }
+        "Description": "Alternating attacks: blue attack, bones, blue attack, and then a strong barrage of Gasterblasters" }
     },
     "FellSans": {
       "Name": "Fell Sans",
@@ -513,7 +513,7 @@
         "Description": "The soul turns blue, gravitation flips and bones emerge from the attracting side of the box" },
       "SpecialAttack": {
         "Name": "Great time",
-        "Description": "" }
+        "Description": "Alternating attacks: bones, blue attack, bones, and then a strong barrage of Gasterblasters" }
     },
     "SwapSans": {
       "Name": "Swap Sans",
@@ -553,7 +553,7 @@
         "Description": "The soul turns orange and gravitate to one side of the box with bones" },
       "SpecialAttack": {
         "Name": "Bad time",
-        "Description": "" }
+        "Description": "Alternating attacks: orange attack, bones, orange attack, and then a strong barrage of Gasterblasters" }
     },
     "Cross": {
       "Name": "Cross",
@@ -633,7 +633,7 @@
         "Description": "One moving turbo blaster that shoots toward the soul" },
       "SpecialAttack": {
         "Name": "Edit",
-        "Description": "Objects flying towards the soul change when the button is pressed" }
+        "Description": "An attack which the attacking objects change by pressing a button" }
     },
     "Tornado": {
       "Name": "Tornado",
@@ -758,6 +758,7 @@
       "Dialog5": [
         "{Ink:normal}Well done, you're good at it!",
         "{Ink:normal}Damn, we lost a little HP.",
+        "{Ink:confused}Bro, you need to train. You lost too many HP.",
         "{Ink:normal}Now it's our turn.",
         "{C:angry}Who are you talking to?",
         "{Ink:proud}It's not your business.",
@@ -879,10 +880,10 @@
         "{Ink:none}One day, while were drawing stuff, he stood up.",
         "{Ink:none}He looked pretty down in the dumps."
       ],
-      "Dialog10_Line2": [
+      "Dialog10_Line1": [
         "{Ink:none}He told me that a strange child appeared in his world, and tried to convince him to go to a place with other survivors like him."
       ],
-      "Dialog11_Line2": [
+      "Dialog11_Line1": [
         "{Ink:calm}He refused to go, because he was convinced that his world was still alive.",
         "{Ink:calm}Cross thought he could restore everything with my help.",
         "{Ink:calm}But when I told him that can't resurrect the dead...",

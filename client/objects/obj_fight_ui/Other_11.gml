@@ -1,3 +1,4 @@
+/// @desc Frames and nicknames
 var size = display_get_gui_size();
 
 //Shift

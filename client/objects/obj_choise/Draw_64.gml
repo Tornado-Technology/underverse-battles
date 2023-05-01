@@ -1,4 +1,3 @@
-event_inherited();
 if (act < 1) exit;
 
 // Reset

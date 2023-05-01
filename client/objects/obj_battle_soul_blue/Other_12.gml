@@ -25,18 +25,18 @@ else if (place_meeting(x - 1, y, obj_platform) and !place_meeting(x, y, obj_plat
 }
 else {
 	vspd_inert = 0;
-    hspd -= (grav + addit_spd) * dtime;
+    hspd -= (grav + addit_spd);
 }
         
 if (hspd < -FALL_SPD - addit_spd)
-	hspd = (-FALL_SPD - addit_spd) * dtime;
+	hspd = (-FALL_SPD - addit_spd);
     
 if (right)
-    vspd = HSPD * dtime;
+    vspd = HSPD;
 if (left)
-    vspd = -HSPD * dtime;
+    vspd = -HSPD;
 if (up and fly_time < max_fly_time and (place_meeting(x - 1, y, obj_solid) or (place_meeting(x - 1, y, obj_platform) and !place_meeting(x, y, obj_platform) and hspd >= 0))) {
-	hspd = VSPD * dtime;
+	hspd = VSPD;
 	fly_time += dtime;
 }
 if (!up and hspd > 0)

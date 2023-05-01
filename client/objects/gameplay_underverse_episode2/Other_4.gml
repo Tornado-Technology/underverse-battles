@@ -1,8 +1,8 @@
-// Звуки
+// Sounds
 audio_stop_all();
 // Добавить эмбиент леса
 
-// Создание персонажей
+// Characters create
 sans = instance_create_depth(223, 197, fight_depth.player, obj_character_sans, {
 	sprite_index: spr_sans_sitting0
 });
@@ -11,8 +11,9 @@ ink_sans = instance_create_depth(255, 197, fight_depth.player, obj_character_ink
 	sprite_index: spr_ink_sans_sitting0
 });
 
-// Эффекты
+// Effects
+camera_set_position(0, 0);
 effect_fade(0, 3, c_black, c_black, true, 0);
 
-// Запуск первой катсцены
+// First cutscene
 cutscene_create(cutscenes[0]);

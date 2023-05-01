@@ -5,8 +5,9 @@ spike_obj = obj_spear_green;
 gb_obj = obj_turboblaster_green;
 gb_aim_obj = obj_turboblaster_aiming_green;
 knife_spin_obj = obj_knife_spin_green;
+knife_directed_obj = obj_knife_directed_green;
 
-edit_button = obj_edit_button_green;
+edit_button = noone;
 editing_object = [];
 
 inst_turboblaster = noone;
@@ -22,6 +23,10 @@ first = false;
 
 num = 0;
 sum_num = 0;
+
+_side = 90;
+step = 5;
+rot = irandom_range(0, 1);
 
 event_user(4);
 event_user(5);
