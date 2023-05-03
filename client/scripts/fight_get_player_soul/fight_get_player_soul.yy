@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Sprites.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Local/Fight/Fight/Player.yy",
   },
 }

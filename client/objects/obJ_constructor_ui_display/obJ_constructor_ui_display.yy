@@ -44,6 +44,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Constructor",
-    "path": "folders/Objects/GUI/Constructor.yy",
+    "path": "folders/Objects/UI/Constructor.yy",
   },
 }

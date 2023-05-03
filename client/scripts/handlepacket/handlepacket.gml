@@ -189,6 +189,10 @@ function handle_packet(data) {
 			fight_set_player_special_action_persent(data.playerId, data.charge);
 			break;
 		
+		case "fightExtraAction":
+			battle_use_extra_action();
+			break;
+		
 		case "fightResetAction":
 			fight_reset_player_action(0);
 			break;

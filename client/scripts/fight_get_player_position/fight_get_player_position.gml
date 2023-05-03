@@ -1,5 +1,5 @@
 ///@arg player_id
-function fight_get_player_position(){
-	var player=obj_fight.player[argument[0]];
+function fight_get_player_position(player_id) {
+	var player = global.fight_instance.player[player_id];
 	return [player.x,player.y];
 }

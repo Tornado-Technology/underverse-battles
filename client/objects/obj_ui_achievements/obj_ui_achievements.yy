@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/GUI/Menu.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
 }

@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Multiplayer",
-    "path": "folders/Objects/GUI/Menu/Pages/Multiplayer.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
 }

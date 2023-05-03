@@ -34,6 +34,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pages",
-    "path": "folders/Objects/GUI/Menu/Pages.yy",
+    "path": "folders/Objects/UI/Menu/Pages.yy",
   },
 }

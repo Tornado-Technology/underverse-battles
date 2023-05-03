@@ -159,6 +159,10 @@ export default class Fight {
     client?.sendFightResetPower();
   }
 
+  public setExtraAction(client: Client): void {
+    this.getOtherClient(client)?.sendFightExtraAction();
+  }
+
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
     client?.fight.setSoulData(x, y, angle, ability);
     this.getOtherClient(client)?.sendFightSoul(x, y, angle, ability, target.opponent);

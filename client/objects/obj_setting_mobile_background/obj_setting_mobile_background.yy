@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Setting (Mobile)",
-    "path": "folders/Objects/Setting (Mobile).yy",
+    "name": "Setting(mobile)",
+    "path": "folders/Objects/Setting(mobile).yy",
   },
 }

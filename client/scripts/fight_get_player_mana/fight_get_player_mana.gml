@@ -1,4 +1,4 @@
-///@arg player_id
-function fight_get_player_mana(){
-	return fight_get_player(argument[0]).mana;
+///@arg {Real} player_id
+function fight_get_player_mana(player_id) {
+	return fight_get_player(player_id).mana;
 }
