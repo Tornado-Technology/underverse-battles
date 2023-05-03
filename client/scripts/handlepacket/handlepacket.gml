@@ -1,7 +1,5 @@
 global.verify_code_connection = undefined;
 global.ping_instance = noone;
-#macro success "success"
-#macro fail "fail"
 
 /// @param {Struct} data - Data from server for handle
 function handle_packet(data) {
@@ -10,8 +8,7 @@ function handle_packet(data) {
 	switch(index) {
 		case "connection":
 			var code = data.code;
-			
-			if (code == 100) {
+			if (code == status_code.success) {
 				logger.info("Client connection success.");
 				break;
 			}
@@ -39,7 +36,7 @@ function handle_packet(data) {
 			break;
 
 		case "login":
-			if (data.status == 100) {
+			if (data.status == status_code.success) {
 				network_profile = data.profile;
 				network_account = data.account;
 				logger.info("Login success");
@@ -54,7 +51,7 @@ function handle_packet(data) {
 			break;
 
 		case "register":
-			if (data.status == 100) {
+			if (data.status == status_code.success) {
 				successful_registration();
 				logger.info("Registration successful! You can login now.");
 				break;
@@ -90,16 +87,63 @@ function handle_packet(data) {
 				_id = get_string_async(translate_get("Menu.SignUp.MessageCode"), "");
 			}
 			break;
+		
+		case "changeNickname":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change nickname successful", c_lime);
+			break;
 
+		case "changeUsername":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change username successful", c_lime);
+			break;
+
+		case "changePassword":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change password successful", c_lime);
+			break;
+
+		case "changeEmail":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = data.account;
+			network_profile = data.profile;
+			display_show_message_info("Change email successful", c_lime);
+			break;
+			
+		case "deleteAccount":
+			break;
+			
 		case "fightJoin":
 			var status = data.status;
 
-			if (status == 100) {
+			if (status == status_code.success) {
 				logger.info("Successful join to fight");
 				var opponent_data = json_parse(data.data);
 				var inst_opponent = instance_create(obj_opponent);
-				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.skinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
-				var character_object = global.characters[opponent_data.characterId, opponent_data.skinId].object;
+				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.characterSkinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
+				var character_object = global.characters[opponent_data.characterId, opponent_data.characterSkinId].object;
 				memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, character_object);
 				room_goto(room_fight_1v1);
 			} 
@@ -127,7 +171,7 @@ function handle_packet(data) {
 		
 		case "fightPower":
 			// Send obj_fight this info
-			fight_set_enemy_power(data.playerId, data.power);
+			fight_set_player_power(data.playerId, data.power);
 			break;
 		
 		case "fightSkip":
@@ -177,13 +221,14 @@ function handle_packet(data) {
 			var data_enemy = data.playerId;
 			if (data_enemy != 0) {
 				var damage = fight_get_player_hp(data_enemy) - data.hp;
+				show_debug_message(damage);
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)
 					fight_network_heal(data_enemy, -damage);
 			}
 			
-			fight_set_enemy_hp(data_enemy, data.hp);
+			fight_set_player_hp(data_enemy, data.hp);
 			break;
 			
 		case "battleEnd":
@@ -191,11 +236,11 @@ function handle_packet(data) {
 			break;
 			
 		case "fightMana":
-			fight_set_enemy_mana(data.playerId, data.mana);
+			fight_set_player_mana(data.playerId, data.mana);
 			break;
 			
 		case "fightStamina":
-			fight_set_enemy_stamina(data.playerId, data.stamina);
+			fight_set_player_stamina(data.playerId, data.stamina);
 			break;
 			
 		case "fightStun":

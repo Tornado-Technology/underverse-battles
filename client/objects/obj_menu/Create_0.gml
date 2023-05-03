@@ -325,16 +325,16 @@ create_page([
 create_page([
 	Transfer("Multiplayer.SignUp", menu_page.signup, function() {
 		instance_create(obj_menu_sign_up, {
-			inputbox_login: sign_inputbox_login.inputbox,
-			inputbox_password: sign_inputbox_password.inputbox,
-			inputbox_confirm_password: sign_inputbox_confirm_password.inputbox,
-			inputbox_email: sign_inputbox_email.inputbox,
+			inputbox_login: sign_inputbox_login.input_box,
+			inputbox_password: sign_inputbox_password.input_box,
+			inputbox_confirm_password: sign_inputbox_confirm_password.input_box,
+			inputbox_email: sign_inputbox_email.input_box,
 		});
 	}),
 	Transfer("Multiplayer.LogIn", menu_page.login, function() {
 		instance_create(obj_menu_log_in, {
-			inputbox_login: login_inputbox_login.inputbox,
-			inputbox_password: login_inputbox_password.inputbox,
+			inputbox_login: login_inputbox_login.input_box,
+			inputbox_password: login_inputbox_password.input_box,
 		});
 	}),
 	Execute("Multiplayer.Reconnect", [], function() {
@@ -411,53 +411,40 @@ account_settings_inputbox_change_password = InputBox("TODO: add key");
 account_settings_inputbox_change_email = InputBox("TODO: add key");
 
 create_page([
-    Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname, function() {
-        var instance = instance_create(obj_menu_account_changes_nickname);
-		instance.input_box = account_settings_inputbox_change_nickname;
-    }),
-    Transfer("AccountOptions.ChangePassword", menu_page.account_change_password, function() {
-        var instance = instance_create(obj_menu_account_changes_password);
-		instance.input_box = account_settings_inputbox_change_password;
-    }),
-    Transfer("AccountOptions.ChangeEmail", menu_page.account_change_email, function() {
-        var instance = instance_create(obj_menu_account_changes_email);
-		instance.input_box = account_settings_inputbox_change_email;
-    }),
-    Transfer("AccountOptions.DeleteAccount", menu_page.account_settings),
+    Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname),
+    Transfer("AccountOptions.ChangePassword", menu_page.account_change_password),
+    Transfer("AccountOptions.ChangeEmail", menu_page.account_change_email),
+    Execute("AccountOptions.DeleteAccount", menu_page.account_settings, function() {
+		send_delete_account();
+	}),
     Transfer("StandardButtons.Back", menu_page.multiplayer_account),
 ], menu_page.account_settings);
 
 // Account change nickname
 create_page([
     account_settings_inputbox_change_nickname,
-	Execute("TODO: key применить", [], function() {
-			audio_play_sound_once(snd_selection);
+	Execute("TODO: key применить", [], function() {		
+		send_nickname_change(account_settings_inputbox_change_nickname.input_box.text);
 	}),
-    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
-        instance_destroy(obj_menu_account_changes_nickname)
-    }),
+    Transfer("StandardButtons.Back", menu_page.account_settings),
 ], menu_page.account_change_nickname);
 
 // Account change password
 create_page([
     account_settings_inputbox_change_password,
 	Execute("TODO: key применить", [], function() {
-			audio_play_sound_once(snd_selection);
+		send_password_change(account_settings_inputbox_change_password.input_box.text);
 	}),
-    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
-        instance_destroy(obj_menu_account_changes_password)
-    }),
+    Transfer("StandardButtons.Back", menu_page.account_settings),
 ], menu_page.account_change_password);
 
 // Account change email
 create_page([
-    account_settings_inputbox_change_nickname,
+    account_settings_inputbox_change_email,
 	Execute("TODO: key применить", [], function() {
-			audio_play_sound_once(snd_selection);
+		send_eamil_change(account_settings_inputbox_change_email.input_box.text);
 	}),
-    Transfer("StandardButtons.Back", menu_page.account_settings, function() {
-        instance_destroy(obj_menu_account_changes_email)
-    }),
+    Transfer("StandardButtons.Back", menu_page.account_settings),
 ], menu_page.account_change_email);
 
 // Achivments

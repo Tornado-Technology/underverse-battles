@@ -1,4 +1,3 @@
-// @ts-ignore
 import { fileURLToPath } from 'url';
 import { readFileSync, existsSync } from 'fs';
 import minimist from 'minimist';
@@ -88,7 +87,10 @@ const developmentConfig = {
   },
 }
 
-export type config = typeof commonConfig & typeof productionConfig & typeof developmentConfig;
+export type config =
+  typeof commonConfig &
+  typeof productionConfig &
+  typeof developmentConfig;
 
 // The place where you must register your custom config
 const configs = [

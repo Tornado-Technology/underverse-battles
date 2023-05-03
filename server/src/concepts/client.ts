@@ -1,17 +1,17 @@
 import { ObjectId } from 'mongoose';
 import { v4 as uuid4 } from 'uuid';
 import { Socket } from 'net';
-import {generateVerificationCode, hashPassword} from '../util/encrypting.js';
+import { generateVerificationCode, hashPassword } from '../util/encrypting.js';
 import { freshProfile, IProfile, Profile } from '../schemas/profile.js';
-import { FriendRequest } from '../schemas/friendRequest.js';
-import { IAccount } from '../schemas/account.js';
+import { findIncoming, findOutgoing } from '../schemas/friendRequest.js';
+import { IAccount, usernameDefault } from '../schemas/account.js';
+import { getRank } from '../content/rankList.js';
+import { statusCode } from '../status.js';
 import ClientFight from './clientFight.js';
 import SendStuff from '../packet/sendStuff.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
-import {clearTimeout} from "timers";
 import Rank from '../data/rank.js';
-import { getRank } from '../content/rankList.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -53,7 +53,7 @@ export default class Client extends SendStuff {
   }
 
   static async remove(client: Client): Promise<void> {
-    await client.onDisconnect(App.status.socketClosed);
+    await client.onDisconnect(statusCode.serverSocketClosed);
     App.clients.splice(App.clients.indexOf(client), 1);
   }
 
@@ -103,7 +103,7 @@ export default class Client extends SendStuff {
     this.account = null;
     this.profile = null;
     this.statistic = null;
-    this.sendLogout(App.status.success);
+    this.sendLogout(statusCode.success);
   }
 
   public onLogin(): void {
@@ -117,10 +117,10 @@ export default class Client extends SendStuff {
     }).then((profile) => {
       if (profile) {
         this.profile = profile;
-        this.sendLogin(App.status.success);
+        this.sendLogin(statusCode.success);
         return;
       }
-      this.sendLogin(App.status.profileNotFound);
+      this.sendLogin(statusCode.databaseProfileNotExists);
       throw new Error(`Couldn't find a profile with these credentials`);
     });
   }
@@ -129,7 +129,7 @@ export default class Client extends SendStuff {
     this.account = account;
     this.profile = await freshProfile(account);
     this.onLogin();
-    this.sendRegister(App.status.success);
+    this.sendRegister(statusCode.success);
   }
 
   public async save(): Promise<void> {
@@ -139,39 +139,25 @@ export default class Client extends SendStuff {
   }
 
   public async deleteAccount(): Promise<void> {
-    // App.database.collection('statistics').deleteOne({  });
     await App.database.collection('profiles').deleteOne({ _id: this.profile._id });
     await App.database.collection('accounts').deleteOne({ _id: this.account._id });
     this.logout();
   }
 
   public async getFriends(): Promise<IProfile[]> {
-    if (!this.isLogin) {
-      return [];
-    }
-    // @ts-ignore
-    return (await Profile.findById(this.profile._id).populate<{ friends: IProfile[] }>('friends')).friends;
+    return this.isLogin ? (await Profile.findById(this.profile._id).populate<{ friends: IProfile[] }>('friends')).friends : [];
   }
 
   public getFriendIds(): ObjectId[] {
-    if (!this.isLogin) {
-      return [];
-    }
-    return this.profile.friends;
+    return this.isLogin ? this.profile.friends : [];
   }
 
   async getIncomingFriendRequests(): Promise<IProfile[]> {
-    if (!this.isLogin) {
-      return [];
-    }
-    return await FriendRequest.findIncoming(this.profile._id);
+    return this.isLogin ? await findIncoming(this.profile._id) : [];
   }
 
   async getOutgoingFriendRequests(): Promise<IProfile[]> {
-    if (!this.isLogin) {
-      return [];
-    }
-    return await FriendRequest.findOutgoing(this.profile._id);
+    return this.isLogin ? await findOutgoing(this.profile._id) : [];
   }
 
   public addRating(rating: number): void {
@@ -244,6 +230,7 @@ export default class Client extends SendStuff {
     if (!this.isLogin) {
       return;
     }
+
     this.account.email = email;
     await this.save();
   }
@@ -268,16 +255,36 @@ export default class Client extends SendStuff {
     return Boolean(this.profile);
   }
 
-  public setState(state: state) {
+  public setState(state: state): void {
     this._state = state;
-    Logger.info(`Client set new state "${state}"`);
+    Logger.debug(`Client set new state "${state}"`);
   }
 
   public get state(): state {
     return this._state;
   }
 
-  public get rank(): Rank {
-    return this.isLogin ? getRank(this.profile.rating) : undefined;
+  public get rank(): Rank | undefined {
+    return this.isLogin ? getRank(this.rating) : undefined;
+  }
+
+  public get rating(): number {
+    return this.isLogin ? this.profile.rating : 0;
+  }
+
+  public get badge(): number | null {
+    return this.isLogin ? this.profile.badge : null;
+  }
+
+  public get username(): string {
+    return this.isLogin ? this.account.username : usernameDefault;
+  }
+
+  public get friendInfo() {
+    return {
+      username: this.username,
+      online: this.isLogin ? this.profile.online : null,
+      lastOnline: this.isLogin ? this.profile.lastOnline : null,
+    }
   }
 }

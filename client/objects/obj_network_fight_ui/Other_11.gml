@@ -38,17 +38,16 @@ draw_set_font(font_mini);
 draw_set_halign(fa_left);
 
 var color = your_rp_values[1];
-if (account.type == "creator") {
+if (account.type == account_type.developer) {
 	color = c_rainbow;
 }
-
 
 if (account != undefined && profile != undefined) {
 	draw_text_outlined(frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, account.username);
 	draw_text_outlined(frame_x, frame_y + frame_w + 25, color_text_opp, color_text_outline_opp, string(your_rp) + " " + translate_get("Battle.Rating"));
 
-	if (account.badge != 0) {
-		draw_sprite(spr_badges, account.badge, chr_x - string_width(account.username) / 2 - 10, chr_y - chr_h - 14);
+	if (profile.badge != undefined) {
+		draw_sprite(spr_badges, profile.badge, chr_x - string_width(account.username) / 2 - 10, chr_y - chr_h - 14);
 	}
 	
 	draw_set_font(font_console_mini);
@@ -59,7 +58,7 @@ if (account != undefined && profile != undefined) {
 draw_sprite(opp_frame, 0, size.x - frame_x - frame_w, frame_y);
 
 color = opp_rp_values[1];
-if (opponent_get_type(player_id) == "creator") {
+if (opponent_get_type(player_id) == account_type.developer) {
 	color = c_rainbow;
 }
 

@@ -1,11 +1,12 @@
+import { Account, accountType, infoValidate, login, register, validatePassword, validateUsername } from '../schemas/account.js';
+import { state as fightState, target } from '../game/fight/fight.js';
 import { send as mailSend } from '../util/mail.js';
 import Client, { state } from '../concepts/client.js';
-import {state as fightState, target} from '../game/fight.js';
-import Logger from '../util/logging.js';
-import App from '../app.js';
-import {Account, infoValidate, login, passwordRegex, register, usernameRegex} from '../schemas/account.js';
+import { statusCode } from '../status.js';
 import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
+import Logger from '../util/logging.js';
+import App from '../app.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -20,11 +21,15 @@ export const handlePacket = async (client: Client, data: any) => {
         client.verifying = true;
         const info = JSON.parse(data.information);
         const hash = versions[info.build][info.version];
+        if (info?.os_info) {
+          const osInfo = JSON.parse(info.os_info);
+          client.hardAddress = osInfo?.udid;
+        }
 
         if (!hash) {
           Logger.warn(`Client version "${info.version}" or build "${info.build}" is not registered on the server`);
           client.verifying = false;
-          client.sendConnection(App.status.unknownError);
+          client.sendConnection(statusCode.error);
           client.destroy();
           break;
         }
@@ -32,14 +37,14 @@ export const handlePacket = async (client: Client, data: any) => {
         if (hash !== info.hash) {
           Logger.warn(`Client hash not match, needed: "${hash}", provided: "${info.hash}"`);
           client.verifying = false;
-          client.sendConnection(App.status.unknownError);
+          client.sendConnection(statusCode.error);
           client.destroy();
           break;
         }
 
         client.verifying = false;
         client.verify();
-        client.sendConnection(App.status.success);
+        client.sendConnection(statusCode.success);
       }
       break;
 
@@ -52,7 +57,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'eval':
-      if (client?.account.type !== 'developer') {
+      if (client?.account.type !== accountType.developer) {
         Logger.warn(`Client ${client.account.username ?? client.uuid} try to use eval command!`);
         break;
       }
@@ -81,19 +86,19 @@ export const handlePacket = async (client: Client, data: any) => {
         break;
       }
 
-      client.sendLogout(App.status.accountNotFound);
+      client.sendLogout(statusCode.databaseAccountNotExists);
       break;
 
     case 'register':
       try {
         const status = await infoValidate(data.username, data.password, data.email);
-        if (status !== App.status.success) {
+        if (status !== statusCode.success) {
           client.sendRegister(status);
           return;
         }
 
         client.startVerification(async (status) => {
-          if (status != App.status.success) {
+          if (status != statusCode.success) {
             client.sendRegister(status);
             return;
           }
@@ -102,7 +107,7 @@ export const handlePacket = async (client: Client, data: any) => {
             const account = await register(data.username, data.password, data.email);
             await client.register(account);
           } catch (exception) {
-            client.sendRegister(App.status.unknownError);
+            client.sendRegister(statusCode.error);
             Logger.error(`Account registration failed: ${exception}`)
           }
         });
@@ -125,26 +130,26 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'changeEmail':
       if (!client.isLogin) {
-        client.sendChangeEmail(App.status.unknownError);
+        client.sendChangeEmail(statusCode.error);
         break;
       }
 
       if (await Account.findOne({ email: data.email })) {
-        client.sendChangeEmail(App.status.emailBusy);
+        client.sendChangeEmail(statusCode.databaseEmailBusy);
         break;
       }
 
       client.startVerification((status) => {
-        if (status !== App.status.success) {
+        if (status !== statusCode.success) {
           client.sendChangeEmail(status);
           return;
         }
 
         try {
           client.setEmail(data.email);
-          client.sendChangeEmail(App.status.success);
+          client.sendChangeEmail(statusCode.success);
         } catch (exception) {
-          client.sendChangeEmail(App.status.unknownError);
+          client.sendChangeEmail(statusCode.error);
           Logger.error(`Account change email failed: ${exception}`);
         }
       });
@@ -166,66 +171,64 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'changePassword':
       if (!client.isLogin) {
-        client.sendChangePassword(App.status.unknownError);
+        client.sendChangePassword(statusCode.error);
         break;
       }
 
-      if (!passwordRegex.test(data.password)) {
-        client.sendChangePassword(App.status.passwordNotMatchRules);
+      const passwordValidation = validatePassword(data.password);
+      if (passwordValidation !== statusCode.success) {
+        client.sendChangePassword(passwordValidation);
         break;
       }
 
       await client.setPassword(data.password);
-      client.sendChangePassword(App.status.success)
+      client.sendChangePassword(statusCode.success)
       break;
 
     case 'changeUsername':
       if (!client.isLogin) {
-        client.sendChangeUsername(App.status.unknownError);
+        client.sendChangeUsername(statusCode.error);
         break;
       }
 
-      if (!usernameRegex.test(data.username)) {
-        client.sendChangeUsername(App.status.usernameNotMatchRules);
-        break;
-      }
-
-      if (await Account.findOne({ username: data.username })) {
-        client.sendChangeUsername(App.status.usernameBusy);
+      const usernameValidation = await validateUsername(data.username);
+      if (usernameValidation !== statusCode.success) {
+        client.sendChangeUsername(usernameValidation);
         break;
       }
 
       await client.setUsername(data.username);
-      client.sendChangeUsername(App.status.success);
+      client.sendChangeUsername(statusCode.success);
       break;
 
     case 'changeNickname':
       if (!client.isLogin) {
-        client.sendChangeNickname(App.status.unknownError);
+        client.sendChangeNickname(statusCode.error);
         break;
       }
 
-      if (!usernameRegex.test(data.username)) {
-        client.sendChangeNickname(App.status.usernameNotMatchRules);
+      const nicknameValidation = await validateUsername(data.username);
+      if (nicknameValidation !== statusCode.success) {
+        client.sendChangeNickname(nicknameValidation);
         break;
       }
 
       await client.setNickname(data.nickname);
-      client.sendChangeNickname(App.status.success);
+      client.sendChangeNickname(statusCode.success);
       break;
 
     case 'deleteAccount':
       client.startVerification((status) => {
-        if (status !== App.status.success) {
+        if (status !== statusCode.success) {
           client.sendDeleteAccount(status);
           return;
         }
 
         try {
           client.deleteAccount();
-          client.sendDeleteAccount(App.status.success);
+          client.sendDeleteAccount(statusCode.success);
         } catch (exception) {
-          client.sendDeleteAccount(App.status.unknownError);
+          client.sendDeleteAccount(statusCode.error);
           Logger.error(`Account delete failed: ${exception}`);
         }
       });
@@ -245,13 +248,9 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'verification':
-      let status = App.status.success;
-      if (!data.code) {
-        status = App.status.verificationTimeHasExpired;
-      }
-
-      if (data.code !== client.verificationCode) {
-        status = App.status.verificationCodeIncorrect;
+      let status = statusCode.success;
+      if (data.code && data.code !== client.verificationCode) {
+        status = statusCode.databaseVerificationWrongCode;
       }
 
       await client.verificationCodeCallback(status);
@@ -263,7 +262,7 @@ export const handlePacket = async (client: Client, data: any) => {
       try {
         const clients = Matchmaker.findClientsWithState(state.waitFight);
         if (client.account === null || !client.verified) {
-          client.sendFightJoin(App.status.unknownError, undefined);
+          client.sendFightJoin(statusCode.error, undefined);
           Logger.info('Fight join failed, client not logged');
           break;
         }
@@ -272,16 +271,21 @@ export const handlePacket = async (client: Client, data: any) => {
 
         if (clients.length < 1) {
           client.setState(state.waitFight);
-          client.sendFightJoin(App.status.unknownError, undefined);
+          client.sendFightJoin(statusCode.error, undefined);
           Logger.info('Clients not found, wait...');
           break;
         }
 
         const opponent = clients[clients.length - 1];
+        if (client.fight.hasInstance || opponent.fight.hasInstance || client === opponent) {
+          client.sendFightJoin(statusCode.error, undefined);
+          break;
+        }
+
         Matchmaker.makeMatch(client, opponent);
       } catch (exception) {
         client.setState(state.inMenu);
-        client.sendFightJoin(App.status.unknownError, undefined);
+        client.sendFightJoin(statusCode.error, undefined);
         Logger.info(`Fight join failed, reason: ${exception.stack}`);
       }
       break;

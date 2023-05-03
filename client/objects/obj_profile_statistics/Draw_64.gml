@@ -15,8 +15,8 @@ draw_text_outlined(width_center, 30, c_white, c_black, translate_get("Menu.Stati
 draw_set_halign(fa_left);
 
 var username_offset = 0;
-if (account.badge != 0) {
-	draw_sprite(spr_badges, account.badge, width_center, 108);
+if (profile.badge != undefined) {
+	draw_sprite(spr_badges, profile.badge, width_center, 108);
 	username_offset += 10;
 }
 

@@ -1,25 +1,12 @@
 import Client from './client.js';
-import Fight, { target } from '../game/fight.js';
+import Fight, { target } from '../game/fight/fight.js';
 import { characterInfoGetById }  from '../content/chracterInfoList.js';
 import CharacterInfo from '../data/characterInfo.js';
-
-class SoulData {
-  public x: number;
-  public y: number;
-  public angle: number;
-  public ability: number;
-
-  constructor(x: number = 0, y: number = 0, angle: number = 0, ability: number = 0) {
-    this.x = x;
-    this.y = y;
-    this.angle = angle;
-    this.ability = ability;
-  }
-}
+import ClientFightInfo from './fight/clientFightInfo.js';
+import SoulData from '../game/fight/soulData.js';
 
 export default class ClientFight {
-  private readonly client: Client = null;
-  public instance: Fight;
+  public readonly client: Client | null;
 
   // Fight info
   public id: string;
@@ -40,6 +27,8 @@ export default class ClientFight {
 
   public soul: SoulData;
 
+  private _instance: Fight | null;
+
   constructor(client: Client) {
     this.client = client;
     this.soul = new SoulData();
@@ -54,8 +43,9 @@ export default class ClientFight {
    //}
   }
 
-  public init(id: string, index: number): void {
-    this.id = id;
+  public init(fight: Fight, index: number): void {
+    this._instance = fight;
+    this.id = fight.id;
     this.index = index;
     this.hp = this.hpMax;
     this.mana = this.manaMax / 2;
@@ -64,15 +54,15 @@ export default class ClientFight {
     this.power = 0;
     this.specialActionCharge = 0;
 
-    const fight = this.client.profile.fight;
-    fight.id = id;
-    fight.index = index;
-    fight.hp = this.hp;
-    fight.mana = this.mana;
-    fight.stamina = this.stamina;
-    fight.characterId = this.characterId;
-    fight.specialActionCharge = this.specialActionCharge;
-    this.client.profile.save();
+    const fightInfo = this.client.profile.fight;
+    fightInfo.id = this.id;
+    fightInfo.index = this.index;
+    fightInfo.hp = this.hp;
+    fightInfo.mana = this.mana;
+    fightInfo.stamina = this.stamina;
+    fightInfo.characterId = this.characterId;
+    fightInfo.specialActionCharge = this.specialActionCharge;
+    this.client.save();
   }
 
   public unit(): void {
@@ -160,20 +150,16 @@ export default class ClientFight {
     this.soul.ability = ability;
   }
 
-  public get info() {
-    return {
-      id: this.id,
-      characterId: this.characterId,
-      skinId: this.characterSkinId,
-      name: this.client?.account.username,
-      rating: this.client?.profile.rating,
-      type: this.client?.account.type,
-      badge: this.client?.account?.badge,
-    };
+  public get instance(): Fight {
+    return this._instance;
   }
 
   public get hasInstance(): boolean {
-    return Boolean(this.instance);
+    return Boolean(this._instance);
+  }
+
+  public get info(): ClientFightInfo {
+    return new ClientFightInfo(this);
   }
 
   public get isChosen(): boolean {
