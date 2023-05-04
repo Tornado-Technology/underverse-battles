@@ -9,6 +9,10 @@ import Packet from './packet.js';
 import App from '../app.js';
 import { statusCode } from '../status.js';
 
+const generateNickname = (): string => {
+  return `Player${Math.randomRange(0, 1000)}`;
+};
+
 export default class SendStuff {
   public readonly socket: Socket;
   public readonly type: socketType;
@@ -23,6 +27,8 @@ export default class SendStuff {
   public fight: ClientFight = null;
   public halfpack: (Buffer | null) = null;
   public hardAddress: (string | null) = null;
+
+  protected _nickname: string = generateNickname();
 
   constructor(socket: Socket, type: socketType, uuid: string) {
     this.socket = socket;
@@ -103,6 +109,12 @@ export default class SendStuff {
 
   public sendVerification(): void {
     this.send('verification');
+  }
+
+  public sendInformation(): void {
+    this.send('information', {
+      config: App.config,
+    });
   }
 
   /**

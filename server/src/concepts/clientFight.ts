@@ -1,6 +1,6 @@
 import Client from './client.js';
-import Fight, { target } from '../game/fight/fight.js';
-import { characterInfoGetById }  from '../content/chracterInfoList.js';
+import Fight, {actionType, target} from '../game/fight/fight.js';
+import {characterInfoGetById} from '../content/chracterInfoList.js';
 import CharacterInfo from '../data/characterInfo.js';
 import ClientFightInfo from './fight/clientFightInfo.js';
 import SoulData from '../game/fight/soulData.js';
@@ -17,7 +17,7 @@ export default class ClientFight {
   public manaMax: number;
   public stamina: number;
   public staminaMax: number;
-  public action: number;
+  public action: actionType;
   public power: number;
   public specialActionCharge: number;
 
@@ -50,7 +50,7 @@ export default class ClientFight {
     this.hp = this.hpMax;
     this.mana = this.manaMax / 2;
     this.stamina = this.staminaMax;
-    this.action = -1;
+    this.action = actionType.empty;
     this.power = 0;
     this.specialActionCharge = 0;
 
@@ -97,7 +97,7 @@ export default class ClientFight {
     }
   }
 
-  public setAction(action: number): void {
+  public setAction(action: actionType): void {
     this.action = action;
     this.client.sendFightAction(action, target.self);
   }
@@ -163,10 +163,10 @@ export default class ClientFight {
   }
 
   public get isChosen(): boolean {
-    return this.action !== -1;
+    return this.action !== actionType.empty;
   }
 
   public get isChooses(): boolean {
-    return this.action === -1;
+    return this.action === actionType.empty;
   }
 }

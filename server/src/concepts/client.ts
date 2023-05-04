@@ -280,6 +280,10 @@ export default class Client extends SendStuff {
     return this.isLogin ? this.account.username : usernameDefault;
   }
 
+  public get nickname(): string {
+    return this.isLogin ? this.account.nickname : this._nickname;
+  }
+
   public get friendInfo() {
     return {
       username: this.username,
