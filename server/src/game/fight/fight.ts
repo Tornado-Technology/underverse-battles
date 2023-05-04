@@ -17,6 +17,15 @@ export enum target {
   opponent,
 }
 
+export enum actionType {
+  empty,
+  skip,
+  attack1,
+  attack2,
+  attack3,
+  specialAttack,
+}
+
 export default class Fight {
   protected _id: string;
   protected clients: Client[];
@@ -138,7 +147,7 @@ export default class Fight {
   }
 
   public resetAction(client: Client): void {
-    client?.fight.setAction(-1);
+    client?.fight.setAction(actionType.empty);
     client?.sendFightResetAction();
     this.updateAction();
   }
@@ -192,18 +201,15 @@ export default class Fight {
   }
 
   public updateState(): void {
+    if (!this.clientsConnected) return;
+
     const activePlayer = this.activeClient;
-
-    if (!this.clientsConnected) {
-      return;
-    }
-
-    if (activePlayer?.fight.action !== 3) {
+    if (activePlayer?.fight.action !== actionType.skip) {
       this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]);
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
-    if (this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === 3) {
+    if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
       this.updateStateDefend();
       return;
     }
@@ -212,13 +218,12 @@ export default class Fight {
   }
 
   public resetState(): void {
-    if (this.state === state.reset) {
-      return;
-    }
+    if (this.state === state.reset) return;
 
     this.setState(state.reset);
     Logger.debug('Reset begins.');
-    if ((this.clients[0]?.fight.action === 3 && this.initiative === 0) || (this.clients[1]?.fight.action === 3 && this.initiative === 1)) {
+
+    if ((this.clients[0]?.fight.action === actionType.skip && this.initiative === 0) || (this.clients[1]?.fight.action === actionType.skip && this.initiative === 1)) {
       this.addStamina(this.clients[0], this.clients[0]?.fight?.characterInfo?.staminaRegen);
       this.addStamina(this.clients[1], this.clients[1]?.fight?.characterInfo?.staminaRegen);
     } else if (this.clients[0]?.fight.action === this.clients[1]?.fight.action) {
@@ -235,12 +240,11 @@ export default class Fight {
   }
 
   public updateStateAttack(): void {
-    if (this.state === state.battle) {
-      return;
-    }
+    if (this.state === state.battle) return;
 
     this.setState(state.battle);
     const seed = Math.randomRange(0, 2000000000);
+
     this.clients.forEach((client) => {
       client?.sendFightStartBattle(seed);
     });
@@ -332,10 +336,13 @@ export default class Fight {
       this.syncHp(client);
       this.syncMana(client);
       this.syncStamina(client);
-      this.setClientAction(client, -1);
+      this.setClientAction(client, actionType.empty);
       this.setClientPower(client, 0);
     });
   }
 
   // TODO: ADD WORK WITH SPECIAL ATTACK
+  //public setSpecialAction(client: Client, playerId: number): void {
+    // client.fight
+  //}
 }

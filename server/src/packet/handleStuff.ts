@@ -1,5 +1,5 @@
 import { Account, accountType, infoValidate, login, register, validatePassword, validateUsername } from '../schemas/account.js';
-import { state as fightState, target } from '../game/fight/fight.js';
+import {actionType, state as fightState, target} from '../game/fight/fight.js';
 import { send as mailSend } from '../util/mail.js';
 import Client, { state } from '../concepts/client.js';
 import { statusCode } from '../status.js';
@@ -307,7 +307,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightSpecialAction':
-      // TODO: ADD SOMETHING { data.playerId }
+      client.fight.instance?.setAction(client, actionType.specialAttack);
       break;
     
     case 'fightExtraAction':
@@ -320,7 +320,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightSkip':
-      client.fight.instance?.setAction(client, 3);
+      client.fight.instance?.setAction(client, actionType.skip);
       break;
 
     case 'fightHp':
