@@ -2,6 +2,11 @@
 result = -1;
 result_power = -1;
 
+if (special_attack_test_mode) {
+	fight_set_player_special_action(1, true);
+	exit;
+}
+
 if (fight_check_player_special_action_readiness(1)) {
 	if (irandom_range(0, 1) < 1) {
 		fight_set_player_special_action(1, true);

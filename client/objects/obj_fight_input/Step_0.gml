@@ -18,8 +18,10 @@ var input_select = input_check_pressed(input.action);
 var input_skip = input_check_pressed(input.skip);
 var input_special = input_check_pressed(input.special);
 
+if (!can_select) exit;
+
 // Power bar
-if (can_select && can_select_power && is_player_turn) {
+if (can_select_power && is_player_turn) {
 	if (abs(input_raw_h)) {
 		var power_min = 0;
 		var power_max = 4;
@@ -40,20 +42,18 @@ if (can_select && can_select_power && is_player_turn) {
 // перепрыгивания черех неправельные варианты которые нельзя выбрать
 
 // Action bar
-if (can_select) {
-	if (abs(input_raw_v)) {
-		var action_min = 0;
-		var action_max = 2;
+if (abs(input_raw_v)) {
+	var action_min = 0;
+	var action_max = 2;
 	
-		selected_action += input_raw_v;
-		selected_action = selected_action > action_max ? 0 : selected_action;
-		selected_action = selected_action < action_min ? action_max : selected_action;
+	selected_action += input_raw_v;
+	selected_action = selected_action > action_max ? 0 : selected_action;
+	selected_action = selected_action < action_min ? action_max : selected_action;
 
-		audio_play_sound(sound_click, 0, false);
-	}
+	audio_play_sound(sound_click, 0, false);
 }
 
-if (input_select && can_select) {
+if (input_select) {
 	confirm_action_and_power();
 }
 
@@ -63,7 +63,7 @@ if (input_skip && can_skip) {
 }
 
 // Special attack
-if (can_select && is_player_turn && fight_check_player_special_action_readiness(0)) {
+if (is_player_turn && fight_check_player_special_action_readiness(0)) {
 	if (input_special) {
 		special_action();
 		audio_play_sound_once(snd_special_attack);

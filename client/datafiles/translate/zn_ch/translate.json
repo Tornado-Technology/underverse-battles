@@ -64,685 +64,903 @@
 		"*狗狗吃掉了这段文本*"
   ],
   "DiscordApp": {
-		"Undefined": "未找到！",
-		"States": {
-			"Online": "在线",
-			"Offline": "离线"
-		},
-		"Actions": {
-			"InMenu": "菜单里",
-			"InFight": "战斗中",
-			"InStorymode": "游玩故事模式"
-		}
+    "Undefined": "未找到！",
+    "States": {
+      "Online": "在线",
+      "Offline": "离线"
+    },
+    "Actions": {
+      "InMenu": "菜单里",
+      "InFight": "战斗中",
+      "InStorymode": "游玩故事模式"
+    }
   },
   "AchievementGet": "获得成就！",
   "Achievements": {
-      "FirstEnemy": {
-				"Name": "击杀 +1",
-				"Description": "击败任何角色"
-      },
-      "DefeatInk": {
-				"Name": "这宇宙毫无防御可言!",
-				"Description": "击败Ink"
-      },
-      "DefeatError": {
-				"Name": "错误已被清除!",
-				"Description": "击败摧毁者和创造者"
-      },
-      "Link": {
-				"Name": "链接未屏蔽",
-				"Description": "按下任何的链接按钮"
-      },
-      "Balance": {
-				"Name": "完美的平衡",
-				"Description": "击败Sans"
-      },
-      "DefeatSans": {
-				"Name": "结束还是开始",
-				"Description": "击败Sans"
-      },
-      "DefeatFellSans": {
-				"Name": "异常事件 #13",
-				"Description": "击败Fell Sans"
-      },
-      "DefeatSwapSans": {
-				"Name": "完全没兴趣",
-				"Description": "击败Swap Sans"
-      },
-      "DefeatSwapPapyrus": {
-				"Name": "为什么活着这么难？",
-				"Description": "击败Swap Papyrus"
-      },
-      "DefeatXChara": {
-				"Name": "X-Treme",
-				"Description": "击败XChara"
-      },
-	  "ACybersWorld": {
-		"Name": "一个赛博世界？",
-		"Description": "登录游戏账号"
-	  }
+    "FirstEnemy": {
+      "Name": "击杀 +1",
+      "Description": "击败任何角色"
+    },
+    "DefeatInk": {
+      "Name": "这宇宙毫无守护可言!",
+      "Description": "击败Ink Sans"
+    },
+    "DefeatError": {
+      "Name": "错误已被清除!",
+      "Description": "击败Error Sans"
+    },
+    "Link": {
+      "Name": "链接未屏蔽",
+      "Description": "按下任意链接按钮"
+    },
+    "Balance": {
+      "Name": "完美的平衡",
+      "Description": "击败摧毁者和创造者"
+    },
+    "DefeatSans": {
+      "Name": "终焉，又或终始？",
+      "Description": "击败Sans"
+    },
+    "DefeatFellSans": {
+      "Name": "异常事件 #13",
+      "Description": "击败Fell Sans"
+    },
+    "DefeatSwapSans": {
+      "Name": "完全没兴趣",
+      "Description": "击败Swap Sans"
+    },
+    "DefeatSwapPapyrus": {
+      "Name": "为什么活着这么难？",
+      "Description": "击败Swap Papyrus"
+    },
+    "DefeatXChara": {
+      "Name": "X-Treme",
+      "Description": "击败X-Chara"
+    },
+    "DefeatCross": {
+      "Name": "处置Cross",
+      "Description": "击败Cross"
+    },
+    "DefeatGreen": {
+      "Name": "编辑以完成",
+      "Description": "击败Green"
+    },
+    "ACybersWorld": {
+      "Name": "一个赛博世界？",
+      "Description": "登录游戏账号"
+    },
+    "NoScretches": {
+      "Name": "毫无尖叫的胜利",
+      "Description": "不受伤情况下击败任一敌人"
+    },
+    "Immortality": {
+      "Name": "不朽",
+      "Description": "击败恢复的HP总量超过最大HP的任一敌人"
+    }
   },
   "Backgrounds": {
-      "LastCoridor": {
-		"Name": "最后的长廊",
-		"Description": ""
-      },
-      "UnderverseForest": {
-		"Name": "森林",
-		"Description": ""
-      },
-      "DeltaruneBattle": {
-		"Name": "Deltarune战斗场景",
-		"Description": ""
-      },
-      "QueensHall": {
-		"Name": "Queen的大厅",
-		"Description": ""
-      },
-	  "Jevil": {
-		"Name": "Carousel of Chaos",
-		"Description": ""
-	  },
-	  "DoodleSphere": {
-		"Name": "Doodle sphere",
-		"Description": ""
-	  },
-	  "UndertaleBattle": {
-		"Name": "Undertale战斗背景",
-		"Description": ""
-	  }
+    "LastCoridor": {
+      "Name": "最后的长廊",
+      "Description": ""
+    },
+    "UnderverseForest": {
+      "Name": "森林公园",
+      "Description": ""
+    },
+    "WinterForestPark": {
+      "Name": "森林公园（冬）",
+      "Description": ""
+    },
+    "DeltaruneBattle": {
+      "Name": "Deltarune战斗场景",
+      "Description": ""
+    },
+    "QueensHall": {
+      "Name": "Queen的大厅",
+      "Description": ""
+    },
+    "Jevil": {
+      "Name": "",
+      "Description": ""
+    },
+    "DoodleSphere": {
+      "Name": "涂鸦球领域",
+      "Description": ""
+    },
+    "UndertaleBattle": {
+      "Name": "Undertale战斗场景",
+      "Description": ""
+    },
+    "DeterminationMachine": {
+      "Name": "决心提取机",
+      "Description": ""
+    }
   },
   "Menu": {
-	"LogInMessage": {
-		"RegistrationSuccessful": "注册成功! 现在你可以登录了。",
-		"LoginSuccessful": "账号登录成功!",
-		"RegistrationInvalid": "注册无效(连接错误)",
-		"LoginInvalid": "帐号登录无效(连接错误)",
-		"Error": [
-			"数据库未在运行", 
-			"未知错误", 
-			"账号损坏",
-			"帐号被封",
-			"账号不存在", 
-			"账号已存在",
-			"账号与在线上",
-			"帐号ID被占用(不太可能存在)",
-			"用户名繁忙",
-			"用户名不符合规则",
-			"密码不正确",
-			"密码不符合规则",
-			"E-mail已被使用",
-			"E-mail地址不符合规则",
-			"E-mail地址不存在", 
-			"资料不存在",
-			"资料已存在", 
-			"资料未找到", 
-			"资料被破坏", 
-			"正在验证",
-			"验证码错误", 
-			"第二个密码与第一个密码不一致"
-		]
-	},
-		"Main": {
-			"SingleBattle": "单人战斗",
-			"Multiplayer": "多人游戏",
-			"Characters": "角色",
-			"Achievements": "成就",
-			"DebugRooms": "调试房间",
-			"Settings": "游戏设置",
-			"Credits": "人员名单",
-			"Exit": "退出游戏",
-			"Modifications": "Modifications"
-		},
-		"PressAnyKey": "按下任意键继续...",
-		"CompleteTutorial": "完成教程关",
-		"SingleBattle": {
-			"Title": "单人战斗",
-			"StoryMode": "故事模式",
-			"CustomBattle": "和人机对战",
-			"CustomSound": "选择原声带",
-			"SelectBackground": "选择战斗背景",
-			"MiniGame": "小游戏: 拿 香 蕉"
-		},
-		"CustomSound": {
-			"CustomSoundSet": "选择自定义原声带: ",
-			"Undefined": "原声带未安装",
-			"Default": "重置原声带",
-			"Composer": "作曲",
-			"Cancel": "退出"
-		},
-		"Background": {
-			"SelectedLocation": "地点选择："
-		},
-		"StoryMode": {
-			"Title": "故事模式",
-			"Tutorial": "教程",
-			"Tutoriel": "教程但是Toriel",
-			"StartTutorial": "开始教程",
-			"Battle1": "Ink Sans vs X-Chara",
-			"Battle2": "Error Sans vs Ink Sans",
-			"Battle3": "Sans vs Fell Sans",
-			"Battle4": "Swap Papyrus vs Cross",
-			"Battle5": "Swap Sans vs X-Chara",
-			"Battle6": "Dream vs Nightmare",
-			"Battle7": "Ink Sans vs Error Sans",
-			"Battle8": "Cross vs Killer Sans",
-			"Battle9": "Dream vs Killer Sans",
-			"Battle10": "Cross & Dream vs Nightmare"
-		},
-		"Control": {
-			"Title": "控制",
-			"Movement": "移动",
-			"Up": "上",
-			"Down": "下",
-			"Left": "左",
-			"Right": "右",
-			"Action": "行动",
-			"Skip": "额外的行动",
-			"Inventory": "查看库存",
-			"Fullscreen": "全屏",
-			"Default": "重置为默认",
-			"FullscreenButtons": "F11",
-			"Message": {
-				"Binded": "此按钮已被绑定",
-				"Forbidden": "禁止绑定"
-			}
-		},
-		"StandardButtons": {
-			"OK": "完成",
-			"Yes": "是",
-			"No": "否",
-			"Cancel": "取消",
-			"Accept": "接受",
-			"Apply": "应用",
-			"Back": "返回"
-		},
-		"Multiplayer": {
-			"Title": "多人游戏现在在[测试阶段]",
-			"SignUp": "注册",
-			"LogIn": "登录",
-			"Reconnect": "重新连接",
-			"Reconnecting": "正在尝试重连",
-			"SuccessfulReconnection": "成功连接",
-			"FailedReconnection": "无法与服务器连接",
-			"Battle1v1": "开始一场战斗",
-			"PlayOpenWorld": "转到Omega Timeline",
-			"Statistics": "统计数据",
-			"AccountOptions": "账号设置",
-			"LogOut": "登出",
-			"SuccessfulLogOut": "您已成功登出",
-			"Matchmaking": "Chara祈祷中...",
-			"NoPlayers": "没有玩家在寻找比赛。你可以等待或取消搜索。"
-		},
-		"SignUp": {
-			"Title": "注册",
-			"Login": "登录",
-			"Password": "密码",
-			"EMail": "EMail地址",
-			"WriteLogin": "写下您的登录信息",
-			"WritePassword": "写下你的密码",
-			"ConfirmPassword": "确认您的密码",
-			"WriteEmail": "写下你的email地址",
-			"PasswordWarning": "密码必须至少包含6个字符",
-			"EmailWarning": "删除账户或重设密码时需要Email地址",
-			"Rules": "用户名的书写必须没有空格。密码必须包含至少6个字符，至少有一个大写字母、一个大写字母和一个数字。",
-			"WaitingForRegistration": "等待注册"
-		},
-		"LogIn": {
-			"Title": "登录",
-			"Login": "用户名",
-			"Password": "密码",
-			"EMail": "E-mail(邮箱)地址",
-			"WriteLogin": "输入你的用户名",
-			"WritePassword": "输入你的密码",
-			"WaitingForLogin": "等待登录"
-		},
-	    "AccountOptions": {
-		 "Title": "账号设置",
-		 "ChangeNickname": "修改昵称",
-		 "ChangePassword": "修改密码",
-		 "ChangeEmail": "修改email地址",
-		 "LogOut": "注销"
-		},
-		"Statistics": {
-		"Title": "统计数据",
-		"Battle1v1": "已进行的比赛",
-		"Battle1v1Wins": "总胜率",
-		"Battle1v1Defeats": "总败率",
-		"Rating": "评级",
-		"Rank": "等级",
-		"RankType": {
-			"Empty": "无等级",
-			"Green": "菜鸟",
-			"Bronze": "青铜",
-			"Silver": "白银",
-			"Golden": "黄金",
-			"Platinum": "铂金",
-			"Diamond": "钻石",
-			"Violet": "紫尊",
-			"Megalomaniac": "狂妄之人"
-		},
-		"FavoriteChar": "喜欢的人物",
-		"Gold": "金钱"
-		},
-		"Settings": {
-		"Title": "游戏设置",
-		"Main": "主要",
-		"Control": "键位设置",
-		"Sound": "声音",
-		"Fullscreen": "全屏:",
-		"Language": "游戏语言:",
-		"DisplayTurnText": "显示“回合”提示",
-		"DisplayPing": "显示Ping:",
-		"DisplayFPS": "显示FPS:",
-		"HUDTransparence": "HUD透明度:",
-		"SoundVolume": "音量:",
-		"MusicVolume": "战斗音乐音量:",
-		"MenuMusicVolume": "菜单音乐音量:",
-		"LanguageName": ["英语", "俄罗斯语", "简体中文"],
-		"Data": {
+    "Main": {
+      "SingleBattle": "单人战斗",
+      "Multiplayer": "多人游戏",
+      "Characters": "角色",
+      "Achievements": "成就",
+      "Credits": "人员名单",
+      "Settings": "游戏设置",
+      "Modifications": "Mods",
+      "DebugRooms": "调试房间",
+      "Exit": "退出游戏"
+    },
+    "PressAnyKey": "按下任意键继续...",
+    "CompleteTutorial": "完成教程关",
+    "SingleBattle": {
+      "Title": "担单人战斗",
+      "StoryMode": "故事模式",
+      "CustomBattle": "和人机对战",
+      "CustomSound": "选择原声带",
+      "SelectBackground": "选择战斗背景",
+      "MiniGame": "小游戏：拿 香 蕉"
+    },
+    "CustomSound": {
+      "CustomSoundSet": "选择自定义原声带: ",
+      "Undefined": "原声带未安装",
+      "Default": "重置原声带",
+      "Composer": "作曲",
+      "Cancel": "退出"
+    },
+    "Background": {
+      "SelectedLocation": "地点选择："
+    },
+    "StoryMode": {
+      "Title": "故事模式",
+      "Tutorial": "教程",
+      "Tutoriel": "教程但是Toriel",
+      "StartTutorial": "开始教程",
+      "Episode1": "剧目 1 - 新的侵略",
+      "Episode2": "剧目 2 - Cross"
+    },
+    "Control": {
+      "Title": "控制",
+      "Movement": "移动",
+      "Up": "上",
+      "Down": "下",
+      "Left": "左",
+      "Right": "右",
+      "Action": "行动",
+      "Skip": "额外的行动",
+      "Inventory": "查看库存",
+      "Fullscreen": "全屏",
+      "Default": "重置为默认",
+      "FullscreenButtons": "F11",
+      "Message": {
+        "Binded": "此按钮已被绑定",
+        "Forbidden": "禁止绑定"
+      }
+    },
+    "StandardButtons": {
+      "OK": "完成",
+      "Yes": "是",
+      "No": "否",
+      "Cancel": "取消",
+      "Accept": "接受",
+      "Apply": "应用",
+      "Back": "返回"
+    },
+    "Multiplayer": {
+      "Title": "多人游戏现在在[测试阶段]",
+      "SignUp": "注册",
+      "LogIn": "登录",
+      "RestorePassword": "忘记密码",
+      "Reconnect": "重新连接",
+      "Reconnecting": "正在尝试重连",
+      "SuccessfulReconnection": "已成功重连",
+      "FailedReconnection": "无法与服务器连接",
+      "Battle1v1": "开始一场战斗",
+      "PlayOpenWorld": "转到Omega时间线",
+      "Statistics": "统计数据",
+      "LogOut": "登出",
+      "SuccessfulLogOut": "您已成功登出",
+      "Matchmaking": "Chara祈祷中...",
+      "NoPlayers": "没有玩家在寻找比赛。你可以等待或取消搜索。"
+    },
+    "SignUp": {
+      "Title": "注册",
+      "Login": "用户名",
+      "Password": "密码",
+      "EMail": "EMail地址",
+      "WriteLogin": "写下您的登录信息",
+      "WritePassword": "写下你的密码",
+      "ConfirmPassword": "确认您的密码",
+      "WriteEmail": "写下你的email地址",
+      "Rules": "用户名的书写必须没有空格。密码必须包含至少6个字符，至少有一个字母和数字。",
+      "MessageCode": "我们在您邮箱那发送了则消息，其中包含验证码。把该验证码输在这里。",
+      "WaitingForRegistration": "等待注册"
+    },
+    "LogIn": {
+      "Title": "登录",
+      "Login": "用户名",
+      "Password": "密码",
+      "EMail": "E-mail地址",
+      "WriteLogin": "输入您的用户名",
+      "WritePassword": "输入您的密码",
+      "WaitingForLogin": "等待登录"
+    },
+    "LogInMessage": {
+      "RegistrationSuccessful": "注册成功! 现在你可以登录了。",
+      "LoginSuccessful": "账号登录成功!",
+      "RegistrationInvalid": "注册无效(连接错误)",
+      "LoginInvalid": "帐号登录无效(连接错误)",
+      "Error": [
+        "数据库未在运行",
+				"未知错误",
+				"账号损坏",
+				"帐号被封",
+				"账号不存在",
+				"账号已存在",
+				"账号与在线上",
+				"帐号ID被占用(不太可能存在)",
+				"用户名繁忙",
+				"用户名不符合规则",
+				"密码不正确",
+				"密码不符合规则",
+				"E-mail已被使用",
+				"E-mail地址不符合规则",
+				"E-mail地址不存在",
+				"资料不存在",
+				"资料已存在",
+				"资料未找到",
+				"资料被破坏",
+				"正在验证",
+				"验证码错误",
+				"第二个密码与第一个密码不一致"
+      ]
+    },
+    "AccountOptions": {
+      "Title": "账号设置",
+      "ChangeNickname": "修改昵称",
+      "ChangePassword": "修改密码",
+      "ChangeEmail": "修改email地址",
+      "DeleteAccount": "删除账户",
+      "WriteLogin": "输入您的用户名",
+      "WritePassword": "输入您的密码",
+      "WriteNewNickname": "输入新的昵称",
+      "WriteNewPassword": "输入新的密码",
+      "WriteNewEmail": "输入新的email地址"
+    },
+    "Statistics": {
+      "Title": "统计数据",
+      "Battle1v1": "已游玩场次",
+      "Battle1v1Wins": "总胜率",
+      "Battle1v1Defeats": "总败率",
+      "Rating": "评级",
+      "Rank": "等级",
+      "RankType": {
+        "Empty": "无等级",
+        "Gray": "菜鸟",
+        "Green": "青铜",
+        "Yellow": "白银",
+        "Blue": "黄金",
+        "Cyan": "铂金",
+        "Violet": "钻石",
+        "Orange": "至尊",
+        "Red": "超越死亡之神"
+      },
+      "Gold": "金钱",
+      "FavoriteChar": "喜欢的人物"
+    },
+    "Settings": {
+      "Title": "设置",
+      "Main": "常规设置",
+      "Control": "键位设置",
+      "MobileControl": "更改键位",
+      "Sound": "声音",
+      "Fullscreen": "全屏:",
+      "Language": "游戏语言:",
+      "DisplayTurnText": "显示“回合”提示",
+      "DisplayPing": "显示Ping:",
+      "DisplayFPS": "显示FPS:",
+      "HUDTransparence": "HUD透明度:",
+      "SoundVolume": "音量",
+      "MusicVolume": "战斗音乐音量:",
+      "MenuMusicVolume": "菜单音乐音量:",
+      "LanguageName": [
+        "英语",
+        "俄罗斯语",
+        "简体中文"
+      ],
+      "Data": {
         "Title": "游戏数据",
         "Autolog": "自动记录",
+        "Save": {
+          "Soundtrack": "保存已选择的原声带数据",
+          "Background": "保存已选择的场景数据"
+        },
         "Reset": {
           "All": "清除游戏数据...",
           "Achivments": "重置成就",
-          "Settings": "重置设置"
-        },
-		"Save":{
-			"Soundtrack":"保存原声带",
-			"Background":"保存背景"
-
-		}
-		}
-		},
-		"Messages": {
-			"SelectCharacter": "选择一个角色",
-			"CorruptedCharacter": "此角色已被占用"
-		}
-	},
+          "Settings": "重置游戏设置"
+        }
+      },
+      "MobileControls": {
+        "Description": "在这里你可以设置按键位置和大小。点击按键来自定义",
+        "Position": "位置",
+        "Size": "大小",
+        "Ready": "就绪",
+        "Elements": {
+          "Joystick": {
+            "Name": "虚拟摇杆"
+          },
+          "Buttons": {
+            "X": {
+              "Name": "X键"
+            },
+            "Action": {
+              "Name": "行动键"
+            },
+            "SpecialAction": {
+              "Name": "特殊行动键"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Credits": {
+    "Developers": "程序",
+    "Artists": "画师",
+    "Localizer": "翻译",
+    "StoryCreator": "故事构建",
+    "Composers": "作曲",
+    "Based": "基于游戏",
+    "By": "by",
+    "Sponsors": "赞助",
+    "YouTubers": "YOUTUBERS和STREAMERS",
+    "SpecialThanks": "特别感谢",
+    "AndYou": "还有你，我最亲爱的玩家"
+  },
+  "Character": {
+    "Empty": {
+      "Name": "名字",
+      "Description": "描述",
+      "Bio": "描述",
+      "PassiveSkill": {
+        "Name": "被动技能",
+        "Description": "被动技能描述" },
+      "Attack0": {
+        "Name": "攻击1",
+        "Description": "攻击1描述" },
+      "Attack1": {
+        "Name": "攻击2",
+        "Description": "攻击2描述" },
+      "Attack2": {
+        "Name": "攻击3",
+        "Description": "攻击3描述" },
+      "SpecialAttack": {
+        "Name": "特殊攻击",
+        "Description": "特殊攻击描述" }
+    },
+    "InkSans": {
+      "Name": "Ink Sans",
+      "Description": "艺术带师",
+      "Bio": "多元宇宙的守护者，被认为是一个过时的角色。他支持\n其他创造者继续发展他们的AU。Ink没有自己的AU，\n所以他被赋予了穿越不同宇宙的机会，以及照顾涂鸦球\n领域--所有现有AU之间的“交集之地”。Ink是没有灵魂\n的，因此他封锁了自我，对任何事物都无感。这就是他\n的颜料瓶派上用场的地方，当随着时间的推移，他的\n感情消耗殆尽时，这就可以赋予他感情，多亏了这个，\n他通常看起来是一个开朗、俏皮的人，总是乐于助人。\nInk挥舞着画笔作为主要武器，他称之为Broomie，\n他能够用他的墨水描绘出各种不同的攻击。",
+      "PassiveSkill": {
+        "Name": "无魂之心",
+        "Description": "Ink Sans不受蓝色攻击\n和橙色攻击的影响" },
+      "Attack0": {
+        "Name": "墨水",
+        "Description": "将颜色滴飞到灵魂的一面" },
+      "Attack1": {
+        "Name": "Broomie",
+        "Description": "挥动的具有破坏性的笔刷" },
+      "Attack2": {
+        "Name": "Ink Gasterblasters",
+        "Description": "Gasterblasters将灵魂推到战斗框的边缘\n从而造成伤害" },
+      "SpecialAttack": {
+        "Name": "墨水轰炸",
+        "Description": "战斗框中心飞出墨水滴，\n同时还会受到Ink gasterblasters和Broomie的攻击" }
+    },
+    "ErrorSans": {
+      "Name": "Error Sans",
+      "Description": "错误的家伙",
+      "Bio": "AU毁灭者，以摧毁他人的世界为乐，\n还会把人类的灵魂和其他角色的带到反虚空领域。\nError可以通过错误之门穿梭于各个宇宙。\nError源于何处没人知道; 甚至Error自己\n也不知道他是如何进入反虚空领域的。\nError是一个自私内向的人，被证实患有恐惧症，\n这意味着除了近视之外，还害怕别人的触摸。",
+      "PassiveSkill": {
+        "Name": "差错",
+        "Description": "Error Sans有6%的几率\n在罪业攻击发生时不受伤害" },
+      "Attack0": {
+        "Name": "Error骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "丝线",
+        "Description": "以灵魂为目标的丝线攻击。\n受击时对对手造成伤害并使其瘫痪" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "SpecialAttack": {
+        "Name": "惊恐攻击",
+        "Description": "强烈的骰子攻击后\n又有多个gasterblasters射出" }
+    },
+    "ClassicSans": {
+      "Name": "Sans",
+      "Description": "喜剧演员骷髅",
+      "Bio": "所有Sans的起源。Sans和其他怪物一起生活在\n被结界封锁的地下世界，直到有一天一个名叫Frisk\n的人类帮助他们返回了地面。从此以后，Sans和\n人类和怪物一起生活在那里。\n对于这个骷髅最好的描述是一个幽默的谐星。\n他喜欢讲冷笑话，喜欢喝番茄酱，\n因为，没有理由不喝。\n不过，Sans经常懒惰和拖拉，爱睡觉是他的最大弱点。",
+      "PassiveSkill": {
+        "Name": "休息",
+        "Description": "若Sans跳过了一回合，\n他将回复10点魔力值" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "F发射具有破坏性的Gasterblasters" },
+      "Attack2": {
+        "Name": "蓝色攻击",
+        "Description": "灵魂变成蓝色，引力翻转，\n骨头从战斗框的边缘出现" },
+      "SpecialAttack": {
+        "Name": "尝尝苦头",
+        "Description": "蓝色攻击、骨头、蓝色攻击 交替，\n最后是Gasterblasters猛击" }
+    },
+    "FellSans": {
+      "Name": "Fell Sans",
+      "Description": "很紧张",
+      "Bio": "一个具有好胜心的Sans，生活在Underfell宇宙中，\n那里的所有怪物也比原宇宙中的怪物更加残暴。\n除了他的外表、粗暴的性格以及对芥末的喜爱之外，\n这个骷髅都与原来的Sans非常相似。",
+      "PassiveSkill": {
+        "Name": "势能",
+        "Description": "Fell Sans因灵魂擦弹\n而获得额外1点魔力值" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "Attack2": {
+        "Name": "蓝色攻击",
+        "Description": "灵魂变成蓝色，引力翻转，\n骨头从战斗框的边缘出现" },
+      "SpecialAttack": {
+        "Name": "尝尝好吃",
+        "Description": "" }
+    },
+    "SwapSans": {
+      "Name": "Swap Sans",
+      "Description": "你可以叫我Blue",
+      "Bio": "SwapSans,生活在Underswap宇宙中，每个角色都与\n一个类似的角色产生互换。所以Sans的行为举止就像\n原宇宙中的Papyrus一样。因此，他很有趣、活泼，\n而且很开朗。他想成为皇家守卫队的一员，所以他给自\n己做了套战斗服，即使是在清洗的时候，他也从不脱下\n这些衣服。Ink Sans称他为蓝莓，简称为Blue。\n当Blue不小心打翻油漆时，Ink在他家突然遇到了他。\nSwap Sans喜欢墨西哥的食物，尤其是玉米饼。\n他也为自己做饭来吃。",
+      "PassiveSkill": {
+        "Name": "闪避大师",
+        "Description": "Swap Sans每次受击只受8点伤害" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "旋转骨攻击",
+        "Description": "以灵魂为目标的旋转骨攻击，\n在撞击时造成伤害" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "SpecialAttack": {
+        "Name": "Bone veil",
+        "Description": "骨头攻击将场地完全包围住，\n并朝各方向移动。此外，小的骨头会对准灵魂" }
+    },
+    "SwapPapyrus": {
+      "Name": "Swap Papyrus",
+      "Description": "吸烟有害健康",
+      "Bio": "SwapSans的老大哥。归属于Underswap宇宙。\n他的性格与OG Sans相似，爱开玩笑且是个懒骨。\n不知为何，他穿着一件橙色连帽衫，黑色短裤，\n也穿着红色运动鞋。身体经常性地弯腰，\n以免他的身高让他兄弟感到尴尬，\n还一直在嘴里叼着一根烟。\nPapyrus真诚地爱着他的兄弟，\n并随时准备通过各种手段支持和保护他。",
+      "PassiveSkill": {
+        "Name": "戒烟",
+        "Description": "若Swap Papyrus跳过了一回合，\n他将回复10点魔力值" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "Attack2": {
+        "Name": "橙色攻击",
+        "Description": "灵魂变成橙色，\n并被吸引到有骨头的框的一边" },
+      "SpecialAttack": {
+        "Name": "尝尝苦头",
+        "Description": "" }
+    },
+    "Cross": {
+      "Name": "Cross",
+      "Description": "想让他的世界回来",
+      "Bio": "来自XTale宇宙的的sans，由于他的过错AU而被摧毁。\n他相信，通过杀死他的家人和朋友，他就能得到覆写的力量，重新创造世界。\n相反，他和X Chara的灵魂一同被留下，当Error偷走他们的灵魂时，他就能控制Cross的身体。\n因为他看起来像一个有腿的大十字架，X Frisk就取名为Cross。\nCross已不再乐观俏皮，大多变得闷闷不乐或咄咄逼人。\n他最喜欢的食物是玉米饼和巧克力，而且很怕牛。",
+      "PassiveSkill": {
+        "Name": "命运的Cross",
+        "Description": "Cross的特殊攻击每回合积累4%" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "Attack2": {
+        "Name": "蓝色攻击",
+        "Description": "灵魂变成蓝色，引力翻转，\n骨头从战斗框的边缘出现" },
+      "SpecialAttack": {
+        "Name": "十字军",
+        "Description": "旋转骨出现在战斗框中心，\ngasterblasters小骨刺会射向灵魂" }
+    },
+    "CrossXEvent": {
+      "Name": "Cross",
+      "Description": "想让他的世界回来",
+      "Bio": "来自XTale宇宙的的sans，由于他的过错AU而被摧毁。\n他相信，通过杀死他的家人和朋友，他就能得到覆写的力量，重新创造世界。\n相反，当Error偷走他们的灵魂时，X Chara的灵魂和他被留了下来，且X Chara能随意控制Cross的身体。\n因他看起来像一个有腿的大十字架，所以X Frisk就取名为Cross。\nCross已不再乐观俏皮，大多变得闷闷不乐或咄咄逼人。\n他最喜欢的食物是玉米饼和巧克力，而且很怕牛。",
+      "PassiveSkill": {
+        "Name": "命运的Cross",
+        "Description": "Cross的特殊攻击每回合积累4%" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
+      "Attack1": {
+        "Name": "大刀",
+        "Description": "挥舞着有破坏性的大刀" },
+      "Attack2": {
+        "Name": "Gasterblasters",
+        "Description": "发射具有破坏性的Gasterblasters" },
+      "SpecialAttack": {
+        "Name": "十字军",
+        "Description": "旋转骨出现在战斗框中心，\ngasterblasters小骨刺会射向灵魂" }
+    },
+    "XtaleChara": {
+      "Name": "X Chara",
+      "Description": "不稳定的小孩(各种意义上)",
+      "Bio": "一个来自XTale宇宙的孩子，在屠杀线导致他的宇宙被\n摧毁后，他成功地在一个怪物的身体里存活了下来。由于他的灵魂已经被Error Sans带走，\n他不得不寻找它的替代品，所以在寻找的\n过程中，他来到了主宇宙，作为他唯一能到达的地方。X!Chara意志坚强，自信，尽管偶尔会\n出现愤怒情绪崩溃的情况，喜欢巧克力。",
+      "PassiveSkill": {
+        "Name": "魔力激增",
+        "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
+      "Attack0": {
+        "Name": "刀子",
+        "Description": "以灵魂为目标的\n具有破坏性的刀子" },
+      "Attack1": {
+        "Name": "刀波",
+        "Description": "以灵魂为目标的\n具有破坏性的刀波" },
+      "Attack2": {
+        "Name": "物理攻击",
+        "Description": "出现圆形区域，造成伤害\n并使灵魂颤抖" },
+      "SpecialAttack": {
+        "Name": "治愈魔法",
+        "Description": "回复HP，取决于魔力值的量" }
+    },
+    "Green": {
+      "Name": "Green",
+      "Description": "代码编辑者",
+      "Bio": "外码和非多元宇宙的编辑者，时常漫游于世界中，这是为了寻找灵感。\n他是错误404的创造者。他创造错误404以拥有编辑代码的能力，然后消除一些错误异常\n他自己创造了最安全的时间线，其历史一直延续至今。\n由于创造过程中的一次意外，他的灵魂被扭曲成了一种奇怪的模样，\n而随着时间的推移，Green获得了一种独一无二的“编辑能力”。\n他对游戏中的内容运筹帷幄，能看见操控着一个个角色的所有玩家，\n与其他人不同，他经常直接挑战玩家，这也使得他不再是“她”的囚犯。",
+      "PassiveSkill": {
+        "Name": "双类型伤害",
+        "Description": "Green可造成1点业报伤害\n和5点真实伤害" },
+      "Attack0": {
+        "Name": "骨刺",
+        "Description": "以灵魂为目标发射骨刺，\n受击时造成伤害" },
+      "Attack1": {
+        "Name": "丝线",
+        "Description": "以灵魂为目标发射丝线，\n撞击时对对手造成伤害并使其瘫痪" },
+      "Attack2": {
+        "Name": "快速的冲击波",
+        "Description": "持续移动的blaster快速射向灵魂" },
+      "SpecialAttack": {
+        "Name": "编辑",
+        "Description": "飞向灵魂的弹幕会\n在按下按钮时发生变化" }
+    },
+    "Tornado": {
+      "Name": "Tornado",
+      "Description": "活在水深火热之中的程序员",
+      "Bio": "Danil没有对该角色进行描述，因为他没时间。\n他在做游戏，离那孩子远一点！",
+      "PassiveSkill": {
+        "Name": "Fast fins",
+        "Description": "Tornado能够躲避任何攻击，\n但每受一击将会消耗3点体力" },
+      "Attack0": {
+        "Name": "攻击1",
+        "Description": "攻击1描述" },
+      "Attack1": {
+        "Name": "攻击2",
+        "Description": "攻击2描述" },
+      "Attack2": {
+        "Name": "攻击3",
+        "Description": "攻击3描述" },
+      "SpecialAttack": {
+        "Name": "特殊攻击",
+        "Description": "特殊攻击描述" }
+    }
+  },
   "CharactersDescription": {
-		"CharactersList": "角色列表",
-		"SelectYourCharacter": "选择你的角色",
-		"SelectEnemyCharacter": "选择敌方角色",
-		"Description": "介绍",
-		"HP": "HP",
-		"SP": "耐力",
-		"Damage": "伤害",
-		"Karma": "罪业恶报",
-		"Regeneration": "再生",
-		"Creator": "创作者",
-		"Soundtrack": "原声带",
-		"Skins": "皮肤",
-		"Attacks": "攻击",
-		"Stamines": "耐力",
-		"StoryMode": "故事模式",
-		"InkSans": "艺术带师",
-		"ErrorSans": "错误的家伙",
-		"ClassicSans": "喜剧演员骷髅",
-		"SansaClaus": "X诞快乐",
-		"FellSans": "Nervous",
-		"SwapSans": "你可以叫我Blue(蓝！蓝！路！)",
-		"SwapPapyrus": "吸烟是有害的",
-		"Cross": "想让他的世界回来",
-		"XtaleChara": "不稳定的小孩(各种意义上)",
-		"Jevil": "我无所不能！",
-		"Green": "代码编辑者"
-  },
-  "CharactersBio": {
-		"InkSans": "多元宇宙的守护者，被认为是一个过时的角色。他支持\n其他创造者继续发展他们的AU。Ink没有自己的AU，\n所以他被赋予了穿越不同宇宙的机会，以及照顾涂鸦球\n领域--所有现有AU之间的“交集之地”。Ink是没有灵魂\n的，因此他封锁了自我，对任何事物都无感。这就是他\n的颜料瓶派上用场的地方，当随着时间的推移，他的\n感情消耗殆尽时，这就可以赋予他感情，多亏了这个，\n他通常看起来是一个开朗、俏皮的人，总是乐于助人。\nInk挥舞着画笔作为主要武器，他称之为Broomie，\n他能够用他的墨水描绘出各种不同的攻击。",
-		"ErrorSans": "AU毁灭者，以摧毁他人的世界为乐，\n还会把人类的灵魂和其他角色的带到反虚空领域。\nError可以通过错误之门穿梭于各个宇宙。\nError的起源是未知的; 甚至Error自己\n也不知道他是如何进入反虚空领域的。\nError是一个自私内向的人，被证实患有恐惧症，\n这意味着除了近视之外，还害怕别人的触摸。",
-		"ClassicSans": "所有Sans的起源。Sans和其他怪物一起生活在\n被结界封锁的地下世界，直到有一天一个名叫Frisk\n的人类帮助他们返回了地面。从此以后，Sans和\n人类和怪物一起生活在那里。\n对于这个骷髅最好的描述是一个幽默的谐星。\n他喜欢讲冷笑话，喜欢喝番茄酱，\n因为，没有理由不喝。\n不过，Sans经常懒惰和拖拉，爱睡觉是他的最大弱点。",
-		"FellSans": "一个具有好胜心的Sans，生活在Underfell宇宙中，\n那里的所有怪物也比原宇宙中的怪物更加残暴。\n除了他的外表、粗暴的性格以及对芥末的喜爱之外，\n这个骷髅都与原来的Sans非常相似。",
-		"SwapSans": "SwapSans,生活在Underswap宇宙中，每个角色都与\n一个类似的角色产生互换。所以Sans的行为举止就像\n原宇宙中的Papyrus一样。因此，他很有趣、活泼，\n而且很开朗。他想成为皇家守卫队的一员，所以他给自\n己做了套战斗服，即使是在清洗的时候，他也从不脱下\n这些衣服。Ink Sans称他为蓝莓，简称为Blue。\n当Blue不小心打翻油漆时，Ink在他家突然遇到了他。\nSwap Sans喜欢墨西哥的食物，尤其是玉米饼。\n他也为自己做饭来吃。",
-		"SwapPapyrus": "SwapSans的老大哥。归属于Underswap宇宙。\n他的性格与OG Sans相似，爱开玩笑且是个懒骨。\n不知为何，他穿着一件橙色连帽衫，黑色短裤，\n也穿着红色运动鞋。身体经常性地弯腰，\n以免他的身高让他兄弟感到尴尬，\n还一直在嘴里叼着一根烟。\nPapyrus真诚地爱着他的兄弟，\n并随时准备通过各种手段支持和保护他。",
-		"XtaleChara": "一个来自XTale宇宙的孩子，在屠杀线导致他的宇宙被\n摧毁后，他成功地在一个怪物的身体里存活了下来。由于他的灵魂已经被Error Sans带走，\n他不得不寻找它的替代品，所以在寻找的\n过程中，他来到了主宇宙，作为他唯一能到达的地方。X!Chara意志坚强，自信，尽管偶尔会\n出现愤怒情绪崩溃的情况，喜欢巧克力。"
-  },
-  "Characters": {
-      "InkSans": "Ink Sans",
-      "ErrorSans": "Error Sans",
-      "ClassicSans": "Sans",
-      "SansaClaus": "Sansa Claus",
-      "FellSans": "Fell Sans",
-      "SwapSans": "Swap Sans",
-      "SwapPapyrus": "Swap Papyrus",
-      "Dream": "Dream",
-      "FellAsgore": "Fell Asgore",
-      "Cross": "Cross",
-      "ClassicFrisk": "Frisk",
-      "ClassicMettaton": "Mettaton",
-      "Nightmare": "Nightmare",
-      "Chara": "Chara",
-      "XtaleChara": "X-Chara",
-      "FreshSans": "Fresh Sans",
-      "KillerSans": "Killer Sans",
-      "XtaleFrisk": "X-Frisk",
-      "EpicSans": "Epic Sans",
-      "GenoSans": "Geno Sans",
-      "FatalErrorSans": "Fatal Error Sans",
-      "FreshInkSans": "Fresh!Ink Sans",
-      "Jevil": "Jevil",
-      "JevilClassic": "Jevil \"经典\"",
-	  "Green": "Green",
-	  "Delta": "Delta",
-      "Null": "无"
+    "CharactersList": "角色列表",
+    "SelectYourCharacter": "选择你的角色",
+    "SelectEnemyCharacter": "选择敌方角色",
+    "Description": "介绍",
+    "HP": "HP",
+    "SP": "耐力",
+    "Damage": "伤害",
+    "Karma": "罪业恶报",
+    "Regeneration": "再生",
+    "Creator": "创作者",
+    "Soundtrack": "原声带",
+    "Skins": "皮肤",
+    "Attacks": "攻击",
+    "Stamines": "耐力",
+    "StoryMode": "故事模式"
   },
   "CharactersStyles": {
-	"OldCostume": "旧服装",
-	"NewCostume": "新服装",
-	"Classic": "经典",
-	"Jacket": "夹克",
-	"SansaClaus": "Sansa Claus",
-	"RoyalGuardian": "皇家守卫",
-	"XEvent": "X事件",
-	"Overalls": "背带裤",
-	"Negative": "负面程度",
-	"Standard": "标准",
-	"Child": "幼年",
-	"Adult": "成年",
-	"Experiment": "实验",
-	"Coat": "外套",
-	"Vest": "汗衫",
-	"Lord": "上帝"
-  },
-  "PassiveSkill": {
-    "SoullessHeart": "无魂之心",
-    "Glitches": "差错",
-    "Rest": "休息",
-    "EnergyPotential": "势能",
-    "DodgeMaster": "闪避大师",
-    "MagicalSurge": "奇妙激增",
-    "TwoTypesOfDamage": "双类型伤害"
-  },
-  "Attacks": {
-	"Atk1": "攻击1",
-    "Atk2": "攻击2",
-    "Atk3": "攻击3",
-	"Broomie": "Broomie",
-	"Inks": "墨水",
-	"InkGasterblasters": "Ink Gasterblasters",
-	"ErrorBones": "Error骨头攻击",
-	"Strings": "丝线",
-	"Bones": "骨头攻击",
-	"Gasterblasters": "Gasterblasters",
-	"BlueAttack": "蓝色攻击",
-	"RotatingBones": "旋转骨",
-	"OrangeAttack": "橙色攻击",
-	"StarRod": "星之杖",
-	"DreamsBow": "梦之弓",
-	"PositiveAttitude": "向阳态度",
-	"Fireballs": "火球",
-	"FieryVeil": "炽热的一面",
-	"Trident": "三叉戟",
-	"BigKnife": "大刀",
-	"SwordAndShield": "剑与盾",
-	"DamageWave": "腥风浪潮",
-	"Save": "回血",
-	"MiniMettatons": "迷你Mettatons",
-	"Bombs": "炸弹",
-	"PlasmaBeam": "电浆束",
-	"Tentacles": "触手",
-	"NegativeSpades": "阴暗面",
-	"NegativeVampire": "吸收阴暗面",
-	"Knives": "匕首",
-	"SmokeBombs": "烟雾弹",
-	"Knife": "刀子",
-	"KillerGasterblaster": "Killer Gasterblaster",
-	"Overwrite": "覆写",
-	"CardDeck": "卡组",
-	"BonesAndSpikes": "骨刺",
-	"TurboBlaster": "快速的blaster",
-	"Tea": "茶の暴雨"
-  },
-  "AttacksDescription": {
-		"Broomie": "已损坏的笔刷",
-		"Inks": "将颜色滴飞到灵魂的一面",
-		"InkGasterblasters": "Gasterblasters将灵魂推到战斗框的边缘\n从而造成伤害",
-		"ErrorBones": "以灵魂为目标的骨头攻击，在撞击时造成伤害",
-		"Strings": "以灵魂为目标的丝线攻击。\n受击时对对手造成伤害并使其瘫痪",
-		"Bones": "以灵魂为目标的骨头攻击，在撞击时造成伤害",
-		"Gasterblasters": "发射具有破坏性的Gasterblasters",
-		"RotatingBones": "以灵魂为目标的旋转骨攻击，在撞击时造成伤害",
-		"BlueAttack": "灵魂变成蓝色，引力翻转，骨头从战斗框的边缘出现。",
-		"BlueAttackFellSans": "灵魂变成蓝色，引力翻转，移动的骨头从战斗框的不同侧面冒出来",
-		"OrangeAttack": "灵魂变成橙色，并被吸引到有骨头的框的一边",
-		"BigKnife": "挥舞着有破坏性的大刀",
-		"Knives": "以灵魂为目标的具有破坏性的刀子",
-		"DamageWave": "以灵魂为目标的具有破坏性的刀波(刀气?)",
-		"Save": "恢复HP，但需要大量的体力",
-		"CardDeck": "掉落的盒子会造成破坏，所有4件服装都会对灵魂造成伤害",
-		"BonesAndSpikes": "Bones and spikes",
-		"TurboBlaster": "Turbo blaster",
-		"Tea": "Tea rainstorm"
+    "Standard": "标准",
+    "Classic": "经典",
+    "OldClothes": "旧服装",
+    "NewClothes": "新服装",
+    "Jacket": "夹克",
+    "SansaClaus": "Sansa Claus",
+    "OnByke": "On byke",
+    "Christmas": "圣诞节",
+    "Xmas": "Xmas",
+    "RoyalGuardian": "皇家守卫",
+    "XEvent": "X事件",
+    "Overalls": "背带裤",
+    "Negative": "负面程度",
+    "Child": "幼年",
+    "Adult": "成年",
+    "Experiment": "实验",
+    "Coat": "外套",
+    "Vest": "汗衫",
+    "Lord": "上帝"
   },
   "Battle": {
-		"Target": "目标",
-		"YoureAttacking": "你正在攻击",
-		"YoureDodging": "你正在闪避",
-		"Miss": "未击中",
-		"Dodge": "闪避",
-		"ChooseYourAttack": "选择你的攻击",
-		"Skip": "跳过",
-		"Rating": "RP",
-		"Disconnected": "离线",
-		"DisconnectedFromTheBattle": "唉呀呀！玩家在战斗中被切断了连接！",
-		"AttemptingToReconnect": "尝试断线重连中..."
+    "Target": "目标",
+    "YoureAttacking": "你正在攻击",
+    "YoureDodging": "你正在闪避",
+    "Miss": "未击中",
+    "Dodge": "闪避",
+    "Max": "最大",
+    "ChooseYourAttack": "选择你的攻击",
+    "Skip": "跳过",
+    "LittleStamina": "你的体力不足",
+    "Rating": "RP",
+    "Disconnected": "离线",
+    "DisconnectedFromTheBattle": "唉呀呀！玩家在战斗中连接被中断了！",
+    "AttemptingToReconnect": "尝试断线重连中..."
   },
-  "Gameover" : {
-		"Restart": "重新开始",
-		"Menu": "菜单",
-		"Next": "下一个",
-		"RatingPoint": "等级点"
+  "Pause": {
+    "Title": "菜单",
+    "Return": "返回",
+    "GiveUp": "放弃",
+    "ReportPlayer": "举报该玩家",
+    "ExitToMenu": "退出菜单"
+  },
+  "Gameover": {
+    "Restart": "重新开始",
+    "Menu": "菜单",
+    "Next": "下一个",
+    "RatingPoint": "RP"
   },
   "MiniGame": {
-		"Scores": "得分",
-		"BackToMenu": "返回菜单"
+    "Scores": "得分",
+    "BackToMenu": "返回菜单"
   },
   "Dialog": {
-	"Underverse_Episode1": {
-		"Dialog1": [
-			"{Sans:normal}呃...嗨。",
-			"{Sans:normal}你谁啊？",
-			"{C:secretive}你无需知道我是谁。",
-			"{Sans:normal}你什么意思，伙计？"
-		],
-		"Dialog2": [
-			"{C:satisfied}当她给你建议时，你应该听Undyne的。\n永远不要放松警惕。",
-			"{C:satisfied}这比说你好容易多了。\n谢谢你，Sans。"
-		],
-		"Dialog3": [
-			"{Ink:combat}Cross，你永远都不会在他人的世界里\n找到幸福。",
-			"{C:angry}又是你！给我滚开！\n否则我会毁掉他的灵魂！别再胡说八道了！",
-			"{Ink:combat}别胡闹了，Chara。把他的灵魂还给他，\n然后我们就可以回家了，好吗？",
-			"{C:angry}给 我 滚 开 ！",
-			"{Ink:normal}哦嚯，你认真的？",
-			"{Ink:normal}好吧。你自找的。",
-			"{Ink:normal}Sans，站在我身后。我会尽量快一点。"
-		],
-		"Dialog4": [
-			"{Ink:normal}你好，玩家。欢迎来到Underverse Battles。",
-			"{Ink:normal}现在我将会教你如何在这个游戏中战斗。",
-			"{Ink:normal}看到上面那些条了吗？",
-			"{Ink:normal}红条是HP，白条是体力，蓝色是魔力值。",
-			"{Ink:normal}每个玩家会轮流上场。",
-			"{Ink:surprised}哦，不。Chara先进攻了。\n用灵魂躲避他的攻击！"
-		],
-		"Dialog5": [
-			"{Ink:normal}干得好，看起来你很在行嘛！",
-			"{Ink:normal}可恶，我们损失了一点HP。",
-			"{Ink:normal}现在轮到我们了。",
-			"{C:angry}你在跟谁说话？",
-			"{Ink:proud}这不关你的事。",
-			"{Ink:normal}我有三种攻击方式：墨水、Broomie和Ink Gasterblasters。",
-			"{Ink:normal}选择“墨水”来进行攻击。"
-		],
-		"Dialog6": [
-			"{Ink:glad}完美，我们击中了！",
-			"{Ink:normal}每次你选择一次攻击，\n你的体力都会损失掉一些。",
-			"{Ink:normal}现在Chara又开始进攻了。",
-			"{Ink:normal}你可以尝试预测敌人的攻击，\n这样我们就不会掉HP，\n而且能恢复我们的体力。",
-			"{Ink:normal}选择一个对手进行攻击。"
-		],
-		"Dialog7": [
-			"{Ink:glad}太好了，你闪掉了！",
-			"{Ink:normal}现在你应该知道体力是怎么用的了。",
-			"{Ink:normal}如果你的体力很低，你将无法攻击，\n所以要留点保命。",
-			"{Ink:normal}现在我会告诉你魔力值怎么用。",
-			"{Ink:normal}它可以让你加强你的攻击。",
-			"{Ink:normal}攻击越强，造成严重伤害的可能性就越大。",
-			"{Ink:normal}这个指示器会显示您的攻击的强度。",
-			"{Ink:normal}尝试选择任何攻击，并给它加大攻击力度。"
-		],
-		"wrongattack": [
-			"{Ink:confused}呃... 你选了错误的攻击。\n选择“墨水”来进行攻击。"
-		],
-		"wrongpower": [
-			"{Ink:confused}你忘了加强我们的攻击。\n箭头右键(或D键)加强攻击。"
-		],
-		"wrongskip": [
-			"{Ink:confused}无需选择攻击。按[X]。"
-		],
-		"Dialog8": [
-			"{Ink:glad}干得好！",
-			"{Ink:normal}当你击中敌人或靠近攻击弹幕(俗称擦弹)时，\n魔力值就会恢复。",
-			"{Ink:normal}什么是“靠近攻击弹幕”？",
-			"{Ink:normal}当你的灵魂靠近弹幕快受到伤害时，\n它就会亮起。你看到了吗？",
-			"{Ink:normal}现在Chara攻击了。\n再次试着预测攻击。"
-		],
-		"Dialog9": [
-			"{Ink:surprised}哎呀呀，看来Chara决定要用\n另一种攻击来攻击你！",
-			"{Ink:combat}用你的灵魂躲过它！"
-		],
-		"Dialog10": [
-			"{Ink:normal}顺便一提，你不需要攻击。\n你可以按[X]跳过回合。",
-			"{Ink:normal}这在你体力不足时很有用。",
-			"{Ink:normal}试着跳过你的回合。"
-		],
-		"Dialog11": [
-			"{Ink:glad}完美！",
-			"{Ink:normal}还有一点。敌人不会等你很久的。",
-			"{Ink:normal}每个玩家有10秒的时间选择攻击。",
-			"{Ink:normal}如果时间用完，你没有选择攻击，\n那么你将错过这回合。",
-			"{Ink:glad}好了让我们来一段欢乐时光吧！"
-		],
-		"Dialog12": [
-			"{Sans:tired}你懂的，小家伙。\n虽然我不知道发生了什么，\n但我知道你不属于这里。",
-			"{Sans:tired}你必须阻止这一切。就是现在。",
-			"{Sans:tired}拜托，把我的灵魂还我。",
-			"{Sans:tired}我相信这位艺术家会帮你的。",
-			"{Ink:calm}Chara，Cross，我们回家吧。\n我们会找到更好的方法的...",
-			"{C:secretive}我只是不想死...我只是...我需要...",
-			"{C:satisfied}我 们 需 要 我 们 自 己 的 平 行 宇 宙 ！",
-			"{Ink:surprised}不，等等！",
-			"{Ink:confused}糟透了...",
-			"{Sans:tired}..."
-		]
-	},
-	"Underverse_Episode2": {
-		"Dialog1": [
-		  "{Sans:tired}所以...你叫Ink，对吧？",
-		  "{Ink:combat}...是的。认识你是我的荣幸。"
-		],
-		"Dialog2": [
-		  "{Ink:calm}我-我很抱歉，Sans，我没想到竟会发生这种事...",
-		  "{Sans:tired}没事的伙计，我还没死翘翘...至少现在还没。",
-		  "{Sans:tired}我不该在这睡觉了。",
-		  "{Sans:tired}看起来那家伙喜欢到处惹事呢。",
-		  "{Ink:calm}其实，这是他第一次这样做。",
-		  "{Ink:calm}从那以后他就害怕了...这...说来话长..."
-		],
-		"Choise1": [
-		  "画家版本的Sans想和某人说话。",
-		  "听听",
-		  "没门。快离开这里"
-		],
-		"Dialog3_1": [
-		  "{Sans:tired}嗯...我兄弟和其他人20分钟后就到了，所以我想我们可以谈上那么--"
-		],
-		"Dialog4_1": [
-		  "{Ink:glad}你想知道更多关于C的事吗！？太棒辣！！",
-		  "{Ink:normal}噢！抱歉失礼了，呵呵...",
-		  "{Ink:normal}好吧...这一切都始于遥远宇宙中的一个小水滴..."
-		],
-		"Dialog5_1": [
-		  "{Ink:none}一切似乎都是一如往常。你的宇宙和现存的数千种变体仍然和平地持续着。",
-		  "{Ink:none}突然，我感觉到一个新宇宙的出现。它的存在非常强烈...",
-		  "{Ink:none}...尽管有滴水声。",
-		  "{Ink:none}我抑制不住自己的兴奋，于是我决定去那里。",
-		  "{Ink:none}我渴望见到这个新世界及其居民...",
-		  "{Ink:none}...但除了一个人，什么都没有。",
-		  "{Ink:none}没想到的是...那几滴其实是他的眼泪。",
-		  "{Ink:none}他非常害怕。脑子里充满了恐惧。",
-		  "{Ink:none}他注意到还有其他人...也就是我。",
-		  "{Ink:none}然而，很快我们就打破僵局，他告诉了我他的名字。",
-		  "{Ink:none}他自称Cross，唯一一个没有重置可能性的灭族路线幸存者。",
-		  "{Sans:confused}等一下下...如果他在屠杀时间线中，导致这场屠杀的人在哪里？",
-		  "{Ink:combat}Chara封在他体内。怎么做到的？他从没告诉我过...",
-		  "{Ink:none}起初，他们是两个独立的人。",
-		  "{Ink:none}然而，当我拜访Cross，和他画画时，他赢得了对两个灵魂的完全控制。"
-		],
-		"Dialog6_1": [
-		  "{Ink:none}一天，在画画的时候，他站了起来。",
-		  "{Ink:none}他看起来很沮丧。",
-		  "{Ink:none}他告诉我，他的世界里出现了一个陌生的孩子，并试图说服他和其他像他一样的幸存者一起去一个地方。",
-		  "{Ink:calm}他拒绝了，因为他确信自己的世界还活着。",
-		  "{Ink:calm}Cross认为他可以在我的帮助下可以完好如初。",
-		  "{Ink:calm}但当我告诉他死者不能复生时...",
-		  "{Ink:emotionless}他的脸..."
-		],
-		"Dialog3_2": [
-		  "{Sans:tired}听着，你最好得走了。我对你的小丑表演不感兴趣。",
-		  "{Ink:surprised}但是Sans...你一半灵魂都被偷走了。",
-		  "{Sans:tired}我会活下来的。自己做好该做的事。",
-		  "{Ink:calm}好我懂了。毕竟这是我的弱点嘛。",
-		  "{Ink:combat}别担心，Sans。我会尽我所能找回你的一半灵魂的。"
-		],
-		"Dialog4_2": [
-		  "{Ink:combat}呃...祝好运。"
-		],
-		"Dialog5_2": [
-		  "{Sans:tired}唉...糟糕的一天。",
-		  "{Papyrus:none}SANS! 你在哪！？",
-		  "{Sans:tired}是时候走了。"
-		],
-		"Dialog7": [
-		  "{Ink:calm}C，拜托！你知道我不能创造一个新的世界...你还好吗？",
-		  "{Cross:angry}离我远点！",
-		  "{Ink:combat}好吧...我会离开，C...不要伤心...因为...",
-		  "{Ink:combat}你就像我兄弟...我不想让我兄弟伤心。"
-		],
-		"Dialog8": [
-		  "{Cross:calm}Ink?是你吗？"
-		],
-		"Dialog9": [
-		  "{Error:normal}唔...这地方对一个人来说非常大。",
-		  "{Error:normal}这有点自私，知道吗？"
-		],
-		"Dialog10": [
-		  "{Error:normal}Ink... Ink...你为什么要保护这个古怪东西？",
-		  "{Error:normal}你知道你不能再帮助他们了。",
-		  "{Error:normal}这次让我给他一个快乐的结局吧。",
-		  "{Ink:angry}不！这不是你的工作！",
-		  "{Error:normal}好吧...",
-		  "{Error:normal}我会试着友好一点。"
-		],
-		"Dialog11": [
-		  "{Error:normal}Ink，不要反抗。我不会杀了他。",
-		  "{Ink:combat}我不会让你为所欲为的！",
-		  "{Error:normal}看来你忘了我们的休战协议。"
-		],
-		"Dialog12": [
-		  "{Error:normal}可恶，Ink擅长躲开我的攻击。",
-		  "{Error:normal}我要用到我的特殊攻击。",
-		  "{Error:normal}这游戏我感到厌烦了。"
-		],
-		"Dialog13": [
-		  "{C:satisfied}我自由辣！",
-		  "{Cross:angry}不！等等！",
-		  "{Ink:injured}C-Cross? 你还好吗？"
-		],
-		"Dialog14": [
-		  "{Ink:injured}糟透了。"
-		]
-		}
-	}
+    "Underverse_Episode1": {
+      "Dialog1": [
+        "{Sans:normal}呃...嗨。",
+        "{Sans:normal}你谁啊？",
+        "{C:secretive}你无需知道我是谁。",
+        "{Sans:normal}你什么意思，伙计？"
+      ],
+      "Dialog2": [
+				"{C:satisfied}当她给你建议时，你应该听Undyne的。\n永远不要放松警惕。",
+				"{C:satisfied}这比说你好容易多了。\n谢谢你，Sans。"
+      ],
+      "Dialog3": [
+        "{Ink:combat}Cross，你永远都不会在他人的世界里\n找到幸福。",
+        "{C:angry}又是你！给我滚开！\n否则我会毁掉他的灵魂！别再胡说八道了！",
+        "{Ink:combat}别胡闹了，Chara。把他的灵魂还给他，\n然后我们就可以回家了，好吗？",
+        "{C:angry}给 我 滚 开 ！",
+        "{Ink:normal}哦嚯，你认真的？",
+        "{Ink:normal}好吧。你自找的。",
+        "{Ink:normal}Sans，站在我身后。我会尽量快一点。"
+      ],
+      "Dialog4": [
+        "{Ink:normal}你好，玩家。欢迎来到Underverse Battles。",
+        "{Ink:normal}现在我将会教你如何在这个游戏中战斗。",
+        "{Ink:normal}看到上面那些条了吗？",
+        "{Ink:normal}红条是HP，白条是体力，蓝色是魔力值。",
+        "{Ink:normal}每个玩家会轮流上场。",
+        "{Ink:surprised}哦，不。Chara率先进攻了。\n用灵魂躲避他的攻击！"
+      ],
+      "Dialog5": [
+        "{Ink:normal}干得好，看起来你很在行嘛！",
+        "{Ink:normal}可恶，我们损失了一点HP。",
+        "{Ink:confused}可恶，我们损失了一点HP。",
+        "{Ink:normal}现在轮到我们了。",
+        "{C:angry}你在跟谁说话？",
+        "{Ink:proud}这不关你的事。",
+        "{Ink:normal}我有三种攻击方式：墨水、Broomie和Ink Gasterblasters。",
+        "{Ink:normal}选择“墨水”来进行攻击。"
+      ],
+      "Dialog6": [
+        "{Ink:glad}完美，我们击中了！",
+        "{Ink:normal}每次你选择一次攻击，\n你的体力都会损失掉一些。",
+        "{Ink:normal}现在Chara又开始进攻了。",
+        "{Ink:normal}你可以尝试预测敌人的攻击，\n这样我们就不会掉HP，\n而且能恢复我们的体力。",
+        "{Ink:normal}选择一个对手进行攻击。"
+      ],
+      "Dialog7": [
+        "{Ink:glad}太好了，你闪掉了！",
+				"{Ink:normal}现在你应该知道体力是怎么用的了。",
+				"{Ink:normal}如果你的体力很低，你将无法攻击，\n所以要留点保命。",
+				"{Ink:normal}现在我会告诉你魔力值怎么用。",
+				"{Ink:normal}它可以让你加强你的攻击。",
+				"{Ink:normal}攻击越强，造成严重伤害的可能性就越大。",
+				"{Ink:normal}这个指示器会显示您的攻击的强度。",
+				"{Ink:normal}尝试选择任何攻击，并给它加大攻击力度。"
+      ],
+      "WrongAttack": [
+        "{Ink:confused}呃... 你选了错误的攻击。\n选择“墨水”来进行攻击。"
+      ],
+      "WrongPower": [
+        "{Ink:confused}你忘了加强我们的攻击。\n箭头右键(或D键)加强攻击。"
+      ],
+      "WrongSkip": [
+        "{Ink:confused}无需选择攻击。按[X]。"
+      ],
+      "Dialog8": [
+        "{Ink:glad}干得好！",
+        "{Ink:normal}当你击中敌人或靠近攻击弹幕(俗称擦弹)时，\n魔力值就会恢复。",
+        "{Ink:normal}什么是“靠近攻击弹幕”？",
+        "{Ink:normal}当你的灵魂靠近弹幕快受到伤害时，\n它就会亮起。你看到了吗？",
+        "{Ink:normal}现在Chara攻击了。\n再次试着预测攻击。"
+      ],
+      "Dialog9": [
+        "{Ink:surprised}哎呀呀，看来Chara决定要用\n另一种攻击来攻击你！",
+        "{Ink:combat}用你的灵魂躲过它！"
+      ],
+      "Dialog10": [
+        "{Ink:normal}顺便一提，你不需要攻击。\n你可以按[X]跳过回合。",
+        "{Ink:normal}这在你体力不足时很有用。",
+        "{Ink:normal}试着跳过你的回合。"
+      ],
+      "Dialog11": [
+        "{Ink:glad}完美！",
+        "{Ink:normal}还有一点。敌人不会等你很久的。",
+        "{Ink:normal}每个玩家有10秒的时间选择攻击。",
+        "{Ink:normal}如果时间用完，你没有选择攻击，\n那么你将错过这回合。",
+        "{Ink:glad}好了让我们来一段欢乐时光吧！"
+      ],
+      "Dialog12": [
+        "{Sans:tired}你懂的，小家伙。\n虽然我不知道发生了什么，\n但我知道你不属于这里。",
+				"{Sans:tired}你必须阻止这一切。就是现在。",
+				"{Sans:tired}拜托，把我的灵魂还我。",
+				"{Sans:tired}我相信这位艺术家会帮你的。",
+				"{Ink:calm}Chara，Cross，我们回家吧。\n我们会找到更好的方法的...",
+				"{C:secretive}我只是不想死...我只是...我需要...",
+				"{C:satisfied}我 们 需 要 我 们 自 己 的 平 行 宇 宙 ！",
+				"{Ink:surprised}不，等等！",
+				"{Ink:confused}糟透了...",
+				"{Sans:tired}..."
+      ]
+    },
+    "Underverse_Episode2": {
+      "Dialog1": [
+        "{Sans:tired}所以...你叫Ink，对吧？",
+        "{Ink:combat}...是的。认识你是我的荣幸。"
+      ],
+      "Dialog2": [
+        "{Ink:calm}我-我很抱歉，Sans，我没想到竟会发生这种事...",
+        "{Sans:tired}没事的伙计，我还没死翘翘...至少现在还没。",
+        "{Sans:tired}我不该在这睡觉了。",
+        "{Sans:tired}看起来那家伙喜欢到处惹事呢。",
+        "{Ink:calm}其实，这是他第一次这样做。",
+        "{Ink:calm}从那以后他就害怕了...这...说来话长..."
+      ],
+      "Choise1": [
+        "画家版本的Sans想和某人说话。",
+        "听听",
+        "没门。快离开这里"
+      ],
+      "Dialog3_Line1": [
+        "{Sans:normal}嗯...我兄弟和其他人20分钟后就到了，所以我想我们可以谈上那么--"
+      ],
+      "Dialog4_Line1": [
+				"{Ink:glad}你想知道更多关于C的事吗！？太棒辣！！",
+				"{Ink:normal}噢！抱歉失礼了，呵呵...",
+				"{Ink:normal}好吧...这一切都始于遥远宇宙中的一个小水滴..."
+      ],
+      "Dialog5_Line1": [
+        "{Ink:none}一切似乎都是一如往常。你的宇宙和现存的数千种变体仍然和平地持续着。",
+        "{Ink:none}突然，我感觉到一个新宇宙的出现。它的存在非常强烈...",
+        "{Ink:none}...尽管有滴水声。",
+        "{Ink:none}我抑制不住自己的兴奋，于是我决定去那里。"
+      ],
+      "Dialog6_Line1": [
+				"{Ink:none}我渴望见到这个新世界及其居民...",
+				"{Ink:none}...但除了一个人，什么都没有。",
+				"{Ink:none}没想到的是...那几滴其实是他的眼泪。",
+				"{Ink:none}他非常害怕。脑子里充满了恐惧。",
+				"{Ink:none}他注意到还有其他人...也就是我。",
+				"{Ink:none}然而，很快我们就打破僵局，他告诉了我他的名字。"
+      ],
+      "Dialog7_Line1": [
+        "{Ink:none}他自称Cross，唯一一个没有重置可能性的灭族路线幸存者。"
+      ],
+      "Dialog8_Line1": [
+        "{Sans:confused}等一下下...如果他在屠杀时间线中，导致这场屠杀的人在哪里？",
+        "{Ink:calm}CChara封在他体内。怎么做到的？他从没告诉我过...",
+        "{Ink:calm}起初，他们是两个独立的人。",
+        "{Ink:calm}然而，当我拜访Cross，和他画画时，他赢得了对两个灵魂的完全控制。"
+      ],
+      "Dialog9_Line1": [
+        "{Ink:none}一天，在画画的时候，他站了起来。",
+        "{Ink:none}他看起来很沮丧。"
+      ],
+      "Dialog10_Line2": [
+        "{Ink:none}他告诉我，他的世界里出现了一个陌生的孩子，并试图说服他和其他像他一样的幸存者一起去一个地方。"
+      ],
+      "Dialog11_Line2": [
+        "{Ink:calm}他拒绝了，因为他确信自己的世界还活着。",
+        "{Ink:calm}Cross认为他可以在我的帮助下可以完好如初。",
+        "{Ink:calm}但当我告诉他死者不能复生时...",
+        "{Ink:emotionless}他的脸上..."
+      ],
+      "Dialog12_Line1": [
+        "{Sans:confused}然后？"
+      ],
+      "Dialog13_Line1": [
+        "{Ink:emotionless}我们刚刚讲了什么啊？",
+        "{Sans:none}呼，所以那家伙怎么了？"
+      ],
+      "Dialog3_Line2": [
+				"{Sans:tired}听着，你最好得走了。我对你的小丑表演不感兴趣。",
+				"{Ink:surprised}但是Sans...你一半灵魂都被偷走了。",
+				"{Sans:tired}我会活下来的。自己做好该做的事。",
+				"{Ink:calm}好我懂了。毕竟这是我的弱点嘛。",
+				"{Ink:combat}别担心，Sans。我会尽我所能找回你的一半灵魂的。"
+      ],
+      "Dialog4_Line2": [
+        "{Ink:combat}呃...祝好运。"
+      ],
+      "Dialog5_Line2": [
+        "{Sans:tired}唉...糟糕的一天。",
+        "{Sans:tired}好了，是时候走了。"
+      ],
+      "Dialog14": [
+        "{Ink:calm}C，拜托！你知道我不能创造一个新的世界...你还好吗？",
+        "{CrossXEvent:angry}离我远点！"
+      ],
+      "Dialog15": [
+        "{Ink:combat}好吧...我会离开，C...不要伤心...因为...",
+        "{Ink:combat}你就像我兄弟...我不想让我兄弟伤心。"
+      ],
+      "Dialog16": [
+        "{CrossXEvent:calm}Ink? 是你吗？"
+      ],
+      "Dialog17": [
+        "{Error:normal}唔...这地方对一个人来说非常大。",
+        "{Error:normal}这有点自私，知道吗？"
+      ],
+      "Dialog18": [
+				"{Error:normal}Ink... Ink...你为什么要保护这个古怪东西？",
+				"{Error:normal}你知道你不能再帮助他们了。",
+				"{Error:normal}这次让我给他一个快乐的结局吧。",
+				"{Ink:angry}不！这不是你的工作！",
+				"{Error:normal}好吧...",
+				"{Error:normal}我会试着友好一点。"
+      ],
+      "Dialog19": [
+        "{Error:normal}Ink，不要反抗。我不会杀了他。",
+        "{Ink:combat}我不会让你为所欲为的！"
+      ],
+      "TakeDamage": [
+        "{Error:angry}嘿，你，玩家！不要再用你的心去抓墨水了!",
+        "{Error:angry}如果你不能正确地躲避，那就按住[Shift]键，慢点移动。",
+        "{Error:angry}如果你不能正确地躲避，那么就按下主动能力按钮，使其移动速度变慢。"
+      ],
+      "DontTakeDamage": [
+        "{Error:normal}躲的好，玩家。",
+        "{Error:normal}如果你需要慢点移动，那就按住[Shift]键。",
+        "{Error:normal}如果你需要慢点移动，那就按住主动能力按钮。"
+      ],
+      "Dialog20": [
+        "{Error:normal}可恶，Ink擅长躲开我的攻击。",
+        "{Error:normal}我要用到我的特殊攻击。",
+        "{Error:normal}这游戏我感到厌烦了！"
+      ],
+      "Dialog21": [
+        "{C:satisfied}我自由辣！",
+        "{Cross:angry}不！等等！",
+        "{Ink:injured}C-Cross? 你还好吗？"
+      ],
+      "Dialog22": [
+        "{Ink:injured}糟透了。"
+      ]
+    }
+  }
 }

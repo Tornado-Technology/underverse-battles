@@ -3,7 +3,7 @@
 /// @param {Function} callback
 /// @param {Real} percent_given
 /// @return {Struct.SpecialActionClass}
-function SpecialAction(key, icon, icon_locked, callback = undefined, percent_given = 2, is_damage_attack = true) {
+function SpecialAction(key, icon, icon_locked, callback = undefined, percent_given = 5, is_damage_attack = true) {
 	var action = new SpecialActionClass(key + ".Name", key + ".Description", icon, icon_locked, callback, percent_given, is_damage_attack);
 	action.init();
 	return action;

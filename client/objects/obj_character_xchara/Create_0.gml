@@ -46,7 +46,7 @@ actions = [
 	Action("Character.XtaleChara.Attack1", xchara_attack1),
 	Action("Character.XtaleChara.Attack2", xchara_attack2)
 ];
-special_action = SpecialAction("Character.XtaleChara.SpecialAttack", spr_special_attack_xchara, spr_special_attack_xchara_locked, xchara_special_attack, 2, false);
+special_action = SpecialAction("Character.XtaleChara.SpecialAttack", spr_special_attack_xchara, spr_special_attack_xchara_locked, xchara_special_attack, 5, false);
 
 // Special
 on_dodged = function(player_id) {

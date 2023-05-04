@@ -1,6 +1,6 @@
 event_inherited();
 
-damage = get_char_damage(obj_character_ink_sans);
+heal = get_char_damage(obj_character_ink_sans);
 
 speed_const = 2;
 

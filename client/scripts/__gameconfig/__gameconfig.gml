@@ -6,6 +6,7 @@
 #macro development_mode (os_get_config() == "Development")
 #macro localserver_mode (os_get_config() == "Localserver")
 #macro cinematic_mode (os_get_config() == "Cinematic")
+#macro special_attack_test_mode (os_get_config() == "SpecialAttackTest")
 
 // Used to test mobile features for Desktop
 #macro mobile_mode false

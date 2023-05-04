@@ -1,4 +1,4 @@
-function create_aiming_gasterblaster(gaster_blaster, soul) {
+function create_aiming_gasterblaster(gaster_blaster, target) {
 	var x_gb, y_gb;
 	var gb_size = 60;
 	var pos = irandom_range(0, 3);
@@ -28,8 +28,8 @@ function create_aiming_gasterblaster(gaster_blaster, soul) {
 	
 	var inst_gaster_blaster = instance_create_depth(x_gb, y_gb, fight_depth.bullet_outside_hight, gaster_blaster);
 	
-	inst_gaster_blaster.x_dir = soul.x;
-	inst_gaster_blaster.y_dir = soul.y;
+	inst_gaster_blaster.x_dir = target.x;
+	inst_gaster_blaster.y_dir = target.y;
 	
 	return inst_gaster_blaster;
 }
