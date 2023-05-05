@@ -209,12 +209,23 @@ export default class Fight {
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
+    this.addSpecialActionCharge(activePlayer, activePlayer?.fight.characterInfo.specialActionChargePerTurn ?? 0);
+
     if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
       this.updateStateDefend();
       return;
     }
 
     this.updateStateAttack();
+  }
+
+  public setSpecialActionCharge(client: Client, charge: number): void {
+    client?.fight.setSpecialActionCharge(charge);
+    this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
+  }
+
+  public addSpecialActionCharge(client: Client, charge: number): void {
+    this.setSpecialActionCharge(client, client?.fight.specialActionCharge + charge);
   }
 
   public resetState(): void {

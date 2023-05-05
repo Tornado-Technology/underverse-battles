@@ -72,7 +72,7 @@ export const characterInfoList = {
     20,
     [10, 15, 20],
     [0, 10, 25, 40, 60],
-    4,
+    10,
     1,
     [
       new CharacterInfo(
@@ -83,7 +83,7 @@ export const characterInfoList = {
         20,
         [10, 15, 20],
         [0, 10, 25, 40, 60],
-        4,
+        10,
         1,
       )
     ]

@@ -308,6 +308,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightSpecialAction':
       client.fight.instance?.setAction(client, actionType.specialAttack);
+      client.fight.instance?.setSpecialActionCharge(client, 0);
       break;
     
     case 'fightExtraAction':
@@ -343,8 +344,13 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightDamage':
-      client.fight.instance?.removeHp(client, data.damage);
-      client.fight.instance?.addMana(client.fight.instance?.getOtherClient(client), data.damage);
+      {
+        const source = client.fight.instance?.getOtherClient(client);
+
+        client.fight.instance?.removeHp(client, data.damage);
+        client.fight.instance?.addMana(source, data.damage);
+        client.fight.instance?.addSpecialActionCharge(source, source.fight.characterInfo.specialActionChargePerDamage);
+      }
       break;
 
     case 'fightStun':
