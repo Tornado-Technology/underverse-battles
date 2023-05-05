@@ -782,6 +782,7 @@
     {"id":{"name":"__TranslateConfig","path":"scripts/__TranslateConfig/__TranslateConfig.yy",},"order":4,},
     {"id":{"name":"__uilib_config","path":"scripts/__uilib_config/__uilib_config.yy",},"order":12,},
     {"id":{"name":"spr_cross_attack_2_down_right","path":"sprites/spr_cross_attack_2_down_right/spr_cross_attack_2_down_right.yy",},"order":0,},
+    {"id":{"name":"char_is_valid","path":"scripts/char_is_valid/char_is_valid.yy",},"order":13,},
     {"id":{"name":"obj_character_sans","path":"objects/obj_character_sans/obj_character_sans.yy",},"order":5,},
     {"id":{"name":"spr_sansa_claus_attack_2_up","path":"sprites/spr_sansa_claus_attack_2_up/spr_sansa_claus_attack_2_up.yy",},"order":12,},
     {"id":{"name":"GMLive_roomLoader","path":"scripts/GMLive_roomLoader/GMLive_roomLoader.yy",},"order":2,},

@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Char",
-    "path": "folders/Scripts/Local/Utils/Char.yy",
+    "name": "Stirng",
+    "path": "folders/Scripts/Local/Utils/Stirng.yy",
   },
 }
