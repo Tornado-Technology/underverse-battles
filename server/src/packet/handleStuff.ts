@@ -366,7 +366,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     default:
-      Logger.warn(`Handled unknown command index: ${index}`);
+      Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
       break;
   }
 }
