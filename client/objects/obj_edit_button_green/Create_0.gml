@@ -36,4 +36,8 @@ press = function() {
 	is_can_input = false;
 	time_source_start(cooldown);
 	audio_play_sound_plugging(snd_selection);
+	
+	if (fight_network_mode) {
+		send_fight_extra_action();
+	}
 }

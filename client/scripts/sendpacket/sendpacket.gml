@@ -115,6 +115,10 @@ function send_fight_special_action() {
     send("fightSpecialAction");
 }
 
+function send_fight_extra_action() {
+    send("fightExtraAction");
+}
+
 function send_fight_skip() {
     send("fightSkip");
 }
