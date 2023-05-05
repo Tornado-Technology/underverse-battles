@@ -15,7 +15,10 @@ achivements_load();
 background_load();
 soundtrack_load();
 translate_load();
-if (is_desktop) input_load();
+
+if (is_desktop) {
+	input_load();
+}
 
 // Character list load
 CharacterList();

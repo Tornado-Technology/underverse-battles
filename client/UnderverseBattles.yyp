@@ -1333,6 +1333,7 @@
       {"name":"Development","children":[
           {"name":"Localserver","children":[],},
           {"name":"Cinematic","children":[],},
+          {"name":"Mobile","children":[],},
         ],},
     ],
   },
@@ -1539,6 +1540,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fight","folderPath":"folders/Scripts/Local/Fight.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Battle","folderPath":"folders/Scripts/Local/Fight/Battle.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bone","folderPath":"folders/Scripts/Local/Fight/Battle/Bone.yy","order":4,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extra Action","folderPath":"folders/Scripts/Local/Fight/Battle/Extra Action.yy","order":10,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Gasterblaster","folderPath":"folders/Scripts/Local/Fight/Battle/Gasterblaster.yy","order":5,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Platforms","folderPath":"folders/Scripts/Local/Fight/Battle/Platforms.yy","order":6,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Soul","folderPath":"folders/Scripts/Local/Fight/Battle/Soul.yy","order":9,},
@@ -1668,7 +1670,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy","order":17,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy","order":5,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extra Action","folderPath":"folders/Scripts/Local/Fight/Battle/Extra Action.yy","order":10,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

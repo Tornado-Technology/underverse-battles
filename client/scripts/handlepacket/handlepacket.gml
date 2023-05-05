@@ -135,6 +135,11 @@ function handle_packet(data) {
 		case "deleteAccount":
 			break;
 			
+		case "information":
+			var config = data.config;
+			// TODO: Add TODO)))
+			break;
+			
 		case "fightJoin":
 			var status = data.status;
 
