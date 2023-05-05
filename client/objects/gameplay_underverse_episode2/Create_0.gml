@@ -2,16 +2,22 @@ on_into_story_mode.invoke("Tutorial");
 
 episode = "Underverse_Episode2.";
 
+// Fight
+fight = obj_fight_underverse_episode2;
+
 // Characters
 ink_sans = obj_character_ink_sans;
 sans = obj_character_sans;
 cross = obj_character_cross;
 error_sans = obj_character_error_sans;
+xchara = obj_character_xchara;
 
 // Props
 notebook = noone;
 paintings = noone;
 core_frisk = noone;
+string_error_sans = [];
+string_cross = [];
 
 // Soul
 soul_cross = noone;
@@ -38,6 +44,32 @@ part_type_life(particle_pencil, 240, 240);
 part_type_speed(particle_pencil, 2.5, 2.5, -0.01, 0);
 part_type_direction(particle_pencil, 0, 0, 0, 0);
 part_type_orientation(particle_pencil, 0, 0, 10, 0, false);
+
+// Time sources
+time_source_restart = time_source_create(time_source_game, 5, time_source_units_seconds, function () {
+	cutscene_set(4);
+});
+
+// Methods
+cutscene_set = function (index) {
+	cutscene_create(cutscenes[index]);
+}
+
+cutscene_after_death = function () {
+	effect_blackout_start(c_black, false, fight_depth.ui_hight);
+	
+	instance_destroy(obj_cutscene);
+	instance_destroy(ink_sans);
+	instance_destroy(cross);
+	instance_destroy(error_sans);
+	instance_destroy_array(string_cross);
+	instance_create(obj_soul_destroyed);
+	time_source_start(time_source_restart);
+}
+
+cutscene_special_attack = function () {
+	cutscene_set(8);
+}
 
 // Cutscenes
 cutscenes = [
@@ -347,16 +379,25 @@ cutscenes = [
 		[effect_blackout_start, c_black, true, 0],
 		[cutscene_execute, function() { instance_destroy_array(string_error_sans); }],
 		[audio_play_sound_once, snd_spare_up],
-		[cutscene_wait, 2],
+		[cutscene_wait, 0.5],
+		[cutscene_execute, function () { cutscene_create(cutscenes[4]); }]
+	],
+	[
 		// Cross in strings
 		[layer_background_sprite, background_id, spr_background_empty_xtale_error],
-		[cutscene_object_set_position, cross, -10, -20],
+		[cutscene_execute, function () {
+			if (!instance_exists(cross)) {
+				cross = instance_create_depth(200, 167, fight_depth.player, obj_character_cross, { sprite_index: spr_cross_in_strings });
+			}
+		}],
+		[cutscene_object_set_position, cross, -30, -25],
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
+		[cutscene_wait, 1],
 		[effect_blackout_end],
 		[cutscene_execute, function () {
 			var i = 0;
 			repeat(4) {
-				string_cross[i] = instance_create_depth(cross.x - 4 + i * 2, cross.y - 26, fight_depth.player, obj_string_error_sans_story_mode, {
+				string_cross[i] = instance_create_depth(cross.x - 8 + i * 3, cross.y - 26, fight_depth.player, obj_string_error_sans_story_mode, {
 					depth: fight_depth.player,
 					scale_speed: 0,
 					image_xscale: 200,
@@ -403,9 +444,9 @@ cutscenes = [
 		[cutscene_execute, function () {
 			var i = 0;
 			repeat(2) {
-				string_error_sans[i] = instance_create_depth(error_sans.x - 10 + i * 2, error_sans.y - 17 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
+				string_error_sans[i] = instance_create_depth(error_sans.x - 10 + i * 2, error_sans.y - 16 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
 					scale_speed: 6,
-					max_scale: 200
+					max_scale: 220
 				});
 				string_error_sans[i].shoot(cross.x, cross.y - 10);
 				i++;
@@ -425,9 +466,9 @@ cutscenes = [
 				string_error_sans[i].pull();
 				i++;
 			}
+			soul_cross.move(400, 150, 6);
 		}],
-		[cutscene_object_move_to, soul_cross, 400, 150, 6],
-		[cutscene_wait, 3],
+		[cutscene_wait, 2],
 		// Ink Sans is coming
 		[cutscene_execute, function () {
 			ink_sans = instance_create_depth(error_sans.x + 100, error_sans.y, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_attack_flying });
@@ -440,12 +481,13 @@ cutscenes = [
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_attack_flying_hit],
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
 		[cutscene_object_set_sprtie, error_sans, spr_error_sans_dodge_jump_back],
-		[cutscene_character_move, error_sans, -100, 0, 2],
+		[cutscene_character_move, error_sans, -160, 0, 3],
+		[audio_play_sound_once, snd_projectile],
 		[cutscene_wait, 1.5],
 		[cutscene_dialog, episode + "Dialog18"],
 		// Fight begins
 		[cutscene_execute, function () {
-			instance_create(obj_fight_underverse_episode2);
+			instance_create(fight);
 			fight_position_event = true;
 		}],
 		[cutscene_fight_wait_turn, 2],
@@ -453,6 +495,7 @@ cutscenes = [
 			player0_hp_turn2 = fight_get_player_hp(0);
 			fight_set_ui_showing_action_box(false);
 			fight_set_player_input(false);
+			timer_stop();
 			fight_set_pause(true);
 		}],
 		[cutscene_wait, 0.6],
@@ -460,32 +503,48 @@ cutscenes = [
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
+			timer_start();
 			fight_set_pause(false);
 		}],
 		[cutscene_fight_wait_turn, 4],
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(false);
 			fight_set_player_input(false);
+			timer_stop();
 			fight_set_pause(true);
 		}],
 		[cutscene_wait, 0.6],
 		[cutscene_execute, function () {
 			if (player0_hp_turn2 > fight_get_player_hp(0)) {
-				instance_dialog = dialog_create(episode + "TakeDamage", dir.down);
+				cutscene_create(cutscenes[5]);
 			} else {
-				instance_dialog = dialog_create(episode + "DontTakeDamage", dir.down);
+				cutscene_create(cutscenes[6]);
 			}
 		}],
-		[cutscene_wait_dialog_end],
+	],
+	[
+		// If player took damage
+		[cutscene_dialog, episode + "TakeDamage", dir.down],
+		[cutscene_execute, function () { cutscene_create(cutscenes[7]); }]
+	],
+	[
+		// If player didn't take damage
+		[cutscene_dialog, episode + "DontTakeDamage", dir.down],
+		[cutscene_execute, function () { cutscene_create(cutscenes[7]); }]
+	],
+	[
+		// Fight continue
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
+			timer_start();
 			fight_set_pause(false);
 		}],
-		[cutscene_fight_wait_turn, 6],
+		[cutscene_fight_wait_turn, 20],
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(false);
 			fight_set_player_input(false);
+			timer_stop();
 			fight_set_pause(true);
 		}],
 		[cutscene_wait, 0.6],
@@ -495,7 +554,52 @@ cutscenes = [
 			fight_set_showing_special_action(true);
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
+			timer_start();
 			fight_set_pause(false);
 		}],
+	],
+	[
+		// Special attack
+		[cutscene_execute, function () {
+			fight_position_event = false;
+			instance_destroy(fight);
+			
+			repeat (3) create_aiming_gasterblaster(obj_gasterblaster_aiming_error_sans, ink_sans);
+		}],
+		[cutscene_wait, 1],
+		[effect_fade, 0.5, 7, c_white, c_white, true, 0],
+		[cutscene_wait, 0.5],
+		// Ink Sans and XChara
+		[layer_background_sprite, background_id, spr_background_empty_xtale],
+		[cutscene_execute, function () {
+			instance_destroy_array(string_cross);
+			instance_destroy(cross);
+			instance_destroy(error_sans);
+			
+			ink_sans.sprite_index = spr_ink_sans_lying_wounded;
+			xchara = instance_create_depth(120, 167, fight_depth.player, obj_character_xchara, { sprite_index: spr_xchara_lying_wounded });
+		}],
+		[cutscene_wait, 8],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_stand_up_on_knees],
+		[cutscene_wait, 1.5],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_on_knees_looking_hands],
+		[cutscene_wait, 0.5],
+		[cutscene_dialog_async, episode + "Dialog21"],
+		[cutscene_wait_by_dialog, 1],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_on_knees_transform_cross],
+		[cutscene_wait_by_dialog, 2],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_lying_wounded_head_up],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_on_knees_transform_back],
+		[cutscene_wait_dialog_end],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_on_knees_turns_forward],
+		[cutscene_wait, 1.2],
+		[cutscene_object_set_sprtie, xchara, spr_xchara_on_knees_teleporting],
+		[audio_play_sound_once, snd_teleport],
+		[cutscene_wait, 2],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_lying_wounded],
+		[cutscene_dialog, episode + "Dialog22"],
+		[effect_fade, 3, 1, c_black, c_black, true, 0],
+		[cutscene_wait, 3],
+		[room_goto, room_menu]
 	]
 ];

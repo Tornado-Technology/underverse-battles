@@ -14,3 +14,8 @@ action_box_position.y = action_box_position_start.y + (action_box_position_end.y
 
 // Initiative string 
 str_initiative = translate_get(fight_get_initiative() == 0 ? "Battle.YoureAttacking" : "Battle.YoureDodging");
+
+// Change special attack image
+special_button.set_image(fight_check_player_special_action_readiness(0) ?
+	fight_get_player_special_action_icon(0) : fight_get_player_special_action_icon(0, true)
+);

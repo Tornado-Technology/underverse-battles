@@ -1,5 +1,3 @@
-event_inherited();
-
 following_character = noone;
 
 increase = false;
