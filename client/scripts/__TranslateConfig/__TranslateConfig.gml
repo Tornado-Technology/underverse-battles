@@ -9,7 +9,7 @@ global.__event_on_translate_update = new Event();
 #macro translate_directory "translate/"
 #macro translate_language_info "info.json"
 #macro translate_language_main "translate.json"
-#macro translate_languages_offical ["en_us", "ru_ru"]
+#macro translate_languages_offical ["en_us", "ru_ru", "zn_ch"]
 
 // Connections
 on_translate_update.connect(discrod_update_translate);

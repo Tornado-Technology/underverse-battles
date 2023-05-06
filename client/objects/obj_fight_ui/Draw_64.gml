@@ -75,7 +75,7 @@ event_user(1);
 draw_reset();
 
 // Action Box
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 
 // Positions values
 var soul = fight_get_player_soul(0);
@@ -141,14 +141,14 @@ if (action_box_show && showing_special_action && is_player_turn) {
 
 // Skip
 if (showing_skip && is_player_turn && fight_get_player_stamina(0) < fight_get_player_action_stamina_cost(0, 1) && in_chouse) {
-	draw_set_font(font_mini);
+	draw_set_font(global._font_main_mini);
 	draw_set_halign(fa_center);
 	draw_text_outlined(size_center.x, size.y - 120, text_simple_color, c_black, text_skip);
 }
 
 // initiative
 draw_reset();
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
 

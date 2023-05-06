@@ -38,8 +38,8 @@ if (_id == 0 && attack_num == 2) {
 		time_source_start(time_source_update_0_2_2);
 	}, [], -1);
 	time_source_update_0_2_2 = time_source_create(time_source_game, 1/3, time_source_units_seconds, function (bone_old, bone_new) {
-		update_0_2_2(bone_old, bone_new);
-	}, [bone_moving, bone_new]);
+		update_0_2_2();
+	});
 	time_source_update_destroy_0_2 = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
 		instance_destroy();
 	});

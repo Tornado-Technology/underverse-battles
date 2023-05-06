@@ -23,8 +23,12 @@ shift = 184;
 death_name_function = "";
 
 voice = snd_voice_main;
-font = font_determination;
+font = global._font_main_determination;
 text_color = c_white;
+
+if (is_mobile || mobile_mode) {
+	global.__ui_controls_instance.enable = false;
+}
 
 #region Methods
 set_frame = function (character_name, character_emote, character_frame) {

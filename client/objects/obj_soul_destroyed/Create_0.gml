@@ -17,7 +17,7 @@ part_type_direction(part_peace, 0, 359, 0, 0);
 part_type_gravity(part_peace, 0.1, -90);
 
 time_source_death = time_source_create(time_source_game, 1, time_source_units_seconds, function (pow) {
-	repeat(5) part_particles_create(global.part_system_bullet, x + irandom_range(-7, 7), y + irandom_range(-7, 7), part_peace, 1);
+	repeat(5) part_particles_create(global.part_system_soul, x + irandom_range(-7, 7), y + irandom_range(-7, 7), part_peace, 1);
 	audio_play_sound_once(snd_soul_death);
 	instance_destroy();
 });

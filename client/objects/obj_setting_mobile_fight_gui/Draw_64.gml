@@ -1,6 +1,6 @@
 draw_sprite_stretched(spr_fight_ui_action_box, 0, action_box_position.x, action_box_position.y, action_box_size.x, action_box_size.y);
 
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_left);
 
 for (var i = 0; i < 3; i++) {

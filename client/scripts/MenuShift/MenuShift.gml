@@ -72,7 +72,7 @@ function ClassMenuShift(key_translate, elements, callback, start_element) : Clas
 		text_shift = char_left + elements[element] + char_right;
 		
 		draw_reset();
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		
 		draw_text_outlined(position_x + menu_instance.page_width + offset, position_y, text_color, text_color_outline, text_shift);
 		draw_reset();

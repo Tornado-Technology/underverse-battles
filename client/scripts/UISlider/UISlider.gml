@@ -48,7 +48,7 @@ function ClassUISlider(start_value, callback) constructor {
 		if (is_enable) update(position_x, position_y);
 		
 		draw_reset();
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		
 		var circle_x = position_x + (length * value);
 			

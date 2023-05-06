@@ -54,10 +54,13 @@ if (place_meeting(x, y, obj_battle_pusher)) {
 	outside_force_y = 0;
 }
 
-var full_movement_x = movement_speed_x + outside_force_x + tremble_force_x;
+var movement_delta_min = 0.01;
+
+var full_movement_x = movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
 if (place_meeting(x + full_movement_x, y, obj_solid)) {
-	while(!place_meeting(x + sign(full_movement_x), y, obj_solid)) 
-		x += sign(full_movement_x);
+	while(!place_meeting(x + sign(full_movement_x) * movement_delta_min, y, obj_solid)) {
+		x += sign(full_movement_x) * movement_delta_min;
+	}
 	
 	movement_speed_x = 0;
 	
@@ -73,10 +76,11 @@ else {
 	border_force_x = 0;
 }
 
-var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y;
+var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y;
 if (place_meeting(x, y + full_movement_y, obj_solid)) {
-	while(!place_meeting(x, y + sign(full_movement_y), obj_solid)) 
-		y += sign(full_movement_y);
+	while(!place_meeting(x, y + sign(full_movement_y) * movement_delta_min, obj_solid)) {
+		y += sign(full_movement_y) * movement_delta_min;
+	}
 	
 	movement_speed_y = 0;
 	
@@ -86,6 +90,7 @@ if (place_meeting(x, y + full_movement_y, obj_solid)) {
 		
 	outside_force_y = 0;
 	tremble_force_y = 0;
+	border_force_y = border_delta_y;
 }
 else {
 	border_force_y = 0;

@@ -19,7 +19,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	static scroll_width = 300;
 	static scroll_height = 130;
 	static scroll_wheel_speed = 10;
-	static char_height = char_get_height("W", font_determination);
+	static char_height = char_get_height("W", global._font_main_determination);
 	activated_button_id = -1;
 	scrolls = [];
 	
@@ -52,10 +52,10 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 		}
 		text_height += offset_y;
 			
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		text_height = draw_text_scroll(name, offset_x, text_height, sep, w);
 				
-		draw_set_font(font_mini);
+		draw_set_font(global._font_main_mini);
 		text_height = draw_text_scroll(text, offset_x, text_height, sep, w);
 			
 		text_height += offset_from_text;
@@ -99,7 +99,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 			
 			var text = character.statistics.bio;
 				
-			draw_set_font(font_mini);
+			draw_set_font(global._font_main_mini);
 			draw_text_ext(offset_x, offset_y + text_height - shift, text, sep, w);
 			text_height += string_height_ext(text, sep, w);
 			
@@ -235,12 +235,12 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 		for (var i = 0; i < array_length(buttons); i++) {
 			var button = buttons[i];
 			
-			draw_set_font(font_determination);
+			draw_set_font(global._font_main_determination);
 			var text_width_current = string_width(button.text);
 			
 			button.draw(rectangle_x + (offset_x * i + 1) + text_width + offset_from_buttons * i + button_offset_x + text_width_current / 2, position_y);
 			
-			draw_set_font(font_determination);
+			draw_set_font(global._font_main_determination);
 			text_width += string_width(button.text);
 		}
 		

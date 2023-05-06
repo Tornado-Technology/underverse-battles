@@ -25,7 +25,7 @@ num = 0;
 sum_num = 0;
 
 _side = 90;
-step = 5;
+step = 6;
 rot = irandom_range(0, 1);
 
 event_user(4);

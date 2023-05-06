@@ -1,5 +1,5 @@
 edit_attack_number = 0;
-edit_attack_number_max = 7;
+edit_attack_number_max = 6;
 is_can_input = true;
 
 edited_objects_number = 0;

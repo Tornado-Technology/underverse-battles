@@ -160,7 +160,7 @@
       "Description": ""
     },
     "Jevil": {
-      "Name": "",
+      "Name": " ",
       "Description": ""
     },
     "DoodleSphere": {
@@ -562,7 +562,7 @@
       "Bio": "来自XTale宇宙的的sans，由于他的过错AU而被摧毁。\n他相信，通过杀死他的家人和朋友，他就能得到覆写的力量，重新创造世界。\n相反，他和X Chara的灵魂一同被留下，当Error偷走他们的灵魂时，他就能控制Cross的身体。\n因为他看起来像一个有腿的大十字架，X Frisk就取名为Cross。\nCross已不再乐观俏皮，大多变得闷闷不乐或咄咄逼人。\n他最喜欢的食物是玉米饼和巧克力，而且很怕牛。",
       "PassiveSkill": {
         "Name": "命运的Cross",
-        "Description": "Cross的特殊攻击每回合积累4%" },
+        "Description": "Cross的特殊攻击每回合积累10%" },
       "Attack0": {
         "Name": "骨头攻击",
         "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
@@ -582,7 +582,7 @@
       "Bio": "来自XTale宇宙的的sans，由于他的过错AU而被摧毁。\n他相信，通过杀死他的家人和朋友，他就能得到覆写的力量，重新创造世界。\n相反，当Error偷走他们的灵魂时，X Chara的灵魂和他被留了下来，且X Chara能随意控制Cross的身体。\n因他看起来像一个有腿的大十字架，所以X Frisk就取名为Cross。\nCross已不再乐观俏皮，大多变得闷闷不乐或咄咄逼人。\n他最喜欢的食物是玉米饼和巧克力，而且很怕牛。",
       "PassiveSkill": {
         "Name": "命运的Cross",
-        "Description": "Cross的特殊攻击每回合积累4%" },
+        "Description": "Cross的特殊攻击每回合积累10%" },
       "Attack0": {
         "Name": "骨头攻击",
         "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
@@ -940,12 +940,18 @@
       ],
       "TakeDamage": [
         "{Error:angry}嘿，你，玩家！不要再用你的心去抓墨水了!",
-        "{Error:angry}如果你不能正确地躲避，那就按住[Shift]键，慢点移动。",
+        "{Error:angry}如果你不能正确地躲避，那就按住[Shift]键，慢点移动。"
+      ],
+      "TakeDamageMobile": [
+        "{Error:angry}嘿，你，玩家！不要再用你的心去抓墨水了!",
         "{Error:angry}如果你不能正确地躲避，那么就按下主动能力按钮，使其移动速度变慢。"
       ],
       "DontTakeDamage": [
         "{Error:normal}躲的好，玩家。",
-        "{Error:normal}如果你需要慢点移动，那就按住[Shift]键。",
+        "{Error:normal}如果你需要慢点移动，那就按住[Shift]键。"
+      ],
+      "DontTakeDamageMobile": [
+        "{Error:normal}躲的好，玩家。",
         "{Error:normal}如果你需要慢点移动，那就按住主动能力按钮。"
       ],
       "Dialog20": [

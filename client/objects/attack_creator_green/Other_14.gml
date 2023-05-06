@@ -244,7 +244,6 @@ if (_id == 3) {
 					_side -= step;
 				break;
 			case 6:
-			case 7:
 				if (inst_turboblaster == noone) {
 					var period = 35;
 					var gb_size = 60;

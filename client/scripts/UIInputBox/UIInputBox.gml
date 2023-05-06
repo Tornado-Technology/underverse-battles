@@ -12,7 +12,7 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 	halign = fa_left;
 	valign = fa_middle;
 	
-	font = font_determination;
+	font = global._font_main_determination;
 	
 	text_width = 0;
 	text_length = 0;

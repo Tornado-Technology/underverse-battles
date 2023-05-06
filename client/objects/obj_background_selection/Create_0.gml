@@ -5,7 +5,7 @@ depth = -1000;
 var width = display_get_gui_width();
 var height = display_get_gui_height();
 
-char_height = char_get_height("W", font_determination);
+char_height = char_get_height("W", global._font_main_determination);
 
 /* Show */
 show = true;
@@ -21,7 +21,7 @@ for (var i = 0; i < background_counts; i++) {
 		name_width: 0,
 	}
 	
-	backgrounds[i].name_width = string_real_width(backgrounds[i].name, font_determination);
+	backgrounds[i].name_width = string_real_width(backgrounds[i].name, global._font_main_determination);
 }
 
 play_soundtrack = false;
@@ -168,7 +168,7 @@ draw_name_song = function(_x, _y, color, _id) {
 	var song = backgrounds[_id];
 	color = background_id == _id ? text_color_selecting : color;
 	
-	draw_set_font(font_determination);
+	draw_set_font(global._font_main_determination);
 	draw_set_alpha(tab == 0 ? 1 : 0.5);
 	draw_text_outlined(_x, _y, color, c_black, song.name);
 	draw_reset();

@@ -29,7 +29,7 @@ function UIButtonClass(text, sprite, callback) constructor {
 	w = 9999999;
 	
 	if (text != "") {
-		width = string_real_width(text, font_determination);
+		width = string_real_width(text, global._font_main_determination);
 		height = char_get_height("W");
 		sep = 4;
 	}
@@ -111,7 +111,7 @@ function UIButtonClass(text, sprite, callback) constructor {
 			var color = merge_color(text_color, text_hover_color, color_merge);
 			draw_set_halign(halign);
 			draw_set_valign(valign);
-			draw_set_font(font_determination);
+			draw_set_font(global._font_main_determination);
 			draw_set_color(c_black);
 			draw_set_alpha(alpha);
 			if (is_separate) {

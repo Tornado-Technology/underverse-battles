@@ -55,7 +55,7 @@ function ClassMenuInput(key_translate, input) : ClassMenuElement(key_translate) 
 		var new_position_x = position_x + menu_instance.page_width + offset_from_main_text;
 		
 		draw_reset();
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		
 		var text_input = chr(input_get_working_key(self.input).value);
 		

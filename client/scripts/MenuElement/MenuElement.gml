@@ -17,7 +17,7 @@ function ClassMenuElement(key_translate) constructor {
 	static text_color_hover = c_purple;
 	static text_color_outline = c_black;
 	static text_color_transition_amount = 0.3;
-	static text_height = char_get_height("W", font_determination);
+	static text_height = char_get_height("W", global._font_main_determination);
 	static shift_x_max = 15;
 	static shift_amount = 0.5;
 	
@@ -76,7 +76,7 @@ function ClassMenuElement(key_translate) constructor {
 		draw_reset();
 		
 		if (!string_is_empty(text)) {
-			draw_set_font(font_determination);
+			draw_set_font(global._font_main_determination);
 			text_color_transition = lerp(text_color_transition, hover ? 1 : 0, text_color_transition_amount);
 			text_color_render = merge_color(text_color, text_color_hover, text_color_transition);
 			draw_text_outlined(position_x, position_y, text_color_render, text_color_outline, text);
@@ -86,7 +86,7 @@ function ClassMenuElement(key_translate) constructor {
 	
 	static translate_update = function() {
 		text = translate_get("Menu." + key_translate);
-		text_width = string_real_width(text, font_determination);
+		text_width = string_real_width(text, global._font_main_determination);
 	}
 	
 	static destroy = function() {}
