@@ -26,10 +26,6 @@ voice = snd_voice_main;
 font = global._font_main_determination;
 text_color = c_white;
 
-if (is_mobile || mobile_mode) {
-	global.__ui_controls_instance.enable = false;
-}
-
 #region Methods
 set_frame = function (character_name, character_emote, character_frame) {
 	if (name == character_name && character_emote == "") {
