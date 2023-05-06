@@ -345,11 +345,13 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightDamage':
       {
-        const source = client.fight.instance?.getOtherClient(client);
+        const { damage } = data;
+        const fight = client.fight.instance;
+        const source = fight?.getOtherClient(client);
 
-        client.fight.instance?.removeHp(client, data.damage);
-        client.fight.instance?.addMana(source, data.damage);
-        client.fight.instance?.addSpecialActionCharge(source, source.fight.characterInfo.specialActionChargePerDamage);
+        fight?.removeHp(client, damage);
+        fight?.addMana(source, damage);
+        fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
       }
       break;
 

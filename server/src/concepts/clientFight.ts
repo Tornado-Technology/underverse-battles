@@ -108,9 +108,9 @@ export default class ClientFight {
   }
 
   public setSpecialActionCharge(charge: number): void {
-    charge = Math.clamp(Math.abs(charge), 0, 100);
+    charge = Math.clamp(charge, 0, 100);
     this.specialActionCharge = charge;
-    this.client.sendFightSpecialActionCharge(charge, target.self)
+    this.client.sendFightSpecialActionCharge(charge, target.self);
   }
 
   public setHp(hp: number): void {
@@ -147,14 +147,6 @@ export default class ClientFight {
 
   public removeStamina(stamina: number): void {
     this.setStamina(Math.max(0, this.stamina - Math.abs(stamina)));
-  }
-
-  public addSpecialActionCharge(charge: number): void {
-    this.setSpecialActionCharge(this.specialActionCharge + charge);
-  }
-
-  public removeSpecialActionCharge(charge: number): void {
-    this.setSpecialActionCharge(this.specialActionCharge - charge);
   }
 
   public setSoulData(x: number, y: number, angle: number, ability: number): void {
