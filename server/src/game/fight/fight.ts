@@ -206,7 +206,7 @@ export default class Fight {
     const activePlayer = this.activeClient;
 
     if (activePlayer?.fight.action !== actionType.skip) {
-      this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]);
+      this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action + actionType.attack1]);
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
