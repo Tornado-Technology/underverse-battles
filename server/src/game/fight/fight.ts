@@ -204,11 +204,13 @@ export default class Fight {
     if (!this.clientsConnected) return;
 
     const activePlayer = this.activeClient;
+
     if (activePlayer?.fight.action !== actionType.skip) {
       this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]);
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
+    Logger.debug(`Fight client: ${activePlayer?.account.username}, set specialActionChargePerTurn: ${activePlayer?.fight.characterInfo.specialActionChargePerTurn}`)
     this.addSpecialActionCharge(activePlayer, activePlayer?.fight.characterInfo.specialActionChargePerTurn ?? 0);
 
     if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
@@ -220,7 +222,7 @@ export default class Fight {
   }
 
   public setSpecialActionCharge(client: Client, charge: number): void {
-    Logger.debug(`Fight[${this.id}] set new actionCharge "${charge}"`);
+    Logger.debug(`Fight client: ${client?.account.username}, set charge: ${charge}`);
     client?.fight.setSpecialActionCharge(charge);
     this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
   }
