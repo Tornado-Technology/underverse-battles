@@ -63,12 +63,12 @@ enum fight_depth {
 }
 
 enum fight_action_type {
-	empty,
-	skip,
-	attack1,
-	attack2,
-	attack3,
-	special_attack
+	empty = 0,
+	skip = 1,
+	attack1 = 2,
+	attack2 = 3,
+	attack3 = 4,
+	special_attack = 5
 }
 
 enum battle_border {

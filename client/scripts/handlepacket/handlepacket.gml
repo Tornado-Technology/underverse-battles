@@ -171,7 +171,12 @@ function handle_packet(data) {
 
 		case "fightAction":
 			// Send obj_fight this info
-			fight_set_player_action(data.playerId, data.action);
+			global.fight_instance.player_action[data.playerId] = data.action;
+	
+			// Call update method
+			if (!force) {
+				fight_update_state();
+			}
 			break;
 		
 		case "fightPower":
