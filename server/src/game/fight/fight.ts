@@ -220,6 +220,7 @@ export default class Fight {
   }
 
   public setSpecialActionCharge(client: Client, charge: number): void {
+    Logger.debug(`Fight[${this.id}] set new actionCharge "${charge}"`);
     client?.fight.setSpecialActionCharge(charge);
     this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
   }
