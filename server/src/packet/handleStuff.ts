@@ -349,6 +349,10 @@ export const handlePacket = async (client: Client, data: any) => {
         const fight = client.fight.instance;
         const source = fight?.getOtherClient(client);
 
+        Logger.debug(`Fight client: ${source?.account.username}, damage: ${damage}`);
+        Logger.debug(`Fight client: ${source?.account.username}, specialActionChargePerDamage: ${source?.fight.characterInfo.specialActionChargePerDamage}`);
+        Logger.debug(`Fight client: ${source?.account.username}, add charge: ${damage * source?.fight.characterInfo.specialActionChargePerDamage}`);
+
         fight?.removeHp(client, damage);
         fight?.addMana(source, damage);
         fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
