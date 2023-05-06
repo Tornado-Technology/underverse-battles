@@ -4,7 +4,7 @@ var gui_height = display_get_gui_height();
 
 // Draw
 draw_reset();
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_middle);
 draw_set_alpha(1);
 

@@ -85,25 +85,21 @@ if (_id == 0 && attack_num == 1) {
 			bone_direction = 270;
 			bone_angle = 90;
 		}
-		create_bone(_border.x - _border.left - 4, _border.y + _border.down, _bone, rand_speed, rand_size, 0, 0);
+		create_bone(x0, y0, _bone, rand_speed, rand_size, 0, 0);
 	}
 }
 
 // Вылезающие кости из стенок
 if (_id == 0 && attack_num == 2) {
 	update_0_2 = function () {
-		var sum_num = 40;
-		while (true) {
-			random_number = irandom_range(0, sum_num - 1);
-			if (_bones[random_number] != noone) break;
-		}
+		var random_number = choose(2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39);
 		bone_moving = _bones[random_number];
+		_bones[random_number] = create_bone(bone_moving.x, bone_moving.y, bone_obj, 0, 1, bone_moving.direction, bone_moving.image_angle);
 		bone_moving.shake();
-		_bones[random_number] = create_bone(bone_moving.x, bone_moving.y, bone_obj, 0, 1, 0, 270);
 		bone_new = _bones[random_number];
 	}
-	update_0_2_2 = function (bone_old, bone_new) {
-		bone_old.speed_const = 4;
+	update_0_2_2 = function () {
+		bone_moving.speed_const = 4;
 		bone_new.change_scale(2, 0.1);
 		audio_play_sound_plugging(snd_spare_up);
 	}
@@ -201,7 +197,7 @@ if (_id == 1 && attack_num == 2) {
 }
 
 // Оранжевая атака
-if (_id == 2 && attack_num == 0 || _id == 3 && attack_num == 0) {
+if (_id == 2 && attack_num == 0 || _id == 3) {
 	update_2_0 = function() {
 		var i = 0;
 		repeat(array_length(_bones)) {

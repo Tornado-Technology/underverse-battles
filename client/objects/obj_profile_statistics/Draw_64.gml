@@ -8,7 +8,7 @@ var width_center = room_width / 2;
 var width_third = room_width / 3;
 var width_quarter = room_width / 4;
 
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 draw_text_outlined(width_center, 30, c_white, c_black, translate_get("Menu.Statistics.Title"));
 

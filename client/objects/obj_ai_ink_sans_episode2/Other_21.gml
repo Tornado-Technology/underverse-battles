@@ -30,6 +30,9 @@ if (fight_get_player_hp(1) > 20) {
 			_damage = 0;
 	}
 }
+else {
+	_damage = 0;
+}
 
 if (_damage > 20)
 	_damage = 20;

@@ -32,5 +32,27 @@ soundtrack = snd_megalovania;
 // Ending room
 ending_room = room_menu;
 
+// Methods
+check_player_lose = function() {
+	if (player[you].is_defeated())
+		finish_battle();
+}
+
+finish_battle = function() {
+	fight_set_ui_showing_action_box(false);
+	fight_set_player_input(false);
+	timer_stop();
+	fight_set_pause(true);
+	time_source_start(end_battle_timesource);
+	instance_destroy(obj_battle);
+	audio_stop_all();
+}
+
+goto_ending_room = function() {
+	global.fight_instance = noone;
+	gameplay_underverse_episode2.cutscene_after_death();
+	instance_destroy();
+}
+
 // Instance create
 event_user(1);

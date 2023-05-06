@@ -561,7 +561,7 @@
       "Bio": "An alternate version of Sans from the XTale universe that was destroyed through his fault. He believed that by killing his family and friends, he would be able to get the Overwrite power and create the world anew. Instead, he was left alone along with X Chara's spirit, who was able to take control of Cross's body when Error stole their soul. He got the name Cross by X Frisk because he looked like a big cross with legs. Cross is no longer upbeat and playful. He is mostly sullen or aggressive. His favorite foods are tacos and chocolate. Afraid of cows.",
       "PassiveSkill": {
         "Name": "Cross of destiny",
-        "Description": "Cross's Special Attack accumulates by 4% per turn" },
+        "Description": "Cross's Special Attack accumulates by 10% per turn" },
       "Attack0": {
         "Name": "Bones",
         "Description": "Bones targeting the soul and dealing damage on impact" },
@@ -581,7 +581,7 @@
       "Bio": "An alternate version of Sans from the XTale universe that was destroyed through his fault. He believed that by killing his family and friends, he would be able to get the Overwrite power and create the world anew. Instead, he was left alone along with X Chara's spirit, who was able to take control of Cross's body when Error stole their soul. He got the name Cross by X Frisk because he looked like a big cross with legs. Cross is no longer upbeat and playful. He is mostly sullen or aggressive. His favorite foods are tacos and chocolate. Afraid of cows.",
       "PassiveSkill": {
         "Name": "Cross of destiny",
-        "Description": "Cross's Special Attack accumulates by 4% per turn" },
+        "Description": "Cross's Special Attack accumulates by 10% per turn" },
       "Attack0": {
         "Name": "Bones",
         "Description": "Bones targeting the soul and dealing damage on impact" },
@@ -939,12 +939,18 @@
       ],
       "TakeDamage": [
         "{Error:angry}Hey, you, player! Stop catching ink with your heart!",
-        "{Error:angry}If you can't dodge properly, then press [Shift] to move slower.",
+        "{Error:angry}If you can't dodge properly, then press [Shift] to move slower."
+      ],
+      "TakeDamageMobile": [
+        "{Error:angry}Hey, you, player! Stop catching ink with your heart!",
         "{Error:angry}If you can't dodge properly, then press active ability button to move slower."
       ],
       "DontTakeDamage": [
         "{Error:normal}Good dodge, player.",
-        "{Error:normal}if you need slow movement, then press [Shift].",
+        "{Error:normal}if you need slow movement, then press [Shift]."
+      ],
+      "DontTakeDamageMobile": [
+        "{Error:normal}Good dodge, player.",
         "{Error:normal}if you need slow movement, then press active ability button."
       ],
       "Dialog20": [

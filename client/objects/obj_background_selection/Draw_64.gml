@@ -1,12 +1,12 @@
 draw_reset();
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 
 if (!show)
 	exit;
 	
 draw_reset();
 draw_set_alpha(1);
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 

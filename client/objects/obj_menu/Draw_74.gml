@@ -10,7 +10,7 @@ background_alpha = approach(background_alpha, background_target_alpha, 0.08);
 background_y = approach(background_y, background_target_y, 0.2);
 
 // Anykey
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 
 anykey_y = lerp(anykey_y, elements_show ? anykey_target_y : anykey_start_y, 0.1);

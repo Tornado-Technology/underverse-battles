@@ -16,7 +16,7 @@ if (shift < action_list_size * 20 - 120) {
 
 // Draw
 draw_reset();
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 
 // Left text
 draw_set_halign(fa_left);
@@ -118,7 +118,7 @@ draw_surface(surface, surface_cord.x, surface_cord.y);
 // Rating
 var gui_width  = display_get_gui_width();
 draw_set_halign(fa_center);
-draw_set_font(font_mini);
+draw_set_font(global._font_main_mini);
 if (is_winner != -1) {
 	var string_symbol = rating > 0 ? "+" : "";
 	draw_text(gui_width / 2, 90, string_symbol + string(rating) + " " + string_rp);

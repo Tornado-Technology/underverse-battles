@@ -44,7 +44,7 @@ switch (attack_num) {
 			i++;
 		}
 		repeat (num) {
-			_bones[i] = create_bone(_border.x + _border.right - (i - num) * 10, _border.y + _border.down + 20, bone_obj, 0, 1, 20, 0);
+			_bones[i] = create_bone(_border.x + _border.right - (i - num) * 10, _border.y + _border.down + 20, bone_obj, 0, 1, 90, 0);
 			_bones[i].change_scale(bone_scale, bone_scale_step);
 			i++;
 		}

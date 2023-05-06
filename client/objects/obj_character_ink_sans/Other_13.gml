@@ -21,3 +21,6 @@ if (sprite_index == spr_ink_sans_flying_throwing_stuff)
 	
 if (sprite_index == spr_ink_sans_sitting_takes_notebook)
 	sprite_index = spr_ink_sans_sitting_with_notebook;
+
+if (sprite_index == spr_ink_sans_attack_flying_hit)
+	sprite_index = spr_ink_sans_attack_episide2;

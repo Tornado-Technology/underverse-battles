@@ -17,14 +17,14 @@ if (character == undefined) exit;
 
 draw_sprite(character.statistics.idle_animation, character_animation_frame, rec_x1 / 2, 100);
 
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 
 draw_text_outlined(width / 6, 10, c_white, c_black, text.char_list);
 draw_text_outlined(width / 6, 120, c_white, c_black, character.name);
 		
 draw_set_halign(fa_left);
-draw_set_font(font_mini);
+draw_set_font(global._font_main_mini);
 
 draw_text_outlined(5, 135, c_white, c_black, character.statistics.description);
 draw_text_outlined(5, 150, c_white, c_black, text.hp + ": " + string(character.statistics.hp));

@@ -13,7 +13,7 @@ ctime_max = 25;
 translate_score = translate_get("MiniGame.Scores");
 translate_back = translate_get("MiniGame.BackToMenu");
 
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 text_width_back = string_real_width(translate_back);
 
 button_exit = UITextButton(translate_back, function() {

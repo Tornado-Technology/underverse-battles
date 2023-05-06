@@ -72,7 +72,7 @@ function ClassMenuSlider(key_translate, start_value, callback) : ClassMenuElemen
 		var new_position_y = position_y + char_height / 2;
 		
 		draw_reset();
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		
 		var circle_x = new_position_x + (length * value);
 			
