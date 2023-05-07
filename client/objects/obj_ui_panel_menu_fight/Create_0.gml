@@ -1,5 +1,8 @@
 // Inherit the parent event
 event_inherited();
+
+global.pause_game = true;
+
 title = translate_get("Pause.Title");
 text_return = translate_get("Pause.Return");
 text_report = translate_get("Pause.ReportPlayer");
@@ -39,5 +42,3 @@ if (!fight_network_mode) {
 		timer_pause();
 	}
 }
-
-fight_input_pause(true);

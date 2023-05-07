@@ -1,8 +1,3 @@
-function fight_input_pause(value) {
-	if (!instance_exists(obj_fight_input)) return;
-	obj_fight_input.pause = value;
-}
-
 function fight_set_player_input(value) {
 	if (!instance_exists(obj_fight_input)) return;
 	obj_fight_input.can_select = value;

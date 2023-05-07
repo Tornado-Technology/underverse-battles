@@ -1748,6 +1748,7 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"data.json","CopyToMask":-1,"filePath":"datafiles/system",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini - 副本.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
   ],
   "MetaData": {
     "IDEVersion": "2022.0.0.19",

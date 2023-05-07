@@ -16,11 +16,13 @@ if (hp < 2 * hp_max / 3) trigger = 2;
 
 var text_ = translate_get("Dialog." + episode + "Dialog5");
 
+var text_copy = [];
+array_copy(text_copy, 0, text_, 0, array_length(text_));
+
 var i = 0;
 repeat (3) {
-	show_debug_message(string(i) + "  " + string(trigger))
 	if (i != trigger) {
-		array_delete(text_, i, 1);
+		array_delete(text_copy, i, 1);
 		trigger--;
 	}
 	else {
@@ -28,7 +30,7 @@ repeat (3) {
 	}
 }
 
-dlg = dialog_create(text_, dir.down);
+dlg = dialog_create(text_copy, dir.down);
 			
 /* Options */
 fight_set_pause(false);

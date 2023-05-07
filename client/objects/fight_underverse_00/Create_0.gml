@@ -50,7 +50,7 @@ finish_battle = function() {
 
 goto_ending_room = function() {
 	global.fight_instance = noone;
-	gameplay_underverse_episode2.cutscene_after_death();
+	gameplay_underverse_episode1.cutscene_after_death();
 	instance_destroy();
 }
 

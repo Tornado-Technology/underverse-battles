@@ -18,7 +18,7 @@ var input_select = input_check_pressed(input.action);
 var input_skip = input_check_pressed(input.skip);
 var input_special = input_check_pressed(input.special);
 
-if (pause) exit;
+if (global.pause_game) exit;
 if (!can_select) exit;
 
 // Power bar
