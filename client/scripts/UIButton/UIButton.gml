@@ -218,6 +218,7 @@ function UIButtonClass(text, sprite, callback) constructor {
 	
 	/// @param {Bool} value
 	static set_focus = function(value) {
+		if (value == is_focus) return;
 		is_focus = value;
 	}
 	
