@@ -308,6 +308,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightSpecialAction':
       client.fight.instance?.setAction(client, actionType.specialAttack);
+      client.fight.instance?.setSpecialActionCharge(client, 0);
       break;
     
     case 'fightExtraAction':
@@ -343,8 +344,19 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightDamage':
-      client.fight.instance?.removeHp(client, data.damage);
-      client.fight.instance?.addMana(client.fight.instance?.getOtherClient(client), data.damage);
+      {
+        const { damage } = data;
+        const fight = client.fight.instance;
+        const source = fight?.getOtherClient(client);
+
+        Logger.debug(`Fight client: ${source?.account.username}, damage: ${damage}`);
+        Logger.debug(`Fight client: ${source?.account.username}, specialActionChargePerDamage: ${source?.fight.characterInfo.specialActionChargePerDamage}`);
+        Logger.debug(`Fight client: ${source?.account.username}, add charge: ${damage * source?.fight.characterInfo.specialActionChargePerDamage}`);
+
+        fight?.removeHp(client, damage);
+        fight?.addMana(source, damage);
+        fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
+      }
       break;
 
     case 'fightStun':
@@ -360,7 +372,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     default:
-      Logger.warn(`Handled unknown command index: ${index}`);
+      Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
       break;
   }
 }

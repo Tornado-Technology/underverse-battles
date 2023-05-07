@@ -23,7 +23,7 @@ shift = 184;
 death_name_function = "";
 
 voice = snd_voice_main;
-font = font_determination;
+font = global._font_main_determination;
 text_color = c_white;
 
 #region Methods

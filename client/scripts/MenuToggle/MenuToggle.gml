@@ -16,8 +16,8 @@ function ClassMenuToggle(key_translate, switcher_status, callback) : ClassMenuEl
 	static text_enable = "On";
 	static text_disable = "Off";
 	static char_height = char_get_height("W");
-	static text_enable_width = string_real_width(text_enable, font_determination);
-	static text_disable_width = string_real_width(text_disable, font_determination);
+	static text_enable_width = string_real_width(text_enable, global._font_main_determination);
+	static text_disable_width = string_real_width(text_disable, global._font_main_determination);
 	static text_color_enabled = c_white;
 	static text_color_disabled = c_dkgray;
 	
@@ -54,7 +54,7 @@ function ClassMenuToggle(key_translate, switcher_status, callback) : ClassMenuEl
 		var new_position_x = position_x + menu_instance.page_width + offset_from_main_text;
 		
 		draw_reset();
-		draw_set_font(font_determination);
+		draw_set_font(global._font_main_determination);
 		
 		draw_text_outlined(new_position_x, position_y, merge_color(text_color_enabled, text_color_disabled,  !switcher_status), text_color_outline, text_enable);
 		draw_text_outlined(new_position_x + offset_between_text, position_y, merge_color(text_color_enabled, text_color_disabled,  switcher_status), text_color_outline, text_disable);

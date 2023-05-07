@@ -36,6 +36,7 @@ const schema = new Schema({
   friends: [{ type: Schema.Types.ObjectId, ref: accountModelName }],
   rating: { type: Number, default: 0 },
   gold: { type: Number, default: 0 },
+  badge: { type: Number, default: null },
   fight: {
     id: { type: String, default: null },
     index: { type: Number, default: null },

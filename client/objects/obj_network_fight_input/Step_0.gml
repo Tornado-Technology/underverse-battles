@@ -12,6 +12,7 @@ var input_raw_v = input_check_pressed(input.down) - input_check_pressed(input.up
 var input_raw_h = input_check_pressed(input.right) - input_check_pressed(input.left);
 var input_select = input_check_pressed(input.action);
 var input_skip = input_check_pressed(input.skip);
+var input_special = input_check_pressed(input.special);
 
 input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
 

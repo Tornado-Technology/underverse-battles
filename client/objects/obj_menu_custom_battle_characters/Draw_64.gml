@@ -1,6 +1,6 @@
 event_inherited();
 
-draw_set_font(font_determination);
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_left);
 
 if (selected_characters[0] == noone)

@@ -40,5 +40,4 @@ if (!fight_network_mode) {
 	}
 }
 
-fight_set_player_input(false);
-fight_ui_set_player_can_input_skip(false);
+fight_input_pause(true);

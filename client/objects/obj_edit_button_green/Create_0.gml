@@ -1,5 +1,5 @@
 edit_attack_number = 0;
-edit_attack_number_max = 7;
+edit_attack_number_max = 6;
 is_can_input = true;
 
 edited_objects_number = 0;
@@ -36,4 +36,8 @@ press = function() {
 	is_can_input = false;
 	time_source_start(cooldown);
 	audio_play_sound_plugging(snd_selection);
+	
+	if (fight_network_mode) {
+		send_fight_extra_action();
+	}
 }

@@ -42,7 +42,7 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 		var top_shift = menu_instance.top_shift;
 		var text_color_selected = menu_instance.text_name_character_color;
 		
-		draw_set_font(font_mini);
+		draw_set_font(global._font_main_mini);
 		draw_set_halign(fa_center);
 		if (selected_character == character_id) draw_set_color(text_color_selected);
 		

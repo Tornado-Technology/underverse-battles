@@ -12,4 +12,7 @@ required_components = {
 	timer: obj_network_fight_timer
 };
 
+// Ending room
+ending_room = room_fight_1v1_end;
+
 on_into_fight.invoke(opponent_get_name(1));

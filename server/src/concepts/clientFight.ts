@@ -107,6 +107,12 @@ export default class ClientFight {
     this.client.sendFightPower(power, target.self);
   }
 
+  public setSpecialActionCharge(charge: number): void {
+    charge = Math.clamp(charge, 0, 100);
+    this.specialActionCharge = charge;
+    this.client.sendFightSpecialActionCharge(charge, target.self);
+  }
+
   public setHp(hp: number): void {
     this.hp = hp;
   }

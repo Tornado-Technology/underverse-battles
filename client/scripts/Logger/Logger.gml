@@ -90,7 +90,7 @@ function ClassLogger() constructor {
 	/// @param {Any} args
 	static fatal = function(msg) {
 		var args = []; for (var i = 1; i < argument_count; i++) array_push(args, string(argument[i]));
-		throw (__base__(msg, "Ftatal", args, [255, 0, 0]));
+		throw (__base__(msg, "Fatal", args, [255, 0, 0]));
 	}
 	
 	

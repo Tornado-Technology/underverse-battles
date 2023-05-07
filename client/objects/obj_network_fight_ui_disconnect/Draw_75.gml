@@ -10,7 +10,7 @@ draw_rectangle(0, 0, width, height, false);
 
 draw_reset();
 
-draw_set_font(font_determination)
+draw_set_font(global._font_main_determination)
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text_outlined(width / 2, height / 2, c_white, c_black, translate_get("Battle.DisconnectedFromTheBattle"));

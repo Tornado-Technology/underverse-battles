@@ -10,7 +10,7 @@ export default class CharacterInfo {
   public readonly specialActionChargePerDamage: number;
   public readonly skins: CharacterInfo[];
 
-  constructor(id: number, hpMax: number, staminaMax: number, manaMax: number, staminaRegen: number, staminaCost: number[], manaCost: number[], specialActionChargePerTurn: number = 2, specialActionChargePerDamage: number = 1,  skins: CharacterInfo[] = []) {
+  constructor(id: number, hpMax: number, staminaMax: number, manaMax: number, staminaRegen: number, staminaCost: number[], manaCost: number[], specialActionChargePerTurn: number = 5, specialActionChargePerDamage: number = 1,  skins: CharacterInfo[] = []) {
     this.id = id;
     this.hpMax = hpMax;
     this.staminaMax = staminaMax;

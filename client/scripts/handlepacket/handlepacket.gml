@@ -171,7 +171,8 @@ function handle_packet(data) {
 
 		case "fightAction":
 			// Send obj_fight this info
-			fight_set_player_action(data.playerId, data.action);
+			global.fight_instance.player_action[data.playerId] = data.action;
+			fight_update_state();
 			break;
 		
 		case "fightPower":
@@ -230,7 +231,6 @@ function handle_packet(data) {
 			var data_enemy = data.playerId;
 			if (data_enemy != 0) {
 				var damage = fight_get_player_hp(data_enemy) - data.hp;
-				show_debug_message(damage);
 				if (damage > 0)
 					fight_network_damage(data_enemy, damage);
 				else if (damage < 0)

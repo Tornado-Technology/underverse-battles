@@ -33,7 +33,6 @@ const schema = new Schema({
   password: { type: String },
   date: { type: Date, default: Date.now },
   type: { type: Number, default: accountType.user },
-  badge: { type: Number, default: null },
 }, {
   collection: accountCollection,
 });

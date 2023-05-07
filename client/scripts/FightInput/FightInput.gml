@@ -1,6 +1,11 @@
-function fight_set_player_input(_input) {
+function fight_input_pause(value) {
 	if (!instance_exists(obj_fight_input)) return;
-	obj_fight_input.can_select = _input;
+	obj_fight_input.pause = value;
+}
+
+function fight_set_player_input(value) {
+	if (!instance_exists(obj_fight_input)) return;
+	obj_fight_input.can_select = value;
 	return obj_fight_input.can_select;
 }
 
@@ -9,9 +14,9 @@ function fight_get_player_input() {
 	return obj_fight_input.can_select;
 }
 
-function fight_ui_set_player_can_input_skip(val){
+function fight_ui_set_player_can_input_skip(value){
 	if (!instance_exists(obj_fight_input)) return;
-	obj_fight_input.can_skip = val;
+	obj_fight_input.can_skip = value;
 	return obj_fight_input.can_skip;
 }
 

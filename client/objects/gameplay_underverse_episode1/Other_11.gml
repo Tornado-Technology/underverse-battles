@@ -20,7 +20,7 @@ if (_delay >= 180 and _delay < 190) {
 	player_.sprite_index = spr_char_sans_controlled;
 }
 if (_delay == 190) {
-	effect_blackout_start(c_black, true, 0);
+	effect_blackout_start(c_black, false, fight_depth.ui_hight);
 	audio_play_sound_plugging(snd_soul_division)
 	audio_stop_sound(snd_dark_dream);
 }

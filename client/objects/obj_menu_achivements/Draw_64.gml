@@ -56,7 +56,7 @@ for (var ach = 0; ach < size; ach++) {
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_achievement_border, achievement.is_taken ? 0 : 1, x, text_y, -1.5, 1, 0, c_white, 1);
 	
-	draw_set_font(font_determination);
+	draw_set_font(global._font_main_determination);
 	draw_set_halign(fa_left);
 	
 	draw_text(x + 50, text_y - 19, achievement.name);
