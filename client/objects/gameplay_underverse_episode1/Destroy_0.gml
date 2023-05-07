@@ -1,1 +1,0 @@
-disable_mobile_ui();

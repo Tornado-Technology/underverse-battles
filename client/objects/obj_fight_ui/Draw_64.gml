@@ -20,8 +20,11 @@ var size_center = display_get_gui_size().divis(2, 2);
 var selected_button = fight_get_player_input_action();
 var selected_power = fight_get_player_input_power();
 
-// Controller(Mobile)
-var controller = global.__ui_controls_instance;
+// Controller (Mobile)
+if (is_mobile || mobile_mode) {
+	global.__ui_controls_instance.enable = show_mobile_ui;
+	global.__ui_virtual_buttons_instance.is_enable = show_mobile_ui;
+}
 
 // Draw
 draw_reset();

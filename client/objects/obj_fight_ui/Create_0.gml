@@ -39,6 +39,7 @@ text_skip = translate_get("Battle.LittleStamina") + "\n[X] - " + translate_get("
 
 // Shows
 show_ui = true;
+show_mobile_ui = true;
 show_initiative = data_get("Settings.UI.Fight.TurnText");
 alpha_option_bar = data_get("Settings.UI.Fight.StatbarStyle");
 
@@ -86,9 +87,4 @@ if (is_mobile || mobile_mode) {
 	special_action_position_y = data_get("Settings.MobileControls.Buttons.SpecialAction.Position.Y");
 	special_button.scale_x = data_get("Settings.MobileControls.Buttons.SpecialAction.Scale");
 	special_button.scale_y = data_get("Settings.MobileControls.Buttons.SpecialAction.Scale");
-}
-
-if (is_mobile || mobile_mode) {
-	global.__ui_controls_instance.enable = true;
-	global.__ui_virtual_buttons_instance.is_enable = true;
 }

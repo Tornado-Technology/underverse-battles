@@ -15,6 +15,7 @@ if (invincibility > 0) {
 // Orange soul ability
 if (ability) {
 	if (sprite_index == spr_battle_soul_orange) {
+		part_type_sprite(part_type_tail, sprite_index, false, false, false);
 		part_particles_create(global.part_system_bullet, x, y, part_type_tail, 1);
 	}
 }
