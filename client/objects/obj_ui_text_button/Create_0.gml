@@ -1,4 +1,4 @@
 /// @desc
-button = UITextButton("Репорт", function() {
-	show_message("Пока ещё не работает :P");
+button = UITextButton("", function() {
+	show_message("");
 });

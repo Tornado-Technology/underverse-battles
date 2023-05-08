@@ -391,7 +391,7 @@ create_page([
 	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
 		instance_create(obj_profile_statistics);
 	}),
-	Transfer("Multiplayer.Settings", menu_page.account_settings),
+	Transfer("Multiplayer.AccountOptions", menu_page.account_settings),
 	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
 		send_logout();
 	}),
@@ -406,9 +406,9 @@ create_page([
 ], menu_page.statistics);
 
 // Account settings
-account_settings_inputbox_change_nickname = InputBox("TODO: add key");
-account_settings_inputbox_change_password = InputBox("TODO: add key");
-account_settings_inputbox_change_email = InputBox("TODO: add key");
+account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");
+account_settings_inputbox_change_password = InputBox("AccountOptions.ChangePassword");
+account_settings_inputbox_change_email = InputBox("AccountOptions.ChangeEmail");
 
 create_page([
     Transfer("AccountOptions.ChangeNickname", menu_page.account_change_nickname),
@@ -423,7 +423,7 @@ create_page([
 // Account change nickname
 create_page([
     account_settings_inputbox_change_nickname,
-	Execute("TODO: key применить", [], function() {		
+	Execute("StandardButtons.Apply", [], function() {		
 		send_nickname_change(account_settings_inputbox_change_nickname.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
@@ -432,7 +432,7 @@ create_page([
 // Account change password
 create_page([
     account_settings_inputbox_change_password,
-	Execute("TODO: key применить", [], function() {
+	Execute("StandardButtons.Apply", [], function() {
 		send_password_change(account_settings_inputbox_change_password.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
@@ -441,7 +441,7 @@ create_page([
 // Account change email
 create_page([
     account_settings_inputbox_change_email,
-	Execute("TODO: key применить", [], function() {
+	Execute("StandardButtons.Apply", [], function() {
 		send_eamil_change(account_settings_inputbox_change_email.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
@@ -474,8 +474,8 @@ for (var i = 0; i < array_length(global._translate_langs); i++) {
 
 create_page([
 	Shift("Settings.Language", langs, global.__translate_lang_id, function(index) {
-		translate_set_lang(index);
 		translate_set_font(index);
+		translate_set_lang(index);
 	}),
 	Shift("Settings.DisplayFPS", ["No", "FPS", "RFPS", "FPS + RFPS"], data_get("Settings.UI.FpsStyle"), function(value) {
 		data_set("Settings.UI.FpsStyle", value);

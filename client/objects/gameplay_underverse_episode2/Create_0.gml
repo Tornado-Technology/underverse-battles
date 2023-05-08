@@ -444,7 +444,7 @@ cutscenes = [
 		[cutscene_execute, function () {
 			var i = 0;
 			repeat(2) {
-				string_error_sans[i] = instance_create_depth(error_sans.x - 10 + i * 2, error_sans.y - 17 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
+				string_error_sans[i] = instance_create_depth(error_sans.x - 10 + i * 2, error_sans.y - 15 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
 					scale_speed: 6,
 					max_scale: 220
 				});
