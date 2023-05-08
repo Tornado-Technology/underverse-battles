@@ -36,6 +36,9 @@ if (scenario <= 15)
 else if (scenario == 16) {
 	if (fight_get_state() != fight_state.choosing)
 		exit;
+	
+	fight_set_ui_showing_action_box(false);
+	fight_set_player_input(false);
 
 	dlg = dialog_create(episode + "Dialog10", dir.down);
 			

@@ -8,7 +8,6 @@ sound_select = snd_selection;
 sound_click = snd_click;
 
 // Utils
-pause = false;
 can_select = true;
 can_select_power = true;
 can_skip = true;

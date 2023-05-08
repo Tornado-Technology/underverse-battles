@@ -2,7 +2,7 @@
 // Builds: "Windows x64", "Android"
 #macro game_name "UnderverseBattles"
 #macro game_version "v2.1.0"
-#macro game_build "Windows x64"
+#macro game_build (is_mobile ? "Android" : "Windows x64")
 #macro game_base_fps 60
 
 // Game mode macros
@@ -34,4 +34,5 @@
 
 global.__data_save = undefined;
 global.fight_instance = noone;
+global.pause_game = false;
 fight_network_mode = false;

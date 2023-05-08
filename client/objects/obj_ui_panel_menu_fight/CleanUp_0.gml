@@ -1,2 +1,2 @@
 /// @desc
-fight_input_pause(false);
+global.pause_game = false;

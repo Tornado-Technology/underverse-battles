@@ -21,6 +21,8 @@ fight_set_player_action(0, 3);
 fight_set_player_action(1, irandom_range(0, 1));
 				
 /* Options */
+fight_set_ui_showing_action_box(true);
+fight_set_player_input(true);
 fight_set_pause(false);
 
 /* Next scenario */

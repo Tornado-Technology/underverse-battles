@@ -14,3 +14,6 @@ timer_switch(false);
 // Create players
 player[0] = player_object[0];
 player[1] = player_object[1];
+
+// Time source
+end_battle_timesource = time_source_create(time_source_game, 1.5, time_source_units_seconds, goto_ending_room);

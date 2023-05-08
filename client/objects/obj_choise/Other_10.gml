@@ -16,12 +16,14 @@ if (act == 1) {
 			instance_destroy();
 		});
 
+		answer_options[i].is_auto_focus = false;
 		answer_options[i].index = index;
 		answer_options[i].is_separate = true;
 		answer_options[i].sep = 16;
 		answer_options[i].w = 130;
 
 		answer_options[i].on_hover = function(self_button) {
+			audio_play_sound_once(snd_click);
 			answer_options[current_option].set_focus(false);
 			current_option = self_button.index;
 		}
