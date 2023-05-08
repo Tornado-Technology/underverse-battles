@@ -41,14 +41,14 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	
 	static draw_action = function(text_height, name, description, text_stamina = undefined) {
 		var sep = 15;
-		var w = 280;
+		var w = 260;
 		var offset_x = 10;
 		var offset_y = 10;
 		var offset_from_text = 10;
 		
 		var text = description;
 		if (text_stamina != undefined) {
-			text += "\n" + text_stamina + " " + menu_instance.text.stamines;
+			text += sprintf("\n{0} {1}", text_stamina, menu_instance.text.stamines);
 		}
 		text_height += offset_y;
 			
@@ -63,8 +63,11 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	}
 	
 	static draw_text_scroll = function(text, x, y, sep, w) {
+		draw_set_font(global._font_main_determination);
 		var height = string_height_ext(text, sep, w);
-		if (y + height > 0) { draw_text_ext(x, y, text, sep, w); }
+		if (y + height > 0) { 
+			draw_text_ext(x, y, text, sep, w); 
+		}
 		
 		return y + height;
 	}

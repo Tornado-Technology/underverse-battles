@@ -474,7 +474,6 @@ for (var i = 0; i < array_length(global._translate_langs); i++) {
 
 create_page([
 	Shift("Settings.Language", langs, global.__translate_lang_id, function(index) {
-		translate_set_font(index);
 		translate_set_lang(index);
 	}),
 	Shift("Settings.DisplayFPS", ["No", "FPS", "RFPS", "FPS + RFPS"], data_get("Settings.UI.FpsStyle"), function(value) {

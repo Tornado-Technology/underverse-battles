@@ -4,7 +4,6 @@ function data_reset_settings() {
 	
 	var lang_index = data_get("Settings.Language");
 	translate_set_lang(lang_index);
-	translate_set_font(lang_index);
 	if (is_desktop) window_set_fullscreen(data_get("Settings.Fullscreen"));
 	room_goto(room);
 }
