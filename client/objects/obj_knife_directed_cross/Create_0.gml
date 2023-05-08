@@ -1,3 +1,5 @@
 event_inherited();
 
-damage = get_char_damage(obj_character_cross_xevent);
+var current_player = fight_get_player(fight_get_iniciative());
+damage = get_char_damage(current_player);
+soul_invulnerability = get_char_invulnerability(current_player) ? 20 : 1;

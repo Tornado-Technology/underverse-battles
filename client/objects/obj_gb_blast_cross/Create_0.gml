@@ -1,8 +1,9 @@
 event_inherited();
 depth = fight_depth.bullet_outside_hight;
 
-damage = get_char_damage(obj_character_cross);
-soul_invulnerability = get_char_invulnerability(obj_character_cross) ? 20 : 1;
+var current_player = fight_get_player(fight_get_iniciative());
+damage = get_char_damage(current_player);
+soul_invulnerability = get_char_invulnerability(current_player) ? 20 : 1;
 destructible = false;
 
 _angle = 0;
