@@ -127,7 +127,7 @@ export default class Fight {
   public setClientAction(client: Client, action: number): void {
     client?.fight.setAction(action);
     this.getOtherClient(client)?.sendFightAction(action, target.opponent);
-    Logger.debug(`Action: ${action} "${client?.account.username}"`);
+    Logger.debug(`Action: ${action} "${client?.username}"`);
   }
 
   public setAction(client: Client, action: number): void {
@@ -141,7 +141,7 @@ export default class Fight {
       return;
     }
 
-    Logger.debug(`Fight client: ${client?.account.username}, set action: ${action}`);
+    Logger.debug(`Fight client: ${client?.username}, set action: ${action}`);
     this.setClientAction(client, action);
     this.updateAction();
   }
@@ -205,12 +205,13 @@ export default class Fight {
 
     const activePlayer = this.activeClient;
 
-    if (activePlayer?.fight.action !== actionType.skip) {
-      this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action + actionType.attack1]);
+    if (activePlayer?.fight.action !== actionType.skip && activePlayer?.fight.action !== actionType.specialAttack) {
+      Logger.debug(`AC ${activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]}`);
+      this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]);
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
-    Logger.debug(`Fight client: ${activePlayer?.account.username}, set specialActionChargePerTurn: ${activePlayer?.fight.characterInfo.specialActionChargePerTurn}`)
+    Logger.debug(`Fight client: ${activePlayer?.username}, set specialActionChargePerTurn: ${activePlayer?.fight.characterInfo.specialActionChargePerTurn}`)
     this.addSpecialActionCharge(activePlayer, activePlayer?.fight.characterInfo.specialActionChargePerTurn ?? 0);
 
     if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
@@ -222,12 +223,13 @@ export default class Fight {
   }
 
   public setSpecialActionCharge(client: Client, charge: number): void {
-    Logger.debug(`Fight client: ${client?.account.username}, set charge: ${charge}`);
+    Logger.debug(`Fight client: ${client?.username}, set charge: ${charge}`);
     client?.fight.setSpecialActionCharge(charge);
     this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
   }
 
   public addSpecialActionCharge(client: Client, charge: number): void {
+    Logger.debug(`CH ${client?.fight.specialActionCharge + charge}`)
     this.setSpecialActionCharge(client, client?.fight.specialActionCharge + charge);
   }
 
