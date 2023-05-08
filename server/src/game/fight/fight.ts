@@ -206,7 +206,10 @@ export default class Fight {
     const activePlayer = this.activeClient;
 
     if (activePlayer?.fight.action !== actionType.skip && activePlayer?.fight.action !== actionType.specialAttack) {
-      Logger.debug(`AC ${activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]}`);
+      Logger.debug(`AC1 ${activePlayer?.fight.action}`);
+      Logger.debug(`AC2 ${activePlayer?.fight.action + actionType.attack1}`);
+      Logger.debug(`AC3 ${activePlayer?.fight.characterInfo.staminaCost}`);
+      Logger.debug(`AC4 ${activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]}`);
       this.removeStamina(activePlayer, activePlayer?.fight.characterInfo.staminaCost[activePlayer?.fight.action]);
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
