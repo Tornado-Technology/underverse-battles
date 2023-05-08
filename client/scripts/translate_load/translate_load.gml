@@ -7,6 +7,5 @@ function translate_load(apply_settings = true) {
 	if (apply_settings) {
 		var lang_index = data_get("Settings.Language");
 		translate_set_lang(lang_index);
-		translate_set_font(lang_index);
 	}
 }

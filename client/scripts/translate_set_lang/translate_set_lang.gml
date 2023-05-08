@@ -14,6 +14,8 @@ function translate_set_lang(lang_id) {
 	global.__translate_lang_json = json;
 	global.__translate_lang_info = info;
 	
+	translate_set_font(lang_id);
+	
 	logger.info("Translate set new language: {0}.", lang_id);
 	
 	on_translate_update.invoke();

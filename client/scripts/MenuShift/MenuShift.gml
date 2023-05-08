@@ -18,8 +18,8 @@ function ClassMenuShift(key_translate, elements, callback, start_element) : Clas
 	static offset = 64;
 	static text_char_left = "<<";
 	static text_char_right = ">>";
-	static text_char_left_width = string_width(text_char_left);
-	static text_char_right_width = string_width(text_char_right);
+	static text_char_left_width = string_real_width(text_char_left, global._font_main_determination);
+	static text_char_right_width = string_real_width(text_char_right, global._font_main_determination);
 	static char_height = char_get_height("W");
 	
 	static update = function(position_x, position_y, menu_instance) {
@@ -80,7 +80,7 @@ function ClassMenuShift(key_translate, elements, callback, start_element) : Clas
 	
 	static get_text_char_right_position_x = function(position_x, menu_instance) {
 		var char_left  = element == 0 ? "" : text_char_left + " ";
-		return position_x + menu_instance.page_width + offset + string_width(char_left + elements[element] + " ");
+		return position_x + menu_instance.page_width + offset + string_real_width(char_left + elements[element] + " ", global._font_main_determination);
 	}
 	
 	static change_element = function(position_x, position_y, menu_instance) {
