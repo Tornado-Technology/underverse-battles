@@ -7,17 +7,17 @@ enum menu_page {
 	singleplayer,
 	storymode,
 	multiplayer,
-	multiplayer_account,
-	signup,
-	login,
-	statistics,
-	account_settings,
 	characters, 
 	achivments,
 	credits,
 	modifications,
 	
-	// Account settings
+	// Account
+	multiplayer_account,
+	signup,
+	login,
+	statistics,
+	account_settings,
     account_change_nickname,
     account_change_password,
     account_change_email,
@@ -246,6 +246,18 @@ on_change_element = function() {
 	}
 	get_current_element_in_page().focus();
 }
+
+login_callback = on_network_login.connect(function() {
+	if (page_index == menu_page.multiplayer) {
+		goto_page(menu_page.multiplayer_account);
+	}
+});
+
+disconnect_callback = on_network_connection_timeout.connect(function() {
+	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
+		goto_page(menu_page.multiplayer);
+	}
+});
 
 Execute = MenuExecute;
 Transfer = MenuTransfer;

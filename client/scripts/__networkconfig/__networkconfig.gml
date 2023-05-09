@@ -49,6 +49,7 @@ global.__instance_network_client = noone;
 global.__event_on_network_connect = new Event();
 global.__event_on_network_disconnect = new Event();
 global.__event_on_network_login = new Event();
+global.__on_network_connection_timeout = new Event();
 
 // Macros
 #macro Default:network_offical_ip "82.146.34.152"
@@ -77,6 +78,7 @@ global.__event_on_network_login = new Event();
 #macro on_network_connect global.__event_on_network_connect
 #macro on_network_disconnect global.__event_on_network_disconnect
 #macro on_network_login global.__event_on_network_login
+#macro on_network_connection_timeout global.__on_network_connection_timeout
 
 // Connections
 on_network_connect.connect(function() {
