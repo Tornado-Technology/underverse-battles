@@ -147,9 +147,9 @@ export default class Fight {
     const rating = Matchmaker.addRating(winner, this.getOtherClient(winner));
     this.clients.forEach((client) => {
       const isWinner = client === winner;
-      client.fight.unit();
-      client.setState(clientState.inMenu);
-      client.sendFightFinished(isWinner ? rating : -rating, isWinner);
+      client?.fight.unit();
+      client?.setState(clientState.inMenu);
+      client?.sendFightFinished(isWinner ? rating : -rating, isWinner);
     });
     this.destroy();
   }
@@ -285,8 +285,9 @@ export default class Fight {
 
   public setSpecialActionCharge(client: Client, charge: number): void {
     client?.fight.setSpecialActionCharge(charge);
-    client?.sendFightSpecialActionCharge(charge, target.self);
-    this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
+    const newCharge = client?.fight.specialActionCharge;
+    client?.sendFightSpecialActionCharge(newCharge, target.self);
+    this.getOtherClient(client)?.sendFightSpecialActionCharge(newCharge, target.opponent);
   }
 
   public addSpecialActionCharge(client: Client, charge: number): void {
