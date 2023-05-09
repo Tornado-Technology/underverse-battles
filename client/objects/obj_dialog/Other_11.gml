@@ -6,9 +6,7 @@ if (act == 2) {
 	}
 	else if (pos == string_length(cur_text)) {
 		if (input_check_pressed(input.action)) {
-			keyboard_clear(keyboard_lastkey);
-			cur_num++;
-			event_user(2);
+			next_dialog();
 		}
 	}
 }
