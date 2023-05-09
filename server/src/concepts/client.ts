@@ -100,9 +100,9 @@ export default class Client extends SendStuff {
   }
 
   public logout(): void {
-    this.account = null;
-    this.profile = null;
-    this.statistic = null;
+    this.account = undefined;
+    this.profile = undefined;
+    this.statistic = undefined;
     this.sendLogout(statusCode.success);
   }
 
@@ -132,16 +132,16 @@ export default class Client extends SendStuff {
   }
 
   public async save(): Promise<void> {
+    if (!this.isLogin) return;
     await this.account?.save();
     await this.profile?.save();
     await this.statistic?.save();
   }
 
   public async deleteAccount(): Promise<void> {
+    if (!this.isLogin) return;
     await Profile.deleteOne({ _id: this.profile._id });
     await Account.deleteOne({ _id: this.account._id });
-    this.account = undefined;
-    this.profile = undefined;
     this.logout();
   }
 
