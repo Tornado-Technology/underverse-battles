@@ -73,7 +73,7 @@ export const handlePacket = async (client: Client, data: any) => {
       try {
         const account = await login(data.username, data.password);
         await client.tryLogin(account);
-        client.onLogin();
+        await client.onLogin();
         Logger.info(`Client login: ${client?.account.username}`)
       } catch (exception) {
         Logger.error(`Account ${data.username} login failed: ${exception}`);
@@ -217,6 +217,24 @@ export const handlePacket = async (client: Client, data: any) => {
       client.sendChangeNickname(statusCode.success);
       break;
 
+    case 'restorePassword':
+      client.startVerification(async (status) => {
+        if (status !== statusCode.success) {
+          client.sendRestorePassword(status);
+          return;
+        }
+
+        const passwordValidation = validatePassword(data.password);
+        if (passwordValidation !== statusCode.success) {
+          client.sendRestorePassword(passwordValidation);
+          return
+        }
+
+        await client.setPassword(data.password);
+        client.sendRestorePassword(statusCode.success)
+      });
+      break;
+
     case 'deleteAccount':
       client.startVerification((status) => {
         if (status !== statusCode.success) {
@@ -348,10 +366,6 @@ export const handlePacket = async (client: Client, data: any) => {
         const { damage } = data;
         const fight = client.fight.instance;
         const source = fight?.getOtherClient(client);
-
-        Logger.debug(`Fight client: ${source?.account.username}, damage: ${damage}`);
-        Logger.debug(`Fight client: ${source?.account.username}, specialActionChargePerDamage: ${source?.fight.characterInfo.specialActionChargePerDamage}`);
-        Logger.debug(`Fight client: ${source?.account.username}, add charge: ${damage * source?.fight.characterInfo.specialActionChargePerDamage}`);
 
         fight?.removeHp(client, damage);
         fight?.addMana(source, damage);

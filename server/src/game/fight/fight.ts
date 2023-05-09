@@ -31,6 +31,7 @@ export default class Fight {
   protected clients: Client[];
   protected _state: state;
   protected initiative: number;
+
   protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
@@ -61,6 +62,68 @@ export default class Fight {
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
+  }
+
+  public timeoutClear() {
+    if (!this.timeout) return;
+    clearTimeout(this.timeout);
+    this.timeout = null;
+  }
+
+  private timeoutStart(method: Function) {
+    if (this.timeout) return;
+    // @ts-ignore
+    this.timeout = setTimeout(method, 15_000);
+  }
+
+  public kickPlayer(client: Client) {
+    this.timeoutStart(() => {
+      const winnerClient = this.clients.find((c) => c !== undefined);
+      winnerClient?.sendFightDisconnect(target.opponent);
+      this.finish(winnerClient);
+    });
+
+    this.clientRemove(client);
+  }
+
+  public clientRemove(client: Client) {
+    Logger.debug(`${client?.account.username} removed.`);
+
+    this.getOtherClient(client)?.sendFightClientRemove();
+    this.clients[client.fight.index] = undefined;
+
+    if (!this.clients[0] || !this.clients[1]) {
+      this.destroyTimeout = setTimeout(() => {
+        this.destroy();
+      }, 15_000);
+    }
+  }
+
+  public clientAdd(client: Client) {
+    Logger.debug(`${client?.username} added.`);
+    this.clients[client?.fight.index] = client;
+
+    const otherClient = this.getOtherClient(client);
+    otherClient?.sendFightClientAdd();
+
+    if (this.destroyTimeout !== null) {
+      clearInterval(this.destroyTimeout);
+    }
+
+    if (this.state !== state.battle) {
+      return;
+    }
+
+    if (otherClient.fight.action === actionType.specialAttack) {
+      this.addSpecialActionCharge(otherClient, 100);
+      return;
+    }
+
+    const mana = otherClient?.fight.characterInfo.staminaCost[otherClient?.fight.action - actionType.attack1];
+    const stamina = otherClient?.fight.characterInfo.manaCost[otherClient?.fight.power];
+
+    this.addMana(otherClient, mana);
+    this.addStamina(otherClient, stamina);
   }
 
   public destroy(): void {
@@ -210,7 +273,6 @@ export default class Fight {
       this.removeMana(activePlayer, activePlayer?.fight.characterInfo.manaCost[activePlayer?.fight.power]);
     }
 
-    Logger.debug(`Fight client: ${activePlayer?.username}, set specialActionChargePerTurn: ${activePlayer?.fight.characterInfo.specialActionChargePerTurn}`)
     this.addSpecialActionCharge(activePlayer, activePlayer?.fight.characterInfo.specialActionChargePerTurn ?? 0);
 
     if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
@@ -222,13 +284,12 @@ export default class Fight {
   }
 
   public setSpecialActionCharge(client: Client, charge: number): void {
-    Logger.debug(`Fight client: ${client?.username}, set charge: ${charge}`);
     client?.fight.setSpecialActionCharge(charge);
+    client?.sendFightSpecialActionCharge(charge, target.self);
     this.getOtherClient(client)?.sendFightSpecialActionCharge(charge, target.opponent);
   }
 
   public addSpecialActionCharge(client: Client, charge: number): void {
-    Logger.debug(`CH ${client?.fight.specialActionCharge + charge}`)
     this.setSpecialActionCharge(client, client?.fight.specialActionCharge + charge);
   }
 
@@ -266,10 +327,10 @@ export default class Fight {
   }
 
   public updateStateDefend(): void {
-    this.resetState();
     this.clients.forEach((client) => {
       client?.sendFightDodge();
     });
+    this.resetState();
   }
 
   public battleFinish() {
@@ -355,9 +416,4 @@ export default class Fight {
       this.setClientPower(client, 0);
     });
   }
-
-  // TODO: ADD WORK WITH SPECIAL ATTACK
-  //public setSpecialAction(client: Client, playerId: number): void {
-    // client.fight
-  //}
 }

@@ -19,13 +19,14 @@ export interface IProfile extends Document {
   gold: number,
   badge: number | null,
   fight: {
-    id: string,
-    index: number,
-    hp: number,
-    mana: number,
-    stamina: number,
-    characterId: number,
-    specialActionCharge: number,
+    id: string | null,
+    index: number | null,
+    hp: number | null,
+    mana: number | null,
+    stamina: number | null,
+    characterId: number | null,
+    characterSkinId: number | null,
+    specialActionCharge: number | null,
   }
 }
 
@@ -44,7 +45,7 @@ const schema = new Schema({
     mana: { type: Number, default: null },
     stamina: { type: Number, default: null },
     characterId: { type: Number, default: null },
-    skinId: { type: Number, default: null },
+    characterSkinId: { type: Number, default: null },
     specialActionCharge: { type: Number, default: null },
   },
 }, {

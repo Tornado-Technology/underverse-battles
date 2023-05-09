@@ -57,7 +57,7 @@ export default class Client extends SendStuff {
     App.clients.splice(App.clients.indexOf(client), 1);
   }
 
-  verify() {
+  public verify() {
     this.verified = true;
     Logger.info(`Client verified, UUID: ${this.uuid}.`);
   }
@@ -95,8 +95,8 @@ export default class Client extends SendStuff {
 
   public async onDisconnect(status: number): Promise<void> {
     Logger.info(`Client disconnected: ${status}`);
+    await this.fight.leave();
     await this.save();
-    this.fight.leave();
   }
 
   public logout(): void {
@@ -106,8 +106,8 @@ export default class Client extends SendStuff {
     this.sendLogout(statusCode.success);
   }
 
-  public onLogin(): void {
-    // Restore...
+  public async onLogin(): Promise<void> {
+    await this.fight.tryRestore();
   }
 
   public async tryLogin(account: IAccount): Promise<void> {
@@ -128,7 +128,6 @@ export default class Client extends SendStuff {
   public async register(account: IAccount): Promise<void> {
     this.account = account;
     this.profile = await freshProfile(account);
-    this.onLogin();
     this.sendRegister(statusCode.success);
   }
 

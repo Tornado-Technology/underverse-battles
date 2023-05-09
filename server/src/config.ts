@@ -24,6 +24,11 @@ const commonConfig = {
     type: 'common',
     tags: [],
   },
+  gameplay: {
+    fight: {
+      disconnectTimeout: 15_000,
+    },
+  },
   main: {
     ip: '127.0.0.1',
     port: '1337',

@@ -101,6 +101,13 @@ export default class SendStuff {
     })
   }
 
+  public sendRestorePassword(status: statusCode): void {
+    this.send('restorePassword', {
+      status,
+      ...this.schemesPack,
+    });
+  }
+
   public sendDeleteAccount(status: statusCode): void {
     this.send('deleteAccount', {
       status,
@@ -268,5 +275,13 @@ export default class SendStuff {
 
   public sendFightBattleEnd(): void {
     this.send('battleEnd');
+  }
+
+  public sendFightClientRemove(): void {
+    this.send('fightClientRemove');
+  }
+
+  public sendFightClientAdd(): void {
+    this.send('fightClientAdd');
   }
 }
