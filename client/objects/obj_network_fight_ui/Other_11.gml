@@ -43,8 +43,8 @@ if (account.type == account_type.developer) {
 }
 
 if (account != undefined && profile != undefined) {
-	draw_text_outlined(frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, account.username);
-	draw_text_outlined(frame_x, frame_y + frame_w + 25, color_text_opp, color_text_outline_opp, string(your_rp) + " " + translate_get("Battle.Rating"));
+	draw_text_outlined(frame_x, frame_y + frame_w + 5, color, color_text_outline_opp, account.username);
+	draw_text_outlined(frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, string(your_rp) + " " + translate_get("Battle.Rating"));
 
 	if (profile.badge != undefined && opp_badge != pointer_null) {
 		draw_sprite(spr_badges, profile.badge, chr_x - string_width(account.username) / 2 - 10, chr_y - chr_h - 14);
@@ -64,8 +64,8 @@ if (opponent_get_type(player_id) == account_type.developer) {
 
 draw_set_font(global._font_main_mini);
 draw_set_halign(fa_right);
-draw_text_outlined(size.x - frame_x, frame_y + frame_w + 12, color, color_text_outline_opp, opp_name);
-draw_text_outlined(size.x - frame_x, frame_y + frame_w + 25, color_text_opp, color_text_outline_opp, string(opp_rp) + " " + translate_get("Battle.Rating"));
+draw_text_outlined(size.x - frame_x, frame_y + frame_w + 5, color, color_text_outline_opp, opp_name);
+draw_text_outlined(size.x - frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, string(opp_rp) + " " + translate_get("Battle.Rating"));
 
 // Opponent name
 draw_set_font(font_console_mini);
