@@ -63,7 +63,6 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	}
 	
 	static draw_text_scroll = function(text, x, y, sep, w) {
-		draw_set_font(global._font_main_determination);
 		var height = string_height_ext(text, sep, w);
 		if (y + height > 0) { 
 			draw_text_ext(x, y, text, sep, w); 

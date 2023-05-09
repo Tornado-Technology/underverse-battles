@@ -12,6 +12,7 @@ if (act == 1) {
 		answer_options[i] = dialog[i + 1];
 		index = i;
 		answer_options[i] = UITextButton(dialog[i + 1], function() {
+			audio_play_sound_once(snd_selection);
 			callback(current_option);
 			instance_destroy();
 		});

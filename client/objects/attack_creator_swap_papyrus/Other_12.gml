@@ -38,10 +38,3 @@ if (!started) {
 			break;
 	}
 }
-
-var warning_scale = 11;
-if(new_warning) {
-	draw_warning(side, warning_scale);
-	audio_play_sound_plugging(snd_warning);
-	new_warning = false;
-}

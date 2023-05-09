@@ -19,10 +19,10 @@ function fight_network_heal(_enemyId, _heal){
 /// @param {number} enemy_id
 function fight_network_stun(_enemyId){
 	if (instance_exists(obj_battle_soul_otherplayer)) {
-		if (obj_battle_soul_otherplayer.moveable)
+		if (!obj_battle_soul_otherplayer.is_stunned)
 			audio_play_sound_plugging(snd_spare_up);
 	
-		obj_battle_soul_otherplayer.moveable = false;
+		obj_battle_soul_otherplayer.is_stunned = true;
 		return true;
 	}
 	return false;

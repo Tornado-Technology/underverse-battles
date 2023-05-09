@@ -3,6 +3,11 @@ function successful_registration(){
 	display_show_message_info(translate_get("Menu.LogInMessage.RegistrationSuccessful"), c_lime);
 }
 
+function failed_registration_reason_second_password(){
+	global.failed_registration = true;
+	display_show_message_info(translate_get("Menu.LogInMessage.ErrorSecondPassword"), c_red);
+}
+
 function failed_registration(reason){
 	global.failed_registration = true;
 	display_show_message_info(translate_get("Menu.LogInMessage.Error")[reason - 300], c_red);

@@ -14,17 +14,15 @@ if (!started) {
 	bone_scale = 3;
 	if (attack_num == 1) bone_scale = 4.4;
 	
-	update_2_0();
+	if (attack_num == 0) {
+		update_2_0();
+	}
+	else {
+		update_2_1(3);
+	}
 	time_source_start(time_source_update_3_0);
 	time_source_start(time_source_update_3_1);
 	time_source_start(time_source_update_destroy_3_2);
 	
 	started = true;
-}
-
-var warning_scale = 10;
-if(new_warning) {
-	draw_warning(side, warning_scale);
-	audio_play_sound_plugging(snd_warning);
-	new_warning = false;
 }

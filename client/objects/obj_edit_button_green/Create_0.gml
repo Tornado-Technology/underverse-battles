@@ -7,6 +7,7 @@ edited_objects_number = 0;
 edit_button = UIImageButton(spr_edit_button_green, function() {
 	if (!is_can_input || fight_get_initiative() != 0) return;
 	press();
+	send_to_server();
 });
 
 edit_objects = function() {
@@ -36,7 +37,9 @@ press = function() {
 	is_can_input = false;
 	time_source_start(cooldown);
 	audio_play_sound_plugging(snd_selection);
-	
+}
+
+send_to_server = function () {
 	if (fight_network_mode) {
 		send_fight_extra_action();
 	}

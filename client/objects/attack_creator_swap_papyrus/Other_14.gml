@@ -26,66 +26,47 @@ if (_id == 0 && attack_num == 0 || _id == 3) {
 
 // Кости и оранжевые кости
 if (_id == 0 && attack_num == 1) {
-	update_0_1 = function (pow) {
+	update_0_1 = function(pow) {
 		var _bone = bone_obj;
 		var rand_side = irandom_range(0, 7);
 		var rand_bone_type = irandom_range(0, 1);
 		if (rand_bone_type == 0)
 			_bone = bone_orange_obj;
-		
 		var rand_speed = 2 + random_range(0, pow * 0.2);
-		var max_size = 8.3;
-		var rand_size = rand_bone_type == 0 ? max_size : random_range(3 + pow * 0.2, 6);
-		var x0, y0, bone_direction, bone_angle;
-		if (rand_side == 0) {
-			x0 = _border.x - _border.left - 4;
-			y0 = _border.y + _border.down;
-			bone_direction = 0;
-			bone_angle = 0;
-		}
-		if (rand_side == 1) {
-			x0 = _border.x + _border.right + 4;
-			y0 = _border.y - _border.up;
-			bone_direction = 180;
-			bone_angle = 180;
-		}
-		if (rand_side == 2) {
-			x0 = _border.x - _border.left - 4;
-			y0 = _border.y - _border.up;
-			bone_direction = 0;
-			bone_angle = 180;
-		}
-		if (rand_side == 3) {
-			x0 = _border.x + _border.right + 4;
-			y0 = _border.y + _border.down;
-			bone_direction = 180;
-			bone_angle = 0;
-		}
-		if (rand_side == 4) {
-			x0 = _border.x + _border.right;
-			y0 = _border.y + _border.down + 4;
-			bone_direction = 90;
-			bone_angle = 90;
-		}
-		if (rand_side == 5) {
-			x0 = _border.x - _border.left;
-			y0 = _border.y - _border.up - 4;
-			bone_direction = 270;
-			bone_angle = 270;
-		}
-		if (rand_side == 6) {
-			x0 = _border.x - _border.left;
-			y0 = _border.y + _border.down + 4;
-			bone_direction = 90;
-			bone_angle = 270;
-		}
-		if (rand_side == 7) {
-			x0 = _border.x + _border.right;
-			y0 = _border.y - _border.up - 4;
-			bone_direction = 270;
-			bone_angle = 90;
-		}
-		create_bone(x0, y0, _bone, rand_speed, rand_size, 0, 0);
+			var max_size = 8.3;
+			var rand_size = rand_bone_type == 0 ? max_size : random_range(3 + pow * 0.2, 6);
+			if (rand_side == 0) {
+				var _inst = create_bone(_border.x - _border.left - 4, _border.y + _border.down, _bone,
+				rand_speed, rand_size, 0, 0);
+			}
+			if (rand_side == 1) {
+				var _inst = create_bone(_border.x + _border.right + 4, _border.y - _border.up, _bone,
+				rand_speed, rand_size, 180, 180);
+			}
+			if (rand_side == 2) {
+				var _inst = create_bone(_border.x - _border.left - 4, _border.y - _border.up, _bone,
+				rand_speed, rand_size, 0, 180);
+			}
+			if (rand_side == 3) {
+				var _inst = create_bone(_border.x + _border.right + 4, _border.y + _border.down, _bone,
+				rand_speed, rand_size, 180, 0);
+			}
+			if (rand_side == 4) {
+				var _inst = create_bone(_border.x + _border.right, _border.y + _border.down + 4, _bone,
+				rand_speed, rand_size, 90, 90);
+			}
+			if (rand_side == 5) {
+				var _inst = create_bone(_border.x - _border.left, _border.y - _border.up - 4, _bone,
+				rand_speed, rand_size, 270, 270);
+			}
+			if (rand_side == 6) {
+				var _inst = create_bone(_border.x - _border.left, _border.y + _border.down + 4, _bone,
+				rand_speed, rand_size, 90, 270);
+			}
+			if (rand_side == 7) {
+				var _inst = create_bone(_border.x + _border.right, _border.y - _border.up - 4, _bone,
+				rand_speed, rand_size, 270, 90);
+			}
 	}
 }
 
@@ -265,32 +246,29 @@ if (_id == 2 && attack_num == 0 || _id == 3) {
 if (_id == 2 && attack_num == 1 || _id == 3 && attack_num == 1) {
 	update_2_1 = function() {
 		side = choose(dir.up, dir.down, dir.left, dir.right);
-			new_warning = true;
-			if (attack_num == 0) {
-				_soul.gravity_force = side;
-				_soul.max_fly_time = 60;
-				_soul.fly_time = _soul.max_fly_time;
-				_soul.blue_attack = true;
-				_soul.addit_spd = 5;
-			}
-			var i = 0;
+		
+		var warning_scale = 11;
+		draw_warning(side, warning_scale);
+		audio_play_sound_plugging(snd_warning);
+			
+		var i = 0;
 
-			repeat(num) {
-				if (side == dir.up) {
-					_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y - _border.up - 25, bone_obj, 0, 1, 0, 180);
-				}
-				if (side == dir.down) {
-					_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y + _border.down + 25, bone_obj, 0, 1, 0, 0);
-				}
-				if (side == dir.left) {
-					_bones[i] = create_bone(_border.x - _border.left - 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 270);
-				}
-				if (side == dir.right) {
-					_bones[i] = create_bone(_border.x + _border.right + 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 90);
-				}
-				++i;
+		repeat(num) {
+			if (side == dir.up) {
+				_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y - _border.up - 25, bone_obj, 0, 1, 0, 180);
 			}
-			//character_instance.change_sprite_hand_dir(side);
+			if (side == dir.down) {
+				_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y + _border.down + 25, bone_obj, 0, 1, 0, 0);
+			}
+			if (side == dir.left) {
+				_bones[i] = create_bone(_border.x - _border.left - 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 270);
+			}
+			if (side == dir.right) {
+				_bones[i] = create_bone(_border.x + _border.right + 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 90);
+			}
+			++i;
+		}
+		//character_instance.change_sprite_hand_dir(side);
 	}
 
 	update_2_1_2 = function() {

@@ -71,7 +71,7 @@ change_effect = function () {
 	part_type_life(part_type_change, 20, 20);
 	part_type_orientation(part_type_change, image_angle, image_angle, 0, 0, false);
 	part_type_size(part_type_change, 1, 1, 0.1, 0);
-	part_particles_create(global.part_system_bullet, x, y, part_type_change, 1);
+	part_particles_create(global.part_system_soul, x, y, part_type_change, 1);
 }
 
 // Create collider soul

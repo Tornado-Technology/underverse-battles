@@ -2,9 +2,8 @@ event_inherited();
 
 depth = fight_depth.bullet_outside_hight;
 
-var current_player = fight_get_player(fight_get_iniciative());
-damage = get_char_damage(current_player);
-soul_invulnerability = get_char_invulnerability(current_player) ? 20 : 1;
+damage = 5;
+soul_invulnerability = 20;
 
 is_spining = false;
 is_moving = false;

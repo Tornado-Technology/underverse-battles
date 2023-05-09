@@ -32,6 +32,15 @@ function cross_special_attack(player) {
 	});
 }
 
+function cross_xevent_attack0(pow, player) {
+	instance_create(attack_creator_cross_xevent, {
+		character_instance: player,
+		_power: pow,
+		_id: 0,
+		attack_num: irandom_range(0, 3)
+	});
+}
+
 function cross_xevent_attack1(pow, player) {
 	instance_create(attack_creator_cross_xevent, {
 		character_instance: player,

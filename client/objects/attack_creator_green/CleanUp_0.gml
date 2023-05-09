@@ -43,5 +43,6 @@ if (_id == 2 && attack_num == 1) {
 
 if (_id == 3) {
 	time_source_destroy(time_source_update_3_0);
+	time_source_destroy(time_source_update_stop_3_0);
 	time_source_destroy(time_source_update_destroy_3_0);
 }

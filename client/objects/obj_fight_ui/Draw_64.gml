@@ -134,7 +134,7 @@ if (action_box_show) {
 }
 
 // Special action
-if (action_box_show && showing_special_action && is_player_turn) {
+if (action_box_show && showing_special_action && fight_player_selecting(0) && is_player_turn) {
 	special_button.draw(special_action_position_x, special_action_position_y);
 	
 	draw_set_font(font_console_mini);
