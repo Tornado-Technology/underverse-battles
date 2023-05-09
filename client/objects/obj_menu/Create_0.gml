@@ -7,6 +7,8 @@ enum menu_page {
 	singleplayer,
 	storymode,
 	multiplayer,
+	signup,
+	login,
 	characters, 
 	achivments,
 	credits,
@@ -14,8 +16,6 @@ enum menu_page {
 	
 	// Account
 	multiplayer_account,
-	signup,
-	login,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -248,7 +248,7 @@ on_change_element = function() {
 }
 
 login_callback = on_network_login.connect(function() {
-	if (page_index == menu_page.multiplayer) {
+	if (page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
 		goto_page(menu_page.multiplayer_account);
 	}
 });
