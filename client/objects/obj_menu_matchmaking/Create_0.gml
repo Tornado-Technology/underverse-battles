@@ -18,6 +18,12 @@ button_cancel = UITextButton(cancel, function() {
 	press_button();
 })
 
+disconnect_callback = on_network_connection_timeout.connect(function() {
+	display_show_message_info("No connection to server", c_red);
+	audio_play_sound(obj_menu.menu_soundtrack_current, 2, true, 0.5);
+	instance_destroy(id);
+});
+
 time_source_start(time_source_create(time_source_game, 3, time_source_units_seconds, function() {
 	waiting_is_over = true;
 }, [], 1));

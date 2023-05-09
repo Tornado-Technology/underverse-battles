@@ -90,6 +90,6 @@ switch(type) {
 		logger.info("Disconnected from the server!");
 		connected = false;
 		connecting = false;
-		on_disconnect.invoke();
+		on_network_disconnect.invoke();
 		break;
 }

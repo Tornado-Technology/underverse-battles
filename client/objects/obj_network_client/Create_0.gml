@@ -31,7 +31,6 @@ disconnect = function() {
 
 // connect/disconnect events defined in __NetworkingConfig.gml
 on_connect = on_network_connect;
-on_disconnect = on_network_disconnect;
 
 global.successful_registration = false;
 global.failed_registration = false;

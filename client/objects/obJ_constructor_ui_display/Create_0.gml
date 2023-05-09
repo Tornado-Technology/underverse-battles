@@ -37,6 +37,9 @@ network_connect_interval_timer = time_source_create(time_source_game, network_co
 time_source_start(network_connect_interval_timer);
 
 connect_timeout_timer = Timer(network_connect_timeout, function() {
+	network_account = undefined;
+	network_profile = undefined;
+	on_network_connection_timeout.invoke();
 	disnetwork_connect_interval_timer.start();
 	network_ping = -1;
 	logger.info("Ping timed out!");
