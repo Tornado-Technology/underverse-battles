@@ -140,6 +140,8 @@ export default class Client extends SendStuff {
   public async deleteAccount(): Promise<void> {
     await Profile.deleteOne({ _id: this.profile._id });
     await Account.deleteOne({ _id: this.account._id });
+    this.account = undefined;
+    this.profile = undefined;
     this.logout();
   }
 
