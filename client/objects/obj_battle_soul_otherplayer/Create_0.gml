@@ -20,6 +20,15 @@ skip_frame = 0;
 
 is_otherplayer_soul = true;
 
+// Stun
+is_stunned = false;
+stun = function() {
+	moveable = false;
+	is_stunned = true;
+	effect_fade(0.1, 1, c_blue, c_blue, true, 0);
+	battle_border_set_color(false, false, c_blue);
+}
+
 // Particles
 part_type_tail = part_type_create();
 part_type_sprite(part_type_tail, sprite_index, false, false, false);
