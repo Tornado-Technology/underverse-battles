@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_knife_cross",
+  "name": "obj_bone_rotating_cross_xevent",
   "spriteId": {
-    "name": "spr_knife_cross",
-    "path": "sprites/spr_knife_cross/spr_knife_cross.yy",
+    "name": "spr_bone_rotating_cross",
+    "path": "sprites/spr_bone_rotating_cross/spr_bone_rotating_cross.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_battle_bullet",
-    "path": "objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name": "obj_bone_rotating_swap_sans",
+    "path": "objects/obj_bone_rotating_swap_sans/obj_bone_rotating_swap_sans.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,9 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

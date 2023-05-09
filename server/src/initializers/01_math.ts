@@ -14,7 +14,7 @@ Math.randomRange = (min: number, max: number): number => {
 }
 
 Math.clamp = (val: number, min: number, max: number): number  => {
-  return val < min ? min : max;
+  return Math.min(Math.max(val, min), max);
 }
 
 Math.lerp = (start: number, target: number, amount: number): number  => {

@@ -33,7 +33,7 @@ part_type_size(part_glitch, 0.05, 0.1, 0, 0);
 
 edit = function() {
 	var glitch_srpay = 25;
-	repeat (50) part_particles_create(global.part_system_bullet, x + irandom_range(-glitch_srpay, glitch_srpay), y + irandom_range(-glitch_srpay, glitch_srpay), part_glitch, 1);
+	repeat (50) part_particles_create(global.part_system_bullet_outside, x + irandom_range(-glitch_srpay, glitch_srpay), y + irandom_range(-glitch_srpay, glitch_srpay), part_glitch, 1);
 	instance_destroy();
 }
 

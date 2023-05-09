@@ -221,6 +221,7 @@ if (_id == 3 && attack_num == 0) {
 	
 	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
 		//character_instance.stop_hand_wave();
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange);
 		update_0_0(pow);
 		time_source_stop(time_source_update_3_0);
 		time_source_stop(time_source_update_3_1);
@@ -277,17 +278,17 @@ if (_id == 3 && attack_num == 1) {
 	var final_time = period * amount;
 	
 	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-		update_2_0();
+		update_2_1();
 		time_source_start(time_source_update_3_1);
 	}, [], amount - 1);
 	
 	time_source_update_3_1 = time_source_create(time_source_game, _time_step[0] / 60, time_source_units_seconds, function () {
-		update_2_1();
+		update_2_1_2();
 		time_source_start(time_source_update_3_2);
 	});
 	
 	time_source_update_3_2 = time_source_create(time_source_game, _time_step[2] / 60, time_source_units_seconds, function () {
-		update_2_2();
+		update_2_1_3();
 	});
 	
 	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
@@ -307,7 +308,7 @@ if (_id == 3 && attack_num == 1) {
 	}, [3], amount - 1);
 
 	time_source_update_destroy_3_3 = time_source_create(time_source_game, (period * amount / 60) + 1, time_source_units_seconds, function () {
-		update_2_0();
+		update_2_1();
 		time_source_stop(time_source_update_3_3);
 		time_source_start(time_source_update_3_0);
 		time_source_start(time_source_update_3_1);

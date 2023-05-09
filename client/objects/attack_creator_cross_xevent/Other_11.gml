@@ -20,7 +20,7 @@ switch (attack_num) {
 		
 		_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
-		knife = instance_create_depth(_border.x - _border.left - 30, _border.y, fight_depth.bullet_outside_hight, obj_knife_cross);
+		knife = instance_create_depth(_border.x - _border.left - 30, _border.y, fight_depth.bullet_outside_hight, obj_big_knife_cross_event);
 		knife.direction = 0;
 		knife.point_stop_x = _border.x + _border.right + 20;
 			
@@ -36,7 +36,7 @@ switch (attack_num) {
 		
 		rand_num = irandom_range(0, 1);
 		
-		knife = instance_create_depth(_border.x, _border.y - _border.up - 30, fight_depth.bullet_outside_hight, obj_knife_cross);
+		knife = instance_create_depth(_border.x, _border.y - _border.up - 30, fight_depth.bullet_outside_hight, obj_big_knife_cross_event);
 		knife.direction = 270;
 		knife.image_angle = 270;
 		knife.point_stop_y = _border.y + _border.down - 20;

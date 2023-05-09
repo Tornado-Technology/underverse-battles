@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_knife_directed_cross",
+  "name": "obj_gasterblaster_aiming_cross_xevent",
   "spriteId": {
-    "name": "spr_red_knife",
-    "path": "sprites/spr_red_knife/spr_red_knife.yy",
+    "name": "spr_gasterblaster_cross",
+    "path": "sprites/spr_gasterblaster_cross/spr_gasterblaster_cross.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_knife_directed_xchara",
-    "path": "objects/obj_knife_directed_xchara/obj_knife_directed_xchara.yy",
+    "name": "obj_gasterblaster_aiming_sans",
+    "path": "objects/obj_gasterblaster_aiming_sans/obj_gasterblaster_aiming_sans.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,12 +26,7 @@
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
   "physicsKinematic": false,
-  "physicsShapePoints": [
-    {"x":0.0,"y":0.0,},
-    {"x":32.0,"y":0.0,},
-    {"x":32.0,"y":10.0,},
-    {"x":0.0,"y":10.0,},
-  ],
+  "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],

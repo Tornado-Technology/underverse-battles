@@ -36,7 +36,7 @@ frame = spr_cross_frame;
 // Animations
 idle_animation = spr_cross_idle;
 after_battle_animation = spr_cross_after_battle;
-defeated_animation = spr_cross_idle;
+defeated_animation = spr_cross_defeated;
 
 hand_up_animation = spr_cross_attack2_up;
 hand_down_up_animation = spr_cross_attack2_down_up;

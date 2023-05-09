@@ -3,7 +3,7 @@
 // Кости вылезают из стенок
 if (_id == 0 && attack_num == 0) {
 	var period = 30 - 3 * _power;
-	var amount = 8 + _power;
+	var amount = 8 + _power * 2;
 	time_source_update_0_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 		update_0_0(pow);
 	}, [_power], amount - 1);
@@ -20,7 +20,7 @@ if (_id == 0 && attack_num == 1) {
 		update_0_1(pow);
 	}, [_power], -1);
 
-	time_source_update_destroy_0_1 = time_source_create(time_source_game, (240 + 20 * _power) / 60, time_source_units_seconds, function () {
+	time_source_update_destroy_0_1 = time_source_create(time_source_game, (280 + 20 * _power) / 60, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }

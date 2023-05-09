@@ -5,7 +5,7 @@ _power = (_power == 4) ? 5 : _power;
 
 switch (attack_num) {
 	case 0: // Наводящиеся гастербластеры
-		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+		_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left + 10, battle_border.right + 10);
 		if (battle_border_start_animation_end()) exit;
 		
 		_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
