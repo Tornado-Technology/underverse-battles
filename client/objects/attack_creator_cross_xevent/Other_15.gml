@@ -64,7 +64,7 @@ if (_id == 0 && attack_num == 3) {
 if (_id == 1 && attack_num == 0) {
 	var period = 30 - 2 * _power;
 	time_source_update_1_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
-		update_0_2(pow);
+		update_0_1(pow);
 	}, [_power], -1);
 	
 	var amount = 4 + (_power div 2);

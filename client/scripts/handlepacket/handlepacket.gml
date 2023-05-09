@@ -133,6 +133,14 @@ function handle_packet(data) {
 			break;
 			
 		case "deleteAccount":
+			if (data.status != status_code.success) {
+				display_show_message_info(string(data.status), c_red);
+				break;
+			}
+			
+			network_account = undefined;
+			network_profile = undefined;
+			display_show_message_info("Delete account successful", c_lime);
 			break;
 			
 		case "information":
