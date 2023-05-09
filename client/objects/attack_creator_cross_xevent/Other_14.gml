@@ -1,17 +1,6 @@
 /// @description Methods
 event_inherited();
 
-// Обстрел костями сверху
-if (_id == 0 && attack_num == 2 || _id == 1 && attack_num == 0) {
-	update_0_2 = function(pow) {
-		var rand_x = choose(_border.x - _border.left - 10, _border.x + _border.right + 10);
-		var bone_dir = point_direction(rand_x, _border.y - _border.up - 10, _soul.x, _soul.y);
-		var bone_speed = 2 + 0.2 * pow;
-		create_bone(rand_x, _border.y - _border.up - 5, bone_topref_obj, bone_speed, 1, bone_dir, bone_dir - 90);
-		audio_play_sound_plugging(snd_projectile);
-	}
-}
-
 // Нож режет арену и кости вылетают справа и слева
 if (_id == 1 && attack_num == 0) {
 	update_1_0 = function(pow) {

@@ -48,7 +48,7 @@ if (_id == 1 && attack_num == 1) {
 
 // Наводящиеся гастербластеры
 if (_id == 2 && attack_num == 0) {
-	var period = 65 - _power * 5;
+	var period = 50 - _power * 5;
 	var amount = 5 + _power;
 	time_source_update_2_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 		update_2_0(pow);
@@ -60,7 +60,7 @@ if (_id == 2 && attack_num == 0) {
 
 // Крестовые гастербластеры
 if (_id == 2 && attack_num == 1) {
-	var period = 65 - _power * 4;
+	var period = 65 - _power * 6;
 	var amount = 5 + _power;
 	time_source_update_2_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_2_1();

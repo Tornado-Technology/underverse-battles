@@ -16,8 +16,8 @@ if (fight_get_player_action(0) == 3)
 	exit;
 
 if (fight_player_using_special_action(0)) {
-	_hits = irandom_range(2, 7);
-	_damage = (inv) ? _hits * dam : _hits * dam * irandom_range(2, 8);
+	_hits = irandom_range(3, 7);
+	_damage = (inv) ? _hits * dam : _hits * dam * irandom_range(4, 7);
 }
 else {
 	if (irandom_range(0, att + pow + 1) > 0) {

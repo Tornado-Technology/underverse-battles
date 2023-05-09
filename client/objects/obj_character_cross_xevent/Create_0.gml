@@ -22,12 +22,12 @@ frame = spr_cross_xevent_frame;
 // Animations
 idle_animation = spr_cross_xevent_idle;
 after_battle_animation = spr_cross_xevent_idle;
-defeated_animation = spr_cross_xevent_idle;
+defeated_animation = spr_cross_xevent_defeated;
 
 // Actions
 passive_skill = PassiveSkill("Character.CrossXEvent.PassiveSkill");
 actions = [
-	Action("Character.CrossXEvent.Attack0", cross_attack0),
+	Action("Character.CrossXEvent.Attack0", cross_xevent_attack0),
 	Action("Character.CrossXEvent.Attack1", cross_xevent_attack1),
 	Action("Character.CrossXEvent.Attack2", cross_xevent_attack2),
 ];

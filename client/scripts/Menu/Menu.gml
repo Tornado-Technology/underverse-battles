@@ -22,7 +22,7 @@ function sign_up_apply() {
 		var password2 = inputbox_confirm_password.text;
 		
 		if (password1 != password2) {
-			failed_registration(321);
+			failed_registration_reason_second_password();
 		} else {
 			send_register(inputbox_login.text, inputbox_password.text, inputbox_email.text);
 			alarm[0] = waiting_time;

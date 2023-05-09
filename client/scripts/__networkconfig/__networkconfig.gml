@@ -56,11 +56,13 @@ global.__event_on_network_login = new Event();
 #macro Localserver:network_offical_ip "localhost"
 #macro Cinematic:network_offical_ip "82.146.34.152"
 #macro Mobile:network_offical_ip "82.146.34.152"
+#macro SpecialAttackTest:network_offical_ip "82.146.34.152"
 #macro Default:network_offical_port "1338"
 #macro Development:network_offical_port "1337"
 #macro Localserver:network_offical_port "1337"
 #macro Cinematic:network_offical_port "1337"
 #macro Mobile:network_offical_port "1337"
+#macro SpecialAttackTest:network_offical_port "1337"
 #macro network_connect_interval 120
 #macro network_connect_timeout 420
 #macro network_disconnect_timeout 600

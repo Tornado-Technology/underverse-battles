@@ -109,7 +109,8 @@ cutscenes = [
 		[effect_fade, 4, 1, c_white, c_white, false, fight_depth.ui],
 		[cutscene_wait, 4],
 		// Doodle Sphere
-		[layer_background_sprite, background_id, spr_background_doodle_sphere],
+		[layer_background_sprite, background_id, spr_background_doodle_sphere_layer_0],
+		[cutscene_execute, function () { background_animator = instance_create(obj_background_doodle_sphere_without_platform); }],
 		[cutscene_execute, function () { audio_play_sound(snd_into_clear_void, 2, true); }],
 		[cutscene_execute, function () { instance_destroy(sans); ink_sans.x -= 20; ink_sans.y -= 50; ink_sans.sprite_index = spr_ink_sans_flying_painting; }],
 		[cutscene_wait, 1],
@@ -124,10 +125,11 @@ cutscenes = [
 			part_particles_create(global.part_system_bullet, ink_sans.x + 5, ink_sans.y - 15, particle_pencil, 1);
 		}],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui],
+		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui_hight],
 		[cutscene_wait, 1],
 		// Empty XTale universe
 		[layer_background_sprite, background_id, spr_background_empty_xtale],
+		[cutscene_execute, function () { instance_destroy(background_animator); }],
 		[cutscene_execute, function () {
 			part_particles_clear(particle_paper);
 			part_particles_clear(particle_pencil);

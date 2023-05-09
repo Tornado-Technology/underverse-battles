@@ -179,7 +179,6 @@ if (_id == 1 && attack_num == 2) {
 if (_id == 2 || _id == 3) {
 	update_2_0 = function() {
 		side = choose(dir.up, dir.down, dir.left, dir.right);
-			new_warning = true;
 			if (attack_num == 0) {
 				_soul.gravity_force = side;
 				_soul.max_fly_time = 60;
@@ -188,6 +187,15 @@ if (_id == 2 || _id == 3) {
 				_soul.addit_spd = 5;
 			}
 			var i = 0;
+			
+			if (attack_num == 0) {
+				var warning_scale = 5;
+			}
+			else {
+				var warning_scale = 12;
+			}
+			draw_warning(side, warning_scale);
+			audio_play_sound_plugging(snd_warning);
 
 			repeat(num) {
 				if (side == dir.up) {
