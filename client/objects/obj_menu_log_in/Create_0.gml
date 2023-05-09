@@ -15,22 +15,19 @@ var ox = fw + 1;
 text_waiting_for_login =  translate_get("Menu.LogIn.WaitingForLogin");
 text_title =  translate_get("Menu.LogIn.Title");
 
-on_login = on_network_login.connect(function(args) {
-	switch(args[0]) {
-		case 100:
-			autolog_save(inputbox_login.text, inputbox_password.text);
-			show_loading = false;
-			buttons_show = true;
-			menu_successful_login(obj_menu);
-			menu_switch_pause(false);
-			instance_destroy();
-			break;
-		
-		default:
-			show_loading = false;
-			buttons_show = true;
-			menu_switch_pause(false);
-			break;
+on_login = on_network_login.connect(function() {
+	if (network_account != undefined) {
+		autolog_save(inputbox_login.text, inputbox_password.text);
+		show_loading = false;
+		buttons_show = true;
+		menu_switch_pause(false);
+		menu_successful_login(obj_menu);
+		instance_destroy();
+	}
+	else {
+		show_loading = false;
+		buttons_show = true;
+		menu_switch_pause(false);
 	}
 });
 
