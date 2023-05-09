@@ -99,7 +99,7 @@ export const handlePacket = async (client: Client, data: any) => {
         }
 
         client.startVerification(async (status) => {
-          if (status != statusCode.success) {
+          if (status !== statusCode.success) {
             client.sendRegister(status);
             return;
           }

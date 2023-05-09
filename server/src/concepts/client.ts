@@ -4,7 +4,7 @@ import { Socket } from 'net';
 import { generateVerificationCode, hashPassword } from '../util/encrypting.js';
 import { freshProfile, IProfile, Profile } from '../schemas/profile.js';
 import { findIncoming, findOutgoing } from '../schemas/friendRequest.js';
-import { IAccount, usernameDefault } from '../schemas/account.js';
+import { Account, IAccount, usernameDefault } from '../schemas/account.js';
 import { getRank } from '../content/rankList.js';
 import { statusCode } from '../status.js';
 import ClientFight from './clientFight.js';
@@ -29,7 +29,7 @@ export enum state {
 }
 
 export default class Client extends SendStuff {
-  public readonly verificationCodeClearingTime: number = 50000;
+  public readonly verificationCodeClearingTime: number = 50_000;
 
   public ping: number;
   public verificationCode: string;
@@ -138,8 +138,8 @@ export default class Client extends SendStuff {
   }
 
   public async deleteAccount(): Promise<void> {
-    await App.database.collection('profiles').deleteOne({ _id: this.profile._id });
-    await App.database.collection('accounts').deleteOne({ _id: this.account._id });
+    await Profile.deleteOne({ _id: this.profile._id });
+    await Account.deleteOne({ _id: this.account._id });
     this.logout();
   }
 
