@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Multiplayer",
-    "path": "folders/Objects/UI/Menu/Pages/Multiplayer.yy",
+    "name": "AccountAction",
+    "path": "folders/Objects/UI/Menu/Pages/AccountAction.yy",
   },
 }
