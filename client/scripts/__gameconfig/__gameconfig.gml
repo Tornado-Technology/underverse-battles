@@ -17,7 +17,7 @@
 #macro logging_discord_url "https://discord.com/api/webhooks/1103616545084678214/M45_mY8SdxoivonuaWhC1FSI6J5-PBE92a5H_gXtDVhLp5vRyAKzqukD3i5AKvR6_Xf4"
 #macro logging_enabled development_mode
 #macro logging_to_file development_mode
-#macro logging_to_discord (!development_mode || mobile_mode)
+#macro logging_to_discord true
 #macro netlog_enabled development_mode
 #macro netlog_ip "127.0.0.1"
 #macro netlog_port 5101
