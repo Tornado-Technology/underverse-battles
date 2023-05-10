@@ -50,7 +50,7 @@ export default class Fight {
     this._state = state.wait;
     this.clients = [client1, client2];
     this.initiative = Math.randomRange(0, 1);
-    Logger.info(`Fight[${this.id}] created, ${client1?.account.username} vs ${client2?.account.username}`);
+    Logger.info(`Fight[${this.id}] created, ${client1?.username} vs ${client2?.username}`);
     this.initializeClients();
   }
 
