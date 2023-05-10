@@ -47,6 +47,8 @@ skip = function() {
 }
 
 special_action = function() {
-	fight_set_player_special_action(0);
-	audio_play_sound(sound_select, 0, false);
+	if (fight_check_player_special_action_readiness(0)) {
+		fight_set_player_special_action(0);
+		audio_play_sound(sound_select, 0, false);
+	}
 }

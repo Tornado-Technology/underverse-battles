@@ -74,6 +74,10 @@ cutscene_special_attack = function () {
 // Cutscenes
 cutscenes = [
 	[
+		[cutscene_execute, function () {
+			audio_play_sound(snd_park, 2, true);
+			audio_sound_gain(snd_park, 1, 0);
+		}],
 		[cutscene_wait, 4],
 		[cutscene_dialog, episode + "Dialog1"],
 		[cutscene_wait, 3],
@@ -99,6 +103,7 @@ cutscenes = [
 		[cutscene_dialog, episode + "Dialog3_Line1"],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_pukes],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting5],
+		[audio_play_sound_once, snd_ink_puking],
 		[cutscene_wait, 3],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting_joyful],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting6],
@@ -107,12 +112,19 @@ cutscenes = [
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_apologetic],
 		[cutscene_wait_dialog_end],
 		[effect_fade, 4, 1, c_white, c_white, false, fight_depth.ui],
+		[cutscene_execute, function () { audio_sound_gain(snd_park, 0, 4000); }],
 		[cutscene_wait, 4],
 		// Doodle Sphere
 		[layer_background_sprite, background_id, spr_background_doodle_sphere_layer_0],
-		[cutscene_execute, function () { background_animator = instance_create(obj_background_doodle_sphere_without_platform); }],
-		[cutscene_execute, function () { audio_play_sound(snd_into_clear_void, 2, true); }],
-		[cutscene_execute, function () { instance_destroy(sans); ink_sans.x -= 20; ink_sans.y -= 50; ink_sans.sprite_index = spr_ink_sans_flying_painting; }],
+		[cutscene_execute, function () {
+			background_animator = instance_create(obj_background_doodle_sphere_without_platform);
+			audio_play_sound(snd_into_clear_void, 2, true);
+			audio_stop_sound(snd_park);
+			instance_destroy(sans);
+			ink_sans.x -= 20;
+			ink_sans.y -= 50;
+			ink_sans.sprite_index = spr_ink_sans_flying_painting;
+		}],
 		[cutscene_wait, 1],
 		[cutscene_dialog_async, episode + "Dialog5_Line1"],
 		[cutscene_wait_by_dialog, 1],
@@ -164,6 +176,10 @@ cutscenes = [
 		[cutscene_wait, 1],
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[cutscene_execute, function () {
+			audio_play_sound(snd_park, 2, true);
+			audio_sound_gain(snd_park, 1, 0);
+		}],
 		[cutscene_camera_set_position, 0, 0],
 		[cutscene_execute, function () {
 			instance_destroy(notebook);
@@ -176,6 +192,7 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 2],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting2],
 		// Memories in empty XTale universe
+		[cutscene_execute, function () { audio_stop_sound(snd_park); }],
 		[cutscene_wait_by_dialog, 4],
 		[layer_background_sprite, background_id, spr_background_empty_xtale],
 		[cutscene_execute, function () {
@@ -256,6 +273,10 @@ cutscenes = [
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest],
 		[cutscene_execute, function () {
+			audio_play_sound(snd_park, 2, true);
+			audio_sound_gain(snd_park, 1, 0);
+		}],
+		[cutscene_execute, function () {
 			instance_destroy(core_frisk);
 			ink_sans = instance_create_depth(255, 197, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_sitting7 });
 			sans = instance_create_depth(223, 197, fight_depth.player, obj_character_sans, { sprite_index: spr_sans_sitting2 });
@@ -276,9 +297,11 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 1],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting6],
 		[cutscene_wait_dialog_end],
+		[cutscene_execute, function () { audio_sound_gain(snd_park, 0, 2000); }],
 		[effect_fade, 2, 2, c_white, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		[cutscene_execute, function () {
+			audio_stop_sound(snd_park);
 			instance_destroy(ink_sans);
 			instance_destroy(sans);
 		}],
@@ -320,11 +343,13 @@ cutscenes = [
 		[cutscene_object_set_sprtie, sans, spr_char_sans_walk_left],
 		[cutscene_character_move, sans, -300, 0, 2],
 		[cutscene_wait, 1],
+		[cutscene_execute, function () { audio_sound_gain(snd_park, 0, 2000); }],
 		[effect_fade, 2, 2, c_black, c_black, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		[cutscene_execute, function () {
 			instance_destroy(sans);
 		}],
+		[cutscene_execute, function () { audio_stop_sound(snd_park); }],
 		[cutscene_execute, function () { cutscene_create(cutscenes[3]); }]
 	],
 	[

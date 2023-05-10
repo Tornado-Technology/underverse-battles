@@ -140,7 +140,7 @@ if (_id == 1 && attack_num == 2) {
 // Зоны урона на квадратной арене
 if (_id == 2 && attack_num == 0) {
 	update_2_0 = function() {
-		var random_position = Vector2(irandom_range(_border.x - _border.left + 12, _border.x + _border.right - 12), irandom_range(_border.y - _border.up + 12, _border.y + _border.down - 12));
+		var random_position = Vector2(irandom_range(_border.x - _border.left + 2, _border.x + _border.right - 2), irandom_range(_border.y - _border.up + 2, _border.y + _border.down - 2));
 		instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, obj_damage_zone_warning_xchara);
 	}
 }
@@ -148,7 +148,7 @@ if (_id == 2 && attack_num == 0) {
 // Зоны урона на небольшой арене
 if (_id == 2 && attack_num == 1) {
 	update_2_1 = function() {
-		var random_position = Vector2(irandom_range(_border.x - _border.left + 12, _border.x + _border.right - 12), _border.y);
+		var random_position = Vector2(irandom_range(_border.x - _border.left + 2, _border.x + _border.right - 2), _border.y);
 		instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, obj_damage_zone_warning_xchara);
 	}
 }

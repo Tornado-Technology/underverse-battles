@@ -12,8 +12,6 @@ if (fight_get_player_action(0) == 1)
 	att = irandom_range(1, 2);
 if (fight_get_player_action(0) == 2)
 	att = 2;
-if (fight_get_player_action(0) == 3)
-	exit;
 
 if (fight_player_using_special_action(0)) {
 	_hits = irandom_range(3, 7);

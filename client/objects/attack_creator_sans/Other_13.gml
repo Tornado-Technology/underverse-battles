@@ -22,20 +22,3 @@ if (!started) {
 	
 	started = true;
 }
-
-if (attack_num == 0) {
-	var warning_scale = 5;
-	if(!_soul.blue_attack and new_warning) {
-		draw_warning(side, warning_scale);
-		audio_play_sound_plugging(snd_warning);
-		new_warning = false;
-	}
-}
-else {
-	var warning_scale = 11;
-	if(new_warning) {
-		draw_warning(side, warning_scale);
-		audio_play_sound_plugging(snd_warning);
-		new_warning = false;
-	}
-}

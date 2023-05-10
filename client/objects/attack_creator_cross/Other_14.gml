@@ -1,5 +1,4 @@
 /// @description Methods
-event_inherited();
 
 // Кости вылезают из стенок
 if (_id == 0 && attack_num == 0) {
@@ -41,10 +40,81 @@ if (_id == 0 && attack_num == 2) {
 	}
 }
 
+// Платформы и кости
+if (_id == 0 && attack_num == 3) {
+	update_0_3 = function(pow) {
+		var main_speed = 1 + pow * 0.1;
+		var chance = irandom_range(0, 6);
+		if (chance % 2 == 0) {
+			create_bone(_border.x - _border.left, _border.y + _border.down, bone_obj, main_speed, 1.4, 0, 0);
+		}
+		if (chance > 2 && chance != 5) {
+			create_bone(_border.x + _border.right, _border.y + 15, bone_obj, -main_speed, 1.4, 0, 0);
+		}
+		if (chance > 4 || chance == 1) {
+			create_bone(_border.x - _border.left, _border.y - 15, bone_obj, main_speed, 1.4, 0, 0);
+		}
+	}
+	
+	update_0_3_2 = function(pow) {
+		if (pow >= 3) {
+			create_aiming_gasterblaster(aim_gb_obj, _soul);
+			time_source_start(time_source_update_0_3_2);
+		}
+	}
+	
+	update_0_3_3 = function(pow) {
+		var main_speed = 1 + pow * 0.1;
+		create_next_moving_platform(_border.x - _border.left - 40, _border.y - 15, 4, 6, 60, main_speed);
+		create_next_moving_platform(_border.x + _border.right + 40, _border.y + 15, 4, 6, 60, -main_speed);
+	}
+}
+
+// Наводящиеся гастербластеры
+if (_id == 1 && attack_num == 0) {
+	update_1_0 = function(pow) {
+		create_aiming_gasterblaster(aim_gb_obj, _soul);
+	}
+	
+	update_1_0_2 = function(pow) {
+		repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+	}
+}
+
 // Синяя душа и гастербластеры
 if (_id == 1 && attack_num == 1) {
 	update_1_1 = function(pow) {
 		repeat (2) { create_aiming_gasterblaster(aim_gb_obj, _soul); }
+	}
+}
+
+// Платформы и гастербластеры
+if (_id == 1 && attack_num == 2) {
+	update_1_2 = function(pow) {
+		var _gb_pos = irandom_range(0, 2);
+		var border_dist = 180;
+		var sector_y_step = 35;
+		var sector_y = _border.y - _border.up + 25;
+		switch (_gb_pos) {
+			case 0:
+				create_gasterblaster(gb_obj, _border.x + border_dist, sector_y - 5, _border.x, sector_y - 5,  270);
+				break;
+			case 1:
+				create_gasterblaster(gb_obj, _border.x + border_dist, sector_y + sector_y_step - 5, _border.x, sector_y + sector_y_step - 5,  270);
+				break;
+			case 2:
+				create_gasterblaster(gb_obj, _border.x + border_dist, sector_y + sector_y_step * 2 - 5, _border.x, sector_y + sector_y_step * 2 - 5,  270);
+				break;
+		}
+	}
+	
+	update_1_2_2 = function(pow) {
+		var main_speed = 0.5 + pow * 0.1;
+		var sector_y_step = 35;
+		var sector_y = _border.y - _border.up + 25;
+		create_next_moving_platform(_border.x - _border.left - 40, sector_y, 4, 6, 60, main_speed);
+		create_next_moving_platform(_border.x + _border.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed);
+		create_next_moving_platform(_border.x - _border.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
 	}
 }
 

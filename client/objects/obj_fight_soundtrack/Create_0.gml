@@ -21,4 +21,5 @@ if (is_struct(soundtrack)) {
 }
 else {
 	audio_play_sound(soundtrack, 2, true);
+	audio_sound_gain(soundtrack, data_get("Settings.Gain.Music"), 0);
 }
