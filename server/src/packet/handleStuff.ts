@@ -297,7 +297,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
         const opponent = clients[clients.length - 1];
         clients.forEach(element => {
-          Logger.info(element.toString());
+          Logger.info(element.username);
         });
         if (client.fight.hasInstance || opponent.fight.hasInstance || client === opponent) {
           client.sendFightJoin(statusCode.error, undefined);
