@@ -296,9 +296,15 @@ export const handlePacket = async (client: Client, data: any) => {
         }
 
         const opponent = clients[clients.length - 1];
-        if (client.fight.hasInstance || opponent.fight.hasInstance || client === opponent) {
+        Logger.info('Waiting players: ');
+        clients.forEach(element => {
+          Logger.info(element.username);
+        });
+        if (client.fight.hasInstance || opponent.fight.hasInstance || client.username === opponent.username) {
           client.sendFightJoin(statusCode.error, undefined);
-          Logger.info('The client is trying to start a battle with himself');
+          Logger.info('The client is trying to start a battle with himself:');
+          Logger.info(client.username);
+          Logger.info(opponent.username);
           break;
         }
         
