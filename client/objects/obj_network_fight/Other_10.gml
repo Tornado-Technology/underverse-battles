@@ -11,6 +11,5 @@ if (state == fight_state.dodge) {
 }
 
 if (state == fight_state.reset) {
-	state = fight_state.choosing;
 	timer_start();
 }
