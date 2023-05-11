@@ -298,9 +298,11 @@ export const handlePacket = async (client: Client, data: any) => {
         const opponent = clients[clients.length - 1];
         if (client.fight.hasInstance || opponent.fight.hasInstance || client === opponent) {
           client.sendFightJoin(statusCode.error, undefined);
+          Logger.info('The client is trying to start a battle with himself');
           break;
         }
-
+        
+        Logger.info('Match START');
         Matchmaker.makeMatch(client, opponent);
       } catch (exception) {
         client.setState(state.inMenu);
