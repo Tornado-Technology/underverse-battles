@@ -3,7 +3,8 @@
 
 input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
 
-if (!fight_get_player_choose(0)) exit;
+// Actualy player don't choose yet
+if (!fight_player_selecting(0)) exit;
 
 // Inciative
 var initiative      = fight_get_initiative();
