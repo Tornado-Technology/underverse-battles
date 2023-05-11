@@ -118,6 +118,65 @@ if (_id == 1 && attack_num == 2) {
 	}
 }
 
+// Синяя атака
+if (_id == 2) {
+	update_2_0 = function() {
+		side = choose(dir.up, dir.down, dir.left, dir.right);
+			if (attack_num == 0) {
+				_soul.gravity_force = side;
+				_soul.max_fly_time = 60;
+				_soul.fly_time = _soul.max_fly_time;
+				_soul.blue_attack = true;
+				_soul.addit_spd = 5;
+			}
+			var i = 0;
+			
+			if (attack_num == 0) {
+				var warning_scale = 5;
+			}
+			else {
+				var warning_scale = 12;
+			}
+			draw_warning(side, warning_scale);
+			audio_play_sound_plugging(snd_warning);
+
+			repeat(num) {
+				if (side == dir.up) {
+					_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y - _border.up - 25, bone_obj, 0, 1, 0, 180);
+				}
+				if (side == dir.down) {
+					_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y + _border.down + 25, bone_obj, 0, 1, 0, 0);
+				}
+				if (side == dir.left) {
+					_bones[i] = create_bone(_border.x - _border.left - 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 270);
+				}
+				if (side == dir.right) {
+					_bones[i] = create_bone(_border.x + _border.right + 25, _border.y - _border.up + i * 10, bone_obj, 0, 1, 0, 90);
+				}
+				++i;
+			}
+			character_instance.change_sprite_hand_dir(side);
+	}
+
+	update_2_1 = function() {
+		var i = 0;
+		repeat(num) {
+			_bones[i].change_scale(bone_scale, 0.2);
+			++i;
+		}
+		instance_destroy(obj_warning);
+		audio_play_sound_plugging(snd_spare_up);
+	}
+
+	update_2_2 = function() {
+		var i = 0;
+		repeat(num) {
+			_bones[i].change_scale(1, 0.2);
+			++i;
+		}
+	}
+}
+
 // Крестоносец
 if (_id == 3) {
 	update_3_0 = function() {

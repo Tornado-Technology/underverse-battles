@@ -355,6 +355,10 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'fightHp':
       client.fight.instance?.setHp(client, data.hp);
       break;
+    
+    case 'fightMana':
+        client.fight.instance?.addMana(client, data.mana);
+        break;
 
     case 'fightSoul':
       client.fight.instance?.setSoulData(client, data.x, data.y, data.angle, data.ability);

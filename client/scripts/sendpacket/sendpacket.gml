@@ -165,6 +165,13 @@ function send_heal_action(hp) {
 	});
 }
 
+/// @param {Real} mana
+function send_fight_mana(mana) {
+	send("fightMana", {
+		mana: mana,
+	});
+}
+
 function send_fight_stun() {
 	send("fightStun");
 }

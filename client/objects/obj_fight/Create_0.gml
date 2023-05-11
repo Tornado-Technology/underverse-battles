@@ -5,6 +5,9 @@ global.fight_instance = id;
 fight_network_mode = false;
 story_mode = false;
 
+// Set camera
+camera_set_position(0, 0);
+
 // Required
 required_components = {
 	ui: obj_fight_ui,
