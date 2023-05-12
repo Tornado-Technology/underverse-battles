@@ -1,5 +1,6 @@
 if (state == fight_state.battle) {
 	statistics_set_selection_attacks(fight_get_player_action(0), fight_get_player_action(1));
+	timer_stop();
 	instance_create_one(obj_battle);
 }
 

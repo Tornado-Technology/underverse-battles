@@ -11,14 +11,12 @@ set_action_power = function() {
 
 skip = function() {
 	send_fight_skip();
-	timer_stop();
 	audio_play_sound(sound_select, 0, false);
 }
 
 special_action = function() {
 	if (fight_check_player_special_action_readiness(0)) {
 		send_fight_special_action();
-		timer_stop();
 		audio_play_sound(sound_select, 0, false);
 	}
 }
