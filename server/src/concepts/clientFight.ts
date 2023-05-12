@@ -180,7 +180,7 @@ export default class ClientFight {
     }
 
     const fight = Matchmaker.findFight(profile.fight.id);
-    if (fight) {
+    if (!fight) {
       this.unit();
       await this.save();
 
