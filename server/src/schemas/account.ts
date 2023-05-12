@@ -49,7 +49,7 @@ export const validatePassword = (password: string): number => {
 }
 
 export const validateUsername = async (username: string): Promise<number> => {
-  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item === username).length >= 0) {
+  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item === username)?.length > 0) {
     return statusCode.databaseUsernameWrong;
   }
 

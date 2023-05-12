@@ -1,6 +1,7 @@
 import Client, { state } from '../concepts/client.js';
 import App from '../app.js';
 import Fight from '../game/fight/fight.js';
+import Logger from "./logging";
 
 export default class Matchmaker {
   public static makeMatch(client1: Client, client2: Client): void {
@@ -16,6 +17,21 @@ export default class Matchmaker {
   }
 
   public static addRating(winner: Client, looser: Client): number {
+    if (!winner.hasProfile || !looser.hasProfile) {
+      let message = 'Add rating failed, reason: ';
+
+      if (!winner?.profile && !looser?.profile) {
+        message += `both clients ${winner.username}(Winner) and ${looser.username}(Loser), don't have profile!`
+      } else {
+        const client = !winner.hasProfile ? winner : looser;
+        const role = !winner.hasProfile ? 'Winner' : 'Loser';
+        message += `client ${client.username}(${role}), don't have profile!`
+      }
+
+      Logger.warn(message);
+      return 0;
+    }
+
     const winnerRating = winner.profile.rating;
     const looserRating = looser.profile.rating;
     let difference = 0;

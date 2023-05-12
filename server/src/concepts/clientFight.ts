@@ -8,6 +8,8 @@ import Logger from '../util/logging.js';
 import Matchmaker from '../util/matchmaker.js';
 import { statusCode } from '../status.js';
 
+const defaultCharacterId = 0;
+
 export default class ClientFight {
   public readonly client: Client;
 
@@ -99,10 +101,11 @@ export default class ClientFight {
     this.characterSkinId = skinId;
     this.characterInfo = characterInfoGetById(characterId);
 
-    if (this.characterInfo.skins) {
-      if (this.characterInfo.skins[skinId]) {
-        this.characterInfo = this.characterInfo.skins[skinId];
-      }
+    if (!this.characterInfo) {
+      Logger.warn(`Character loading failed, reason: client ${this.client.username} set wrong CharacterId (${this.characterId}); Set defaultCharacterId: ${defaultCharacterId}`);
+      this.characterInfo = characterInfoGetById(defaultCharacterId);
+    } else if (this.characterInfo.skins && this.characterInfo.skins[skinId]) {
+      this.characterInfo = this.characterInfo.skins[skinId];
     }
 
     this.hpMax = this.characterInfo.hpMax;

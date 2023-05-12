@@ -249,6 +249,10 @@ export default class Client extends SendStuff {
   }
 
   public get isLogin(): boolean {
+    return this.hasAccount && this.hasProfile;
+  }
+
+  public get hasAccount(): boolean {
     return Boolean(this.account);
   }
 

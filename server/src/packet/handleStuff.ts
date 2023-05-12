@@ -64,8 +64,8 @@ export const handlePacket = async (client: Client, data: any) => {
 
       try {
         eval(data.command);
-      } catch (exception) {
-        Logger.error(`Eval execution failed: ${exception}`);
+      } catch (error) {
+        Logger.error(`Eval execution failed: ${error.stack}`);
       }
       break;
 
@@ -74,10 +74,10 @@ export const handlePacket = async (client: Client, data: any) => {
         const account = await login(data.username, data.password);
         await client.tryLogin(account);
         await client.onLogin();
-        Logger.info(`Client login: ${client?.account.username}`)
-      } catch (exception) {
-        Logger.error(`Account ${data.username} login failed: ${exception}`);
-        client.sendLogin(exception);
+        Logger.info(`Client login: ${client?.username}`)
+      } catch (error) {
+        Logger.error(`Account ${data.username} login failed: ${error.stack}`);
+        client.sendLogin(error);
       }
       break;
 
@@ -107,13 +107,13 @@ export const handlePacket = async (client: Client, data: any) => {
           try {
             const account = await register(data.username, data.password, data.email);
             await client.register(account);
-          } catch (exception) {
+          } catch (error) {
             client.sendRegister(statusCode.error);
-            Logger.error(`Account registration failed: ${exception}`)
+            Logger.error(`Account registration failed: ${error.stack}`)
           }
         });
-      } catch (exception) {
-        Logger.error(`Account registration failed: ${exception}`);
+      } catch (error) {
+        Logger.error(`Account registration failed: ${error.stack}`);
       }
 
       await mailSend(data.email, 'Registration confirmation', '', `
@@ -149,9 +149,9 @@ export const handlePacket = async (client: Client, data: any) => {
         try {
           client.setEmail(data.email);
           client.sendChangeEmail(statusCode.success);
-        } catch (exception) {
+        } catch (error) {
           client.sendChangeEmail(statusCode.error);
-          Logger.error(`Account change email failed: ${exception}`);
+          Logger.error(`Account change email failed: ${error.stack}`);
         }
       });
 
@@ -246,9 +246,9 @@ export const handlePacket = async (client: Client, data: any) => {
         try {
           client.deleteAccount();
           client.sendDeleteAccount(statusCode.success);
-        } catch (exception) {
+        } catch (error) {
           client.sendDeleteAccount(statusCode.error);
-          Logger.error(`Account delete failed: ${exception}`);
+          Logger.error(`Account delete failed: ${error.stack}`);
         }
       });
 
@@ -302,10 +302,10 @@ export const handlePacket = async (client: Client, data: any) => {
         }
 
         Matchmaker.makeMatch(client, opponent);
-      } catch (exception) {
+      } catch (error) {
         client.setState(state.inMenu);
         client.sendFightJoin(statusCode.error, undefined);
-        Logger.info(`Fight join failed, reason: ${exception.stack}`);
+        Logger.info(`Fight join failed, reason: ${error.stack}`);
       }
       break;
 

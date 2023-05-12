@@ -35,12 +35,12 @@ class Server {
       await Client.remove(client);
     });
 
-    socket.on('error', (exception) => {
-      if (exception.message.includes('ECONNRESET')) {
+    socket.on('error', (error) => {
+      if (error.message.includes('ECONNRESET')) {
         Logger.info('Socket violently disconnected');
         return;
       }
-      Logger.error(`Socket error handled: ${exception}`);
+      Logger.error(`Socket error handled: ${error.stack}`);
     });
   }
 
