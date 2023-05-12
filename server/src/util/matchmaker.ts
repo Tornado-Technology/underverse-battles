@@ -17,15 +17,15 @@ export default class Matchmaker {
   }
 
   public static addRating(winner: Client, looser: Client): number {
-    if (!winner.hasProfile || !looser.hasProfile) {
+    if (!winner?.hasProfile || !looser?.hasProfile) {
       let message = 'Add rating failed, reason: ';
 
-      if (!winner?.profile && !looser?.profile) {
-        message += `both clients ${winner.username}(Winner) and ${looser.username}(Loser), don't have profile!`
+      if (!winner?.hasProfile && !looser?.hasProfile) {
+        message += `both clients ${winner?.username}(Winner) and ${looser?.username}(Loser), don't have profile!`
       } else {
-        const client = !winner.hasProfile ? winner : looser;
-        const role = !winner.hasProfile ? 'Winner' : 'Loser';
-        message += `client ${client.username}(${role}), don't have profile!`
+        const client = !winner?.hasProfile ? winner : looser;
+        const role = !winner?.hasProfile ? 'Winner' : 'Loser';
+        message += `client ${client?.username}(${role}), don't have profile!`
       }
 
       Logger.warn(message);
