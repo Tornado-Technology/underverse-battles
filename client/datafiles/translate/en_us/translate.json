@@ -913,7 +913,7 @@
         "{Ink:combat}You're like my brother... and I don't want my brother being sad."
       ],
       "Dialog16": [
-        "{CrossXEvent:calm}Ink? Is that you?"
+        "{CrossXEvent:normal}Ink? Is that you?"
       ],
       "Dialog17": [
         "{Error:normal}Humm... This place is pretty big for a single person.",
@@ -950,7 +950,7 @@
       "Dialog20": [
         "{Error:normal}Damn, Ink is good at dodging my attacks.",
         "{Error:normal}I need to use my special attack.",
-        "{Error:normal}I'm tired of these games!"
+        "{Error:angry}I'm tired of these games!"
       ],
       "Dialog21": [
         "{C:satisfied}I'M FREE!",
