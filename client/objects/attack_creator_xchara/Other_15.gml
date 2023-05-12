@@ -79,7 +79,7 @@ if (_id == 1 && attack_num == 1) {
 // Волна урона с предупреждением
 if (_id == 1 && attack_num == 2) {
 	var period = 140 - _power * 10;
-	var amount = 3;
+	var amount = 3 + _power;
 	time_source_update_1_2 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_1_2();
 		time_source_start(time_source_update_1_2_2);
@@ -87,7 +87,7 @@ if (_id == 1 && attack_num == 2) {
 	time_source_update_1_2_2 = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {
 		update_1_2_2();
 	});
-	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 1, time_source_units_seconds, function () {
+	time_source_update_destroy_1_2 = time_source_create(time_source_game, period * amount / 60 + 1.5, time_source_units_seconds, function () {
 		instance_destroy();
 	});
 }

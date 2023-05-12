@@ -300,7 +300,7 @@
         "307. 用户名正忙",
         "308. 用户名不符合规则",
         "309. 密码错误",
-        "310. 邮箱不存在",
+        "310. 电子邮件正忙",
         "311. 电子邮件不符合规则",
         "312. 验证码错误",
         "313. 验证超时"
@@ -867,7 +867,7 @@
       ],
       "Dialog8_Line1": [
         "{Sans:confused}等一下下...如果他在屠杀时间线中，导致这场屠杀的人在哪里？",
-        "{Ink:calm}CChara封在他体内。怎么做到的？他从没告诉我过...",
+        "{Ink:calm}Chara封在他体内。怎么做到的？他从没告诉我过...",
         "{Ink:calm}起初，他们是两个独立的人。",
         "{Ink:calm}然而，当我拜访Cross，和他画画时，他赢得了对两个灵魂的完全控制。"
       ],
@@ -875,7 +875,7 @@
         "{Ink:none}一天，在画画的时候，他站了起来。",
         "{Ink:none}他看起来很沮丧。"
       ],
-      "Dialog10_Line2": [
+      "Dialog10_Line1": [
         "{Ink:none}他告诉我，他的世界里出现了一个陌生的孩子，并试图说服他和其他像他一样的幸存者一起去一个地方。"
       ],
       "Dialog11_Line2": [
@@ -914,7 +914,7 @@
         "{Ink:combat}你就像我兄弟...我不想让我兄弟伤心。"
       ],
       "Dialog16": [
-        "{CrossXEvent:calm}Ink? 是你吗？"
+        "{CrossXEvent:normal}Ink? 是你吗？"
       ],
       "Dialog17": [
         "{Error:normal}唔...这地方对一个人来说非常大。",
@@ -951,11 +951,11 @@
       "Dialog20": [
         "{Error:normal}可恶，Ink擅长躲开我的攻击。",
         "{Error:normal}我要用到我的特殊攻击。",
-        "{Error:normal}这游戏我感到厌烦了！"
+        "{Error:angry}这游戏我感到厌烦了！"
       ],
       "Dialog21": [
         "{C:satisfied}我自由辣！",
-        "{Cross:angry}不！等等！",
+        "{CrossXEvent:angry}不！等等！",
         "{Ink:injured}C-Cross? 你还好吗？"
       ],
       "Dialog22": [

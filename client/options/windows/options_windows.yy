@@ -4,6 +4,7 @@
   "name": "Windows",
   "ConfigValues": {
     "Mobile": {"option_windows_borderless":"true",},
+    "Development": {"option_windows_version":"1.1.0.0",},
   },
   "option_windows_display_name": "UnderverseBattles",
   "option_windows_executable_name": "${project_name}.exe",
