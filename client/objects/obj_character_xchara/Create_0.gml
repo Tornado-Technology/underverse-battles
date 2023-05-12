@@ -50,8 +50,11 @@ special_action = SpecialAction("Character.XtaleChara.SpecialAttack", spr_special
 
 // Special
 on_dodged = function(player_id) {
-	if (hp < 20)
-		fight_add_player_mana(player_id, 10);
+	if (hp < 20) {
+		var added_mana = 10;
+		fight_add_player_mana(player_id, added_mana);
+		if (fight_network_mode) send_fight_mana(added_mana);
+	}
 };
 
 // Soundtrack

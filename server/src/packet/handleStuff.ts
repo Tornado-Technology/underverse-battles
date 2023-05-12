@@ -296,11 +296,20 @@ export const handlePacket = async (client: Client, data: any) => {
         }
 
         const opponent = clients[clients.length - 1];
-        if (client.fight.hasInstance || opponent.fight.hasInstance || client === opponent) {
+        Logger.info('Waiting players: ');
+        clients.forEach(element => {
+          Logger.info(element.username);
+        });
+        if (client.fight.hasInstance || opponent.fight.hasInstance || client.username === opponent.username) {
           client.sendFightJoin(statusCode.error, undefined);
+          Logger.info('The client is trying to start a battle with himself:');
+          Logger.info(client.username);
+          Logger.info(opponent.username);
           break;
         }
-
+        
+        client.setState(state.inFight);
+        opponent.setState(state.inFight);
         Matchmaker.makeMatch(client, opponent);
       } catch (error) {
         client.setState(state.inMenu);
@@ -346,6 +355,10 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'fightHp':
       client.fight.instance?.setHp(client, data.hp);
       break;
+    
+    case 'fightMana':
+        client.fight.instance?.addMana(client, data.mana);
+        break;
 
     case 'fightSoul':
       client.fight.instance?.setSoulData(client, data.x, data.y, data.angle, data.ability);

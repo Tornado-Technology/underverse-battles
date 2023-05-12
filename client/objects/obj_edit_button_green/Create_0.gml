@@ -32,7 +32,19 @@ press = function() {
 		edit_attack_number = irandom_range(0, edit_attack_number_max);
 	}
 	edit_objects();
-	with (attack_creator_green) event_user(5);
+	
+	with (attack_creator_green) {
+		var period = 7;
+		if (edit_button != noone) {
+			if (edit_button.edit_attack_number >= 6) period = 50;
+		}
+		
+		time_source_destroy(time_source_update_3_0);
+		time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+			update_3_0();
+		}, [], -1);
+		time_source_start(time_source_update_3_0);
+	}
 	
 	is_can_input = false;
 	time_source_start(cooldown);

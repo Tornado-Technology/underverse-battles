@@ -8,7 +8,8 @@ time_max = 10;
 
 #region Functions
 timeout = function () {
-	send_fight_skip();
+	if (fight_player_selecting(0))
+		send_fight_skip();
 }
 
 function timer_get_id() {

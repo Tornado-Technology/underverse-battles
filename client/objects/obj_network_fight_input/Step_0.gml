@@ -3,7 +3,8 @@
 
 input_ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
 
-if (!fight_get_player_choose(0)) exit;
+// Actualy player don't choose yet
+if (!fight_player_selecting(0)) exit;
 
 // Inciative
 var initiative      = fight_get_initiative();
@@ -63,7 +64,7 @@ if (input_skip && can_skip) {
 }
 
 // Special attack
-if (can_select && is_player_turn && fight_check_player_special_action_readiness(0)) {
+if (can_select && is_player_turn) {
 	if (input_special) {
 		special_action();
 		audio_play_sound_once(snd_special_attack);

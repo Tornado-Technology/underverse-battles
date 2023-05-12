@@ -1,6 +1,9 @@
 /// @description Instance create
 instance_create_struct(required_components);
 
+// Set camera
+camera_set_position(0, 0);
+
 // Players
 for (var player_id = 0; player_id < player_ammount; player_id++) {
 	player[player_id] = instance_create_depth(center_player_position_x[player_id], center_player_position_y[player_id], fight_depth.player, player_object[player_id]);

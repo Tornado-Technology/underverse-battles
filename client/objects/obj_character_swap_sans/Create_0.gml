@@ -55,8 +55,9 @@ max_damage_per_hit = 8;
 on_taking_soul_damage = function(soul, damage) {
 	if (damage_per_hit < max_damage_per_hit)
 		damage_per_hit += damage;
-	if (damage_per_hit == max_damage_per_hit) {
+	else {
 		soul.invincibility = 20;
+		damage = 0;
 	}
 	alarm[0] = 2;
 		

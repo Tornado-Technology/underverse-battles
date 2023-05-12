@@ -69,7 +69,9 @@ hand_dir_previous = dir.left;
 use_gravity_attack = true;
 
 on_skipping = function(player_id) {
-	fight_add_player_mana(player_id, 10);
+	var added_mana = 10;
+	fight_add_player_mana(player_id, added_mana);
+	if (fight_network_mode) send_fight_mana(added_mana);
 }
 
 change_sprite_hand_dir = function(hand_dir) {

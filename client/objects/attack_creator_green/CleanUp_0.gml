@@ -20,11 +20,6 @@ if (_id == 0 && attack_num == 3) {
 	time_source_destroy(time_source_update_destroy_0_3);
 }
 
-if (_id == 0 && attack_num == 3) {
-	time_source_destroy(time_source_update_0_3);
-	time_source_destroy(time_source_update_destroy_0_3);
-}
-
 if (_id == 1) {
 	time_source_destroy(time_source_update_1_0);
 	time_source_destroy(time_source_update_1_0_2);

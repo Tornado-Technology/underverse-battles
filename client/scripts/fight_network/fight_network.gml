@@ -42,7 +42,7 @@ function fight_network_collider(_enemyId){
 function fight_network_disconnect(_enemyId){
 	display_show_message_info(opponent_get_name(_enemyId) + " " + translate_get("Battle.Disconnected"), c_red);
 	if (global.fight_instance != noone)
-		global.fight_instance.enemy_death_id = _enemyId;
+		fight_set_player_hp(_enemyId, 0);
 	statistics_set_rating_points(-1);
 	return true;
 }
@@ -51,8 +51,7 @@ function fight_network_disconnect(_enemyId){
 function fight_network_finished(isWinner, rating) {
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, isWinner ? gameover.win :  gameover.lose);
 	if (global.fight_instance != noone) {
-		global.fight_instance.enemy_death_id = isWinner ? 1 : 0;
-		global.fight_instance.battle_death_animation = true;
+		fight_set_player_hp(isWinner, 0);
 	}
 	statistics_set_rating_points(isWinner, rating);
 	return true;

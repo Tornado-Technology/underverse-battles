@@ -40,6 +40,36 @@ if (_id == 0 && attack_num == 2) {
 	}
 }
 
+// Платформы и кости
+if (_id == 0 && attack_num == 3) {
+	update_0_3 = function(pow) {
+		var main_speed = 1 + pow * 0.1;
+		var chance = irandom_range(0, 6);
+		if (chance % 2 == 0) {
+			create_bone(_border.x - _border.left, _border.y + _border.down, bone_obj, main_speed, 1.4, 0, 0);
+		}
+		if (chance > 2 && chance != 5) {
+			create_bone(_border.x + _border.right, _border.y + 15, bone_obj, -main_speed, 1.4, 0, 0);
+		}
+		if (chance > 4 || chance == 1) {
+			create_bone(_border.x - _border.left, _border.y - 15, bone_obj, main_speed, 1.4, 0, 0);
+		}
+	}
+	
+	update_0_3_2 = function(pow) {
+		if (pow >= 3) {
+			create_aiming_gasterblaster(aim_gb_obj, _soul);
+			time_source_start(time_source_update_0_3_2);
+		}
+	}
+	
+	update_0_3_3 = function(pow) {
+		var main_speed = 1 + pow * 0.1;
+		create_next_moving_platform(_border.x - _border.left - 40, _border.y - 15, 4, 6, 60, main_speed);
+		create_next_moving_platform(_border.x + _border.right + 40, _border.y + 15, 4, 6, 60, -main_speed);
+	}
+}
+
 // Нож режет арену и кости вылетают справа и слева
 if (_id == 1 && attack_num == 0) {
 	update_1_0 = function(pow) {

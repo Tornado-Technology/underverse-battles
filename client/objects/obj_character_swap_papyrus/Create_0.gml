@@ -52,6 +52,7 @@ use_gravity_attack = true;
 
 on_skipping = function(player_id) {
 	fight_add_player_mana(player_id, 10);
+	if (fight_network_mode) send_fight_mana(added_mana);
 }
 
 // Soundtrack
