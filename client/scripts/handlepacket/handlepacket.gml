@@ -180,6 +180,8 @@ function handle_packet(data) {
 		case "fightAction":
 			// Send obj_fight this info
 			global.fight_instance.player_action[data.playerId] = data.action;
+			statistics_set_selection_attack_network(data.playerId, data.action);
+			show_debug_message("Attack: " + string(data.playerId) + ",  number:" + string(data.action));
 			fight_update_state();
 			break;
 		
@@ -191,11 +193,13 @@ function handle_packet(data) {
 		case "fightSkip":
 			// Send obj_fight this info
 			fight_set_player_skip(data.playerId);
+			statistics_set_selection_attack_network(data.playerId, fight_action_type.skip);
 			break;
 			
 		case "fightSpecialAction":
 			// Send obj_fight this info
 			fight_set_player_special_action(data.playerId);
+			statistics_set_selection_attack_network(data.playerId, fight_action_type.special_attack);
 			break;
 			
 		case "fightSpecialActionCharge":
