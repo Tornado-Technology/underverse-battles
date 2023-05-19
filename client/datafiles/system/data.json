@@ -66,6 +66,11 @@
     }
   },
   "Data": {
+    "Minigames": {
+      "GetBanana": {
+        "Highscore": 0
+      }
+    },
     "FirstGame": false,
     "Soundtrack": -1,
     "Background": 0,

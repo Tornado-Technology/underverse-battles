@@ -72,6 +72,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Mingames",
-    "path": "folders/Sprites/Icons/Mingames.yy",
+    "path": "folders/Sprites/Mingames.yy",
   },
 }

@@ -76,7 +76,7 @@ export const handlePacket = async (client: Client, data: any) => {
         await client.onLogin();
         Logger.info(`Client login: ${client?.username}`)
       } catch (error) {
-        Logger.error(`Account ${data.username} login failed: ${error.stack}`);
+        Logger.error(`Account ${data.username} login failed: ${error}, ${error.stack ?? ''}`);
         client.sendLogin(error);
       }
       break;

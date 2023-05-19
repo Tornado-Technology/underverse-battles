@@ -1,4 +1,18 @@
-if (!is_crush) exit;
+if (!is_crush) {
+	x -= movement_speed;
+	
+	if (place_meeting(x, y, obj_banana_minigame_player)) {
+		var player = instance_place(x, y, obj_banana_minigame_player);
+	
+		if (player != noone) {
+			is_crush = true;
+			obj_banana_minigame_manager.bscore -= subtracting_score;
+		}
+	}
+	
+	exit;
+}
+
 image_speed = 0;
 image_index = 1;
 
@@ -13,7 +27,13 @@ x += crush_speed_x;
 y += crush_speed_y;
 
 if (!sound_was_play) {
-	audio_play_sound_plugging(snd_bigcar_yelp);
-	audio_play_sound_plugging(snd_hitcar);
+	if (sound_yelp != undefined) {
+		audio_play_sound_plugging(sound_yelp);
+	}
+	
+	if (sound_hit != undefined) {
+		audio_play_sound_plugging(sound_hit);
+	}
+	
 	sound_was_play = true;
 }
