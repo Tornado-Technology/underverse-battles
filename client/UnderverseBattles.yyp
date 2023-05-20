@@ -251,7 +251,7 @@
     {"id":{"name":"assets_get_sound_elemets","path":"scripts/assets_get_sound_elemets/assets_get_sound_elemets.yy",},"order":0,},
     {"id":{"name":"assets_init","path":"scripts/assets_init/assets_init.yy",},"order":1,},
     {"id":{"name":"point_in_rectangle_gui_multi_touch","path":"scripts/point_in_rectangle_gui_multi_touch/point_in_rectangle_gui_multi_touch.yy",},"order":2,},
-    {"id":{"name":"snd_can_tselect","path":"sounds/snd_can_tselect/snd_can_tselect.yy",},"order":30,},
+    {"id":{"name":"snd_cant_select","path":"sounds/snd_cant_select/snd_cant_select.yy",},"order":30,},
     {"id":{"name":"fight_remove_player_hp","path":"scripts/fight_remove_player_hp/fight_remove_player_hp.yy",},"order":8,},
     {"id":{"name":"asset_load","path":"scripts/asset_load/asset_load.yy",},"order":2,},
     {"id":{"name":"GMLive_call","path":"scripts/GMLive_call/GMLive_call.yy",},"order":0,},

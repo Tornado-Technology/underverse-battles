@@ -14,8 +14,8 @@
   "type": 0,
   "bitDepth": 0,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "sound",
+    "path": "audiogroups/sound",
   },
   "soundFile": "snd_explosion.wav",
   "duration": 1.912268,

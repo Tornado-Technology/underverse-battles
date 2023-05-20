@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_can_tselect",
+  "name": "snd_cant_select",
   "ConfigValues": {
     "Development": {"audioGroupId":"{\"name\":\"sound\",\"path\":\"audiogroups/sound\"}",},
   },
@@ -14,10 +14,10 @@
   "type": 0,
   "bitDepth": 0,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "sound",
+    "path": "audiogroups/sound",
   },
-  "soundFile": "snd_can_tselect.wav",
+  "soundFile": "snd_cant_select.wav",
   "duration": 0.241927,
   "parent": {
     "name": "SFX",
