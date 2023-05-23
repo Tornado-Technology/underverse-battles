@@ -90,7 +90,7 @@ tabs = [];
 
 tabs[characters_tab.characters] = CharactersTabList(id, char_num, table_char_max_x);
 tabs[characters_tab.skins] = CharactersTabSkinList(id, table_char_max_x);
-tabs[characters_tab.description] = CharactersTabDescription(id, table_char_max_x);
+tabs[characters_tab.description] = CharactersTabDescription(id);
 
 change_tab = function(_id) {
 	tab_id = _id;

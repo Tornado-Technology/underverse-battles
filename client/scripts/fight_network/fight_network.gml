@@ -43,7 +43,7 @@ function fight_network_disconnect(_enemyId){
 	display_show_message_info(opponent_get_name(_enemyId) + " " + translate_get("Battle.Disconnected"), c_red);
 	if (global.fight_instance != noone)
 		fight_set_player_hp(_enemyId, 0);
-	statistics_set_rating_points(-1);
+	statistics_set_rating_points(-1, 0);
 	return true;
 }
 

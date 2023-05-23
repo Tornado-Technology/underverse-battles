@@ -1,5 +1,6 @@
 /// @param {String} key
 /// @param {Asset.GMSprite} icon
+/// @param {bool} icon_locked
 /// @param {Function} callback
 /// @param {Real} percent_given
 /// @return {Struct.SpecialActionClass}
