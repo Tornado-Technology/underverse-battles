@@ -283,6 +283,10 @@
       "WritePassword": "输入您的密码",
       "WaitingForLogin": "等待登录"
     },
+    "PasswordRetrieval": {
+      "WriteLogin": "输入您的用户名",
+      "WritePassword": "输入您的密码"
+    },
     "LogInMessage": {
       "RegistrationSuccessful": "注册成功! 现在你可以登录了。",
       "LoginSuccessful": "账号登录成功!",

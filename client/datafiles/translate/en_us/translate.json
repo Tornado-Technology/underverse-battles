@@ -283,6 +283,10 @@
       "WritePassword": "Write your password",
       "WaitingForLogin": "Waiting for log in"
     },
+    "PasswordRetrieval": {
+      "WriteLogin": "Write your username",
+      "WritePassword": "Write your password"
+    },
     "LogInMessage": {
       "RegistrationSuccessful": "Registration successful! Now you can log in",
       "LoginSuccessful": "Account login successful!",

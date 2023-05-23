@@ -2,6 +2,11 @@ sprite_index = noone;
 
 alpha = 0.4;
 
+menu = get_menu();
+connection = menu.on_goto_page_event.connect(function() {
+	instance_destroy(id);
+});
+
 buttons_show = true;
 button_max = 2;
 button_num = 0;

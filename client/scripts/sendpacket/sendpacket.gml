@@ -80,6 +80,15 @@ function send_nickname_change(nickname) {
 	});
 }
 
+/// @param {String} nickname
+/// @param {String} password
+function send_password_retrieval(nickname, password) {
+	send("passwordRetrieval", {
+		nickname: nickname,
+		password: password,
+	});
+}
+
 /// @param {Real} character_id
 /// @param {Real} skin_id
 function send_fight_join(character_id, skin_id) { 

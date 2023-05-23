@@ -15,6 +15,11 @@ var ox = fw + 1;
 text_waiting_for_login =  translate_get("Menu.LogIn.WaitingForLogin");
 text_title =  translate_get("Menu.LogIn.Title");
 
+menu = get_menu();
+connection = menu.on_goto_page_event.connect(function() {
+	instance_destroy(id);
+});
+
 on_login = on_network_login.connect(function() {
 	if (network_account != undefined) {
 		autolog_save(inputbox_login.text, inputbox_password.text);

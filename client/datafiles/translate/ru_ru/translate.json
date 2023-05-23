@@ -284,6 +284,10 @@
       "WritePassword": "Напишите свой пароль",
       "WaitingForLogin": "Ожидание входа в аккаунт"
     },
+    "PasswordRetrieval": {
+      "WriteLogin": "Напишите свой логин",
+      "WritePassword": "Напишите свой пароль"
+    },
     "LogInMessage": {
       "RegistrationSuccessful": "Регистрация успешна! Теперь вы можете войти в аккаунт",
       "LoginSuccessful": "Вход выполнен успешно!",

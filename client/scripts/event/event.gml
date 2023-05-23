@@ -24,6 +24,11 @@ function Event() constructor {
 		return false;
 	}
 	
+	/// @desc Disconnects all listeners.
+	static disconnect_all = function() {
+		array_delete(listeners, 0, array_length(listeners));
+	}
+	
 	/// @desc Calls all subscribers with the specified arguments packed array
 	/// @param {Any} ... - Arguments for callback
 	static invoke = function() {

@@ -9,6 +9,7 @@ enum menu_page {
 	multiplayer,
 	signup,
 	login,
+	password_retrieval,
 	characters, 
 	achivments,
 	credits,
@@ -118,6 +119,9 @@ elements_count = 0;
 element_index = -1;
 element_mouse_index = -1;
 
+on_goto_page = function() {};
+on_goto_page_event = new Event();
+
 create_page = function(elements, position = array_length(pages) - 1) {
 	pages[position] = elements;
 	
@@ -136,8 +140,6 @@ page_insert = function(page, index, element) {
 	}
 }
 
-on_goto_page = function() {};
-
 goto_page = function(index) {
 	unfocus_current_element();
 	page_index = index;
@@ -152,6 +154,7 @@ goto_page = function(index) {
 	element_index = -1;
 	
 	on_goto_page();
+	on_goto_page_event.invoke();
 }
 
 get_current_page = function() {
@@ -350,6 +353,7 @@ create_page([
 			inputbox_password: login_inputbox_password.input_box,
 		});
 	}),
+	Transfer("Multiplayer.RestorePassword", menu_page.password_retrieval),
 	Execute("Multiplayer.Reconnect", [], function() {
 		button_reconnect();
 	}),
@@ -390,6 +394,21 @@ create_page([
 	}),
 ], menu_page.login);
 
+// Forgot password
+password_retrieval_inputbox_change_nickname = InputBox("PasswordRetrieval.WriteLogin");
+password_retrieval_inputbox_change_password = InputBox("PasswordRetrieval.WritePassword", false);
+
+create_page([
+    password_retrieval_inputbox_change_nickname,
+	password_retrieval_inputbox_change_password,
+	Execute("StandardButtons.Apply", [], function() {
+		var nickname = password_retrieval_inputbox_change_nickname.input_box.text;
+		var password = password_retrieval_inputbox_change_password.input_box.text;
+		send_password_retrieval(nickname, password);
+	}),
+    Transfer("StandardButtons.Back", menu_page.multiplayer),
+], menu_page.password_retrieval);
+
 // Multiplayer Account
 create_page([
 	Execute("Multiplayer.Battle1v1", [], function() {
@@ -420,7 +439,7 @@ create_page([
 
 // Account settings
 account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");
-account_settings_inputbox_change_password = InputBox("AccountOptions.ChangePassword");
+account_settings_inputbox_change_password = InputBox("AccountOptions.ChangePassword", false);
 account_settings_inputbox_change_email = InputBox("AccountOptions.ChangeEmail");
 
 create_page([
