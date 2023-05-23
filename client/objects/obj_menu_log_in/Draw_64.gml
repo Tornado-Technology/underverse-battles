@@ -14,11 +14,4 @@ if (show_loading) {
 	exit;
 }
 
-draw_set_font(global._font_main_determination);
-draw_set_valign(fa_middle);
-draw_set_color(c_white);
-
-draw_set_halign(fa_center);
-draw_text_outlined(width_center, 20, c_white, c_black, text_title);
-
 draw_reset();

@@ -53,6 +53,10 @@ logo_start_y  = height / 8 - 20;
 logo_target_y = height / 8 - 80;
 logo_alpha = 0;
 
+// Title
+title_text = "";
+show_title = false;
+
 // Opening theme
 enum opening_theme {
 	tangled,
@@ -105,6 +109,8 @@ time_source_start(time_source_create(time_source_game, 1, time_source_units_fram
 
 elements_show = false;
 pause = false;
+titles = [];
+title_switches = [];
 pages = [];
 page_index = -1;
 page_width = 0;
@@ -122,7 +128,9 @@ element_mouse_index = -1;
 on_goto_page = function() {};
 on_goto_page_event = new Event();
 
-create_page = function(elements, position = array_length(pages) - 1) {
+create_page = function(elements, position = array_length(pages) - 1, translate_key = "", title_switch = false) {
+	titles[position] = "Menu." + translate_key;
+	title_switches[position] = title_switch;
 	pages[position] = elements;
 	
 	// set index
@@ -143,6 +151,9 @@ page_insert = function(page, index, element) {
 goto_page = function(index) {
 	unfocus_current_element();
 	page_index = index;
+	
+	title_text = titles[index];
+	show_title = title_switches[index];
 	
 	elements_count = array_length(pages[index]);
 	page_width = get_page_width();
@@ -254,12 +265,15 @@ login_callback = on_network_login.connect(function() {
 	if (obj_menu.pause) exit;
 	if (page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
 		goto_page(menu_page.multiplayer_account);
+		instance_destroy(obj_menu_sign_up);
+		instance_destroy(obj_menu_log_in);
 	}
 });
 
 disconnect_callback = on_network_connection_timeout.connect(function() {
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
 		goto_page(menu_page.multiplayer);
+		instance_destroy(obj_profile_statistics);
 	}
 });
 
@@ -306,11 +320,11 @@ create_page([
 		room_goto(room_ui_test);
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.debug_rooms);
+], menu_page.debug_rooms, "Main.DebugRooms", true);
 
 // SingleBattle
 create_page([
-	Transfer("StoryMode.Title", menu_page.storymode),
+	Transfer("SingleBattle.StoryMode", menu_page.storymode),
 	Execute("SingleBattle.CustomBattle", [], function() {
 		instance_create(obj_menu_custom_battle_characters);
 	}),
@@ -324,7 +338,7 @@ create_page([
 		room_goto(room_get_banana);
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.singleplayer);
+], menu_page.singleplayer, "SingleBattle.Title", true);
 
 // Story Mode
 create_page([
@@ -335,7 +349,7 @@ create_page([
 		room_goto(room_underverse_episode2);
 	}),
 	Transfer("StandardButtons.Back", menu_page.singleplayer),
-], menu_page.storymode);
+], menu_page.storymode, "StoryMode.Title", true);
 
 // Multiplayer
 create_page([
@@ -358,7 +372,7 @@ create_page([
 		button_reconnect();
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.multiplayer);
+], menu_page.multiplayer, "Multiplayer.Title", true);
 
 sign_inputbox_login = InputBox("SignUp.WriteLogin");
 sign_inputbox_password = InputBox("SignUp.WritePassword", false);
@@ -377,7 +391,7 @@ create_page([
 	Transfer("StandardButtons.Back", menu_page.multiplayer, function() {
 		instance_destroy(obj_menu_sign_up);
 	}),
-], menu_page.signup);
+], menu_page.signup, "SignUp.Title", true);
 
 login_inputbox_login = InputBox("LogIn.WriteLogin");
 login_inputbox_password = InputBox("LogIn.WritePassword", false);
@@ -392,7 +406,7 @@ create_page([
 	Transfer("StandardButtons.Back", menu_page.multiplayer, function() {
 		instance_destroy(obj_menu_log_in);
 	}),
-], menu_page.login);
+], menu_page.login, "LogIn.Title", true);
 
 // Forgot password
 password_retrieval_inputbox_change_nickname = InputBox("PasswordRetrieval.WriteLogin");
@@ -407,7 +421,7 @@ create_page([
 		send_password_retrieval(nickname, password);
 	}),
     Transfer("StandardButtons.Back", menu_page.multiplayer),
-], menu_page.password_retrieval);
+], menu_page.password_retrieval, "PasswordRetrieval.Title", true);
 
 // Multiplayer Account
 create_page([
@@ -428,14 +442,14 @@ create_page([
 		send_logout();
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.multiplayer_account);
+], menu_page.multiplayer_account, "Multiplayer.Title", true);
 
 // Statistics
 create_page([
 	Transfer("StandardButtons.Back", menu_page.multiplayer_account, function() {
 		instance_destroy(obj_profile_statistics);
 	}),
-], menu_page.statistics);
+], menu_page.statistics, "Statistics.Title", true);
 
 // Account settings
 account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");
@@ -450,7 +464,7 @@ create_page([
 		send_delete_account();
 	}),
     Transfer("StandardButtons.Back", menu_page.multiplayer_account),
-], menu_page.account_settings);
+], menu_page.account_settings, "AccountOptions.Title", true);
 
 // Account change nickname
 create_page([
@@ -459,7 +473,7 @@ create_page([
 		send_nickname_change(account_settings_inputbox_change_nickname.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
-], menu_page.account_change_nickname);
+], menu_page.account_change_nickname, "AccountOptions.ChangeNickname", true);
 
 // Account change password
 create_page([
@@ -468,7 +482,7 @@ create_page([
 		send_password_change(account_settings_inputbox_change_password.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
-], menu_page.account_change_password);
+], menu_page.account_change_password, "AccountOptions.ChangePassword", true);
 
 // Account change email
 create_page([
@@ -477,14 +491,14 @@ create_page([
 		send_eamil_change(account_settings_inputbox_change_email.input_box.text);
 	}),
     Transfer("StandardButtons.Back", menu_page.account_settings),
-], menu_page.account_change_email);
+], menu_page.account_change_email, "AccountOptions.ChangeEmail", true);
 
-// Achivments
+// Achievements
 create_page([
 	Transfer("StandardButtons.Back", menu_page.main, function() {
 		instance_destroy(obj_menu_achivements);
 	})
-], menu_page.achivments)
+], menu_page.achivments, "Main.Achievements", true);
 
 // Settings 
 create_page([
@@ -493,7 +507,7 @@ create_page([
 	Transfer("Settings.Control", menu_page.settings_input),
 	Transfer("Settings.Data.Title", menu_page.settings_data),
 	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.settings);
+], menu_page.settings, "Settings.Title", true);
 
 // Settings main
 var langs = [];
@@ -518,7 +532,7 @@ create_page([
 		data_set("Settings.UI.Fight.StatbarStyle", alpha);
 	}),
 	Transfer("StandardButtons.Back", menu_page.settings),
-], menu_page.settings_main);
+], menu_page.settings_main, "Settings.Title", true);
 
 if (is_desktop) {
 	page_insert(menu_page.settings_main, 0, Toggle("Settings.Fullscreen", window_get_fullscreen(), function(value) {
@@ -541,7 +555,7 @@ create_page([
 		audio_group_set_gain(sound, gain, 0);
 	}),
 	Transfer("StandardButtons.Back", menu_page.settings),
-], menu_page.settings_audio);
+], menu_page.settings_audio, "Settings.Title", true);
 
 // Settings input
 if (is_desktop && !mobile_mode) {
@@ -557,7 +571,7 @@ if (is_desktop && !mobile_mode) {
 			audio_play_sound_once(snd_selection);
 		}),
 		Transfer("StandardButtons.Back", menu_page.settings),
-	], menu_page.settings_input);
+	], menu_page.settings_input, "Settings.Title", true);
 }
 
 if (is_mobile || mobile_mode) {
@@ -590,7 +604,7 @@ create_page([
 		data_reset_settings();
 	}),
 	Transfer("StandardButtons.Back", menu_page.settings),
-], menu_page.settings_data);
+], menu_page.settings_data, "Settings.Title", true);
 
 // Modifications
 create_page([
@@ -617,6 +631,8 @@ on_goto_page = function() {
 
 translate_update = on_translate_update.connect(function() {
 	anykey_text = translate_get("Menu.PressAnyKey");
+	
+	//title_text.translate_update();
 	
 	pages_foreach(function(page) {
 		for (var i = 0; i < array_length(page); i++) {

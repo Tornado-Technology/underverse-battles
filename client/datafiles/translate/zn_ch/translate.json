@@ -244,7 +244,7 @@
       "Back": "返回"
     },
     "Multiplayer": {
-      "Title": "多人游戏现在在[测试阶段]",
+      "Title": "多人游戏",
       "SignUp": "注册",
       "LogIn": "登录",
       "RestorePassword": "忘记密码",
@@ -284,8 +284,9 @@
       "WaitingForLogin": "等待登录"
     },
     "PasswordRetrieval": {
+      "Title": "取回密码",
       "WriteLogin": "输入您的用户名",
-      "WritePassword": "输入您的密码"
+      "WritePassword": "输入新的密码"
     },
     "LogInMessage": {
       "RegistrationSuccessful": "注册成功! 现在你可以登录了。",

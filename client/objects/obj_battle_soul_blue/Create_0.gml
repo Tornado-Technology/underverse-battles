@@ -28,3 +28,12 @@ set_angle = function(angle) {
 	image_angle = angle;
 	collider_soul.image_angle = angle;
 }
+
+/// @param {Real} angle
+change_gravity_force = function(angle) {
+	gravity_force = angle;
+	max_fly_time = 60;
+	fly_time = max_fly_time;
+	blue_attack = true;
+	addit_spd = 5;
+}

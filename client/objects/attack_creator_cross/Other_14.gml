@@ -123,11 +123,7 @@ if (_id == 2) {
 	update_2_0 = function() {
 		side = choose(dir.up, dir.down, dir.left, dir.right);
 			if (attack_num == 0) {
-				_soul.gravity_force = side;
-				_soul.max_fly_time = 60;
-				_soul.fly_time = _soul.max_fly_time;
-				_soul.blue_attack = true;
-				_soul.addit_spd = 5;
+				_soul.change_gravity_force(side);
 			}
 			var i = 0;
 			
