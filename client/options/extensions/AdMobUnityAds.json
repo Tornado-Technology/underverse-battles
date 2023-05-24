@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "AdMobUnityAds",
+    "path": "extensions/AdMobUnityAds/AdMobUnityAds.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}

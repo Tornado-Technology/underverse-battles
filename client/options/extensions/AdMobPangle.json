@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "AdMobPangle",
+    "path": "extensions/AdMobPangle/AdMobPangle.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}

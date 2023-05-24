@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "AdMobIronSource",
+    "path": "extensions/AdMobIronSource/AdMobIronSource.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}
