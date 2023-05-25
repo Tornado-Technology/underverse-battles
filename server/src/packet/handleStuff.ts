@@ -229,6 +229,12 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'restorePassword':
       {
+        const passwordValidation = validatePassword(data.password);
+        if (passwordValidation !== statusCode.success) {
+          client.sendRestorePassword(passwordValidation);
+          break;
+        }
+
         const { identifier, password } = data;
         const account = await Account.findOne({ username: identifier }) ?? await Account.findOne({ email: identifier });
         if (!account) {
@@ -240,12 +246,6 @@ export const handlePacket = async (client: Client, data: any) => {
           if (status !== statusCode.success) {
             client.sendRestorePassword(status);
             return;
-          }
-
-          const passwordValidation = validatePassword(data.password);
-          if (passwordValidation !== statusCode.success) {
-            client.sendRestorePassword(passwordValidation);
-            return
           }
 
           account.password = await hashPassword(password);
