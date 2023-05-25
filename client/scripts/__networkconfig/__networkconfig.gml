@@ -54,7 +54,7 @@ global.__on_network_connection_timeout = new Event();
 // Macros
 #macro Default:network_offical_ip "82.146.34.152"
 #macro Development:network_offical_ip "82.146.34.152"
-#macro Localserver:network_offical_ip "192.168.168.220"
+#macro Localserver:network_offical_ip "127.0.0.1"
 #macro Cinematic:network_offical_ip "82.146.34.152"
 #macro Mobile:network_offical_ip "82.146.34.152"
 #macro SpecialAttackTest:network_offical_ip "82.146.34.152"

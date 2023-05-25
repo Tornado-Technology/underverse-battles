@@ -64,9 +64,17 @@ if (account != undefined && profile != undefined) {
 	}
 }
 
-// Draw elements in page
+// Pause
 if (pause || !elements_show) exit;
 
+// Title
+draw_set_font(global._font_main_determination);
+draw_set_halign(fa_center);
+if (show_title) {
+	draw_text_outlined(width / 2, height / 12, c_white, c_black, translate_get(title_text));
+}
+
+// Elements in page
 var i = 0;
 repeat (elements_count) {
 	get_element_in_page(i).draw(page_x, page_y + page_element_offset * i, id);

@@ -312,11 +312,13 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[cutscene_execute, function () { sans.sprite_index = spr_sans_sitting4; }],
 		[cutscene_dialog_async, episode + "Dialog3_Line2"],
-		[cutscene_execute_by_dialog, 2, function () {
-			ink_sans.sprite_index = spr_ink_sans_sitting1; 
-			sans.sprite_index = spr_sans_sitting3; 
+		[cutscene_execute_by_dialog, 1, function () {
+			ink_sans.sprite_index = spr_ink_sans_sitting1;
 		}],
-		[cutscene_execute_by_dialog, 4, function () { 
+		[cutscene_execute_by_dialog, 2, function () {
+			sans.sprite_index = spr_sans_sitting3;
+		}],
+		[cutscene_execute_by_dialog, 3, function () { 
 			sans.sprite_index = spr_sans_sitting1;
 			ink_sans.sprite_index = spr_ink_sans_sitting3;
 		}],
@@ -324,7 +326,7 @@ cutscenes = [
 			ink_sans.sprite_index = spr_ink_sans_down_empty_eyes;
 		}],
 		[cutscene_wait_dialog_end],
-		[cutscene_wait, 3],
+		[cutscene_wait, 2.5],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_right_empty_eyes],
 		[cutscene_dialog, episode + "Dialog4_Line2"],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_right_empty_eyes_walking],

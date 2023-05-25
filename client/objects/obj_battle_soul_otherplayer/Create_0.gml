@@ -29,6 +29,12 @@ stun = function() {
 	battle_border_set_color(false, false, c_blue);
 }
 
+/// @param {Real} angle
+change_gravity_force = function(angle) {
+	gravity_force = angle;
+	blue_attack = true;
+}
+
 // Particles
 part_type_tail = part_type_create();
 part_type_sprite(part_type_tail, sprite_index, false, false, false);

@@ -1,3 +1,5 @@
+show_debug_message(string(state));
+
 if (state == fight_state.battle) {
 	timer_stop();
 	instance_create_one(obj_battle);

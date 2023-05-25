@@ -244,7 +244,7 @@
       "Back": "Back"
     },
     "Multiplayer": {
-      "Title": "Multiplayer in BETA NOW",
+      "Title": "Multiplayer",
       "SignUp": "Sign up",
       "LogIn": "Log in",
       "RestorePassword": "Forgot password",
@@ -282,6 +282,11 @@
       "WriteLogin": "Write your username",
       "WritePassword": "Write your password",
       "WaitingForLogin": "Waiting for log in"
+    },
+    "PasswordRetrieval": {
+      "Title": "Password retrieval",
+      "WriteLogin": "Write your username",
+      "WritePassword": "Write a new password"
     },
     "LogInMessage": {
       "RegistrationSuccessful": "Registration successful! Now you can log in",

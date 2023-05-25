@@ -47,8 +47,9 @@ skip = function() {
 }
 
 special_action = function() {
-	if (fight_check_player_special_action_readiness(0)) {
+	if (fight_check_player_special_action_readiness(0) || special_attack_test_mode) {
 		fight_set_player_special_action(0);
 		audio_play_sound(sound_select, 0, false);
+		audio_play_sound_once(snd_special_attack);
 	}
 }

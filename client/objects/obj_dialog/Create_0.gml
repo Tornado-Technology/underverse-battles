@@ -59,19 +59,14 @@ set_font = function (character_name, character_emote, character_font, color) {
 
 skip_arrow = UIImageButton(spr_stat_arrow);
 skip_arrow.on_press = function() {
-	if (instance_exists(obj_choise)) { return; }
-
-	if (pos == string_length(cur_text)) {
-		next_dialog();
-	}
-
 	if (pos < string_length(cur_text)) {
 	    keyboard_key_press(vk_shift);
 	}
+	else {
+		keyboard_key_press(vk_enter);
+	}
 }
 skip_arrow.on_release = function() {
-	if (instance_exists(obj_choise)) { return; }
-
 	keyboard_key_release(vk_enter);
 	keyboard_key_release(vk_shift);
 }

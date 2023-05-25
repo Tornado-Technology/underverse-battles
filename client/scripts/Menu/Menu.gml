@@ -53,3 +53,11 @@ function menu_successful_login(menu) {
 function menu_show_user_data(value) {
 	obj_menu.show_user_data = value;
 }
+
+function get_menu() {
+	if (!instance_exists(obj_menu)) {
+		return;
+	}
+	
+	return obj_menu;
+}

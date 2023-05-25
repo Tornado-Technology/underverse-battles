@@ -25,6 +25,7 @@ connect = function() {
 
 disconnect = function() {
 	logger.info("Disconnecting...");
+	on_network_disconnect.invoke();
 	network_connected = false;
 	network_destroy(socket);
 };

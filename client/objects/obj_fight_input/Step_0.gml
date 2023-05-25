@@ -64,9 +64,8 @@ if (input_skip && can_skip) {
 }
 
 // Special attack
-if (is_player_turn && fight_check_player_special_action_readiness(0)) {
+if (is_player_turn) {
 	if (input_special) {
 		special_action();
-		audio_play_sound_once(snd_special_attack);
 	}
 }
