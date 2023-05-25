@@ -1404,6 +1404,9 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"_Options_","folderPath":"folders/_Options_.yy","order":6,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Configs","folderPath":"folders/_Options_/Configs.yy","order":5,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Content","folderPath":"folders/_Options_/Content.yy","order":4,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"AdMob","folderPath":"folders/AdMob.yy","order":12,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extensions","folderPath":"folders/AdMob/Extensions.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Mediations","folderPath":"folders/AdMob/Extensions/Mediations.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Characteres","folderPath":"folders/Characteres.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cross","folderPath":"folders/Characteres/Cross.yy","order":0,},
@@ -1717,9 +1720,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy","order":17,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy","order":4,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"AdMob","folderPath":"folders/AdMob.yy","order":12,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extensions","folderPath":"folders/AdMob/Extensions.yy","order":1,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Mediations","folderPath":"folders/AdMob/Extensions/Mediations.yy","order":1,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
@@ -1774,7 +1774,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"data.json","CopyToMask":-1,"filePath":"datafiles/system",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.html","CopyToMask":0,"filePath":"datafiles",},
   ],
   "MetaData": {

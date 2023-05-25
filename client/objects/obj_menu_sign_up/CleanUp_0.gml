@@ -1,2 +1,5 @@
 keyboard_clear_lastkey();
-menu.on_goto_page_event.disconnect(connection);
+
+if (instance_exists(obj_menu)) {
+	menu.on_goto_page_event.disconnect(connection);
+}
