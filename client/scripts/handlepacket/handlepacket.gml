@@ -181,7 +181,6 @@ function handle_packet(data) {
 			// Send obj_fight this info
 			global.fight_instance.player_action[data.playerId] = data.action;
 			statistics_set_selection_attack_network(data.playerId, data.action);
-			show_debug_message("Attack: " + string(data.playerId) + ",  number:" + string(data.action));
 			fight_update_state();
 			break;
 		

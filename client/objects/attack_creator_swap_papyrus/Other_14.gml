@@ -252,6 +252,12 @@ if (_id == 2 && attack_num == 1 || _id == 3 && attack_num == 1) {
 		audio_play_sound_plugging(snd_warning);
 			
 		var i = 0;
+		
+		repeat(array_length(_bones)) {
+			instance_destroy(_bones[i]);
+			_bones[i] = noone;
+			++i;
+		}
 
 		repeat(num) {
 			if (side == dir.up) {

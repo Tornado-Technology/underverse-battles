@@ -192,6 +192,12 @@ if (_id == 2 || _id == 3) {
 			}
 			draw_warning(side, warning_scale);
 			audio_play_sound_plugging(snd_warning);
+			
+			repeat(array_length(_bones)) {
+				instance_destroy(_bones[i]);
+				_bones[i] = noone;
+				++i;
+			}
 
 			repeat(num) {
 				if (side == dir.up) {
