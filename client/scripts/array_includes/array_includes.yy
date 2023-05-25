@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__utils_macros",
+  "name": "array_includes",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Macro",
-    "path": "folders/Scripts/Local/Utils/Macro.yy",
+    "name": "Array",
+    "path": "folders/Scripts/Local/Utils/Array.yy",
   },
 }

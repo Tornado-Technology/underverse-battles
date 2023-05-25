@@ -2,6 +2,6 @@
 /// @param {Array<Any>} array
 /// @param {Any} element
 /// @return {Bool}
-function array_has(array, element) {
+function array_includes(array, element) {
 	return array_indexof(array, element) != -1;
 }

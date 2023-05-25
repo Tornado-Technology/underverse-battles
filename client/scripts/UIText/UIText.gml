@@ -9,12 +9,12 @@ function UITextClass(text) constructor {
 	use_tags = true;
 	
 	// Draw
-	color = default_color;
-	alpha = default_alpha;
-	font = default_font;
+	color = default_draw_color;
+	alpha = default_draw_alpha;
+	font = default_draw_font;
 	
-	haligin = default_haligin;
-	valigin = default_valign;
+	haligin = default_draw_halign;
+	valigin = default_draw_valign;
 	
 	// Transform
 	angle = 0;

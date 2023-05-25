@@ -1,4 +1,4 @@
-/// @desc Combines array elements via delemiter.
+/// @description Combines array elements via delemiter.
 /// @param {Array<Any>} array - The array to join
 /// @param {String} delemiter - The string of the interval where the elements will be connected
 /// @return {String}

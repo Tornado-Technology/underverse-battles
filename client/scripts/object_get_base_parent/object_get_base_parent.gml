@@ -1,5 +1,6 @@
-/// @desc Find last(base) parent for target object.
+/// @description Find last(base) parent for target object.
 /// @param {Asset.GMObject} object - The target children object
+/// @return {Asset.GMObject|undefined}
 function object_get_base_parent(object) {
 	var parent = object_get_parent(object);
 	
@@ -11,7 +12,6 @@ function object_get_base_parent(object) {
 	
 	do {
 		new_parent = object_get_parent(parent);
-		
 		if (object_exists(new_parent)) {
 			parent = new_parent;
 		}

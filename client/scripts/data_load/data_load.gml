@@ -20,7 +20,7 @@ function data_load() {
 		logger.warning("Data restoring...");
 		
 		// Trying to rebuild what was broken
-		__data_try_create_directory();
+		directory_verify(DATA_DIRECTORY);
 		__data_try_create_file();
 		
 		// Trying to open the file again

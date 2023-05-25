@@ -1,9 +1,9 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__content_config__",
-  "isCompatibility": false,
+  "name": "__ContentConfig",
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Content",
     "path": "folders/Scripts/Local/Content.yy",

@@ -1,12 +1,21 @@
-import { Account, accountType, infoValidate, login, register, validatePassword, validateUsername } from '../schemas/account.js';
+import {
+  Account,
+  accountType,
+  infoValidate,
+  login,
+  register,
+  validatePassword,
+  validateUsername
+} from '../schemas/account.js';
 import {actionType, state as fightState, target} from '../game/fight/fight.js';
-import { send as mailSend } from '../util/mail.js';
-import Client, { state } from '../concepts/client.js';
-import { statusCode } from '../status.js';
-import { versions } from '../config.js';
+import {send as mailSend} from '../util/mail.js';
+import Client, {state} from '../concepts/client.js';
+import {statusCode} from '../status.js';
+import {versions} from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
+import {hashPassword} from "../util/encrypting";
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -161,7 +170,7 @@ export const handlePacket = async (client: Client, data: any) => {
             Hi <b>${client.account.username}</b>,<br>
             Heeey! We heard that you have a desire to change your mail.<br>
             For the security of your account, we sent you this email.
-            <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account .<br>
+            <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
             If it is you, then confirm by entering the code.<br>
             Your personal code: <b>${client.verificationCode}</b><br>
             Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
@@ -219,21 +228,46 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'restorePassword':
-      client.startVerification(async (status) => {
-        if (status !== statusCode.success) {
-          client.sendRestorePassword(status);
-          return;
+      {
+        const { identifier, password } = data;
+        const account = await Account.findOne({ username: identifier }) ?? await Account.findOne({ email: identifier });
+        if (!account) {
+          client.sendRestorePassword(statusCode.error);
+          break;
         }
 
-        const passwordValidation = validatePassword(data.password);
-        if (passwordValidation !== statusCode.success) {
-          client.sendRestorePassword(passwordValidation);
-          return
-        }
+        client.startVerification(async (status) => {
+          if (status !== statusCode.success) {
+            client.sendRestorePassword(status);
+            return;
+          }
 
-        await client.setPassword(data.password);
-        client.sendRestorePassword(statusCode.success)
-      });
+          const passwordValidation = validatePassword(data.password);
+          if (passwordValidation !== statusCode.success) {
+            client.sendRestorePassword(passwordValidation);
+            return
+          }
+
+          account.password = await hashPassword(password);
+          await account.save();
+
+          client.sendRestorePassword(statusCode.success)
+        });
+
+        await mailSend(account.email, 'Account restore password', '', `
+        <div color=black>  
+          <p>
+            Hi <b>${account.username}</b>,<br>
+            We have been whispered that you have forgotten your password.<br>
+            But we need confirmation that the intruders are not trying to ruin your life.<br>
+            <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
+            If it is you, still have to confirm it by entering the code.<br>
+            Your personal code: <b>${client.verificationCode}</b><br>
+            Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
+          </p>
+        </div>
+      `);
+      }
       break;
 
     case 'deleteAccount':

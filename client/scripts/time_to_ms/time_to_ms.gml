@@ -1,4 +1,4 @@
-/// @desc Return string as m:s format
+/// @description Return string as m:s format
 /// @param {Real} time - Number of seconds
 /// @return {String}
 function time_to_ms(time) {

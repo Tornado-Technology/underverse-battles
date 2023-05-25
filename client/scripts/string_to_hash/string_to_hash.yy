@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "send_message_in_discord",
+  "name": "string_to_hash",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Stirng",
+    "path": "folders/Scripts/Local/Utils/Stirng.yy",
   },
 }

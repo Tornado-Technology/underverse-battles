@@ -1,14 +1,15 @@
-/// @desc Base class for create Events like C# delegate.
+/// @description Base class for create Events like C# delegate.
 function Event() constructor {
 	listeners = [];
 	
 	/// @param {Function} callback - A subscriber called by the invoke() method can be unsubscribed with disconnect()
+	/// @return {Function}
 	static connect = function(callback) {
 		array_push(listeners, callback)
 		return callback;
 	}
 	
-	/// @desc Returns: Operation report, erased - true, in other cases - false.
+	/// @description Returns: Operation report, erased - true, in other cases - false.
 	/// @param {Function} callback - Subscriber you want to unsubscribe
 	/// @return {Bool} - Operation report, erased - true, in other cases - false
 	static disconnect = function(callback) {
@@ -24,7 +25,7 @@ function Event() constructor {
 		return false;
 	}
 	
-	/// @desc Calls all subscribers with the specified arguments packed array
+	/// @description Calls all subscribers with the specified arguments packed array
 	/// @param {Any} ... - Arguments for callback
 	static invoke = function() {
 		var array_arguments = [];
@@ -37,8 +38,8 @@ function Event() constructor {
 			
 			try {
 				listener_method(array_arguments);
-			} catch(_error) {
-				logger.fatal("Event: Listener method call error: {0}.", _error.message);
+			} catch(error) {
+				logger.fatal("Event: Listener method call error:\n{0}\n{1}\n{2}", error.longMessage, error.script, string_join(error.stacktrace, "\n"));
 			}
 		}
 	}

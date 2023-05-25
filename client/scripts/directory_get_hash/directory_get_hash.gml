@@ -1,5 +1,5 @@
-/// @desc Description.
-/// @param {String} path - Argument0.
+/// @param {String} path
+/// @return {String}
 function directory_get_hash(path) {
 	var buffer = buffer_load(path);
 	var hash = buffer_sha1(buffer, 0, buffer_get_size(buffer));

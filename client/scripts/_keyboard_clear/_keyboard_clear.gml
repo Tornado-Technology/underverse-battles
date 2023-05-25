@@ -3,7 +3,7 @@ function __v_keyboard_clear(key) {
 		global.keyboard_list_clear_keys = [];
 	}
 	
-	if (array_has(global.keyboard_list_clear_keys, key)) return;
+	if (array_includes(global.keyboard_list_clear_keys, key)) return;
 	
 	array_push(global.keyboard_list_clear_keys, key);
 }

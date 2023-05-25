@@ -1,4 +1,4 @@
-/// @desc Divides a string into an array of strings using a delimiter.
+/// @description Divides a string into an array of strings using a delimiter.
 /// @param {String} str - Separation string
 /// @param {String} delemiter - Delemiter by which a string will be separated
 /// @return {Array<String>}

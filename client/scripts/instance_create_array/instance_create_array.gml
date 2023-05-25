@@ -1,9 +1,10 @@
-/// @param {array} objs
+/// @param {Array} objects
 /// @return {Array<Id.Instance>}
-function instance_create_array(objs) {
+function instance_create_array(objects) {
 	var result_array = [];
-	for (var i = 0; i < array_length(objs); i++) {
-		array_push(result_array, instance_create(objs[i]));
+	
+	for (var i = 0; i < array_length(objects); i++) {
+		array_push(result_array, instance_create(objects[i]));
 	}
 	
 	return result_array;

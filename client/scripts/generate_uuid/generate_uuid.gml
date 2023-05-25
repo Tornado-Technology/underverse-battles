@@ -1,4 +1,4 @@
+/// @return {String}
 function generate_uuid() {
-	var unique = generate_unique_id();
-	return convert_dec_to_hex(unique * 1000 * current_time);
+	return convert_dec_to_hex(generate_unique_id() * 1000 * current_time);
 }

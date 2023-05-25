@@ -3,7 +3,6 @@
 /// @return {String}
 function os_get_name(system_index) {
 	var result = "";
-	
 	switch (system_index) {
 	   case os_windows:      result = "Windows OS"; break;
 	   case os_uwp:	         result = "Windows 10 Universal Windows Platform"; break;
@@ -25,6 +24,5 @@ function os_get_name(system_index) {
 	   case os_unknown:      result = "Unknown OS"; break;
 	   default:				 result = "Unkown OS"; break;
 	}
-	
 	return result;
 }

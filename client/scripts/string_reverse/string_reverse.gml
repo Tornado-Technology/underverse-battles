@@ -1,3 +1,5 @@
+/// @param {String} str
+/// @return {String}
 function string_reverse(str) {
 	var result = "";
 	var lenght = string_length(str);

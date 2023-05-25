@@ -1,7 +1,8 @@
-/// @param {real} val1
-/// @param {real} val2
-/// @param {real} amout
-/// @desc Approximates the value of val1 to val2 by amount 
+/// @description Approximates the value of val1 to val2 by amount. 
+/// @param {Real} val1
+/// @param {Real} val2
+/// @param {Real} amount
+/// @return {Real}
 function approach(val1, val2, amount) {
 	return val1 < val2 ? min(val1 + amount, val2) : max(val1 - amount, val2);
 }

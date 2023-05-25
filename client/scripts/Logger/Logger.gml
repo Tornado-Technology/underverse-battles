@@ -20,6 +20,7 @@ function ClassLogger() constructor {
 	/// @param {String} prefix
 	/// @param {Array<Any>} args
 	/// @param {Array<Real>} netlog_color
+	/// @return {String}
 	static __base__ = function(msg, prefix, args, netlog_color = [255, 255, 255]) {
 		var format = msg;
 		

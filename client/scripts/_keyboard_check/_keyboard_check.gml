@@ -3,7 +3,7 @@ function __v_keyboard_check(key) {
 		global.keyboard_list_clear_keys = [];
 	}
 	
-	if (array_has(global.keyboard_list_clear_keys, key)) return false;
+	if (array_includes(global.keyboard_list_clear_keys, key)) return false;
 	
 	return __keyboard_check(key);
 }

@@ -2,6 +2,7 @@
 /// @param {String} key
 /// @param {Any} default_value
 /// @param {String} delemiter
+/// @return {Any}
 function struct_get_key_value(struct, key, default_value, delemiter = ".") {
 	if (!is_struct(struct)) {
 		logger.error("Can't get struct key value, reason: \"struct\" not the structure.");

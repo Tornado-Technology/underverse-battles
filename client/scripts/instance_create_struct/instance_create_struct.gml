@@ -1,11 +1,12 @@
-/// @param {struct} objs
-/// @return {array<Id.Instance>}
-function instance_create_struct(objs) {
-	var result_array = [];
-	var elements = variable_struct_get_names(objs);
+/// @param {Struct} objects
+/// @return {Struct}
+function instance_create_struct(objects) {
+	var result = {};
+	var elements = variable_struct_get_names(objects);
+	
 	for (var i = 0; i < array_length(elements); i++) {
-		array_push(result_array, instance_create(objs[$ elements[i]]));
+		result[$ elements[i]] = instance_create(objects[$ elements[i]]);
 	}
 	
-	return result_array;
+	return result;
 }
