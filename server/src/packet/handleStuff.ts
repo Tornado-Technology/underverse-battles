@@ -7,15 +7,15 @@ import {
   validatePassword,
   validateUsername
 } from '../schemas/account.js';
-import {actionType, state as fightState, target} from '../game/fight/fight.js';
-import {send as mailSend} from '../util/mail.js';
-import Client, {state} from '../concepts/client.js';
-import {statusCode} from '../status.js';
-import {versions} from '../config.js';
+import { actionType, state as fightState, target } from '../game/fight/fight.js';
+import { send as mailSend } from '../util/mail.js';
+import Client, { state } from '../concepts/client.js';
+import { statusCode } from '../status.js';
+import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import App from '../app.js';
-import {hashPassword} from "../util/encrypting";
+import { hashPassword } from '../util/encrypting.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -255,18 +255,18 @@ export const handlePacket = async (client: Client, data: any) => {
         });
 
         await mailSend(account.email, 'Account restore password', '', `
-        <div color=black>  
-          <p>
-            Hi <b>${account.username}</b>,<br>
-            We have been whispered that you have forgotten your password.<br>
-            But we need confirmation that the intruders are not trying to ruin your life.<br>
-            <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
-            If it is you, still have to confirm it by entering the code.<br>
-            Your personal code: <b>${client.verificationCode}</b><br>
-            Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
-          </p>
-        </div>
-      `);
+          <div color=black>  
+            <p>
+              Hi <b>${account.username}</b>,<br>
+              We have been whispered that you have forgotten your password.<br>
+              But we need confirmation that the intruders are not trying to ruin your life.<br>
+              <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
+              If it is you, still have to confirm it by entering the code.<br>
+              Your personal code: <b>${client.verificationCode}</b><br>
+              Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
+            </p>
+          </div>
+        `);
       }
       break;
 
