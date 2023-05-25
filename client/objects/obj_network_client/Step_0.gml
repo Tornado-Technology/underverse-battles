@@ -3,7 +3,7 @@
 // reconect
 if (!connected && !connecting && !global.network_blocking) {
 	logger.info("Reconnecting...");
-	network_connected = false;
+	disconnect();
 	connect();
 }
 

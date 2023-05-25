@@ -265,12 +265,10 @@ login_callback = on_network_login.connect(function() {
 	if (obj_menu.pause) exit;
 	if (page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
 		goto_page(menu_page.multiplayer_account);
-		instance_destroy(obj_menu_sign_up);
-		instance_destroy(obj_menu_log_in);
 	}
 });
 
-disconnect_callback = on_network_connection_timeout.connect(function() {
+disconnect_callback = on_network_disconnect.connect(function() {
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
 		goto_page(menu_page.multiplayer);
 		instance_destroy(obj_profile_statistics);

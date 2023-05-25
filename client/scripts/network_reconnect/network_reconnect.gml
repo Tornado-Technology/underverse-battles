@@ -11,5 +11,7 @@ function network_reconnect() {
 		room_goto(room_fight_1v1_end);
 	}
 	
+	network_client.disconnect()
+	
     network_client.connect()
 }
