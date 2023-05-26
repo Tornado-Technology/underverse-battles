@@ -46,7 +46,7 @@ function handle_packet(data) {
 			}
 
 			logger.error("Login failed. Error: ", data.status);
-			display_show_message_info(translate_get("Menu.LogInMessage.Error")[data.status - 300], c_red);
+			display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
 			on_network_login.invoke(data.status);
 			break;
 
@@ -90,7 +90,7 @@ function handle_packet(data) {
 		
 		case "changeNickname":
 			if (data.status != status_code.success) {
-				display_show_message_info(string(data.status), c_red);
+				display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
 				break;
 			}
 			
@@ -101,7 +101,7 @@ function handle_packet(data) {
 
 		case "changeUsername":
 			if (data.status != status_code.success) {
-				display_show_message_info(string(data.status), c_red);
+				display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
 				break;
 			}
 			
@@ -111,8 +111,9 @@ function handle_packet(data) {
 			break;
 
 		case "changePassword":
+		case "restorePassword":
 			if (data.status != status_code.success) {
-				display_show_message_info(string(data.status), c_red);
+				display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
 				break;
 			}
 			
@@ -175,6 +176,7 @@ function handle_packet(data) {
 		case "fightInitiative":
 			// Send obj_fight this info
 			fight_set_initiative(data.initiative);
+			fight_set_state(fight_state.reset);
 			break;
 
 		case "fightAction":
