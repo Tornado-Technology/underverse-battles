@@ -37,6 +37,8 @@
   "gradleinject": "",
   "hasConvertedCodeInjection": true,
   "helpfile": "",
+  "HTML5CodeInjection": "",
+  "html5Props": false,
   "IncludedResources": [
     "Included Files\\netlog\\netlog.exe",
     "Included Files\\netlog\\netlog.n",

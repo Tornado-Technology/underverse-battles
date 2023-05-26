@@ -238,7 +238,7 @@ export const handlePacket = async (client: Client, data: any) => {
         const { identifier, password } = data;
         const account = await Account.findOne({ username: identifier }) ?? await Account.findOne({ email: identifier });
         if (!account) {
-          client.sendRestorePassword(statusCode.error);
+          client.sendRestorePassword(statusCode.databaseAccountNotExists);
           break;
         }
 

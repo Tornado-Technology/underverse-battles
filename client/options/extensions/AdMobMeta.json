@@ -1,9 +1,5 @@
 {
-  "extensionId": {
-    "name": "AdMobMeta",
-    "path": "extensions/AdMobMeta/AdMobMeta.yy"
-  },
-  "resourceVersion": "1.0",
   "resourceType": "GMExtensionConfigSet",
-  "configurables": null
+  "configurables": null,
+  "resourceVersion": "1.0"
 }
