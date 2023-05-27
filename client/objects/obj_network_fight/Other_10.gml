@@ -1,5 +1,3 @@
-show_debug_message(string(state));
-
 if (state == fight_state.battle) {
 	timer_stop();
 	instance_create_one(obj_battle);
@@ -23,9 +21,10 @@ if (state == fight_state.dodge) {
 if (state == fight_state.reset) {
 	if (!first_reset_was) {
 		first_reset_was = true;
-		exit;
 	}
-	statistics_set_next_step_network();
-	timer_start();
+	else {
+		statistics_set_next_step_network();
+		timer_start();
+	}
 	state = fight_state.choosing;
 }
