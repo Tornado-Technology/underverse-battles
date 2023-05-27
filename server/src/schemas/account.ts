@@ -22,7 +22,7 @@ export interface IAccount extends Document {
   nickname: string,
   password: string,
   email: string,
-  data: Date,
+  date: Date,
   type: accountType,
 }
 
