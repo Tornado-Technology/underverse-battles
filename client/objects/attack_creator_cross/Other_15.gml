@@ -116,7 +116,6 @@ if (_id == 1 && attack_num == 2) {
 // Синяя атака
 if (_id == 2) {
 	switch (_power) {
-		default:
 		case 0:
 			_period = 75;
 			_time_step = [30, 5, 25, 5];
@@ -139,8 +138,8 @@ if (_id == 2) {
 			break;
 		case 4:
 			_period = 58;
-			if (attack_num == 0) _time_step = [18, 22, 40, 44];
-			if (attack_num == 1) _time_step = [15, 20, 45, 50];
+			if (attack_num == 0) _time_step = [18, 4, 30, 4];
+			if (attack_num == 1) _time_step = [15, 4, 30, 4];
 			final_time = _period*10;
 			break;
 	}

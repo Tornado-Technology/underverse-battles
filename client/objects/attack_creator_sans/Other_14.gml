@@ -182,7 +182,6 @@ if (_id == 2 || _id == 3) {
 			if (attack_num == 0) {
 				_soul.change_gravity_force(side);
 			}
-			var i = 0;
 			
 			if (attack_num == 0) {
 				var warning_scale = 5;
@@ -193,12 +192,13 @@ if (_id == 2 || _id == 3) {
 			draw_warning(side, warning_scale);
 			audio_play_sound_plugging(snd_warning);
 			
+			var i = 0;
 			repeat(array_length(_bones)) {
 				instance_destroy(_bones[i]);
-				_bones[i] = noone;
 				++i;
 			}
-
+			
+			i = 0;
 			repeat(num) {
 				if (side == dir.up) {
 					_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y - _border.up - 25, bone_obj, 0, 1, 0, 180);
@@ -236,6 +236,7 @@ if (_id == 2 || _id == 3) {
 	}
 }
 
+// Плохое время
 if (_id == 3) {
 	update_3_5 = function() {
 		var radius = _border.up * 2;

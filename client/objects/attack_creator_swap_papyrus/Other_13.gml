@@ -1,10 +1,9 @@
 /// @desc Bad time
 
-if (!started) {
-	var  border_decrease = 20;
-	_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
-	if (battle_border_start_animation_end()) exit;
+var  border_decrease = 20;
+_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 	
+time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
 	_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
 	_soul.changeable_direction = true;
 	
@@ -23,6 +22,5 @@ if (!started) {
 	time_source_start(time_source_update_3_0);
 	time_source_start(time_source_update_3_1);
 	time_source_start(time_source_update_destroy_3_2);
-	
-	started = true;
-}
+});
+time_source_start(time_source_border_delay);

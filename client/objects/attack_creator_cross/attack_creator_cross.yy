@@ -10,6 +10,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":13,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":12,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -18,8 +19,8 @@
     "path": "folders/Characteres/Cross/Attacks.yy",
   },
   "parentObjectId": {
-    "name": "attack_creator_sans",
-    "path": "objects/attack_creator_sans/attack_creator_sans.yy",
+    "name": "attack_creator",
+    "path": "objects/attack_creator/attack_creator.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
