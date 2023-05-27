@@ -727,6 +727,7 @@
   },
   "MiniGame": {
     "Scores": "Scores",
+    "Highscore": "Highscore",
     "BackToMenu": "Back to menu"
   },
   "Dialog": {

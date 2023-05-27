@@ -728,6 +728,7 @@
   },
   "MiniGame": {
     "Scores": "得分",
+    "Highscore": "高分",
     "BackToMenu": "返回菜单"
   },
   "Dialog": {
