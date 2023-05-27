@@ -727,6 +727,7 @@
   },
   "MiniGame": {
     "Scores": "Очки",
+    "Highscore": "Рекорд",
     "BackToMenu": "Вернуться в меню"
   },
   "Dialog": {
