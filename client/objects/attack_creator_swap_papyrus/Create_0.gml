@@ -16,6 +16,7 @@ _shift = 0;
 type = 0;
 random_number = 0;
 
+bone_scale = 1;
 bone_size_update_0_0 = 1;
 
 _angle = 0;
@@ -23,3 +24,4 @@ angle_step = 0;
 
 event_user(4);
 event_user(5);
+if (_id > -1 && _id < 4) event_user(_id);

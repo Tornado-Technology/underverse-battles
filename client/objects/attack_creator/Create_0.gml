@@ -1,4 +1,4 @@
-_time = 0;
+time_border_delay = 0.55;
 stage = 0;
 
 started = false;
