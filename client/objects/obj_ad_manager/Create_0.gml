@@ -1,5 +1,5 @@
 // Ad initialize
-if (mobile_mode) {
+if (!default_mode) {
 	AdMob_SetTestDeviceId();
 }
 

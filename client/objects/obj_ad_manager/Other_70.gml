@@ -24,7 +24,6 @@ switch(async_load[? "type"])
         // user (more info: AdMob_Interstitial_Show). This function will
         // generate an ASYNC SOCIAL EVENT.
 		show_debug_message("AdMob_Interstitial_OnLoaded");
-        AdMob_Interstitial_Show();
         break;
 
     // AdMob_Interstitial_Load() failed
@@ -65,6 +64,7 @@ switch(async_load[? "type"])
         // At this point the interstitial ad got dismissed by the user and
         // the game logic is running again.
 		show_debug_message("AdMob_Interstitial_OnDismissed");
+		AdMob_Interstitial_Load();
         break;
 
 }

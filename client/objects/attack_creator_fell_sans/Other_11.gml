@@ -8,8 +8,7 @@ switch (attack_num) {
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
 			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
-			if (_time == 1)
-				stage = irandom_range(1, 2);
+			stage = irandom_range(1, 2);
 		
 			if (stage == 1) {
 				update_1_0(_power);

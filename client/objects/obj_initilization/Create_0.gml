@@ -31,7 +31,7 @@ if (is_desktop) {
 }
 
 // Set ad mobile
-if (is_mobile || mobile_mode) {
+if (is_mobile) {
 	instance_create(obj_ad_manager);
 }
 
