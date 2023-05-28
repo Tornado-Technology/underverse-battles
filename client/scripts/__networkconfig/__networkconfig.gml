@@ -58,7 +58,7 @@ global.__on_network_connection_timeout = new Event();
 #macro Cinematic:network_offical_ip "82.146.34.152"
 #macro Mobile:network_offical_ip "82.146.34.152"
 #macro SpecialAttackTest:network_offical_ip "82.146.34.152"
-#macro Default:network_offical_port "1338"
+#macro Default:network_offical_port "1339"
 #macro Development:network_offical_port "1337"
 #macro Localserver:network_offical_port "1337"
 #macro Cinematic:network_offical_port "1337"
