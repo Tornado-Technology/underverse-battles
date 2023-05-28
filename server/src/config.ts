@@ -49,7 +49,7 @@ const commonConfig = {
 }
 
 const productionConfig = {
-  environment: 'common',
+  environment: 'production',
   meta: {
     name: 'UnderverseBattles server official',
     description: 'The official, always maintained server of the developers of UnderverseBattles',
