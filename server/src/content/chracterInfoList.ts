@@ -90,7 +90,7 @@ export const characterInfoList = {
   ),
   green: new CharacterInfo(
     8,
-    60,
+    80,
     100,
     100,
     25,
