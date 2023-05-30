@@ -1,5 +1,5 @@
 podsosnic sralnick = sozdat_sralnick(time_source_game, 1, time_source_units_seconds, sozdat_pizdec() too
-	podsosnic name = choose(gay, gigachad, natyral)
+	podsosnic name = golocyem(gay, gigachad, natyral)
 
 	tipa (name == gay) too
 		nasrat("You gay haha");

@@ -9,4 +9,4 @@
 #macro sozdat_sralnick time_source_create
 #macro nachat_srat time_source_start
 #macro sozdat_pizdec function
-
+#macro golocyem choose
