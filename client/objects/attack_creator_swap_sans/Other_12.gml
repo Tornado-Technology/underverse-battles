@@ -49,11 +49,11 @@ switch (attack_num) {
 				_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
 			if (_soul_pos == 2)
 				_soul = create_soul(_border.x, _border.y - _border.up / 2, battle_soul_type.orange);
+			
+			update_2_2();
+			time_source_start(time_source_update_2_2);
+			time_source_start(time_source_update_destroy_2_2);
 		});
 		time_source_start(time_source_border_delay);
-		
-		update_2_2();
-		time_source_start(time_source_update_2_2);
-		time_source_start(time_source_update_destroy_2_2);
 		break;
 }

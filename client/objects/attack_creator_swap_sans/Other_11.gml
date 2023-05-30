@@ -23,7 +23,7 @@ switch (attack_num) {
 		
 			var bone_speed = 0;
 			var bone_size = 8;
-			var angle_speed = 1.2 + _power * 0.2;
+			var angle_speed = 1 + _power * 0.2;
 			rand_num = irandom_range(0, 1);
 			if (rand_num == 1) angle_speed = -angle_speed;
 			_inst1 = create_bone_spinning(_border.x, _border.y, bone_spin_obj, bone_speed, 0, 0, 0, angle_speed);
