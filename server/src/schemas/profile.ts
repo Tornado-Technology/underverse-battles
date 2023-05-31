@@ -10,7 +10,7 @@ export const profileCollection = 'profiles';
 export const profileModelName = 'Profile';
 
 export interface IProfile extends Document {
-  accountId: string,
+  accountId: ObjectId,
   online: boolean,
   lastOnline: Date,
   friends: ObjectId[],

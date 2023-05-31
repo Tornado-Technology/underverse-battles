@@ -30,3 +30,4 @@ rot = irandom_range(0, 1);
 
 event_user(4);
 event_user(5);
+if (_id > -1 && _id < 4) event_user(_id);

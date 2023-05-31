@@ -10,7 +10,7 @@ function failed_registration_reason_second_password(){
 
 function failed_registration(reason){
 	global.failed_registration = true;
-	display_show_message_info(translate_get("Menu.LogInMessage.Error")[reason - 300], c_red);
+	display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(reason)), c_red);
 }
 
 function invalid_registration(){

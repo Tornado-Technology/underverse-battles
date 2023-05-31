@@ -116,9 +116,7 @@ function battle_border_start_animation(anim_id) {
 	return true;
 }
 function battle_border_start_animation_end() {
-	var condition = instance_exists(obj_battle_border_anim);
-	if (condition) _time = 0;
-	return condition;
+	return instance_exists(obj_battle_border_anim);
 }
 function battle_border_get_size(size_id) {
 	var border = obj_battle_border; if(!instance_exists(border)) return false;

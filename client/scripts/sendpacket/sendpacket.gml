@@ -82,9 +82,9 @@ function send_nickname_change(nickname) {
 
 /// @param {String} nickname
 /// @param {String} password
-function send_password_retrieval(nickname, password) {
-	send("passwordRetrieval", {
-		nickname: nickname,
+function send_password_retrieval(identifier, password) {
+	send("restorePassword", {
+		identifier: identifier,
 		password: password,
 	});
 }

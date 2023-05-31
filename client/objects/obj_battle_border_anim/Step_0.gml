@@ -4,7 +4,7 @@ if (global.fight_instance != noone) {
 }
 
 if (animation_id == "Create" && anim_create) {
-	progress = approach(progress, progress_max, progress_step);
+	progress = approach(progress, progress_max, progress_step * dtime);
 
 	var amout = progress / progress_max;
 
@@ -21,7 +21,7 @@ if (animation_id == "Create" && anim_create) {
 }
 
 if (animation_id == "Destroy") {
-	progress = approach(progress, progress_max, progress_step);
+	progress = approach(progress, progress_max, progress_step * dtime);
 
 	var amout = 1 - progress / progress_max;
 

@@ -61,7 +61,8 @@
     "Now Online",
     "Mouse (sneaking around)",
     "Mhhh, I have to rewrite everything again",
-    "*The dog ate this text*"
+    "*The dog ate this text*",
+    "ANDROID!!!!!"
   ],
   "DiscordApp": {
     "Undefined": "Not founded!",
@@ -294,22 +295,25 @@
       "RegistrationInvalid": "Registration invalid (connect error)",
       "LoginInvalid": "Account login invalid (connect error)",
       "ErrorSecondPassword": "The second password does not match the first",
-      "Error": [
-        "300. Unknown error",
-        "301. No database connection",
-        "302. Data base is not working",
-        "303. Account does not exist",
-        "304. Account already exist",
-        "305. The profile is not exist",
-        "306. The profile already exist",
-        "307. Username is busy",
-        "308. Username does not match the rules",
-        "309. Incorrect password",
-        "310. E-mail is busy",
-        "311. E-mail does not comply with rules",
-        "312. Verification code is wrong",
-        "313. Verification time out"
-      ]
+      "Error": {
+        "0": "0. Unknown error",
+        "1": "1. Success",
+        "2": "2. Connection socket closed",
+        "300": "300. Data base unknown error",
+        "301": "301. No database connection",
+        "302": "302. Data base is not working",
+        "303": "303. Account does not exist",
+        "304": "304. Account already exist",
+        "305": "305. The profile is not exist",
+        "306": "306. The profile already exist",
+        "307": "307. Username is busy",
+        "308": "308. Username does not match the rules",
+        "309": "309. Incorrect password",
+        "310": "310. E-mail is busy",
+        "311": "311. E-mail does not comply with rules",
+        "312": "312. Verification code is wrong",
+        "313": "313. Verification time out"
+      }
     },
     "AccountOptions": {
       "Title": "Account options",
@@ -723,6 +727,7 @@
   },
   "MiniGame": {
     "Scores": "Scores",
+    "Highscore": "Highscore",
     "BackToMenu": "Back to menu"
   },
   "Dialog": {

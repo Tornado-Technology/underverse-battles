@@ -133,7 +133,7 @@ if (_id == 2 && attack_num == 2) {
 }
 
 if (_id == 3) {
-	var period = 120;
+	var period = 100;
 	time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_3_0();
 	}, [], -1);
@@ -141,7 +141,7 @@ if (_id == 3) {
 	time_source_update_3_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_3_1();
 	}, [], -1);
-	var final_time = 400;
+	var final_time = 450;
 	time_source_update_stop_3_0 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
 		time_source_stop(time_source_update_3_0);
 		time_source_stop(time_source_update_3_1);

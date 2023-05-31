@@ -183,12 +183,11 @@ if (_id == 2 && attack_num == 0 || _id == 3) {
 		var i = 0;
 		repeat(array_length(_bones)) {
 			instance_destroy(_bones[i]);
-			_bones[i] = noone;
 			i++;
 		}
 		
 		side = irandom_range(0, 3);
-		var i = 0;
+		i = 0;
 		repeat(num) {
 			if (i == 0)
 				character_instance.prev_sprite = noone;
@@ -227,7 +226,7 @@ if (_id == 2 && attack_num == 0 || _id == 3) {
 			++i;
 		}
 		//character_instance.change_sprite_hand_dir(side);
-		var i = 0;
+		i = 0;
 		repeat(num) {
 			_bones[i].change_scale(bone_scale, 0.3);
 			i++;
@@ -255,10 +254,10 @@ if (_id == 2 && attack_num == 1 || _id == 3 && attack_num == 1) {
 		
 		repeat(array_length(_bones)) {
 			instance_destroy(_bones[i]);
-			_bones[i] = noone;
 			++i;
 		}
-
+		
+		i = 0;
 		repeat(num) {
 			if (side == dir.up) {
 				_bones[i] = create_bone(_border.x - _border.left + i * 10, _border.y - _border.up - 25, bone_obj, 0, 1, 0, 180);

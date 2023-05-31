@@ -19,3 +19,4 @@ angle_step = 0;
 
 event_user(4);
 event_user(5);
+if (_id > -1 && _id < 4) event_user(_id);

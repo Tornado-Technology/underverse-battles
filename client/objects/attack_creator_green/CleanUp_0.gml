@@ -1,3 +1,5 @@
+time_source_destroy(time_source_border_delay);
+
 if (_id == 0 && attack_num == 0) {
 	time_source_destroy(time_source_update_0_0);
 	time_source_destroy(time_source_update_0_0_2);

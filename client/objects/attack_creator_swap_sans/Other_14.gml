@@ -214,12 +214,26 @@ if (_id == 2 && attack_num == 2) {
 // Костяная завеса
 if (_id == 3) {
 	update_3_0 = function() {
-		var bone_speed = 1;
+		var bone_speed = 1.5;
 		var bone_size = 8.3;
-		create_bone(_border.x - _border.left - 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 0, 0);
-		create_bone(_border.x + _border.right + 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 180, 0);
-		create_bone(_border.x + _border.right, _border.y + _border.down + 4, bone_obj, bone_speed, bone_size, 90, 90);
-		create_bone(_border.x + _border.right, _border.y - _border.up - 4, bone_obj, bone_speed, bone_size, 270, 90);
+		var random_side = choose(dir.up, dir.down, dir.left, dir.right);
+		
+		if (random_side == dir.up) {
+			create_bone(_border.x + _border.right, _border.y - _border.up - 4, bone_obj, bone_speed, bone_size, 270, 90);
+			create_bone(_border.x - _border.left - 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 0, 0);
+		}
+		if (random_side == dir.down) {
+			create_bone(_border.x + _border.right, _border.y + _border.down + 4, bone_obj, bone_speed, bone_size, 90, 90);
+			create_bone(_border.x + _border.right + 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 180, 0);
+		}
+		if (random_side == dir.left) {
+			create_bone(_border.x - _border.left - 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 0, 0);
+			create_bone(_border.x + _border.right, _border.y + _border.down + 4, bone_obj, bone_speed, bone_size, 90, 90);
+		}
+		if (random_side == dir.right) {
+			create_bone(_border.x + _border.right + 4, _border.y + _border.down, bone_obj, bone_speed, bone_size, 180, 0);
+			create_bone(_border.x + _border.right, _border.y - _border.up - 4, bone_obj, bone_speed, bone_size, 270, 90);
+		}
 	}
 	
 	update_3_1 = function() {
