@@ -40,7 +40,7 @@ export const characterInfoList = {
   swapSans: new CharacterInfo(
     4,
     120,
-    100,
+    120,
     100,
     25,
     [10, 15, 20],
@@ -66,7 +66,7 @@ export const characterInfoList = {
   ),
   cross: new CharacterInfo(
     7,
-    100,
+    120,
     100,
     100,
     20,
@@ -77,7 +77,7 @@ export const characterInfoList = {
     [
       new CharacterInfo(
         7,
-        120,
+        100,
         100,
         100,
         20,
@@ -90,7 +90,7 @@ export const characterInfoList = {
   ),
   green: new CharacterInfo(
     8,
-    60,
+    80,
     100,
     100,
     25,
