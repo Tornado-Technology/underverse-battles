@@ -1,10 +1,9 @@
 {
   "Windows x64": {
-    "v2.0.11": true,
-    "v2.1.0": true
+    "v2.0.11": false,
+    "v2.1.0": "ba41b4495b6a57bd37f3ee02e290e16995a29a35"
   },
   "Android": {
-    "v2.0.11": true,
     "v2.1.0": true
   }
 }

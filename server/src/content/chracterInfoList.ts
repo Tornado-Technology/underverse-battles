@@ -66,7 +66,7 @@ export const characterInfoList = {
   ),
   cross: new CharacterInfo(
     7,
-    100,
+    120,
     100,
     100,
     20,
@@ -77,7 +77,7 @@ export const characterInfoList = {
     [
       new CharacterInfo(
         7,
-        120,
+        100,
         100,
         100,
         20,

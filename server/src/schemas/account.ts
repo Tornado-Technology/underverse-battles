@@ -49,12 +49,14 @@ export const validatePassword = (password: string): number => {
 }
 
 export const validateUsername = async (username: string): Promise<number> => {
-  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item === username)?.length > 0) {
+  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
-  return await Account.findOne({ username }) ? statusCode.databaseUsernameBusy : statusCode.success;
+  const account = await Account.findOne({ username });
+  return Boolean(account) ? statusCode.databaseUsernameBusy : statusCode.success;
 }
+
 
 export const validateEmail = async (email: string): Promise<number> => {
   return await Account.findOne({ email }) ? statusCode.databaseEmailBusy : statusCode.success;
