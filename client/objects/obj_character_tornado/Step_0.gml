@@ -4,7 +4,7 @@ if (dodging) {
 	dodging_time++;
 	if (dodging_time > 60) {
 		dodging = false;
-		sprite_index = spr_tornado_idle;
+		sprite_index = idle_animation;
 	}
 }
 

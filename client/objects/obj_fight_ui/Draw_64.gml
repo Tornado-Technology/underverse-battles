@@ -126,10 +126,6 @@ if (action_box_show) {
 			}
 			global.fight_instance.required_components.input.set_selected_action(i);
 		}
-		
-		delete text_position;
-		delete soul_position;
-		delete offset_postion;
 	}
 }
 

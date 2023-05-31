@@ -29,6 +29,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "AccountAction",
-    "path": "folders/Objects/UI/Menu/Pages/AccountAction.yy",
+    "path": "folders/Objects/GUI/Menu/Pages/AccountAction.yy",
   },
 }
