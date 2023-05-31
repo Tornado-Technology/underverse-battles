@@ -1,6 +1,6 @@
 /// @param {String} key
 /// @param {Asset.GMSprite} icon
-/// @param {bool} icon_locked
+/// @param {Asset.GMSprite} icon_locked
 /// @param {Function} callback
 /// @param {Real} percent_given
 /// @return {Struct.SpecialActionClass}
@@ -13,6 +13,7 @@ function SpecialAction(key, icon, icon_locked, callback = undefined, percent_giv
 /// @param {String} key_name
 /// @param {String} key_description
 /// @param {Asset.GMSprite} icon
+/// @param {Asset.GMSprite} icon_locked
 /// @param {Function} callback
 /// @param {Number} percent_given
 function SpecialActionClass(key_name, key_description, icon, icon_locked, callback, percent_given, is_damage_attack) constructor {

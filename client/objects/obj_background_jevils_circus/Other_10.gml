@@ -10,5 +10,5 @@ newy2 = lengthdir_y(radius / 2, lendir_2);
 if (newy1 <= 0) newy1 *= 0.6
 if (newy2 <= 0) newy2 *= 0.6
 
-draw_set_color(blackon ? c_dkblue2 : c_dkblue);
+draw_set_color(blackon ? c_signal_blue : c_dkblue);
 blackon = !blackon;

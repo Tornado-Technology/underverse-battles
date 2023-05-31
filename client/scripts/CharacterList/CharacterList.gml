@@ -98,7 +98,8 @@ function CharacterList() {
 		//]);
 		
 		array_push(global.characters, [
-			new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame)
+			new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame),
+			new Character(obj_character_tornado_scaly, "Tornado", "Scaly", spr_tornado_frame_scaly),
 		]);
 		
 		//array_push(global.characters, [

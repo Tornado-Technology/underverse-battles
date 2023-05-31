@@ -59,7 +59,7 @@ if (account != undefined && profile != undefined) {
 	if (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings) {
 		draw_set_font(font_console_mini);
 		draw_set_halign(fa_left);
-		draw_text_outlined(4, height - 20, c_grey, c_black, "Current Account: " + account.username);
+		draw_text_outlined(4, height - 20, c_grey, c_black, "Current Account: " + string(account.username));
 		draw_text_outlined(4, height - 10, c_grey, c_black, string(profile.rating) + " RP");
 	}
 }

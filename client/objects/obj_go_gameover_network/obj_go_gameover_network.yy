@@ -30,6 +30,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Gameover",
-    "path": "folders/Objects/UI/Gameover.yy",
+    "path": "folders/Objects/GUI/Gameover.yy",
   },
 }

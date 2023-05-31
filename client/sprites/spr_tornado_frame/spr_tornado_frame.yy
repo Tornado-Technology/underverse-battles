@@ -71,7 +71,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Frame",
-    "path": "folders/Characteres/Tornado/Sprites/Frame.yy",
+    "name": "Frames",
+    "path": "folders/Characteres/Tornado/Sprites/Character/Main/Frames.yy",
   },
 }

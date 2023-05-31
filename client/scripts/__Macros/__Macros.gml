@@ -15,12 +15,16 @@
 #macro xdelta (x - xprevious)
 #macro ydelta (y -yprevious)
 
-// Platform macros
 #macro is_desktop (os_type == os_windows || os_type == os_linux || os_type == os_macosx)
-#macro is_mobile (os_type == os_android || os_type == os_ios)
+#macro is_mobile (os_type == os_android || os_type == os_ios || mobile_mode)
 #macro is_html (os_browser != browser_not_a_browser)
 
 #macro mouse_gui_x (device_mouse_x_to_gui(0))
 #macro mouse_gui_y (device_mouse_y_to_gui(0))
 
 #macro real_delta_time (delta_time / 1000000)
+
+#macro struct_empty {}
+#macro array_empty []
+#macro string_empty ""
+#macro function_empty function() {}

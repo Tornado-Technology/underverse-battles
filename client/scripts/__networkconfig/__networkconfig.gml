@@ -49,7 +49,7 @@ global.__instance_network_client = noone;
 global.__event_on_network_connect = new Event();
 global.__event_on_network_disconnect = new Event();
 global.__event_on_network_login = new Event();
-global.__on_network_connection_timeout = new Event();
+global.__event_on_network_connection_timeout = new Event();
 
 // Macros
 #macro Default:network_offical_ip "82.146.34.152"
@@ -58,7 +58,7 @@ global.__on_network_connection_timeout = new Event();
 #macro Cinematic:network_offical_ip "82.146.34.152"
 #macro Mobile:network_offical_ip "82.146.34.152"
 #macro SpecialAttackTest:network_offical_ip "82.146.34.152"
-#macro Default:network_offical_port "1338"
+#macro Default:network_offical_port "1339"
 #macro Development:network_offical_port "1337"
 #macro Localserver:network_offical_port "1337"
 #macro Cinematic:network_offical_port "1337"
@@ -67,9 +67,11 @@ global.__on_network_connection_timeout = new Event();
 #macro network_connect_interval 120
 #macro network_connect_timeout 420
 #macro network_disconnect_timeout 600
-#macro network_autolog_file (working_directory + "autolog.acc")
+
+#macro network_autolog_file (working_directory + (development_mode ? "autologDevelopment.acc" : "autolog.acc"))
 
 #macro network_client global.__instance_network_client
+
 #macro network_account global.__network_account
 #macro network_profile global.__network_profile
 #macro network_connected global.__network_connected
@@ -78,7 +80,7 @@ global.__on_network_connection_timeout = new Event();
 #macro on_network_connect global.__event_on_network_connect
 #macro on_network_disconnect global.__event_on_network_disconnect
 #macro on_network_login global.__event_on_network_login
-#macro on_network_connection_timeout global.__on_network_connection_timeout
+#macro on_network_connection_timeout global.__event_on_network_connection_timeout
 
 // Connections
 on_network_connect.connect(function() {
