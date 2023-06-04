@@ -16,7 +16,7 @@
     "Development": {"copyToTargets":"3035426170322551014",},
   },
   "copyToTargets": -1,
-  "date": "2020-10-04T17:42:17.9816143+03:00",
+  "date": "2020-10-05T00:42:17.9816143+10:00",
   "description": "Adds several Windows-specific functions for GameMaker: Studio.\r\nSee blog post for details:\r\nhttp://yal.cc/gamemaker-windows-functions-for-gamemaker-studio",
   "exportToGame": true,
   "extensionVersion": "0.0.1",

@@ -24,7 +24,6 @@ switch(type) {
 		
 		var size = buffer_get_size(buffer);
 		var pack_count = 0;
-
 		
 		for (var i = 0; i < size;) { // Break up the binary blob into single packets
 			// Read the packet size
@@ -48,7 +47,7 @@ switch(type) {
 			
 			// Read the packet contents
 			var pack = buffer_create(packSize, buffer_fixed, 1);
-			buffer_copy(buffer, i, packSize, pack, 0);
+			buffer_copy_real(buffer, i, packSize, pack, 0);
 			
 			i += packSize;
 			

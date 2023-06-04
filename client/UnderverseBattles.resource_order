@@ -357,6 +357,7 @@
     {"name":"spr_sans_on_byke_attack2_right_left","order":10,"path":"sprites/spr_sans_on_byke_attack2_right_left/spr_sans_on_byke_attack2_right_left.yy",},
     {"name":"spr_cross_defeated","order":5,"path":"sprites/spr_cross_defeated/spr_cross_defeated.yy",},
     {"name":"attack_scripts_xchara","order":2,"path":"scripts/attack_scripts_xchara/attack_scripts_xchara.yy",},
+    {"name":"buffer_copy_real","order":22,"path":"scripts/buffer_copy_real/buffer_copy_real.yy",},
     {"name":"obj_soundtrack_selection","order":6,"path":"objects/obj_soundtrack_selection/obj_soundtrack_selection.yy",},
     {"name":"obj_statistics","order":2,"path":"objects/obj_statistics/obj_statistics.yy",},
     {"name":"obj_tea_delta","order":4,"path":"objects/obj_tea_delta/obj_tea_delta.yy",},

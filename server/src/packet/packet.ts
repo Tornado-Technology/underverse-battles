@@ -8,7 +8,7 @@ export default class Packet {
     const dataBuffer = encode(data);
     const sizeBuffer = Buffer.alloc(4);
     sizeBuffer.writeUInt32LE(dataBuffer.length);
-
+    
     return Buffer.concat([sizeBuffer, dataBuffer], dataBuffer.length + 4);
   }
 

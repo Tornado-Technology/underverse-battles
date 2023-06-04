@@ -1,22 +1,19 @@
+
 /// @return Nested struct/array data decoded from the buffer, using the messagepack standard
 ///
 /// More information on messagepack can be found here: https://msgpack.org/index.html
 /// 
-/// @param buffer           Binary data to be decoded, created by snap_to_binary()
-/// @param [offset]         Start position for binary decoding in the buffer. Defaults to 0, the start of the buffer
-/// @param [destroyBuffer]  Set to <true> to destroy the input buffer. Defaults to <false>
+/// @param {Buffer} _buffer           Binary data to be decoded, created by snap_to_binary()
+/// @param {real} _offset         Start position for binary decoding in the buffer. Defaults to 0, the start of the buffer
+/// @param {bool} _destroy_buffer  Set to <true> to destroy the input buffer. Defaults to <false>
 /// 
 /// @jujuadams 2021-09-05
 /// @return {Struct}
-function snap_from_messagepack()
-{
-    var _buffer         = argument[0];
-    var _offset         = ((argument_count > 1) && (argument[1] != undefined))? argument[1] : 0;
-    var _destroy_buffer = ((argument_count > 2) && (argument[2] != undefined))? argument[2] : false;
-    
+function snap_from_messagepack(_buffer, _offset = 0, _destroy_buffer = false)
+{ 
     var _old_tell = buffer_tell(_buffer);
     buffer_seek(_buffer, buffer_seek_start, _offset);
-    var _result =new __snap_from_messagepack_parser(_buffer).root;
+    var _result = new __snap_from_messagepack_parser(_buffer).root;
     buffer_seek(_buffer, buffer_seek_start, _old_tell);
     
     if (_destroy_buffer) buffer_delete(_buffer);
