@@ -13,7 +13,7 @@
   "author": "",
   "classname": "",
   "ConfigValues": {
-    "Development": {"copyToTargets":"4294967526",},
+    "Development": {"copyToTargets":"194","HTML5CodeInjection":"","ioscodeinjection":"","tvoscodeinjection":"",},
   },
   "copyToTargets": 113497714299118,
   "date": "2019-12-12T01:34:29",
