@@ -1,11 +1,11 @@
 event_inherited();
 
 if (dodging) {
-	dodging_time++;
+	dodging_time += dtime;
 	if (dodging_time > 60) {
 		dodging = false;
 		sprite_index = spr_tornado_idle;
 	}
 }
 
-x = lerp(x, xstart - (dodging ? 20 : 0) * image_xscale, 0.4);
+x = lerp(x, xstart - (dodging ? 20 : 0) * image_xscale, 0.4 * dtime);
