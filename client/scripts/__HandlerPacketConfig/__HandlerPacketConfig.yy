@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "HandlePacket",
+  "name": "__HandlerPacketConfig",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
