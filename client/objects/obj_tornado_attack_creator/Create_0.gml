@@ -1,12 +1,4 @@
-_id = 0;
-_power = 5;
-time = 0;
-
-number = 0;
-
-// Character instance
-character_initiative = fight_get_initiative();
-character_instance = noone;
+event_inherited();
 
 // Main battle intances
 border_instance = noone;
@@ -18,3 +10,7 @@ instance_cup = noone;
 instance_tea = noone;
 
 created_scythe = false;
+
+event_user(4);
+event_user(5);
+if (_id > -1 && _id < 4) event_user(_id);

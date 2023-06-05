@@ -12,8 +12,8 @@ max_hp = 70;
 hp = 70;
 
 // Damage
-damage = 1;
-invulnerability = false;
+damage = 5;
+invulnerability = true;
 
 // Stamina
 stamina = 150;
@@ -40,6 +40,8 @@ idle_animation = spr_tornado_idle;
 after_battle_animation = spr_tornado_idle;
 defeated_animation = spr_tornado_dodge;
 
+dodge_animation = spr_tornado_dodge;
+
 // Actions
 passive_skill = PassiveSkill("Character.Tornado.PassiveSkill");
 actions = [
@@ -57,10 +59,10 @@ dodging = false;
 dodging_time = 0;
 on_taking_damage = function(damage) {
 	if (stamina > 0) {
-		fight_remove_enemy_stamina(player_num, 3 * damage)
+		fight_remove_player_stamina(player_num, 3 * damage);
 		dodging = true;
 		dodging_time = 0;
-		sprite_index = spr_tornado_dodge;
+		sprite_index = dodge_animation;
 		return 0;
 	}
 	

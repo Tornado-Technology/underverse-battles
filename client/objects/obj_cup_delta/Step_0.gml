@@ -15,5 +15,5 @@ if (target_direction == dir.right) {
 	}
 }
 
-x += target_speed * 2;
-image_angle = wave(target_angle / 2, target_angle, 1, 10);
+x += target_speed * 2 * dtime;
+image_angle = wave(target_angle / 2, target_angle, dtime, 10);

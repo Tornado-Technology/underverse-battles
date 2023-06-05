@@ -13,7 +13,10 @@
     "name": "Bullets",
     "path": "folders/Characteres/Tornado/Attacks/Bullets.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_battle_heal",
+    "path": "objects/obj_battle_heal/obj_battle_heal.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

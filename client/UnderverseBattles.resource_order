@@ -340,7 +340,7 @@
     {"name":"spr_special_attack_fell_sans","order":3,"path":"sprites/spr_special_attack_fell_sans/spr_special_attack_fell_sans.yy",},
     {"name":"string_to_hash","order":14,"path":"scripts/string_to_hash/string_to_hash.yy",},
     {"name":"spr_sans_sitting7","order":10,"path":"sprites/spr_sans_sitting7/spr_sans_sitting7.yy",},
-    {"name":"obj_scythe_jevil","order":3,"path":"objects/obj_scythe_jevil/obj_scythe_jevil.yy",},
+    {"name":"obj_scythe_jevil","order":5,"path":"objects/obj_scythe_jevil/obj_scythe_jevil.yy",},
     {"name":"obj_setting_mobile","order":2,"path":"objects/obj_setting_mobile/obj_setting_mobile.yy",},
     {"name":"SettingsMobileCommonButton","order":2,"path":"scripts/SettingsMobileCommonButton/SettingsMobileCommonButton.yy",},
     {"name":"obj_setting_mobile_audio","order":1,"path":"objects/obj_setting_mobile_audio/obj_setting_mobile_audio.yy",},
