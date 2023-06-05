@@ -4,7 +4,7 @@
   "name": "font_mini",
   "AntiAlias": 0,
   "applyKerning": 0,
-  "ascender": 12,
+  "ascender": 0,
   "ascenderOffset": 0,
   "bold": false,
   "canGenerateBitmap": true,
