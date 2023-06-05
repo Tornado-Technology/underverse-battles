@@ -30,6 +30,10 @@ if (is_desktop) {
 	window_set_splash();
 }
 
+if (is_mobile) {
+	instance_create(obj_ad_manager);
+}
+
 // End
 logger.info("Initilization done!")
 room_goto(room_menu);
