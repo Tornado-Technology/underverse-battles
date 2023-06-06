@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Frame",
-    "path": "folders/Characteres/Tornado/Sprites/Frame.yy",
+    "name": "Frames",
+    "path": "folders/Characteres/Tornado/Sprites/Character/Main/Frames.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

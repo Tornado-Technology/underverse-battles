@@ -1,16 +1,3 @@
-enum character_index {
-	ink_sans = 0,
-	error_sans = 1,
-	sans = 2,
-	fell_sans = 3,
-	swap_sans = 4,
-	swap_papyrus = 5,
-	x_chara = 6,
-	cross = 7,
-	green = 8,
-	delta = -3
-}
-
 /// @param {Asset.GMObject} obj
 /// @param {String} key
 /// @param {String} skin_key
@@ -98,8 +85,9 @@ function CharacterList() {
 		//]);
 		
 		array_push(global.characters, [
-			new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame)
-		]);
+            new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame),
+            new Character(obj_character_tornado_scaly, "Tornado", "Scaly", spr_tornado_frame_scaly),
+        ]);
 		
 		//array_push(global.characters, [
 		//	new Character(obj_character_sock_police, "SockPolice", "Standard", spr_sock_police_frame)

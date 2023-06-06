@@ -1,10 +1,10 @@
 event_inherited();
 // Base
-index = -3; // ЮХУ!!!
+index = character_id.tornado;
 name	    = translate_get("Character.Tornado.Name");
 description = translate_get("Character.Tornado.Description");
 bio			= translate_get("Character.Tornado.Bio");
-universe	= "No";
+universe	= "Buran";
 creator	    = "TornadoTech";
 
 // HP
@@ -12,8 +12,8 @@ max_hp = 70;
 hp = 70;
 
 // Damage
-damage = 5;
-invulnerability = true;
+damage = 1;
+invulnerability = false;
 
 // Stamina
 stamina = 150;
@@ -39,8 +39,7 @@ frame = spr_tornado_frame;
 idle_animation = spr_tornado_idle;
 after_battle_animation = spr_tornado_idle;
 defeated_animation = spr_tornado_dodge;
-
-dodge_animation = spr_tornado_dodge;
+dodging_animation = spr_tornado_dodge;
 
 // Actions
 passive_skill = PassiveSkill("Character.Tornado.PassiveSkill");
@@ -49,7 +48,7 @@ actions = [
 	Action("Character.Tornado.Attack1", dan_attack_1),
 	Action("Character.Tornado.Attack2", dan_attack_2)
 ];
-special_action = SpecialAction("Character.Tornado.SpecialAttack", spr_empty, dan_special_attack);
+special_action = SpecialAction("Character.Tornado.SpecialAttack", spr_special_attack_tornado, spr_special_attack_tornado_locked, dan_special_attack);
 
 // Soundtrack
 soundtrack_name = "The Delta"; 
@@ -59,10 +58,10 @@ dodging = false;
 dodging_time = 0;
 on_taking_damage = function(damage) {
 	if (stamina > 0) {
-		fight_remove_player_stamina(player_num, 3 * damage);
+		fight_remove_player_stamina(player_num, 3 * damage)
 		dodging = true;
 		dodging_time = 0;
-		sprite_index = dodge_animation;
+		sprite_index = dodging_animation;
 		return 0;
 	}
 	
