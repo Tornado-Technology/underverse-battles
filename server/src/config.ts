@@ -20,7 +20,7 @@ const commonConfig = {
   meta: {
     name: 'UnderverseBattles server',
     description: 'The server for UnderverseBattles',
-    version: 'v2.0.11',
+    version: 'v2.1.0',
     type: 'common',
     tags: [],
   },
@@ -53,7 +53,7 @@ const productionConfig = {
   meta: {
     name: 'UnderverseBattles server official',
     description: 'The official, always maintained server of the developers of UnderverseBattles',
-    version: 'v2.0.11',
+    version: 'v2.1.0',
     type: 'production',
     tags: [
       'latest',
@@ -61,8 +61,17 @@ const productionConfig = {
       'stable',
     ],
   },
+  client: {
+    // Requires logging into an account to work with the server
+    necessaryLogin: true,
+    pingInterval: 3000,
+    verification: {
+      enabled: true,
+      timeout: 3000,
+    },
+  },
   main: {
-    port: '1338',
+    port: '1339',
   },
 }
 
@@ -71,7 +80,7 @@ const developmentConfig = {
   meta: {
     name: 'UnderverseBattles server for developers',
     description: 'The server is for testing the game, be careful, he-he!',
-    version: 'v2.0.11',
+    version: 'v2.1.0',
     type: 'development',
     tags: [
       'development',

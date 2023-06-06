@@ -30,6 +30,7 @@ export const handlePacket = async (client: Client, data: any) => {
         client.verifying = true;
         const info = JSON.parse(data.information);
         const hash = versions[info.build][info.version];
+
         if (info?.os_info) {
           const osInfo = JSON.parse(info.os_info);
           client.hardAddress = osInfo?.udid;
@@ -43,7 +44,7 @@ export const handlePacket = async (client: Client, data: any) => {
           break;
         }
 
-        if (hash !== info.hash) {
+	if (hash !== info.hash && hash !== true) {
           Logger.warn(`Client hash not match, needed: "${hash}", provided: "${info.hash}"`);
           client.verifying = false;
           client.sendConnection(statusCode.error);
@@ -438,7 +439,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     default:
-      Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
+      Logger.warn(`Handled unknown command index: "${index}", data: "${JSON.stringify(data)}"`);
       break;
   }
 }
