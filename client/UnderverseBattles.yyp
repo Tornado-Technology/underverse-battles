@@ -384,7 +384,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_determination.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
   ],

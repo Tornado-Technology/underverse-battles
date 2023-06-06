@@ -1,7 +1,7 @@
 // Main game information
 // Builds: "Windows x64", "Android"
 #macro game_name "UnderverseBattles"
-#macro game_version "v2.1.0"
+#macro game_version "v2.1.1"
 #macro game_build (is_mobile ? "Android" : "Windows x64")
 #macro game_base_fps 60
 
