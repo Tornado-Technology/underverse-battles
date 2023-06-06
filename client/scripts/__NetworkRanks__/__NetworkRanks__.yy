@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Lol",
+  "name": "__NetworkRanks__",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Settings(mobile)",
-    "path": "folders/Scripts/Local/Settings(mobile).yy",
+    "name": "Rank",
+    "path": "folders/Scripts/Networking/Schemes/Rank.yy",
   },
 }

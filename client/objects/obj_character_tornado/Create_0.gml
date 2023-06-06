@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = -3; // ЮХУ!!!
+index = character_id.tornado;
 name	    = translate_get("Character.Tornado.Name");
 description = translate_get("Character.Tornado.Description");
 bio			= translate_get("Character.Tornado.Bio");

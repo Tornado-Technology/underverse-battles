@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characteres",
-    "path": "folders/Characteres.yy",
+    "name": "XChara",
+    "path": "folders/Characteres/XChara.yy",
   },
 }

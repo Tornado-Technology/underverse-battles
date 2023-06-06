@@ -261,9 +261,8 @@ on_change_element = function() {
 	get_current_element_in_page().focus();
 }
 
-login_callback = on_network_login.connect(function() {
-	if (obj_menu.pause) exit;
-	if (page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
+login_callback = on_network_login.connect(function() { 
+	if (!id.pause && page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
 		goto_page(menu_page.multiplayer_account);
 	}
 });
@@ -292,7 +291,7 @@ held_h  = 0;
 create_page([
 	Transfer("Main.SingleBattle", menu_page.singleplayer),
 	Transfer("Main.Multiplayer", menu_page.multiplayer, function() {
-		menu_successful_login(self);
+		menu_successful_login(id);
 	}),
 	Execute("Main.Characters", [], function () {
 		instance_create_one(obj_characters);
@@ -556,7 +555,7 @@ create_page([
 ], menu_page.settings_audio, "Settings.Title", true);
 
 // Settings input
-if (is_desktop && !mobile_mode) {
+if (is_desktop) {
 	create_page([
 		MenuInput("Control.Up", input.up),
 		MenuInput("Control.Down", input.down),
@@ -572,7 +571,7 @@ if (is_desktop && !mobile_mode) {
 	], menu_page.settings_input, "Settings.Title", true);
 }
 
-if (is_mobile || mobile_mode) {
+if (is_mobile) {
 	create_page([
 		Execute("Settings.MobileControl", [], function() {
 			room_goto(room_setting_joystick);

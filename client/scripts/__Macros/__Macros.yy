@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Configs",
-    "path": "folders/_Options_/Configs.yy",
+    "path": "folders/Options/Configs.yy",
   },
 }

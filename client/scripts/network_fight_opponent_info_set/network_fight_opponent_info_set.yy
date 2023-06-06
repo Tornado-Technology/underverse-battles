@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "opponent",
+  "name": "network_fight_opponent_info_set",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Other",
-    "path": "folders/Scripts/_Network_/Other.yy",
+    "name": "DTO",
+    "path": "folders/Scripts/Networking/DTO.yy",
   },
 }

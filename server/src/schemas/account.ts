@@ -22,7 +22,7 @@ export interface IAccount extends Document {
   nickname: string,
   password: string,
   email: string,
-  data: Date,
+  date: Date,
   type: accountType,
 }
 
@@ -37,11 +37,17 @@ const schema = new Schema({
   collection: accountCollection,
 });
 
-export const usernameDefault = 'User';
+export const usernameDefault = 'user';
 const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*?&#]{6,}$/;
 const usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
+const nicknameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
+
 const usernameBlacklist = [
   usernameDefault,
+];
+
+const nicknameBlacklist = [
+
 ];
 
 export const validatePassword = (password: string): number => {
@@ -49,11 +55,16 @@ export const validatePassword = (password: string): number => {
 }
 
 export const validateUsername = async (username: string): Promise<number> => {
-  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username) !== undefined) {
+  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username.toLowerCase()) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
-  return await Account.findOne({ username }) ? statusCode.databaseUsernameBusy : statusCode.success;
+  const account = await Account.findOne({ username });
+  return Boolean(account) ? statusCode.databaseUsernameBusy : statusCode.success;
+}
+
+export const validateNickname = async (nickname: string): Promise<number> => {
+  return !nicknameRegex.test(nickname) || nicknameBlacklist.find((item) => item === nickname) !== undefined ? statusCode.databaseUsernameWrong : statusCode.success;
 }
 
 export const validateEmail = async (email: string): Promise<number> => {

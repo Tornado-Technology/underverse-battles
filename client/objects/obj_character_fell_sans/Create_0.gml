@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 3;
+index = character_id.fell_sans;
 name	    = translate_get("Character.FellSans.Name");
 description = translate_get("Character.FellSans.Description");
 bio			= translate_get("Character.FellSans.Bio");

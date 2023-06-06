@@ -53,15 +53,14 @@ if (page_index >= menu_page.settings && page_index <= menu_page.settings_beta) {
 }
 
 // User Data
-var account = network_account;
-var profile = network_profile;
-if (account != undefined && profile != undefined) {
-	if (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings) {
-		draw_set_font(font_console_mini);
-		draw_set_halign(fa_left);
-		draw_text_outlined(4, height - 20, c_grey, c_black, "Current Account: " + string(account.username));
-		draw_text_outlined(4, height - 10, c_grey, c_black, string(profile.rating) + " RP");
-	}
+var account = network_account_get();
+var profile = network_profile_get();
+
+if (is(account) && is(profile) && (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings)) {
+	draw_set_font(font_console_mini);
+	draw_set_halign(fa_left);
+	draw_text_outlined(4, height - 20, c_grey, c_black, sprintf("Current Account: {0} ({1})", account.get_username(), account.get_nickname()));
+	draw_text_outlined(4, height - 10, c_grey, c_black, sprintf("{0} RP", profile.get_rating()));
 }
 
 // Pause

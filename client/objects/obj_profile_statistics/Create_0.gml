@@ -1,2 +1,2 @@
-account = network_account;
-profile = network_profile;
+account = network_account_get();
+profile = network_profile_get();

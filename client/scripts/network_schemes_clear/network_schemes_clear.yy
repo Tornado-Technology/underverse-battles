@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "TesmiScript",
+  "name": "network_schemes_clear",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Settings(mobile)",
-    "path": "folders/Scripts/Local/Settings(mobile).yy",
+    "name": "Schemes",
+    "path": "folders/Scripts/Networking/Schemes.yy",
   },
 }

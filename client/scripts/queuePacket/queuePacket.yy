@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "queuePacket",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Util",
-    "path": "folders/Scripts/_Network_/Util.yy",
+    "path": "folders/Scripts/Networking/Util.yy",
   },
 }

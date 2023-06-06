@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Other",
-    "path": "folders/Scripts/_Network_/Other.yy",
+    "path": "folders/Scripts/Networking/Other.yy",
   },
 }

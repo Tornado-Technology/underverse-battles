@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Fight",
-    "path": "folders/Scripts/_Network_/Fight.yy",
+    "path": "folders/Scripts/Networking/Fight.yy",
   },
 }

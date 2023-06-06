@@ -19,6 +19,11 @@ enum account_type {
   developer = 3,
 }
 
+enum scheme_type {
+	account = 0,
+	profile = 1,
+}
+
 enum status_code {
 	error = 0,
 	success = 1,
@@ -41,9 +46,13 @@ enum status_code {
 
 // Globals
 global.network_blocking = false;
+
+global.network_schemes = new NetworkSchemes();
+global.network_ranks = array_empty;
+
+global.network_fight_opponent_info = undefined;
+
 global.__network_ping = -1;
-global.__network_account = undefined;
-global.__network_profile = undefined;
 global.__network_connected = false;
 global.__instance_network_client = noone;
 global.__event_on_network_connect = new Event();
@@ -72,8 +81,7 @@ global.__event_on_network_connection_timeout = new Event();
 
 #macro network_client global.__instance_network_client
 
-#macro network_account global.__network_account
-#macro network_profile global.__network_profile
+
 #macro network_connected global.__network_connected
 #macro network_ping global.__network_ping
 
@@ -85,13 +93,11 @@ global.__event_on_network_connection_timeout = new Event();
 // Connections
 on_network_connect.connect(function() {
 	autolog_load();
-	network_account = undefined;
-	network_profile = undefined;
+	network_schemes_clear();
 });
 
 on_network_disconnect.connect(function() {
-	network_account = undefined;
-	network_profile = undefined;
+	network_schemes_clear();
 });
 
 on_network_login.connect(function(args) {

@@ -31,14 +31,12 @@ function handle_packet(data) {
 			break;
 
 		case "logout":
-			network_profile = undefined;
-			network_account = undefined;
+			network_schemes_clear();
 			break;
 
 		case "login":
 			if (data.status == status_code.success) {
-				network_profile = data.profile;
-				network_account = data.account;
+				network_schemes_set(data.account, data.profile);
 				logger.info("Login success");
 				display_show_message_info(translate_get("Menu.LogInMessage.LoginSuccessful"), c_lime);
 				on_network_login.invoke(data.status);
@@ -61,12 +59,7 @@ function handle_packet(data) {
 			failed_registration(data.status);
 			logger.error("Registration failed!");
 			break;
-			
-		case "schemes":
-			network_account = data.account;
-			network_profile = data.profile;
-			break;
-			
+		
 		case "verification":
 			if (is_desktop) {
 				send_verification(get_string(translate_get("Menu.SignUp.MessageCode"), ""));
@@ -88,14 +81,17 @@ function handle_packet(data) {
 			}
 			break;
 		
+		case "schemes":
+			network_schemes_set(data.account, data.profile);
+			break;
+		
 		case "changeNickname":
 			if (data.status != status_code.success) {
 				display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
 				break;
 			}
 			
-			network_account = data.account;
-			network_profile = data.profile;
+			network_schemes_set(data.account, data.profile);
 			display_show_message_info("Change nickname successful", c_lime);
 			break;
 
@@ -105,8 +101,7 @@ function handle_packet(data) {
 				break;
 			}
 			
-			network_account = data.account;
-			network_profile = data.profile;
+			network_schemes_set(data.account, data.profile);
 			display_show_message_info("Change username successful", c_lime);
 			break;
 
@@ -117,8 +112,7 @@ function handle_packet(data) {
 				break;
 			}
 			
-			network_account = data.account;
-			network_profile = data.profile;
+			network_schemes_set(data.account, data.profile);
 			display_show_message_info("Change password successful", c_lime);
 			break;
 
@@ -128,8 +122,7 @@ function handle_packet(data) {
 				break;
 			}
 			
-			network_account = data.account;
-			network_profile = data.profile;
+			network_schemes_set(data.account, data.profile);
 			display_show_message_info("Change email successful", c_lime);
 			break;
 			
@@ -139,8 +132,7 @@ function handle_packet(data) {
 				break;
 			}
 			
-			network_account = undefined;
-			network_profile = undefined;
+			network_schemes_clear();
 			display_show_message_info("Delete account successful", c_lime);
 			break;
 			
@@ -154,11 +146,10 @@ function handle_packet(data) {
 
 			if (status == status_code.success) {
 				logger.info("Successful join to fight");
-				var opponent_data = json_parse(data.data);
-				var inst_opponent = instance_create(obj_opponent);
-				opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.characterSkinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
-				var character_object = global.characters[opponent_data.characterId, opponent_data.characterSkinId].object;
-				memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, character_object);
+				network_fight_opponent_info_set(data.data);
+				
+				var opponent = network_fight_opponent_info_get();
+				memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, opponent.get_character());
 				room_goto(room_fight_1v1);
 			} 
 			break;

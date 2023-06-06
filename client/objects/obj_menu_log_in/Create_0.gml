@@ -21,21 +21,21 @@ connection = menu.on_goto_page_event.connect(function() {
 });
 
 on_login = on_network_login.connect(function() {
-	if (network_account != undefined) {
+	if (is(network_account_get())) {
 		autolog_save(inputbox_login.text, inputbox_password.text);
 		show_loading = false;
 		buttons_show = true;
 		menu_switch_pause(false);
 		menu_successful_login(obj_menu);
 		instance_destroy();
-	}
-	else {
-		show_loading = false;
-		buttons_show = true;
-		menu_switch_pause(false);
-	}
+		return;
+	} 
+	
+	show_loading = false;
+	buttons_show = true;
+	menu_switch_pause(false);
 });
 
-if (network_account != undefined) {
-	on_login([100]);
+if (is(network_account_get())) {
+	on_login();
 }

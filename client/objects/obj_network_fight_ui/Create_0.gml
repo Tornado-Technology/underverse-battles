@@ -1,9 +1,13 @@
 event_inherited();
-account = network_account;
-profile = network_profile;
 
-your_rp = profile.rating;
-your_rp_values = set_rank(your_rp);
+rating_text_postfix = translate_get("Battle.Rating")
+
+// Player information
+account = network_account_get();
+profile = network_profile_get();
+
+// Opponent information
+opponent_info = network_fight_opponent_info_get();
 
 var player_id = 1
 opp_rp = opponent_get_rating(player_id);

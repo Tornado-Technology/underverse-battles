@@ -10,7 +10,7 @@ export const profileCollection = 'profiles';
 export const profileModelName = 'Profile';
 
 export interface IProfile extends Document {
-  accountId: string,
+  accountId: ObjectId,
   online: boolean,
   lastOnline: Date,
   friends: ObjectId[],
@@ -34,7 +34,8 @@ const schema = new Schema({
   accountId: { type: Schema.Types.ObjectId, ref: accountModelName },
   online: { type: Boolean, default: false },
   lastOnline: { type: Date, default: Date.now },
-  friends: [{ type: Schema.Types.ObjectId, ref: accountModelName }],
+  friends: [{ type: Schema.Types.ObjectId, default: [], ref: accountModelName }],
+  unlockingCharacters: [{ type: Number, default: [] }],
   rating: { type: Number, default: 0 },
   gold: { type: Number, default: 0 },
   badge: { type: Number, default: null },

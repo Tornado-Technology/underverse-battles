@@ -188,3 +188,8 @@ function send_fight_stun() {
 function send_fight_collider_soul_data() {
 	send("fightColliderSoul");
 }
+
+
+function send_fight_client_loaded() {
+	send("fightClientLoaded");
+}

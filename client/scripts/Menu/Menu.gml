@@ -45,7 +45,7 @@ function log_in_apply() {
 }
 
 function menu_successful_login(menu) {
-	if (network_account != undefined) {
+	if (is(network_account_get()) && is(network_profile_get())) {
 		menu.goto_page(menu_page.multiplayer_account);
 	}
 }

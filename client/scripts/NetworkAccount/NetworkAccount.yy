@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "_Network_",
-    "path": "folders/Scripts/_Network_.yy",
+    "name": "Classes",
+    "path": "folders/Scripts/Networking/Schemes/Classes.yy",
   },
 }

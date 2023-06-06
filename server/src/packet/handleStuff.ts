@@ -3,7 +3,7 @@ import {
   accountType,
   infoValidate,
   login,
-  register,
+  register, validateNickname,
   validatePassword,
   validateUsername
 } from '../schemas/account.js';
@@ -217,7 +217,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break;
       }
 
-      const nicknameValidation = await validateUsername(data.username);
+      const nicknameValidation = await validateNickname(data.nickname);
       if (nicknameValidation !== statusCode.success) {
         client.sendChangeNickname(nicknameValidation);
         break;
@@ -419,6 +419,10 @@ export const handlePacket = async (client: Client, data: any) => {
         fight?.addMana(source, damage);
         fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
       }
+      break;
+
+    case 'fightClientLoaded':
+      client.fight.instance?.sync();
       break;
 
     case 'fightStun':

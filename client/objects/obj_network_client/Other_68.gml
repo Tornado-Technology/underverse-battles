@@ -1,9 +1,7 @@
-/// @desc
-//console_log("Networking event triggered.")
-var type = async_load[? "type"]
-var buffer = async_load[? "buffer"]
+var type = async_load[? "type"];
+var buffer = async_load[? "buffer"];
 
-switch(type) {
+switch (type) {
 	case network_type_data:
 		// if this is the second half of a packet
 		if (buffer_exists(halfpack)) {
@@ -18,14 +16,11 @@ switch(type) {
 			
 			buffer_delete(halfpack);
 			halfpack = -1;
-			
-			//console_log("-half out")
 		}
 		
 		var size = buffer_get_size(buffer);
 		var pack_count = 0;
 
-		
 		for (var i = 0; i < size;) { // Break up the binary blob into single packets
 			// Read the packet size
 			if (i + 4 > size) { // cannot read the size bits (outside buffer)

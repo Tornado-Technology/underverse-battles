@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 7;
+index = character_id.cross;
 name	    = translate_get("Character.Cross.Name");
 description = translate_get("Character.Cross.Description");
 bio			= translate_get("Character.Cross.Bio");

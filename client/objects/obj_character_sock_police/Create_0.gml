@@ -1,7 +1,7 @@
 event_inherited();
 
 // Base
-index = -4; // ЮХУ!!!
+index = character_id.sock_police; // ЮХУ!!!
 name	    = translate_get("Character.SockPolice.Name");
 description = translate_get("Character.SockPolice.Description");
 bio			= translate_get("Character.SockPolice.Bio");
