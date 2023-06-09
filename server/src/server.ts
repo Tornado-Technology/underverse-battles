@@ -1,3 +1,6 @@
+import { config } from 'dotenv';
+config();
+
 import './config.js';
 import { createServer, Server as NetServer, Socket } from 'net';
 import { fileURLToPath } from 'url';

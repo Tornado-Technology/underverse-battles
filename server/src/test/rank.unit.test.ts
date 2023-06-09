@@ -1,7 +1,7 @@
-import 'mocha';
+import  { getRank, rankList } from '../content/rankList.js';
 import { expect } from 'chai';
 import Rank from '../data/rank.js';
-import {getRank, rankList} from '../content/rankList.js';
+import 'mocha';
 
 describe('Rank', () => {
   describe('Class', () => {

@@ -20,6 +20,7 @@
     "chalk": "^5.0.0",
     "detect-collisions": "3.2.1",
     "discord.js": "^14.7.1",
+    "dotenv": "^16.1.4",
     "extend": "^3.0.2",
     "minimist": "^1.2.5",
     "module-alias": "^2.2.2",

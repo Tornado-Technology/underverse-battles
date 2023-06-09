@@ -1,24 +1,32 @@
 import nodemailer from 'nodemailer';
 import Logger from './logging.js';
 
+const author = 'Underverse Battles';
+const host = 'stmp.gmail.com';
+const port = 465;
+const secure = true;
+
+const user = process.env.MAIL_USER;
+const pass = process.env.MAIL_PASS;
+
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+  host,
+  port,
+  secure,
   auth: {
-    user: 'underverse.battles@gmail.com',
-    pass: 'gnlrmcousafnpwae'
+    user,
+    pass,
   }
 });
 
 export const send = async (receiver: string, title: string, message: string, html: string): Promise<void> => {
   return await transporter.sendMail({
-    from: '"Underverse Battles" <underverse.battles@gmail.com>',
+    from: `"${author}" <${user}>`,
     to: receiver,
     subject: title,
     text: message,
-    html
+    html,
   }, (error) => {
-    Logger.info(`Mail send failed: ${error.message}`);
+    Logger.warn(`Mail send failed, reason: ${error.message}`);
   });
 }
