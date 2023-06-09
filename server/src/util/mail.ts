@@ -2,12 +2,12 @@ import nodemailer from 'nodemailer';
 import Logger from './logging.js';
 
 const author = 'Underverse Battles';
-const host = 'stmp.gmail.com';
+const host = 'smtp.gmail.com';
 const port = 465;
 const secure = true;
 
-const user = process.env.MAIL_USER;
-const pass = process.env.MAIL_PASS;
+const user = 'team.tornado.technologies@gmail.com';
+const pass = 'ifpedlpgcugkmecw';
 
 const transporter = nodemailer.createTransport({
   host,

@@ -1,7 +1,3 @@
-import { config } from 'dotenv';
-config();
-
-import './config.js';
 import { createServer, Server as NetServer, Socket } from 'net';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -12,6 +8,7 @@ import { statusCode } from './status.js';
 import Logger from './util/logging.js';
 import App from './app.js';
 
+import './config.js';
 const { ip, port } = App.config.main;
 
 class Server {
@@ -75,6 +72,7 @@ class Server {
 }
 
 const server = new Server();
+
 server.loadInitializers().then(() => {
   server.init();
 });
