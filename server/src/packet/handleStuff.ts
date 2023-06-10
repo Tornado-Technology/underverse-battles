@@ -302,7 +302,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'verification':
       let status = statusCode.success;
-      if (data.code && data.code !== client.verificationCode) {
+      if (!data.code || data.code !== client.verificationCode) {
         status = statusCode.databaseVerificationWrongCode;
       }
 
@@ -378,7 +378,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightHealAction':
-      client.fight.instance?.addHp(client, data.hp);
+      await client.fight.instance?.addHp(client, data.hp);
       client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd();
       break;
 
@@ -387,7 +387,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightHp':
-      client.fight.instance?.setHp(client, data.hp);
+      await client.fight.instance?.setHp(client, data.hp);
       break;
     
     case 'fightMana':
@@ -406,7 +406,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightKill':
-      client.fight.instance?.finish(client.fight.instance?.getOtherClient(client));
+      await client.fight.instance?.finish(client.fight.instance?.getOtherClient(client));
       break;
 
     case 'fightDamage':
@@ -415,7 +415,7 @@ export const handlePacket = async (client: Client, data: any) => {
         const fight = client.fight.instance;
         const source = fight?.getOtherClient(client);
 
-        fight?.removeHp(client, damage);
+        await fight?.removeHp(client, damage);
         fight?.addMana(source, damage);
         fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
       }
@@ -431,6 +431,10 @@ export const handlePacket = async (client: Client, data: any) => {
       if (client.fight.instance?.inactiveClient === client) {
         client.fight.instance?.battleFinish();
       }
+      break;
+
+    case 'fightLoaded':
+      client.fight.instance?.sync();
       break;
 
     default:

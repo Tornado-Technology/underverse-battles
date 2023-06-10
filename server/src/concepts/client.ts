@@ -161,17 +161,19 @@ export default class Client extends SendStuff {
     return this.isLogin ? await findOutgoing(this.profile._id) : [];
   }
 
-  public addRating(rating: number): void {
+  public async addRating(rating: number): Promise<void> {
     if (this.hasProfile) {
       this.profile.rating += Math.abs(rating);
       this.update();
+      await this.save();
     }
   }
 
-  public removeRating(rating: number): void {
+  public async removeRating(rating: number): Promise<void> {
     if (this.hasProfile) {
       this.profile.rating = Math.max(0, this.profile.rating - Math.abs(rating));
       this.update();
+      await this.save();
     }
   }
 

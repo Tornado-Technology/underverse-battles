@@ -77,10 +77,10 @@ export default class Fight {
   }
 
   public kickPlayer(client: Client) {
-    this.timeoutStart(() => {
+    this.timeoutStart(async () => {
       const winnerClient = this.clients.find((c) => c !== undefined);
       winnerClient?.sendFightDisconnect(target.opponent);
-      this.finish(winnerClient);
+      await this.finish(winnerClient);
     });
 
     this.clientRemove(client);
@@ -143,8 +143,8 @@ export default class Fight {
     Logger.debug(`Fight[${this.id}] set new state "${state}"`);
   }
 
-  public finish(winner: Client): void {
-    const rating = Matchmaker.addRating(winner, this.getOtherClient(winner));
+  public async finish(winner: Client): Promise<void> {
+    const rating = await Matchmaker.addRating(winner, this.getOtherClient(winner));
     this.clients.forEach((client) => {
       const isWinner = client === winner;
       client?.fight.unit();
@@ -174,9 +174,9 @@ export default class Fight {
     return this.clients.filter((client) => client !== undefined).length == this.clients.length;
   }
 
-  public onHpModify(client: Client): void {
+  public async onHpModify(client: Client): Promise<void> {
     if (client?.fight.hp <= 0) {
-      this.finish(this.getOtherClient(client));
+      await this.finish(this.getOtherClient(client));
     }
   }
 
@@ -340,22 +340,22 @@ export default class Fight {
     }
   }
 
-  public setHp(client: Client, hp: number): void {
+  public async setHp(client: Client, hp: number): Promise<void> {
     client?.fight.setHp(hp);
     this.syncHp(client);
-    this.onHpModify(client);
+    await this.onHpModify(client);
   }
 
-  public addHp(client: Client, hp: number): void {
+  public async addHp(client: Client, hp: number): Promise<void> {
     client?.fight.addHp(hp);
     this.syncHp(client);
-    this.onHpModify(client);
+    await this.onHpModify(client);
   }
 
-  public removeHp(client: Client, hp: number): void {
+  public async removeHp(client: Client, hp: number): Promise<void> {
     client?.fight.removeHp(hp);
     this.syncHp(client);
-    this.onHpModify(client);
+    await this.onHpModify(client);
   }
 
   public setMana(client: Client, mana: number): void {

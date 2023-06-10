@@ -16,7 +16,7 @@ export default class Matchmaker {
     return App.clients.filter((client) => client.state === state);
   }
 
-  public static addRating(winner: Client, looser: Client): number {
+  public static async addRating(winner: Client, looser: Client): Promise<number> {
     if (!winner?.hasProfile || !looser?.hasProfile) {
       let message = 'Add rating failed, reason: ';
 
@@ -49,8 +49,8 @@ export default class Matchmaker {
     }
 
     difference = looser.rank.clamp(looserRating, difference);
-    winner?.addRating(difference);
-    looser?.removeRating(difference);
+    await winner?.addRating(difference);
+    await looser?.removeRating(difference);
     return difference;
   }
 
