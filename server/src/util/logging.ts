@@ -1,7 +1,7 @@
 import { appendFile, mkdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import App from '../app.js';
+import config from '../config.js';
 
 const directory = dirname(fileURLToPath(import.meta.url));
 const logsDirectory = `${directory}/../../logs`;
@@ -46,7 +46,7 @@ export default class Logger {
   }
 
   public static debug(message: string, file = 'debug') {
-    if (App.config.environment === 'development') {
+    if (config.environment === 'development') {
       this.log(message, 'Debug', 'debug', file);
     }
   }

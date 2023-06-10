@@ -1,4 +1,4 @@
-import Client, { state } from '../concepts/client.js';
+import Client, { state } from '../concepts/client/client.js';
 import App from '../app.js';
 import Fight from '../game/fight/fight.js';
 import Logger from './logging.js';

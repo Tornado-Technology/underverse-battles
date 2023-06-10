@@ -3,7 +3,6 @@ import { readFileSync, existsSync } from 'fs';
 import minimist from 'minimist';
 import { dirname } from 'path';
 import { mergeDeep } from './util/deepMerge.js';
-import App from './app.js';
 
 const args = minimist(process.argv.slice(2));
 const environment = args.env || 'development';
@@ -105,9 +104,11 @@ const configs = [
 
 const config: config = {...commonConfig};
 const assignConfig = configs.find((conf) => conf.environment === environment);
+
 if (!assignConfig) {
   throw new Error(`Config ${environment} doesn't exist`);
 }
 
 mergeDeep(config, assignConfig);
-App.applyConfig(config);
+
+export default config;

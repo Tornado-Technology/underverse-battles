@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "description": "pog",
-  "main": "build/server.js",
+  "main": "build/index.js",
   "author": {
     "name": "TornadoTech"
   },

@@ -1,13 +1,14 @@
 import { Socket } from 'net';
-import { socketType } from '../concepts/client.js';
-import { IAccount } from '../schemas/account.js';
-import { IProfile } from '../schemas/profile.js';
-import { IStatistic } from '../schemas/statistic.js';
+import { socketType } from '../concepts/client/client.js';
+import { IAccount } from '../database/schemas/account.js';
+import { IProfile } from '../database/schemas/profile.js';
+import { IStatistic } from '../database/schemas/statistic.js';
 import { target } from '../game/fight/fight.js';
-import ClientFight from '../concepts/clientFight.js';
+import ClientFight from '../concepts/client/clientFight.js';
 import Packet from './packet.js';
 import App from '../app.js';
 import { statusCode } from '../status.js';
+import config from '../config.js';
 
 const generateNickname = (): string => {
   return `Player${Math.randomRange(0, 1000)}`;
@@ -120,7 +121,7 @@ export default class SendStuff {
 
   public sendInformation(): void {
     this.send('information', {
-      config: App.config,
+      config: config,
     });
   }
 

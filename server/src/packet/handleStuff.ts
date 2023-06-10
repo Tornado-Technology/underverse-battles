@@ -1,31 +1,25 @@
-import {
-  Account,
-  accountType,
-  infoValidate,
-  login,
-  register,
-  validatePassword,
-  validateUsername
-} from '../schemas/account.js';
+import { Account, accountType, login, register } from '../database/schemas/account.js';
 import { actionType, state as fightState, target } from '../game/fight/fight.js';
 import { send as mailSend } from '../util/mail.js';
-import Client, { state } from '../concepts/client.js';
+import Client, { state } from '../concepts/client/client.js';
 import { statusCode } from '../status.js';
 import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
-import App from '../app.js';
 import { hashPassword } from '../util/encrypting.js';
+import config from '../config.js';
+import { infoValidate, validatePassword, validateUsername, validateNikcname } from '../database/validation.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
 
   switch (index) {
     case 'information':
-      if (!App.config.client.verification.enabled) {
+      if (!config.client.verification.enabled) {
         Logger.debug('Client allowed, verification disabled');
         break;
       }
+      
       {
         client.verifying = true;
         const info = JSON.parse(data.information);
@@ -217,7 +211,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break;
       }
 
-      const nicknameValidation = await validateUsername(data.username);
+      const nicknameValidation = await validateNikcname(data.username);
       if (nicknameValidation !== statusCode.success) {
         client.sendChangeNickname(nicknameValidation);
         break;

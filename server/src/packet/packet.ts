@@ -1,6 +1,6 @@
 import { encode, decode } from '@msgpack/msgpack';
 import { handlePacket } from './handleStuff.js';
-import Client from '../concepts/client.js';
+import Client from '../concepts/client/client.js';
 import Logger from '../util/logging.js';
 
 export default class Packet {
@@ -8,7 +8,6 @@ export default class Packet {
     const dataBuffer = encode(data);
     const sizeBuffer = Buffer.alloc(4);
     sizeBuffer.writeUInt32LE(dataBuffer.length);
-    
     return Buffer.concat([sizeBuffer, dataBuffer], dataBuffer.length + 4);
   }
 

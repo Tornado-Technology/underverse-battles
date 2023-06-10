@@ -1,27 +1,29 @@
-import Logger from '../util/logging.js';
-import App from '../app.js';
 import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import Logger from '../util/logging.js';
+import config from '../config.js';
+import App from '../app.js';
 
+const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
-// import * as mongoose from 'mongoose';
+
 mongoose.set('strictQuery', false);
+
 const { connect, connection } = mongoose;
 
-let database;
+let database = undefined;
 
-if (App.config.database.enabled) {
-  connect(App.config.database.address);
+if (config.database.enabled) {
+  connect(config.database.address);
   const db = connection;
 
   database = new Promise((resolve) => {
     db.once('open', () => {
-      Logger.info(`Database connected: ${App.config.database.address}`);
+      Logger.info(`Database connected: ${config.database.address}`);
       resolve(db);
     });
 
     db.on('error', (error) => {
-      throw new Error(`Database error: ${error}`);
+      Logger.error(`Database error: ${error}`);
     });
   });
 } else {

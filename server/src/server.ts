@@ -2,16 +2,15 @@ import { createServer, Server as NetServer, Socket } from 'net';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs';
-import Client, { socketType } from './concepts/client.js';
+import Client, { socketType } from './concepts/client/client.js';
 import Packet from './packet/packet.js';
 import { statusCode } from './status.js';
 import Logger from './util/logging.js';
-import App from './app.js';
+import config from './config.js';
 
-import './config.js';
-const { ip, port } = App.config.main;
+const { ip, port } = config.main;
 
-class Server {
+export default class Server {
   private netServer: NetServer = null;
 
   public init(): void {
@@ -40,6 +39,7 @@ class Server {
         Logger.info('Socket violently disconnected');
         return;
       }
+
       Logger.error(`Socket error handled: ${error.stack}`);
     });
   }
@@ -57,8 +57,9 @@ class Server {
   }
 
   private verifyClient(client: Client): void {
-    if (!App.config.client.verification.enabled) {
+    if (!config.client.verification.enabled) {
       client.verify();
+      return;
     }
 
     setTimeout(() => {
@@ -67,12 +68,6 @@ class Server {
         client.sendConnection(statusCode.error);
         client.destroy();
       }
-    }, App.config.client.verification.timeout);
+    }, config.client.verification.timeout);
   }
 }
-
-const server = new Server();
-
-server.loadInitializers().then(() => {
-  server.init();
-});

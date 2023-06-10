@@ -1,4 +1,4 @@
-import Client, { state as clientState } from '../../concepts/client.js';
+import Client, { state as clientState } from '../../concepts/client/client.js';
 import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Matchmaker from '../../util/matchmaker.js';
