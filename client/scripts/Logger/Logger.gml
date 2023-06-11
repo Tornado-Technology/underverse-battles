@@ -1,8 +1,4 @@
-function Logger() {
-	return new ClassLogger();
-}
-
-function ClassLogger() constructor {
+function Logger() constructor {
 	file = "log.txt";
 	show_time = true;
 	
@@ -116,7 +112,7 @@ function ClassLogger() constructor {
 	}
 }
 
-global.__logger = Logger();
+global.__logger = new Logger();
 
 /// @return {Strcut.Logger}
 #macro logger global.__logger

@@ -1,4 +1,3 @@
-/// @description Connecting
 if (network_client != noone) {
 	instance_destroy();
 	exit;
@@ -21,14 +20,15 @@ connect = function() {
 	
 	// Async = Don't crash the game if the server is down
 	network_connect_raw_async(socket, network_offical_ip, real(network_offical_port));
-};
+	logger.info("Client started on {0}:{1}", network_offical_ip, real(network_offical_port));
+}
 
 disconnect = function() {
 	logger.info("Disconnecting...");
 	on_network_disconnect.invoke();
 	network_connected = false;
 	network_destroy(socket);
-};
+}
 
 // connect/disconnect events defined in __NetworkingConfig.gml
 on_connect = on_network_connect;

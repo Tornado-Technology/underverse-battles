@@ -61,7 +61,7 @@ const productionConfig = {
     ],
   },
   main: {
-    port: '1338',
+    port: '1339',
   },
 }
 
