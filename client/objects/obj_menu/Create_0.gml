@@ -165,6 +165,8 @@ goto_page = function(index) {
 	element_index = -1;
 	
 	on_goto_page();
+	show_debug_message(1)
+	show_debug_message(on_goto_page_event)
 	on_goto_page_event.invoke();
 }
 
@@ -262,7 +264,7 @@ on_change_element = function() {
 }
 
 login_callback = on_network_login.connect(function() {
-	if (obj_menu.pause) exit;
+	if (id.pause) return;
 	if (page_index >= menu_page.multiplayer && page_index <= menu_page.login) {
 		goto_page(menu_page.multiplayer_account);
 	}

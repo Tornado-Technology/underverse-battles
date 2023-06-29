@@ -212,6 +212,7 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
+    {"name":"YAadsAndroid","order":2,"path":"folders/Extensions/YAadsAndroid.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},
@@ -502,6 +503,7 @@
     {"name":"cutscene_object_create","order":7,"path":"scripts/cutscene_object_create/cutscene_object_create.yy",},
     {"name":"fight_get_player_action_mana_cost","order":8,"path":"scripts/fight_get_player_action_mana_cost/fight_get_player_action_mana_cost.yy",},
     {"name":"cutscene_object_jump","order":8,"path":"scripts/cutscene_object_jump/cutscene_object_jump.yy",},
+    {"name":"obj_yandex_ad_init","order":7,"path":"objects/obj_yandex_ad_init/obj_yandex_ad_init.yy",},
     {"name":"spr_xchara_frame_satisfied","order":2,"path":"sprites/spr_xchara_frame_satisfied/spr_xchara_frame_satisfied.yy",},
     {"name":"cutscene_object_move_to","order":9,"path":"scripts/cutscene_object_move_to/cutscene_object_move_to.yy",},
     {"name":"spr_ink_sans_frame_emotionless","order":9,"path":"sprites/spr_ink_sans_frame_emotionless/spr_ink_sans_frame_emotionless.yy",},
@@ -550,6 +552,7 @@
     {"name":"data_save","order":8,"path":"scripts/data_save/data_save.yy",},
     {"name":"spr_char_sans_attack_2_right_down","order":9,"path":"sprites/spr_char_sans_attack_2_right_down/spr_char_sans_attack_2_right_down.yy",},
     {"name":"attack_creator_ink_sans","order":2,"path":"objects/attack_creator_ink_sans/attack_creator_ink_sans.yy",},
+    {"name":"YandexMobileAds","order":4,"path":"extensions/YandexMobileAds/YandexMobileAds.yy",},
     {"name":"data_set","order":9,"path":"scripts/data_set/data_set.yy",},
     {"name":"spr_background_doodle_sphere_layer_0","order":1,"path":"sprites/spr_background_doodle_sphere_layer_0/spr_background_doodle_sphere_layer_0.yy",},
     {"name":"spr_sock_police_soul","order":3,"path":"sprites/spr_sock_police_soul/spr_sock_police_soul.yy",},

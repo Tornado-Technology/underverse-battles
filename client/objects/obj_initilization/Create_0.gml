@@ -31,7 +31,7 @@ if (is_desktop) {
 }
 
 if (is_mobile) {
-	instance_create(obj_ad_manager);
+	instance_create(obj_yandex_ad_init);
 }
 
 // End
