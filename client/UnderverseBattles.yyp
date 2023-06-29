@@ -151,6 +151,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Misc","folderPath":"folders/Extensions/GMLive/Internal/Misc.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Runtime","folderPath":"folders/Extensions/GMLive/Internal/Runtime.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Public","folderPath":"folders/Extensions/GMLive/Public.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"YAadsAndroid","folderPath":"folders/Extensions/YAadsAndroid.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
@@ -345,7 +346,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"YAadsAndroid","folderPath":"folders/Extensions/YAadsAndroid.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.html","CopyToMask":0,"filePath":"datafiles",},
@@ -389,6 +389,7 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_determination.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
   ],

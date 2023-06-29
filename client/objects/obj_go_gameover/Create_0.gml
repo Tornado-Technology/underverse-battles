@@ -1,9 +1,5 @@
 sprite_index = noone;
 
-/*if (is_mobile && AdMob_Interstitial_IsLoaded()) {
-	AdMob_Interstitial_Show();
-}*/
-
 if (is_mobile) {
 	YandexMobileAds_showInterstitial();
 }

@@ -1,4 +1,9 @@
 sprite_index = noone;
+
+if (is_mobile) {
+	YandexMobileAds_showInterstitial();
+}
+
 state = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, 0);
 
 selected_button = 0;
