@@ -221,7 +221,7 @@ if (_id == 3 && attack_num == 0) {
 	
 	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
 		//character_instance.stop_hand_wave();
-		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange);
+		//_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange);
 		update_0_0(pow);
 		time_source_stop(time_source_update_3_0);
 		time_source_stop(time_source_update_3_1);

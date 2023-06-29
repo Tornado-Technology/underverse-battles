@@ -53,6 +53,7 @@ credits = [
 	"Zontik52",
 	"Lepeha",
 	"CrazyBanka",
+	"AltRA",
 	"",
 	str_yellow + translate_get(key + "YouTubers"),
 	"ReStart",

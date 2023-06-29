@@ -165,8 +165,6 @@ goto_page = function(index) {
 	element_index = -1;
 	
 	on_goto_page();
-	show_debug_message(1)
-	show_debug_message(on_goto_page_event)
 	on_goto_page_event.invoke();
 }
 

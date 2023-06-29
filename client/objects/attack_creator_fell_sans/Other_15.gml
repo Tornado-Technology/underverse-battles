@@ -175,7 +175,7 @@ if (_id == 3) {
 	}, [3]);
 	
 	var period = 5;
-	var amount = 72;
+	var amount = 118;
 	time_source_update_3_3 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 		update_3_3();
 	}, [], amount - 1);
