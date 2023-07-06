@@ -92,6 +92,10 @@ function CharacterList() {
 		//array_push(global.characters, [
 		//	new Character(obj_character_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
 		//]);
+		
+		array_push(global.characters, [
+            new Character(obj_character_tesmi, "Tesmi", "Standard", spr_character_frame),
+        ]);
 	}
 }
 

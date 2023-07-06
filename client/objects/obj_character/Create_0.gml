@@ -53,7 +53,7 @@ actions = [
 	Action("", undefined),
 	Action("", undefined)
 ];
-special_action = SpecialAction("", spr_empty);
+special_action = SpecialAction("", spr_empty, spr_empty);
 
 // Special
 use_gravity_attack = false;

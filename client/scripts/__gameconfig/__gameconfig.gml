@@ -30,7 +30,7 @@
 #macro DATA_PATH game_save_id + DATA_DIRECTORY
 #macro DATA_FILE_PATH DATA_PATH + "/" + DATA_FILE_NAME
 
-#macro dtime delta_time / 1000000 * game_base_fps
+#macro dtime (delta_time / 1000000 * game_base_fps)
 
 global.__data_save = undefined;
 global.fight_instance = noone;

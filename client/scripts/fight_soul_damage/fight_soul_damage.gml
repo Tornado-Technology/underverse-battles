@@ -1,6 +1,6 @@
 /// @param {Real} damage
 /// @param {Bool} destroy
-/// @param {Id.Intance} instance
+/// @param {Id.Instance} instance
 function fight_soul_damage(_damage, _destroy = false, _inst) {
 	var soul = obj_battle_soul;
 	var player_id = fight_get_next_initiative();
