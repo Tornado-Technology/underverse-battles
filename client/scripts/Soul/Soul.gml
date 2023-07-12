@@ -1,5 +1,7 @@
 function create_soul(px, py, type) {
-	if (instance_exists(obj_battle_soul)) return obj_battle_soul;
+	if (instance_exists(obj_battle_soul)) {
+		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type);
+	}
 	if (fight_get_initiative() != 0) {
 		var soul_ = obj_battle_soul_standart;
 		switch (type) {
