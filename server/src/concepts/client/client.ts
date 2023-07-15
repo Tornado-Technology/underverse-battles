@@ -64,7 +64,7 @@ export default class Client extends SendStuff {
   }
 
   public async startVerification(callback: Function): Promise<void> {
-    if (!config.client.necessaryEmailCode) {
+    if (true) { // !config.client.necessaryEmailCode
       await callback(statusCode.success);
       return;
     }
