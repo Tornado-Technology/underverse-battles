@@ -12,7 +12,6 @@ import SendStuff from '../../packet/sendStuff.js';
 import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Rank from '../../data/rank.js';
-import config from '../../config.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -64,7 +63,7 @@ export default class Client extends SendStuff {
   }
 
   public async startVerification(callback: Function): Promise<void> {
-    if (true) { // !config.client.necessaryEmailCode
+    if (true) {
       await callback(statusCode.success);
       return;
     }
