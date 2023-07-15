@@ -13,7 +13,7 @@ const { ip, port } = config.main;
 export default class Server {
   private netServer: NetServer = null;
 
-  public init(): void {
+  public run() {
     this.netServer = createServer(this.connectionListener.bind(this));
     this.netServer.listen(Number(port), () => {
       Logger.info(`Server started on ${ip}:${port}`);

@@ -101,7 +101,7 @@ export const handlePacket = async (client: Client, data: any) => {
           return;
         }
 
-        client.startVerification(async (status) => {
+        await client.startVerification(async (status) => {
           if (status !== statusCode.success) {
             client.sendRegister(status);
             return;
@@ -143,7 +143,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break;
       }
 
-      client.startVerification((status) => {
+      await client.startVerification((status) => {
         if (status !== statusCode.success) {
           client.sendChangeEmail(status);
           return;
@@ -236,7 +236,7 @@ export const handlePacket = async (client: Client, data: any) => {
           break;
         }
 
-        client.startVerification(async (status) => {
+        await client.startVerification(async (status) => {
           if (status !== statusCode.success) {
             client.sendRestorePassword(status);
             return;
@@ -265,7 +265,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'deleteAccount':
-      client.startVerification((status) => {
+      await client.startVerification((status) => {
         if (status !== statusCode.success) {
           client.sendDeleteAccount(status);
           return;

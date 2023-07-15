@@ -35,6 +35,7 @@ const commonConfig = {
   client: {
     // Requires logging into an account to work with the server
     necessaryLogin: true,
+    necessaryEmailCode: true,
     pingInterval: 3000,
     verification: {
       enabled: false,
@@ -59,6 +60,9 @@ const productionConfig = {
       'official',
       'stable',
     ],
+  },
+  client: {
+    necessaryEmailCode: false,
   },
   main: {
     port: '1339',
