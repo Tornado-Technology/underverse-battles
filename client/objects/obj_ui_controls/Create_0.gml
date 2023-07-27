@@ -14,12 +14,11 @@ enum control_input_mode {
 	ui_joystick,
 }
 
-controllers = [
-	UIControllerArrows(),
-	UIControllerJoystick()
-];
+controllers = [];
+controllers[control_input_mode.ui_arrows] = UIControllerArrows();
+controllers[control_input_mode.ui_joystick] = UIControllerJoystick();
 
-controllers_index = 1;
+controllers_index = data_get("Settings.MobileControls.Controller.Index") || control_input_mode.ui_joystick;
 enable = false;
 
 controller_x = data_get("Settings.MobileControls.Controller.Position.X");

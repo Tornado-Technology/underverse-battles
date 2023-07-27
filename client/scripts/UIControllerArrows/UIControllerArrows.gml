@@ -1,6 +1,6 @@
 function UIControllerArrows() {
 	var instance = new ClassUIControllerArrows();
-	instance.declare_predicate();
+	instance.declare_events();
 	
 	return instance;
 }
@@ -11,6 +11,7 @@ function ClassUIControllerArrows() constructor {
 	input_held = undefined;
 	input_pressed = undefined;
 	input_released = undefined;
+	input_vector = Vector2();
 	
 	controls_arrow = {
 		up: UIImageButton(spr_ui_controls_arrow_up),
@@ -19,59 +20,71 @@ function ClassUIControllerArrows() constructor {
 		left: UIImageButton(spr_ui_controls_arrow_left)
 	};
 	
-	static declare_predicate = function() {
+	static declare_events = function() {
 		controls_arrow.up.on_press = function() {
 			input_pressed = vk_up;
+			input_vector.y = -1;
 		}
 
 		controls_arrow.down.on_press = function() {
 			input_pressed = vk_down;
+			input_vector.y = 1;
 		}
 
 		controls_arrow.right.on_press = function() {
 			input_pressed = vk_right;
+			input_vector.x = 1;
 		}
 
 		controls_arrow.left.on_press = function() {
 			input_pressed = vk_left;
+			input_vector.x = -1;
 		}
 
 
 		controls_arrow.up.on_held = function() {
 			input_held = vk_up;
 			input_pressed = undefined;
+			input_vector.y = -1;
 		}
 
 		controls_arrow.down.on_held = function() {
 			input_held = vk_down;
 			input_pressed = undefined;
+			input_vector.y = 1;
 		}
 
 		controls_arrow.right.on_held = function() {
 			input_held = vk_right;
 			input_pressed = undefined;
+			input_vector.x = 1;
 		}
 
 		controls_arrow.left.on_held = function() {
 			input_held = vk_left;
 			input_pressed = undefined;
+			input_vector.x = -1;
 		}
-
+		
 
 		controls_arrow.up.on_release = function() {
 			input_held = undefined;
+			input_vector.y = 0;
 		}
 
 		controls_arrow.down.on_release = function() {
 			input_held = undefined;
+			input_vector.y = 0;
 		}
 
 		controls_arrow.right.on_release = function() {
 			input_held = undefined;
+			input_vector.x = 0;
 		}
 
 		controls_arrow.left.on_release = function() {
 			input_held = undefined;
+			input_vector.x = 0;
 		}
 	}
 	

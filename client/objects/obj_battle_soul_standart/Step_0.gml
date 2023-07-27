@@ -28,9 +28,9 @@ if (is_desktop && !mobile_mode) {
 
 if (is_mobile || mobile_mode) {
 	if (instance_exists(obj_ui_controls)) {
-		var joystick = get_joystick();
-		movement_speed_x = SPD * joystick.input_vector.x;
-		movement_speed_y = SPD * joystick.input_vector.y;
+		var controller = controller_get();
+		movement_speed_x = SPD * controller.input_vector.x;
+		movement_speed_y = SPD * controller.input_vector.y;
 	}
 }
 
