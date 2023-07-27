@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Content",
-    "path": "folders/_Options_/Content.yy",
+    "path": "folders/Options/Content.yy",
   },
 }

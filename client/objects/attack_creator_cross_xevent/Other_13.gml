@@ -4,15 +4,15 @@ _border = battle_border_create(battle_border.up - 20, battle_border.down - 20, b
 time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
 	side_random = choose(dir.up, dir.down, dir.left, dir.right);
 
-	var soul_position = Vector2(_border.x, _border.y - _border.up + 15);
+	var soul_position = new Vector2(_border.x, _border.y - _border.up + 15);
 	if (side_random == dir.down) {
-		soul_position = Vector2(_border.x, _border.y + _border.down - 15);
+		soul_position = new Vector2(_border.x, _border.y + _border.down - 15);
 	}
 	if (side_random == dir.left) {
-		soul_position = Vector2(_border.x - _border.left + 15, _border.y);
+		soul_position = new Vector2(_border.x - _border.left + 15, _border.y);
 	}
 	if (side_random == dir.right) {
-		soul_position = Vector2(_border.x + _border.right - 15, _border.y);
+		soul_position = new Vector2(_border.x + _border.right - 15, _border.y);
 	}
 	_soul = create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
 

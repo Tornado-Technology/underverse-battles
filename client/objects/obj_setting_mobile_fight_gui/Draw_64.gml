@@ -5,9 +5,9 @@ draw_set_halign(fa_left);
 
 for (var i = 0; i < 3; i++) {
 	var action = "NameAttack";
-	var offset_postion = Vector2(0, i * 18);
-	var text_position = Vector2(5,  2).add(offset_postion).add(action_box_position);
-	var soul_position = Vector2(9, 10).add(offset_postion).add(action_box_position);
+	var offset_postion = new Vector2(0, i * 18);
+	var text_position = new Vector2(5,  2).add(offset_postion).add(action_box_position);
+	var soul_position = new Vector2(9, 10).add(offset_postion).add(action_box_position);
 		
 	draw_text_color(text_position.x, text_position.y, action, c_white, c_white, c_white, c_white, 1);
 		

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Math",
-    "path": "folders/Scripts/Local/Utils/Math.yy",
+    "path": "folders/Scripts/Local/Utilities/Math.yy",
   },
 }

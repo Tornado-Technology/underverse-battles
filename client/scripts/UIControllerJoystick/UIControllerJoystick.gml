@@ -26,7 +26,7 @@ function ClassUIControllerJoystick() constructor {
 	self.input[$ vk_right] = new __input(false);
 	self.input[$ vk_left] = new __input(false);
 	
-	input_vector = Vector2();
+	input_vector = new Vector2();
 	handle = UIImageButton(handle_image);
 	border = UIImageButton(border_image);
 	
@@ -118,7 +118,7 @@ function ClassUIControllerJoystick() constructor {
 				handle_x = handle_new_x;
 				handle_y = handle_new_y;
 			} else {
-				var angle_c = Vector2(handle_new_x - position_x, handle_new_y - position_y).math_angle(true);
+				var angle_c = new Vector2(handle_new_x - position_x, handle_new_y - position_y).math_angle(true);
 				var cs = cos(angle_c);
 				var sn = sin(angle_c);
 				var angle_t = arctan2(length_x / 2 * sn, length_y / 2 * cs);
@@ -146,7 +146,7 @@ function ClassUIControllerJoystick() constructor {
 		handle.draw(handle_x, handle_y, alpha);
 		
 		// Get input
-		var deltaVector = Vector2(handle_x, handle_y).sub(position_x, position_y);
+		var deltaVector = new Vector2(handle_x, handle_y).sub(position_x, position_y);
 		var raduis = deltaVector.math_length();
 		
 		input_vector = deltaVector.divis(raduis, raduis);
@@ -155,7 +155,7 @@ function ClassUIControllerJoystick() constructor {
 		is_active = raduis > death_radius;
 		
 		if (raduis <= death_radius) {
-			input_vector = Vector2();
+			input_vector = new Vector2();
 		}
 		
 		if (is_show_death_radius) {

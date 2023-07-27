@@ -6,7 +6,7 @@ if (battle_border_start_animation_end()) exit;
 soul = create_soul(border.x, border.y, battle_soul_type.red);
 
 if (_time % 24 == 0) {
-	var random_position = Vector2(0, -10);
+	var random_position = new Vector2(0, -10);
 	if (irandom_range(0, 1) == 0) {
 		// Right
 		var offset_x = 25;

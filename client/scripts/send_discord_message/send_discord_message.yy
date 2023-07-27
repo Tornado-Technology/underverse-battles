@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Discord",
-    "path": "folders/Scripts/Local/Utils/Discord.yy",
+    "path": "folders/Scripts/Local/Utilities/Discord.yy",
   },
 }

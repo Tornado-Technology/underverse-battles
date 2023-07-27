@@ -4,7 +4,7 @@ if (act < 1) exit;
 draw_reset();
 
 // Camera
-var local_camera_position = Vector2(0, 0);
+var local_camera_position = new Vector2(0, 0);
 local_camera_position.y += side == dir.down ? shift : 0;
 
 // Dialog window

@@ -5,7 +5,7 @@ switch (sprite_index) {
 			var spd = 2.7;
 			var spd_offset = 0.1;
 		    var soul = obj_battle_soul;
-			var target = (instance_exists(soul) ?  Vector2(soul.x, soul.y) : Vector2());
+			var target = (instance_exists(soul) ?  new Vector2(soul.x, soul.y) : new Vector2());
 			var angle = point_direction(x, y, target.x, target.y);
 		
 			for (var i = 0; i < 3; i++;) {
@@ -22,7 +22,7 @@ switch (sprite_index) {
 		var spd = 2.7;
 		var angle_offset = 15;
 	    var soul = obj_battle_soul;
-		var target = (instance_exists(soul) ?  Vector2(soul.x, soul.y) : Vector2());
+		var target = (instance_exists(soul) ?  new Vector2(soul.x, soul.y) : new Vector2());
 		var angle = point_direction(x, y, target.x, target.y);
 		var bullets = [];
 		
@@ -44,7 +44,7 @@ switch (sprite_index) {
 			var spd = 2.7;
 		    var soul = obj_battle_soul;
 			
-			var target = (instance_exists(soul) ?  Vector2(soul.x, soul.y) : Vector2());
+			var target = (instance_exists(soul) ?  new Vector2(soul.x, soul.y) : new Vector2());
 			var angle = point_direction(x, y, target.x, target.y);
 			delete target;
 		

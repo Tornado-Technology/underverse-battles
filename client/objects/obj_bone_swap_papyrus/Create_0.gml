@@ -4,7 +4,7 @@ damage = get_char_damage(obj_character_swap_papyrus);
 
 is_shaking = false;
 shake_power = 1;
-shake_position = Vector2();
+shake_position = new Vector2();
 
 time_source_shake_exists = false;
 shake = function() {

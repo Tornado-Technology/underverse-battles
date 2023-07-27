@@ -18,16 +18,16 @@ channel_speed = 0.02;
 // Action box position
 action_box_show = true;
 
-action_box_position_end   = Vector2(130, 360);
-action_box_position_start = Vector2(130, 210);
-action_box_size           = Vector2(220, 56);
+action_box_position_end   = new Vector2(130, 360);
+action_box_position_start = new Vector2(130, 210);
+action_box_size           = new Vector2(220, 56);
 
 action_box_position       = action_box_position_start.copy();
 // #####################
 
 show_select = true;
 
-option_bar_sprites = [spr_options_bar_hp, spr_options_bar_stamina, spr_options_bar_mana];
+option_bar_sprites = [spr_ui_options_bar_hp, spr_ui_options_bar_stamina, spr_ui_options_bar_mana];
 current_hp_line      = [0, 0];
 current_mana_line    = [0, 0];
 current_stamina_line = [0, 0];

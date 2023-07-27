@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Stirng",
-    "path": "folders/Scripts/Local/Utils/Stirng.yy",
+    "path": "folders/Scripts/Local/Utilities/Stirng.yy",
   },
 }

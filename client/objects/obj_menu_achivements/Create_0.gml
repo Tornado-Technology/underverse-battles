@@ -12,8 +12,8 @@ var width = display_get_gui_width();
 var height = display_get_gui_height();
 // ###
 
-surface_cord = Vector2(120, 50);
-surface_size = Vector2(width - 20, 180);
+surface_cord = new Vector2(120, 50);
+surface_size = new Vector2(width - 20, 180);
 surface = surface_create(surface_size.x, surface_size.y);
 
 scroll_up = function(coefficient = 1) {

@@ -1,5 +1,5 @@
-surface_cord = Vector2(25,  110);
-surface_size = Vector2(430, 120);
+surface_cord = new Vector2(25,  110);
+surface_size = new Vector2(430, 120);
 surface = surface_create(surface_size.x, surface_size.y);
 
 action_list_size = 0;

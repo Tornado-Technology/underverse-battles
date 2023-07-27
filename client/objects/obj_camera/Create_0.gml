@@ -13,17 +13,17 @@ zoom_speed = 1;
 is_room_border = true;
 
 // Postion 
-position = Vector2(0, 0);
-target_position = Vector2(0, 0);
+position = new Vector2(0, 0);
+target_position = new Vector2(0, 0);
 is_using_speed = true;
 
 //
 _angle = 0;
 angle = 0;
-scale = Vector2(3, 3);
+scale = new Vector2(3, 3);
 
 // Speed
-_speed = Vector2(2, 2);
+_speed = new Vector2(2, 2);
 _speed_rotate = 2;
 
 // Target
@@ -39,9 +39,9 @@ alarm[0] = 1;
 
 // Overwrite
 is_overwrite = false;
-overwrite_position = Vector2(0, 0);
+overwrite_position = new Vector2(0, 0);
 
 // Shake
-shake_position = Vector2(0, 0);
+shake_position = new Vector2(0, 0);
 shake_power = 0;
 shake_time = 0;

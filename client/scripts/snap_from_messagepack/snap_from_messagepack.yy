@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Messagepack",
-    "path": "folders/Scripts/Local/Utils/Messagepack.yy",
+    "path": "folders/Scripts/Local/Utilities/Messagepack.yy",
   },
 }

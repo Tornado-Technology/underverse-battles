@@ -4,7 +4,7 @@ function camera_set_position(vector){
     if (argument_count > 1) {
         var _x = argument[0];
         var _y = argument[1];
-        vector = Vector2(_x, _y);
+        vector = new Vector2(_x, _y);
     }
 	
 	camera.overwrite_position = vector;
@@ -39,7 +39,7 @@ function camera_set_overwrite_position(vector) {
 	if (argument_count > 1) {
 		var _x = argument[0];
 		var _y = argument[1];
-		vector = Vector2(_x, _y);
+		vector = new Vector2(_x, _y);
 	}
 	
 	camera.overwrite_position = vector; 
@@ -51,7 +51,7 @@ function camera_set_speed(vector){
 	if (argument_count > 1) {
 		var _x = argument[0];
 		var _y = argument[1];
-		vector = Vector2(_x, _y);
+		vector = new Vector2(_x, _y);
 	}
 	
 	camera._speed = vector;

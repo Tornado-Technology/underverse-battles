@@ -10,11 +10,12 @@ function assets_load() {
 		for (var i = 0; i < array_length(assets_dirictorys); i++) {
 			var asset = assets_dirictorys[i];
 			asset_load(assets_directory + asset);
-			logger.info("Assets load: \"{0}\".", asset);
+			logger.info($"Assets load: \"{asset}\"");
 		}
-			
-		logger.info("Assets loaded {0}/{0}.", array_length(assets_dirictorys));
+		
+		var length = array_length(assets_dirictorys);
+		logger.info($"Assets loaded {length}/{length}");
 	} catch(error) {
-		logger.error("Assets loaded failed, reasone: {0}.", error)
+		logger.error($"Assets loaded failed, reasone: {error}");
 	}
 }

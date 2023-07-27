@@ -1,5 +1,15 @@
-/// @desc Use for step-by-step load/initialization
+/// @description Use for step-by-step load/initialization
 /// If your initilization does not need it, declare an empty script
+if (netlog_enabled) {
+	instance_create(obj_netlog);
+}
+
+instance_create_array([
+	obj_network_client,
+	obj_discord_rich,
+	obj_camera,
+]);
+
 logger.info("Initilization start...");
 
 randomize();
@@ -9,6 +19,10 @@ input_init_bind_default();
 
 data_load();
 data_apply();
+
+instance_create_array([
+	obj_ui_resource_utilization,
+]);
 
 // After data loads
 achivements_load();

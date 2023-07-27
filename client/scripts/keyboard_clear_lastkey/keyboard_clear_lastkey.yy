@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Keyboard",
-    "path": "folders/Scripts/Local/Utils/Keyboard.yy",
+    "path": "folders/Scripts/Local/Utilities/Keyboard.yy",
   },
 }

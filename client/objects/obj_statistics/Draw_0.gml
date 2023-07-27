@@ -57,9 +57,9 @@ var i = 0; repeat(action_list_size) {
 	}
 	
 	var text_x = 20;
-	draw_selected_action(text_x , text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack1, i);
-	draw_selected_action(text_x , text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack2, i);
-	draw_selected_action(text_x , text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack3, i);
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack_1, i);
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack_2, i);
+	draw_selected_action(text_x , text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack_3, i);
 	draw_selected_action(text_x , text_y, character_special_attack[initiative[i]], player_id, fight_action_type.special_attack, i);
 	draw_selected_action(text_x , text_y, lang_skip, player_id, fight_action_type.skip, i);
 	
@@ -96,9 +96,9 @@ var i = 0; repeat(action_list_size) {
 	}
 	
 	var text_x = width;
-	draw_selected_action(text_x, text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack1, i);
-	draw_selected_action(text_x, text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack2, i);
-	draw_selected_action(text_x, text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack3, i);
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 0], player_id, fight_action_type.attack_1, i);
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 1], player_id, fight_action_type.attack_2, i);
+	draw_selected_action(text_x, text_y, character_attack[initiative[i], 2], player_id, fight_action_type.attack_3, i);
 	draw_selected_action(text_x, text_y, character_special_attack[initiative[i]], player_id, fight_action_type.special_attack, i);
 	draw_selected_action(text_x, text_y, lang_skip, player_id, fight_action_type.skip, i);
 	

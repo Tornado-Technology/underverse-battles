@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Autolog",
-    "path": "folders/Scripts/_Network_/Autolog.yy",
+    "path": "folders/Scripts/Local/Autolog.yy",
   },
 }

@@ -49,7 +49,7 @@ switch (attack_num) {
 			create_moving_platforms(_border.x - _border.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
 		
 			var soul_offset = 5;
-			var soul_position = choose(Vector2(_border.x - 38, sector_y - soul_offset), Vector2(_border.x + 12, sector_y + sector_y_step - soul_offset), Vector2(_border.x - 38, sector_y + sector_y_step * 2 - soul_offset));
+			var soul_position = choose(new Vector2(_border.x - 38, sector_y - soul_offset), new Vector2(_border.x + 12, sector_y + sector_y_step - soul_offset), new Vector2(_border.x - 38, sector_y + sector_y_step * 2 - soul_offset));
 			_soul = create_soul(soul_position.x, soul_position.y, battle_soul_type.blue);
 			
 			// bones

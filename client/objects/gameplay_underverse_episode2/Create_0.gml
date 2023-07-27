@@ -46,7 +46,7 @@ part_type_direction(particle_pencil, 0, 0, 0, 0);
 part_type_orientation(particle_pencil, 0, 0, 10, 0, false);
 
 // Time sources
-time_source_restart = time_source_create(time_source_game, 5, time_source_units_seconds, function () {
+time_source_restart = time_source_create(time_source_game, 5, time_source_units_seconds, function() {
 	cutscene_set(4);
 });
 

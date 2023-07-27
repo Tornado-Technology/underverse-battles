@@ -27,14 +27,11 @@ packet_handler_register("connection", function(data) {
 });
 
 packet_handler_register("ping", function(data) {
-    if (global.ping_instance != noone) {
-        global.ping_instance.connect_timeout_timer.reset();
-    }
     send_pong(data.time);
 });
 
 packet_handler_register("pong", function(data) {
-    network_ping = round(get_timer() / 1000) - data.time;
+    network_client.calculate_ping(data.time);
 });
 
 packet_handler_register("logout", function(data) {

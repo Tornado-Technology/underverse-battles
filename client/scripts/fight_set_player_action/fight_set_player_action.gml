@@ -3,7 +3,7 @@
 /// @param {Real} value - new action for player
 /// @param {Bool} force - if true don't call fight_update_state()
 function fight_set_player_action(_player_id, _value, force = false){
-	global.fight_instance.player_action[_player_id] = _value + fight_action_type.attack1;
+	global.fight_instance.player_action[_player_id] = _value + fight_action_type.attack_1;
 	
 	// Call update method
 	if (!force) {

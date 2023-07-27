@@ -1,4 +1,4 @@
-/// @param {Buffer} src_buffer
+/// @param {Oh shit Tesmy messed up with JSDoc again.Buffer} src_buffer
 /// @param {real} src_offset
 /// @param {real} size
 /// @param {Buffer} dest_buffer

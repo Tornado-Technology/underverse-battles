@@ -65,9 +65,9 @@ enum fight_depth {
 enum fight_action_type {
 	empty = 0,
 	skip = 1,
-	attack1 = 2,
-	attack2 = 3,
-	attack3 = 4,
+	attack_1 = 2,
+	attack_2 = 3,
+	attack_3 = 4,
 	special_attack = 5
 }
 

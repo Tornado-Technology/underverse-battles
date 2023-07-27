@@ -1,4 +1,4 @@
-camera_position = Vector2(camera_get_view_x(_camera), camera_get_view_y(_camera));
+camera_position = new Vector2(camera_get_view_x(_camera), camera_get_view_y(_camera));
 camera_angle = camera_get_view_angle(_camera);
 
 // Target

@@ -12,11 +12,12 @@ enum client_state {
   in_world,
 }
 
-enum account_type {
-  user = 0,
-  beta_tester = 1,
-  administrator = 2,
-  developer = 3,
+enum network_client_state {
+	connecting,
+	connected,
+	disconnecting,
+	disconnected,
+	reconnecting,
 }
 
 enum status_code {
@@ -54,9 +55,9 @@ global.__on_network_connection_timeout = new Event();
 // Macros
 #macro network_offical_ip (localserver_mode ? "127.0.0.1" : "82.146.34.152")
 #macro network_offical_port (development_mode ? "1337" : "1339")
-#macro network_connect_interval 120
-#macro network_connect_timeout 420
-#macro network_disconnect_timeout 600
+#macro network_ping_interval 3
+#macro network_connect_interval 15
+#macro network_disconnect_interval 10
 #macro network_autolog_file (working_directory + (development_mode ? "autologDevelopment.acc" : "autolog.acc"))
 
 #macro network_client global.__instance_network_client
@@ -69,21 +70,3 @@ global.__on_network_connection_timeout = new Event();
 #macro on_network_disconnect global.__event_on_network_disconnect
 #macro on_network_login global.__event_on_network_login
 #macro on_network_connection_timeout global.__on_network_connection_timeout
-
-// Connections
-on_network_connect.connect(function() {
-	autolog_load();
-	network_account = undefined;
-	network_profile = undefined;
-});
-
-on_network_disconnect.connect(function() {
-	network_account = undefined;
-	network_profile = undefined;
-});
-
-on_network_login.connect(function(args) {
-	if (args[0] == status_code.success) {
-		achievement_give(achievement_id.a_cybers_world);
-	}
-});

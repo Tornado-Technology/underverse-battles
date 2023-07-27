@@ -87,9 +87,9 @@ set_next_turn = function(){
 }
 
 player_is_acting = function(player_id) {
-	return player_action[player_id] == fight_action_type.attack1 ||
-		player_action[player_id] == fight_action_type.attack2 ||
-		player_action[player_id] == fight_action_type.attack3;
+	return player_action[player_id] == fight_action_type.attack_1 ||
+		player_action[player_id] == fight_action_type.attack_2 ||
+		player_action[player_id] == fight_action_type.attack_3;
 }
 
 player_is_special_acting = function(player_id) {

@@ -24,3 +24,8 @@
 #macro mouse_gui_y (device_mouse_y_to_gui(0))
 
 #macro real_delta_time (delta_time / 1000000)
+
+#macro function_empty function() {}
+#macro string_empty ""
+#macro array_empty []
+#macro struct_empty {}

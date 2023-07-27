@@ -84,9 +84,9 @@ function backgrounds_translate_update() {
 /// @param {String} author
 /// @param {Real} au
 /// @param {Asset.GMObject} animator
-/// @param {Struct.ClassVector2} position_1
-/// @param {Struct.ClassVector2} position_2
-function Background(sprite, index, key, author, au, animator = noone, position_1 =  Vector2(80, 180), position_2 = Vector2(400, 180)) {
+/// @param {Struct.Vector2} position_1
+/// @param {Struct.Vector2} position_2
+function Background(sprite, index, key, author, au, animator = noone, position_1 =  new Vector2(80, 180), position_2 = new Vector2(400, 180)) {
 	var background = new BackgroundClass(sprite, key, author, au, animator, position_1, position_2);
 	background.index = index;
 	array_push(global.__backgrounds, background);
@@ -98,8 +98,8 @@ function Background(sprite, index, key, author, au, animator = noone, position_1
 /// @param {String} author
 /// @param {Real} au
 /// @param {Asset.GMObject} animator
-/// @param {Struct.ClassVector2} position_1
-/// @param {Struct.ClassVector2} position_2
+/// @param {Struct.Vector2} position_1
+/// @param {Struct.Vector2} position_2
 function BackgroundClass(sprite, key, author, au, animator, position_1, position_2) constructor {
     self.sprite = sprite;
 	self.key = key;

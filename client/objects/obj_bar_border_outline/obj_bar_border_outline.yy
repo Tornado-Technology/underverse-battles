@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_options_bar_border_outline",
-    "path": "sprites/spr_options_bar_border_outline/spr_options_bar_border_outline.yy",
+    "name": "spr_ui_options_bar_border_outline",
+    "path": "sprites/spr_ui_options_bar_border_outline/spr_ui_options_bar_border_outline.yy",
   },
   "spriteMaskId": null,
   "visible": true,
