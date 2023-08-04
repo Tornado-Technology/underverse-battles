@@ -289,6 +289,28 @@ input_wheel = 0;
 held_h  = 0;
 
 // Menu
+if (!development_mode) {
+	create_page([
+		Transfer("Main.SingleBattle", menu_page.singleplayer),
+		Transfer("Main.Multiplayer", menu_page.multiplayer, function() {
+			menu_successful_login(self);
+		}),
+		Execute("Main.Characters", [], function () {
+			instance_create_one(obj_characters);
+		}),
+		Transfer("Main.Achievements", menu_page.achivments, function() {
+			instance_create(obj_menu_achivements);
+		}),
+		Transfer("Main.Settings", menu_page.settings),
+		Transfer("Main.Credits", menu_page.credits, function() {
+			instance_create_one(obj_credits);
+		}),
+		Execute("Main.Exit", [], function() {
+			game_end();
+		}),
+	], menu_page.main);
+} else {
+// Menu (development mode)
 create_page([
 	Transfer("Main.SingleBattle", menu_page.singleplayer),
 	Transfer("Main.Multiplayer", menu_page.multiplayer, function() {
@@ -301,6 +323,9 @@ create_page([
 		instance_create(obj_menu_achivements);
 	}),
 	Transfer("Main.Settings", menu_page.settings),
+	Execute("Main.Debug", [], function() {
+		room_goto(room_cutscene_test);
+	}),
 	Transfer("Main.Credits", menu_page.credits, function() {
 		instance_create_one(obj_credits);
 	}),
@@ -308,7 +333,7 @@ create_page([
 		game_end();
 	}),
 ], menu_page.main);
-
+}
 // Debug rooms
 create_page([
 	Execute("CutsceneTest", [], function() {

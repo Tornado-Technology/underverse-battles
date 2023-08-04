@@ -1,13 +1,14 @@
 // Arguments: bone, gasterblaster
 
+platforms_speed = 0.5 + _power * 0.1;
+sector_y_step = 35;
+
 callback = function () {
-	var sector_y_step = 35;
 	var sector_y = border_instance.y - border_instance.up + 25;
-		
-	var main_speed = 0.5 + _power * 0.1;
-	create_moving_platforms(border_instance.x - border_instance.left - 40, sector_y, 4, 6, 60, main_speed);
-	create_moving_platforms(border_instance.x + border_instance.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed);
-	create_moving_platforms(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
+	
+	create_moving_platforms(border_instance.x - border_instance.left - 40, sector_y, 4, 6, 60, platforms_speed);
+	create_moving_platforms(border_instance.x + border_instance.right + 40, sector_y + sector_y_step, 4, 6, 60, -platforms_speed);
+	create_moving_platforms(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, platforms_speed);
 		
 	var soul_offset = 5;
 	var soul_position = choose(Vector2(border_instance.x - 38, sector_y - soul_offset), Vector2(border_instance.x + 12, sector_y + sector_y_step - soul_offset), Vector2(border_instance.x - 38, sector_y + sector_y_step * 2 - soul_offset));
@@ -27,7 +28,6 @@ callback = function () {
 update_gasterblasters = function() {
 	var _gb_pos = irandom_range(0, 2);
 	var border_dist = 180;
-	var sector_y_step = 35;
 	var sector_y = border_instance.y - border_instance.up + 25;
 	switch (_gb_pos) {
 		case 0:
@@ -43,12 +43,10 @@ update_gasterblasters = function() {
 }
 	
 update_platforms = function() {
-	var main_speed = 0.5 + _power * 0.1;
-	var sector_y_step = 35;
 	var sector_y = border_instance.y - border_instance.up + 25;
-	create_next_moving_platform(border_instance.x - border_instance.left - 40, sector_y, 4, 6, 60, main_speed);
-	create_next_moving_platform(border_instance.x + border_instance.right + 40, sector_y + sector_y_step, 4, 6, 60, -main_speed);
-	create_next_moving_platform(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, main_speed);
+	create_next_moving_platform(border_instance.x - border_instance.left - 40, sector_y, 4, 6, 60, platforms_speed);
+	create_next_moving_platform(border_instance.x + border_instance.right + 40, sector_y + sector_y_step, 4, 6, 60, -platforms_speed);
+	create_next_moving_platform(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, platforms_speed);
 }
 
 var period = 65 - _power * 6;
@@ -57,7 +55,7 @@ time_source_update_gasterblasters = time_source_create(time_source_game, period 
 	update_gasterblasters();
 }, [], repeats - 1);
 	
-time_source_update_platforms = time_source_create(time_source_game, 1 / (0.5 + _power * 0.1), time_source_units_seconds, function () {
+time_source_update_platforms = time_source_create(time_source_game, 1 / platforms_speed, time_source_units_seconds, function () {
 	update_platforms();
 }, [], -1);
 		

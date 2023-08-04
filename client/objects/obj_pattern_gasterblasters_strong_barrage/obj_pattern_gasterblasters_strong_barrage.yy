@@ -12,7 +12,10 @@
     "name": "Gasterblasters",
     "path": "folders/Attack Patterns/Gasterblasters.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

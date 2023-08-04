@@ -1,4 +1,4 @@
-// Arguments: border_instance, _power, bone, use_gravity_attack, is_double, custom_repeats (optional)
+// Arguments: bone, use_gravity_attack, is_double, custom_repeats (optional)
 
 bone_instances = [];
 side = dir.left;

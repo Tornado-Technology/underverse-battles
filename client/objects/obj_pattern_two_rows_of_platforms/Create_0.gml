@@ -1,7 +1,8 @@
 // Arguments: bone, gasterblaster_aiming
+
+main_speed = 1 + _power * 0.1;
 		
 callback = function () {
-	var main_speed = 1 + _power * 0.1;
 	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y - 15, 4, 6, 60, main_speed);
 	create_moving_platforms(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 		
@@ -16,7 +17,6 @@ callback = function () {
 }
 
 update_bones = function() {
-	var main_speed = 1 + _power * 0.1;
 	var chance = irandom_range(0, 6);
 	if (chance % 2 == 0) {
 		create_bone(border_instance.x - border_instance.left, border_instance.y + border_instance.down, bone, main_speed, 1.4, 0, 0);
@@ -31,13 +31,12 @@ update_bones = function() {
 
 update_gasterblasters = function() {
 	if (_power >= 3) {
-		create_aiming_gasterblaster(gasterblaster_aining, soul_instance);
+		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
 		time_source_start(time_source_update_gasterblasters);
 	}
 }
 	
 update_platforms = function() {
-	var main_speed = 1 + _power * 0.1;
 	create_next_moving_platform(border_instance.x - border_instance.left - 40, border_instance.y - 15, 4, 6, 60, main_speed);
 	create_next_moving_platform(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 }
@@ -51,7 +50,7 @@ time_source_update_gasterblasters = time_source_create(time_source_game, 2, time
 	update_gasterblasters();
 }, [], repeats);
 	
-time_source_update_platforms = time_source_create(time_source_game, 1 / (1 + _power * 0.1), time_source_units_seconds, function () {
+time_source_update_platforms = time_source_create(time_source_game, 1 / main_speed, time_source_units_seconds, function () {
 	update_platforms();
 }, [], -1);
 
