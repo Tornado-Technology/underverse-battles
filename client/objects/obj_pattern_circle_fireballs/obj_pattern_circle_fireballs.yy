@@ -1,17 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_patern",
+  "name": "obj_pattern_circle_fireballs",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Abstruct",
-    "path": "folders/Characteres/Tesmi/Attacks/Paterns/Abstruct.yy",
+    "name": "Fireballs",
+    "path": "folders/Attack Patterns/Fireballs.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

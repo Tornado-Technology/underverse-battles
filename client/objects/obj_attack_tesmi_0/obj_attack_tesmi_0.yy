@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_base_attack_tesmi",
+  "name": "obj_attack_tesmi_0",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
@@ -12,8 +12,8 @@
     "path": "folders/Characteres/Tesmi/Attacks.yy",
   },
   "parentObjectId": {
-    "name": "attack_creator",
-    "path": "objects/attack_creator/attack_creator.yy",
+    "name": "obj_attack",
+    "path": "objects/obj_attack/obj_attack.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

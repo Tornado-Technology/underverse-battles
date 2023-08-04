@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_patern_random_fireballs",
+  "name": "obj_pattern_random_fireballs",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -9,12 +9,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Paterns",
-    "path": "folders/Characteres/Tesmi/Attacks/Paterns.yy",
+    "name": "Fireballs",
+    "path": "folders/Attack Patterns/Fireballs.yy",
   },
   "parentObjectId": {
-    "name": "obj_patern",
-    "path": "objects/obj_patern/obj_patern.yy",
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
