@@ -1,28 +1,28 @@
 /// @param {Real} _power
-function tesmi_attack_0(_power, _enemy) {
+/// @param {Id.Instance} player
+function tesmi_attack_0(_power, player) {
 	show_debug_message(12)
-	var attack = instance_create(obj_attack_tesmi_1, {
-		_power: _power,
-		character: _enemy,
-		num: 1,
+	var attack = instance_create(obj_attack_tesmi_0, {
+		character_instance: player,
+		_power: _power
 	});
 	
 }
 
 /// @param {Real} _power
-function tesmi_attack_1(_power, _enemy) {
-	var attack = instance_create(obj_attack_tesmi_1, {
-		_power: _power,
-		character: _enemy,
-		num: 2,
+/// @param {Id.Instance} player
+function tesmi_attack_1(_power, player) {
+	var attack = instance_create(obj_attack_tesmi_0, {
+		character_instance: player,
+		_power: _power
 	});
 }
 
 /// @param {Real} _power
-function tesmi_attack_2(_power, _enemy) {
-	var attack = instance_create(obj_attack_tesmi_1, {
-		_power: _power,
-		character: _enemy,
-		num: 3,
+/// @param {Id.Instance} player
+function tesmi_attack_2(_power, player) {
+	var attack = instance_create(obj_attack_tesmi_0, {
+		character_instance: player,
+		_power: _power
 	});
 }

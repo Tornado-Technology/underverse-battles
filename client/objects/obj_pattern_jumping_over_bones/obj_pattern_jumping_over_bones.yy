@@ -12,7 +12,10 @@
     "name": "Bones",
     "path": "folders/Attack Patterns/Bones.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

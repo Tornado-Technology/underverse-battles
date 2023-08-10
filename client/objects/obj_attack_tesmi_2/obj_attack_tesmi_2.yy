@@ -11,10 +11,7 @@
     "name": "Attacks",
     "path": "folders/Characteres/Tesmi/Attacks.yy",
   },
-  "parentObjectId": {
-    "name": "obj_base_attack_tesmi",
-    "path": "objects/obj_base_attack_tesmi/obj_base_attack_tesmi.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
