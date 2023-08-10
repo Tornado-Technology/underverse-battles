@@ -384,11 +384,15 @@
       "MobileControls": {
         "Description": "在这里你可以设置按键位置和大小。点击按键来自定义",
         "Position": "位置",
+        "TypeController": "Тип контроллера",
         "Size": "大小",
         "Ready": "就绪",
         "Elements": {
           "Joystick": {
             "Name": "虚拟摇杆"
+          },
+          "Arrows": {
+            "Name": "Arrows"
           },
           "Buttons": {
             "X": {

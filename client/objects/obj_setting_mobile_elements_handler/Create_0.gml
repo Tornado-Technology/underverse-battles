@@ -12,7 +12,7 @@ change_element = function(_element) {
 element = undefined;
 
 text_name_x = width / 2;
-text_name_y = height - 100 - offset;
+text_name_y = height - 100;
 
 slider = UISlider(0, function(value) {
 	var scale_max = element.scale_max - 1; // 1 - it is scale_min

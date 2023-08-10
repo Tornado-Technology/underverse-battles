@@ -272,6 +272,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Statistics","folderPath":"folders/Scripts/Local/Fight/Statistics.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Gameplay","folderPath":"folders/Scripts/Local/Gameplay.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Settings(mobile)","folderPath":"folders/Scripts/Local/Settings(mobile).yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controllers","folderPath":"folders/Scripts/Local/Settings(mobile)/Controllers.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Elements","folderPath":"folders/Scripts/Local/Settings(mobile)/Elements.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"System","folderPath":"folders/Scripts/Local/System.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Camera","folderPath":"folders/Scripts/Local/System/Camera.yy",},
@@ -359,7 +360,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controllers","folderPath":"folders/Scripts/Local/Settings(mobile)/Controllers.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.html","CopyToMask":0,"filePath":"datafiles",},

@@ -162,6 +162,7 @@
     {"name":"Statistics","order":2,"path":"folders/Scripts/Local/Fight/Statistics.yy",},
     {"name":"Gameplay","order":3,"path":"folders/Scripts/Local/Gameplay.yy",},
     {"name":"Settings(mobile)","order":7,"path":"folders/Scripts/Local/Settings(mobile).yy",},
+    {"name":"Controllers","order":2,"path":"folders/Scripts/Local/Settings(mobile)/Controllers.yy",},
     {"name":"Elements","order":1,"path":"folders/Scripts/Local/Settings(mobile)/Elements.yy",},
     {"name":"System","order":4,"path":"folders/Scripts/Local/System.yy",},
     {"name":"Collision","order":9,"path":"folders/Scripts/Local/System/Collision.yy",},
@@ -222,7 +223,6 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
-    {"name":"Controllers","order":2,"path":"folders/Scripts/Local/Settings(mobile)/Controllers.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},

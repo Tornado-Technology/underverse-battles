@@ -11,11 +11,15 @@ function ClassSettingsMobileController(menu_instance, controller, controllers) :
 	
 	scale_max = 1.8;
 	
+	width = display_get_gui_width();
+	height = display_get_gui_height();
+	
 	self.controller = controllers[instance_controller.controllers_index];
 	key_name = $"Menu.Settings.MobileControls.Elements.{self.controller.name}.Name";
 	key_position = "Settings.MobileControls.Controller.Position";
 	key_scale = "Settings.MobileControls.Controller.Scale";
 	key_index = "Settings.MobileControls.Controller.Index";
+	title_type_controller = translate_get("Menu.Settings.MobileControls.TypeController");
 	controller_names = [];
 	
 	uiShift = UIShift(controller_names, instance_controller.controllers_index);
@@ -60,7 +64,11 @@ function ClassSettingsMobileController(menu_instance, controller, controllers) :
 	static draw = function() {
 		base_draw();
 		
-		uiShift.draw(100, 90);
+		draw_set_font(global._font_main_determination);
+		draw_set_halign(fa_center);
+		
+		draw_text(width / 2, height / 2 + 5, title_type_controller);
+		uiShift.draw(width / 2 - 50, height / 2 + 20);
 		
 		self.controller.draw(position_x, position_y);
 	}
