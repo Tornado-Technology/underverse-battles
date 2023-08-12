@@ -29,8 +29,8 @@ if (is_desktop && !mobile_mode) {
 if (is_mobile || mobile_mode) {
 	if (instance_exists(obj_ui_controls)) {
 		var controller = controller_get();
-		movement_speed_x = SPD * controller.input_vector.x;
-		movement_speed_y = SPD * controller.input_vector.y;
+		movement_speed_x = main_speed * controller.input_vector.x;
+		movement_speed_y = main_speed * controller.input_vector.y;
 	}
 }
 

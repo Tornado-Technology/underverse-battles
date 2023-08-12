@@ -2,7 +2,7 @@
 
 _angle = irandom_range(0, 359);
 angle_step = 10;
-steps = 6;
+steps = 8;
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -31,10 +31,10 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [], repeats - 1);
 	
-time_source_update_step = time_source_create(time_source_game, period * (repeats / steps), time_source_units_seconds, function () {
+time_source_update_step = time_source_create(time_source_game, period * (repeats / 60) / steps, time_source_units_seconds, function () {
 	update_step();
 }, [], steps - 1);
 	
-time_source_update_destroy = time_source_create(time_source_game, (period * repeats / 60) + 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats / 60) + 1.4, time_source_units_seconds, function () {
 	instance_destroy();
 });

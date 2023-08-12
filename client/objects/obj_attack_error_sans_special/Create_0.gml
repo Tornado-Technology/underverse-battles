@@ -20,6 +20,7 @@ pattern_instances = [
 		custom_repeats: 100
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 4, {
+		soul_type: battle_soul_type.red,
 		gasterblaster_aiming: obj_gasterblaster_aiming_error_sans,
 		count: 3,
 		custom_repeats: 6

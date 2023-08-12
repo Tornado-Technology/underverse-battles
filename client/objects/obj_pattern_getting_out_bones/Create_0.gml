@@ -4,8 +4,8 @@ callback = function () {
 	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
-	time_source_start(time_source_update_0_0);
-	time_source_start(time_source_update_destroy_0_0);
+	time_source_start(time_source_update);
+	time_source_start(time_source_update_destroy);
 }
 
 update = function() {

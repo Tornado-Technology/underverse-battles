@@ -6,7 +6,7 @@ callback = function () {
 	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y - 15, 4, 6, 60, main_speed);
 	create_moving_platforms(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 		
-	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 9, battle_soul_type.blue);
+	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 8, battle_soul_type.blue);
 		
 	_side = irandom_range(0, 1);
 	update_bones();

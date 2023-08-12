@@ -1,67 +1,54 @@
 function cross_attack0(pow, player) {
-	instance_create(attack_creator_cross, {
+	instance_create(obj_attack_cross_0, {
 		character_instance: player,
-		_power: pow,
-		_id: 0,
-		attack_num: irandom_range(0, 3)
+		_power: pow
 	});
 }
 
 function cross_attack1(pow, player) {
-	instance_create(attack_creator_cross, {
+	instance_create(obj_attack_cross_1, {
 		character_instance: player,
-		_power: pow,
-		_id: 1,
-		attack_num: irandom_range(0, 2)
+		_power: pow
 	});
 }
 
 function cross_attack2(pow, player) {
-	instance_create(attack_creator_cross, {
+	instance_create(obj_attack_cross_2, {
 		character_instance: player,
 		_power: pow,
-		_id: 2,
-		attack_num: player.use_gravity_attack ? 0 : 1
+		use_gravity_attack: player.use_gravity_attack
 	});
 }
 
 function cross_special_attack(player) {
-	instance_create(attack_creator_cross, {
-		character_instance: player,
-		_id: 3
+	instance_create(obj_attack_cross_special, {
+		character_instance: player
 	});
 }
 
 function cross_xevent_attack0(pow, player) {
-	instance_create(attack_creator_cross_xevent, {
+	instance_create(obj_attack_cross_xevent_0, {
 		character_instance: player,
-		_power: pow,
-		_id: 0,
-		attack_num: irandom_range(0, 3)
+		_power: pow
 	});
 }
 
 function cross_xevent_attack1(pow, player) {
-	instance_create(attack_creator_cross_xevent, {
+	instance_create(obj_attack_cross_xevent_1, {
 		character_instance: player,
-		_power: pow,
-		_id: 1,
-		attack_num: irandom_range(0, 2)
+		_power: pow
 	});
 }
 
 function cross_xevent_attack2(pow, player) {
-	instance_create(attack_creator_cross_xevent, {
+	instance_create(obj_attack_cross_xevent_2, {
 		character_instance: player,
-		_power: pow,
-		_id: 2,
-		attack_num: irandom_range(0, 2)
+		_power: pow
 	});
 }
 
 function cross_xevent_special_attack(player) {
-	instance_create(attack_creator_cross_xevent, {
-		character_instance: player,
-		_id: 3
+	instance_create(obj_attack_cross_xevent_special, {
+		character_instance: player
 	});
 }
