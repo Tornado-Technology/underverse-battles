@@ -139,8 +139,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "DLLs",
-    "path": "folders/Extensions/DLLs.yy",
+    "name": "DiscordRich",
+    "path": "folders/Extensions/DiscordRich.yy",
   },
   "productId": "",
   "sourcedir": "",

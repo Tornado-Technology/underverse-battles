@@ -245,7 +245,7 @@ packet_handler_register("fightHp", function(data) {
 });
 
 packet_handler_register("battleEnd", function(data) {
-	instance_destroy(attack_creator);
+	instance_destroy(obj_character_attack);
 });
 
 packet_handler_register("fightMana", function(data) {

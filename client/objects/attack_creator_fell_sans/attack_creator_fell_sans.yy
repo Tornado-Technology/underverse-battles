@@ -19,8 +19,8 @@
     "path": "folders/Characteres/Fell Sans/Attacks.yy",
   },
   "parentObjectId": {
-    "name": "attack_creator",
-    "path": "objects/attack_creator/attack_creator.yy",
+    "name": "obj_character_attack",
+    "path": "objects/obj_character_attack/obj_character_attack.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

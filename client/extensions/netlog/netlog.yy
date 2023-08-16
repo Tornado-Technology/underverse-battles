@@ -60,8 +60,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "DLLs",
-    "path": "folders/Extensions/DLLs.yy",
+    "name": "Netlog",
+    "path": "folders/Extensions/Netlog.yy",
   },
   "productId": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
   "sourcedir": "",

@@ -2,11 +2,12 @@
 if (mouse_check_button_pressed(mb_left)) {
 	spd = 0.6;
 }
+
 if (mouse_check_button_pressed(mb_right)) {
 	spd = -0.6;
 }
-if (mouse_check_button_released(mb_left) || 
-	mouse_check_button_released(mb_right)) {
+
+if (mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right)) {
 	spd = 0.2;
 }
 

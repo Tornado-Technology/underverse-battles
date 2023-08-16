@@ -286,8 +286,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "DLLs",
-    "path": "folders/Extensions/DLLs.yy",
+    "name": "WindowsFrame",
+    "path": "folders/Extensions/WindowsFrame.yy",
   },
   "productId": "",
   "sourcedir": "",

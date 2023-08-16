@@ -66,8 +66,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "YAadsAndroid",
-    "path": "folders/Extensions/YAadsAndroid.yy",
+    "name": "YandexAdsAndroid",
+    "path": "folders/Extensions/YandexAdsAndroid.yy",
   },
   "productId": "",
   "sourcedir": "",

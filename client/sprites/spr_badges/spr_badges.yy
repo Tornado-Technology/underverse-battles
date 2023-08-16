@@ -35,8 +35,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Network",
+    "path": "folders/Sprites/Network.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

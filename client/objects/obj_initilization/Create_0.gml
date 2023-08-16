@@ -21,7 +21,7 @@ data_load();
 data_apply();
 
 instance_create_array([
-	obj_ui_resource_utilization,
+	obj_ui_resource_usage,
 ]);
 
 // After data loads

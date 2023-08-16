@@ -1076,8 +1076,8 @@
   "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "name": "Chinese",
+    "path": "folders/Fonts/Chinese.yy",
   },
   "pointRounding": 0,
   "ranges": [

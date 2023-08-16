@@ -31,6 +31,7 @@ enum menu_page {
 	settings_shaders,
 	settings_data,
 	settings_beta,
+	settings_fight,
 	
 	// Debug group
 	debug_rooms
@@ -528,6 +529,9 @@ create_page([
 	}),
 	Slider("Settings.HUDTransparence", data_get("Settings.UI.Fight.StatbarStyle"), function(alpha) {
 		data_set("Settings.UI.Fight.StatbarStyle", alpha);
+	}),
+	Toggle("Settings.ShowUsage", data_get("Settings.UI.Fight.ShowUsage"), function(value) {
+		data_set("Settings.UI.Fight.ShowUsage", value);
 	}),
 	Transfer("StandardButtons.Back", menu_page.settings),
 ], menu_page.settings_main, "Settings.Title", true);

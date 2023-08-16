@@ -51,8 +51,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "DLLs",
-    "path": "folders/Extensions/DLLs.yy",
+    "name": "GamepadForceFocus",
+    "path": "folders/Extensions/GamepadForceFocus.yy",
   },
   "productId": "",
   "sourcedir": "",

@@ -104,8 +104,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "DLLs",
-    "path": "folders/Extensions/DLLs.yy",
+    "name": "WindowsDev",
+    "path": "folders/Extensions/WindowsDev.yy",
   },
   "productId": "",
   "sourcedir": "",

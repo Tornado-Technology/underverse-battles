@@ -75,7 +75,7 @@ draw_sprite_part_ext(option_bar_sprites[0], 0, 0, 0, current_hp_line[1],      op
 draw_sprite_part_ext(option_bar_sprites[1], 0, 0, 0, current_stamina_line[1], option_bar_height[1], size_center.x + 131, 18, -1, 1, color, alpha);
 draw_sprite_part_ext(option_bar_sprites[2], 0, 0, 0, current_mana_line[1],    option_bar_height[2], size_center.x + 118, 21, -1, 1, color, alpha);
 
-if (in_chouse) {
+if (in_chouse && data_get("Settings.UI.Fight.ShowUsage")) {
 	if (initiative == 0) {
 		var stamina_usage = fight_get_player_action_stamina_cost(initiative, action);
 		var new_stamina = max(fight_get_player_stamina(initiative) - stamina_usage, 0);
