@@ -30,6 +30,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Mediations","folderPath":"folders/AdMob/Extensions/Mediations.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Attack Patterns","folderPath":"folders/Attack Patterns.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Big Knife","folderPath":"folders/Attack Patterns/Big Knife.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Blue attack","folderPath":"folders/Attack Patterns/Blue attack.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Bones","folderPath":"folders/Attack Patterns/Bones.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fireballs","folderPath":"folders/Attack Patterns/Fireballs.yy",},
@@ -366,7 +367,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Big Knife","folderPath":"folders/Attack Patterns/Big Knife.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.html","CopyToMask":0,"filePath":"datafiles",},
@@ -410,14 +410,13 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_determination.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.6.0.89",
   },
   "resources": [
     {"id":{"name":"spr_cross_sitting_crying_looks_at_ink_sans","path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},},

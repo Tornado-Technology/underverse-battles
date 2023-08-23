@@ -4,6 +4,7 @@
     {"name":"Configs","order":5,"path":"folders/_Options_/Configs.yy",},
     {"name":"Content","order":4,"path":"folders/_Options_/Content.yy",},
     {"name":"Attack Patterns","order":12,"path":"folders/Attack Patterns.yy",},
+    {"name":"Big Knife","order":7,"path":"folders/Attack Patterns/Big Knife.yy",},
     {"name":"Blue attack","order":1,"path":"folders/Attack Patterns/Blue attack.yy",},
     {"name":"Fireballs","order":6,"path":"folders/Attack Patterns/Fireballs.yy",},
     {"name":"Gasterblasters","order":3,"path":"folders/Attack Patterns/Gasterblasters.yy",},
@@ -228,7 +229,6 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
-    {"name":"Big Knife","order":7,"path":"folders/Attack Patterns/Big Knife.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},
