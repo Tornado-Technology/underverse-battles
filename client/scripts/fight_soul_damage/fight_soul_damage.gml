@@ -11,11 +11,6 @@ function fight_soul_damage(_damage, _destroy = false, instance) {
 	// Lmao
 	if (soul.invincibility > 0) return;
 	
-	//Dtime check
-	if (soul.invincibility <= 1) {
-		_damage *= round(dtime);
-	}
-	
 	// Player's method
 	_damage = fight_get_player(player_id).on_taking_soul_damage(soul, _damage);
 	

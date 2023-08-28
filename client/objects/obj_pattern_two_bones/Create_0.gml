@@ -1,7 +1,7 @@
-// Arguments: bone, bone_size, custom_repeats (optional)
+// Arguments: soul_type, bone, bone_size, side_is_changing, custom_repeats (optional)
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, soul_type);
 		
 	side = choose(dir.up, dir.left);
 	update();
@@ -11,6 +11,11 @@ callback = function () {
 
 update = function() {
 	var bone_speed = 1.5 + 0.2 * _power;
+	
+	if (side_is_changing) {
+		side = choose(dir.up, dir.left);
+	}
+	
 	if (side == dir.left) {
 		create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_size, 0, 180);
 		create_bone(border_instance.x + border_instance.right + 20, border_instance.y + border_instance.right + 20, bone, bone_speed, bone_size, 180, 0);

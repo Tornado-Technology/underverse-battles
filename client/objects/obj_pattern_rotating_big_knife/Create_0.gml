@@ -1,4 +1,4 @@
-// Arguments: knife_swing
+// Arguments: big_knife
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -12,8 +12,8 @@ callback = function () {
 }
 
 update = function() {
-	knife.spin(choose(-1, 1) * (3 + _power * 0.2));
-	knife.move(3 + _power * 0.2);
+	big_knife.spin(choose(-1, 1) * (3 + _power * 0.2));
+	big_knife.move(3 + _power * 0.2);
 	audio_play_sound_once(snd_projectile);
 }
 

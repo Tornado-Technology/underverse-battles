@@ -14,7 +14,6 @@ callback = function () {
 	knife_instance.point_stop_y = border_instance.y + border_instance.down - 20;
 		
 	time_source_start(time_source_update);
-	time_source_start(time_source_update_destroy);
 }
 
 update = function() {

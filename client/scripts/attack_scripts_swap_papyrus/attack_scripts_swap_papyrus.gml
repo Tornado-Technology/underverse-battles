@@ -1,18 +1,14 @@
 function swap_papyrus_attack0(pow, player) {
-	instance_create(attack_creator_swap_papyrus, {
+	instance_create(obj_attack_swap_papyrus_0, {
 		character_instance: player,
-		_power: pow,
-		_id: 0,
-		attack_num: irandom_range(0, 3)
+		_power: pow
 	});
 }
 
 function swap_papyrus_attack1(pow, player) {
-	instance_create(attack_creator_swap_papyrus, {
+	instance_create(obj_attack_swap_papyrus_1, {
 		character_instance: player,
-		_power: pow,
-		_id: 1,
-		attack_num: irandom_range(0, 2)
+		_power: pow
 	});
 }
 

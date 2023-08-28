@@ -1,0 +1,5 @@
+time_source_destroy(time_source_update_gasterblasters);
+time_source_destroy(time_source_update_platforms);
+time_source_destroy(time_source_update_destroy);
+
+final_function();

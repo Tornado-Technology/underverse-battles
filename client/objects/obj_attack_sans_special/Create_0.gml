@@ -20,8 +20,10 @@ pattern_instances = [
 		custom_repeats: 3
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_two_bones, 4, {
+		soul_type: battle_soul_type.red,
 		bone: obj_bone_sans,
 		bone_size: 4.2,
+		side_is_changing: false,
 		custom_repeats: 5
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_blue_attack, 4, {
