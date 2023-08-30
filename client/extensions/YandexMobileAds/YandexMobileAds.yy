@@ -15,7 +15,7 @@
   "author": "",
   "classname": "",
   "copyToTargets": 8,
-  "date": "2022-08-02T21:41:27.4341742+10:00",
+  "date": "2022-08-02T14:41:27.4341742+03:00",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "0.0.1",
