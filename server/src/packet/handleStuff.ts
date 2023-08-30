@@ -222,46 +222,46 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'restorePassword':
-      // {
-      //   const passwordValidation = validatePassword(data.password);
-      //   if (passwordValidation !== statusCode.success) {
-      //     client.sendRestorePassword(passwordValidation);
-      //     break;
-      //   }
+      {
+        const passwordValidation = validatePassword(data.password);
+        if (passwordValidation !== statusCode.success) {
+          client.sendRestorePassword(passwordValidation);
+          break;
+        }
 
-      //   const { identifier, password } = data;
-      //   const account = await Account.findOne({ username: identifier }) ?? await Account.findOne({ email: identifier });
-      //   if (!account) {
-      //     client.sendRestorePassword(statusCode.databaseAccountNotExists);
-      //     break;
-      //   }
+        const { identifier, password } = data;
+        const account = await Account.findOne({ username: identifier }) ?? await Account.findOne({ email: identifier });
+        if (!account) {
+          client.sendRestorePassword(statusCode.databaseAccountNotExists);
+          break;
+        }
 
-      //   await client.startVerification(async (status) => {
-      //     if (status !== statusCode.success) {
-      //       client.sendRestorePassword(status);
-      //       return;
-      //     }
+        await client.startVerification(async (status) => {
+          if (status !== statusCode.success) {
+            client.sendRestorePassword(status);
+            return;
+          }
 
-      //     account.password = await hashPassword(password);
-      //     await account.save();
+          account.password = await hashPassword(password);
+          await account.save();
 
-      //     client.sendRestorePassword(statusCode.success)
-      //   });
+          //client.sendRestorePassword(statusCode.success)
+        });
 
-      //   await mailSend(account.email, 'Account restore password', '', `
-      //     <div color=black>  
-      //       <p>
-      //         Hi <b>${account.username}</b>,<br>
-      //         We have been whispered that you have forgotten your password.<br>
-      //         But we need confirmation that the intruders are not trying to ruin your life.<br>
-      //         <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
-      //         If it is you, still have to confirm it by entering the code.<br>
-      //         Your personal code: <b>${client.verificationCode}</b><br>
-      //         Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
-      //       </p>
-      //     </div>
-      //   `);
-      // }
+        await mailSend(account.email, 'Account restore password', '', `
+          <div color=black>  
+            <p>
+              Hi <b>${account.username}</b>,<br>
+              We have been whispered that you have forgotten your password.<br>
+              But we need confirmation that the intruders are not trying to ruin your life.<br>
+              <strong>If it was not you</strong>, please contact the <a href="https://discord.gg/2Nuas5NKj8">technical support</a> of the game as soon as possible to ensure the safety of your account.<br>
+              If it is you, still have to confirm it by entering the code.<br>
+              Your personal code: <b>${client.verificationCode}</b><br>
+              Hurry up! In 5 minutes your code will go to the anti-void where no one will find it!<br>
+            </p>
+          </div>
+        `);
+      }
       break;
 
     case 'deleteAccount':
