@@ -38,6 +38,8 @@ export default class Client extends SendStuff {
   public verificationCodeTimeout: NodeJS.Timeout;
   public verificationCodeCallback: Function;
 
+  public resultingRating: number;
+
   protected _state: state;
 
   constructor(socket: Socket, type: socketType, uuid: string) {

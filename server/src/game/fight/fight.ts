@@ -32,12 +32,18 @@ export default class Fight {
   protected _state: state;
   protected initiative: number;
 
+  protected rating1: number;
+  protected rating2: number;
+
   protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
   public static create(client1: Client, client2: Client): void {
     const fight = new Fight(client1, client2, String(Date.now()));
     App.fights.push(fight);
+
+    client1.resultingRating = Matchmaker.calculateRating(client1, client2);
+    client2.resultingRating = Matchmaker.calculateRating(client2, client1);
   }
 
   public static destroy(fight: Fight): void {
@@ -144,7 +150,9 @@ export default class Fight {
   }
 
   public async finish(winner: Client): Promise<void> {
-    const rating = await Matchmaker.addRating(winner, this.getOtherClient(winner));
+    const rating = winner.resultingRating;
+    winner.addRating(rating * 2);
+
     this.clients.forEach((client) => {
       const isWinner = client === winner;
       client?.fight.unit();
