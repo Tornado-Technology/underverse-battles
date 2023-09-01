@@ -22,7 +22,7 @@ export default class Server {
 
   private connectionListener(socket: Socket): void {
     const client = Client.create(socket, socketType.tcp);
-    Logger.info(`Client ${client.nickname} connected`);
+    Logger.info(`Client ${client.uuid} connected`);
     this.verifyClient(client);
 
     socket.on('data', async (data) => {
@@ -30,14 +30,13 @@ export default class Server {
     });
 
     socket.on('close', async () => {
-      Logger.info(`Client ${client.nickname} disconnected`)
+      Logger.info(`Client ${client.uuid} disconnected`)
       await Client.remove(client);
     });
 
-    socket.on('error', async (error) => {
+    socket.on('error', (error) => {
       if (error.message.includes('ECONNRESET')) {
         Logger.info('Socket violently disconnected');
-        await Client.remove(client);
         return;
       }
 

@@ -80,7 +80,7 @@ export default class Fight {
     this.timeoutStart(async () => {
       const winnerClient = this.clients.find((c) => c !== undefined);
       winnerClient?.sendFightDisconnect(target.opponent);
-      this.finish(winnerClient);
+      await this.finish(winnerClient);
     });
 
     this.clientRemove(client);
@@ -145,7 +145,6 @@ export default class Fight {
 
   public async finish(winner: Client): Promise<void> {
     const rating = await Matchmaker.addRating(winner, this.getOtherClient(winner));
-
     this.clients.forEach((client) => {
       const isWinner = client === winner;
       client?.fight.unit();

@@ -61,7 +61,7 @@ export default class Client extends SendStuff {
 
   public verify() {
     this.verified = true;
-    Logger.info(`Client [${this.nickname}] verified.`);
+    Logger.info(`Client verified, UUID: ${this.uuid}.`);
   }
 
   public async startVerification(callback: Function): Promise<void> {
@@ -101,7 +101,7 @@ export default class Client extends SendStuff {
   }
 
   public async onDisconnect(status: number): Promise<void> {
-    Logger.info(`Client [${this.nickname}] disconnected. Status: ${status}`);
+    Logger.info(`Client disconnected: ${status}`);
     await this.fight.leave();
     await this.save();
   }
@@ -271,7 +271,7 @@ export default class Client extends SendStuff {
 
   public setState(state: state): void {
     this._state = state;
-    Logger.debug(`Client [${this.nickname}] set new state "${state}"`);
+    Logger.debug(`Client set new state "${state}"`);
   }
 
   public get state(): state {

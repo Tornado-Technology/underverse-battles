@@ -16,7 +16,7 @@ export const handlePacket = async (client: Client, data: any) => {
   switch (index) {
     case 'information':
       if (!config.client.verification.enabled) {
-        Logger.debug(`Client [${data.username}] allowed, verification disabled`);
+        Logger.debug('Client allowed, verification disabled');
         break;
       }
       
@@ -61,7 +61,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'eval':
       if (client?.account.type !== accountType.developer) {
-        Logger.warn(`Client [${client.account.username ?? client.uuid}] try to use eval command!`);
+        Logger.warn(`Client ${client.account.username ?? client.uuid} try to use eval command!`);
         break;
       }
 
@@ -77,9 +77,9 @@ export const handlePacket = async (client: Client, data: any) => {
         const account = await login(data.username, data.password);
         await client.tryLogin(account);
         await client.onLogin();
-        Logger.info(`Client login: [${client?.username}]`)
+        Logger.info(`Client login: ${client?.username}`)
       } catch (error) {
-        Logger.error(`Account [${data.username}] login failed: ${error}, ${error.stack ?? ''}`);
+        Logger.error(`Account ${data.username} login failed: ${error}, ${error.stack ?? ''}`);
         client.sendLogin(error);
       }
       break;
