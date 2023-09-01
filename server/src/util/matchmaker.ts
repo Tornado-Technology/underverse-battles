@@ -16,42 +16,6 @@ export default class Matchmaker {
     return App.clients.filter((client) => client.state === state);
   }
 
-  public static calculateRating(winner: Client, looser: Client): number {
-    if (!winner?.hasProfile || !looser?.hasProfile) {
-      let message = 'Calculate rating failed, reason: ';
-
-      if (!winner?.hasProfile && !looser?.hasProfile) {
-        message += `both clients ${winner?.username}(Winner) and ${looser?.username}(Loser), don't have profile!`
-      } else {
-        const client = !winner?.hasProfile ? winner : looser;
-        const role = !winner?.hasProfile ? 'Winner' : 'Loser';
-        message += `client ${client?.username}(${role}), don't have profile!`
-      }
-
-      Logger.warn(message);
-      return 0;
-    }
-
-    const winnerRating = winner.profile.rating;
-    const looserRating = looser.profile.rating;
-    let difference = 0;
-
-    if (winnerRating < looserRating) {
-      difference = this.ratingCalculation(winnerRating, looserRating);
-    }
-
-    if (winnerRating > looserRating) {
-      difference = 1;
-    }
-
-    if (winnerRating === looserRating) {
-      difference = 2;
-    }
-
-    difference = looser.rank.clamp(looserRating, difference);
-    return difference;
-  }
-
   public static async addRating(winner: Client, looser: Client): Promise<number> {
     if (!winner?.hasProfile || !looser?.hasProfile) {
       let message = 'Add rating failed, reason: ';
