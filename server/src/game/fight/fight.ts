@@ -32,6 +32,7 @@ export default class Fight {
   protected _state: state;
   protected initiative: number;
 
+  protected timer: NodeJS.Timeout;
   protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
@@ -62,6 +63,25 @@ export default class Fight {
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
+
+    this.startTimer();
+  }
+
+  public startTimer() {
+    this.timer = setTimeout(() => {
+      this.clients.forEach((client) => {
+        if (client.fight.action === actionType.empty) {
+          this.kickPlayer(client);
+        }
+      });
+    }, 11_000);
+  }
+
+  public stopTimer() {
+    if (this.timer) {
+      clearTimeout(this.timer);
+      this.timer = null;
+    }
   }
 
   public timeoutClear() {
@@ -73,7 +93,7 @@ export default class Fight {
   private timeoutStart(method: Function) {
     if (this.timeout) return;
     // @ts-ignore
-    this.timeout = setTimeout(method, 15_000);
+    this.timeout = setTimeout(method, 10_000);
   }
 
   public kickPlayer(client: Client) {
@@ -95,7 +115,7 @@ export default class Fight {
     if (!this.clients[0] || !this.clients[1]) {
       this.destroyTimeout = setTimeout(() => {
         this.destroy();
-      }, 15_000);
+      }, 10_000);
     }
   }
 
@@ -205,6 +225,7 @@ export default class Fight {
     }
 
     Logger.debug(`Fight client: ${client?.username}, set action: ${action}`);
+
     this.setClientAction(client, action);
     this.updateAction();
   }
@@ -258,6 +279,8 @@ export default class Fight {
     if (!this.clientsConnected) {
       return;
     }
+
+    this.stopTimer();
 
     this.setState(state.wait);
     this.updateState();
@@ -336,6 +359,7 @@ export default class Fight {
 
   public battleFinish() {
     if (this.state == state.battle) {
+      this.stopTimer();
       this.resetState();
     }
   }
