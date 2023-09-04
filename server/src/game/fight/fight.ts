@@ -68,9 +68,12 @@ export default class Fight {
   }
 
   public startTimer() {
+    Logger.info(`Timer started`);
     this.timer = setTimeout(() => {
+      Logger.info(`Timer released`);
       this.clients.forEach((client) => {
         if (client.fight.action === actionType.empty) {
+          Logger.info(`Player was kicked`);
           this.kickPlayer(client);
         }
       });
@@ -78,6 +81,7 @@ export default class Fight {
   }
 
   public stopTimer() {
+    Logger.info(`Timer stopped`);
     if (this.timer) {
       clearTimeout(this.timer);
       this.timer = null;
