@@ -107,6 +107,8 @@ export default class Client extends SendStuff {
   }
 
   public logout(): void {
+    Logger.debug(`Client logout!`);
+
     this.account = undefined;
     this.profile = undefined;
     this.statistic = undefined;

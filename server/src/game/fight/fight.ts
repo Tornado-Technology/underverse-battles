@@ -99,8 +99,9 @@ export default class Fight {
   public kickPlayer(client: Client) {
     this.timeoutStart(async () => {
       const winnerClient = this.clients.find((c) => c !== undefined);
-      
-      Logger.debug(`Player kicked. Players: [${this.clients[0]?.account.username}] & [${this.clients[0]?.account.username}]`)
+
+      Logger.debug(`Player kicked. Players: [${this.clients[0]?.account.username}] & [${this.clients[1]?.account.username}]`)
+      Logger.debug(`Profiles: [${this.clients[0]?.profile}] & [${this.clients[1]?.profile}]`)
       this.finish(winnerClient);
 
       winnerClient?.sendFightDisconnect(target.opponent);

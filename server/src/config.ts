@@ -25,7 +25,7 @@ const commonConfig = {
   },
   gameplay: {
     fight: {
-      disconnectTimeout: 15_000,
+      disconnectTimeout: 10_000,
     },
   },
   main: {
