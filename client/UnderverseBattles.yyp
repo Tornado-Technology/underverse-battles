@@ -414,13 +414,14 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_determination.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"font_mini.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_cross_sitting_crying_looks_at_ink_sans","path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},},
