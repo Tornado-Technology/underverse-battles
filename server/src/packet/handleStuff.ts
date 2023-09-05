@@ -338,6 +338,7 @@ export const handlePacket = async (client: Client, data: any) => {
         
         client.setState(state.inFight);
         opponent.setState(state.inFight);
+        
         Matchmaker.makeMatch(client, opponent);
       } catch (error) {
         client.setState(state.inMenu);

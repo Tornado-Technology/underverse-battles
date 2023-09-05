@@ -5,6 +5,23 @@ import Logger from './logging.js';
 
 export default class Matchmaker {
   public static makeMatch(client1: Client, client2: Client): void {
+    if (!client1.account || !client2.account) {
+      Logger.warn(`Some client is trying to start a fight without account!`);
+      return;
+    }
+    if (!client1.profile && !client2.profile) {
+      Logger.warn(`Clients ${client1?.username} and ${client2?.username} is trying to start a fight without profile!`);
+      return;
+    }
+    if (!client1.profile) {
+      Logger.warn(`Client ${client1?.username} is trying to start a fight without profile!`);
+      return;
+    }
+    if (!client2.profile) {
+      Logger.warn(`Client ${client2?.username} is trying to start a fight without profile!`);
+      return;
+    }
+
     this.createMatch(client1, client2);
   }
 
