@@ -27,14 +27,18 @@ export default class Matchmaker {
   }
 
   public static async removeRating(clients: Client[]): Promise<void> {
-    clients.forEach((client, index) => {
-      if (!client?.hasProfile) {
-        Logger.warn(`Remove rating failed, reason: client ${client?.username} don't have profile!`);
+    for (let index = 0; index < clients.length; index++) {
+      if (!clients[index]?.hasProfile) {
+        Logger.warn(`Remove rating failed, reason: client ${clients[index]?.username} don't have profile!`);
+        return;
+      }
+      if (!clients[index]) {
+        Logger.warn(`Remove rating failed, reason: client ${clients[index]?.username} not found!`);
         return;
       }
 
       const winnerRating = clients[1 - index].profile.rating;
-      const looserRating = client.profile.rating;
+      const looserRating = clients[index].profile.rating;
       let difference = 0;
 
       if (winnerRating < looserRating) {
@@ -49,10 +53,10 @@ export default class Matchmaker {
         difference = 2;
       }
 
-      difference = client.rank.clamp(looserRating, difference);
-      client?.setResultingRating(difference);
-      client?.removeRating(difference);
-    });
+      difference = clients[index].rank.clamp(looserRating, difference);
+      clients[index].setResultingRating(difference);
+      await clients[index].removeRating(difference);
+    }
   }
 
   protected static createMatch(client1: Client, client2: Client) {

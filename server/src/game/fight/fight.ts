@@ -59,8 +59,8 @@ export default class Fight {
     this.clients.forEach((client, index) => {
       client.fight.init(this, index);
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
-      Matchmaker.removeRating(this.clients);
     });
+    await Matchmaker.removeRating(this.clients);
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
