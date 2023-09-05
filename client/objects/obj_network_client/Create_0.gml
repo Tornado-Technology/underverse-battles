@@ -118,6 +118,9 @@ connected.connect(function() {
 disconnected.connect(function() {
 	logger.info("Disconnected from the server!");
 	
+	network_profile = undefined;
+	network_account = undefined;
+	
 	time_source_stop(ping_update);
 	time_source_stop(disconnect_update);
 	time_source_start(connecting_update);

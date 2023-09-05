@@ -17,12 +17,12 @@ export default class Matchmaker {
   }
 
   public static async addRating(client: Client): Promise<number> {
-    if (!client?.hasProfile) {
-      Logger.warn(`Remove rating failed, reason: client ${client?.username} don't have profile!`);
+    if (!client) {
+      Logger.warn(`Remove rating failed, reason: client ${client?.username} not found!`);
       return 0;
     }
     const rating = client?.resultingRating;
-    await client?.addRating(rating * 2);
+    await client?.addRating(client?.removedRating + rating);
     return rating;
   }
 

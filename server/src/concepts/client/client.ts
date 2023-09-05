@@ -38,6 +38,7 @@ export default class Client extends SendStuff {
   public verificationCodeTimeout: NodeJS.Timeout;
   public verificationCodeCallback: Function;
 
+  public removedRating: number;
   public resultingRating: number;
 
   protected _state: state;
@@ -177,8 +178,12 @@ export default class Client extends SendStuff {
   }
 
   public async removeRating(rating: number): Promise<void> {
+    this.removedRating = 0;
     if (this.hasProfile) {
-      this.profile.rating = Math.max(0, this.profile.rating - Math.abs(rating));
+      if (this.profile.rating <= rating) {
+        this.removedRating = Math.abs(rating);
+        this.profile.rating -= this.removedRating;
+      }
       this.update();
       await this.save();
     }
