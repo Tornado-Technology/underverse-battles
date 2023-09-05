@@ -110,6 +110,8 @@ connected.connect(function() {
 	logger.info("Connected to the server!");
 	send_information();
 	
+	on_network_connect.invoke();
+	
 	time_source_start(ping_update);
 	time_source_start(disconnect_update);
 	time_source_stop(connecting_update);
@@ -120,6 +122,7 @@ disconnected.connect(function() {
 	
 	network_profile = undefined;
 	network_account = undefined;
+	on_network_disconnect.invoke();
 	
 	time_source_stop(ping_update);
 	time_source_stop(disconnect_update);

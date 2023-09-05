@@ -19,3 +19,11 @@ ending_room = room_fight_1v1_end;
 
 on_into_fight.invoke(opponent_get_name(1));
 send_fight_loaded();
+
+on_network_disconnect.connect( function () {
+	var damage = fight_get_player_hp(0);
+	if (damage > 0) {
+		fight_set_player_hp(0, 0);
+		fight_draw_damage_number(0, damage);
+	}
+});
