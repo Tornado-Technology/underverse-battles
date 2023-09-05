@@ -55,10 +55,11 @@ export default class Fight {
     this.initializeClients();
   }
 
-  public initializeClients(): void {
+  public async initializeClients(): Promise<void> {
     this.clients.forEach((client, index) => {
       client.fight.init(this, index);
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
+      Matchmaker.removeRating(this.clients);
     });
 
     this.setState(state.choose);
@@ -99,11 +100,7 @@ export default class Fight {
   public kickPlayer(client: Client) {
     this.timeoutStart(async () => {
       const winnerClient = this.clients.find((c) => c !== undefined);
-
-      Logger.debug(`Player kicked. Players: [${this.clients[0]?.account.username}] & [${this.clients[1]?.account.username}]`)
-      Logger.debug(`Profiles: [${this.clients[0]?.profile}] & [${this.clients[1]?.profile}]`)
       this.finish(winnerClient);
-
       winnerClient?.sendFightDisconnect(target.opponent);
     });
 
@@ -168,7 +165,7 @@ export default class Fight {
   }
 
   public async finish(winner: Client): Promise<void> {
-    const rating = await Matchmaker.addRating(winner, this.getOtherClient(winner));
+    const rating = await Matchmaker.addRating(winner);
     this.clients.forEach((client) => {
       const isWinner = client === winner;
       client?.fight.unit();

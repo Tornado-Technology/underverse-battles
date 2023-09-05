@@ -16,42 +16,43 @@ export default class Matchmaker {
     return App.clients.filter((client) => client.state === state);
   }
 
-  public static async addRating(winner: Client, looser: Client): Promise<number> {
-    if (!winner?.hasProfile || !looser?.hasProfile) {
-      let message = 'Add rating failed, reason: ';
-
-      if (!winner?.hasProfile && !looser?.hasProfile) {
-        message += `both clients ${winner?.username}(Winner) and ${looser?.username}(Loser), don't have profile!`
-      } else {
-        const client = !winner?.hasProfile ? winner : looser;
-        const role = !winner?.hasProfile ? 'Winner' : 'Loser';
-        message += `client ${client?.username}(${role}), don't have profile!`
-      }
-
-      Logger.warn(message);
+  public static async addRating(client: Client): Promise<number> {
+    if (!client?.hasProfile) {
+      Logger.warn(`Remove rating failed, reason: client ${client?.username} don't have profile!`);
       return 0;
     }
+    const rating = client?.resultingRating;
+    await client?.addRating(rating * 2);
+    return rating;
+  }
 
-    const winnerRating = winner.profile.rating;
-    const looserRating = looser.profile.rating;
-    let difference = 0;
+  public static async removeRating(clients: Client[]): Promise<void> {
+    clients.forEach((client, index) => {
+      if (!client?.hasProfile) {
+        Logger.warn(`Remove rating failed, reason: client ${client?.username} don't have profile!`);
+        return;
+      }
 
-    if (winnerRating < looserRating) {
-      difference = this.ratingCalculation(winnerRating, looserRating);
-    }
+      const winnerRating = clients[1 - index].profile.rating;
+      const looserRating = client.profile.rating;
+      let difference = 0;
 
-    if (winnerRating > looserRating) {
-      difference = 1;
-    }
+      if (winnerRating < looserRating) {
+        difference = this.ratingCalculation(winnerRating, looserRating);
+      }
 
-    if (winnerRating === looserRating) {
-      difference = 2;
-    }
+      if (winnerRating > looserRating) {
+        difference = 1;
+      }
 
-    difference = looser.rank.clamp(looserRating, difference);
-    await winner?.addRating(difference);
-    await looser?.removeRating(difference);
-    return difference;
+      if (winnerRating === looserRating) {
+        difference = 2;
+      }
+
+      difference = client.rank.clamp(looserRating, difference);
+      client?.setResultingRating(difference);
+      client?.removeRating(difference);
+    });
   }
 
   protected static createMatch(client1: Client, client2: Client) {
