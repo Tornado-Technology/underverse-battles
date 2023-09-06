@@ -38,6 +38,7 @@ export default class Matchmaker {
       Logger.warn(`Add rating failed, reason: client ${client?.username} not found!`);
       return 0;
     }
+    
     const rating = client?.resultingRating;
     await client?.addRating(client?.removedRating + rating);
     return rating;
@@ -45,12 +46,12 @@ export default class Matchmaker {
 
   public static async removeRating(clients: Client[]): Promise<void> {
     for (let index = 0; index < clients.length; index++) {
-      if (!clients[index]?.hasProfile) {
-        Logger.warn(`Remove rating failed, reason: client ${clients[index]?.username} don't have profile!`);
-        return;
-      }
       if (!clients[index]) {
         Logger.warn(`Remove rating failed, reason: client ${clients[index]?.username} not found!`);
+        return;
+      }
+      if (!clients[index]?.hasProfile) {
+        Logger.warn(`Remove rating failed, reason: client ${clients[index]?.username} don't have profile!`);
         return;
       }
 
@@ -71,7 +72,7 @@ export default class Matchmaker {
       }
 
       difference = clients[index].rank.clamp(looserRating, difference);
-      clients[index].setResultingRating(difference);
+      clients[1 - index].setResultingRating(difference);
       await clients[index].removeRating(difference);
     }
   }
