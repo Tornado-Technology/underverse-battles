@@ -1,6 +1,4 @@
 function autolog_load() {
-	if (!network_connected) return;
-	
 	if (!data_get("Settings.Data.Autolog")) return;
 	
 	if (!file_exists(network_autolog_file)) {

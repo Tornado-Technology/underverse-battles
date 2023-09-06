@@ -112,6 +112,8 @@ connected.connect(function() {
 	
 	on_network_connect.invoke();
 	
+	autolog_load();
+	
 	time_source_start(ping_update);
 	time_source_start(disconnect_update);
 	time_source_stop(connecting_update);

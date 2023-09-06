@@ -35,7 +35,7 @@ export default class Matchmaker {
 
   public static async addRating(client: Client): Promise<number> {
     if (!client) {
-      Logger.warn(`Remove rating failed, reason: client ${client?.username} not found!`);
+      Logger.warn(`Add rating failed, reason: client ${client?.username} not found!`);
       return 0;
     }
     const rating = client?.resultingRating;

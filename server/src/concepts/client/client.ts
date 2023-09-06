@@ -180,9 +180,11 @@ export default class Client extends SendStuff {
   public async removeRating(rating: number): Promise<void> {
     this.removedRating = 0;
     if (this.hasProfile) {
-      if (this.profile.rating <= rating) {
-        this.removedRating = Math.abs(rating);
-        this.profile.rating -= this.removedRating;
+      this.profile.rating -= rating;
+      this.removedRating = rating;
+      if (this.profile.rating <= 0) {
+        this.removedRating = this.profile.rating + rating;
+        this.profile.rating = 0;
       }
       this.update();
       await this.save();
