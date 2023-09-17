@@ -10,12 +10,27 @@ change_element = function(_element) {
 }
 
 var controller = global.__ui_controls_instance;
-controller.controllers_index = control_input_mode.ui_joystick;
-joystick = controller.get_controller();
+	controller.controllers_index = control_input_mode.ui_arrows;
 
-joystick_sprite_hadler = joystick.handle_image;
-joystick_sprite_border = joystick.border_image;
+if (controller.controllers_index == control_input_mode.ui_joystick) {	
+	joystick = controller.get_controller();
 
+	joystick_sprite_hadler = joystick.handle_image;
+	joystick_sprite_border = joystick.border_image;
+	
+		controls = [
+		SettingsMobileJoystick(id, joystick_sprite_border, joystick_sprite_hadler),
+	];
+};
+
+if (controller.controllers_index == control_input_mode.ui_arrows) {
+	arrows = controller.get_controller();	
+
+	controls_arrow = arrows.controls_arrow;
+
+	controls = [ SettingsMobileArrow(id,  controls_arrow) ];	
+};
+	
 element = undefined;
 
 text_name_x = width / 2;
@@ -32,9 +47,7 @@ text_size = translate_get("Menu.Settings.MobileControls.Size");
 text_size_position_x = slider_position_x - 10;
 text_size_position_y = slider_position_y - 7;
 
-controls = [
-	SettingsMobileJoystick(id, joystick_sprite_border, joystick_sprite_hadler),
-];
+
 
 // Virtual Buttons
 var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();

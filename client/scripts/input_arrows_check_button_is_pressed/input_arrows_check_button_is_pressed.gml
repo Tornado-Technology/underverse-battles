@@ -4,5 +4,7 @@ function input_arrows_check_button_is_pressed(key){
 	
 	if (controls.controllers_index != control_input_mode.ui_arrows) return false;
 	
-	return controls.get_controller().input_pressed == key;
+
+	
+	return  controls.get_controller().input_pressed == key 
 }

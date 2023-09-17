@@ -390,6 +390,9 @@
           "Joystick": {
             "Name": "Joystick"
           },
+		   "Arrow" : {
+			 "Name": "Arrow"
+		  },
           "Buttons": {
             "X": {
               "Name": "Button X"

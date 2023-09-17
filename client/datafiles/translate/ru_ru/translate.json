@@ -390,6 +390,9 @@
           "Joystick": {
             "Name": "Джостик"
           },
+		  "Arrow" : {
+			 "Name": "Стрелка"
+		  },
           "Buttons": {
             "X": {
               "Name": "Кнопка X"

@@ -27,12 +27,41 @@ if (is_desktop && !mobile_mode) {
 }
 
 if (is_mobile || mobile_mode) {
-	if (instance_exists(obj_ui_controls)) {
+		var controllers_index = global.__ui_controls_instance.controllers_index
+		
+	if (instance_exists(obj_ui_controls) && controllers_index == 1 ) {
 		var joystick = get_joystick();
 		movement_speed_x = SPD * joystick.input_vector.x;
 		movement_speed_y = SPD * joystick.input_vector.y;
 	}
-}
+	
+	if (instance_exists(obj_ui_controls) && controllers_index == 0 ) {
+	 var arrow	=  get_arrow();
+	 var _arrow = input_arrows_check_button_is_held;
+		
+	if	( _arrow(vk_up) ) {
+		arrow.input_vector.y = -1;
+	};
+	
+	if	( _arrow(vk_down) ) {
+		arrow.input_vector.y = 1;
+	};
+	
+	if ( _arrow(vk_left) ) {
+		arrow.input_vector.x = -1;
+	};
+	
+	if  ( _arrow(vk_right) ) {
+		arrow.input_vector.x = 1;	
+	};
+	
+		movement_speed_x = SPD * arrow.input_vector.x;
+		movement_speed_y = SPD * arrow.input_vector.y;
+		
+		 arrow.input_vector.set(0,0);
+	};
+};
+
 
 /* pushing */
 var pusher_inst = noone;
