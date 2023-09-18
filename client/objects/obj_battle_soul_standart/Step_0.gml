@@ -40,23 +40,23 @@ if (is_mobile || mobile_mode) {
 	 var _arrow = input_arrows_check_button_is_held;
 		
 	if	( _arrow(vk_up) ) {
-		arrow.input_vector.y = -1;
+		arrow.input_vector.y = -SPD;
 	};
 	
 	if	( _arrow(vk_down) ) {
-		arrow.input_vector.y = 1;
+		arrow.input_vector.y = SPD;
 	};
 	
 	if ( _arrow(vk_left) ) {
-		arrow.input_vector.x = -1;
+		arrow.input_vector.x = -SPD;
 	};
 	
 	if  ( _arrow(vk_right) ) {
-		arrow.input_vector.x = 1;	
+		arrow.input_vector.x = SPD;	
 	};
 	
-		movement_speed_x = SPD * arrow.input_vector.x;
-		movement_speed_y = SPD * arrow.input_vector.y;
+		movement_speed_x =  arrow.input_vector.x;
+		movement_speed_y =  arrow.input_vector.y;
 		
 		 arrow.input_vector.set(0,0);
 	};

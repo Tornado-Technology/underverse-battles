@@ -10,8 +10,6 @@ function ClassUIControllerArrows() constructor {
 	input_held = undefined;
 	input_pressed = undefined;
 	input_released = undefined;
-
-	_input_pressed = undefined
 	
 	controls_arrow = {
 		up: UIImageButton(spr_ui_controls_arrow_up),
@@ -37,56 +35,59 @@ function ClassUIControllerArrows() constructor {
 		};
 		
 		controls_arrow.right.on_hover = function () {
-			input_pressed = undefined
+				input_pressed = undefined;
 		}
 		
 		controls_arrow.up.on_press = function() {
-			input_pressed = vk_up;			
+				input_pressed = vk_up;			
 		};
 				
 		controls_arrow.down.on_press = function() {
-			 input_pressed = vk_down;
+				input_pressed = vk_down;
+		};
+
+		controls_arrow.left.on_press = function() {
+				input_pressed = vk_left;	
 		};
 
 		controls_arrow.right.on_press = function() {
-			  input_pressed = vk_right;	
+				input_pressed = vk_right;	
 		};
 
-	
-		controls_arrow.up.on_held = function () {
+		controls_arrow.up.on_held	= function () {
 				input_held = vk_up;
 		}
 	
 		controls_arrow.down.on_held = function() {
-			input_held = vk_down;	
+				input_held = vk_down;	
 		};
 
 		controls_arrow.right.on_held = function() {
-			input_held = vk_right;
+				input_held = vk_right;
 		};
 
 		controls_arrow.left.on_held = function() {
-			input_held = vk_left;			
+				input_held = vk_left;			
 		};
 
 		controls_arrow.up.on_release = function() {
-			input_held = undefined;
-			input_pressed = undefined;	
+				input_held = undefined;
+				input_pressed = undefined;
 		};
 
 		controls_arrow.down.on_release = function() {
-			input_held = undefined;	
-			input_pressed = undefined;	
+				input_held = undefined;	
+				input_pressed = undefined;
 		};
 
 		controls_arrow.right.on_release = function() {	
-			input_held = undefined;	
-			input_pressed = undefined;	
+				input_held = undefined;	
+				input_pressed = undefined;
 		};
 
 		controls_arrow.left.on_release = function() {
-			input_held = undefined;
-			input_pressed = undefined;	
+				input_held = undefined;	
+				input_pressed = undefined;
 		};
 		
 	};	

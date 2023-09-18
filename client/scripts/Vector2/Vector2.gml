@@ -319,9 +319,7 @@ function Vector2(x, y) constructor {
 		multi(vector);
 		delete vector;
 		return self;
-	}
-	
-	#endregion
+	}	
 }
 
 /// @param {Vector2} Vector2
