@@ -19,7 +19,8 @@ controllers = [
 	UIControllerJoystick()
 ];
 
-controllers_index = 0;
+controllers_index =  data_get("Settings.MobileControls.ChosetControls.Index");
+
 enable = false;
 
 controller_x = data_get("Settings.MobileControls.Controller.Position.X");
@@ -35,6 +36,9 @@ controller_left_x	= data_get(	key	+	"Left.X");
 controller_left_y	= data_get(	key +	"Left.Y");
 controller_right_x	= data_get(	key +	"Right.X");
 controller_right_y	= data_get(	key +	"Right.Y");
+
+
+controls_switching = UIControlSwitching();
 
 
 change_alpha = function(value) {

@@ -12,6 +12,9 @@
       }
     },
     "MobileControls": {
+      "ChosetControls": {
+        "Index":0   
+        },
       "Controller": {
         "Position": {
           "X": 61,
@@ -37,8 +40,7 @@
 				}
 			}
 		},
-		
-        "Scale": 1.3	
+        "Scale": 1.3
       },
       "Buttons": {
         "X": {

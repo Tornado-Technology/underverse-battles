@@ -155,7 +155,7 @@ function ClassUIControllerJoystick() constructor {
 		is_active = raduis > death_radius;
 		
 		if (raduis <= death_radius) {
-			input_vector = new Vector2();
+			input_vector = new Vector2(0, 0);
 		}
 		
 		if (is_show_death_radius) {
