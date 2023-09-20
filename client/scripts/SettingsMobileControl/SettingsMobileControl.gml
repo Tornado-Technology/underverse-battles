@@ -36,22 +36,15 @@ function ClassSettingsMobileControl(menu_instance, sprite_control) :  ClassSetti
 	UI.left.draw(left_position_x, position_y, , 87);
 	if (input_switching_check_button_is_pressed (vk_right)) 
 	{
-		if (_controller.controllers_index == control_input_mode.ui_joystick) {
-			_controller.controllers_index = !_controller.controllers_index
-			menu_instance.elements_reset();
-		}
-		_controller.controllers_index = control_input_mode.ui_joystick	
+		
+		_controller.controllers_index =  _controller.controllers_index == control_input_mode.ui_joystick ?   control_input_mode.ui_arrows :	control_input_mode.ui_joystick
 		menu_instance.elements_reset();
 	};	
 
 	if (input_switching_check_button_is_pressed(vk_left)) 
 	{
 		
-	if	(_controller.controllers_index ==  control_input_mode.ui_arrows) {
-		_controller.controllers_index = !_controller.controllers_index
-		menu_instance.elements_reset();
-	}
-	_controller.controllers_index = control_input_mode.ui_arrows
+	_controller.controllers_index = _controller.controllers_index  ==  control_input_mode.ui_arrows ? control_input_mode.ui_joystick : control_input_mode.ui_arrows
 		menu_instance.elements_reset();
 };	
 	
