@@ -10,7 +10,7 @@ function ClassUIControllerArrows() constructor {
 	input_held = undefined;
 	input_pressed = undefined;
 	input_released = undefined;
-	
+
 	controls_arrow = {
 		up: UIImageButton(spr_ui_controls_arrow_up),
 		right: UIImageButton(spr_ui_controls_arrow_right),
@@ -21,7 +21,7 @@ function ClassUIControllerArrows() constructor {
 	input_vector = new Vector2(0, 0);
 	
 	static declare_predicate = function() {
-			
+		
 		controls_arrow.up.on_hover = function() { 
 				input_pressed = undefined;
 		};
@@ -92,20 +92,31 @@ function ClassUIControllerArrows() constructor {
 	};	
 		
 	static reset_index = function () {
-		delete controls_arrow;
-			controls_arrow = {
+		delete controls_arrow
+		
+		controls_arrow = {
 		up: UIImageButton(spr_ui_controls_arrow_up),
 		right: UIImageButton(spr_ui_controls_arrow_right),
 		down: UIImageButton(spr_ui_controls_arrow_down),
 		left: UIImageButton(spr_ui_controls_arrow_left)
 	};
-	declare_predicate();
-	}
+	 scale = data_get("Settings.MobileControls.Controller.Scale")
+		var strunct  = ["up", "down", "left", "right"  ]
+		for (var i = 0; i < array_length(strunct); i++ ) {			
+			controls_arrow[$ strunct[i]].scale_x = scale;
+			controls_arrow[$ strunct[i]].scale_y = scale;
+		}
 	
-	static draw = function(up_position_x, up_position_y, down_position_x, down_position_y, left_position_x, left_position_y, right_position_x, right_position_y) {
-		controls_arrow.up.draw(up_position_x, up_position_y);
-		controls_arrow.right.draw(right_position_x , right_position_y);
-		controls_arrow.down.draw(down_position_x, down_position_y);
-		controls_arrow.left.draw(left_position_x , left_position_y);
+	
+		UIControllerArrows();
 	}
+
+	static draw = function(position_x, position_y) {	
+		controls_arrow.up.draw(position_x[0], position_y[0]);
+		controls_arrow.down.draw(position_x[1], position_y[1]);
+		controls_arrow.left.draw(position_x[2], position_y[2]);
+		controls_arrow.right.draw(position_x[3], position_y[3]);
+
+	}
+
 }

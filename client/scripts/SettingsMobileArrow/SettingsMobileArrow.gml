@@ -21,41 +21,42 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 	
 	
 	static init = function() {
-		display_name = translate_get(key_name);
-		controller_up_x = data_get(		key_position	+	"Up.X");
-		controller_up_y = data_get(		key_position	+	"Up.Y");
-		controller_down_x = data_get(	key_position	+	"Down.X");
-		controller_down_y = data_get(	key_position	+	"Down.Y");
-		controller_left_x = data_get(	key_position	+	"Left.X");
-		controller_left_y = data_get(	key_position +	"Left.Y");
-		controller_right_x = data_get(	key_position +	"Right.X");
-		controller_right_y = data_get(	key_position +	"Right.Y");
+	controls_arrow_x = [
+		data_get (key_position + "Up" + ".X"),
+		data_get (key_position + "Down" + ".X"),
+		data_get (key_position + "Left" + ".X"),
+		data_get (key_position + "Right" + ".X")
+		];
+	
+	controls_arrow_y = [
+		data_get (key_position + "Up" + ".Y"),
+		data_get (key_position + "Down" + ".Y"),
+		data_get (key_position + "Left" + ".Y"),
+		data_get (key_position + "Right" + ".Y")
+		];
+		
 		scale = data_get(key_scale);
 	}
 	
 	static draw = function() { 
-		
-		UI.up.scale_x = scale;
-		UI.up.scale_y = scale;
-		
-		UI.down.scale_x = scale;
-		UI.down.scale_y = scale;
-		
-		UI.left.scale_x = scale;
-		UI.left.scale_y = scale;
-		
-		UI.right.scale_x = scale;
-		UI.right.scale_y = scale;
-		
-		UI.up.draw(controller_up_x, controller_up_y);
-		UI.down.draw(controller_down_x, controller_down_y);
-		UI.left.draw(controller_left_x, controller_left_y);
-		UI.right.draw(controller_right_x, controller_right_y);
-							
+			
+		var strunct  = ["up", "down", "left", "right"  ]
+		for (var i = 0; i < array_length(strunct); i++ ) {
+				
+			UI[$ strunct[i]].scale_x = scale;
+			UI[$ strunct[i]].scale_y = scale;
+			
+		}
+			UI.up.draw(controls_arrow_x[0], controls_arrow_y[0]);
+			UI.down.draw(controls_arrow_x[1], controls_arrow_y[1]);
+			UI.left.draw(controls_arrow_x[2], controls_arrow_y[2]);
+			UI.right.draw(controls_arrow_x[3], controls_arrow_y[3]);
+			
+				
 		if (UI.up.pressed && (current_element.value == undefined || current_element.value == self)) {
 			if (menu_instance.element != self) { menu_instance.change_element(self); }
-			controller_up_x  = mouse_gui_x;
-			controller_up_y  = mouse_gui_y;
+			controls_arrow_x[@ 0]  = mouse_gui_x;
+			controls_arrow_y[@ 0]  = mouse_gui_y;
 			current_element.value = self;
 			menu_instance.slider.is_enable = false;
 		}
@@ -67,8 +68,8 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 		
 		if (UI.down.pressed && (current_element.value == undefined || current_element.value == self)) {
 			if (menu_instance.element != self) { menu_instance.change_element(self); }
-			controller_down_x  = mouse_gui_x;
-			controller_down_y  = mouse_gui_y;
+			controls_arrow_x[@ 1]  = mouse_gui_x;
+			controls_arrow_y[@ 1]  = mouse_gui_y;
 			current_element.value = self;
 			menu_instance.slider.is_enable = false;
 		}
@@ -80,8 +81,8 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 		
 		if (UI.left.pressed && (current_element.value == undefined || current_element.value == self)) {
 			if (menu_instance.element != self) { menu_instance.change_element(self); }
-			controller_left_x  = mouse_gui_x;
-			controller_left_y  = mouse_gui_y;
+			controls_arrow_x[@ 2]  = mouse_gui_x;
+			controls_arrow_y[@ 2]  = mouse_gui_y;
 			current_element.value = self;
 			menu_instance.slider.is_enable = false;
 		};
@@ -93,8 +94,8 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 		
 		if (UI.right.pressed && (current_element.value == undefined || current_element.value == self)) {
 			if (menu_instance.element != self) { menu_instance.change_element(self); }
-			controller_right_x  = mouse_gui_x;
-			controller_right_y  = mouse_gui_y;
+			controls_arrow_x[@ 3]  = mouse_gui_x;
+			controls_arrow_y[@ 3]  = mouse_gui_y;
 			current_element.value = self;
 			menu_instance.slider.is_enable = false;
 		};
@@ -110,25 +111,16 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 	static save_data = function () {
 		var data = data_set
 		var controller = global.__ui_controls_instance;
+		for (var i = 0; i < array_length(controls_arrow_x); i++) {
+		data(controls_arrow_x[@ i], controls_arrow_x[i])
+		data(controls_arrow_y[@ i], controls_arrow_y[i])
 		
-		data(key_position + "Up.X", controller_up_x);
-		data(key_position + "Up.Y",	controller_up_y);
-		data(key_position + "Down.X", controller_down_x);
-		data(key_position + "Down.Y",	controller_down_y);
-		data(key_position + "Left.X", controller_left_x);
-		data(key_position + "Left.Y",	controller_left_y);
-		data(key_position + "Right.X", controller_right_x);
-		data(key_position + "Right.Y",	controller_right_y);
+		controller.controls_arrow_x[@ i] = controls_arrow_x[i]
+		controller.controls_arrow_y[@ i] = controls_arrow_y[i]
+		}
 		data(key_scale, scale);
 		
-		controller.controller_up_x = data_get(		key_position	+	"Up.X");
-		controller.controller_up_y = data_get(		key_position	+	"Up.Y");
-		controller.controller_down_x = data_get(	key_position	+	"Down.X");
-		controller.controller_down_y = data_get(	key_position	+	"Down.Y");
-		controller.controller_left_x = data_get(	key_position	+	"Left.X");
-		controller.controller_left_y = data_get(	key_position	+	"Left.Y");
-		controller.controller_right_x = data_get(	key_position	+	"Right.X");
-		controller.controller_right_y = data_get(	key_position	+	"Right.Y");
+
 		controller.get_controller().scale_x = data_get(key_scale, scale);
 		controller.get_controller().scale_y = data_get(key_scale, scale);
 	};
