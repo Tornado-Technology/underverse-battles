@@ -111,13 +111,18 @@ function ClassSettingsMobileArrow (menu_instance, sprite_arrow) :  ClassSettings
 	static save_data = function () {
 		var data = data_set
 		var controller = global.__ui_controls_instance;
-		for (var i = 0; i < array_length(controls_arrow_x); i++) {
-		data(controls_arrow_x[@ i], controls_arrow_x[i])
-		data(controls_arrow_y[@ i], controls_arrow_y[i])
-		
-		controller.controls_arrow_x[@ i] = controls_arrow_x[i]
-		controller.controls_arrow_y[@ i] = controls_arrow_y[i]
+		var elements = ["Up", "Down", "left", "Right"]
+		var i = 0;
+		repeat ( array_length(controls_arrow_x) ) {
+					
+		data(key_position + elements[i] + ".X", controls_arrow_x[i]);
+		data(key_position + elements[i] + ".Y", controls_arrow_y[i]);
+	
+		controller.controls_arrow_x[i] = controls_arrow_x[i];
+		controller.controls_arrow_y[i] = controls_arrow_y[i];
+		i++;
 		}
+		
 		data(key_scale, scale);
 		
 
