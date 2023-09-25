@@ -28,6 +28,7 @@ pattern_instances = [
 		custom_repeats: 3
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_gasterblasters_strong_barrage, 4, {
-		gasterblaster: obj_gasterblaster_fell_sans
+		gasterblaster: obj_gasterblaster_fell_sans,
+		reversed: false
 	}),
 ];

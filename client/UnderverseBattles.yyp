@@ -421,7 +421,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"spr_cross_sitting_crying_looks_at_ink_sans","path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},},
@@ -536,6 +536,7 @@
     {"id":{"name":"spr_red_blast","path":"sprites/spr_red_blast/spr_red_blast.yy",},},
     {"id":{"name":"spr_core_frisk_full","path":"sprites/spr_core_frisk_full/spr_core_frisk_full.yy",},},
     {"id":{"name":"fight_set_player_hp","path":"scripts/fight_set_player_hp/fight_set_player_hp.yy",},},
+    {"id":{"name":"obj_pattern_orange_attack","path":"objects/obj_pattern_orange_attack/obj_pattern_orange_attack.yy",},},
     {"id":{"name":"GMLive_compiler","path":"scripts/GMLive_compiler/GMLive_compiler.yy",},},
     {"id":{"name":"UIShift","path":"scripts/UIShift/UIShift.yy",},},
     {"id":{"name":"spr_fell_sans_attack2_left_up","path":"sprites/spr_fell_sans_attack2_left_up/spr_fell_sans_attack2_left_up.yy",},},
@@ -751,6 +752,7 @@
     {"id":{"name":"spr_special_attack_error_sans","path":"sprites/spr_special_attack_error_sans/spr_special_attack_error_sans.yy",},},
     {"id":{"name":"Character","path":"scripts/Character/Character.yy",},},
     {"id":{"name":"spr_xchara_attack2_start","path":"sprites/spr_xchara_attack2_start/spr_xchara_attack2_start.yy",},},
+    {"id":{"name":"obj_attack_swap_papyrus_2","path":"objects/obj_attack_swap_papyrus_2/obj_attack_swap_papyrus_2.yy",},},
     {"id":{"name":"spr_ink_sans_right_empty_eyes_walking","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},},
     {"id":{"name":"obj_attack_tesmi_0","path":"objects/obj_attack_tesmi_0/obj_attack_tesmi_0.yy",},},
     {"id":{"name":"CharacterList","path":"scripts/CharacterList/CharacterList.yy",},},
@@ -881,6 +883,7 @@
     {"id":{"name":"fight_regen_player_stamina","path":"scripts/fight_regen_player_stamina/fight_regen_player_stamina.yy",},},
     {"id":{"name":"spr_bone_sharp_swap_sans","path":"sprites/spr_bone_sharp_swap_sans/spr_bone_sharp_swap_sans.yy",},},
     {"id":{"name":"instance_create_struct","path":"scripts/instance_create_struct/instance_create_struct.yy",},},
+    {"id":{"name":"obj_attack_swap_papyrus_special","path":"objects/obj_attack_swap_papyrus_special/obj_attack_swap_papyrus_special.yy",},},
     {"id":{"name":"draw_reset","path":"scripts/draw_reset/draw_reset.yy",},},
     {"id":{"name":"spr_char_ink_sans_attack1_finish","path":"sprites/spr_char_ink_sans_attack1_finish/spr_char_ink_sans_attack1_finish.yy",},},
     {"id":{"name":"draw_set_blend","path":"scripts/draw_set_blend/draw_set_blend.yy",},},
@@ -1916,6 +1919,7 @@
     {"roomId":{"name":"room_ui_test","path":"rooms/room_ui_test/room_ui_test.yy",},},
     {"roomId":{"name":"room_underverse_episode2","path":"rooms/room_underverse_episode2/room_underverse_episode2.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
