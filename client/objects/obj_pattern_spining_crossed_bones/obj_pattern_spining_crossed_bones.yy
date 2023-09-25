@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_platform_moves_through_bones",
+  "name": "obj_pattern_spining_crossed_bones",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue soul",
-    "path": "folders/Attack Patterns/Bones/Blue soul.yy",
+    "name": "Rotating Bones",
+    "path": "folders/Attack Patterns/Rotating Bones.yy",
   },
   "parentObjectId": {
     "name": "obj_pattern",

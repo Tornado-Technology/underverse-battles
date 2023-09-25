@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bones",
-    "path": "folders/Attack Patterns/Bones.yy",
+    "name": "Blue soul",
+    "path": "folders/Attack Patterns/Bones/Blue soul.yy",
   },
   "parentObjectId": {
     "name": "obj_pattern",

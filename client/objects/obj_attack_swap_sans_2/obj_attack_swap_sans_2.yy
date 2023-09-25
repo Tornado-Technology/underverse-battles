@@ -1,20 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_platform_moves_through_bones",
+  "name": "obj_attack_swap_sans_2",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue soul",
-    "path": "folders/Attack Patterns/Bones/Blue soul.yy",
+    "name": "Attacks",
+    "path": "folders/Characteres/Swap Sans/Attacks.yy",
   },
   "parentObjectId": {
-    "name": "obj_pattern",
-    "path": "objects/obj_pattern/obj_pattern.yy",
+    "name": "obj_attack",
+    "path": "objects/obj_attack/obj_attack.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
