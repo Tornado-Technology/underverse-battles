@@ -27,7 +27,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8eac7b31-c5e0-4ada-92cf-dff172ea1eaf","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 3,
+  "origin": 4,
   "parent": {
     "name": "Arrows",
     "path": "folders/Sprites/UI/Controls/Arrows.yy",
@@ -64,7 +64,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
+    "xorigin": 17,
     "yorigin": 9,
   },
   "swatchColours": null,

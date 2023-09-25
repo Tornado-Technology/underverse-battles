@@ -50,7 +50,7 @@
     ],
     "top": 0,
   },
-  "origin": 1,
+  "origin": 4,
   "parent": {
     "name": "Arrows",
     "path": "folders/Sprites/UI/Controls/Arrows.yy",
@@ -88,7 +88,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 9,
-    "yorigin": 0,
+    "yorigin": 17,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
