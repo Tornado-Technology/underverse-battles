@@ -9,6 +9,7 @@ import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
 import config from '../config.js';
 import { infoValidate, validatePassword, validateUsername, validateNikcname } from '../database/validation.js';
+import serverContentJson from '../content/serverContent.json';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -307,6 +308,11 @@ export const handlePacket = async (client: Client, data: any) => {
     // Fight stuff
     case 'fightJoin':
       try {
+        if (!serverContentJson.MatchmakerWorking) {
+          Logger.info('Fight join locked');
+          break;
+        }
+
         const clients = Matchmaker.findClientsWithState(state.waitFight);
         if (client.account === null || !client.verified) {
           client.sendFightJoin(statusCode.error, undefined);
