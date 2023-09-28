@@ -1,7 +1,7 @@
 // Arguments: bone, thread
 
 callback = function () {
-	_soul = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	var thread_instance = instance_create_depth(-1, border_instance.y - border_instance.up + 2, fight_depth.bullet_outside_hight, thread);
 	thread_instance.x_dir = room_width + 1;

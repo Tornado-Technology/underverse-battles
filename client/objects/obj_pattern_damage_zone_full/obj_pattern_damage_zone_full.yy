@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_orange_attack",
+  "name": "obj_pattern_damage_zone_full",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue Attack",
-    "path": "folders/Attack Patterns/Blue Attack.yy",
+    "name": "Damage Zone",
+    "path": "folders/Attack Patterns/Damage Zone.yy",
   },
   "parentObjectId": {
     "name": "obj_pattern",

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_orange_attack",
+  "name": "obj_pattern_knife_circle",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue Attack",
-    "path": "folders/Attack Patterns/Blue Attack.yy",
+    "name": "Knives",
+    "path": "folders/Attack Patterns/Knives.yy",
   },
   "parentObjectId": {
     "name": "obj_pattern",

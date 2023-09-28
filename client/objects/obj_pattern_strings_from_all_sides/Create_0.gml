@@ -1,7 +1,7 @@
 // Arguments: bone, thread
 
 callback = function () {
-	_soul = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
 	update(_power);
 	time_source_start(time_source_update);
@@ -13,8 +13,8 @@ update = function() {
 	coord = rand_side_from(-1, -1, room_width + 1, room_height + 1);
 	
 	var blue_string = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, thread);
-	blue_string.x_dir = _soul.x;
-	blue_string.y_dir = _soul.y;
+	blue_string.x_dir = soul_instance.x;
+	blue_string.y_dir = soul_instance.y;
 	blue_string.scale_speed = 3.4 + _power * 0.1;
 	
 	audio_play_sound_plugging(snd_string);
@@ -24,7 +24,7 @@ update_bone = function() {
 	var coord = [];
 	coord = rand_side_from(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 15, border_instance.x + border_instance.right + 15, border_instance.y + border_instance.down + 15);
 	var bone_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, bone);
-	bone_instance.direction = point_direction(bone_instance.x, bone_instance.y, _soul.x, _soul.y);
+	bone_instance.direction = point_direction(bone_instance.x, bone_instance.y, soul_instance.x, soul_instance.y);
 	bone_instance.image_angle = bone_instance.direction - 90;
 	bone_instance.speed_const = 4;
 	audio_play_sound_plugging(snd_projectile);
@@ -36,7 +36,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 }, [], -1);
 	
 time_source_update_stop = time_source_create(time_source_game, 5, time_source_units_seconds, function () {
-	if (!_soul.is_stunned) {
+	if (!soul_instance.is_stunned) {
 		instance_destroy();
 	}
 	else {

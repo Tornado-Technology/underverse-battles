@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Blue attack",
-    "path": "folders/Attack Patterns/Blue attack.yy",
+    "name": "Blue Attack",
+    "path": "folders/Attack Patterns/Blue Attack.yy",
   },
   "parentObjectId": {
     "name": "obj_pattern",
