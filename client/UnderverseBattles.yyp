@@ -37,6 +37,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Orange soul","folderPath":"folders/Attack Patterns/Bones/Orange soul.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Red soul","folderPath":"folders/Attack Patterns/Bones/Red soul.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Broomie","folderPath":"folders/Attack Patterns/Broomie.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damage Wave","folderPath":"folders/Attack Patterns/Damage Wave.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damage Zone","folderPath":"folders/Attack Patterns/Damage Zone.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Edit","folderPath":"folders/Attack Patterns/Edit.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fireballs","folderPath":"folders/Attack Patterns/Fireballs.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Gasterblasters","folderPath":"folders/Attack Patterns/Gasterblasters.yy",},
@@ -376,8 +378,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damage Wave","folderPath":"folders/Attack Patterns/Damage Wave.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Damage Zone","folderPath":"folders/Attack Patterns/Damage Zone.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.html","CopyToMask":0,"filePath":"datafiles",},

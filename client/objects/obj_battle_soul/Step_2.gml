@@ -3,11 +3,15 @@ if (collision_line(x, y, 0, y, obj_solid, false, false) == noone xor
 	collision_line(x, y, room_width, y, obj_solid, false, false) == noone) {
 	x = xprevious;
 	is_inside_border_x = false;
+	
+	update_push_damage();
 }
 if (collision_line(x, y, x, 0, obj_solid, false, false) == noone xor
 	collision_line(x, y, x, room_height, obj_solid, false, false) == noone) {
 	y = yprevious;
 	is_inside_border_y = false;
+	
+	update_push_damage();
 }
 if (collision_line(x, y, x, 0, obj_solid, false, false) == noone &&
 	collision_line(x, y, x, room_height, obj_solid, false, false) == noone) {
@@ -15,6 +19,8 @@ if (collision_line(x, y, x, 0, obj_solid, false, false) == noone &&
 	y = yprevious;
 	is_inside_border_x = false;
 	is_inside_border_y = false;
+	
+	update_push_damage();
 }
 
 collider_soul.x = x;

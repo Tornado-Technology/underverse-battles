@@ -52,3 +52,6 @@ repeats = 5;
 time_source_update_broomie = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_broomie();
 }, [], repeats);
+time_source_update_destroy = time_source_create(time_source_game, 9, time_source_units_seconds, function () {
+	instance_destroy();
+});

@@ -17,12 +17,16 @@ if (place_meeting(x, y, pusher)) {
 	var outside_force_speed = 8 * dtime;
 	outside_force_x = outside_force_speed * cos_blast_angle;
 	outside_force_y = -outside_force_speed * sin_blast_angle;
+	is_pushed = true;
 	
 	movement_speed_x = 0;
 	movement_speed_y = 0;
 } else {
+	pusher_instance = noone;
+	
 	outside_force_x = 0;
 	outside_force_y = 0;
+	is_pushed = false;
 }
 
 invincibility_update();

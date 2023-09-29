@@ -9,7 +9,7 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-update_0_1 = function() {
+update = function() {
 	var selected_bone = bone;
 	var rand_side = irandom_range(0, 7);
 	var rand_bone_type = irandom_range(0, 1);

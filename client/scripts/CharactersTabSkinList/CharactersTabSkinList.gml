@@ -106,6 +106,8 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	}
 	
 	static draw = function () {
+		if (!instance_exists(menu_instance)) return;
+		
 		base_draw();
 		
 		var rectangle_x = menu_instance.rec_x1;
