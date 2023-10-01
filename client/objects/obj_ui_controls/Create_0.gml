@@ -28,7 +28,6 @@ controller_y = data_get("Settings.MobileControls.Controller.Position.Y");
 
 var key = "Settings.MobileControls.Controller.Arrows.Position."
 
-
 controls_arrow_x = [
 	data_get (key + "Up"	+ ".X"),
 	data_get (key + "Down"	+ ".X"),
@@ -42,6 +41,7 @@ controls_arrow_y = [
 	data_get (key + "Left"	+ ".Y"),
 	data_get (key + "Right" + ".Y")
 	];
+	
 
 controls_switching = UIControlSwitching();
 

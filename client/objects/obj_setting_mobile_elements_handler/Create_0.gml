@@ -9,10 +9,9 @@ change_element = function(_element) {
 	slider.change_value(value, false);
 }
 
-
-
 draw_controller = function () {
 var controller = global.__ui_controls_instance;
+
 if (controller.controllers_index == control_input_mode.ui_joystick) {	
 	joystick = controller.get_controller();
 
@@ -22,20 +21,22 @@ if (controller.controllers_index == control_input_mode.ui_joystick) {
 		controls = [
 		SettingsMobileJoystick(id, joystick_sprite_border, joystick_sprite_hadler),
 	];
-};
+
+}
 
 if (controller.controllers_index == control_input_mode.ui_arrows) {
-	arrows = controller.get_controller();	
 
-	controls_arrow = arrows.controls_arrow;
+	var	controls_arrow = controller.get_controller().controls_arrow;
+	controls_arrows = []
+	controls = [SettingsMobileArrow(id,  controls_arrow.up, 0)]
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.down, 1) )
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.left, 2) )
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.right, 3) )
 
-	controls = [ SettingsMobileArrow(id,  controls_arrow) ];
-	
 };
+
 controllers_switching = controller.controls_switching.controls_switching
 };
-
-draw_controller();
 
 element = undefined;
 
@@ -53,29 +54,33 @@ text_size = translate_get("Menu.Settings.MobileControls.Size");
 text_size_position_x = slider_position_x - 10;
 text_size_position_y = slider_position_y - 7;
 
+draw_controller();
 
-// Virtual Buttons
 var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
-
 for (var i = 0; i < array_length(buttons); i++) {
 	array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
-}
-array_push(controls, SettingsMobileControl(id, controllers_switching  ))
+	}
+	array_push(controls, SettingsMobileControl(id, controllers_switching  ))
 // Special attack
-array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
+	array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
+
 
 elements_reset = function () {
-	controls[@ 0] = -1;	
-	
-	draw_controller()
-	
 	var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
-
+	draw_menu = false
+	var i = 0
+	repeat (array_length(controls)) {
+		controls[@ i] = -1;
+		i++;
+	};
+	
+	draw_controller();
+	
 	for (var i = 0; i < array_length(buttons); i++) {
 	array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
-}
-	
-	array_push(controls, SettingsMobileControl(id, controllers_switching))
-	// Special attack
+	}
+	array_push(controls, SettingsMobileControl(id, controllers_switching  ))
+// Special attack
 	array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
+
 };

@@ -95,27 +95,34 @@ function ClassUIControllerArrows() constructor {
 		delete controls_arrow
 		
 		controls_arrow = {
-		up: UIImageButton(spr_ui_controls_arrow_up),
-		right: UIImageButton(spr_ui_controls_arrow_right),
-		down: UIImageButton(spr_ui_controls_arrow_down),
-		left: UIImageButton(spr_ui_controls_arrow_left)
+		up		: UIImageButton(spr_ui_controls_arrow_up),
+		down	: UIImageButton(spr_ui_controls_arrow_down),
+		left	: UIImageButton(spr_ui_controls_arrow_left),
+		right	: UIImageButton(spr_ui_controls_arrow_right)
+	};
+
+		declare_predicate();
+		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
+		var strunct  = ["up", "down", "left", "right"];
+		var scale = ["Up", "Down","Left", "Right"]
+		var i = 0;
+			repeat (array_length(scale)) {
+			controls_arrow[$ strunct[i]].scale_x = data_get(key_scale + scale[i] );
+			controls_arrow[$ strunct[i]].scale_y = data_get(key_scale + scale[i] ) ;
+			i++;
+			};
 	};
 	
-		declare_predicate();
-		var scale = data_get("Settings.MobileControls.Controller.Scale")
-		var strunct  = ["up", "down", "left", "right"  ];
-		var i = 0;
-		repeat (array_length(strunct)) {			
-			controls_arrow[$ strunct[i]].scale_x = scale;
-			controls_arrow[$ strunct[i]].scale_y = scale;
-			i++
-		}
-	}
-
 	static draw = function(position_x, position_y) {	
-		controls_arrow.up.draw(position_x[0], position_y[0]);
-		controls_arrow.down.draw(position_x[1], position_y[1]);
-		controls_arrow.left.draw(position_x[2], position_y[2]);
-		controls_arrow.right.draw(position_x[3], position_y[3]);	
+		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
+		var strunct  = ["up", "down", "left", "right"];
+		var scale = ["Up", "Down","Left", "Right"]
+		var i = 0;
+			repeat (array_length(scale)) {
+			controls_arrow[$ strunct[i]].draw(position_x[i], position_y[i])	
+			controls_arrow[$ strunct[i]].scale_x = data_get(key_scale + scale[i] );
+			controls_arrow[$ strunct[i]].scale_y = data_get(key_scale + scale[i] ) ;
+			i++;
+			}		
 	}
 }

@@ -6,4 +6,5 @@ if	( global.__ui_controls_instance.controllers_index == control_input_mode.ui_ar
 	global.__ui_controls_instance.get_controller().reset_index();
 	global.__ui_controls_instance.get_controller().input_pressed = undefined;
 	};
+
 };
