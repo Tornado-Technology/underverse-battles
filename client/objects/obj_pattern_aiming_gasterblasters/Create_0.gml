@@ -1,4 +1,4 @@
-// Arguments: soul_type, gasterblaster_aiming, custom_repeats (optional)
+// Arguments: soul_type, gasterblaster_aiming, count, custom_repeats (optional)
 
 callback = function () {
 	soul_instance = soul_type == battle_soul_type.blue ?
@@ -11,11 +11,11 @@ callback = function () {
 }
 	
 update = function() {
-	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+	repeat (count) create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
 }
 
-var period = 46 - _power * 6;
-var repeats = 8 + _power;
+var period = 46 - _power * 6 + count * 3;
+var repeats = 9 + _power - count;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;

@@ -30,6 +30,7 @@ if (place_meeting(x, y, pusher)) {
 }
 
 invincibility_update();
+update_push_damage();
 tremble_update();
 
 ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);

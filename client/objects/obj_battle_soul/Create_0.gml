@@ -1,6 +1,10 @@
 // I so lasy make it hands
 depth = fight_depth.soul;
 
+// Size
+half_width = sprite_width / 2;
+half_height = sprite_height / 2;
+
 // Movement
 moveable = true;
 
@@ -29,6 +33,11 @@ skip_frame = 0;
 
 // Collision with projectiles
 list_projectiles = ds_list_create();
+has_collision = false;
+has_collision_up = false;
+has_collision_down = false;
+has_collision_left = false;
+has_collision_right = false;
 is_pushed = false;
 pusher_instance = noone;
 
@@ -40,10 +49,6 @@ strict_place_meeting_walls = function() {
 	//var full_movement_x = movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
 	//var full_movement_x_sign = sign(full_movement_x);
 	//if (place_meeting(x + full_movement_x, y, obj_solid) || !is_inside_border_x) {
-	//	while(!place_meeting(x + full_movement_x_sign * movement_delta_min, y, obj_solid)) {
-	//		x += full_movement_x_sign * movement_delta_min;
-	//	}
-			
 	//	movement_speed_x = 0;
 	
 	//	if (outside_force_x != 0) {
@@ -63,10 +68,6 @@ strict_place_meeting_walls = function() {
 	//var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y;
 	//var full_movement_y_sign = sign(full_movement_y);
 	//if (place_meeting(x, y + full_movement_y, obj_solid) || !is_inside_border_y) {
-	//	while(!place_meeting(x, y + full_movement_y_sign * movement_delta_min, obj_solid)) {
-	//		y += full_movement_y_sign * movement_delta_min;
-	//	}
-	
 	//	movement_speed_y = 0;
 	
 	//	if (outside_force_y != 0) {
@@ -85,7 +86,7 @@ strict_place_meeting_walls = function() {
 }
 
 update_push_damage = function () {
-	if (is_pushed && instance_exists(pusher_instance)) {
+	if (has_collision && is_pushed && instance_exists(pusher_instance)) {
 		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
 	}
 }

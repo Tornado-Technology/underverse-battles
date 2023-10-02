@@ -14,12 +14,12 @@ if (blue_attack) blue_attack_force_speed_y = -5 * dtime;
 
 if (place_meeting(x, y - 1, obj_platform) && !place_meeting(x, y, obj_platform) && movement_speed_y <= 0) {
 	platform_inertion = instance_place(x, y - 1, obj_platform).speed;
+	is_jumping = false;
 	fly_time = 0;
-	blue_attack_force_speed_y = 0;
 	movement_speed_y = 0;
+	blue_attack_force_speed_y = 0;
 } else {
 	platform_inertion = 0;
-    movement_speed_y -= grav * dtime * dtime;
 }
 
 if (right) {
@@ -30,20 +30,32 @@ if (left) {
     movement_speed_x = -HSPD;
 }
 
-if (up && fly_time < max_fly_time && (place_meeting(x, y - 1, obj_solid) || (place_meeting(x, y - 1, obj_platform) && !place_meeting(x, y, obj_platform) && movement_speed_y <= 0))) {
+// Jump
+if (up && !is_jumping && fly_time == 0) {
+	is_jumping = true;
+}
+
+if (up && is_jumping && fly_time < max_fly_time) {
 	movement_speed_y = VSPD;
 	fly_time += dtime;
 }
-
-if (!up && movement_speed_y > 0) {
+else if (!up && movement_speed_y > 0 || has_collision_down) {
 	movement_speed_y = 0;
+}
+else {
+	movement_speed_y -= grav * dtime * dtime;
+}
+
+if (has_collision_up) {
+	is_jumping = false;
+	fly_time = 0;
+	movement_speed_y = 0;
+	blue_attack_force_speed_y = 0;
 }
 
 if (!left && !right) {
     movement_speed_x = 0;
 }
-
-strict_place_meeting_walls();
 
 // Platform
 var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y + blue_attack_force_speed_y;

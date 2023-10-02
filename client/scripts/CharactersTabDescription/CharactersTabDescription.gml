@@ -224,8 +224,6 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	static draw = function() {
 		base1_draw();
 		
-		show_debug_message(array_length(character_frames));
-		
 		var rectangle_x = menu_instance.rec_x1;
 		var rectangle_y = menu_instance.rec_y1;
 		var offset_x = menu_instance.dist_x;
