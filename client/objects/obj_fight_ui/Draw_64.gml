@@ -75,30 +75,25 @@ draw_sprite_part_ext(option_bar_sprites[0], 0, 0, 0, current_hp_line[1],      op
 draw_sprite_part_ext(option_bar_sprites[1], 0, 0, 0, current_stamina_line[1], option_bar_height[1], size_center.x + 131, 18, -1, 1, color, alpha);
 draw_sprite_part_ext(option_bar_sprites[2], 0, 0, 0, current_mana_line[1],    option_bar_height[2], size_center.x + 118, 21, -1, 1, color, alpha);
 
+// Bar flashing
 if (in_chouse && data_get("Settings.UI.Fight.ShowUsage")) {
+	var flashing_duration = 1;
+	var stamina_usage = fight_get_player_action_stamina_cost(initiative, action);
+	var stamina_flashing_bar_width = option_bar_width[1] / fight_get_player_max_stamina(initiative) * stamina_usage;
+	var mana_usage = fight_get_player_action_mana_cost(initiative, selected_power);
+	var mana_flashing_bar_width = option_bar_width[2] / fight_get_player_max_mana(initiative) * mana_usage;
+	
 	if (initiative == 0) {
-		var stamina_usage = fight_get_player_action_stamina_cost(initiative, action);
-		var new_stamina = max(fight_get_player_stamina(initiative) - stamina_usage, 0);
-		var bar_field = option_bar_width[1] / fight_get_player_max_stamina(initiative) * new_stamina;
+		draw_set_alpha(wave(0, 0.75, flashing_duration));
+		draw_sprite_part(spr_ui_options_bar_stamina_usage, 0, current_stamina_line[initiative] - stamina_flashing_bar_width, 0, stamina_flashing_bar_width, option_bar_height[1], size_center.x - 130 + current_stamina_line[initiative] - stamina_flashing_bar_width, 18);
 		
-		draw_set_alpha(wave(0, 0.75, 2));
-		draw_sprite_part(spr_ui_options_bar_stamina_usage, 0, 0, 0, bar_field, option_bar_height[1], size_center.x - 130, 18);
-		
-		var mana_usage = fight_get_player_action_mana_cost(initiative, selected_power);
-		var new_mana = max(fight_get_player_mana(initiative) - mana_usage, 0);
-		bar_field = option_bar_width[2] / fight_get_player_max_mana(initiative) * new_mana;
-		
-		draw_set_alpha(wave(0, 0.75, 2));
-		draw_sprite_part(spr_ui_options_bar_mana_usage, 0, 0, 0, bar_field, option_bar_height[2], size_center.x - 117, 21);
+		draw_set_alpha(wave(0, 0.75, flashing_duration));
+		draw_sprite_part(spr_ui_options_bar_mana_usage, 0, current_mana_line[initiative] - mana_flashing_bar_width, 0, mana_flashing_bar_width, option_bar_height[2], size_center.x - 117 + current_mana_line[initiative] - mana_flashing_bar_width, 21);
 		draw_set_alpha(default_draw_alpha);
 	}
 
 	if (initiative == 1) {
-		var stamina_usage = fight_get_player_action_stamina_cost(initiative, action);
-		var new_stamina = max(fight_get_player_stamina(initiative) - stamina_usage, 0);
-		var bar_field = option_bar_width[1] / fight_get_player_max_stamina(initiative) * new_stamina;
-		
-		draw_sprite_part_ext(spr_ui_options_bar_stamina_usage, 0, 0, 0, bar_field, option_bar_height[1], size_center.x + 131, 18, -1, 1, color, wave(0, 0.75, 2));
+		draw_sprite_part_ext(spr_ui_options_bar_stamina_usage, 0, current_stamina_line[initiative] - stamina_flashing_bar_width, 0, stamina_flashing_bar_width, option_bar_height[1], size_center.x + 131 - current_stamina_line[initiative] + stamina_flashing_bar_width, 18, -1, 1, color, wave(0, 0.75, flashing_duration));
 		draw_set_alpha(default_draw_alpha);
 	}
 }
