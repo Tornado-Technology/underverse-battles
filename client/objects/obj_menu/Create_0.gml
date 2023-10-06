@@ -271,7 +271,6 @@ login_callback = on_network_login.connect(function() {
 });
 
 disconnect_callback = on_network_disconnect.connect(function() {
-	if (!instance_exists(id)) return;
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
 		goto_page(menu_page.multiplayer);
 		instance_destroy(obj_profile_statistics);
