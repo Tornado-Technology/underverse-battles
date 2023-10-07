@@ -9,7 +9,6 @@ import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
 import config from '../config.js';
 import { infoValidate, validatePassword, validateUsername, validateNikcname } from '../database/validation.js';
-import serverContentJson from '../content/serverContent.json';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -246,7 +245,7 @@ export const handlePacket = async (client: Client, data: any) => {
           account.password = await hashPassword(password);
           await account.save();
 
-          //client.sendRestorePassword(statusCode.success)
+          client.sendRestorePassword(statusCode.success);
         });
 
         await mailSend(account.email, 'Account restore password', '', `
@@ -308,7 +307,7 @@ export const handlePacket = async (client: Client, data: any) => {
     // Fight stuff
     case 'fightJoin':
       try {
-        if (!serverContentJson.MatchmakerWorking) {
+        if (false) {
           Logger.info('Fight join locked');
           break;
         }

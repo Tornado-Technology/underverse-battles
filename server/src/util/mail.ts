@@ -2,12 +2,12 @@ import nodemailer from 'nodemailer';
 import Logger from './logging.js';
 
 const author = 'Underverse Battles';
-const host = 'smtp.gmail.com';
+const host = 'sm7.hosting.reg.ru';
 const port = 465;
 const secure = true;
 
-const user = 'team.tornado.technologies@gmail.com';
-const pass = 'ifpedlpgcugkmecw';
+const user = 'support@underverse-battles.ru';
+const pass = 'Te5BnmREJ!pvgJT';
 
 const transporter = nodemailer.createTransport({
   host,
@@ -16,6 +16,9 @@ const transporter = nodemailer.createTransport({
   auth: {
     user,
     pass,
+  },
+  tls: {
+    rejectUnauthorized: false
   }
 });
 

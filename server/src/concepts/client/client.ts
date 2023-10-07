@@ -66,11 +66,6 @@ export default class Client extends SendStuff {
   }
 
   public async startVerification(callback: Function): Promise<void> {
-    if (true) {
-      await callback(statusCode.success);
-      return;
-    }
-
     this.verificationCodeCallback = callback;
     this.generateVerificationCode();
     this.sendVerification();
