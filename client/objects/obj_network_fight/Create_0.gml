@@ -18,7 +18,6 @@ required_components = {
 ending_room = room_fight_1v1_end;
 
 on_into_fight.invoke(opponent_get_name(1));
-send_fight_loaded();
 
 on_network_disconnect.connect( function () {
 	var damage = fight_get_player_hp(0);
