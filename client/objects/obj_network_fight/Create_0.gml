@@ -3,6 +3,8 @@ event_inherited();
 // Set mode
 fight_network_mode = true;
 
+first_reset_was = false;
+
 // Required
 required_components = {
 	ui: obj_network_fight_ui,

@@ -168,6 +168,7 @@ packet_handler_register("fightCharacter", function(data) {
 packet_handler_register("fightInitiative", function(data) {
 	// Send obj_fight this info
 	fight_set_initiative(data.initiative);
+	fight_set_state(fight_state.reset);
 });
 
 packet_handler_register("fightAction", function(data) {
@@ -204,7 +205,6 @@ packet_handler_register("fightExtraAction", function(data) {
 
 packet_handler_register("fightResetAction", function(data) {
 	fight_reset_player_action(0);
-	fight_set_state(fight_state.reset);
 });
 
 packet_handler_register("fightResetPower", function(data) {
