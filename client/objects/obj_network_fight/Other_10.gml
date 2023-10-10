@@ -19,11 +19,9 @@ if (state == fight_state.dodge) {
 }
 
 if (state == fight_state.reset) {
-	if (!first_reset_was) {
-		first_reset_was = true;
-		exit;
-	}
 	statistics_set_next_step_network();
 	timer_start();
+	set_next_turn();
+	
 	state = fight_state.choosing;
 }

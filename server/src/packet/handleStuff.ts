@@ -333,7 +333,15 @@ export const handlePacket = async (client: Client, data: any) => {
         clients.forEach(element => {
           Logger.info(element.username);
         });
-        if (client.fight.hasInstance || opponent.fight.hasInstance || client.username === opponent.username) {
+        if (client.fight.hasInstance) {
+          Logger.info(`The client ${client.username} is trying to start a battle during other battle`);
+          break;
+        }
+        if (opponent.fight.hasInstance) {
+          Logger.info(`The client ${opponent.username} is trying to start a battle during other battle`);
+          break;
+        }
+        if (client.username === opponent.username) {
           client.sendFightJoin(statusCode.error, undefined);
           Logger.info('The client is trying to start a battle with himself:');
           Logger.info(client.username);

@@ -56,6 +56,7 @@ scroll_down = function(coef = 1) {
 }
 
 draw_selected_action = function(text_x, text_y, text, player_id, action_type, step) {
-	if (selected_action[player_id, step] == action_type)
+	if (array_length(selected_action[player_id]) > step)
+		if (selected_action[player_id, step] == action_type)
 			draw_text(text_x, text_y, text);
 }
