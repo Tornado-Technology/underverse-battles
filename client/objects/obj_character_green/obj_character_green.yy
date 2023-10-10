@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_green",
-    "path": "sprites/spr_green/spr_green.yy",
+    "name": "spr_green_idle",
+    "path": "sprites/spr_green_idle/spr_green_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

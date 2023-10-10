@@ -37,9 +37,9 @@ frame = spr_error_sans_frame;
 idle_animation = spr_error_sans_idle;
 after_battle_animation = spr_error_sans_idle;
 defeated_animation = spr_error_sans_defeated;
-start1_animation = spr_error_sans_attack1_start;
-fight1_animation = spr_error_sans_attack1_fight;
-end1_animation = spr_error_sans_attack1_finish;
+start1_animation = spr_error_sans_start1;
+fight1_animation = spr_error_sans_fight1;
+end1_animation = spr_error_sans_end1;
 
 // Actions
 passive_skill = PassiveSkill("Character.ErrorSans.PassiveSkill");
