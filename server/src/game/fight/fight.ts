@@ -69,6 +69,7 @@ export default class Fight {
   }
 
   public startTimer() {
+    clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.clients.forEach((client) => {
         if (client.fight.action === actionType.empty) {

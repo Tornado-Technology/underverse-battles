@@ -4,3 +4,7 @@ time++;
 spinner_angle = lerp(spinner_angle, 360, 0.1);
 spinner_angle = spinner_angle >= 357 ? 360 : spinner_angle;
 spinner_angle = spinner_angle == 360 ? 0 : spinner_angle;
+
+if (time / 60 > 10) {
+	instance_destroy();
+}

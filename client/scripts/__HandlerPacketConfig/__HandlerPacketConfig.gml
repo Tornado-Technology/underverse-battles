@@ -167,8 +167,11 @@ packet_handler_register("fightCharacter", function(data) {
 
 packet_handler_register("fightInitiative", function(data) {
 	// Send obj_fight this info
+	show_debug_message("fightInitiative start");
 	fight_set_initiative(data.initiative);
+	show_debug_message("data.initiative changed");
 	fight_set_state(fight_state.reset);
+	show_debug_message("fight_state.reset set");
 });
 
 packet_handler_register("fightAction", function(data) {

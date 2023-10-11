@@ -16,5 +16,5 @@ draw_set_valign(fa_middle);
 draw_text_outlined(width / 2, height * 2 / 3, c_white, c_black, translate_get("Battle.DisconnectedFromTheBattle"));
 draw_text_outlined(width / 2, height * 2 / 3 + 20,  c_white, c_black, translate_get("Battle.AttemptingToReconnect"));
 
-draw_text_outlined(width / 2, height / 2 + 80,  c_white, c_black, time_to_ms(time));
+draw_text_outlined(width / 2, height / 2 + 100,  c_white, c_black, time_to_ms(time));
 draw_reset();
