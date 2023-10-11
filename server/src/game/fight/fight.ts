@@ -349,6 +349,8 @@ export default class Fight {
     this.setState(state.battle);
     const seed = Math.randomRange(0, 2000000000);
 
+    this.startTimer();
+
     this.clients.forEach((client) => {
       client?.sendFightStartBattle(seed);
     });
