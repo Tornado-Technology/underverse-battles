@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_gasterblaster_cross",
-    "path": "sprites/spr_gasterblaster_cross/spr_gasterblaster_cross.yy",
+    "name": "spr_gasterblaster_sans",
+    "path": "sprites/spr_gasterblaster_sans/spr_gasterblaster_sans.yy",
   },
   "spriteMaskId": null,
   "visible": true,
