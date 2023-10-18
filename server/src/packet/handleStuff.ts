@@ -425,9 +425,11 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'battleFinish':
       if (data.initiative == 0) {
         client.fight.instance?.startTimer();
+        Logger.debug("Battle finish by Player Initiative: 0");
       }
       else {
         client.fight.instance?.battleFinish();
+        Logger.debug("Battle finish by Player Initiative: 1");
       }
       break;
 
