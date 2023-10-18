@@ -33,6 +33,7 @@ const commonConfig = {
   gameplay: {
     fight: {
       timer: 11_000,
+      battleFinishTimer: 5_000,
       disconnectTimeout: 10_000,
     },
   },
@@ -95,7 +96,7 @@ const developmentConfig = {
   },
   client: {
     verification: {
-      enabled: false,
+      enabled: true,
     }
   },
   database: {

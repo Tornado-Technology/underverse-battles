@@ -34,6 +34,7 @@ export default class Fight {
   protected initiative: number;
 
   protected timer: NodeJS.Timeout;
+  protected battleFinishTimer: NodeJS.Timeout;
   protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
@@ -85,6 +86,17 @@ export default class Fight {
       clearTimeout(this.timer);
       this.timer = null;
     }
+  }
+
+  public startBattleFinishTimer() {
+    clearTimeout(this.battleFinishTimer);
+    this.battleFinishTimer = setTimeout(() => {
+      this.clients.forEach((client) => {
+        if (client.fight.inBattle) {
+          this.kickPlayer(client);
+        }
+      });
+    }, config.gameplay.fight.battleFinishTimer);
   }
 
   public timeoutClear() {
@@ -351,6 +363,7 @@ export default class Fight {
     const seed = Math.randomRange(0, 2000000000);
 
     this.clients.forEach((client) => {
+      client.fight.inBattle = true;
       client?.sendFightStartBattle(seed);
     });
   }
