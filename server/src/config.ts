@@ -14,6 +14,13 @@ if (!existsSync(versionsPath)) {
 
 export const versions = JSON.parse(readFileSync(versionsPath).toString());
 
+const connectionOptionsPath = `${dirname(fileURLToPath(import.meta.url))}/../connectionOptions.json`;
+if (!existsSync(versionsPath)) {
+  throw new Error(`File connectionOptions.json not found!`);
+}
+
+export const connectionOptions = JSON.parse(readFileSync(connectionOptionsPath).toString());
+
 const commonConfig = {
   environment: 'common',
   meta: {
@@ -25,6 +32,7 @@ const commonConfig = {
   },
   gameplay: {
     fight: {
+      timer: 11_000,
       disconnectTimeout: 10_000,
     },
   },
@@ -38,7 +46,7 @@ const commonConfig = {
     necessaryEmailCode: true,
     pingInterval: 3000,
     verification: {
-      enabled: false,
+      enabled: true,
       timeout: 3000,
     },
   },

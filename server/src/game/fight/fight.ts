@@ -3,6 +3,7 @@ import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Matchmaker from '../../util/matchmaker.js';
 import { statusCode } from '../../status.js';
+import config from '../../config.js';
 
 export enum state {
   wait,
@@ -76,7 +77,7 @@ export default class Fight {
           this.kickPlayer(client);
         }
       });
-    }, 11_000);
+    }, config.gameplay.fight.timer);
   }
 
   public stopTimer() {
@@ -95,7 +96,7 @@ export default class Fight {
   private timeoutStart(method: Function) {
     if (this.timeout) return;
     // @ts-ignore
-    this.timeout = setTimeout(method, 10_000);
+    this.timeout = setTimeout(method, config.gameplay.fight.disconnectTimeout);
   }
 
   public kickPlayer(client: Client) {
@@ -117,7 +118,7 @@ export default class Fight {
     if (!this.clients[0] || !this.clients[1]) {
       this.destroyTimeout = setTimeout(() => {
         this.destroy();
-      }, 10_000);
+      }, config.gameplay.fight.disconnectTimeout);
     }
   }
 

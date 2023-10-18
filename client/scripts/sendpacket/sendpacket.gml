@@ -1,6 +1,6 @@
 function send_information() {
 	send("information", {
-		information:  json_stringify(generate_client_information()),
+		information: json_stringify(generate_client_information()),
 	});
 }
 
