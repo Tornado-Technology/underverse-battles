@@ -145,8 +145,10 @@ function send_fight_soul(x, y, angle, ability) {
 	});
 }
 
-function send_fight_finish_battle() {
-    send("battleFinish");
+function send_fight_finish_battle(initiative) {
+    send("battleFinish", {
+		initiative: initiative
+	});
 }
 
 /// @param {Real} damage

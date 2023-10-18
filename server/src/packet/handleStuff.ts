@@ -423,7 +423,10 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'battleFinish':
-      if (client.fight.instance?.inactiveClient === client) {
+      if (data.initiative == 0) {
+        client.fight.instance?.startTimer();
+      }
+      else {
         client.fight.instance?.battleFinish();
       }
       break;
