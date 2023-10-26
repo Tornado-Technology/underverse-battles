@@ -7,7 +7,6 @@
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"menu_music","targets":-1,},
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"music","targets":-1,},
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"sound","targets":-1,},
-    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"loud","targets":-1,},
   ],
   "configs": {
     "children": [
@@ -1267,7 +1266,6 @@
     {"id":{"name":"snd_damage","path":"sounds/snd_damage/snd_damage.yy",},},
     {"id":{"name":"spr_gb_blast_fell_sans","path":"sprites/spr_gb_blast_fell_sans/spr_gb_blast_fell_sans.yy",},},
     {"id":{"name":"snd_dark_dream","path":"sounds/snd_dark_dream/snd_dark_dream.yy",},},
-    {"id":{"name":"snd_delta","path":"sounds/snd_delta/snd_delta.yy",},},
     {"id":{"name":"obj_gasterblaster_aiming_ink_sans","path":"objects/obj_gasterblaster_aiming_ink_sans/obj_gasterblaster_aiming_ink_sans.yy",},},
     {"id":{"name":"spr_swap_papyrus_idle","path":"sprites/spr_swap_papyrus_idle/spr_swap_papyrus_idle.yy",},},
     {"id":{"name":"spr_error_sans_lord_attack1_start","path":"sprites/spr_error_sans_lord_attack1_start/spr_error_sans_lord_attack1_start.yy",},},
@@ -1375,7 +1373,6 @@
     {"id":{"name":"spr_soul_green_corrupted","path":"sprites/spr_soul_green_corrupted/spr_soul_green_corrupted.yy",},},
     {"id":{"name":"spr_background_dream","path":"sprites/spr_background_dream/spr_background_dream.yy",},},
     {"id":{"name":"obj_knife_directed_cross_xevent","path":"objects/obj_knife_directed_cross_xevent/obj_knife_directed_cross_xevent.yy",},},
-    {"id":{"name":"snd_vs_tesmi","path":"sounds/snd_vs_tesmi/snd_vs_tesmi.yy",},},
     {"id":{"name":"spr_brush_ink_sans","path":"sprites/spr_brush_ink_sans/spr_brush_ink_sans.yy",},},
     {"id":{"name":"spr_cross_in_strings_closed_eyes","path":"sprites/spr_cross_in_strings_closed_eyes/spr_cross_in_strings_closed_eyes.yy",},},
     {"id":{"name":"spr_xchara_on_knees_looking_hands","path":"sprites/spr_xchara_on_knees_looking_hands/spr_xchara_on_knees_looking_hands.yy",},},

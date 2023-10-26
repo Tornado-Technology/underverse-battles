@@ -43,4 +43,4 @@ actions = [
 special_action = SpecialAction("Character.SockPolice.SpecialAttack", spr_empty, dan_special_attack);
 
 soundtrack_name = "The Delta"; 
-soundtrack = snd_delta;
+soundtrack = snd_rude_buster;

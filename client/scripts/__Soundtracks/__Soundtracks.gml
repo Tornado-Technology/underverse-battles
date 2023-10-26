@@ -24,8 +24,3 @@ Soundtrack(snd_the_biggest_shot, "THE BIGGEST SHOT", "NyxTheShield OFFICIAL", "R
 // Misc
 Soundtrack(snd_burning_in_hell, "Burning in Hell", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.no);
 Soundtrack(snd_triple_the_threat, "Triple The Threat", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.badtimetrio);
-
-if (development_mode) {
-	Soundtrack(snd_delta, "The Delta", "ReStart", "Underverse Battles OST", universe.no);
-	Soundtrack(snd_vs_tesmi, "vsTesmi", "TornadoTech", "Underverse Battles OST", universe.no);
-}
