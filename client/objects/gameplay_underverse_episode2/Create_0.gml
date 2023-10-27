@@ -143,8 +143,7 @@ cutscenes = [
 		[layer_background_sprite, background_id, spr_background_empty_xtale],
 		[cutscene_execute, function () { instance_destroy(background_animator); }],
 		[cutscene_execute, function () {
-			part_particles_clear(particle_paper);
-			part_particles_clear(particle_pencil);
+			part_particles_clear(global.part_system_bullet);
 			ink_sans.y += 20;
 			ink_sans.sprite_index = spr_ink_sans_right_calm;
 		}],

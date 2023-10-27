@@ -1047,6 +1047,7 @@
     {"name":"spr_achivement_defeatsans","order":7,"path":"sprites/spr_achivement_defeatsans/spr_achivement_defeatsans.yy",},
     {"name":"obj_battle_orange_attack","order":2,"path":"objects/obj_battle_orange_attack/obj_battle_orange_attack.yy",},
     {"name":"spr_achivement_defeatswappapyrus","order":8,"path":"sprites/spr_achivement_defeatswappapyrus/spr_achivement_defeatswappapyrus.yy",},
+    {"name":"spr_cross_left_standing_up","order":26,"path":"sprites/spr_cross_left_standing_up/spr_cross_left_standing_up.yy",},
     {"name":"obj_gasterblaster_ink_sans","order":7,"path":"objects/obj_gasterblaster_ink_sans/obj_gasterblaster_ink_sans.yy",},
     {"name":"spr_sans_on_byke_attack2_right","order":8,"path":"sprites/spr_sans_on_byke_attack2_right/spr_sans_on_byke_attack2_right.yy",},
     {"name":"obj_battle_element","order":1,"path":"objects/obj_battle_element/obj_battle_element.yy",},

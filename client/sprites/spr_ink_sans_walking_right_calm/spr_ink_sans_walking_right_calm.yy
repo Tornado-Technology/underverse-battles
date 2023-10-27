@@ -16,10 +16,10 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17cc194c-6a2a-44fe-a44d-6d9bef145763",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4710245-1180-45d0-af50-ab7c6abebcc9",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5dd8c22-8a5f-438e-ac02-1c96fab0418f",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"232bc832-6765-429c-a8d5-7436b41a015f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17cc194c-6a2a-44fe-a44d-6d9bef145763",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -60,10 +60,10 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17cc194c-6a2a-44fe-a44d-6d9bef145763","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"5277063f-dbf0-438b-ae5c-95367d7b5af8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4710245-1180-45d0-af50-ab7c6abebcc9","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"fe8e2d58-5767-4952-880f-90bc8a942fb4","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5dd8c22-8a5f-438e-ac02-1c96fab0418f","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"9bc4dfd7-8b25-4baa-8081-396d56904a48","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"232bc832-6765-429c-a8d5-7436b41a015f","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"a049263e-12ee-4a5f-9727-114926a1629c","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4710245-1180-45d0-af50-ab7c6abebcc9","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"fe8e2d58-5767-4952-880f-90bc8a942fb4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5dd8c22-8a5f-438e-ac02-1c96fab0418f","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"9bc4dfd7-8b25-4baa-8081-396d56904a48","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"232bc832-6765-429c-a8d5-7436b41a015f","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"a049263e-12ee-4a5f-9727-114926a1629c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17cc194c-6a2a-44fe-a44d-6d9bef145763","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},},"Disabled":false,"id":"5277063f-dbf0-438b-ae5c-95367d7b5af8","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

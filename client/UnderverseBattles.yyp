@@ -1381,6 +1381,7 @@
     {"id":{"name":"spr_tornado_frame","path":"sprites/spr_tornado_frame/spr_tornado_frame.yy",},},
     {"id":{"name":"obj_battle_orange_attack","path":"objects/obj_battle_orange_attack/obj_battle_orange_attack.yy",},},
     {"id":{"name":"spr_achivement_defeatswappapyrus","path":"sprites/spr_achivement_defeatswappapyrus/spr_achivement_defeatswappapyrus.yy",},},
+    {"id":{"name":"spr_cross_left_standing_up","path":"sprites/spr_cross_left_standing_up/spr_cross_left_standing_up.yy",},},
     {"id":{"name":"obj_gasterblaster_ink_sans","path":"objects/obj_gasterblaster_ink_sans/obj_gasterblaster_ink_sans.yy",},},
     {"id":{"name":"spr_sans_on_byke_attack2_right","path":"sprites/spr_sans_on_byke_attack2_right/spr_sans_on_byke_attack2_right.yy",},},
     {"id":{"name":"obj_battle_element","path":"objects/obj_battle_element/obj_battle_element.yy",},},
