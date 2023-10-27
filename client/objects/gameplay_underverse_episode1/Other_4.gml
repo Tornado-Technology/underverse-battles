@@ -6,7 +6,7 @@ xchara_.sprite_index = spr_xchara_secretive;
 
 wall_left = instance_create_depth(0, 0, 0, obj_wall);
 wall_left.image_yscale = room_height / wall_left.sprite_height;
-wall_right = instance_create_depth(room_width - sprite_get_width(obj_wall), 0, 0, obj_wall);
+wall_right = instance_create_depth(room_width - sprite_get_width(spr_wall), 0, 0, obj_wall);
 wall_right.image_yscale = room_height / wall_left.sprite_height;
 
 camera_set_zoom(8);

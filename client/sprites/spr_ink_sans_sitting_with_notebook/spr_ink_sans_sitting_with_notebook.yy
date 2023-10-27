@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_ink_sans_sitting_with_notebook",
-  "bbox_bottom": 29,
+  "bbox_bottom": 37,
   "bbox_left": 0,
   "bbox_right": 43,
   "bbox_top": 0,
@@ -20,7 +20,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 30,
+  "height": 38,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2ab07de3-501e-403c-aca2-5bfa62eeaa40","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -73,5 +73,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 45,
+  "width": 44,
 }

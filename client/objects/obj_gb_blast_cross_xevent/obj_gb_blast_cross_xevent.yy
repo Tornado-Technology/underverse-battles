@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_gb_blast_cross",
-    "path": "sprites/spr_gb_blast_cross/spr_gb_blast_cross.yy",
+    "name": "spr_gb_blast_fell_sans",
+    "path": "sprites/spr_gb_blast_fell_sans/spr_gb_blast_fell_sans.yy",
   },
   "spriteMaskId": null,
   "visible": true,
