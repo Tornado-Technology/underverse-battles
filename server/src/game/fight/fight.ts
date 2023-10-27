@@ -99,6 +99,13 @@ export default class Fight {
     }, config.gameplay.fight.battleFinishTimer);
   }
 
+  public stopBattleFinishTimer() {
+    if (this.battleFinishTimer) {
+      clearTimeout(this.battleFinishTimer);
+      this.battleFinishTimer = null;
+    }
+  }
+
   public timeoutClear() {
     if (!this.timeout) return;
     clearTimeout(this.timeout);
@@ -377,7 +384,7 @@ export default class Fight {
 
   public battleFinish() {
     if (this.state == state.battle) {
-      this.stopTimer();
+      this.stopBattleFinishTimer();
       this.resetState();
     }
   }
