@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Char",
-    "path": "folders/Characteres/Fell Sans/Sprites/Char.yy",
+    "name": "Standart",
+    "path": "folders/Characteres/Fell Sans/Sprites/Char/Standart.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

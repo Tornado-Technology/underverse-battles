@@ -28,7 +28,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6dde7a2-5075-4d88-ba70-7ad6e427bb3b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Sansa Claus",
     "path": "folders/Characteres/Sans/Sprites/Char/Sansa Claus.yy",
@@ -68,7 +68,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 14,
+    "xorigin": 17,
     "yorigin": 44,
   },
   "swatchColours": null,

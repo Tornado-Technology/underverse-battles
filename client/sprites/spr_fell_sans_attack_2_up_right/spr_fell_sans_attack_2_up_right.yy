@@ -31,7 +31,7 @@
   "origin": 9,
   "parent": {
     "name": "Attack 2",
-    "path": "folders/Characteres/Fell Sans/Sprites/Char/Attack 2.yy",
+    "path": "folders/Characteres/Fell Sans/Sprites/Char/Standart/Attack 2.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
