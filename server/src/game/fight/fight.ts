@@ -71,7 +71,7 @@ export default class Fight {
   }
 
   public startTimer() {
-    clearTimeout(this.timer);
+    this.stopTimer();
     this.timer = setTimeout(() => {
       this.clients.forEach((client) => {
         if (client.fight.action === actionType.empty) {
@@ -89,7 +89,7 @@ export default class Fight {
   }
 
   public startBattleFinishTimer() {
-    clearTimeout(this.battleFinishTimer);
+    this.stopBattleFinishTimer();
     this.battleFinishTimer = setTimeout(() => {
       this.clients.forEach((client) => {
         if (client.fight.inBattle) {
@@ -125,6 +125,7 @@ export default class Fight {
       winnerClient?.sendFightDisconnect(target.opponent);
     });
 
+    Logger.debug(`${client?.account.username} was kicked from fight.`);
     this.clientRemove(client);
   }
 
