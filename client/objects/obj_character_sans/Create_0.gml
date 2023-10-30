@@ -30,7 +30,7 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 soul = spr_battle_soul;
 
 // Skin
-skin_name = translate_get("CharactersStyles.Classic");
+skin_name = translate_get("CharactersStyles.Standard");
 frame = spr_sans_frame;
 
 // Animations

@@ -7,7 +7,7 @@ frame = spr_fell_sans_murderer_frame;
 // Animations
 idle_animation = spr_fell_sans_murderer_idle;
 after_battle_animation =  spr_fell_sans_murderer_idle;
-defeated_animation =  spr_fell_sans_murderer_idle;
+defeated_animation =  spr_fell_sans_murderer_defeated;
 
 hand_up_animation = spr_fell_sans_murderer_attack2_up;
 hand_down_up_animation = spr_fell_sans_murderer_attack2_down_up;

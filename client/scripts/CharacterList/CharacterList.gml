@@ -43,21 +43,21 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 function CharacterList() {
 	global.characters = [
 		[
-			new Character(obj_character_ink_sans, "InkSans",	"Classic", spr_ink_sans_frame)
+			new Character(obj_character_ink_sans, "InkSans",	"Standard", spr_ink_sans_frame)
 		],
 	
 		[
-			new Character(obj_character_error_sans, "ErrorSans",	"Classic", spr_error_sans_frame),
+			new Character(obj_character_error_sans, "ErrorSans",	"Standard", spr_error_sans_frame),
 			new Character(obj_character_error_sans_new_clothes, "ErrorSans",	"NewClothes", spr_error_sans_new_clothes_frame),
 			new Character(obj_character_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame),
 		],
 		[
-			new Character(obj_character_sans, "ClassicSans",	"Classic", spr_sans_frame),
+			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
 			new Character(obj_character_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame),
 			new Character(obj_character_sans_on_byke, "ClassicSans", "OnByke", spr_sans_on_byke_frame)
 		],
 		[
-			new Character(obj_character_fell_sans, "FellSans", "Classic", spr_fell_sans_frame),
+			new Character(obj_character_fell_sans, "FellSans", "Standard", spr_fell_sans_frame),
 			new Character(obj_character_fell_sans_murderer, "FellSans", "Murderer", spr_fell_sans_murderer_frame),
 			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame)
 		],
@@ -65,7 +65,7 @@ function CharacterList() {
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
 		],
 		[
-			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Classic", spr_swap_papyrus_frame),
+			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
 			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
 		],
 		[
@@ -77,7 +77,8 @@ function CharacterList() {
 			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
 		],
 		[
-			new Character(obj_character_green, "Green", "Standard", spr_green_frame)
+			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
+			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame)
 		]
 	];
 

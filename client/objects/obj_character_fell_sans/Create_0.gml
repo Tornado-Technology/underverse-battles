@@ -29,7 +29,7 @@ mana_given = 3;
 soul = spr_battle_soul;
 
 // Skin
-skin_name = translate_get("CharactersStyles.Classic");
+skin_name = translate_get("CharactersStyles.Standard");
 frame = spr_fell_sans_frame;
 
 // Animations
