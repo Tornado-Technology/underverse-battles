@@ -1073,7 +1073,7 @@
   "italic": false,
   "kerningPairs": [],
   "last": 0,
-  "lineHeight": 0,
+  "lineHeight": 18,
   "maintainGms1Font": false,
   "parent": {
     "name": "Chinese",
