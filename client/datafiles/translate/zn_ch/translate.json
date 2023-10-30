@@ -297,8 +297,8 @@
       "ErrorSecondPassword": "第二个密码与第一个密码不一致",
       "Error": {
         "0": "0. 未知错误",
-        "1": "1. Success",
-        "2": "2. Connection socket closed",
+        "1": "1. 成功",
+        "2": "2. 连接接口已关闭",
         "300": "300. 未知错误",
         "301": "301. 未连接到数据库",
         "302": "302. 数据库未在运行",
@@ -411,10 +411,10 @@
     "By": "by",
     "Developers": "程序",
     "Artists": "画师",
-    "StyleAuthors": "STYLE AUTHORS",
-    "PreviewArtist": "PREVIEW ARTIST",
+    "StyleAuthors": "样式概念设计",
+    "PreviewArtist": "预览图",
     "Localizer": "翻译",
-    "Tester": "TESTER",
+    "Tester": "测试员",
     "StoryCreator": "故事构建",
     "Composers": "作曲",
     "Sponsors": "赞助",
@@ -701,7 +701,8 @@
     "Coat": "外套",
     "Vest": "汗衫",
     "Lord": "上帝",
-    "PumpkinHell": "Pumpkin hell"
+    "Murderer": "凶手",
+    "PumpkinHell": "南瓜地狱"
   },
   "Battle": {
     "Target": "目标",

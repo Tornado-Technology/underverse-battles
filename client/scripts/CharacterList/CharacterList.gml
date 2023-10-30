@@ -58,6 +58,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_fell_sans, "FellSans", "Classic", spr_fell_sans_frame),
+			new Character(obj_character_fell_sans_murderer, "FellSans", "Murderer", spr_fell_sans_murderer_frame),
 			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame)
 		],
 		[

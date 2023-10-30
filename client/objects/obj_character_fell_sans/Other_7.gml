@@ -1,25 +1,25 @@
 event_inherited();
 
-if (sprite_index == spr_fell_sans_attack2_left_down or
-	sprite_index == spr_fell_sans_attack2_right_down or
-	sprite_index == spr_fell_sans_attack2_up_down) {
-	sprite_index = spr_fell_sans_attack2_down;
+if (sprite_index == hand_left_down_animation ||
+	sprite_index == hand_right_down_animation ||
+	sprite_index == hand_up_down_animation) {
+	sprite_index = hand_down_animation;
 }
 
-if (sprite_index == spr_fell_sans_attack2_left_up or
-	sprite_index == spr_fell_sans_attack2_right_up or
-	sprite_index == spr_fell_sans_attack2_down_up) {
-	sprite_index = spr_fell_sans_attack2_up;
+if (sprite_index == hand_left_up_animation ||
+	sprite_index == hand_right_up_animation ||
+	sprite_index == hand_down_up_animation) {
+	sprite_index = hand_up_animation;
 }
 
-if (sprite_index == spr_fell_sans_attack2_up_left or
-	sprite_index == spr_fell_sans_attack2_right_left or
-	sprite_index == spr_fell_sans_attack2_down_left) {
-	sprite_index = spr_fell_sans_attack2_left;
+if (sprite_index == hand_up_left_animation ||
+	sprite_index == hand_right_left_animation ||
+	sprite_index == hand_down_left_animation) {
+	sprite_index = hand_left_animation;
 }
 
-if (sprite_index == spr_fell_sans_attack2_up_right or
-	sprite_index == spr_fell_sans_attack2_left_right or
-	sprite_index == spr_fell_sans_attack2_down_right) {
-	sprite_index = spr_fell_sans_attack2_right;
+if (sprite_index == hand_up_right_animation ||
+	sprite_index == hand_left_right_animation ||
+	sprite_index == hand_down_right_animation) {
+	sprite_index = hand_right_animation;
 }
