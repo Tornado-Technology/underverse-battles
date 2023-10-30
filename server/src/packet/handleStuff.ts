@@ -425,7 +425,7 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'battleFinish':
       if (data.initiative == 0) {
         client.fight.inBattle = false;
-        client.fight.instance?.startBattleFinishTimer();
+        //client.fight.instance?.startBattleFinishTimer();
       }
       else {
         client.fight.inBattle = false;
