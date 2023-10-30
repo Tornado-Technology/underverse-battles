@@ -1101,10 +1101,11 @@
   "italic": false,
   "kerningPairs": [],
   "last": 0,
+  "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "name": "Chinese",
+    "path": "folders/Fonts/Chinese.yy",
   },
   "pointRounding": 0,
   "ranges": [
@@ -1916,6 +1917,7 @@
   ],
   "regenerateBitmap": false,
   "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
+  "sdfSpread": 8,
   "size": 9.0,
   "styleName": "Regular",
   "textureGroupId": {
@@ -1923,4 +1925,5 @@
     "path": "texturegroups/Default",
   },
   "TTFName": "",
+  "usesSDF": false,
 }

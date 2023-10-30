@@ -9,7 +9,9 @@
   "bold": false,
   "canGenerateBitmap": true,
   "charset": 0,
-  "ConfigValues": {},
+  "ConfigValues": {
+    "Development": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
+  },
   "first": 0,
   "fontName": "Comic Sans MS pixel rus eng",
   "glyphOperations": 0,
@@ -175,7 +177,7 @@
     "1102": {"character":1102,"h":19,"offset":0,"shift":11,"w":10,"x":18,"y":44,},
     "1103": {"character":1103,"h":19,"offset":0,"shift":7,"w":6,"x":30,"y":44,},
     "1105": {"character":1105,"h":19,"offset":0,"shift":7,"w":6,"x":38,"y":44,},
-    "9647": {"character":9647,"h":19,"offset":2,"shift":16,"w":9,"x":46,"y":44,},
+    "9647": {"character":9647,"h":19,"offset":3,"shift":16,"w":9,"x":46,"y":44,},
     "20102": {"character":20102,"h":19,"offset":0,"shift":16,"w":16,"x":57,"y":44,},
     "20320": {"character":20320,"h":19,"offset":1,"shift":16,"w":14,"x":75,"y":44,},
     "28856": {"character":28856,"h":19,"offset":0,"shift":16,"w":16,"x":91,"y":44,},
@@ -188,6 +190,7 @@
   "italic": false,
   "kerningPairs": [],
   "last": 0,
+  "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
@@ -878,6 +881,7 @@
   ],
   "regenerateBitmap": false,
   "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: 你酷炸了！你酷炸了！▯ (9647)",
+  "sdfSpread": 8,
   "size": 12.0,
   "styleName": "Regular",
   "textureGroupId": {
@@ -885,4 +889,5 @@
     "path": "texturegroups/Default",
   },
   "TTFName": "${project_dir}\\fonts\\font_comic_sans\\Comic_Sans_MS_Pixel.ttf",
+  "usesSDF": false,
 }

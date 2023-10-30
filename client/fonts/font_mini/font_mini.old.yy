@@ -4,7 +4,7 @@
   "name": "font_mini",
   "AntiAlias": 0,
   "applyKerning": 0,
-  "ascender": 0,
+  "ascender": 12,
   "ascenderOffset": 0,
   "bold": false,
   "canGenerateBitmap": true,
@@ -182,6 +182,7 @@
   "italic": false,
   "kerningPairs": [],
   "last": 0,
+  "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
@@ -197,6 +198,7 @@
   ],
   "regenerateBitmap": false,
   "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
+  "sdfSpread": 8,
   "size": 12.0,
   "styleName": "Regular",
   "textureGroupId": {
@@ -204,4 +206,5 @@
     "path": "texturegroups/Default",
   },
   "TTFName": "${project_dir}\\fonts\\font_mini\\font_mini.png",
+  "usesSDF": false,
 }

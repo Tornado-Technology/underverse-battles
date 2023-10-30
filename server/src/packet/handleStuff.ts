@@ -3,11 +3,10 @@ import { actionType, state as fightState, target } from '../game/fight/fight.js'
 import { send as mailSend } from '../util/mail.js';
 import Client, { state } from '../concepts/client/client.js';
 import { statusCode } from '../status.js';
-import { versions } from '../config.js';
+import { versions, connectionOptions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
-import config from '../config.js';
 import { infoValidate, validatePassword, validateUsername, validateNikcname } from '../database/validation.js';
 
 export const handlePacket = async (client: Client, data: any) => {
@@ -15,30 +14,18 @@ export const handlePacket = async (client: Client, data: any) => {
 
   switch (index) {
     case 'information':
-      if (!config.client.verification.enabled) {
-        Logger.debug('Client allowed, verification disabled');
-        break;
-      }
-      
       {
         client.verifying = true;
         const info = JSON.parse(data.information);
-        const hash = versions[info.build][info.version];
+        const admitted = versions[info.build][info.version];
+
         if (info?.os_info) {
           const osInfo = JSON.parse(info.os_info);
           client.hardAddress = osInfo?.udid;
         }
 
-        if (!hash) {
+        if (!admitted) {
           Logger.warn(`Client version "${info.version}" or build "${info.build}" is not registered on the server`);
-          client.verifying = false;
-          client.sendConnection(statusCode.error);
-          client.destroy();
-          break;
-        }
-
-        if (hash !== info.hash) {
-          Logger.warn(`Client hash not match, needed: "${hash}", provided: "${info.hash}"`);
           client.verifying = false;
           client.sendConnection(statusCode.error);
           client.destroy();
@@ -307,7 +294,7 @@ export const handlePacket = async (client: Client, data: any) => {
     // Fight stuff
     case 'fightJoin':
       try {
-        if (false) {
+        if (!connectionOptions["MatchmakerIsWorking"]) {
           Logger.info('Fight join locked');
           break;
         }
@@ -333,7 +320,15 @@ export const handlePacket = async (client: Client, data: any) => {
         clients.forEach(element => {
           Logger.info(element.username);
         });
-        if (client.fight.hasInstance || opponent.fight.hasInstance || client.username === opponent.username) {
+        if (client.fight.hasInstance) {
+          Logger.info(`The client ${client.username} is trying to start a battle during other battle`);
+          break;
+        }
+        if (opponent.fight.hasInstance) {
+          Logger.info(`The client ${opponent.username} is trying to start a battle during other battle`);
+          break;
+        }
+        if (client.username === opponent.username) {
           client.sendFightJoin(statusCode.error, undefined);
           Logger.info('The client is trying to start a battle with himself:');
           Logger.info(client.username);
@@ -428,7 +423,12 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'battleFinish':
-      if (client.fight.instance?.inactiveClient === client) {
+      if (data.initiative == 0) {
+        client.fight.inBattle = false;
+        client.fight.instance?.startBattleFinishTimer();
+      }
+      else {
+        client.fight.inBattle = false;
         client.fight.instance?.battleFinish();
       }
       break;

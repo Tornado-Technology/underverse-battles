@@ -52,7 +52,7 @@ special_action = SpecialAction("Character.Tornado.SpecialAttack", spr_special_at
 
 // Soundtrack
 soundtrack_name = "The Delta"; 
-soundtrack = snd_delta;
+soundtrack = snd_rude_buster;
 
 dodging = false;
 dodging_time = 0;

@@ -3,6 +3,7 @@ import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Matchmaker from '../../util/matchmaker.js';
 import { statusCode } from '../../status.js';
+import config from '../../config.js';
 
 export enum state {
   wait,
@@ -33,6 +34,7 @@ export default class Fight {
   protected initiative: number;
 
   protected timer: NodeJS.Timeout;
+  protected battleFinishTimer: NodeJS.Timeout;
   protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
@@ -69,19 +71,38 @@ export default class Fight {
   }
 
   public startTimer() {
+    clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       this.clients.forEach((client) => {
         if (client.fight.action === actionType.empty) {
           this.kickPlayer(client);
         }
       });
-    }, 11_000);
+    }, config.gameplay.fight.timer);
   }
 
   public stopTimer() {
     if (this.timer) {
       clearTimeout(this.timer);
       this.timer = null;
+    }
+  }
+
+  public startBattleFinishTimer() {
+    clearTimeout(this.battleFinishTimer);
+    this.battleFinishTimer = setTimeout(() => {
+      this.clients.forEach((client) => {
+        if (client.fight.inBattle) {
+          this.kickPlayer(client);
+        }
+      });
+    }, config.gameplay.fight.battleFinishTimer);
+  }
+
+  public stopBattleFinishTimer() {
+    if (this.battleFinishTimer) {
+      clearTimeout(this.battleFinishTimer);
+      this.battleFinishTimer = null;
     }
   }
 
@@ -94,7 +115,7 @@ export default class Fight {
   private timeoutStart(method: Function) {
     if (this.timeout) return;
     // @ts-ignore
-    this.timeout = setTimeout(method, 10_000);
+    this.timeout = setTimeout(method, config.gameplay.fight.disconnectTimeout);
   }
 
   public kickPlayer(client: Client) {
@@ -116,7 +137,7 @@ export default class Fight {
     if (!this.clients[0] || !this.clients[1]) {
       this.destroyTimeout = setTimeout(() => {
         this.destroy();
-      }, 10_000);
+      }, config.gameplay.fight.disconnectTimeout);
     }
   }
 
@@ -349,6 +370,7 @@ export default class Fight {
     const seed = Math.randomRange(0, 2000000000);
 
     this.clients.forEach((client) => {
+      client.fight.inBattle = true;
       client?.sendFightStartBattle(seed);
     });
   }
@@ -362,7 +384,7 @@ export default class Fight {
 
   public battleFinish() {
     if (this.state == state.battle) {
-      this.stopTimer();
+      this.stopBattleFinishTimer();
       this.resetState();
     }
   }

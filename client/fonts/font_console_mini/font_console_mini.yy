@@ -4,7 +4,7 @@
   "name": "font_console_mini",
   "AntiAlias": 1,
   "applyKerning": 0,
-  "ascender": 0,
+  "ascender": 6,
   "ascenderOffset": 0,
   "bold": false,
   "canGenerateBitmap": true,
@@ -119,7 +119,7 @@
   "italic": false,
   "kerningPairs": [],
   "last": 0,
-  "lineHeight": 0,
+  "lineHeight": 6,
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
