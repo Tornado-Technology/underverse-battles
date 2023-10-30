@@ -19,6 +19,9 @@ if (sprite_index == spr_ink_sans_flying_distracting)
 if (sprite_index == spr_ink_sans_flying_throwing_stuff)
 	sprite_index = spr_ink_sans_flying_threw;
 	
+if (sprite_index == spr_ink_sans_sits_down)
+	sprite_index = spr_ink_sans_sitting_takes_notebook;
+	
 if (sprite_index == spr_ink_sans_sitting_takes_notebook)
 	sprite_index = spr_ink_sans_sitting_with_notebook;
 

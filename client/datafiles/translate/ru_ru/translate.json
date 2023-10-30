@@ -702,7 +702,9 @@
     "Experiment": "Эксперимент",
     "Coat": "Пальто",
     "Vest": "Жилет",
-    "Lord": "Лорд"
+    "Lord": "Лорд",
+    "Murderer": "Убийца",
+    "PumpkinHell": "Тыквенный ад"
   },
   "Battle": {
     "Target": "Цель",

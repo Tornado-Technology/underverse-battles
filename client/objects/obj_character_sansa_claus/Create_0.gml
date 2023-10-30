@@ -9,7 +9,7 @@ frame = spr_sansa_claus_frame;
 // Animations
 idle_animation = spr_sansa_claus_idle;
 after_battle_animation = spr_sansa_claus_idle;
-defeated_animation = spr_sansa_claus_idle;
+defeated_animation = spr_sansa_claus_defeated;
 
 hand_up_animation = spr_sansa_claus_attack_2_up;
 hand_down_up_animation = spr_sansa_claus_attack_2_down_up;

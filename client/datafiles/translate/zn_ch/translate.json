@@ -298,7 +298,7 @@
       "Error": {
         "0": "0. 未知错误",
         "1": "1. 成功",
-        "2": "2. 连接插座已关闭",
+        "2": "2. 连接接口已关闭",
         "300": "300. 未知错误",
         "301": "301. 未连接到数据库",
         "302": "302. 数据库未在运行",
@@ -411,10 +411,10 @@
     "By": "by",
     "Developers": "程序",
     "Artists": "画师",
-    "StyleAuthors": "风格作者",
-    "PreviewArtist": "预览艺术家",
+    "StyleAuthors": "样式概念设计",
+    "PreviewArtist": "预览图",
     "Localizer": "翻译",
-    "Tester": "测试仪",
+    "Tester": "测试员",
     "StoryCreator": "故事构建",
     "Composers": "作曲",
     "Sponsors": "赞助",
@@ -700,7 +700,9 @@
     "Experiment": "实验",
     "Coat": "外套",
     "Vest": "汗衫",
-    "Lord": "上帝"
+    "Lord": "上帝",
+    "Murderer": "凶手",
+    "PumpkinHell": "南瓜地狱"
   },
   "Battle": {
     "Target": "目标",

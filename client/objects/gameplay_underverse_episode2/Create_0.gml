@@ -35,14 +35,14 @@ particle_paper = part_type_create();
 part_type_sprite(particle_paper, spr_paper_ink_sans, false, false, false);
 part_type_life(particle_paper, 240, 240);
 part_type_speed(particle_paper, 2.5, 2.5, -0.01, 0);
-part_type_direction(particle_paper, 180, 180, 0, 0);
+part_type_direction(particle_paper, -30, -30, 0, 0);
 part_type_orientation(particle_paper, 0, 0, 10, 0, false);
 
 particle_pencil = part_type_create();
 part_type_sprite(particle_pencil, spr_pencil_ink_sans, false, false, false);
 part_type_life(particle_pencil, 240, 240);
 part_type_speed(particle_pencil, 2.5, 2.5, -0.01, 0);
-part_type_direction(particle_pencil, 0, 0, 0, 0);
+part_type_direction(particle_pencil, -50, -50, 0, 0);
 part_type_orientation(particle_pencil, 0, 0, 10, 0, false);
 
 // Time sources
@@ -131,10 +131,10 @@ cutscenes = [
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_flying_distracting],
 		[cutscene_wait_by_dialog, 3],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_flying_throwing_stuff],
-		[cutscene_wait, 0.8],
+		[cutscene_wait, 2],
 		[cutscene_execute, function () {
-			part_particles_create(global.part_system_bullet, ink_sans.x - 5, ink_sans.y - 15, particle_paper, 1);
-			part_particles_create(global.part_system_bullet, ink_sans.x + 5, ink_sans.y - 15, particle_pencil, 1);
+			part_particles_create(global.part_system_bullet, ink_sans.x + 10, ink_sans.y - 16, particle_paper, 1);
+			part_particles_create(global.part_system_bullet, ink_sans.x + 3, ink_sans.y - 27, particle_pencil, 1);
 		}],
 		[cutscene_wait_dialog_end],
 		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui_hight],
@@ -157,7 +157,7 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 5],
 		[cutscene_object_set_sprtie, cross, spr_cross_sitting_crying_turns_back],
 		[cutscene_character_skip_moving, ink_sans],
-		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting_takes_notebook],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sits_down],
 		[cutscene_wait_dialog_end],
 		// Ink and Cross are sitting together
 		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui],
@@ -210,9 +210,9 @@ cutscenes = [
 		}],
 		[cutscene_wait, 3],
 		[cutscene_execute, function () {
-			ink_sans.x += 43;
+			ink_sans.x += 40;
 			ink_sans.sprite_index = spr_ink_sans_right_painting0;
-			cross.x += 22;
+			cross.x += 23;
 			cross.sprite_index = spr_cross_painted0;
 		}],
 		[cutscene_wait, 1],
@@ -226,16 +226,16 @@ cutscenes = [
 		[cutscene_execute, function () {
 			ink_sans.x += 250;
 			ink_sans.sprite_index = spr_ink_sans_running_left;
-			cross.x += 285;
+			cross.x += 290;
 			cross.sprite_index = spr_cross_running_left_to_ink;
 		}],
-		[cutscene_character_move, ink_sans, -620, 0, 2],
-		[cutscene_character_move, cross, -620, 0, 2],
-		[cutscene_wait, 5.5],
+		[cutscene_character_move, ink_sans, -625, 0, 2.5],
+		[cutscene_character_move, cross, -625, 0, 2.5],
+		[cutscene_wait, 5],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_running_right_without_broomie],
 		[cutscene_object_set_sprtie, cross, spr_cross_running_right_with_broomie],
-		[cutscene_character_move, ink_sans, 620, 0, 2],
-		[cutscene_character_move, cross, 620, 0, 2],
+		[cutscene_character_move, ink_sans, 625, 0, 2],
+		[cutscene_character_move, cross, 625, 0, 2],
 		[cutscene_wait, 4],
 		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui],
 		[cutscene_wait, 1],
@@ -244,7 +244,7 @@ cutscenes = [
 			instance_destroy(ink_sans);
 			ink_sans = instance_create_depth(220, 167, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_sitting_right0 });
 			instance_destroy(cross);
-			cross = instance_create_depth(272, 167, fight_depth.player, obj_character_cross, { sprite_index: spr_cross_left_sitting_calm });
+			cross = instance_create_depth(274, 167, fight_depth.player, obj_character_cross, { sprite_index: spr_cross_left_sitting_calm });
 			paintings = instance_create_depth(250, 167, fight_depth.player, obj_prop, { sprite_index: spr_drawings });
 		}],
 		[cutscene_dialog_async, episode + "Dialog9_Line1"],
@@ -418,7 +418,7 @@ cutscenes = [
 				cross = instance_create_depth(200, 167, fight_depth.player, obj_character_cross, { sprite_index: spr_cross_in_strings });
 			}
 		}],
-		[cutscene_object_set_position, cross, -30, -25],
+		[cutscene_object_set_position, cross, -30, -30],
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
 		[cutscene_wait, 1],
 		[effect_blackout_end],
@@ -443,7 +443,7 @@ cutscenes = [
 			error_sans = instance_create_depth(510, 167, fight_depth.player, obj_character_error_sans, { sprite_index: spr_error_sans_right_strings_walking } );
 			var i = 0;
 			repeat(2) {
-				string_error_sans[i] = instance_create_depth(error_sans.x - 12 + i * 2, error_sans.y - 18, fight_depth.player, obj_string_error_sans_story_mode, {
+				string_error_sans[i] = instance_create_depth(error_sans.x - 17 + i * 2, error_sans.y - 20, fight_depth.player, obj_string_error_sans_story_mode, {
 					depth: fight_depth.bullet,
 					scale_speed: 6,
 					image_xscale: 200,
@@ -472,17 +472,17 @@ cutscenes = [
 		[cutscene_execute, function () {
 			var i = 0;
 			repeat(2) {
-				string_error_sans[i] = instance_create_depth(error_sans.x - 10 + i * 2, error_sans.y - 15 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
+				string_error_sans[i] = instance_create_depth(error_sans.x - 17 + i * 2, error_sans.y - 18 - i * 2, fight_depth.bullet, obj_string_error_sans_story_mode, {
 					scale_speed: 6,
 					max_scale: 220
 				});
-				string_error_sans[i].shoot(cross.x, cross.y - 10);
+				string_error_sans[i].shoot(cross.x, cross.y - 17);
 				i++;
 			}
 		}],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () {
-			soul_cross = instance_create_depth(cross.x, cross.y - 10, fight_depth.bullet, obj_scene_soul, { sprite_index: spr_soul_cross });
+			soul_cross = instance_create_depth(cross.x, cross.y - 17, fight_depth.bullet, obj_scene_soul, { sprite_index: spr_soul_cross });
 			soul_cross.animating = false;
 			audio_play_sound_once(snd_spare_up);
 		}],
@@ -494,7 +494,7 @@ cutscenes = [
 				string_error_sans[i].pull();
 				i++;
 			}
-			soul_cross.move(400, 150, 6);
+			soul_cross.move(392, 150, 6);
 		}],
 		[cutscene_wait, 1.6],
 		// Ink Sans is coming

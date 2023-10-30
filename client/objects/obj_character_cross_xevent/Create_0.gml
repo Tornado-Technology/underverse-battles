@@ -23,6 +23,9 @@ frame = spr_cross_xevent_frame;
 idle_animation = spr_cross_xevent_idle;
 after_battle_animation = spr_cross_xevent_idle;
 defeated_animation = spr_cross_xevent_defeated;
+start1_animation = spr_cross_xevent_start1;
+fight1_animation = spr_cross_xevent_fight1;
+end1_animation = spr_cross_xevent_end1;
 
 // Actions
 passive_skill = PassiveSkill("Character.CrossXEvent.PassiveSkill");

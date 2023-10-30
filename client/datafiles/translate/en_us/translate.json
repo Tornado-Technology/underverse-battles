@@ -702,7 +702,9 @@
     "Experiment": "Experiment",
     "Coat": "Coat",
     "Vest": "Vest",
-    "Lord": "Lord"
+    "Lord": "Lord",
+    "Murderer": "Murderer",
+    "PumpkinHell": "Pumpkin hell"
   },
   "Battle": {
     "Target": "Target",

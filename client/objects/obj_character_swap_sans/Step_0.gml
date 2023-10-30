@@ -9,7 +9,7 @@ if (sprite_index == spr_swap_sans_idle &&
 	fight_get_initiative() == player_num &&
 	fight_get_state() == fight_state.battle &&
 	(player_action == 0 || player_action == 1))
-	sprite_index = spr_swap_sans_attack0_start;
+	sprite_index = spr_swap_sans_start0;
 
-else if (sprite_index == spr_swap_sans_attack0_fight && fight_get_initiative() != player_num)
-	sprite_index = spr_swap_sans_attack0_finish;
+else if (sprite_index == spr_swap_sans_fight0 && fight_get_initiative() != player_num)
+	sprite_index = spr_swap_sans_end0;

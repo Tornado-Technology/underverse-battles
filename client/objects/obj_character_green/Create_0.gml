@@ -34,8 +34,8 @@ skin_name = translate_get("CharactersStyles.Standard");
 frame = spr_green_frame;
 
 // Animations
-idle_animation = spr_green;
-after_battle_animation = spr_green;
+idle_animation = spr_green_idle;
+after_battle_animation = spr_green_idle;
 defeated_animation = spr_green_defeated;
 start1_animation = spr_green_attack1_start;
 fight1_animation = spr_green_attack1_fight;

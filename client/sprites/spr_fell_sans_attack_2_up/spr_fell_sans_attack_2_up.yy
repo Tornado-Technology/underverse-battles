@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_fell_sans_attack_2_up",
-  "bbox_bottom": 34,
-  "bbox_left": 4,
+  "bbox_bottom": 39,
+  "bbox_left": 1,
   "bbox_right": 26,
-  "bbox_top": 5,
+  "bbox_top": 2,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -20,7 +20,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 35,
+  "height": 40,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"99f9e0a2-e12c-42eb-93c8-a0e68a04a292","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Attack 2",
-    "path": "folders/Characteres/Fell Sans/Sprites/Char/Attack 2.yy",
+    "path": "folders/Characteres/Fell Sans/Sprites/Char/Standart/Attack 2.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -73,5 +73,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 44,
+  "width": 35,
 }

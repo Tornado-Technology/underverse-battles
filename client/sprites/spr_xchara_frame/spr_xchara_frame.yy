@@ -52,8 +52,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Xmas",
-    "path": "folders/Characteres/XChara/Frames/Xmas.yy",
+    "name": "Frames",
+    "path": "folders/Characteres/XChara/Frames.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
