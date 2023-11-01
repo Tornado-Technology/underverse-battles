@@ -47,19 +47,19 @@ if (is_mobile || mobile_mode) {
 		arrow.input_vector.y = ver;
 	
 	if (arrows_index.up.pressed && arrows_index.left.pressed) {
-		arrow.input_vector.sub(0, 2);
+		arrow.input_vector.sub(0, SPD);
 	};
 	
 	if (arrows_index.right.pressed && arrows_index.up.pressed) {
-		arrow.input_vector.sub(0, 2);
+		arrow.input_vector.sub(0, SPD);
 	};
 	
 	if (arrows_index.down.pressed && arrows_index.right.pressed) {
-		arrow.input_vector.add(0, 2);
+		arrow.input_vector.add(0, SPD);
 	};
 	
 	if (arrows_index.left.pressed && arrows_index.down.pressed) {
-		arrow.input_vector.add(0, 2);
+		arrow.input_vector.add(0, SPD);
 	};
 
 		movement_speed_x =  arrow.input_vector.x;
