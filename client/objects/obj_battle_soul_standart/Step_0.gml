@@ -29,36 +29,43 @@ if (is_desktop && !mobile_mode) {
 if (is_mobile || mobile_mode) {
 		var controllers_index = global.__ui_controls_instance.controllers_index
 		
-	if (instance_exists(obj_ui_controls) && controllers_index == 1 ) {
+	if (instance_exists(obj_ui_controls) && controllers_index == 1) {
 		var joystick = get_joystick();
 		movement_speed_x = SPD * joystick.input_vector.x;
 		movement_speed_y = SPD * joystick.input_vector.y;
 	}
 	
-	if (instance_exists(obj_ui_controls) && controllers_index == 0 ) {
-	 var arrow	=  get_arrow();
-	 var _arrow = input_arrows_check_button_is_held;
+	if (instance_exists(obj_ui_controls) && controllers_index == 0) {
+	var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
 		
-	if	( _arrow(vk_up) ) {
-		arrow.input_vector.y = -SPD;
+	var arrow  =  get_arrow();
+	var _arrow = input_arrows_check_button_is_held;
+	var ver	 =	(_arrow(vk_down)  - _arrow(vk_up)	* SPD);
+	var hor	 =	(_arrow(vk_right) - _arrow(vk_left) * SPD);
+	
+		arrow.input_vector.x = hor;
+		arrow.input_vector.y = ver;
+	
+	if (arrows_index.up.pressed && arrows_index.left.pressed) {
+		arrow.input_vector.sub(0, 2);
 	};
 	
-	if	( _arrow(vk_down) ) {
-		arrow.input_vector.y = SPD;
+	if (arrows_index.right.pressed && arrows_index.up.pressed) {
+		arrow.input_vector.sub(0, 2);
 	};
 	
-	if ( _arrow(vk_left) ) {
-		arrow.input_vector.x = -SPD;
+	if (arrows_index.down.pressed && arrows_index.right.pressed) {
+		arrow.input_vector.add(0, 2);
 	};
 	
-	if  ( _arrow(vk_right) ) {
-		arrow.input_vector.x = SPD;	
+	if (arrows_index.left.pressed && arrows_index.down.pressed) {
+		arrow.input_vector.add(0, 2);
 	};
-	
+
 		movement_speed_x =  arrow.input_vector.x;
 		movement_speed_y =  arrow.input_vector.y;
 		
-		 arrow.input_vector.set(0,0);
+		 arrow.input_vector.set(0, 0);
 	};
 };
 
