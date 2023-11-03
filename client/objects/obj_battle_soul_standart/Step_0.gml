@@ -40,8 +40,8 @@ if (is_mobile || mobile_mode) {
 		
 	var arrow  =  get_arrow();
 	var _arrow = input_arrows_check_button_is_held;
-	var ver	 =	(_arrow(vk_down)  - _arrow(vk_up)	* SPD);
-	var hor	 =	(_arrow(vk_right) - _arrow(vk_left) * SPD);
+	var ver	 =	(_arrow(vk_down) * SPD - _arrow(vk_up) * SPD);
+	var hor	 =	(_arrow(vk_right) * SPD - _arrow(vk_left) * SPD);
 	
 		arrow.input_vector.x = hor;
 		arrow.input_vector.y = ver;
