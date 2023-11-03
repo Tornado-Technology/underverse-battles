@@ -29,13 +29,13 @@ if (is_desktop && !mobile_mode) {
 if (is_mobile || mobile_mode) {
 		var controllers_index = global.__ui_controls_instance.controllers_index
 		
-	if (instance_exists(obj_ui_controls) && controllers_index == 1) {
+	if (controllers_index == control_input_mode.ui_joystick) {
 		var joystick = get_joystick();
 		movement_speed_x = SPD * joystick.input_vector.x;
 		movement_speed_y = SPD * joystick.input_vector.y;
 	}
 	
-	if (instance_exists(obj_ui_controls) && controllers_index == 0) {
+	if (controllers_index == control_input_mode.ui_arrows) {
 	var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
 		
 	var arrow  =  get_arrow();

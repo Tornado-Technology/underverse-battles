@@ -29,13 +29,13 @@ if (controller.controllers_index == control_input_mode.ui_arrows) {
 	var	controls_arrow = controller.get_controller().controls_arrow;
 	controls_arrows = []
 	controls = [SettingsMobileArrow(id,  controls_arrow.up, 0)]
-	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.down, 1) )
-	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.left, 2) )
-	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.right, 3) )
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.down,1))
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.left,2))
+	array_push(controls_arrows, SettingsMobileArrow(id,  controls_arrow.right,3))
 
 };
 
-controllers_switching = controller.controls_switching.controls_switching
+controllers_switching = UIControlSwitching();
 };
 
 element = undefined;
@@ -60,26 +60,21 @@ var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
 for (var i = 0; i < array_length(buttons); i++) {
 	array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
 	}
-	array_push(controls, SettingsMobileControl(id, controllers_switching  ))
+	array_push(controls, SettingsMobileControl(id, controllers_switching))
 // Special attack
 	array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
 
 
 elements_reset = function () {
 	var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
-	draw_menu = false
-	var i = 0
-	repeat (array_length(controls)) {
-		controls[@ i] = -1;
-		i++;
-	};
+	array_clear(controls);
 	
 	draw_controller();
 	
 	for (var i = 0; i < array_length(buttons); i++) {
 	array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
 	}
-	array_push(controls, SettingsMobileControl(id, controllers_switching  ))
+	array_push(controls, SettingsMobileControl(id, controllers_switching))
 // Special attack
 	array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
 

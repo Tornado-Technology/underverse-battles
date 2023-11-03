@@ -10,16 +10,16 @@ if (is_desktop && !mobile_mode) {
 }
 
 enum control_input_mode {
-	ui_arrows,
 	ui_joystick,
+	ui_arrows,
 }
 
 controllers = [
-	UIControllerArrows(),
-	UIControllerJoystick()
+	UIControllerJoystick(),
+	UIControllerArrows()
 ];
 
-controllers_index =  data_get("Settings.MobileControls.ChosetControls.Index");
+controllers_index = data_get("Settings.MobileControls.ChosetControls.Index");
 
 enable = false;
 
@@ -42,9 +42,6 @@ controls_arrow_y = [
 	data_get (key + "Right" + ".Y")
 	];
 	
-
-controls_switching = UIControlSwitching();
-
 
 change_alpha = function(value) {
 	get_controller().change_alpha(value);
