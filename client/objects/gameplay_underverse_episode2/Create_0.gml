@@ -399,11 +399,11 @@ cutscenes = [
 					scale_speed: 5,
 					max_scale: 280
 				});
-				string_error_sans[i].shoot(cross.x, cross.y - 15);
+				string_error_sans[i].shoot(cross.x, cross.y - 17);
 				i++;
 			}
 		}],
-		[cutscene_wait, 1],
+		[cutscene_wait, 0.9],
 		[effect_blackout_start, c_black, false, fight_depth.ui],
 		[cutscene_execute, function() { instance_destroy_array(string_error_sans); }],
 		[audio_play_sound_once, snd_spare_up],
@@ -494,7 +494,7 @@ cutscenes = [
 				string_error_sans[i].pull();
 				i++;
 			}
-			soul_cross.move(392, 150, 6);
+			soul_cross.move(388, 146, 6);
 		}],
 		[cutscene_wait, 1.6],
 		// Ink Sans is coming

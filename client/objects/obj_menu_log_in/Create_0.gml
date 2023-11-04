@@ -12,7 +12,7 @@ var sx = 123;
 var fw = 16;
 var ox = fw + 1;
 
-text_waiting_for_login =  translate_get("Menu.LogIn.WaitingForLogin");
+text_waiting_for_login = translate_get("Menu.LogIn.WaitingForLogin");
 text_title =  translate_get("Menu.LogIn.Title");
 
 menu = get_menu();
