@@ -39,28 +39,12 @@ if (is_mobile || mobile_mode) {
 	var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
 		
 	var arrow  =  get_arrow();
-	var _arrow = input_arrows_check_button_is_held;
-	var ver	 =	(_arrow(vk_down) * SPD - _arrow(vk_up) * SPD);
-	var hor	 =	(_arrow(vk_right) * SPD - _arrow(vk_left) * SPD);
+	var ver	 =	(arrows_index.down.pressed * SPD - arrows_index.up.pressed * SPD);
+	var hor	 =	(arrows_index.right.pressed  * SPD - arrows_index.left.pressed * SPD);
 	
 		arrow.input_vector.x = hor;
 		arrow.input_vector.y = ver;
 	
-	if (arrows_index.up.pressed && arrows_index.left.pressed) {
-		arrow.input_vector.sub(0, SPD);
-	};
-	
-	if (arrows_index.right.pressed && arrows_index.up.pressed) {
-		arrow.input_vector.sub(0, SPD);
-	};
-	
-	if (arrows_index.down.pressed && arrows_index.right.pressed) {
-		arrow.input_vector.add(0, SPD);
-	};
-	
-	if (arrows_index.left.pressed && arrows_index.down.pressed) {
-		arrow.input_vector.add(0, SPD);
-	};
 
 		movement_speed_x =  arrow.input_vector.x;
 		movement_speed_y =  arrow.input_vector.y;
