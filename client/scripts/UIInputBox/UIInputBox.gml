@@ -178,8 +178,8 @@ function UIInputBox(image, default_text, width, height, is_show_text) constructo
 			if (!is_active) return;
 				
 			remove_part_text(1, text_length);
-	
-			paste_text(args, 1);
+			
+			paste_text(args[0], 1);
 			is_active = false;
 		});
 	}

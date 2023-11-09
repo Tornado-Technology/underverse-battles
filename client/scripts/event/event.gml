@@ -41,11 +41,11 @@ function Event() constructor {
 		for (var i = 0; i < array_length(listeners); i++) {
 			var listener_method = listeners[i];
 			
-			//try {
-				method_call(listener_method, array_arguments);
-			//} catch (exception) {
-			////	throw new EventException(exception);
-			//}
+		try {
+				listener_method(array_arguments);
+			} catch(error) {
+			//logger.fatal("Event: Listener method call error:\n{0}\n{1}\n{2}", error.longMessage, error.script, string_join(error.stacktrace, "\n"));
+			}
 		}
 	}
 }

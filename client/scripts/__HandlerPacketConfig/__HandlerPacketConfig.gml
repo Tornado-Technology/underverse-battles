@@ -80,7 +80,7 @@ packet_handler_register("verification", function(data) {
 		_id = undefined;
 				
 		global.verify_code_connection = global.virtual_keyboard.on_data.connect(function(args) {
-			if (args != _id) { 
+			if (args[1] != _id) { 
 				return; 
 			}
 			send_verification(args[0]);

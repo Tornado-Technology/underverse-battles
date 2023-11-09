@@ -17,7 +17,7 @@ text_rules = translate_get("Menu.SignUp.Rules");
 
 show_loading = false;
 
-waiting_time = 300;
+waiting_time = 1900;
 
 var sx = 115;
 var fw = 16;
