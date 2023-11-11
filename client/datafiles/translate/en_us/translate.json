@@ -763,7 +763,7 @@
       ],
       "Dialog4": [
         "{Ink:normal}Greetings, player. Welcome to Underverse Battles.",
-        "{Ink:normal}Now I will learn you, how to fight in this game.",
+        "{Ink:normal}Now I will teach you, how to fight in this game.",
         "{Ink:normal}Do you see those bars?",
         "{Ink:normal}Red bar is HP, white one is stamina, cyan one is magic.",
         "{Ink:normal}Each player takes turns.",
@@ -783,7 +783,7 @@
         "{Ink:glad}Perfect, we hit!",
         "{Ink:normal}Every time you choose an attack, your stamina is lost.",
         "{Ink:normal}Now Chara is attacking again.",
-        "{Ink:normal}You can try to predict the enemy attack so we don't lose HP and restore our stamina.",
+        "{Ink:normal}You can try to predict the enemy's attack so we don't lose HP and restore our stamina.",
         "{Ink:normal}Choose one of the opponent attacks."
       ],
       "Dialog7": [
@@ -852,7 +852,7 @@
         "{Sans:tired}I shouldn't have slept here.",
         "{Sans:tired}Looks like that guy loves to cause trouble.",
         "{Ink:calm}Actually, this is the first time he's done something like this.",
-        "{Ink:calm}He's scared since... Will... It's a long story..."
+        "{Ink:calm}He's scared since... Well... It's a long story..."
       ],
       "Choise1": [
         "The artist version of Sans wants to talk with someone.",
@@ -891,7 +891,7 @@
         "{Ink:calm}However, as I visited Cross to keep him company, he won full control of both souls."
       ],
       "Dialog9_Line1": [
-        "{Ink:none}One day, while were drawing stuff, he stood up.",
+        "{Ink:none}One day, while we were drawing stuff, he stood up.",
         "{Ink:none}He looked pretty down in the dumps."
       ],
       "Dialog10_Line1": [

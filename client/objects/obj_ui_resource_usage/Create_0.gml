@@ -80,18 +80,18 @@ data_updated_handler("Settings.UI.PingStyle");
 data_updated_handler("Settings.UI.FpsStyle");
 
 network_client.ping_updated.connect(function(ping) {
-	var text = ping > ping_style.no_connection.value ? $"{ping}ms" : "No connect";
+	var text = ping[0] > ping_style.no_connection.value ? $"{ping[0]}ms" : "No connect";
 	var color = ping_style.no_connection.color;
 
-	if (ping >= ping_style.good.value) {
+	if (ping[0] >= ping_style.good.value) {
 		color = ping_style.good.color;
 	}
 
-	if (ping >= ping_style.normal.value) {
+	if (ping[0] >= ping_style.normal.value) {
 		color = ping_style.normal.color;
 	}
 	
-	if (ping >= ping_style.bad.value) { 
+	if (ping[0] >= ping_style.bad.value) { 
 		color = ping_color.bad.color;
 	}
 	
