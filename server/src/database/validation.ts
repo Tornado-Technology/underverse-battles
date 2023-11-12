@@ -18,7 +18,7 @@ export const validatePassword = (password: string): number => {
 }
 
 export const validateUsername = async (username: string): Promise<statusCode> => {
-  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username) !== undefined) {
+  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item === username) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
@@ -26,7 +26,7 @@ export const validateUsername = async (username: string): Promise<statusCode> =>
 }
 
 export const validateNikcname = (nickname: string): statusCode => {
-  if (!nickanmeRegex.test(nickname) || nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
+  if (!nickanmeRegex.test(nickname) && nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
