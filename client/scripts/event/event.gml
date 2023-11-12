@@ -40,12 +40,22 @@ function Event() constructor {
 		
 		for (var i = 0; i < array_length(listeners); i++) {
 			var listener_method = listeners[i];
-			
-		try {
-				listener_method(array_arguments);
-			} catch(error) {
-			//logger.fatal("Event: Listener method call error:\n{0}\n{1}\n{2}", error.longMessage, error.script, string_join(error.stacktrace, "\n"));
-			}
+			method_call(listener_method, array_arguments);	
+		
+		}		
+		
+	}
+	
+	static invoke_for_array  = function () {
+			var array_arguments = [];
+		for (var i = 0; i < argument_count; i++) {
+			array_push(array_arguments, argument[i]);
+		}
+		
+		for (var i = 0; i < array_length(listeners); i++) {
+			var listener_method = listeners[i];
+			listener_method(array_arguments);	
 		}
 	}
+	
 }
