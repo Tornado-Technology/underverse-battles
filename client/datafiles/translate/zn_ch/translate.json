@@ -289,9 +289,15 @@
       "WriteLogin": "输入您的用户名",
       "WritePassword": "输入新的密码"
     },
-    "LogInMessage": {
+    "Notifications": {
+      "UpdateRequired": "您需要下载最新版本才能多人游戏",
       "RegistrationSuccessful": "注册成功! 现在你可以登录了。",
       "LoginSuccessful": "账号登录成功!",
+      "UsernameSuccessful": "用户名 已成功修改",
+      "NicknameSuccessful": "昵称 已成功修改",
+      "PasswordSuccessful": "密码 已成功修改",
+      "EmailSuccessful": "E-mail地址 已成功修改",
+      "DeleteSuccessful": "账号 已成功删除",
       "RegistrationInvalid": "注册无效(连接错误)",
       "LoginInvalid": "帐号登录无效(连接错误)",
       "ErrorSecondPassword": "第二个密码与第一个密码不一致",
@@ -701,9 +707,9 @@
     "Coat": "外套",
     "Vest": "汗衫",
     "Lord": "上帝",
-    "Murderer": "凶手",
+    "Murderer": "腥红杀手",
     "PumpkinHell": "南瓜地狱",
-    "CodeHacker": "代码黑客"
+    "CodeHacker": "骇客"
   },
   "Battle": {
     "Target": "目标",

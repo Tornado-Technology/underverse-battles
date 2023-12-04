@@ -289,9 +289,15 @@
       "WriteLogin": "Write your username",
       "WritePassword": "Write a new password"
     },
-    "LogInMessage": {
+    "Notifications": {
+      "UpdateRequired": "You need to download the update to access multiplayer",
       "RegistrationSuccessful": "Registration successful! Now you can log in",
       "LoginSuccessful": "Account login successful!",
+      "UsernameSuccessful": "Username changed successfully",
+      "NicknameSuccessful": "Nickname changed successfully",
+      "PasswordSuccessful": "Password changed successfully",
+      "EmailSuccessful": "E-mail changed successfully",
+      "DeleteSuccessful": "Account deleted successfully",
       "RegistrationInvalid": "Registration invalid (connect error)",
       "LoginInvalid": "Account login invalid (connect error)",
       "ErrorSecondPassword": "The second password does not match the first",
@@ -306,11 +312,11 @@
         "304": "304. Account already exist",
         "305": "305. The profile is not exist",
         "306": "306. The profile already exist",
-        "307": "307. Username is busy",
-        "308": "308. Username does not match the rules",
+        "307": "307. This name is busy",
+        "308": "308. This name is prohibited",
         "309": "309. Incorrect password",
-        "310": "310. E-mail is busy",
-        "311": "311. E-mail does not comply with rules",
+        "310": "310. This E-mail is busy",
+        "311": "311. This E-mail is prohibited",
         "312": "312. Verification code is wrong",
         "313": "313. Verification time out"
       }

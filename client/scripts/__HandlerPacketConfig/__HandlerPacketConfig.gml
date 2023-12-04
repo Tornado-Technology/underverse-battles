@@ -4,13 +4,13 @@ global.packet_handler = {};
 
 var callback_change_password = function(data) {
 	if (data.status != status_code.success) {
-		display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 		return;
 	}
 			
 	network_account = data.account;
 	network_profile = data.profile;
-	display_show_message_info("Change password successful", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.PasswordSuccessful"), c_lime);
 }
 
 packet_handler_register("connection", function(data) {
@@ -20,10 +20,15 @@ packet_handler_register("connection", function(data) {
 		return;
 	}
 			
-	logger.error("Client connectin rejected, code: {0}.", code);
+	logger.error($"Client connectin rejected, code: {code}.");
 	global.network_blocking = true;
 	network_disconnect(false);
-	display_show_message_info("Connection Rejected[" + string(code) + "]", c_red);
+	if (code == status_code.updateRequired) {
+		display_show_message_info(translate_get("Menu.Notifications.UpdateRequired"), c_red, 380);
+	}
+	else {
+		display_show_message_info($"Connection rejected. Status code {code}", c_red, 380);
+	}
 });
 
 packet_handler_register("ping", function(data) {
@@ -44,13 +49,13 @@ packet_handler_register("login", function(data) {
 		network_profile = data.profile;
 		network_account = data.account;
 		logger.info("Login success");
-		display_show_message_info(translate_get("Menu.LogInMessage.LoginSuccessful"), c_lime);
+		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
 		on_network_login.invoke(data.status);
 		return;
 	}
 
-	logger.error("Login failed. Error: ", data.status);
-	display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
+	logger.error($"Login failed. Error: {data.status}");
+	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 	on_network_login.invoke(data.status);
 });
 
@@ -93,23 +98,23 @@ packet_handler_register("verification", function(data) {
 
 packet_handler_register("changeNickname", function(data) {
 	if (data.status != status_code.success) {
-		display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 		return;
 	}
 			
 	network_account = data.account;
 	network_profile = data.profile;
-	display_show_message_info("Change nickname successful", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.NicknameSuccessful"), c_lime);
 });
 packet_handler_register("changeUsername", function(data) {
 	if (data.status != status_code.success) {
-		display_show_message_info(translate_get("Menu.LogInMessage.Error." + string(data.status)), c_red);
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 		return;
 	}
 			
 	network_account = data.account;
 	network_profile = data.profile;
-	display_show_message_info("Change username successful", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.UsernameSuccessful"), c_lime);
 });
 
 packet_handler_register("changePassword", callback_change_password);
@@ -123,7 +128,7 @@ packet_handler_register("changeEmail", function(data) {
 			
 	network_account = data.account;
 	network_profile = data.profile;
-	display_show_message_info("Change email successful", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.EmailSuccessful"), c_lime);
 });
 
 packet_handler_register("deleteAccount", function(data) {

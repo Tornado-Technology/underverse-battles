@@ -38,6 +38,7 @@ enum status_code {
 	databaseEmailWrong = 311,
 	databaseVerificationWrongCode = 312,
 	databaseVerificationTimeout = 313,
+	updateRequired = 426
 }
 
 // Globals

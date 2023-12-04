@@ -1,11 +1,12 @@
 import { usernameDefault } from './schemas/account.js';
 import { statusCode } from '../status.js';
 import { Account } from './schemas/account.js';
+import Logger from '../util/logging.js';
 
 // If you want to change the password and name styles, change RegEx below
-const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*?~]{6,}$/;
-const usernameRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
-const nickanmeRegex = /^[a-zA-Z_][a-zA-Z0-9_.-]{1,29}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*?~]{6,999}$/;
+const usernameRegex = /^[a-zA-Z][a-zA-Z0-9_.]{1,29}$/;
+const nickanmeRegex = /^[a-zA-Z0-9_.!?]{1,29}$/;
 
 const usernameBlacklist = [
   usernameDefault,
@@ -18,15 +19,16 @@ export const validatePassword = (password: string): number => {
 }
 
 export const validateUsername = async (username: string): Promise<statusCode> => {
-  if (!usernameRegex.test(username) && usernameBlacklist.find((item) => item === username) !== undefined) {
+  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
   return await Account.findOne({ username }) ? statusCode.databaseUsernameBusy : statusCode.success;
 }
 
-export const validateNikcname = (nickname: string): statusCode => {
-  if (!nickanmeRegex.test(nickname) && nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
+export const validateNickname = async (nickname: string): Promise<statusCode> => {
+  Logger.debug("Nickanme: " + nickname + " Regex Test: " + String(nickanmeRegex.test(nickname)));
+  if (!nickanmeRegex.test(nickname) || nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 

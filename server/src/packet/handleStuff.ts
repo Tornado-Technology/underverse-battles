@@ -7,7 +7,7 @@ import { versions, connectionOptions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
-import { infoValidate, validatePassword, validateUsername, validateNikcname } from '../database/validation.js';
+import { infoValidate, validatePassword, validateUsername, validateNickname } from '../database/validation.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -27,7 +27,7 @@ export const handlePacket = async (client: Client, data: any) => {
         if (!admitted) {
           Logger.warn(`Client version "${info.version}" or build "${info.build}" is not registered on the server`);
           client.verifying = false;
-          client.sendConnection(statusCode.error);
+          client.sendConnection(statusCode.updateRequired);
           client.destroy();
           break;
         }
@@ -198,7 +198,7 @@ export const handlePacket = async (client: Client, data: any) => {
         break;
       }
 
-      const nicknameValidation = await validateNikcname(data.username);
+      const nicknameValidation = await validateNickname(data.nickname);
       if (nicknameValidation !== statusCode.success) {
         client.sendChangeNickname(nicknameValidation);
         break;
