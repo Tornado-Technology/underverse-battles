@@ -1,9 +1,7 @@
 event_inherited();
-// Base
-name = translate_get("CharactersStyles.OnByke");
 
 // Skins
-skin_name = translate_get("Characters.OnByke");
+skin_name = translate_get("CharactersStyles.OnByke");
 frame = spr_sans_on_byke_frame;
 
 // Animations

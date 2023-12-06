@@ -709,7 +709,18 @@
     "Lord": "上帝",
     "Murderer": "腥红杀手",
     "PumpkinHell": "南瓜地狱",
-    "CodeHacker": "骇客"
+    "CodeHacker": "骇客",
+    "Promised": "Promised",
+    "Saness": "Saness",
+    "Puppet": "Puppet",
+    "ChangedReality": "Changed reality",
+    "Woodoo": "Woodoo",
+    "Fiery": "Fiery",
+    "Powerful": "Powerful",
+    "Infected": "Infected",
+    "Magenta": "Magenta",
+    "Hallowtide": "Hallowtide",
+    "Steampunk": "Steampunk"
   },
   "Battle": {
     "Target": "目标",

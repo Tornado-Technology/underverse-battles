@@ -3,7 +3,7 @@ event_inherited();
 name = translate_get("CharactersStyles.SansaClaus");
 
 // Skins
-skin_name = translate_get("Characters.SansaClaus");
+skin_name = translate_get("CharactersStyles.SansaClaus");
 frame = spr_sansa_claus_frame;
 
 // Animations
