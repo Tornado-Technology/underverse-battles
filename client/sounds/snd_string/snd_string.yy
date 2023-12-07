@@ -9,9 +9,7 @@
   "bitDepth": 0,
   "bitRate": 64,
   "compression": 1,
-  "ConfigValues": {
-    "Development": {"audioGroupId":"{\"name\":\"sound\",\"path\":\"audiogroups/sound\"}",},
-  },
+  "ConfigValues": {},
   "conversionMode": 0,
   "duration": 0.204422,
   "parent": {

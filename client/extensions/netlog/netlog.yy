@@ -19,7 +19,7 @@
   "exportToGame": true,
   "extensionVersion": "1.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"netlog.gml","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"netlog_is_ready","hidden":true,"value":"(global.netlog_ready)",},
       ],"copyToTargets":105554172285166,"filename":"netlog.gml","final":"netlog_cleanup","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"netlog_preinit","argCount":0,"args":[],"documentation":"","externalName":"netlog_preinit","help":"","hidden":false,"kind":11,"returnType":2,},

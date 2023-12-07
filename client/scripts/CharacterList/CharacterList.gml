@@ -82,21 +82,6 @@ function CharacterList() {
 			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame)
 		]
 	];
-
-	if (development_mode) {
-		//array_push(global.characters, [
-		//	new Character(obj_char_jevil, "Jevil", "Standard", spr_jevil_frame)
-		//]);
-		
-		array_push(global.characters, [
-            new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame),
-            new Character(obj_character_tornado_scaly, "Tornado", "Scaly", spr_tornado_frame_scaly),
-        ]);
-		
-		//array_push(global.characters, [
-		//	new Character(obj_character_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
-		//]);
-	}
 }
 
 function init_characters() {

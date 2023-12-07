@@ -9,9 +9,7 @@
   "bold": false,
   "canGenerateBitmap": true,
   "charset": 0,
-  "ConfigValues": {
-    "Development": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
-  },
+  "ConfigValues": {},
   "first": 0,
   "fontName": "Determination Mono(RUS BY LYAJK",
   "glyphOperations": 0,

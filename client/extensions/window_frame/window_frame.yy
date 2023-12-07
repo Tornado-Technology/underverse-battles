@@ -12,16 +12,14 @@
   "androidsourcedir": "",
   "author": "",
   "classname": "",
-  "ConfigValues": {
-    "Development": {"copyToTargets":"194","HTML5CodeInjection":"","ioscodeinjection":"","tvoscodeinjection":"",},
-  },
+  "ConfigValues": {},
   "copyToTargets": 113497714299118,
   "date": "2019-12-12T01:34:29",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "1.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":9223372036854775807,"filename":"window_frame.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"window_frame.dll","constants":[],"copyToTargets":9223372036854775807,"filename":"window_frame.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"window_command_check_raw","argCount":2,"args":[
             1,
             2,
@@ -148,7 +146,7 @@
       ],"origname":"extensions\\window_frame.dll","ProxyFiles":[
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"window_frame_x64.dll","TargetMask":6,},
       ],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"window_frame.gml","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"window_frame_is_ready","hidden":false,"value":"global.__window_frame_ready",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"window_command_close","hidden":false,"value":"$F060",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"window_command_maximize","hidden":false,"value":"$F030",},
@@ -189,7 +187,7 @@
         {"name":"window_get_topmost","path":"extensions/window_frame/window_frame.yy",},
         {"name":"window_set_topmost","path":"extensions/window_frame/window_frame.yy",},
       ],"origname":"extensions\\gml.gml","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"autogen.gml","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"autogen.gml","constants":[],"copyToTargets":-1,"filename":"autogen.gml","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"window_command_check","argCount":1,"args":[
             2,
           ],"documentation":"","externalName":"window_command_check","help":"window_command_check(button:int)->number","hidden":false,"kind":2,"returnType":2,},

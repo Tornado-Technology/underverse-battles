@@ -10,7 +10,6 @@
   "collisionKind": 1,
   "collisionTolerance": 0,
   "ConfigValues": {
-    "Development": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
     "Mobile": {"textureGroupId":"{\"name\":\"Default\",\"path\":\"texturegroups/Default\"}",},
   },
   "DynamicTexturePage": false,

@@ -52,6 +52,7 @@
     {"name":"Sprites","order":3,"path":"folders/Characteres/Sans/Sprites.yy",},
     {"name":"Char","order":1,"path":"folders/Characteres/Sans/Sprites/Char.yy",},
     {"name":"Promised","order":3,"path":"folders/Characteres/Sans/Sprites/Char/Promised.yy",},
+    {"name":"Attack 2","order":15,"path":"folders/Characteres/Sans/Sprites/Char/Promised/Attack 2.yy",},
     {"name":"Sansa Claus","order":2,"path":"folders/Characteres/Sans/Sprites/Char/Sansa Claus.yy",},
     {"name":"Frames","order":2,"path":"folders/Characteres/Sans/Sprites/Frames.yy",},
     {"name":"Sock police","order":12,"path":"folders/Characteres/Sock police.yy",},
@@ -239,7 +240,6 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
-    {"name":"Attack 2","order":15,"path":"folders/Characteres/Sans/Sprites/Char/Promised/Attack 2.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},

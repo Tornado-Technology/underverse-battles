@@ -20,7 +20,7 @@
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"YandexMobileAds.ext","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"YandexMobileAds_ASYNC_RESPONSE_YMA_INITIALIZED","hidden":false,"value":"87432",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"YandexMobileAds_ASYNC_RESPONSE_YMA_ON_REWARDED","hidden":false,"value":"87433",},
       ],"copyToTargets":8,"filename":"YandexMobileAds.ext","final":"","functions":[
