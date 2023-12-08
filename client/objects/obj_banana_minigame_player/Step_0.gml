@@ -1,6 +1,19 @@
 var input_x = int64(input_check_held(input.right)) - int64(input_check_held(input.left));
 var input_y = int64(input_check_held(input.down)) - int64(input_check_held(input.up));
 
+if (is_mobile) {
+	var controllers_index = global.__ui_controls_instance.controllers_index;
+		if (controllers_index == control_input_mode.ui_arrows) {
+		var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
+		
+		var arrow  =  get_arrow();
+		var input_x	 =	(arrows_index.right.pressed - arrows_index.left.pressed);
+		var input_y	 =	(arrows_index.down.pressed - arrows_index.up.pressed);
+
+	};
+};
+
+
 var velocity_x = input_x * movement_speed;
 var velocity_y = input_y * movement_speed;
 

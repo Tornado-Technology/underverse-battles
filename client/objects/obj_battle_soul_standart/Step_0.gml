@@ -27,7 +27,7 @@ if (is_desktop && !mobile_mode) {
 }
 
 if (is_mobile || mobile_mode) {
-		var controllers_index = global.__ui_controls_instance.controllers_index
+		var controllers_index = global.__ui_controls_instance.controllers_index;
 		
 	if (controllers_index == control_input_mode.ui_joystick) {
 		var joystick = get_joystick();
@@ -39,8 +39,8 @@ if (is_mobile || mobile_mode) {
 	var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
 		
 	var arrow  =  get_arrow();
-	var ver	 =	(arrows_index.down.pressed * SPD - arrows_index.up.pressed * SPD);
-	var hor	 =	(arrows_index.right.pressed  * SPD - arrows_index.left.pressed * SPD);
+	var ver	 =	(arrows_index.down.pressed - arrows_index.up.pressed) * SPD;
+	var hor	 =	(arrows_index.right.pressed - arrows_index.left.pressed) * SPD;
 	
 		arrow.input_vector.x = hor;
 		arrow.input_vector.y = ver;

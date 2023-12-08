@@ -116,7 +116,7 @@ function ClassUIControllerArrows() constructor {
 	static draw = function(position_x, position_y) {	
 		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
 		var strunct  = ["up", "down", "left", "right"];
-		var scale = ["Up", "Down","Left", "Right"]
+		var scale = ["Up", "Down","Left", "Right"];
 		var i = 0;
 			repeat (array_length(scale)) {
 			controls_arrow[$ strunct[i]].draw(position_x[i], position_y[i])	
