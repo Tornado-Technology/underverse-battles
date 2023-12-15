@@ -10,7 +10,6 @@ change_element = function(_element) {
 }
 
 draw_controller = function () {
-	controls =[];
 var controller = global.__ui_controls_instance;
 
 	if (controller.controllers_index == control_input_mode.ui_joystick) {	
@@ -41,13 +40,11 @@ var controller = global.__ui_controls_instance;
 	
 	var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
 	for (var i = 0; i < array_length(buttons); i++) {
-		array_push(controls,SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
+		array_push(controls, SettingsMobileButton(id, buttons[i].instance.UI.image, buttons[i].name));
 	}
-
-	
 		// Special attack
 		array_push(controls, SettingsMobileCommonButton(id, spr_special_attack_cross, "SpecialAction"));
-	return controls
+
 };
 
 element = undefined;
@@ -68,8 +65,11 @@ text_size_position_y = slider_position_y - 7;
 
 draw_controller();
 
-
 elements_reset = function () {
+	for (var i = 0; i < array_length(controls); i++) {
+		controls[i].save_data();
+	}
+
 	array_clear(controls);
 	draw_controller();
 };
