@@ -79,7 +79,8 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
-			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame)
+			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
+			new Character(obj_character_green_christmas, "Green", "Christmas", spr_green_christmas_frame)
 		]
 	];
 }
