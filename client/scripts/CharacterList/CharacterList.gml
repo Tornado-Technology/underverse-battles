@@ -63,7 +63,8 @@ function CharacterList() {
 			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame)
 		],
 		[
-			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame)
+			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
+			new Character(obj_character_swap_sans_girlanda, "SwapSans", "Girlanda", spr_swap_sans_girlanda_frame)
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
@@ -79,7 +80,8 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
-			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame)
+			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
+			new Character(obj_character_green_chistmas_tree, "Green", "ChistmasTree", spr_green_chrismas_tree_frame)
 		]
 	];
 }

@@ -712,6 +712,7 @@
     "Murderer": "Murderer",
     "PumpkinHell": "Pumpkin hell",
     "CodeHacker": "Code hacker",
+	"ChistmasTree": "ChistmasTree",
     "Promised": "Promised",
     "Saness": "Saness",
     "Puppet": "Puppet",
@@ -722,7 +723,8 @@
     "Infected": "Infected",
     "Magenta": "Magenta",
     "Hallowtide": "Hallowtide",
-    "Steampunk": "Steampunk"
+    "Steampunk": "Steampunk",
+	"Girlanda": "Girlanda"
   },
   "Battle": {
     "Target": "Target",
