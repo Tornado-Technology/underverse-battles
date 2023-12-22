@@ -711,6 +711,7 @@
     "Lord": "Лорд",
     "Murderer": "Убийца",
     "PumpkinHell": "Тыквенный ад",
+	"ChistmasTree": "Рождество ёлка",
     "CodeHacker": "Взломщик кода",
     "Promised": "Промисед",
     "Saness": "Санесс",
@@ -722,7 +723,8 @@
     "Infected": "Заражённый",
     "Magenta": "Пурпурный",
     "Hallowtide": "Хэллоутайд",
-    "Steampunk": "Стимпанк"
+    "Steampunk": "Стимпанк",
+	"Girlanda": "Гирлянда"
   },
   "Battle": {
     "Target": "Цель",

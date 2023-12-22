@@ -37,6 +37,9 @@ frame = spr_swap_sans_frame;
 idle_animation = spr_swap_sans_idle;
 after_battle_animation = spr_swap_sans_idle;
 defeated_animation = spr_swap_sans_defeated;
+fight_0_start_animation = spr_swap_sans_start0;
+fight_0_idle_animation = spr_swap_sans_fight0;
+fight_0_finish_animation = spr_swap_sans_end0;
 
 // Actions
 passive_skill = PassiveSkill("Character.SwapSans.PassiveSkill");

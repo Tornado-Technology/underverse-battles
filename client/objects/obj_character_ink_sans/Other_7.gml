@@ -1,13 +1,13 @@
 event_inherited();
 
-if (sprite_index == spr_char_ink_sans_start1)
-	sprite_index = spr_char_ink_sans_fight1;
-if (sprite_index == spr_char_ink_sans_end1)
-	sprite_index = spr_char_ink_sans_idle;
+if (sprite_index == fight_1_start_animation)
+	sprite_index = fight_1_idle_animation;
+if (sprite_index == fight_1_finish_animation)
+	sprite_index = idle_animation;
 	
-if (sprite_index == spr_char_ink_sans_start2)
-	sprite_index = spr_char_ink_sans_fight2;
-if (sprite_index == spr_char_ink_sans_end2)
-	sprite_index = spr_char_ink_sans_idle;
+if (sprite_index == fight_2_start_animation)
+	sprite_index = fight_2_idle_animation;
+if (sprite_index == fight_1_finish_animation)
+	sprite_index = idle_animation;
 	
 event_user(3);

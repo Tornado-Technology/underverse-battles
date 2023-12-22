@@ -5,11 +5,11 @@ if (global.fight_instance == noone || player_num == -1)
 
 var player_action = fight_get_player_action(player_num);
 
-if (sprite_index == spr_swap_sans_idle &&
+if (sprite_index == idle_animation &&
 	fight_get_initiative() == player_num &&
 	fight_get_state() == fight_state.battle &&
 	(player_action == 0 || player_action == 1))
-	sprite_index = spr_swap_sans_start0;
+	sprite_index = fight_0_start_animation;
 
-else if (sprite_index == spr_swap_sans_fight0 && fight_get_initiative() != player_num)
-	sprite_index = spr_swap_sans_end0;
+else if (sprite_index == fight_0_idle_animation && fight_get_initiative() != player_num)
+	sprite_index = fight_0_finish_animation;

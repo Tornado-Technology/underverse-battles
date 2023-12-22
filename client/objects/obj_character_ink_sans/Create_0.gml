@@ -37,6 +37,13 @@ frame = spr_ink_sans_frame;
 idle_animation = spr_char_ink_sans_idle;
 after_battle_animation = spr_char_ink_sans_idle;
 defeated_animation = spr_char_ink_sans_defeated;
+fight_1_start_animation = spr_char_ink_sans_start1;
+fight_1_idle_animation = spr_char_ink_sans_fight1;
+fight_1_finish_animation = spr_char_ink_sans_end1;
+fight_2_start_animation = spr_char_ink_sans_start2;
+fight_2_idle_animation = spr_char_ink_sans_fight2;
+fight_2_finish_animation = spr_char_ink_sans_end2;
+
 
 // Actions
 passive_skill = PassiveSkill("Character.InkSans.PassiveSkill");

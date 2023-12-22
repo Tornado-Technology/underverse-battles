@@ -51,7 +51,7 @@
   "origin": 0,
   "parent": {
     "name": "Frames",
-    "path": "folders/Characteres/Swap Sans/Frames.yy",
+    "path": "folders/Characteres/Swap Sans/Sprites/Frames.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
