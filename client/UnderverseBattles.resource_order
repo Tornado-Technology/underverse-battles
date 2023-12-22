@@ -576,7 +576,6 @@
     {"name":"data_save","order":8,"path":"scripts/data_save/data_save.yy",},
     {"name":"spr_char_sans_attack_2_right_down","order":9,"path":"sprites/spr_char_sans_attack_2_right_down/spr_char_sans_attack_2_right_down.yy",},
     {"name":"attack_creator_ink_sans","order":2,"path":"objects/attack_creator_ink_sans/attack_creator_ink_sans.yy",},
-    {"name":"YandexMobileAds","order":4,"path":"extensions/YandexMobileAds/YandexMobileAds.yy",},
     {"name":"data_set","order":9,"path":"scripts/data_set/data_set.yy",},
     {"name":"spr_background_doodle_sphere_layer_0","order":1,"path":"sprites/spr_background_doodle_sphere_layer_0/spr_background_doodle_sphere_layer_0.yy",},
     {"name":"spr_sock_police_soul","order":3,"path":"sprites/spr_sock_police_soul/spr_sock_police_soul.yy",},

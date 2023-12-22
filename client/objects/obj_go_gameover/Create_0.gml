@@ -1,10 +1,10 @@
 sprite_index = noone;
 
-if (is_mobile) {
+state = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, 0);
+
+if (is_mobile && state == gameover.lose) {
 	YandexMobileAds_showInterstitial();
 }
-
-state = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, 0);
 
 selected_button = 0;
 

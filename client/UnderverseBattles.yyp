@@ -416,7 +416,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"spr_cross_sitting_crying_looks_at_ink_sans","path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},},
@@ -824,7 +824,6 @@
     {"id":{"name":"spr_char_sans_attack_2_right_down","path":"sprites/spr_char_sans_attack_2_right_down/spr_char_sans_attack_2_right_down.yy",},},
     {"id":{"name":"attack_creator_ink_sans","path":"objects/attack_creator_ink_sans/attack_creator_ink_sans.yy",},},
     {"id":{"name":"data_load_protected","path":"scripts/data_load_protected/data_load_protected.yy",},},
-    {"id":{"name":"YandexMobileAds","path":"extensions/YandexMobileAds/YandexMobileAds.yy",},},
     {"id":{"name":"data_set","path":"scripts/data_set/data_set.yy",},},
     {"id":{"name":"spr_background_doodle_sphere_layer_0","path":"sprites/spr_background_doodle_sphere_layer_0/spr_background_doodle_sphere_layer_0.yy",},},
     {"id":{"name":"DeviceGamepad","path":"scripts/DeviceGamepad/DeviceGamepad.yy",},},
@@ -1548,6 +1547,7 @@
     {"id":{"name":"ai_select_attack","path":"scripts/ai_select_attack/ai_select_attack.yy",},},
     {"id":{"name":"attack_creator_swap_sans","path":"objects/attack_creator_swap_sans/attack_creator_swap_sans.yy",},},
     {"id":{"name":"fight_underverse_00","path":"objects/fight_underverse_00/fight_underverse_00.yy",},},
+    {"id":{"name":"YandexMobileAds","path":"extensions/YandexMobileAds/YandexMobileAds.yy",},},
     {"id":{"name":"spr_gb_charge_fell_sans","path":"sprites/spr_gb_charge_fell_sans/spr_gb_charge_fell_sans.yy",},},
     {"id":{"name":"obj_gasterblaster_aiming_swap_sans","path":"objects/obj_gasterblaster_aiming_swap_sans/obj_gasterblaster_aiming_swap_sans.yy",},},
     {"id":{"name":"Dictionary","path":"scripts/Dictionary/Dictionary.yy",},},
