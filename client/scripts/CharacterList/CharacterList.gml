@@ -43,12 +43,12 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 function CharacterList() {
 	global.characters = [
 		[
-			new Character(obj_character_ink_sans, "InkSans",	"Standard", spr_ink_sans_frame)
+			new Character(obj_character_ink_sans, "InkSans", "Standard", spr_ink_sans_frame),
+			new Character(obj_character_ink_sans_christmas, "InkSans", "Christmas", spr_ink_sans_christmas_frame)
 		],
-	
 		[
-			new Character(obj_character_error_sans, "ErrorSans",	"Standard", spr_error_sans_frame),
-			new Character(obj_character_error_sans_new_clothes, "ErrorSans",	"NewClothes", spr_error_sans_new_clothes_frame),
+			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
+			new Character(obj_character_error_sans_new_clothes, "ErrorSans", "NewClothes", spr_error_sans_new_clothes_frame),
 			new Character(obj_character_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame),
 		],
 		[
@@ -64,7 +64,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
-			new Character(obj_character_swap_sans_girlanda, "SwapSans", "Girlanda", spr_swap_sans_girlanda_frame)
+			new Character(obj_character_swap_sans_garland, "SwapSans", "Girlanda", spr_swap_sans_garland_frame)
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
@@ -81,7 +81,7 @@ function CharacterList() {
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
 			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
-			new Character(obj_character_green_chistmas_tree, "Green", "ChistmasTree", spr_green_chrismas_tree_frame)
+			new Character(obj_character_green_christmas_tree, "Green", "Christmas", spr_green_christmas_tree_frame)
 		]
 	];
 }
