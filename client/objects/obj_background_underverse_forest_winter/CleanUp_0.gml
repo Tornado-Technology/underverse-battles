@@ -1,0 +1,2 @@
+part_emitter_destroy(global.part_system_background, part_emitter_snow);
+part_type_destroy(part_type_snow);

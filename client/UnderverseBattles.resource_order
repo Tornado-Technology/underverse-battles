@@ -962,6 +962,7 @@
     {"name":"spr_drawings","order":3,"path":"sprites/spr_drawings/spr_drawings.yy",},
     {"name":"obj_ai_ink_sans_episode2","order":2,"path":"objects/obj_ai_ink_sans_episode2/obj_ai_ink_sans_episode2.yy",},
     {"name":"spr_green_idle","order":1,"path":"sprites/spr_green_idle/spr_green_idle.yy",},
+    {"name":"obj_background_underverse_forest_winter","order":5,"path":"objects/obj_background_underverse_forest_winter/obj_background_underverse_forest_winter.yy",},
     {"name":"font_comic_sans_zn_ch","order":1,"path":"fonts/font_comic_sans_zn_ch/font_comic_sans_zn_ch.yy",},
     {"name":"obj_gasterblaster_aiming_cross","order":2,"path":"objects/obj_gasterblaster_aiming_cross/obj_gasterblaster_aiming_cross.yy",},
     {"name":"spr_xchara_on_knees","order":7,"path":"sprites/spr_xchara_on_knees/spr_xchara_on_knees.yy",},

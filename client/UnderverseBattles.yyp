@@ -1279,6 +1279,7 @@
     {"id":{"name":"spr_drawings","path":"sprites/spr_drawings/spr_drawings.yy",},},
     {"id":{"name":"obj_ai_ink_sans_episode2","path":"objects/obj_ai_ink_sans_episode2/obj_ai_ink_sans_episode2.yy",},},
     {"id":{"name":"spr_green_idle","path":"sprites/spr_green_idle/spr_green_idle.yy",},},
+    {"id":{"name":"obj_background_underverse_forest_winter","path":"objects/obj_background_underverse_forest_winter/obj_background_underverse_forest_winter.yy",},},
     {"id":{"name":"font_comic_sans_zn_ch","path":"fonts/font_comic_sans_zn_ch/font_comic_sans_zn_ch.yy",},},
     {"id":{"name":"obj_gasterblaster_aiming_cross","path":"objects/obj_gasterblaster_aiming_cross/obj_gasterblaster_aiming_cross.yy",},},
     {"id":{"name":"snd_alternation","path":"sounds/snd_alternation/snd_alternation.yy",},},
