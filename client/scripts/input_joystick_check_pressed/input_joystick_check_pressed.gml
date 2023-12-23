@@ -5,21 +5,7 @@ function input_joystick_check_pressed(_input) {
 	if (controls.controllers_index != control_input_mode.ui_joystick) return false;
 	
 	var controller = controls.get_controller();
-	
-	if (!controller.has_input(_input)) return false;
-	if (_input == vk_up) {
-			return controller.input[$ vk_up].pressed
-	};
-	if (_input == vk_down) {
-		
-		return controller.input[$ vk_down].pressed
-	};
-	if (_input == vk_left) {
-		
-		return controller.input[$ vk_left].pressed
-	};
-	if (_input == vk_right) {
-		
-		return controller.input[$ vk_right].pressed
-	};
+
+if (!variable_struct_exists(controller.get_input(_input), "pressed")) return false;
+	return controller.get_input(_input).pressed;
 }

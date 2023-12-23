@@ -42,20 +42,6 @@ function Event() constructor {
 			var listener_method = listeners[i];
 			method_call(listener_method, array_arguments);	
 		
-		}		
-		
+		}			
 	}
-	
-	static invoke_for_array  = function () {
-			var array_arguments = [];
-		for (var i = 0; i < argument_count; i++) {
-			array_push(array_arguments, argument[i]);
-		}
-		
-		for (var i = 0; i < array_length(listeners); i++) {
-			var listener_method = listeners[i];
-			listener_method(array_arguments);	
-		}
-	}
-	
 }

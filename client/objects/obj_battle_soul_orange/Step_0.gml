@@ -12,10 +12,12 @@ if (ability && delay_ == 0) {
 
 if (delay_ > 10) { SPD *= 2; }
 
+
 var input_up = input_check_held(input.up);
 var input_down = input_check_held(input.down);
 var input_left = input_check_held(input.left);
 var input_right = input_check_held(input.right);
+
 
 if (side_controller_previous != side_controller) {
 	is_changing_side = false;

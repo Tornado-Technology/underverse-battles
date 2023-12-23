@@ -27,7 +27,7 @@ if (is_desktop && !mobile_mode) {
 }
 
 if (is_mobile || mobile_mode) {
-		var controllers_index = global.__ui_controls_instance.controllers_index
+		var controllers_index = global.__ui_controls_instance.controllers_index;
 		
 	if (controllers_index == control_input_mode.ui_joystick) {
 		var joystick = get_joystick();
@@ -36,20 +36,17 @@ if (is_mobile || mobile_mode) {
 	}
 	
 	if (controllers_index == control_input_mode.ui_arrows) {
-	var arrows_index = global.__ui_controls_instance.get_controller().controls_arrow;
 		
-	var arrow  =  get_arrow();
-	var ver	 =	(arrows_index.down.pressed * SPD - arrows_index.up.pressed * SPD);
-	var hor	 =	(arrows_index.right.pressed  * SPD - arrows_index.left.pressed * SPD);
+	var arrows  =  get_arrow();
+	var	 hmv = (input_check_held(input.down) - input_check_held(input.up)) * SPD;
+	var	 vmv = (input_check_held(input.right) - input_check_held(input.left)) * SPD;
+		arrows.input_vector.x = vmv;
+		arrows.input_vector.y = hmv;
 	
-		arrow.input_vector.x = hor;
-		arrow.input_vector.y = ver;
-	
-
-		movement_speed_x =  arrow.input_vector.x;
-		movement_speed_y =  arrow.input_vector.y;
+		movement_speed_x = arrows.input_vector.x;
+		movement_speed_y = arrows.input_vector.y;
 		
-		 arrow.input_vector.set(0, 0);
+		arrows.input_vector.set(0, 0);
 	};
 };
 
