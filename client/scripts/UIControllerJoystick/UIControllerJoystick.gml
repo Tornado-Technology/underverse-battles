@@ -180,7 +180,7 @@ function ClassUIControllerJoystick() constructor {
 	}
 	
 	static get_input = function(_input) {
-		if (!has_input) return;
+		if (!has_input(_input)) return;
 		
 		return self.input[$ _input];
 	}

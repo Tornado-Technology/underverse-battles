@@ -52,5 +52,5 @@ get_customizable_buttons = function() {
 }
 
 // Initilization buttons
-add_button("X", spr_ui_virtual_button_X, vk_shift);
+add_button("X", spr_ui_virtual_button_X, ord("X"));
 add_button("Action", spr_ui_virtual_button_Action, vk_enter);
