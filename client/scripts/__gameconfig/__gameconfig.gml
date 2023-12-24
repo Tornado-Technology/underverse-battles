@@ -11,7 +11,6 @@
 #macro localserver_mode (os_get_config() == "Localserver")
 #macro cinematic_mode (os_get_config() == "Cinematic")
 #macro mobile_mode (os_get_config() == "Mobile")
-#macro special_attack_test_mode (os_get_config() == "SpecialAttackTest")
 
 // Logger
 #macro logging_discord_url "https://discord.com/api/webhooks/1103616545084678214/M45_mY8SdxoivonuaWhC1FSI6J5-PBE92a5H_gXtDVhLp5vRyAKzqukD3i5AKvR6_Xf4"

@@ -54,7 +54,7 @@ function CharacterList() {
 		[
 			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
 			new Character(obj_character_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame),
-			new Character(obj_character_sans_on_byke, "ClassicSans", "OnByke", spr_sans_on_byke_frame),
+			new Character(obj_character_sans_on_byke, "ClassicSans", "OnBike", spr_sans_on_byke_frame),
 			new Character(obj_character_sans_promised, "ClassicSans", "Promised", spr_sans_promised_frame)
 		],
 		[
@@ -64,7 +64,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
-			new Character(obj_character_swap_sans_garland, "SwapSans", "Girlanda", spr_swap_sans_garland_frame)
+			new Character(obj_character_swap_sans_garland, "SwapSans", "Garland", spr_swap_sans_garland_frame)
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),

@@ -16,7 +16,7 @@ function data_load() {
 	} catch(error) {
 		
 		// A little bit of output to the console to track errors
-		logger.error("Data load fail, reasone: {0}.", error.message);
+		logger.error($"Data load fail, reasone: {error.message}.");
 		logger.warning("Data restoring...");
 		
 		// Trying to rebuild what was broken
@@ -28,7 +28,7 @@ function data_load() {
 			json = json_open(DATA_FILE_PATH);
 			logger.info("Data restored successful!");
 		} catch (error) {
-			logger.fatal("Data file can't be retrieved, reasone: {0}.", error.message);
+			logger.fatal($"Data file can't be retrieved, reasone: {error.message}.");
 		}
 	}
 	

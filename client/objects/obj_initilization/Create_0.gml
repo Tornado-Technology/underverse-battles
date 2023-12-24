@@ -4,12 +4,6 @@ if (netlog_enabled) {
 	instance_create(obj_netlog);
 }
 
-instance_create_array([
-	obj_network_client,
-	obj_discord_rich,
-	obj_camera,
-]);
-
 logger.info("Initilization start...");
 
 randomize();
@@ -20,10 +14,6 @@ input_init_bind_default();
 data_load();
 data_apply();
 
-instance_create_array([
-	obj_ui_resource_usage,
-]);
-
 // After data loads
 achivements_load();
 background_load();
@@ -32,6 +22,17 @@ translate_load();
 
 if (is_desktop) {
 	input_load();
+}
+
+// Create important objects
+instance_create_array([
+	obj_network_client,
+	obj_camera,
+	obj_ui_resource_usage
+]);
+
+if (is_desktop) {
+	instance_create(obj_discord_rich);
 }
 
 // Character list load

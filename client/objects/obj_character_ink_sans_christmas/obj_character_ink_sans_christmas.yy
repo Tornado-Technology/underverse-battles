@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_char_ink_sans_christmas_fight_1_idle",
-    "path": "sprites/spr_char_ink_sans_christmas_fight_1_idle/spr_char_ink_sans_christmas_fight_1_idle.yy",
+    "name": "spr_char_ink_sans_christmas_idle",
+    "path": "sprites/spr_char_ink_sans_christmas_idle/spr_char_ink_sans_christmas_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

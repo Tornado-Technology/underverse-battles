@@ -1,7 +1,7 @@
 event_inherited();
 
 // Skins
-skin_name = translate_get("CharactersStyles.OnByke");
+skin_name = translate_get("CharactersStyles.OnBike");
 frame = spr_sans_on_byke_frame;
 
 // Animations

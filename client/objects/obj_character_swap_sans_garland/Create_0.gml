@@ -1,7 +1,7 @@
 event_inherited();
 
 //Skin
-skin_name = data_get("CharactersStyles.Christmas");
+skin_name = translate_get("CharactersStyles.Garland");
 
 frame = spr_swap_sans_garland_frame;
 

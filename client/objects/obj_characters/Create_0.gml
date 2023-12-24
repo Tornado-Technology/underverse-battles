@@ -49,7 +49,7 @@ table_char_max_x = 5;
 sprite_target = spr_character_frame_target1;
 text_name_character_color = c_yellow;
 imange_target_time = 0;
-imange_target_period = room_speed / 2;
+imange_target_period = 30;
 imange_target_num = 0; 
 
 character = undefined;

@@ -104,9 +104,10 @@ is_make_blackout = false;
 menu_soundtrack_current = opening == opening_theme.tangled ? snd_tangled : snd_alternation;
 audio_stop_all();
 
-time_source_start(time_source_create(time_source_game, 1, time_source_units_frames, function() {
+time_source_menu_soundtrack = time_source_create(time_source_game, 1, time_source_units_seconds, function() {
 	audio_play_sound(menu_soundtrack_current, 2, true, 0.5);
-}));
+});
+time_source_start(time_source_menu_soundtrack);
 
 elements_show = false;
 pause = false;

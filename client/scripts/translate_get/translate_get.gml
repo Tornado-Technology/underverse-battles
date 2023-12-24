@@ -5,7 +5,7 @@ function translate_get(key = "", _default = key) {
 	var json = global.__translate_lang_json;
 	
 	if (json == undefined) {
-		logger.warning("Trasnlate language not laoded before geting, key: ", key);
+		logger.warning($"Trasnlate language not laoded before geting, key: {key}");
 		return _default;
 	}
 	

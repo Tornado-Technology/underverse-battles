@@ -2,7 +2,7 @@
 /// @param {Bool} recursively - Attempting to retrieve information after a read error. It is not always possible to set this parameter to "true" because of problems with infinite loops in system locations and boot areas
 function data_get(key = "", recursively = true) {
 	if (global.__data_save == undefined) {
-		logger.warning("Trying to get information \"{0}\" from a file before it is initialized!", _key);
+		logger.warning($"Trying to get information \"{key}\" from a file before it is initialized!");
 		return;
 	}
 	
@@ -27,16 +27,16 @@ function data_get(key = "", recursively = true) {
 			path = new_path;
 		}
 	} catch (error) {
-		logger.warning("Error with reading data: {0}.", error.message);
+		logger.warning($"Error with reading data: {error.message}.");
 		data_reset(false);
 		data_load();
 		
 		try {
 			if (recursively) {
-				return data_get(_key, false);
+				return data_get(key, false);
 			}
 		} catch (error) {
-			logger.error("FATAL Error with reading data: {0}.", error.message);
+			logger.error($"FATAL Error with reading data: {error.message}.");
 		}
 	}
 	

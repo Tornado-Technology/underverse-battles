@@ -11,3 +11,5 @@ pages_foreach(function(page) {
 		page[i].destroy();
 	}
 });
+
+time_source_destroy(time_source_menu_soundtrack);

@@ -1,8 +1,8 @@
 /// @desc
 function translate_load(apply_settings = true) {
-	logger.info("Translate load langs.");
+	logger.info("Translate load languages.");
 	global._translate_langs = is_mobile ? translate_languages_offical : file_finde_all("translate/*", fa_directory);
-	logger.info("Translate load {0}/{0} langs.", array_length(global._translate_langs));
+	logger.info($"Translate load {array_length(global._translate_langs)} languages.");
 	
 	if (apply_settings) {
 		var lang_index = data_get("Settings.Language");
