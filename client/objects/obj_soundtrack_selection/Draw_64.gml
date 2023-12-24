@@ -5,17 +5,17 @@ if (!show)
 	exit;
 
 /* Draw soundtrack */
-draw_name_song(soundtrack_x, soundtrack_y, text_color_standart, soundtrack_id);
+draw_name_button(soundtrack_x, soundtrack_y, text_color_standart, soundtrack_id);
 
 for (var i = 1; i <= list_size - list_middle; i++) {
 	if (soundtrack_id - i >= 0) {
 		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
-		draw_name_song(soundtrack_x, soundtrack_y - soundtrack_step_y * i, color, soundtrack_id - i);
+		draw_name_button(soundtrack_x, soundtrack_y - soundtrack_step_y * i, color, soundtrack_id - i);
 	}
 	
 	if (soundtrack_id + i < soundtrack_counts) {
 		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
-		draw_name_song(soundtrack_x, soundtrack_y + soundtrack_step_y * i, color, soundtrack_id + i);
+		draw_name_button(soundtrack_x, soundtrack_y + soundtrack_step_y * i, color, soundtrack_id + i);
 	}
 }
 
@@ -38,10 +38,8 @@ draw_reset();
 for (var i = 0; i < button_count; i++) {
 	var button = buttons[i];
 	var new_button_y = button_y + button_step_y * i;
-	var alpha = tab == 1 ? 1 : 0.1;
 	
-	button.draw(button_x - button.width / 2, new_button_y + button.height / 2, alpha);
-	button.is_enable_interaction = tab == 1;
+	button.draw(button_x - button.width / 2, new_button_y + button.height / 2);
 }
 
 // Line
@@ -55,8 +53,5 @@ if (soundtrack_id > 0) {
 if (soundtrack_id < soundtrack_counts - 1) {
 	arrow_vertical.down.draw(arrow_x, arrow_y_down, 1, 180);
 }
-
-arrow_horizontal.left.draw(arrow_x_left, arrow_y, 1, 90);
-arrow_horizontal.right.draw(arrow_x_right, arrow_y, 1, 270);
 
 draw_reset();

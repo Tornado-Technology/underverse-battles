@@ -59,14 +59,6 @@ arrow_vertical = {
 		change_soundtrack_down();
 	}),
 }
-arrow_horizontal = {
-	left: UIImageButton(spr_stat_arrow, function() {
-		change_tab_up();
-	}),
-	right: UIImageButton(spr_stat_arrow, function() {
-		change_tab_down();
-	}),
-}
 
 arrow_y = height / 2 + 75;
 arrow_x_left = width / 2 - 15;
@@ -179,16 +171,13 @@ translate_update = on_translate_update.connect(function() {
 	buttons[1].change_text(translate_get().Menu.CustomSound.Cancel);
 })
 
-draw_name_song = function(_x, _y, color, _id) {
+draw_name_button = function(_x, _y, color, _id) {
 	var song = soundtracks[_id];
 	color = soundtrack_id == _id ? text_color_selecting : color;
 	
 	draw_set_font(global._font_main_determination);
-	draw_set_alpha(tab == 0 ? 1 : 0.5);
 	draw_text_outlined(_x, _y, color, c_black, song.name);
 	draw_reset();
-	
-	if (tab == 1) return;
 	
 	var hover = point_in_rectangle_gui(_x, _y, _x + song.name_width, _y + char_height);
 	if (hover && input_mouse) {
