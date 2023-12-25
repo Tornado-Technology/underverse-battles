@@ -370,11 +370,6 @@
       "SoundVolume": "音量",
       "MusicVolume": "战斗音乐音量:",
       "MenuMusicVolume": "菜单音乐音量:",
-      "LanguageName": [
-        "英语",
-        "俄罗斯语",
-        "简体中文"
-      ],
       "Data": {
         "Title": "游戏数据",
         "Autolog": "自动记录",
@@ -419,7 +414,7 @@
     "Artists": "画师",
     "StyleAuthors": "样式概念设计",
     "PreviewArtist": "预览图",
-    "Localizer": "翻译",
+    "Localizers": "翻译",
     "Tester": "测试员",
     "StoryCreator": "故事构建",
     "Composers": "作曲",

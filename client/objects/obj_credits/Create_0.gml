@@ -33,6 +33,7 @@ credits = [
 	$"[yellow]{translate_get("Credits.Localizers")}",
 	"AzzyTheTarned",
 	"AX_233",
+	"Loulim",
 	"",
 	$"[yellow]{translate_get("Credits.Tester")}",
 	"Fortherehero",

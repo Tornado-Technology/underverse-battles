@@ -370,10 +370,6 @@
       "SoundVolume": "Sound volume:",
       "MusicVolume": "Fight music volume:",
       "MenuMusicVolume": "Menu music volume:",
-      "LanguageName": [
-        "English",
-        "Russian"
-      ],
       "Data": {
         "Title": "Game data",
         "Autolog": "Autolog",

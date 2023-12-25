@@ -106,6 +106,7 @@
     {"name":"YandexAdsAndroid","order":2,"path":"folders/Extensions/YandexAdsAndroid.yy",},
     {"name":"Fonts","order":2,"path":"folders/Fonts.yy",},
     {"name":"Chinese","order":4,"path":"folders/Fonts/Chinese.yy",},
+    {"name":"Ukranian","order":6,"path":"folders/Fonts/Ukranian.yy",},
     {"name":"Notes","order":3,"path":"folders/Notes.yy",},
     {"name":"Objects","order":5,"path":"folders/Objects.yy",},
     {"name":"Collision","order":7,"path":"folders/Objects/Collision.yy",},
@@ -245,7 +246,6 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
-    {"name":"Ukranian","order":6,"path":"folders/Fonts/Ukranian.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},

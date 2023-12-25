@@ -164,6 +164,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"YandexAdsAndroid","folderPath":"folders/Extensions/YandexAdsAndroid.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Chinese","folderPath":"folders/Fonts/Chinese.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ukranian","folderPath":"folders/Fonts/Ukranian.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Collision","folderPath":"folders/Objects/Collision.yy",},
@@ -371,7 +372,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Links","folderPath":"folders/Sprites/UI/Links.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Sprites/UI/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utils","folderPath":"folders/Sprites/Utils.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ukranian","folderPath":"folders/Fonts/Ukranian.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"gcmt-dll.dll","CopyToMask":0,"filePath":"datafiles/GMLive",},
