@@ -164,7 +164,7 @@ packet_handler_register("fightJoin", function(data) {
 packet_handler_register("fightCharacter", function(data) {
 	var character = data.characterId;
 	var skin = data.skinId;
-	logger.debug("Get new characterInfo: {0}.", character);
+	logger.debug($"Get new characterInfo: {character}.");
 			
 	var character_object = global.characters[character, skin].object;
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, character_object);
