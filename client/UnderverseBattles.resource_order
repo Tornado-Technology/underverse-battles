@@ -245,6 +245,7 @@
     {"name":"Links","order":17,"path":"folders/Sprites/UI/Links.yy",},
     {"name":"Menu","order":3,"path":"folders/Sprites/UI/Menu.yy",},
     {"name":"Utils","order":5,"path":"folders/Sprites/Utils.yy",},
+    {"name":"Ukranian","order":6,"path":"folders/Fonts/Ukranian.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_cross_sitting_crying_looks_at_ink_sans","order":2,"path":"sprites/spr_cross_sitting_crying_looks_at_ink_sans/spr_cross_sitting_crying_looks_at_ink_sans.yy",},
@@ -253,7 +254,6 @@
     {"name":"spr_swap_papyrus_frame_christmas","order":1,"path":"sprites/spr_swap_papyrus_frame_christmas/spr_swap_papyrus_frame_christmas.yy",},
     {"name":"spr_xchara_on_knees_cross","order":10,"path":"sprites/spr_xchara_on_knees_cross/spr_xchara_on_knees_cross.yy",},
     {"name":"window_frame","order":3,"path":"extensions/window_frame/window_frame.yy",},
-    {"name":"font_comic_sans","order":5,"path":"fonts/font_comic_sans/font_comic_sans.yy",},
     {"name":"font_determination","order":1,"path":"fonts/font_determination/font_determination.yy",},
     {"name":"spr_thread_error_sans","order":8,"path":"sprites/spr_thread_error_sans/spr_thread_error_sans.yy",},
     {"name":"obj_thread_error_sans","order":5,"path":"objects/obj_thread_error_sans/obj_thread_error_sans.yy",},
@@ -1067,6 +1067,7 @@
     {"name":"snd_teleport","order":17,"path":"sounds/snd_teleport/snd_teleport.yy",},
     {"name":"snd_the_biggest_shot","order":3,"path":"sounds/snd_the_biggest_shot/snd_the_biggest_shot.yy",},
     {"name":"snd_the_world_revolving","order":4,"path":"sounds/snd_the_world_revolving/snd_the_world_revolving.yy",},
+    {"name":"font_comic_sans","order":5,"path":"fonts/font_comic_sans/font_comic_sans.yy",},
     {"name":"fight_get_player_action","order":1,"path":"scripts/fight_get_player_action/fight_get_player_action.yy",},
     {"name":"spr_char_ink_sans_christmas_fight_2_finish","order":7,"path":"sprites/spr_char_ink_sans_christmas_fight_2_finish/spr_char_ink_sans_christmas_fight_2_finish.yy",},
     {"name":"fight_set_player_special_action_percent","order":9,"path":"scripts/fight_set_player_special_action_percent/fight_set_player_special_action_percent.yy",},
