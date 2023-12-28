@@ -99,17 +99,26 @@ tab = 0;
 
 input_mouse = 0;
 
+focus_button = function() {
+	if (tab == 1) {
+		buttons[button_id].focus();
+	}
+	else {
+		buttons[button_id].unfocus();
+	}
+}
+
 change_tab_up = function() {
 	if (tab < tab_count - 1)
 		tab++;
-		
+	focus_button();
 	audio_play_sound_plugging(snd_click);
 }
 
 change_tab_down = function() {
 	if (tab > 0)
 		tab--;
-		
+	focus_button();
 	audio_play_sound_plugging(snd_click);
 }
 

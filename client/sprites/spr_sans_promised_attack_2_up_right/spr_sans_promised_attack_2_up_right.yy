@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Promised",
-    "path": "folders/Characteres/Sans/Sprites/Char/Promised.yy",
+    "name": "Attack 2",
+    "path": "folders/Characteres/Sans/Sprites/Char/Promised/Attack 2.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

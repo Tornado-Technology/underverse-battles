@@ -54,7 +54,7 @@ function CharacterList() {
 		[
 			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
 			new Character(obj_character_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame),
-			new Character(obj_character_sans_on_byke, "ClassicSans", "OnByke", spr_sans_on_byke_frame),
+			new Character(obj_character_sans_on_bike, "ClassicSans", "OnBike", spr_sans_on_byke_frame),
 			new Character(obj_character_sans_promised, "ClassicSans", "Promised", spr_sans_promised_frame)
 		],
 		[
