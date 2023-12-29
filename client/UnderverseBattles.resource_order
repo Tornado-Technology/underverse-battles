@@ -808,7 +808,7 @@
     {"name":"spr_fell_sans_murderer_defeated_last_image","order":3,"path":"sprites/spr_fell_sans_murderer_defeated_last_image/spr_fell_sans_murderer_defeated_last_image.yy",},
     {"name":"spr_gasterblaster_charging_fell_sans","order":1,"path":"sprites/spr_gasterblaster_charging_fell_sans/spr_gasterblaster_charging_fell_sans.yy",},
     {"name":"spr_sans_on_bike_defeated_last_image","order":5,"path":"sprites/spr_sans_on_bike_defeated_last_image/spr_sans_on_bike_defeated_last_image.yy",},
-    {"name":"spr_sans_on_byke_frame","order":3,"path":"sprites/spr_sans_on_byke_frame/spr_sans_on_byke_frame.yy",},
+    {"name":"spr_sans_on_bike_frame","order":3,"path":"sprites/spr_sans_on_bike_frame/spr_sans_on_bike_frame.yy",},
     {"name":"snap_to_messagepack","order":1,"path":"scripts/snap_to_messagepack/snap_to_messagepack.yy",},
     {"name":"obj_gb_charge_swap_papyrus","order":5,"path":"objects/obj_gb_charge_swap_papyrus/obj_gb_charge_swap_papyrus.yy",},
     {"name":"timer_start","order":3,"path":"scripts/timer_start/timer_start.yy",},

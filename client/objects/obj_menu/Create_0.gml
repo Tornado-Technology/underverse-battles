@@ -86,13 +86,17 @@ time_source_start(time_source_create(time_source_game, 0.2, time_source_units_se
 	image_frame++;
 }, [], -1));
 
-// Anykey
+// Anykey text
 anykey_y = height - height / 8;
 anykey_start_y = anykey_y;
 anykey_target_y = anykey_y + 40;
-anykey_text = translate_get("Menu.PressAnyKey");
 anykey_show = true;
 anykey_alpha = 1;
+
+anykey_text = new Text()
+	.set_text(translate_get("Menu.PressAnyKey"))
+	.set_color(c_white)
+	.set_outline(c_black);
 
 // Blackout
 blackout_alpha = 0;

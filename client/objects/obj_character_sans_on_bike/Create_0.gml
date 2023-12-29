@@ -2,7 +2,7 @@ event_inherited();
 
 // Skins
 skin_name = translate_get("CharactersStyles.OnBike");
-frame = spr_sans_on_byke_frame;
+frame = spr_sans_on_bike_frame;
 
 // Animations
 idle_animation = spr_sans_on_bike_idle;

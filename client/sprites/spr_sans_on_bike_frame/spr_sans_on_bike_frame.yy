@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_sans_on_byke_frame",
+  "name": "spr_sans_on_bike_frame",
   "bbox_bottom": 43,
   "bbox_left": 0,
   "bbox_right": 45,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_sans_on_byke_frame",
+    "name": "spr_sans_on_bike_frame",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -56,8 +56,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"88a10fa8-a3f9-4243-aa2d-cbf8b91042f9","path":"sprites/spr_sans_on_byke_frame/spr_sans_on_byke_frame.yy",},},},"Disabled":false,"id":"dac64838-1624-4e69-85ec-1ba50292c10c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0e1d9402-728b-439c-99f2-fc5055227209","path":"sprites/spr_sans_on_byke_frame/spr_sans_on_byke_frame.yy",},},},"Disabled":false,"id":"c8735c0c-56c3-4cab-b090-c8437cc73212","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"88a10fa8-a3f9-4243-aa2d-cbf8b91042f9","path":"sprites/spr_sans_on_bike_frame/spr_sans_on_bike_frame.yy",},},},"Disabled":false,"id":"dac64838-1624-4e69-85ec-1ba50292c10c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0e1d9402-728b-439c-99f2-fc5055227209","path":"sprites/spr_sans_on_bike_frame/spr_sans_on_bike_frame.yy",},},},"Disabled":false,"id":"c8735c0c-56c3-4cab-b090-c8437cc73212","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

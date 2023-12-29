@@ -1110,7 +1110,7 @@
     {"id":{"name":"obj_character_swap_sans_garland","path":"objects/obj_character_swap_sans_garland/obj_character_swap_sans_garland.yy",},},
     {"id":{"name":"spr_gasterblaster_charging_fell_sans","path":"sprites/spr_gasterblaster_charging_fell_sans/spr_gasterblaster_charging_fell_sans.yy",},},
     {"id":{"name":"spr_sans_on_bike_defeated_last_image","path":"sprites/spr_sans_on_bike_defeated_last_image/spr_sans_on_bike_defeated_last_image.yy",},},
-    {"id":{"name":"spr_sans_on_byke_frame","path":"sprites/spr_sans_on_byke_frame/spr_sans_on_byke_frame.yy",},},
+    {"id":{"name":"spr_sans_on_bike_frame","path":"sprites/spr_sans_on_bike_frame/spr_sans_on_bike_frame.yy",},},
     {"id":{"name":"snap_from_messagepack","path":"scripts/snap_from_messagepack/snap_from_messagepack.yy",},},
     {"id":{"name":"snap_to_messagepack","path":"scripts/snap_to_messagepack/snap_to_messagepack.yy",},},
     {"id":{"name":"obj_gb_charge_swap_papyrus","path":"objects/obj_gb_charge_swap_papyrus/obj_gb_charge_swap_papyrus.yy",},},

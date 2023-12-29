@@ -27,7 +27,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5a79fa38-1f5c-4b5f-975b-17d2fc41f4b0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 7,
   "parent": {
     "name": "Christmas",
     "path": "folders/Characteres/Ink Sans/Sprites/Char/Christmas.yy",
@@ -66,7 +66,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 22,
+    "xorigin": 23,
     "yorigin": 52,
   },
   "swatchColours": null,

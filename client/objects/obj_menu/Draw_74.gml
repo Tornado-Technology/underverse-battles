@@ -17,7 +17,7 @@ anykey_y = lerp(anykey_y, elements_show ? anykey_target_y : anykey_start_y, 0.1)
 if (anykey_y != anykey_start_y || anykey_alpha != 0) {
 	anykey_alpha = wave(1, 0, 2, 0);
 	draw_set_alpha(anykey_alpha);
-	draw_text_outlined(width / 2, anykey_y, c_white, c_black, anykey_text);
+	anykey_text.draw(width / 2, anykey_y);
 }
 	
 // Reset
