@@ -51,6 +51,11 @@ update = function () {
 
 var period = 50 - _power * 2;
 var reteats = 5 + _power;
+
+if (variable_instance_exists(id, "custom_repeats")) {
+	repeats = custom_repeats;
+}
+
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], reteats - 1);

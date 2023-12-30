@@ -1,0 +1,1 @@
+time_source_ricochet = time_source_create(time_source_game, time_ricochet / 60, time_source_units_seconds, function () {});

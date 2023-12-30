@@ -88,10 +88,24 @@ function CharacterList() {
             new Character(obj_character_tornado, "Tornado", "Standard", spr_tornado_frame),
             new Character(obj_character_tornado_scaly, "Tornado", "Scaly", spr_tornado_frame_scaly),
         ]);
-		
+		array_push(global.characters, [
+		new Character(obj_character_dream, "Dream", "Standard", spr_sans_frame),
+		]);
 		//array_push(global.characters, [
 		//	new Character(obj_character_sock_police, "SockPolice", "Standard", spr_sock_police_frame)
 		//]);
+		
+		array_push(global.characters, [
+		new Character(obj_character_jevil, "Jevil", "Standard", spr_jevil_classic_frame),
+		])
+		
+		array_push(global.characters, [
+		new Character(obj_character_papyrus, "Papyrus", "Standard", spr_swap_sans_frame),
+		])
+		
+		array_push(global.characters, [
+		new Character(obj_character_nightmare, "Nightmare", "Standard", spr_sans_frame),
+		])
 		
 		array_push(global.characters, [
             new Character(obj_character_tesmi, "Tesmi", "Standard", spr_character_frame),

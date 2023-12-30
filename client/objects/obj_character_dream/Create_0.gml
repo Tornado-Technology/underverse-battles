@@ -1,9 +1,9 @@
 event_inherited();
 // Base
 index = 9;
-name	    = translate_get("Character.ClassicSans.Name");
-description = translate_get("Character.ClassicSans.Description");
-bio			= translate_get("Character.ClassicSans.Bio");
+name	    = translate_get("Character.Dream.Name");
+description = translate_get("Character.Dream.Description");
+bio			= translate_get("Character.Dream.Bio");
 universe	= "Dreamtale";
 creator		= "Joku";
 
@@ -39,13 +39,13 @@ after_battle_animation = spr_sans_after_battle;
 defeated_animation = spr_char_sans_defeated;
 
 // Actions
-passive_skill = PassiveSkill("Character.ClassicSans.PassiveSkill");
+passive_skill = PassiveSkill("Character.Dream.PassiveSkill");
 actions = [
-	Action("Character.ClassicSans.Attack0", call_attack_dream_0),
-	Action("Character.ClassicSans.Attack1", call_attack_dream_1),
-	Action("Character.ClassicSans.Attack2", call_attack_dream_2)
+	Action("Character.Dream.Attack0", call_attack_dream_0),
+	Action("Character.Dream.Attack1", call_attack_dream_1),
+	Action("Character.Dream.Attack2", call_attack_dream_2)
 ];
-special_action = SpecialAction("Character.ClassicSans.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);
+special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);
 
 on_battle_end = function(damage) {
 	if (damage == 0) {

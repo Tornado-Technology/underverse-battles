@@ -11,4 +11,7 @@ enum character_id {
 	x_chara = 6,
 	cross = 7,
 	green = 8,
+	dream = 9,
+	nightmare = 10,
+	papyrus = 11,
 }
