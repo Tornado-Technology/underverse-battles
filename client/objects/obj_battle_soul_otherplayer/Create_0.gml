@@ -1,6 +1,7 @@
 depth = fight_depth.soul;
 
 image_speed = 0;
+image_alpha = 0.6;
 
 follow_board = false;
 board_instance = obj_battle_border;

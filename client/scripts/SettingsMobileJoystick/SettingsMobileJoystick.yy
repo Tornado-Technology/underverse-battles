@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Elements",
-    "path": "folders/Scripts/Local/Settings(mobile)/Elements.yy",
+    "name": "Controllers",
+    "path": "folders/Scripts/Local/Settings(mobile)/Controllers.yy",
   },
 }

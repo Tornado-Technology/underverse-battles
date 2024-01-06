@@ -1,0 +1,2 @@
+time_source_start(time_source_enable_pattern);
+time_source_start(time_source_create_pattern);

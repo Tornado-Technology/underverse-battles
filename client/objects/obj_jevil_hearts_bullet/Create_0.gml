@@ -1,16 +1,18 @@
-depth = fight_depth.bullet_outside_hight;
-damage = get_char_damage(obj_char_jevil);
-_speed = 0;
-_angle = 0;
+damage = get_char_damage(obj_character_jevil);
+depth = fight_depth.bullet_outside;
+
 _angle_hearts = 0;
 hearts = [];
 rad = 12;
-
-for (var i = 0; i < 4; i++) {
-	var heart = instance_create_depth(x, y, 0, obj_jevil_bullet);
-	heart.sprite_index = spr_jevil_hearts_small;
-	heart.image_speed = 0;
-	heart.image_index = 0;
-	heart._speed = 0;
+var i = 0;
+repeat (4) {
+	var heart = instance_create_depth(x, y, 0, obj_jevil_bullet, {
+	sprite_index : spr_jevil_hearts_small,
+	image_speed : 0,
+	image_index : 0,
+	_speed : 0
+	});
+	
 	hearts[i] = heart;
+	i++;
 }

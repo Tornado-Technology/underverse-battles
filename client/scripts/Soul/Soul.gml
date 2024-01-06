@@ -1,6 +1,8 @@
 function create_soul(px, py, type) {
-	if (instance_exists(obj_battle_soul)) return obj_battle_soul;
-	if (fight_get_initiative() != 0) {
+	if (instance_exists(obj_battle_soul)) {
+		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type);
+	}
+	if (fight_get_initiative() != 0 || room == room_cutscene_test) {
 		var soul_ = obj_battle_soul_standart;
 		switch (type) {
 			case battle_soul_type.red:
@@ -18,24 +20,23 @@ function create_soul(px, py, type) {
 		}
 		return instance_create_depth(px, py, fight_depth.soul, soul_);
 	}
-	else {
-		var soul_ = instance_create_depth(px, py, fight_depth.soul, obj_battle_soul_otherplayer);
-		switch (type) {
-			case battle_soul_type.red:
-				soul_.sprite_index = spr_battle_soul_red;
-			break;
-			case battle_soul_type.orange:
-				soul_.sprite_index = spr_battle_soul_orange;
-			break;
-			case battle_soul_type.blue:
-				soul_.sprite_index = spr_battle_soul_blue;
-			break;
-			case battle_soul_type.yellow:
-				soul_.sprite_index = spr_battle_soul_yellow;
-			break;
-		}
-		return soul_;
+	
+	var soul_ = instance_create_depth(px, py, fight_depth.soul, obj_battle_soul_otherplayer);
+	switch (type) {
+		case battle_soul_type.red:
+			soul_.sprite_index = spr_battle_soul_red;
+		break;
+		case battle_soul_type.orange:
+			soul_.sprite_index = spr_battle_soul_orange;
+		break;
+		case battle_soul_type.blue:
+			soul_.sprite_index = spr_battle_soul_blue;
+		break;
+		case battle_soul_type.yellow:
+			soul_.sprite_index = spr_battle_soul_yellow;
+		break;
 	}
+	return soul_;
 }
 
 function change_soul(old_soul, px, py, type) {

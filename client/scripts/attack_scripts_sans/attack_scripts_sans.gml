@@ -1,34 +1,35 @@
-function char_sans_attack_0(pow, player) {
-	instance_create(attack_creator_sans, {
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function char_sans_attack_0(_power, player) {
+	instance_create(obj_attack_sans_0, {
 		character_instance: player,
-		_power: pow,
-		_id: 0,
-		attack_num: irandom_range(0, 4)
+		_power: _power
 	});
 }
 
-function char_sans_attack_1(pow, player) {
-	instance_create(attack_creator_sans, {
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function char_sans_attack_1(_power, player) {
+	instance_create(obj_attack_sans_1, {
 		character_instance: player,
-		_power: pow,
-		_id: 1,
-		attack_num: irandom_range(0, 2)
+		_power: _power
 	});
 }
 
-function char_sans_attack_2(pow, player) {
-	instance_create(attack_creator_sans, {
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function char_sans_attack_2(_power, player) {
+	instance_create(obj_attack_sans_2, {
 		character_instance: player,
-		_power: pow,
-		_id: 2,
-		attack_num: player.use_gravity_attack ? 0 : 1
+		_power: _power,
+		use_gravity_attack: player.use_gravity_attack
 	});
 }
 
+/// @param {Id.Instance} player
 function char_sans_special_attack(player) {
-	instance_create(attack_creator_sans, {
+	instance_create(obj_attack_sans_special, {
 		character_instance: player,
-		_id: 3,
-		attack_num: player.use_gravity_attack ? 0 : 1
+		use_gravity_attack: player.use_gravity_attack
 	});
 }

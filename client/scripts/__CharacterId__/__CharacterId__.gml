@@ -1,4 +1,5 @@
 enum character_id {
+	tesmi = -5,
 	sock_police = -4,
 	tornado = -3,
 	ink_sans = 0,
@@ -10,4 +11,7 @@ enum character_id {
 	x_chara = 6,
 	cross = 7,
 	green = 8,
+	dream = 9,
+	nightmare = 10,
+	papyrus = 11,
 }
