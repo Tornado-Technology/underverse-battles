@@ -11,6 +11,7 @@ function ClassVirtualKey(sprite, key) constructor {
 	UI = UIImageButton(sprite);
 	
 	static init = function() {
+		keyboard_key_release(key)
 		UI.is_multi_touch = true;
 		
 		UI.on_press = function() {

@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_jevil_clubs_box",
-    "path": "sprites/spr_jevil_clubs_box/spr_jevil_clubs_box.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

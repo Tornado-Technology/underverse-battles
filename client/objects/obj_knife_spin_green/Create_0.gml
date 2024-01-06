@@ -1,6 +1,8 @@
 event_inherited();
 
-damage = 5;
+damage = 1;
+soul_invulnerability = 1;
+green_passive_skill(self);
 
 // Particle
 part_glitch = part_type_create();

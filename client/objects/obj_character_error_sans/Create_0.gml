@@ -51,12 +51,12 @@ actions = [
 special_action = SpecialAction("Character.ErrorSans.SpecialAttack", spr_special_attack_error_sans, spr_special_attack_error_sans_locked, error_sans_special_attack);
 
 // Special
-on_taking_damage = function(damage) {
-	if (damage > 1)
+on_taking_soul_damage = function(soul, damage) {
+	if (damage > dtime)
 		return damage;
 	
-	var rand_num = irandom_range(1, 100);
-	if (rand_num <= 6)
+	var random_percent = irandom_range(1, 100);
+	if (random_percent <= 10)
 		return 0;
 	return damage;
 }

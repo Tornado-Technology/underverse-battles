@@ -10,8 +10,8 @@ universe = "UnderverseBattles";
 ver = game_version;
 
 // HP
-hp = 100;
-max_hp = 100;
+hp = 100000000;
+max_hp = 100000000;
 total_heal = 0; // How many health points the player recovered
 defeated = false;
 
@@ -53,7 +53,7 @@ actions = [
 	Action("", undefined),
 	Action("", undefined)
 ];
-special_action = SpecialAction("", spr_empty);
+special_action = SpecialAction("", spr_empty, spr_empty);
 
 // Special
 use_gravity_attack = false;
@@ -80,6 +80,7 @@ skip_moving = function () {
 };
 
 on_dodged = function(player_id) {};
+on_battle_end = function(damage) {};
 on_taking_damage = function(damage) { return damage };
 on_taking_soul_damage = function(soul, damage) { return damage };
 on_skipping = function(player_id) {};

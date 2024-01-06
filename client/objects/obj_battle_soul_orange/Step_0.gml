@@ -3,14 +3,8 @@ event_inherited();
 if (!moveable)
 	exit;
 
-var SPD = 1.8;
-
-if (ability && delay_ == 0) {
-	invulnerability = true;
-	delay_ = 21;
-}
-
-if (delay_ > 10) { SPD *= 2; }
+var main_speed = 1.8 * dtime;
+if (is_dashing) main_speed *= 2;
 
 
 var input_up = input_check_held(input.up);
@@ -38,28 +32,28 @@ if(input_right) {
 }
 
 /* control */
-if (!is_dashing && !is_changing_side) {
+if (!is_changing_side) {
 	if(input_up) {
 		if(!input_down && !input_left && !input_left) {
-			movement_speed_y = -SPD;
+			movement_speed_y = -main_speed;
 			movement_speed_x = 0;
 		}
 	}
 	if(input_down) {
 		if(!input_up && !input_left && !input_left) {
-			movement_speed_y = SPD;
+			movement_speed_y = main_speed;
 			movement_speed_x = 0;
 		}
 	}
 	if(input_left) {
 		if(!input_up && !input_down && !input_right) {
-			movement_speed_x = -SPD;
+			movement_speed_x = -main_speed;
 			movement_speed_y = 0;
 		}
 	}
 	if(input_right) {
 		if(!input_up && !input_down && !input_left) {
-			movement_speed_x = SPD;
+			movement_speed_x = main_speed;
 			movement_speed_y = 0;
 		}
 	}
@@ -70,24 +64,24 @@ if (changeable_direction) {
 	switch (side) {
 		case 1:
 			movement_speed_x = 0;
-			movement_speed_y = -SPD;
+			movement_speed_y = -main_speed;
 			new_image_angle = 180;
 			audio_play_sound_plugging(snd_emergence);
 			break;
 		case 2:
 			movement_speed_x = 0;
-			movement_speed_y = SPD;
+			movement_speed_y = main_speed;
 			new_image_angle = 0;
 			audio_play_sound_plugging(snd_emergence);
 			break;
 		case 3:
-			movement_speed_x = -SPD;
+			movement_speed_x = -main_speed;
 			movement_speed_y = 0;
 			new_image_angle = 270;
 			audio_play_sound_plugging(snd_emergence);
 			break;
 		case 4:
-			movement_speed_x = SPD;
+			movement_speed_x = main_speed;
 			movement_speed_y = 0;
 			new_image_angle = 90;
 			audio_play_sound_plugging(snd_emergence);
@@ -109,81 +103,21 @@ if (changeable_direction) {
 	}
 }
 
-/* dash */
-if (ability && delay_ == 0) {
+// Dash
+if (ability && can_dash) {
 	invulnerability = true;
 	is_dashing = true;
-	movement_speed_x *= 2;
-	movement_speed_y *= 2;
-	delay_ = 21;
+	time_source_start(time_source_dash);
+	time_source_start(time_source_cooldown);
 }
 
-/* dash end */
-if (delay_ > 10) {
+// Dash particle
+if (is_dashing) {
 	part_type_orientation(part_type_tail, image_angle, image_angle, 0, 0, false);
 	part_particles_create(global.part_system_soul, x, y, part_type_tail, 1);
-	delay_--;
-}
-else if (delay_ == 10) {
-	invulnerability = false;
-	is_dashing = false;
-	movement_speed_x /= 2;
-	movement_speed_y /= 2;
-	delay_--;
-}
-else if (delay_ > 0) {
-	delay_--;
 }	
 	
-/* pushing */
-var pusher_inst = noone;
-if (place_meeting(x, y, obj_battle_pusher)) {
-	
-	pusher_inst = instance_place(x, y, obj_battle_pusher);
-	var blast_angle = pusher_inst._angle;
-	
-	var cos_blast_angle = cos(degtorad(blast_angle));
-	var sin_blast_angle = sin(degtorad(blast_angle));
+strict_place_meeting_walls();
 
-	outside_force_x = 8 * cos_blast_angle;
-	outside_force_y = -8 * sin_blast_angle;
-	
-	movement_speed_x = 0;
-	movement_speed_y = 0;
-} else {
-	outside_force_x = 0;
-	outside_force_y = 0;
-}
-
-var movement_delta_min = 0.01;
-
-var full_movement_x = movement_speed_x + outside_force_x;
-if (place_meeting(x + full_movement_x, y, obj_solid)) {
-	while(!place_meeting(x + sign(full_movement_x) * movement_delta_min, y, obj_solid)) {
-		x += sign(full_movement_x) * movement_delta_min;
-	}
-	
-	movement_speed_x = 0;
-	
-	if (outside_force_x != 0)
-		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
-		
-	outside_force_x = 0;
-}
-
-var full_movement_y = movement_speed_y + outside_force_y;
-if (place_meeting(x, y + full_movement_y, obj_solid)) {
-	while(!place_meeting(x, y + sign(full_movement_y) * movement_delta_min, obj_solid)) {
-		y += sign(full_movement_y) * movement_delta_min;
-	}
-	
-	movement_speed_y = 0;
-	
-	if (outside_force_y != 0)
-		fight_soul_damage(pusher_inst.damage, pusher_inst.destructible, pusher_inst);
-		
-	outside_force_y = 0;
-}
-
-x += movement_speed_x + outside_force_x;
-y += movement_speed_y + outside_force_y;
+x += movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
+y += movement_speed_y + outside_force_y + tremble_force_y + border_force_y;

@@ -1,0 +1,8 @@
+time_source_destroy(time_source_update_3_0);
+time_source_destroy(time_source_update_3_2);
+time_source_destroy(time_source_update_stop_3_1);
+time_source_destroy(time_source_update_stop_3_2);
+time_source_destroy(time_source_update_stop_3_3);
+time_source_destroy(time_source_update_destroy);
+
+final_function();
