@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Utils",
-    "path": "folders/Scripts/Local/Utils.yy",
+    "name": "UnderverseBattles",
+    "path": "UnderverseBattles.yyp",
   },
 }
