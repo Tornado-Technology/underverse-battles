@@ -1,4 +1,4 @@
-if (time_source_get_state(time_source_target) == time_source_state_active && !shot) {
+if (!shot) {
 	if (instance_exists(target)) {
 		image_angle = point_direction(x, y, target.x, target.y);
 	};

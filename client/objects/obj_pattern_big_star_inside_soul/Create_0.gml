@@ -3,17 +3,13 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
-	var star_big_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside, big_star, {
-	});	
+	star_big_instance = instance_create_depth(border_instance.x - 1, border_instance.y, fight_depth.bullet_outside, big_star);	
 			
 	star_big_instance.speed_torsional = 1 + _power * 0.2;
-	
-			
 	update();
 	time_source_start(time_source_update);
-	time_source_start(time_source_update_destroy);
-	
-};
+	time_source_start(time_source_update_destroy);	
+}
 
 update = function () {
 	var radius = 240;
@@ -24,7 +20,8 @@ update = function () {
 	repeat (_power div 2 + 3) {	
 		var	star_instance = instance_create_depth(border_instance.x + _lengthdir_x,  border_instance.y + _lengthdir_y, fight_depth.bullet_outside, star);
 			star_instance.speed_const = 3 + _power * 0.1;
-			star_instance.direction = point_direction(star_instance.x, star_instance.y, soul_instance.x, soul_instance.y);
+			if (instance_exists(soul_instance)) 
+				star_instance.direction = point_direction(star_instance.x, star_instance.y, soul_instance.x, soul_instance.y);
 	};
 	
 	audio_play_sound_once(snd_projectile);

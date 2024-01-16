@@ -12,9 +12,9 @@ update = function () {
 	coord = rand_side_from(-1, -1, room_width + 1, room_height + 1);
 	
 	var thread_tentacles_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, thread_tentacles);
-	thread_tentacles.x_dir = soul_instance.x;
-	thread_tentacles.y_dir = soul_instance.y;
-	thread_tentacles.scale_speed = 2 + _power * 0.1;
+	thread_tentacles_instance.x_dir = soul_instance.x;
+	thread_tentacles_instance.y_dir = soul_instance.y;
+	thread_tentacles_instance.scale_speed = 1 + _power * 0.1;
 	
 }
 

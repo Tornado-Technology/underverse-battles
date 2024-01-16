@@ -30,6 +30,7 @@ update = function() {
 		image_angle: rand_dir,
 		image_xscale: rand_dist / 64
 	});
+	
 }
 	
 var repeats = 4 + (_power div 2);
