@@ -9,7 +9,7 @@ _side = 90;
 rot = irandom_range(0, 1);
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
 	
 	edit_button = instance_create(obj_edit_button_green);
 

@@ -14,7 +14,7 @@ image_alpha = 0;
 event_id = 0;
 is_started_moving = false
 
-target_position = Vector2()
+target_position = Vector2.zero();
 
 fireball = instance_create_depth(x, y, depth, obj_projectile_mini_fireball)
 fireball.x = x

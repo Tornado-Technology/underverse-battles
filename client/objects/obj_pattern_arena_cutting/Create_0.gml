@@ -25,11 +25,8 @@ update = function() {
 		rand_px2 -= 20;
 	var rand_dir = point_direction(rand_px1, py1, rand_px2, py2);
 	var rand_dist = point_distance(rand_px1, py1, rand_px2, py2);
-	audio_play_sound_plugging(snd_stab);
-	instance_create_depth(rand_px1, py1, fight_depth.bullet_outside_hight, knife_swing, {
-		image_angle: rand_dir,
-		image_xscale: rand_dist / 64
-	});
+	
+	create_knife_swing(rand_px1, py1, knife_swing, rand_dir, rand_dist, fight_network_mode);
 }
 	
 var repeats = 4 + (_power div 2);

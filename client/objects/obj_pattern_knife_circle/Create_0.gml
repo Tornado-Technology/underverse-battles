@@ -5,7 +5,7 @@ _side = choose(0, 90, 180, 270);
 step = 20;
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -16,9 +16,10 @@ update = function() {
 	var dist_ = 120;
 	var rX = border_instance.x - dist_ * cos(_side * pi / 180);
 	var rY = border_instance.y - dist_ * sin(_side * pi / 180);
-	var knife_instance = instance_create_depth(rX, rY, 0, knife);
-	knife_instance.image_alpha = 0;
-	knife_instance._target_angle = point_direction(rX, rY, border_instance.x, border_instance.y);
+	create_battle_object(rX, rY, 0, knife, {
+		image_alpha: 0,
+		_target_angle: point_direction(rX, rY, border_instance.x, border_instance.y),
+	}, fight_network_mode);
 	if (rot == 0)
 		_side += step;
 	else

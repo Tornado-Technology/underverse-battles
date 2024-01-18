@@ -569,7 +569,7 @@ create_page([
 
 if (is_desktop) {
 	page_insert(menu_page.settings_main, 0, Toggle("Settings.Fullscreen", window_get_fullscreen(), function(value) {
-		window_frame_set_fullscreen(value);
+		window_set_fullscreen(value);
 	}));
 }
 

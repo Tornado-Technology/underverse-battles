@@ -1,7 +1,7 @@
 // Arguments
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function () {
-	var random_position = Vector2(0, -10);
+	var random_position = new Vector2(0, -10);
 	if (irandom_range(0, 1) == 0) {
 		// Right
 		var offset_x = 25;

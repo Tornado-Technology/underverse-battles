@@ -9,7 +9,7 @@ bone_scale = 2.2;
 if (use_gravity_attack) {
 
 	callback = function () {
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
 		soul_instance.changeable_direction = true;
 
 		update();
@@ -72,7 +72,7 @@ if (use_gravity_attack) {
 		}
 		audio_play_sound_plugging(snd_spare_up);
 	}
-	update_2_0_2 = function() {
+	update_down = function() {
 		var i = 0;
 		repeat(bone_count) {
 			bone_instances[i].change_scale(0, 0.3);
@@ -128,7 +128,7 @@ if (use_gravity_attack) {
 }
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
 
 	bone_scale = _power > 2 ? 2.8 : 3;
 	if (!use_gravity_attack) bone_scale = 4.8;

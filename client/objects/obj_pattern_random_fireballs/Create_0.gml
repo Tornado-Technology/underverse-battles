@@ -8,7 +8,7 @@ x = lengthdir_x(raduis, _angle) + border_position.px;
 y = lengthdir_y(raduis, _angle) + border_position.py;
 
 callback = function() {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 	
 	spawn_fireball();
 	time_source_start(time_source_spawn_fireball);
@@ -16,7 +16,7 @@ callback = function() {
 
 spawn_fireball = function() {
 	var projectile = instance_create_depth(x, y, fight_depth.bullet_outside, fireball);
-	projectile.target_position = Vector2(soul_instance.x, soul_instance.y);
+	projectile.target_position = new Vector2(soul_instance.x, soul_instance.y);
 }
 
 var period = 60 - _power * 3;

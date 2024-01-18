@@ -1,6 +1,6 @@
 import { Account, accountType, login, register } from '../database/schemas/account.js';
 import { actionType, state as fightState, target } from '../game/fight/fight.js';
-import { send as mailSend } from '../util/mail.js';
+import { send as mailSend} from '../util/mail.js';
 import Client, { state } from '../concepts/client/client.js';
 import { statusCode } from '../status.js';
 import { versions, connectionOptions } from '../config.js';
@@ -40,6 +40,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'ping':
       client.sendPong(data.time);
+      client.fight?.response();
       break;
 
     case 'pong':
@@ -374,7 +375,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightHealAction':
       await client.fight.instance?.addHp(client, data.hp);
-      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd();
+      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd(-data.hp);
       break;
 
     case 'fightSkip':
@@ -423,18 +424,26 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'battleFinish':
-      if (data.initiative == 0) {
-        client.fight.inBattle = false;
-        //client.fight.instance?.startBattleFinishTimer();
-      }
-      else {
-        client.fight.inBattle = false;
-        client.fight.instance?.battleFinish();
+      client.fight.inBattle = false;
+      if (data.initiative == 1) {
+        client.fight.instance?.battleFinish(client, data.damage);
       }
       break;
 
     case 'fightLoaded':
       client.fight.instance?.sync();
+      break;
+    
+    case 'battleCreateBorder':
+      client.fight.instance?.сreateBorder(client, data);
+      break;
+    
+    case 'battleCreateSoul':
+      client.fight.instance?.сreateSoul(client, data);
+      break;
+
+    case 'battleCreateObject':
+      client.fight.instance?.сreateObject(client, data);
       break;
 
     default:

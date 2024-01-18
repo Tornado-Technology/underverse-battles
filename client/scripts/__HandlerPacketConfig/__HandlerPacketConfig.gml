@@ -77,8 +77,18 @@ packet_handler_register("schemes", function(data) {
 
 packet_handler_register("verification", function(data) {
 	if (is_desktop) {
-		send_verification(get_string(translate_get("Menu.SignUp.MessageCode"), ""));
-		return;
+		_id = undefined;
+		
+		global.verify_code_control = instance_create(obj_verify_code_control);
+		global.verify_code_connection = global.verify_code_control.on_data.connect(function(args) {
+			if (args[1] != _id) { 
+				return; 
+			}
+			send_verification(args[0]);
+			global.verify_code_control.on_data.disconnect(global.verify_code_connection);
+		})
+				
+		_id = get_string_async(translate_get("Menu.SignUp.MessageCode"), "");
 	}
 			
 	if (is_mobile) {
@@ -172,11 +182,8 @@ packet_handler_register("fightCharacter", function(data) {
 
 packet_handler_register("fightInitiative", function(data) {
 	// Send obj_fight this info
-	show_debug_message("fightInitiative start");
+	logger.debug($"Initiative changed to: {data.initiative}.");
 	fight_set_initiative(data.initiative);
-	show_debug_message("data.initiative changed");
-	fight_set_state(fight_state.reset);
-	show_debug_message("fight_state.reset set");
 });
 
 packet_handler_register("fightAction", function(data) {
@@ -228,13 +235,83 @@ packet_handler_register("battleStart", function(data) {
 	logger.info("Battle begins");
 			
 	// Send obj_fight this info
-	random_set_seed(data.seed);
 	fight_set_state(fight_state.battle);
 });
 
+packet_handler_register("battleCreateBorder", function(data) {
+	battle_border_create(data.up, data.down, data.left, data.right);
+});
+
+packet_handler_register("battleCreateSoul", function(data) {
+	create_other_player_soul(data.x, data.y, data.type);
+});
+
+packet_handler_register("battleCreateObject", function(data) {
+	switch (data.objectName) {
+		case "drop":
+			create_drop(data.x, data.y, data.object, data.speed, data.direction, data.useGravity);
+			break;
+		case "broomie":
+			create_broomie(data.x, data.y, data.object, data.direction, data.side, data.angleSpeed, data.maxAcceleration);
+			break;
+		case "bone":
+			create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle);
+			break;
+		case "falling bone":
+			create_falling_bone(data.x, data.y, data.object, data.angle, data.direction, data.scale, data.acceleration);
+			break;
+		case "poking bone":
+			create_poking_bone(data.x, data.y, data.object, data.speed, data.size, data.direction);
+			break;
+		case "spinning bone":
+			create_spinning_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.angleSpeed);
+			break;
+		case "moving platforms":
+			create_moving_platforms(data.x, data.y, data.count, data.scale, data.distance, data.speed);
+			break;
+		case "next moving platform":
+			create_next_moving_platform(data.x, data.y, data.count, data.scale, data.distance, data.speed);
+			break;
+		case "gasterblaster":
+			create_gasterblaster(data.object, data.x, data.y, data.targetX, data.targetY, data.angle, data.flyTime, data.chargeTime, data.flyoutTime, data.destroyTime);
+			break;
+		case "error string":
+			create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.angle, data.scaleSpeed);
+			break;
+		case "knife swing":
+			create_knife_swing(data.x, data.y, data.object, data.angle, data.distance);
+			break;
+		case "big knife x":
+			create_big_knife_x(data.x, data.y, data.object, data.direction, data.angle, data.pointStopX);
+			break;
+		case "big knife y":
+			create_big_knife_y(data.x, data.y, data.object, data.direction, data.angle, data.pointStopY);
+			break;
+		case "damage wave":
+			create_damage_wave(data.x, data.y, data.object, data.angle, data.speed);
+			break;
+		case "spike":
+			create_damage_wave(data.x, data.y, data.object, data.speed, data.direction);
+			break;
+		default:
+			create_battle_object(data.x, data.y, data.depth, data.object, data.varStruct);
+			break;
+	}
+});
+
+packet_handler_register("battleChangeObjectData", function(data) {
+	switch (data.objectName) {
+		case "big knife":
+			if (data.eventName == "move") set_big_knife_move(data.object, data.distance);
+			if (data.eventName == "move up") set_big_knife_move_up(data.object);
+			if (data.eventName == "spin") set_big_knife_spin(data.object, data.rotatingSpeed);
+		break;
+	}
+});
+
 packet_handler_register("fightDodge", function(data) {
-	logger.info("dodging");
-			
+	logger.info("Dodging");
+	
 	// Send obj_fight this info
 	fight_set_state(fight_state.dodge);
 });
@@ -253,7 +330,12 @@ packet_handler_register("fightHp", function(data) {
 });
 
 packet_handler_register("battleEnd", function(data) {
-	instance_destroy(obj_character_attack);
+	logger.info("Battle finished");
+	instance_destroy(obj_battle_soul);
+	instance_destroy(obj_battle_element);
+	instance_destroy(obj_battle_border);
+	statistics_set_damage(data.damage);
+	fight_set_state(fight_state.reset);
 });
 
 packet_handler_register("fightMana", function(data) {
@@ -292,5 +374,4 @@ packet_handler_register("fightClientRemove", function(data) {
 packet_handler_register("fightClientAdd", function(data) {
 	instance_destroy(obj_network_fight_ui_disconnect);
 	timer_switch(true);
-	timer_start();
 });

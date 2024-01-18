@@ -1,7 +1,7 @@
 // Arguments: bone
 
 callback = function () {
-	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -13,7 +13,7 @@ update = function() {
 	coord = rand_side_from(border_instance.x - border_instance.left - 40, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 40, border_instance.y + border_instance.down + 40);
 	var bone_dir = point_direction(coord[0], coord[1], border_instance.x, border_instance.y);
 	var bone_speed = 1.4 + 0.2 * _power;
-	create_bone(coord[0], coord[1], bone, bone_speed, random_range(2, 6), bone_dir, bone_dir - 90);
+	create_bone(coord[0], coord[1], bone, bone_speed, random_range(2, 6), bone_dir, bone_dir - 90, fight_network_mode);
 }
 
 var period = 30 - 3 * _power;

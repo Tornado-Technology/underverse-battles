@@ -32,10 +32,8 @@ export default class Fight {
   protected clients: Client[];
   protected _state: state;
   protected initiative: number;
+  protected skipCount: number;
 
-  protected timer: NodeJS.Timeout;
-  protected battleFinishTimer: NodeJS.Timeout;
-  protected timeout: NodeJS.Timeout;
   protected destroyTimeout: NodeJS.Timeout;
 
   public static create(client1: Client, client2: Client): void {
@@ -53,7 +51,8 @@ export default class Fight {
     this._state = state.wait;
     this.clients = [client1, client2];
     this.initiative = Math.randomRange(0, 1);
-    Logger.info(`Fight[${this.id}] created, ${client1?.username} vs ${client2?.username}`);
+    this.skipCount = 0;
+    Logger.info(`Fight[${this.id}] created: ${client1?.username} vs ${client2?.username}`);
     this.initializeClients();
   }
 
@@ -61,97 +60,62 @@ export default class Fight {
     this.clients.forEach((client, index) => {
       client.fight.init(this, index);
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
+      client.fight.startResponceTimeout();
     });
     await Matchmaker.removeRating(this.clients);
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
-
-    this.startTimer();
-  }
-
-  public startTimer() {
-    this.stopTimer();
-    this.timer = setTimeout(() => {
-      this.clients.forEach((client) => {
-        if (client.fight.action === actionType.empty) {
-          this.kickPlayer(client);
-        }
-      });
-    }, config.gameplay.fight.timer);
-  }
-
-  public stopTimer() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
-    }
-  }
-
-  public startBattleFinishTimer() {
-    this.stopBattleFinishTimer();
-    this.battleFinishTimer = setTimeout(() => {
-      this.clients.forEach((client) => {
-        if (client.fight.inBattle) {
-          this.kickPlayer(client);
-        }
-      });
-    }, config.gameplay.fight.battleFinishTimer);
-  }
-
-  public stopBattleFinishTimer() {
-    if (this.battleFinishTimer) {
-      clearTimeout(this.battleFinishTimer);
-      this.battleFinishTimer = null;
-    }
-  }
-
-  public timeoutClear() {
-    if (!this.timeout) return;
-    clearTimeout(this.timeout);
-    this.timeout = null;
   }
 
   private timeoutStart(method: Function) {
-    if (this.timeout) return;
+    if (this.destroyTimeout) return;
     // @ts-ignore
-    this.timeout = setTimeout(method, config.gameplay.fight.disconnectTimeout);
+    this.destroyTimeout = setTimeout(method, config.gameplay.fight.disconnectTimeout);
+  }
+
+  public timeoutClear() {
+    if (!this.destroyTimeout) return;
+    clearTimeout(this.destroyTimeout);
+    this.destroyTimeout = null;
+  }
+
+  public leavePlayer(client: Client) {
+    try {
+      const winnerClient = this.clients.find((c) => c);
+      this.finish(winnerClient);
+      winnerClient?.sendFightDisconnect(target.opponent);
+      client?.sendFightDisconnect(target.self);
+    }
+    catch (error) {
+      Logger.error(`Error in leavePlayer: ${error}`);
+      this.destroy();
+    }
   }
 
   public kickPlayer(client: Client) {
     this.timeoutStart(async () => {
-      const winnerClient = this.clients.find((c) => c !== undefined);
-      this.finish(winnerClient);
-      winnerClient?.sendFightDisconnect(target.opponent);
+      this.leavePlayer(client);
+      Logger.debug(`${client?.account.username} was kicked from fight.`);
     });
 
-    Logger.debug(`${client?.account.username} was kicked from fight.`);
     this.clientRemove(client);
   }
 
   public clientRemove(client: Client) {
-    Logger.debug(`${client?.account.username} removed.`);
-
+    Logger.debug(`${client?.account.username} left.`);
+    client.fight.removed = true;
     this.getOtherClient(client)?.sendFightClientRemove();
-    this.clients[client.fight.index] = undefined;
-
-    if (!this.clients[0] || !this.clients[1]) {
-      this.destroyTimeout = setTimeout(() => {
-        this.destroy();
-      }, config.gameplay.fight.disconnectTimeout);
-    }
   }
 
   public clientAdd(client: Client) {
-    Logger.debug(`${client?.username} added.`);
+    Logger.debug(`${client?.username} is back.`);
     this.clients[client?.fight.index] = client;
 
     const otherClient = this.getOtherClient(client);
     otherClient?.sendFightClientAdd();
 
-    if (this.destroyTimeout !== null) {
-      clearInterval(this.destroyTimeout);
-    }
+    client.fight.removed = false;
 
     if (this.state !== state.battle) {
       return;
@@ -197,6 +161,16 @@ export default class Fight {
     this.destroy();
   }
 
+  public async finishInDraw(): Promise<void> {
+    this.clients.forEach((client) => {
+      client?.fight.unit();
+      client?.setState(clientState.inMenu);
+      Matchmaker.returnRating(client);
+      client?.sendFightFinished(0, false);
+    });
+    this.destroy();
+  }
+
   public hasClient(client: Client): boolean {
     return client && this.clients.find((c) => c === client) !== undefined;
   }
@@ -225,9 +199,9 @@ export default class Fight {
 
   public setInitiative(initiative: number): void {
     this.initiative = initiative;
-    this.clients[0]?.sendFightInitiative(this.initiative);
-    this.clients[1]?.sendFightInitiative(1 - this.initiative);
-    Logger.debug(`Fight[${this.id}] set new initiative "${initiative}"`);
+    this.clients[0].sendFightInitiative(initiative);
+    this.clients[1].sendFightInitiative(1 - initiative);
+    Logger.debug(`Fight[${this.id}] set new initiative: ${this.clients[0].username}: ${initiative}, ${this.clients[1].username}: ${1 - initiative}`);
   }
 
   public setClientAction(client: Client, action: number): void {
@@ -303,8 +277,6 @@ export default class Fight {
       return;
     }
 
-    this.stopTimer();
-
     this.setState(state.wait);
     this.updateState();
   }
@@ -320,6 +292,16 @@ export default class Fight {
     }
 
     this.addSpecialActionCharge(activePlayer, activePlayer?.fight.characterInfo.specialActionChargePerTurn ?? 0);
+
+    if (this.clients[0]?.fight.action === actionType.skip && this.clients[1]?.fight.action === actionType.skip) {
+      this.skipCount++;
+      if (this.skipCount === config.gameplay.fight.maxSkipCount) {
+        this.finishInDraw();
+      }
+    }
+    else {
+      this.skipCount = 0;
+    }
 
     if ((this.clients[0]?.fight.action === this.clients[1]?.fight.action || activePlayer?.fight.action === actionType.skip) && activePlayer?.fight.action !== actionType.specialAttack) {
       this.updateStateDefend();
@@ -360,8 +342,6 @@ export default class Fight {
       this.resetAction(client);
       this.resetPower(client);
     });
-
-    this.startTimer();
   }
 
   public updateStateAttack(): void {
@@ -383,11 +363,13 @@ export default class Fight {
     this.resetState();
   }
 
-  public battleFinish() {
+  public battleFinish(client: Client, damage: number) {
     if (this.state == state.battle) {
-      this.stopBattleFinishTimer();
       this.resetState();
     }
+
+    const otherClient = this.getOtherClient(client);
+    otherClient.sendFightBattleEnd(damage);
   }
 
   public async setHp(client: Client, hp: number): Promise<void> {
@@ -436,6 +418,21 @@ export default class Fight {
   public removeStamina(client: Client, stamina: number): void {
     client?.fight.removeStamina(stamina);
     this.syncStamina(client);
+  }
+
+  public сreateBorder(sendingClient: Client, data: any): void {
+    const otherClient = this.getOtherClient(sendingClient);
+    otherClient?.sendBattleCreateBorder(data);
+  }
+
+  public сreateSoul(sendingClient: Client, data: any): void {
+    const otherClient = this.getOtherClient(sendingClient);
+    otherClient?.sendBattleCreateSoul(data);
+  }
+
+  public сreateObject(sendingClient: Client, data: any): void {
+    const otherClient = this.getOtherClient(sendingClient);
+    otherClient?.sendBattleCreateObject(data);
   }
 
   public syncHp(client: Client): void {

@@ -206,6 +206,18 @@ export default class SendStuff {
     });
   }
 
+  public sendBattleCreateBorder(data: any): void {
+    this.send('battleCreateBorder', data);
+  }
+
+  public sendBattleCreateSoul(data: any): void {
+    this.send('battleCreateSoul', data);
+  }
+
+  public sendBattleCreateObject(data: any): void {
+    this.send('battleCreateObject', data);
+  }
+
   public sendFightSoul(x: number, y: number, angle: number, ability: number, playerId: number): void {
     this.send('fightSoul', {
       x,
@@ -274,8 +286,10 @@ export default class SendStuff {
     this.send('fightResetPower')
   }
 
-  public sendFightBattleEnd(): void {
-    this.send('battleEnd');
+  public sendFightBattleEnd(damage: number): void {
+    this.send('battleEnd', {
+      damage
+    });
   }
 
   public sendFightClientRemove(): void {

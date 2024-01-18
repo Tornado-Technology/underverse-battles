@@ -7,7 +7,7 @@ on_border_created = function() {
 type = irandom_range(0, 4);
 switch (type) {
 	case 0:
-		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 30, battle_border.right - 30);
+		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_falling_bones, {
 			bone: obj_bone_sharp_error_sans,
 			sides: [dir.up]
@@ -35,7 +35,7 @@ switch (type) {
 		});
 		break;
 	case 4:
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left, battle_border.right);
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_flying_bones, {
 			bone: obj_bone_error_sans,
 			sides: [dir.left, dir.right],

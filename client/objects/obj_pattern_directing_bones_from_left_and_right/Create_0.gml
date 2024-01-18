@@ -1,7 +1,7 @@
 // Arguments: spining_bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -13,15 +13,12 @@ update = function() {
 	var bone_instance;
 			
 	if (side == 0) {
-		bone_instance = instance_create_depth(border_instance.x - border_instance.left - 10, soul_instance.y, fight_depth.bullet_outside, spining_bone);
-		bone_instance.speed_const = 3 + _power * 0.1;
-		bone_instance.direction_const = 0;
+		bone_instance = create_spinning_bone(border_instance.x - border_instance.left - 10, soul_instance.y, spining_bone,
+			3 + _power * 0.1, 1, 0, 0, 5, fight_network_mode);
 	} else {
-		bone_instance = instance_create_depth(border_instance.x + border_instance.right + 10, soul_instance.y, fight_depth.bullet_outside, spining_bone);
-		bone_instance.speed_const = 3 + _power * 0.1;
-		bone_instance.direction_const = 180;
+		bone_instance = create_spinning_bone(border_instance.x - border_instance.left - 10, soul_instance.y, spining_bone,
+			3 + _power * 0.1, 1, 180, 0, 5, fight_network_mode);
 	}
-	audio_play_sound_plugging(snd_projectile);
 }
 
 var period = 33 - 2 * _power;

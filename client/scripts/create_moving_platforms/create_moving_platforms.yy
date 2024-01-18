@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Platforms",
-    "path": "folders/Scripts/Local/Fight/Battle/Platforms.yy",
+    "path": "folders/Scripts/Local/Fight/Battle/Object/Platforms.yy",
   },
 }

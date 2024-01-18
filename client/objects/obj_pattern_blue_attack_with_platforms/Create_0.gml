@@ -5,10 +5,10 @@ platform_speed = 1 + _power * 0.1;
 
 callback = function () {
 	if (use_gravity_attack) {
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue, fight_network_mode);
 	}
 	else {
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 	}
 	
 	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y + 2, 5, 5, 60, platform_speed);

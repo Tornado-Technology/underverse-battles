@@ -6,9 +6,9 @@ bone_count = 12;
 
 callback = function () {
 	if (use_gravity_attack)
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue, fight_network_mode);
 	else
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 
 	bone_scale = _power > 2 ? 2.8 : 3;
 	if (!use_gravity_attack) bone_scale = 4.8;
@@ -39,16 +39,16 @@ update = function() {
 	repeat (is_double ? 2 : 1) {
 		repeat(bone_count) {
 			if (side == dir.up) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 1, 0, 180);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 1, 0, 180, fight_network_mode);
 			}
 			if (side == dir.down) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 1, 0, 0);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 1, 0, 0, fight_network_mode);
 			}
 			if (side == dir.left) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 270);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 270, fight_network_mode);
 			}
 			if (side == dir.right) {
-				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 90);
+				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 90, fight_network_mode);
 			}
 			++i;
 		}

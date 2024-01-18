@@ -1,6 +1,6 @@
 //Arguments: bone, bone_blue
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 10, battle_soul_type.blue);
+	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 10, battle_soul_type.blue, fight_network_mode);
 
 	update();
 	time_source_start(time_source_update);
@@ -18,15 +18,15 @@ update = function () {
 	
 	if (rand_side == dir.right) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bones,
-		bone_speed, bone_size, 180, 0);
+		bone_speed, bone_size, 180, 0, fight_network_mode);
 	}
 	else if (rand_side == dir.up) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bones,
-		bone_speed, bone_size, 270, 270);
+		bone_speed, bone_size, 270, 270, fight_network_mode);
 	}
 	else if (rand_side == dir.left) {
 		var bone_instance = create_bone(border_instance.x - border_instance.left, border_instance.y - border_instance.up - 4, bones,
-		bone_speed, bone_size, 270, 270);
+		bone_speed, bone_size, 270, 270, fight_network_mode);
 	};
 	
 }

@@ -1,7 +1,7 @@
 // Arguments:
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -15,11 +15,7 @@ update = function () {
 					obj_drop_black_ink_sans, obj_drop_black_ink_sans,
 					obj_drop_blue_ink_sans,
 					obj_drop_green_ink_sans);
-	instance_create_depth(x0, border_instance.y - border_instance.up - 5, fight_depth.bullet_outside_hight, drop_instance, {
-		direction: 270,
-		image_angle: direction + 90,
-		use_gravity_force: false
-	});
+	create_drop(x0, border_instance.y - border_instance.up - 5, drop_instance, 1.5 + _power * 0.1, 270, false, fight_network_mode);
 }
 
 var period = 10 - _power;

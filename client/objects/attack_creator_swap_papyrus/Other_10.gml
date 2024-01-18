@@ -4,7 +4,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
 		
 			bone_size_update_0_0 = 8.3;
 			update_0_0(_power);
@@ -19,7 +19,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
 		
 			update_0_1(_power);
 			time_source_start(time_source_update_0_1);
@@ -34,7 +34,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
 		
 			var bone_scale = 2;
 			var bone_scale_step = 0.1;
@@ -73,7 +73,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
 		
 			update_0_3(_power);
 			time_source_start(time_source_update_0_3);

@@ -11,8 +11,8 @@ callback = function () {
 	create_moving_platforms(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, platforms_speed);
 		
 	var soul_offset = 5;
-	var soul_position = choose(Vector2(border_instance.x - 38, sector_y - soul_offset), Vector2(border_instance.x + 12, sector_y + sector_y_step - soul_offset), Vector2(border_instance.x - 38, sector_y + sector_y_step * 2 - soul_offset));
-	_soul = create_soul(soul_position.x, soul_position.y, battle_soul_type.blue);
+	var soul_position = choose(new Vector2(border_instance.x - 38, sector_y - soul_offset), new Vector2(border_instance.x + 12, sector_y + sector_y_step - soul_offset), new Vector2(border_instance.x - 38, sector_y + sector_y_step * 2 - soul_offset));
+	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.blue, fight_network_mode);
 	
 	var i = 0; repeat(20) {
 		create_bone(border_instance.x - border_instance.left + i * 8, border_instance.y + border_instance.down + 3, bone, 0, 1, 0, 0);
@@ -31,13 +31,13 @@ update_gasterblasters = function() {
 	var sector_y = border_instance.y - border_instance.up + 25;
 	switch (_gb_pos) {
 		case 0:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y - 5, border_instance.x, sector_y - 5,  270, 1/8, 1 - _power * 0.1);
+			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y - 5, border_instance.x, sector_y - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6, fight_network_mode);
 			break;
 		case 1:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step - 5, border_instance.x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.1);
+			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step - 5, border_instance.x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6, fight_network_mode);
 			break;
 		case 2:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step * 2 - 5, border_instance.x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.1);
+			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step * 2 - 5, border_instance.x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6, fight_network_mode);
 			break;
 	}
 }

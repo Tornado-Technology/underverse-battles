@@ -77,6 +77,16 @@ export default class Matchmaker {
     }
   }
 
+  public static async returnRating(client: Client): Promise<number> {
+    if (!client) {
+      Logger.warn(`Add rating failed, reason: client ${client?.username} not found!`);
+      return 0;
+    }
+    
+    await client?.addRating(client?.removedRating);
+    return 0;
+  }
+
   protected static createMatch(client1: Client, client2: Client) {
     Fight.create(client1, client2);
   }

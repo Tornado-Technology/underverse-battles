@@ -2,8 +2,8 @@
 
 callback = function () {
 	soul_instance = soul_type == battle_soul_type.blue ?
-		create_soul(border_instance.x, border_instance.y + border_instance.down - 8, soul_type) :
-		create_soul(border_instance.x, border_instance.y, soul_type);
+		create_soul(border_instance.x, border_instance.y + border_instance.down - 8, soul_type, fight_network_mode) :
+		create_soul(border_instance.x, border_instance.y, soul_type, fight_network_mode);
 
 	update();
 	time_source_start(time_source_update);
@@ -11,7 +11,7 @@ callback = function () {
 }
 	
 update = function() {
-	repeat (count) create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+	repeat (count) create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6, fight_network_mode);
 }
 
 var period = 46 - _power * 6 + count * 3;

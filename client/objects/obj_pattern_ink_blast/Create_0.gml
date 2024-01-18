@@ -1,8 +1,8 @@
 // Arguments: max_acceleration, gasterblaster_aiming
 
 callback = function () {
-	var soul_random_position = Vector2(choose(border_instance.x - border_instance.left/2, border_instance.x + border_instance.right/2), choose(border_instance.y - border_instance.up/2, border_instance.y + border_instance.down/2));
-	soul_instance = create_soul(soul_random_position.x, soul_random_position.y, battle_soul_type.red);
+	var soul_random_position = new Vector2(choose(border_instance.x - border_instance.left/2, border_instance.x + border_instance.right/2), choose(border_instance.y - border_instance.up/2, border_instance.y + border_instance.down/2));
+	soul_instance = create_soul(soul_random_position.x, soul_random_position.y, battle_soul_type.red, fight_network_mode);
 
 	instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, obj_ink_ball_ink_sans);
 
@@ -34,12 +34,8 @@ update_broomie = function () {
 		coord_x = border_instance.x - border_instance.left - 12;
 		coord_y = border_instance.y + border_instance.down + 12;
 	}
-	instance_create_depth(coord_x, coord_y, fight_depth.bullet_outside_hight, obj_brush_ink_sans, {
-		image_angle: point_direction(coord_x, coord_y, soul_instance.x, soul_instance.y) + 225,
-		side: brush_side,
-		angle_speed_const: 1,
-		max_acc: max_acceleration
-	});
+	var brush_direction = point_direction(coord_x, coord_y, soul_instance.x, soul_instance.y) + 225;
+	create_broomie(coord_x, coord_y, obj_brush_ink_sans, brush_direction, brush_side, 1, max_acceleration, fight_network_mode);
 }
 
 var period = 100;

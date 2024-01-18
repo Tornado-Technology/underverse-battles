@@ -4,7 +4,7 @@ num = 7;
 sum_num = num * 4;
 
 callback = function () {
-	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 	
 	x_start = border_instance.x;
 	y_start = border_instance.y;
@@ -34,11 +34,8 @@ callback = function () {
 			y_spike = border_instance.y + border_instance.down;
 			angle_spike = 90;
 		}
-				
-		bone_instances[i] = instance_create_depth(x_spike, y_spike, fight_depth.bullet_outside, spike);
-		bone_instances[i].speed_const = speed_spike;
-		bone_instances[i].image_angle = angle_spike;
-		bone_instances[i].direction = angle_spike;
+		
+		bone_instances[i] = create_spike(x_spike, y_spike, spike, speed_spike, angle_spike, fight_network_mode);
 		i++;
 	}
 	audio_play_sound_plugging(snd_emergence);

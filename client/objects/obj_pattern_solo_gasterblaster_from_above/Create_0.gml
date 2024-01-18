@@ -1,7 +1,7 @@
 // Arguments: soul_type, gasterblaster, custom_repeats (optional)
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
 		
 	var border_dist = 180;
 	var period = 50 - _power * 5;

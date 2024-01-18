@@ -3,9 +3,6 @@ depth = fight_depth.bullet_outside_hight;
 damage = get_char_damage(obj_character_xchara);
 soul_invulnerability = 20;
 
-/* rotate */
-_target_angle = 0;
-
 /* speed */
 _speed = 3.7;
 _speed_rotate = 14;

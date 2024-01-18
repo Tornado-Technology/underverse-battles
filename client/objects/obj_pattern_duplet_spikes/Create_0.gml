@@ -1,7 +1,7 @@
 // Arguments: spike
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -21,15 +21,8 @@ update = function() {
 		spike_direction = 180;
 	}
 	var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
-	var spike_instance = instance_create_depth(x_rand, y_rand, fight_depth.bullet_outside_hight, spike);
-	spike_instance.speed_const = 2 + _power * 0.2;
-	spike_instance.direction = spike_direction;
-	spike_instance.image_angle = spike_direction;
-	var spike_instance = instance_create_depth(x_rand, y_rand + 10, fight_depth.bullet_outside_hight, spike);
-	spike_instance.speed_const = 2 + _power * 0.2;
-	spike_instance.direction = spike_direction;
-	spike_instance.image_angle = spike_direction;
-	audio_play_sound_plugging(snd_projectile);
+	create_spike(x_rand, y_rand, 2 + _power * 0.2, spike_direction, fight_network_mode);
+	create_spike(x_rand, y_rand + 10, 2 + _power * 0.2, spike_direction, fight_network_mode);
 }
 
 var period = 22 - _power * 3;

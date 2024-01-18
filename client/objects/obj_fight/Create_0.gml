@@ -121,7 +121,7 @@ finish_battle = function () {
 	fight_set_player_input(false);
 	timer_stop();
 	fight_set_pause(true);
-	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, player[you].defeated ? gameover.lose :  gameover.win);
+	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.END_STATE, player[you].defeated ? gameover.lose : gameover.win);
 	time_source_start(end_battle_timesource);
 	instance_destroy(obj_battle);
 	audio_stop_all();

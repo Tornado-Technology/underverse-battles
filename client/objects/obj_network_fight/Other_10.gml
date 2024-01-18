@@ -1,6 +1,6 @@
 if (state == fight_state.battle) {
 	timer_stop();
-	instance_create_one(obj_battle);
+	if (fight_network_mode && initiative == 1) instance_create_one(obj_battle);
 }
 
 if (state == fight_state.dodge) {
@@ -16,14 +16,10 @@ if (state == fight_state.dodge) {
 	fight_draw_dodge();
 	statistics_set_damage(0);
 	timer_stop();
+	state = fight_state.reset;
 }
 
 if (state == fight_state.reset) {
-	if (!first_reset_was) {
-		first_reset_was = true;
-		state = fight_state.choosing;
-		exit;
-	}
 	statistics_set_next_step_network();
 	timer_start();
 	set_next_turn();

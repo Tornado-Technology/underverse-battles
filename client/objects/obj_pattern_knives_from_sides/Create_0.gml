@@ -1,7 +1,7 @@
 // Arguments: knife, sides
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -38,15 +38,16 @@ update = function() {
 			target_angle = 180;
 			break;
 	}
-				
-	var knife_directed = instance_create_depth(position_x, position_y, 0, knife);
-	knife_directed.image_alpha = 0;
-	knife_directed._target_angle = target_angle;
+	
+	create_battle_object(position_x, position_y, 0, knife, {
+		image_alpha: 0,
+		_target_angle: point_direction(position_x, position_y, border_instance.x, border_instance.y),
+	}, fight_network_mode);
 }
 
 time_source_update = time_source_create(time_source_game, (14 - _power * 2) / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (260 + _power * 34) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (280 + _power * 30) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

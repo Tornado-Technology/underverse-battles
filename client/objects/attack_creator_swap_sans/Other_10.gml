@@ -4,7 +4,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x, _border.y, battle_soul_type.orange);
+			create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
 		
 			update_0_0(_power);
 			time_source_start(time_source_update_0_0);
@@ -18,7 +18,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
 		
 			update_0_1(_power);
 			time_source_start(time_source_update_0_1);
@@ -32,7 +32,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left - 15, battle_border.right - 15);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
 		
 			update_0_2(_power);
 			time_source_start(time_source_update_0_2);

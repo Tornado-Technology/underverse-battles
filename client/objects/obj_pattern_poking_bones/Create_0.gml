@@ -1,9 +1,7 @@
 // Arguments: bone
 
-index = 0;
-
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -13,13 +11,8 @@ callback = function () {
 update = function () {
 	var coord = [];
 	coord = rand_side_from(border_instance.x - border_instance.left - 40, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 40, border_instance.y + border_instance.down + 40);
-	bone_instances[index] = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside, bone);
-	bone_instances[index].direction = point_direction(bone_instances[index].x, bone_instances[index].y, border_instance.x, border_instance.y);
-	bone_instances[index].image_angle = bone_instances[index].direction - 90;
-	bone_instances[index].image_yscale = 3.2;
-	bone_instances[index].speed_const = 1.3 + 0.1 * _power;
-	bone_instances[index].set_move_back();
-	++index;
+	var bone_direcrion = point_direction(coord[0], coord[1], border_instance.x, border_instance.y);
+	create_poking_bone(coord[0], coord[1], bone, 1.3 + 0.1 * _power, 3.2, bone_direcrion, fight_network_mode);
 	audio_play_sound_plugging(snd_projectile);
 }
 

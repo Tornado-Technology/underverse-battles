@@ -7,11 +7,11 @@ callback = function () {
 	var _soul_pos = irandom_range(0, 2);
 		
 	if (_soul_pos == 0)
-		soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down / 2, battle_soul_type.orange);
+		soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down / 2, battle_soul_type.orange, fight_network_mode);
 	if (_soul_pos == 1)
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
 	if (_soul_pos == 2)
-		soul_instance = create_soul(border_instance.x, border_instance.y - border_instance.up / 2, battle_soul_type.orange);
+		soul_instance = create_soul(border_instance.x, border_instance.y - border_instance.up / 2, battle_soul_type.orange, fight_network_mode);
 		
 	update();
 	update_bones(_power);
@@ -25,13 +25,13 @@ update = function() {
 	var border_distance = 180;
 	switch (position_number) {
 		case 0:
-			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y + 28, border_instance.x, border_instance.y + 30,  270);
+			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y + 28, border_instance.x, border_instance.y + 30, 270, 1/6, 1, 15/60, 1/6, fight_network_mode);
 			break;
 		case 1:
-			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y, border_instance.x, border_instance.y,  270);
+			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y, border_instance.x, border_instance.y, 270, 1/6, 1, 15/60, 1/6, fight_network_mode);
 			break;
 		case 2:
-			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y - 28, border_instance.x, border_instance.y - 30,  270);
+			create_gasterblaster(gasterblaster, border_instance.x + border_distance, border_instance.y - 28, border_instance.x, border_instance.y - 30, 270, 1/6, 1, 15/60, 1/6, fight_network_mode);
 			break;
 	}
 }

@@ -1,4 +1,6 @@
-function create_moving_platforms(_x, _y, _num, _xscale, _dist, _speed) {
+function create_moving_platforms(_x, _y, _num, _xscale, _dist, _speed, send_object_creation = false) {
+	if (send_object_creation) send_battle_object_moving_platforms(_x, _y, _num, _xscale, _dist, _speed);
+	
 	var i = 0;
 	var _platform;
 	var _platforms = [];

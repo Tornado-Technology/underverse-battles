@@ -13,6 +13,8 @@ part_type_life(part_glitch, 5, 12);
 part_type_orientation(part_glitch, image_angle, image_angle, 0, 0, false);
 part_type_size(part_glitch, 0.05, 0.1, 0, 0);
 
+audio_play_sound_plugging(snd_projectile);
+
 edit = function() {
 	repeat (20) part_particles_create(global.part_system_bullet_outside, x + irandom_range(-7, 7), y + irandom_range(-7, 7), part_glitch, 1);
 	instance_destroy();

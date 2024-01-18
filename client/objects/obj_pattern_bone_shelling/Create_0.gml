@@ -1,7 +1,7 @@
 // Arguments: bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
 		
 	update();
 	time_source_start(time_source_update);
@@ -13,7 +13,7 @@ update = function() {
 	var random_x = choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
 	var bone_dir = point_direction(random_x, border_instance.y - border_instance.up - 10, soul_instance.x, soul_instance.y);
 	var bone_speed = 2 + 0.2 * _power;
-	create_bone(random_x, border_instance.y - border_instance.up - 5, bone, bone_speed, 1, bone_dir, bone_dir - 90);
+	create_bone(random_x, border_instance.y - border_instance.up - 5, bone, bone_speed, 1, bone_dir, bone_dir - 90, fight_network_mode);
 	audio_play_sound_plugging(snd_projectile);
 }
 

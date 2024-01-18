@@ -26,7 +26,7 @@ switch (type) {
 		});
 		break;
 	case 3:
-		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
+		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_knife_circle, {
 			knife: obj_knife_directed_xchara
 		});
