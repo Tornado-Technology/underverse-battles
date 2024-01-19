@@ -410,6 +410,7 @@
     {"name":"room_fight_1v1","order":1,"path":"rooms/room_fight_1v1/room_fight_1v1.yy",},
     {"name":"room_fight_1v1_end","order":2,"path":"rooms/room_fight_1v1_end/room_fight_1v1_end.yy",},
     {"name":"spr_char_sans_walk_left","order":1,"path":"sprites/spr_char_sans_walk_left/spr_char_sans_walk_left.yy",},
+    {"name":"obj_verify_code_control","order":7,"path":"objects/obj_verify_code_control/obj_verify_code_control.yy",},
     {"name":"room_fight_end","order":3,"path":"rooms/room_fight_end/room_fight_end.yy",},
     {"name":"spr_background_doodle_sphere_layer_3","order":5,"path":"sprites/spr_background_doodle_sphere_layer_3/spr_background_doodle_sphere_layer_3.yy",},
     {"name":"spr_ink_sans_frame_proud","order":5,"path":"sprites/spr_ink_sans_frame_proud/spr_ink_sans_frame_proud.yy",},

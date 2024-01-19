@@ -633,6 +633,7 @@
     {"id":{"name":"room_fight_1v1","path":"rooms/room_fight_1v1/room_fight_1v1.yy",},},
     {"id":{"name":"room_fight_1v1_end","path":"rooms/room_fight_1v1_end/room_fight_1v1_end.yy",},},
     {"id":{"name":"spr_char_sans_walk_left","path":"sprites/spr_char_sans_walk_left/spr_char_sans_walk_left.yy",},},
+    {"id":{"name":"obj_verify_code_control","path":"objects/obj_verify_code_control/obj_verify_code_control.yy",},},
     {"id":{"name":"room_fight_end","path":"rooms/room_fight_end/room_fight_end.yy",},},
     {"id":{"name":"spr_background_doodle_sphere_layer_3","path":"sprites/spr_background_doodle_sphere_layer_3/spr_background_doodle_sphere_layer_3.yy",},},
     {"id":{"name":"spr_ink_sans_frame_proud","path":"sprites/spr_ink_sans_frame_proud/spr_ink_sans_frame_proud.yy",},},
