@@ -433,11 +433,23 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     
     case 'battleCreateBorder':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleCreateSoul':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleCreateObject':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleChangeObjectData':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleDestroyObject':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleDestroyObjectArray':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleDestroyByEdit':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
