@@ -277,7 +277,7 @@ packet_handler_register("battleCreateObject", function(data) {
 			create_solo_gasterblaster(data.x, data.y, data.object, data.targetTime, data.chargeTime, data.destroyTime);
 			break;
 		case "error string":
-			create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.angle, data.scaleSpeed);
+			create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.scaleSpeed);
 			break;
 		case "knife swing":
 			create_knife_swing(data.x, data.y, data.object, data.angle, data.distance);

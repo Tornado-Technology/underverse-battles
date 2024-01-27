@@ -356,7 +356,7 @@ function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge
 	});
 }
 
-function send_battle_object_error_string(x, y, object, target_x, target_y, angle, scale_speed) {
+function send_battle_object_error_string(x, y, object, target_x, target_y, scale_speed) {
 	send("battleCreateObject", {
 		objectName: "error string",
 		x: x,
@@ -364,7 +364,6 @@ function send_battle_object_error_string(x, y, object, target_x, target_y, angle
 		object: object,
 		targetX: target_x,
 		targetY: target_y,
-		angle: angle,
 		scaleSpeed: scale_speed
 	});
 }
