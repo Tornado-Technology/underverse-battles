@@ -10,7 +10,7 @@ callback = function () {
 	var con = room_height + gb_size;
 	var coord = rand_side_from(-gb_size, -gb_size, con, con);
 	gasterblaster_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, gasterblaster_aiming, {
-		target_time: (period - 10) / 60,
+		target_time: (period - 8 + _power) / 60,
 		charge_time: period / 60,
 		destroy_time: 15 / 60
 	});

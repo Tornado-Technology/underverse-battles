@@ -85,6 +85,7 @@ switch (edit_button.edit_attack_number) {
 		var _inst = create_battle_object(rX, rY, 0, knife_spin, {
 			_target_angle: point_direction(rX, rY, soul_instance.x, soul_instance.y),
 		}, fight_network_mode);
+		array_push(editing_object, _inst);
 		break;
 	case 5:
 		var dist_ = 120;
@@ -114,14 +115,12 @@ switch (edit_button.edit_attack_number) {
 			var con = room_height + gb_size;
 			var coord = rand_side_from(-gb_size, -gb_size, con, con);
 			gasterblaster_instance = create_solo_gasterblaster(coord[0], coord[1], gasterblaster_aiming_solo,
-				(period - 10) / 60, period / 60, 15 / 60, fight_network_mode);
+				(period - 4) / 60, period / 60, 15 / 60, fight_network_mode);
 			array_push(editing_object, gasterblaster_instance);
 		}
-		else {
-			var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-			gasterblaster_instance = change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1], fight_network_mode);
-			gasterblaster_instance = change_solo_gasterblaster_target(gasterblaster_instance, soul_instance, fight_network_mode);
-		}
+		var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
+		change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1], fight_network_mode);
+		change_solo_gasterblaster_target(gasterblaster_instance, soul_instance, fight_network_mode);
 		break;
 	case 7:
 		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6, fight_network_mode);

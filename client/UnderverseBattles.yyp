@@ -1418,7 +1418,6 @@
     {"id":{"name":"spr_fell_sans_murderer_attack2_down_left","path":"sprites/spr_fell_sans_murderer_attack2_down_left/spr_fell_sans_murderer_attack2_down_left.yy",},},
     {"id":{"name":"obj_battle_collider_soul","path":"objects/obj_battle_collider_soul/obj_battle_collider_soul.yy",},},
     {"id":{"name":"obj_pattern_bow_arrows","path":"objects/obj_pattern_bow_arrows/obj_pattern_bow_arrows.yy",},},
-    {"id":{"name":"obj_verify_code_control","path":"objects/obj_verify_code_control/obj_verify_code_control.yy",},},
     {"id":{"name":"obj_projectile_curve_mini_fireball","path":"objects/obj_projectile_curve_mini_fireball/obj_projectile_curve_mini_fireball.yy",},},
     {"id":{"name":"__InputTextBox","path":"scripts/__InputTextBox/__InputTextBox.yy",},},
     {"id":{"name":"spr_swap_sans_defeated","path":"sprites/spr_swap_sans_defeated/spr_swap_sans_defeated.yy",},},
