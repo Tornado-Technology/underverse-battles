@@ -45,46 +45,6 @@ pusher_instance = noone;
 is_inside_border_x = true;
 is_inside_border_y = true;
 
-strict_place_meeting_walls = function() {
-	//var full_movement_x = movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
-	//var full_movement_x_sign = sign(full_movement_x);
-	//if (place_meeting(x + full_movement_x, y, obj_solid) || !is_inside_border_x) {
-	//	movement_speed_x = 0;
-	
-	//	if (outside_force_x != 0) {
-	//		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
-	//	}
-	
-	//	outside_force_x = 0;
-	//	tremble_force_x = 0;
-	//	border_force_x = border_delta_x;
-		
-	//	is_inside_border_x = true;
-	//}
-	//else {
-	//	border_force_x = 0;
-	//}
-
-	//var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y;
-	//var full_movement_y_sign = sign(full_movement_y);
-	//if (place_meeting(x, y + full_movement_y, obj_solid) || !is_inside_border_y) {
-	//	movement_speed_y = 0;
-	
-	//	if (outside_force_y != 0) {
-	//		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
-	//	}
-		
-	//	outside_force_y = 0;
-	//	tremble_force_y = 0;
-	//	border_force_y = border_delta_y;
-		
-	//	is_inside_border_y = true;
-	//}
-	//else {
-	//	border_force_y = 0;
-	//}
-}
-
 update_push_damage = function () {
 	if (has_collision && is_pushed && instance_exists(pusher_instance)) {
 		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
@@ -141,7 +101,12 @@ tremble_update = function() {
 	}
 }
 
-// Particles
+// Particle
+part_type_tail = part_type_create();
+part_type_sprite(part_type_tail, sprite_index, false, false, false);
+part_type_alpha2(part_type_tail, 1, 0);
+part_type_life(part_type_tail, 20, 20);
+
 change_effect = function () {
 	part_type_change = part_type_create();
 	part_type_sprite(part_type_change, sprite_index, false, false, false);

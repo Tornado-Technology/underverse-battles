@@ -22,20 +22,10 @@ charge_object = obj_gb_charge_green;
 
 is_shaked = false;
 
-// Particle
-part_glitch = part_type_create();
-part_type_shape(part_glitch, pt_shape_square);
-part_type_color1(part_glitch, c_green);
-part_type_alpha1(part_glitch, 0.5);
-part_type_life(part_glitch, 5, 12);
-part_type_orientation(part_glitch, image_angle, image_angle, 0, 0, false);
-part_type_size(part_glitch, 0.05, 0.1, 0, 0);
-
-edit = function() {
-	var glitch_srpay = 25;
-	repeat (50) part_particles_create(global.part_system_bullet_outside, x + irandom_range(-glitch_srpay, glitch_srpay), y + irandom_range(-glitch_srpay, glitch_srpay), part_glitch, 1);
-	instance_destroy();
-}
+edit_color = c_green;
+edit_particle_count = 50;
+edit_particle_distance = 25;
+edit = destroy_by_edit;
 
 // Time sources
 event_user(0);

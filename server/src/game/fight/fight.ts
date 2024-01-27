@@ -6,11 +6,10 @@ import { statusCode } from '../../status.js';
 import config from '../../config.js';
 
 export enum state {
-  wait,
-  choose,
-  fight,
-  battle,
-  reset,
+  wait = 'wait',
+  choose = 'choose',
+  battle = 'battle',
+  reset = 'reset'
 }
 
 export enum target {
@@ -68,7 +67,7 @@ export default class Fight {
     this.setInitiative(this.initiative);
   }
 
-  private timeoutStart(method: Function) {
+  private timeoutStart(method: Function): void {
     if (this.destroyTimeout) return;
     // @ts-ignore
     this.destroyTimeout = setTimeout(method, config.gameplay.fight.disconnectTimeout);
@@ -80,20 +79,14 @@ export default class Fight {
     this.destroyTimeout = null;
   }
 
-  public leavePlayer(client: Client) {
-    try {
+  public leavePlayer(client: Client): void {
       const winnerClient = this.clients.find((c) => c);
       this.finish(winnerClient);
       winnerClient?.sendFightDisconnect(target.opponent);
       client?.sendFightDisconnect(target.self);
-    }
-    catch (error) {
-      Logger.error(`Error in leavePlayer: ${error}`);
-      this.destroy();
-    }
   }
 
-  public kickPlayer(client: Client) {
+  public kickPlayer(client: Client): void {
     this.timeoutStart(async () => {
       this.leavePlayer(client);
       Logger.debug(`${client?.account.username} was kicked from fight.`);
@@ -102,7 +95,7 @@ export default class Fight {
     this.clientRemove(client);
   }
 
-  public clientRemove(client: Client) {
+  public clientRemove(client: Client): void {
     Logger.debug(`${client?.account.username} left.`);
     client.fight.removed = true;
     this.getOtherClient(client)?.sendFightClientRemove();
@@ -145,9 +138,9 @@ export default class Fight {
     return this._state;
   }
 
-  public setState(state: state): void {
-    this._state = state;
-    Logger.debug(`Fight[${this.id}] set new state "${state}"`);
+  public setState(newState: state): void {
+    this._state = newState;
+    Logger.debug(`Fight[${this.id}] set new state "${newState}"`);
   }
 
   public async finish(winner: Client): Promise<void> {
@@ -348,11 +341,9 @@ export default class Fight {
     if (this.state === state.battle) return;
 
     this.setState(state.battle);
-    const seed = Math.randomRange(0, 2000000000);
 
     this.clients.forEach((client) => {
-      client.fight.inBattle = true;
-      client?.sendFightStartBattle(seed);
+      client?.sendFightStartBattle();
     });
   }
 
@@ -420,19 +411,9 @@ export default class Fight {
     this.syncStamina(client);
   }
 
-  public сreateBorder(sendingClient: Client, data: any): void {
+  public transferDataFromClient(sendingClient: Client, index: string, data: any): void {
     const otherClient = this.getOtherClient(sendingClient);
-    otherClient?.sendBattleCreateBorder(data);
-  }
-
-  public сreateSoul(sendingClient: Client, data: any): void {
-    const otherClient = this.getOtherClient(sendingClient);
-    otherClient?.sendBattleCreateSoul(data);
-  }
-
-  public сreateObject(sendingClient: Client, data: any): void {
-    const otherClient = this.getOtherClient(sendingClient);
-    otherClient?.sendBattleCreateObject(data);
+    otherClient?.sendDataToClient(index, data);
   }
 
   public syncHp(client: Client): void {

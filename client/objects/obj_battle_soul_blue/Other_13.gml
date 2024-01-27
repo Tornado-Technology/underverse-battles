@@ -39,11 +39,12 @@ if (up && is_jumping && fly_time < max_fly_time) {
 	movement_speed_x = -VSPD;
 	fly_time += dtime;
 }
-else if (!up && movement_speed_x < 0 || has_collision_left) {
-	movement_speed_x = 0;
-}
 else {
 	movement_speed_x += grav * dtime * dtime;
+}
+if (!up && movement_speed_x < 0 || has_collision_left) {
+	movement_speed_x = 0;
+	is_jumping = false;
 }
 
 if (!left && !right) {
@@ -76,5 +77,5 @@ if (movement_speed_x > FALL_SPD) {
     movement_speed_x = FALL_SPD;
 }
 
-x += movement_speed_x + outside_force_x + tremble_force_x + border_force_x + blue_attack_force_speed_x;
-y += movement_speed_y + outside_force_y + tremble_force_y + border_force_y + platform_inertion;
+x += movement_speed_x + outside_force_x + tremble_force_x + blue_attack_force_speed_x;
+y += movement_speed_y + outside_force_y + tremble_force_y + platform_inertion;

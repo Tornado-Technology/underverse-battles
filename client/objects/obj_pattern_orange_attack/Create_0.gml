@@ -2,7 +2,6 @@
 
 bone_instances = [];
 side = dir.left;
-prev_side = dir.left;
 bone_count = 12;
 bone_scale = 2.2;
 
@@ -10,7 +9,6 @@ if (use_gravity_attack) {
 
 	callback = function () {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
-		soul_instance.changeable_direction = true;
 
 		update();
 		time_source_start(time_source_update);
@@ -19,63 +17,46 @@ if (use_gravity_attack) {
 	}
 
 	update = function() {
-		var i = 0;
-		repeat(array_length(bone_instances)) {
-			instance_destroy(bone_instances[i]);
-			i++;
-		}
+		destroy_battle_object_array(bone_instances, fight_network_mode);
 		
-		side = choose(dir.up, dir.down, dir.left, dir.right);
-		i = 0;
+		var side = choose(dir.up, dir.down, dir.left, dir.right);
+		
+		soul_instance.change_direction(side);
+		
+		var i = 0;
 		repeat(bone_count) {
-			if (i == 0)
-				character_instance.prev_sprite = noone;
 			if (side == dir.up) {
-				bone_instances[i] = instance_create_depth(border_instance.x - border_instance.left + i * 10, border_instance.y - border_instance.up - 20, fight_depth.bullet_outside, bone);
-				bone_instances[i].image_angle = 180;
-				if (i == 0) {
-					soul_instance.side = 1;
-					prev_side = dir.up;
-				}
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + i * 10, border_instance.y - border_instance.up - 20, bone,
+					0, 0, 0, 180, fight_network_mode);
 			}
 			if (side == dir.down) {
-				bone_instances[i] = instance_create_depth(border_instance.x - border_instance.left + i * 10, border_instance.y + border_instance.down + 20, fight_depth.bullet_outside, bone);
-				bone_instances[i].image_angle = 0;
-				if (i == 0) {
-					soul_instance.side = 2;
-					prev_side = dir.down;
-				}
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + i * 10, border_instance.y + border_instance.down + 20, bone,
+					0, 0, 0, 0, fight_network_mode);
 			}
 			if (side == dir.left) {
-				bone_instances[i] = instance_create_depth(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up + i * 10, fight_depth.bullet_outside, bone);
-				bone_instances[i].image_angle = 270;
-				if (i == 0) {
-					soul_instance.side = 3;
-					prev_side = dir.left;
-				}
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up + i * 10, bone,
+					0, 0, 0, 270, fight_network_mode);
 			}
 			if (side == dir.right) {
-				bone_instances[i] = instance_create_depth(border_instance.x + border_instance.right + 20, border_instance.y - border_instance.up + i * 10, fight_depth.bullet_outside, bone);
-				bone_instances[i].image_angle = 90;
-				if (i == 0) {
-					soul_instance.side = 4;
-					prev_side = dir.right;
-				}
+				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 20, border_instance.y - border_instance.up + i * 10, bone,
+					0, 0, 0, 90, fight_network_mode);
 			}
 			++i;
 		}
-		//character_instance.change_sprite_hand_dir(side);
+		character_instance.change_sprite_hand_dir(side);
+		
 		i = 0;
 		repeat(bone_count) {
-			bone_instances[i].change_scale(bone_scale, 0.3);
+			bone_instances[i] = scale_bone(bone_instances[i], bone_scale, 0.3, fight_network_mode);
 			i++;
 		}
+		
 		audio_play_sound_plugging(snd_spare_up);
 	}
 	update_down = function() {
 		var i = 0;
 		repeat(bone_count) {
-			bone_instances[i].change_scale(0, 0.3);
+			bone_instances[i] = scale_bone(bone_instances[i], 0, 0.3, fight_network_mode);
 			i++;
 		}
 	}
@@ -120,7 +101,7 @@ if (use_gravity_attack) {
 	});
 	
 	time_source_update_destroy = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
-		//character_instance.stop_hand_wave();
+		character_instance.stop_hand_wave();
 		instance_destroy();
 	});
 	
@@ -145,7 +126,7 @@ update = function() {
 		soul_instance.change_gravity_force(side);
 	}
 	
-	instance_destroy_array(bone_instances);
+	destroy_battle_object_array(bone_instances, fight_network_mode);
 	
 	character_instance.change_sprite_hand_dir(side);
 	
@@ -159,16 +140,16 @@ update = function() {
 	repeat (is_double ? 2 : 1) {
 		repeat(bone_count) {
 			if (side == dir.up) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 1, 0, 180);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 1, 0, 180, fight_network_mode);
 			}
 			if (side == dir.down) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 1, 0, 0);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 1, 0, 0, fight_network_mode);
 			}
 			if (side == dir.left) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 270);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 270, fight_network_mode);
 			}
 			if (side == dir.right) {
-				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 90);
+				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 1, 0, 90, fight_network_mode);
 			}
 			++i;
 		}
@@ -199,7 +180,7 @@ update = function() {
 update_up = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i].change_scale(bone_scale, 0.2);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, 0.2, fight_network_mode);
 		++i;
 	}
 	instance_destroy(obj_warning);
@@ -209,7 +190,7 @@ update_up = function() {
 update_down = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i].change_scale(1, 0.2);
+		bone_instances[i] = scale_bone(bone_instances[i], 0, 0.2, fight_network_mode);
 		++i;
 	}
 }

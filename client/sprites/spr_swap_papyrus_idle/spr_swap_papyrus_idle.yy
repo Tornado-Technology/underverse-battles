@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Char",
-    "path": "folders/Characteres/Swap Papyrus/Sprites/Char.yy",
+    "name": "Standart",
+    "path": "folders/Characteres/Swap Papyrus/Sprites/Char/Standart.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

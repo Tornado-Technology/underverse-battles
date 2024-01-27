@@ -344,6 +344,18 @@ function send_battle_object_gasterblaster(x, y, object, target_x, target_y, angl
 	});
 }
 
+function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time) {
+	send("battleCreateObject", {
+		objectName: "solo gasterblaster",
+		x: x,
+		y: y,
+		object: object,
+		targetTime: target_time,
+		chargeTime: charge_time,
+		destroyTime: destroy_time
+	});
+}
+
 function send_battle_object_error_string(x, y, object, target_x, target_y, angle, scale_speed) {
 	send("battleCreateObject", {
 		objectName: "error string",
@@ -425,6 +437,52 @@ function send_battle_object(x, y, depth, object, var_struct) {
 	});
 }
 
+function send_battle_object_bone_move(instance, speed, direction) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "move",
+		object: instance,
+		speed: speed,
+		direction: direction
+	});
+}
+
+function send_battle_object_bone_scale(instance, scale, scale_step) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "scale",
+		scale: scale,
+		scale_step: scale_step
+	});
+}
+
+function send_battle_object_bone_shake(instance) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "shake",
+		object: instance
+	});
+}
+
+function send_battle_object_change_solo_gasterblaster_position(instance, new_x, new_y) {
+	send("battleChangeObjectData", {
+		objectName: "solo gasterblaster",
+		eventName: "change position",
+		object: instance,
+		newX: new_x,
+		newY: new_y
+	});
+}
+
+function send_battle_object_change_solo_gasterblaster_target(instance, target) {
+	send("battleChangeObjectData", {
+		objectName: "solo gasterblaster",
+		eventName: "change target",
+		object: instance,
+		target: target
+	});
+}
+
 function send_battle_object_big_knife_move(instance, distance) {
 	send("battleChangeObjectData", {
 		objectName: "big knife",
@@ -448,5 +506,26 @@ function send_battle_object_big_knife_spin(instance, rotating_speed) {
 		eventName: "spin",
 		object: instance,
 		rotatingSpeed: rotating_speed
+	});
+}
+
+function send_destroy_battle_object(object) {
+	send("battleDestroyObject", {
+		object: object
+	});
+}
+
+function send_destroy_battle_object_array(array) {
+	send("battleDestroyObjectArray", {
+		array: array
+	});
+}
+
+function send_destroy_by_edit(object, color, count, distance) {
+	send("battleDestroyByEdit", {
+		object: object,
+		color: color,
+		count: count,
+		distance: distance
 	});
 }

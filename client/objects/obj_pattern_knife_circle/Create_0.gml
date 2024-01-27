@@ -9,7 +9,7 @@ callback = function () {
 		
 	update();
 	time_source_start(time_source_update);
-	time_source_start(time_source_update_destroy);
+	time_source_start(time_source_update_stop);
 }
 
 update = function() {

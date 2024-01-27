@@ -200,22 +200,12 @@ export default class SendStuff {
     this.send('fightExtraAction');
   }
 
-  public sendFightStartBattle(seed: number): void {
-    this.send('battleStart', {
-      seed,
-    });
+  public sendFightStartBattle(): void {
+    this.send('battleStart');
   }
 
-  public sendBattleCreateBorder(data: any): void {
-    this.send('battleCreateBorder', data);
-  }
-
-  public sendBattleCreateSoul(data: any): void {
-    this.send('battleCreateSoul', data);
-  }
-
-  public sendBattleCreateObject(data: any): void {
-    this.send('battleCreateObject', data);
+  public sendDataToClient(index: string, data: any): void {
+    this.send(index, data);
   }
 
   public sendFightSoul(x: number, y: number, angle: number, ability: number, playerId: number): void {

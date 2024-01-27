@@ -330,7 +330,7 @@ create_page([
 		instance_create(obj_menu_achivements);
 	}),
 	Transfer("Main.Settings", menu_page.settings),
-	Execute("Main.Debug", [], function() {
+	Execute("Main.DebugRooms", [], function() {
 		room_goto(room_cutscene_test);
 	}),
 	Transfer("Main.Credits", menu_page.credits, function() {

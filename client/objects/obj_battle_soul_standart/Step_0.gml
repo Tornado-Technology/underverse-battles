@@ -34,7 +34,5 @@ if (is_mobile || mobile_mode) {
 	}
 }
 
-strict_place_meeting_walls();
-
-x += movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
-y += movement_speed_y + outside_force_y + tremble_force_y + border_force_y;
+x += movement_speed_x + outside_force_x + tremble_force_x;
+y += movement_speed_y + outside_force_y + tremble_force_y;

@@ -1,5 +1,5 @@
-function create_error_string(x, y, object, target_x, target_y, scale_speed, send_object_creation = false) {
-	if (send_object_creation) send_battle_object_error_string(x, y, object, target_x, target_y, angle, scale_speed);
+function create_error_string(x, y, object, target_x, target_y, scale_speed, send_data = false) {
+	if (send_data) send_battle_object_error_string(x, y, object, target_x, target_y, angle, scale_speed);
 	
 	var instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, object);
 	instance.x_dir = target_x;

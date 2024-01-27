@@ -1,5 +1,5 @@
-function create_damage_wave(x, y, object, angle, speed, send_object_creation = false) {
-	if (send_object_creation) send_battle_object_damage_wave(x, y, object, angle, speed);
+function create_damage_wave(x, y, object, angle, speed, send_data = false) {
+	if (send_data) send_battle_object_damage_wave(x, y, object, angle, speed);
 	
 	instance = instance_create_depth(x, y, 0, object);
 	instance._target_angle = angle;

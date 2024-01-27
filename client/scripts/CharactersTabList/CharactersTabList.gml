@@ -14,7 +14,7 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 	is_hover_on_button = false;
 	static color_selected = c_yellow;
 	static button_offset_x = 20;
-	static button_offset_y = 30;
+	static button_offset_y = 20;
 	static base_init = init;
 	static base_update = update;
 	static base_draw = draw;
@@ -41,13 +41,6 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 		var offset_y = menu_instance.dist_y;
 		var top_shift = menu_instance.top_shift;
 		var text_color_selected = menu_instance.text_name_character_color;
-		
-		draw_set_font(global._font_main_mini);
-		draw_set_halign(fa_center);
-		if (selected_character == character_id) draw_set_color(text_color_selected);
-		
-		draw_text(rectangle_x + frame_width * array_x + offset_x * (array_x + 1) + frame_width / 2, rectangle_y + frame_height * (array_y + 1) + offset_x + offset_y * array_y + top_shift, characters[character_id].name);
-		draw_reset();
 		
 		base_on_draw_cell(array_x, array_y);
 	}

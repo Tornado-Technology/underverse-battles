@@ -1,7 +1,7 @@
 event_inherited();
 
 // Skins
-skin_name = translate_get("CharactersStyles.Christmas");
+skin_name = translate_get("CharactersStyles.ChristmasTree");
 frame = spr_green_christmas_tree_frame;
 
 // Animations

@@ -36,7 +36,7 @@ update = function() {
 }
 
 var period = 52 - _power * 2;
-var repeats = 5 + _power;
+var repeats = 6 + _power * 2;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);

@@ -1,5 +1,5 @@
-function create_big_knife_y(x, y, object, direction, angle, point_stop_y, send_object_creation = false) {
-	if (send_object_creation) send_battle_object_big_knife_y(x, y, object, direction, angle, point_stop_y);
+function create_big_knife_y(x, y, object, direction, angle, point_stop_y, send_data = false) {
+	if (send_data) send_battle_object_big_knife_y(x, y, object, direction, angle, point_stop_y);
 	
 	var instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, object);
 	instance.direction = direction;

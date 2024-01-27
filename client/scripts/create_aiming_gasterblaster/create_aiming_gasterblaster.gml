@@ -1,6 +1,6 @@
 ///@param {Asset.GMObject} gaster_blaster
 ///@param {Asset.GMInstance} target
-function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6, send_object_creation = false) {
+function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6, send_data = false) {
 	var x_gb, y_gb;
 	var gb_size = 60;
 	var pos = irandom_range(0, 3);
@@ -36,7 +36,7 @@ function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, cha
 	var_struct.flyout_time = flyout_time;
 	var_struct.destroy_time = destroy_time;
 	
-	if (send_object_creation) send_battle_object_gasterblaster(x_gb, y_gb, gaster_blaster, target.x, target.y, 0, fly_time, charge_time, flyout_time, destroy_time);
+	if (send_data) send_battle_object_gasterblaster(x_gb, y_gb, gaster_blaster, target.x, target.y, 0, fly_time, charge_time, flyout_time, destroy_time);
 	
 	return instance_create_depth(x_gb, y_gb, fight_depth.bullet_outside_hight, gaster_blaster, var_struct);
 }

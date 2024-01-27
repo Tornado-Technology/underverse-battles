@@ -12,6 +12,12 @@ required_components = {
 	timer: obj_network_fight_timer
 };
 
+// Initiative
+if (global.fight_network_buffer_initiative != undefined) {
+	initiative = global.fight_network_buffer_initiative;
+	global.fight_network_buffer_initiative = undefined;
+}
+
 // Ending room
 ending_room = room_fight_1v1_end;
 

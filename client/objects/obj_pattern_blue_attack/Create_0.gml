@@ -25,7 +25,7 @@ update = function() {
 		soul_instance.change_gravity_force(side);
 	}
 	
-	instance_destroy_array(bone_instances);
+	destroy_battle_object_array(bone_instances, fight_network_mode);
 	
 	character_instance.change_sprite_hand_dir(side);
 	
@@ -79,7 +79,7 @@ update = function() {
 update_up = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i].change_scale(bone_scale, 0.2);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, 0.2, fight_network_mode);
 		++i;
 	}
 	instance_destroy(obj_warning);
@@ -89,7 +89,7 @@ update_up = function() {
 update_down = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i].change_scale(1, 0.2);
+		bone_instances[i] = scale_bone(bone_instances[i],1, 0.2, fight_network_mode);
 		++i;
 	}
 }

@@ -1,5 +1,5 @@
-function create_solo_moving_platform(x, y, scale, speed, left_station, right_station, send_object_creation = false) {
-	if (send_object_creation) send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station);
+function create_solo_moving_platform(x, y, scale, speed, left_station, right_station, send_data = false) {
+	if (send_data) send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station);
 	
 	return instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_platform, {
 		image_xscale: scale,

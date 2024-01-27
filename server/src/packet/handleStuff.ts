@@ -375,7 +375,6 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightHealAction':
       await client.fight.instance?.addHp(client, data.hp);
-      client.fight.instance?.getOtherClient(client)?.sendFightBattleEnd(-data.hp);
       break;
 
     case 'fightSkip':
@@ -424,7 +423,6 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'battleFinish':
-      client.fight.inBattle = false;
       if (data.initiative == 1) {
         client.fight.instance?.battleFinish(client, data.damage);
       }
@@ -435,15 +433,13 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     
     case 'battleCreateBorder':
-      client.fight.instance?.сreateBorder(client, data);
-      break;
-    
     case 'battleCreateSoul':
-      client.fight.instance?.сreateSoul(client, data);
-      break;
-
     case 'battleCreateObject':
-      client.fight.instance?.сreateObject(client, data);
+    case 'battleChangeObjectData':
+    case 'battleDestroyObject':
+    case 'battleDestroyObjectArray':
+    case 'battleDestroyByEdit':
+      client.fight.instance?.transferDataFromClient(client, index, data);
       break;
 
     default:

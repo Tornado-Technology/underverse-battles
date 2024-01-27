@@ -19,38 +19,38 @@ update = function() {
 	if (use_gravity_attack) {
 		soul_instance.change_gravity_force(side);
 	}
-		
-	bone_instances[0] = instance_create_depth(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, fight_depth.bullet_outside, bone, {
-		image_angle: 180,
-		direction: 180
-	});
-	bone_instances[1] = instance_create_depth(border_instance.x - border_instance.left - 10, border_instance.y + border_instance.down + 15, fight_depth.bullet_outside, bone, {
-		image_angle: 0,
-		direction: 0
-	});
-		
+	
+	destroy_battle_object_array(bone_instances, fight_network_mode);
+	
 	if (use_gravity_attack) {
 		var bone_scale = 1.9;
-		var i = 0;
-		repeat(array_length(bone_instances)) {
-			bone_instances[i].image_yscale = bone_scale;
-			bone_instances[i].speed_const = 1.1 + _power * 0.1;
-			++i;
-		}
+		var bone_speed = 1.1 + _power * 0.1;
+		bone_instances[0] = create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
+			bone_speed, bone_scale, 180, 180, fight_network_mode);
+		bone_instances[1] = create_bone(border_instance.x - border_instance.left - 10, border_instance.y + border_instance.down + 15, bone,
+			bone_speed, bone_scale, 0, 0, fight_network_mode);
 	}
 	else
 	{
 		var bone_scale = 4.6;
-		var rand_side = irandom_range(0, 3);
-		bone_instances[rand_side].image_yscale = bone_scale;
-		bone_instances[rand_side].speed_const = 1.8 + _power * 0.1;
+		var bone_speed = 1.8 + _power * 0.1;
+		
+		var bone_x = border_instance.x + border_instance.right + 10;
+		var bone_y = border_instance.y - border_instance.up - 15;
+		if (side == dir.down) {
+			bone_x = border_instance.x - border_instance.left - 10;
+			bone_y = border_instance.y + border_instance.down + 15;
+		}
+		
+		bone_instances[0] = create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
+			bone_speed, bone_scale, side, side, fight_network_mode);
 	}
 	
 	character_instance.change_sprite_hand_dir(side);
 }
 
 var period = 75 - _power * 5;
-var repeats = 5 + _power
+var repeats = 5 + _power;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;

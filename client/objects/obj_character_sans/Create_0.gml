@@ -93,6 +93,7 @@ change_sprite_hand_dir = function(hand_dir) {
 	if (hand_dir_previous == dir.right && hand_dir == dir.right) sprite_index = hand_left_right_animation;
 	hand_dir_previous = hand_dir;
 }
+
 stop_hand_wave = function() {
 	sprite_index = idle_animation;
 }

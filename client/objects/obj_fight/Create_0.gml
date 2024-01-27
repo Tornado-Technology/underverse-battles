@@ -45,7 +45,7 @@ end_battle_timesource = 0;
 x_shift = 1;
 
 // Discord
-if (is_desktop) discord_set_info_action(discord_action.in_fight);
+discord_set_info_action(discord_action.in_fight);
 
 // State
 state = fight_state.choosing;

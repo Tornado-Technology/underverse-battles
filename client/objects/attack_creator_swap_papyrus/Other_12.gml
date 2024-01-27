@@ -6,7 +6,6 @@ switch (attack_num) {
 			
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
 			_soul = create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
-			_soul.changeable_direction = true;
 		
 			bone_scale = 2.2;
 			

@@ -1,5 +1,6 @@
 /// @param action
 function discord_set_info_action(info_action) {
+	if (!is_desktop) return;
 	
 	var value = translate_get("DiscordApp.Undefined");
 	switch (info_action) {

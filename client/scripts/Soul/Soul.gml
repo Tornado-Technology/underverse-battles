@@ -1,7 +1,7 @@
-function create_soul(px, py, type, send_object_creation = false) {
+function create_soul(px, py, type, send_data = false) {
 	if (instance_exists(obj_battle_soul)) {
-		if (send_object_creation) send_battle_soul(obj_battle_soul.x, obj_battle_soul.y, type);
-		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type, send_object_creation);
+		if (send_data) send_battle_soul(obj_battle_soul.x, obj_battle_soul.y, type);
+		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type, send_data);
 	}
 	var soul_ = obj_battle_soul_standart;
 	switch (type) {
@@ -18,14 +18,14 @@ function create_soul(px, py, type, send_object_creation = false) {
 			soul_ = obj_battle_soul_yellow;
 		break;
 	}
-	if (send_object_creation) send_battle_soul(px, py, type);
+	if (send_data) send_battle_soul(px, py, type);
 	return instance_create_depth(px, py, fight_depth.soul, soul_);
 }
 
-function change_soul(old_soul, px, py, type, send_object_creation) {
+function change_soul(old_soul, px, py, type, send_data) {
 	instance_destroy(old_soul);
 	audio_play_sound_once(snd_swing);
-	var new_soul = create_soul(px, py, type, send_object_creation);
+	var new_soul = create_soul(px, py, type, send_data);
 	new_soul.change_effect();
 	return new_soul;
 }

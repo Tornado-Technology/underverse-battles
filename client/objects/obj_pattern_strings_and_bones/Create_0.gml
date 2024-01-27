@@ -13,7 +13,7 @@ update_bone = function() {
 	var coord = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);
 	var bone_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
 	
-	create_bone(coord[0], coord[1], bone, 2 + _power * 0.2, 1, bone_direction, bone_direction, fight_network_mode);
+	create_bone(coord[0], coord[1], bone, 2 + _power * 0.2, 1, bone_direction, bone_direction - 90, fight_network_mode);
 }
 	
 update_thread = function() {

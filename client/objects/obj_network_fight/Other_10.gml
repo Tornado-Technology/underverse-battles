@@ -1,6 +1,9 @@
 if (state == fight_state.battle) {
 	timer_stop();
-	if (fight_network_mode && initiative == 1) instance_create_one(obj_battle);
+	statistics_set_selection_attack_network(0, fight_get_player_action(0));
+	if (initiative == 1) {
+		instance_create_one(obj_battle);
+	}
 }
 
 if (state == fight_state.dodge) {
