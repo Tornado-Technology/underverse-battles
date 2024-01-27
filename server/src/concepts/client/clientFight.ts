@@ -22,13 +22,14 @@ export default class ClientFight {
   public stamina: number;
   public staminaMax: number;
   public action: actionType;
-  public inBattle: boolean;
   public power: number;
   public specialActionCharge: number;
   public characterId: number;
   public characterSkinId: number;
   public characterInfo: CharacterInfo;
   public soul: SoulData;
+  public removed: boolean;
+  public responceTimeout: NodeJS.Timeout;
 
   private _instance: Fight;
 
@@ -46,9 +47,9 @@ export default class ClientFight {
     this.mana = this.manaMax / 2;
     this.stamina = this.staminaMax;
     this.action = actionType.empty;
-    this.inBattle = false;
     this.power = 0;
     this.specialActionCharge = 0;
+    this.removed = false;
   }
 
   public unit(): void {
@@ -63,9 +64,10 @@ export default class ClientFight {
     this.stamina = null;
     this.staminaMax = null;
     this.action = null;
-    this.inBattle = null;
     this.power = null;
     this.specialActionCharge = null;
+
+    this.stopResponceTimeout();
   }
 
   public async save(): Promise<void> {
@@ -94,11 +96,10 @@ export default class ClientFight {
   }
 
   public async leave(): Promise<void> {
-    if (!this.instance) return;
-
     Logger.debug(`${this.client.username} exit from fight.`);
     await this.save();
-    this.instance.kickPlayer(this.client);
+
+    this.instance?.leavePlayer(this.client);
   }
 
   public setCharacter(characterId: number, skinId: number): void {
@@ -173,6 +174,30 @@ export default class ClientFight {
     this.soul.y = y;
     this.soul.angle = angle;
     this.soul.ability = ability;
+  }
+
+  public startResponceTimeout() {
+    this.responceTimeout = setTimeout(() => {
+      this.instance.kickPlayer(this.client);
+    }, 6_000);
+  }
+
+  public stopResponceTimeout() {
+    clearTimeout(this.responceTimeout);
+    this.responceTimeout = null;
+  }
+
+  public response() {
+    if (!this.instance) {
+      return;
+    }
+
+    if (this.removed) {
+      this.instance.clientAdd(this.client);
+    }
+
+    this.stopResponceTimeout();
+    this.startResponceTimeout();
   }
 
   public async tryRestore() {

@@ -14,7 +14,10 @@
     "name": "Bullets",
     "path": "folders/Characteres/Jevil/Attacks/Bullets.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_battle_element",
+    "path": "objects/obj_battle_element/obj_battle_element.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

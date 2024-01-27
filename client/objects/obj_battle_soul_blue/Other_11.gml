@@ -1,4 +1,4 @@
-/// @desc Gravity down
+/// @description Gravity down
 set_angle(dir.right);
 
 // Input
@@ -6,83 +6,76 @@ right = input_check_held(input.right);
 left = input_check_held(input.left);
 up = input_check_held(input.up) && !input_check_held(input.down);
 
-var HSPD = 1.8;
-var VSPD = 2.5;
-var FALL_SPD = 3;
+var HSPD = 1.8 * dtime;
+var VSPD = 2.5 * dtime;
+var FALL_SPD = 3 * dtime;
 
+if (blue_attack) blue_attack_force_speed_y = 5 * dtime;
 
-if (place_meeting(x, y + 1, obj_platform) && !place_meeting(x, y, obj_platform) && vspd >= 0) {
-	hspd_inert = instance_place(x, y + 1, obj_platform).speed;
+if (place_meeting(x, y + 1, obj_platform) && !place_meeting(x, y, obj_platform) && movement_speed_y >= 0) {
+	platform_inertion = instance_place(x, y + 1, obj_platform).speed;
+	is_jumping = false;
 	fly_time = 0;
-	addit_spd = 0;
-	vspd = 0;
+	movement_speed_y = 0;
+	blue_attack_force_speed_y = 0;
 } else {
-	hspd_inert = 0;
-    vspd += (grav + addit_spd);
+	platform_inertion = 0;
 }
-        
-if (vspd > FALL_SPD + addit_spd) {
-	vspd = (FALL_SPD + addit_spd);
-}
-
 
 if (right) {
-	hspd = HSPD;
+	movement_speed_x = HSPD;
 }
 
 if (left) {
-	hspd = -HSPD;
+	movement_speed_x = -HSPD;
 }
 
-
-if (up && fly_time < max_fly_time && (place_meeting(x, y + 1, obj_solid) || (place_meeting(x, y + 1, obj_platform) && !place_meeting(x, y, obj_platform) && vspd >= 0))) {
-	vspd = -VSPD;
-	fly_time++;
+// Jump
+if (up && !is_jumping && fly_time == 0) {
+	is_jumping = true;
 }
 
-if (!up && vspd < 0) {
-	vspd = 0;
+if (up && is_jumping && fly_time < max_fly_time) {
+	movement_speed_y = -VSPD;
+	fly_time += dtime;
+}
+else {
+	movement_speed_y += grav * dtime * dtime;
+}
+if (!up && movement_speed_y < 0 || has_collision_up) {
+	movement_speed_y = 0;
+	is_jumping = false;
+}
+
+if (has_collision_down) {
+	is_jumping = false;
+	fly_time = 0;
+	movement_speed_y = 0;
+	blue_attack_force_speed_y = 0;
 }
 
 if (!left && !right) {
-    hspd = 0;
-}
-
-var movement_delta_min = 0.01;
-    
-// Vertical
-var full_movement_y = vspd;
-if (place_meeting(x, y + full_movement_y, obj_solid)) {
-	while(!place_meeting(x, y + sign(full_movement_y) * movement_delta_min, obj_solid)) {
-		y += sign(full_movement_y) * movement_delta_min;
-	}
-	
-	fly_time = 0;
-	addit_spd = 0;
-    vspd = 0;
+    movement_speed_x = 0;
 }
 
 // Platform
-var full_movement_y = vspd;
+var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y + blue_attack_force_speed_y;
 if (place_meeting(x, y + full_movement_y, obj_platform) && !place_meeting(x, y, obj_platform) && full_movement_y >= 0) {
 	while(!place_meeting(x, y + sign(full_movement_y) * movement_delta_min, obj_platform)) {
 		y += sign(full_movement_y) * movement_delta_min;
 	}
 	
 	fly_time = 0;
-	addit_spd = 0;
-    vspd = 0;
-}
-y += vspd;
-    
-// Horisontal
-var full_movement_x = hspd + hspd_inert;
-if (place_meeting(x + full_movement_x, y, obj_solid)) {
-	while(!place_meeting(x + sign(full_movement_x) * movement_delta_min, y, obj_solid)) {
-		x += sign(full_movement_x) * movement_delta_min;
-	}
+	blue_attack_force_speed_y = 0;
+    movement_speed_y = 0;
 	
-	hspd = 0;
-	hspd_inert = 0;
+	outside_force_y = 0;
+	tremble_force_y = 0;
 }
-x += hspd + hspd_inert;
+
+if (movement_speed_y > FALL_SPD) {
+	movement_speed_y = FALL_SPD;
+}
+
+x += movement_speed_x + outside_force_x + tremble_force_x + platform_inertion;
+y += movement_speed_y + outside_force_y + tremble_force_y + blue_attack_force_speed_y;

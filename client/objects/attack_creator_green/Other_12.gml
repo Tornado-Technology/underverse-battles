@@ -11,7 +11,7 @@ switch (attack_num) {
 			_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
 			
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
 		
 			var period = 50 - _power * 5;
 			var gb_size = 60;
@@ -35,7 +35,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 65, battle_border.down - 65, battle_border.left - 50, battle_border.right - 50);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
 		
 			var border_dist = 180;
 			var period = 50 - _power * 5;

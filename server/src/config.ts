@@ -26,15 +26,15 @@ const commonConfig = {
   meta: {
     name: 'UnderverseBattles server',
     description: 'The server for UnderverseBattles',
-    version: 'v2.1.2',
+    version: 'v2.1.4',
     type: 'common',
     tags: [],
   },
   gameplay: {
     fight: {
+      maxSkipCount: 3,
       timer: 11_000,
-      battleFinishTimer: 5_000,
-      disconnectTimeout: 10_000,
+      disconnectTimeout: 10_000
     },
   },
   main: {
@@ -47,7 +47,7 @@ const commonConfig = {
     necessaryEmailCode: true,
     pingInterval: 3000,
     verification: {
-      enabled: true,
+      enabled: false,
       timeout: 3000,
     },
   },
@@ -62,7 +62,7 @@ const productionConfig = {
   meta: {
     name: 'UnderverseBattles server official',
     description: 'The official, always maintained server of the developers of UnderverseBattles',
-    version: 'v2.1.2',
+    version: 'v2.1.4',
     type: 'production',
     tags: [
       'latest',
@@ -83,7 +83,7 @@ const developmentConfig = {
   meta: {
     name: 'UnderverseBattles server for developers',
     description: 'The server is for testing the game, be careful, he-he!',
-    version: 'v2.1.2',
+    version: 'v2.1.4',
     type: 'development',
     tags: [
       'development',
@@ -96,7 +96,7 @@ const developmentConfig = {
   },
   client: {
     verification: {
-      enabled: true,
+      enabled: false,
     }
   },
   database: {

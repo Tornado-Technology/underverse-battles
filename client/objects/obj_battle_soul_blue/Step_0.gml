@@ -18,7 +18,7 @@ switch (gravity_force) {
 		break;
 }
 
-if (addit_spd == 0 && blue_attack) {
+if (blue_attack_force_speed_x == 0 && blue_attack_force_speed_y == 0 && blue_attack) {
 	audio_play_sound_plugging(snd_projectile_hit);
 	blue_attack = false;
 }

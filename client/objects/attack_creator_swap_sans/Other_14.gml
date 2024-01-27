@@ -96,20 +96,20 @@ if (_id == 1 && attack_num == 0) {
 		var random_y = choose(-15, 0, 15);
 		var random_angle = choose(0, 20, 45, 65, 90);
 		if (rand_num == 0) {
-			create_bone_spinning(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, angle_speed);
-			create_bone_spinning(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle + 90, angle_speed);
+			create_spinning_bone(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, angle_speed);
+			create_spinning_bone(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle + 90, angle_speed);
 		}
 		if (rand_num == 1) {
-			create_bone_spinning(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, angle_speed);
-			create_bone_spinning(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle + 90, angle_speed);
+			create_spinning_bone(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, angle_speed);
+			create_spinning_bone(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle + 90, angle_speed);
 		}
 		if (rand_num == 2) {
-			create_bone_spinning(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, -angle_speed);
-			create_bone_spinning(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle + 90, -angle_speed);
+			create_spinning_bone(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, -angle_speed);
+			create_spinning_bone(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle + 90, -angle_speed);
 		}
 		if (rand_num == 3) {
-			create_bone_spinning(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, -angle_speed);
-			create_bone_spinning(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle + 90, -angle_speed);
+			create_spinning_bone(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, -angle_speed);
+			create_spinning_bone(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle + 90, -angle_speed);
 		}
 	}
 }
@@ -135,9 +135,9 @@ if (_id == 1 && attack_num == 2) {
 		var random_y = choose(-30, -15, 0, 15, 30);
 		var random_angle = choose(0, 20, 45, 65, 90);
 		if (random_side == dir.left)
-			create_bone_spinning(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, angle_speed);
+			create_spinning_bone(_border.x - _border.left * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 0, random_angle, angle_speed);
 		if (random_side == dir.right)
-			create_bone_spinning(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, angle_speed);
+			create_spinning_bone(_border.x + _border.right * 2, _border.y + random_y, bone_spin_obj, bone_speed, bone_size, 180, random_angle, angle_speed);
 	}
 }
 

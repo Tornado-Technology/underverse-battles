@@ -1,10 +1,31 @@
 // I so lasy make it hands
 depth = fight_depth.soul;
 
+// Size
+half_width = sprite_width / 2;
+half_height = sprite_height / 2;
+
+// Movement
+moveable = true;
+
+movement_speed_x = 0;
+movement_speed_y = 0;
+
+outside_force_x = 0;
+outside_force_y = 0;
+
+border_delta_x = 0;
+border_delta_y = 0;
+
+border_force_x = 0;
+border_force_y = 0;
+
+movement_delta_min = 0.01;
+
 // Actions
 follow_board = false;
-moveable = true;
 ability = false;
+blue_attack = false;
 
 // Network stuff
 is_otherplayer_soul = false;
@@ -12,8 +33,23 @@ skip_frame = 0;
 
 // Collision with projectiles
 list_projectiles = ds_list_create();
+has_collision = false;
+has_collision_up = false;
+has_collision_down = false;
+has_collision_left = false;
+has_collision_right = false;
+is_pushed = false;
+pusher_instance = noone;
 
-blue_attack = false;
+// Collision with border
+is_inside_border_x = true;
+is_inside_border_y = true;
+
+update_push_damage = function () {
+	if (has_collision && is_pushed && instance_exists(pusher_instance)) {
+		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
+	}
+}
 
 // Invincibility
 invincibility = 0;
@@ -49,10 +85,12 @@ tremble_update = function() {
 		var rand_side = choose(dir.up, dir.down, dir.left, dir.right);
 		tremble_force_x = 0;
 		tremble_force_y = 0;
-		if (rand_side == dir.up) tremble_force_y = -1;
-		if (rand_side == dir.down) tremble_force_y = 1;
-		if (rand_side == dir.left) tremble_force_x = -1;
-		if (rand_side == dir.right) tremble_force_x = 1;
+		
+		var tremble_force_speed = dtime;
+		if (rand_side == dir.up) tremble_force_y = -tremble_force_speed;
+		if (rand_side == dir.down) tremble_force_y = tremble_force_speed;
+		if (rand_side == dir.left) tremble_force_x = -tremble_force_speed;
+		if (rand_side == dir.right) tremble_force_x = tremble_force_speed;
 		tremble_time++;
 		if (tremble_time == tremble_time_max) {
 			trembles = false;
@@ -63,7 +101,12 @@ tremble_update = function() {
 	}
 }
 
-// Particles
+// Particle
+part_type_tail = part_type_create();
+part_type_sprite(part_type_tail, sprite_index, false, false, false);
+part_type_alpha2(part_type_tail, 1, 0);
+part_type_life(part_type_tail, 20, 20);
+
 change_effect = function () {
 	part_type_change = part_type_create();
 	part_type_sprite(part_type_change, sprite_index, false, false, false);
@@ -75,4 +118,4 @@ change_effect = function () {
 }
 
 // Create collider soul
-collider_soul = instance_create_depth(x, y, depth, obj_battle_collider_soul);
+event_user(5);

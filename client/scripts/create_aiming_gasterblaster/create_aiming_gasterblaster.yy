@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Gasterblaster",
-    "path": "folders/Scripts/Local/Fight/Battle/Gasterblaster.yy",
+    "path": "folders/Scripts/Local/Fight/Battle/Object/Gasterblaster.yy",
   },
 }

@@ -5,7 +5,6 @@ soul_invulnerability = 20;
 
 /* rotate */
 _rotating = true;
-_target_angle = -1;
 
 /* speed */
 _speed = 3.7;

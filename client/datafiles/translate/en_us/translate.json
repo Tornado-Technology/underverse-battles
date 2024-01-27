@@ -386,6 +386,7 @@
       "MobileControls": {
         "Description": "Here you can set a position and size of controlers. Click on the controler to change",
         "Position": "Position",
+        "TypeController": "Type controller",
         "Size": "Size",
         "Ready": "Ready",
         "Elements": {

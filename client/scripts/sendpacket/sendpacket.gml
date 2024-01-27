@@ -145,9 +145,10 @@ function send_fight_soul(x, y, angle, ability) {
 	});
 }
 
-function send_fight_finish_battle(initiative) {
+function send_fight_finish_battle(initiative, damage) {
     send("battleFinish", {
-		initiative: initiative
+		initiative: initiative,
+		damage: damage
 	});
 }
 
@@ -193,4 +194,338 @@ function send_fight_collider_soul_data() {
 
 function send_fight_loaded() {
 	send("fightLoaded");
+}
+
+function send_battle_border(up, down, left, right) {
+	send("battleCreateBorder", {
+		up: up,
+		down: down,
+		left: left,
+		right: right
+	});
+}
+
+function send_battle_soul(x, y, type) {
+	send("battleCreateSoul", {
+		x: x,
+		y: y,
+		type: type
+	});
+}
+
+// Battle object
+
+function send_battle_object_drop(x, y, object, speed, direction, use_gravity_force) {
+	send("battleCreateObject", {
+		objectName: "drop",
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		direction: direction,
+		useGravity: use_gravity_force
+	});
+}
+
+function send_battle_object_broomie(x, y, object, direction, side, angle_speed, max_acceleration) {
+	send("battleCreateObject", {
+		objectName: "broomie",
+		x: x,
+		y: y,
+		object: object,
+		direction: direction,
+		side: side,
+		angleSpeed: angle_speed,
+		maxAcceleration: max_acceleration
+	});
+}
+
+function send_battle_object_bone(x, y, object, speed, size, direction, angle) {
+	send("battleCreateObject", {
+		objectName: "bone",
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		size: size,
+		direction: direction,
+		angle: angle
+	});
+}
+
+function send_battle_object_falling_bone(x, y, object, angle, direction, scale, acceleration) {
+	send("battleCreateObject", {
+		objectName: "falling bone",
+		x: x,
+		y: y,
+		object: object,
+		angle: angle,
+		direction: direction,
+		scale: scale,
+		acceleration: acceleration
+	});
+}
+
+function send_battle_object_poking_bone(x, y, object, speed, size, direction) {
+	send("battleCreateObject", {
+		objectName: "poking bone",
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		size: size,
+		direction: direction
+	});
+}
+
+function send_battle_object_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed) {
+	send("battleCreateObject", {
+		objectName: "spinning bone",
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		size: size,
+		direction: direction,
+		angle: angle,
+		angleSpeed: angle_speed
+	});
+}
+
+function send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station) {
+	send("battleCreateObject", {
+		objectName: "solo moving platform",
+		x: x,
+		y: y,
+		scale: scale,
+		speed: speed,
+		leftStation: left_station,
+		rightStation: right_station
+	});
+}
+
+function send_battle_object_moving_platforms(x, y, count, scale, distance, speed) {
+	send("battleCreateObject", {
+		objectName: "moving platforms",
+		x: x,
+		y: y,
+		count: count,
+		scale: scale,
+		distance: distance,
+		speed: speed
+	});
+}
+
+function send_battle_object_next_moving_platform(x, y, count, scale, distance, speed) {
+	send("battleCreateObject", {
+		objectName: "next moving platform",
+		x: x,
+		y: y,
+		count: count,
+		scale: scale,
+		distance: distance,
+		speed: speed
+	});
+}
+
+function send_battle_object_gasterblaster(x, y, object, target_x, target_y, angle, fly_time, charge_time, flyout_time, destroy_time) {
+	send("battleCreateObject", {
+		objectName: "gasterblaster",
+		x: x,
+		y: y,
+		object: object,
+		targetX: target_x,
+		targetY: target_y,
+		angle: angle,
+		flyTime: fly_time,
+		chargeTime: charge_time,
+		flyoutTime: flyout_time,
+		destroyTime: destroy_time
+	});
+}
+
+function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time) {
+	send("battleCreateObject", {
+		objectName: "solo gasterblaster",
+		x: x,
+		y: y,
+		object: object,
+		targetTime: target_time,
+		chargeTime: charge_time,
+		destroyTime: destroy_time
+	});
+}
+
+function send_battle_object_error_string(x, y, object, target_x, target_y, angle, scale_speed) {
+	send("battleCreateObject", {
+		objectName: "error string",
+		x: x,
+		y: y,
+		object: object,
+		targetX: target_x,
+		targetY: target_y,
+		angle: angle,
+		scaleSpeed: scale_speed
+	});
+}
+
+function send_battle_object_knife_swing(x, y, object, angle, distance) {
+	send("battleCreateObject", {
+		objectName: "knife swing",
+		x: x,
+		y: y,
+		object: object,
+		angle: angle,
+		distance: distance
+	});
+}
+
+function send_battle_object_big_knife_x(x, y, object, direction, angle, point_stop_x) {
+	send("battleCreateObject", {
+		objectName: "big knife x",
+		x: x,
+		y: y,
+		object: object,
+		direction: direction,
+		angle: angle,
+		pointStopX: point_stop_x
+	});
+}
+
+function send_battle_object_big_knife_y(x, y, object, direction, angle, point_stop_y) {
+	send("battleCreateObject", {
+		objectName: "big knife y",
+		x: x,
+		y: y,
+		object: object,
+		direction: direction,
+		angle: angle,
+		pointStopY: point_stop_y
+	});
+}
+
+function send_battle_object_damage_wave(x, y, object, angle, speed) {
+	send("battleCreateObject", {
+		objectName: "damage wave",
+		x: x,
+		y: y,
+		object: object,
+		angle: angle,
+		speed: speed
+	});
+}
+
+function send_battle_object_spike(x, y, object, speed, direction) {
+	send("battleCreateObject", {
+		objectName: "spike",
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		direction: direction
+	});
+}
+
+function send_battle_object(x, y, depth, object, var_struct) {
+	send("battleCreateObject", {
+		objectName: "object",
+		x: x,
+		y: y,
+		depth: depth,
+		object: object,
+		varStruct: var_struct
+	});
+}
+
+function send_battle_object_bone_move(instance, speed, direction) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "move",
+		object: instance,
+		speed: speed,
+		direction: direction
+	});
+}
+
+function send_battle_object_bone_scale(instance, scale, scale_step) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "scale",
+		scale: scale,
+		scale_step: scale_step
+	});
+}
+
+function send_battle_object_bone_shake(instance) {
+	send("battleChangeObjectData", {
+		objectName: "bone",
+		eventName: "shake",
+		object: instance
+	});
+}
+
+function send_battle_object_change_solo_gasterblaster_position(instance, new_x, new_y) {
+	send("battleChangeObjectData", {
+		objectName: "solo gasterblaster",
+		eventName: "change position",
+		object: instance,
+		newX: new_x,
+		newY: new_y
+	});
+}
+
+function send_battle_object_change_solo_gasterblaster_target(instance, target) {
+	send("battleChangeObjectData", {
+		objectName: "solo gasterblaster",
+		eventName: "change target",
+		object: instance,
+		target: target
+	});
+}
+
+function send_battle_object_big_knife_move(instance, distance) {
+	send("battleChangeObjectData", {
+		objectName: "big knife",
+		eventName: "move",
+		object: instance,
+		distance: distance
+	});
+}
+
+function send_battle_object_big_knife_move_up(instance) {
+	send("battleChangeObjectData", {
+		objectName: "big knife",
+		eventName: "move up",
+		object: instance
+	});
+}
+
+function send_battle_object_big_knife_spin(instance, rotating_speed) {
+	send("battleChangeObjectData", {
+		objectName: "big knife",
+		eventName: "spin",
+		object: instance,
+		rotatingSpeed: rotating_speed
+	});
+}
+
+function send_destroy_battle_object(object) {
+	send("battleDestroyObject", {
+		object: object
+	});
+}
+
+function send_destroy_battle_object_array(array) {
+	send("battleDestroyObjectArray", {
+		array: array
+	});
+}
+
+function send_destroy_by_edit(object, color, count, distance) {
+	send("battleDestroyByEdit", {
+		object: object,
+		color: color,
+		count: count,
+		distance: distance
+	});
 }

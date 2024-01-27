@@ -1,7 +1,9 @@
-if (direction < 270)
-	direction += dtime;
-if (direction > 270)
-	direction -= dtime;
+if (use_gravity_force) {
+	if (direction < 270)
+		direction += dtime;
+	if (direction > 270)
+		direction -= dtime;
+}
 
 if (speed < speed_const * dtime)
 	speed += 0.1 * dtime;

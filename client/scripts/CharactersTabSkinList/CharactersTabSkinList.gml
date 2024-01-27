@@ -8,10 +8,16 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	characters = [];
 	character_frames = [];
 	character_id = 0;
+	static button_offset_x = 20;
+	static button_offset_y = 20;
 	static base_update = update;
 	static base_draw = draw;
 	static base_on_draw_cell = on_draw_cell;
 	static base_on_click_on_character = on_click_on_character;
+	
+	button_close = UITextButton(menu_instance.text.back, function() {
+		close();
+	});
 	
 	// Overwrited in object
 	static on_click_on_character = function(_id) {
@@ -31,13 +37,6 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 		var top_shift = menu_instance.top_shift;
 		var text_color_selected = menu_instance.text_name_character_color;
 		
-		draw_set_font(global._font_main_mini);
-		draw_set_halign(fa_center);
-		if (selected_character == character_skin_id) draw_set_color(text_color_selected);
-		
-		draw_text(rectangle_x + frame_width * array_x + offset_x * (array_x + 1) + frame_width / 2, rectangle_y + frame_height * (array_y + 1) + offset_x + offset_y * array_y + top_shift, characters[character_skin_id].skin_name);
-		draw_reset();
-		
 		base_on_draw_cell(array_x, array_y);
 	}
 	
@@ -55,6 +54,7 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	}
 	
 	static close = function() {
+		audio_play_sound_plugging(snd_selection);
 		change_selected_character(0, false);
 		menu_instance.change_tab(characters_tab.characters);
 	}
@@ -65,5 +65,20 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 			close();
 		}
 		base_update();
+	}
+	
+	static draw = function() {
+		base_draw();
+		
+		var rectangle_x = menu_instance.rec_x1;
+		var rectangle_y = menu_instance.rec_y1;
+		var offset_x = menu_instance.dist_x;
+		var offset_y = menu_instance.dist_y;
+		var frame_height = menu_instance.frame_height;
+		var top_shift = menu_instance.top_shift;
+		
+		var position_y = rectangle_y + frame_height * count_cell_vertical + offset_y * count_cell_vertical + top_shift + button_offset_y;
+		
+		button_close.draw(rectangle_x + offset_x + button_offset_x, position_y);
 	}
 }

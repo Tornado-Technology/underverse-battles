@@ -1,7 +1,5 @@
 event_inherited();
 
-speed_const = 1.5;
-
 time_create_ink = 100;
 time_create_ink_step = 0.2;
 time_create_ink_max = 100;

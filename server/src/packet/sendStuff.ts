@@ -200,10 +200,12 @@ export default class SendStuff {
     this.send('fightExtraAction');
   }
 
-  public sendFightStartBattle(seed: number): void {
-    this.send('battleStart', {
-      seed,
-    });
+  public sendFightStartBattle(): void {
+    this.send('battleStart');
+  }
+
+  public sendDataToClient(index: string, data: any): void {
+    this.send(index, data);
   }
 
   public sendFightSoul(x: number, y: number, angle: number, ability: number, playerId: number): void {
@@ -274,8 +276,10 @@ export default class SendStuff {
     this.send('fightResetPower')
   }
 
-  public sendFightBattleEnd(): void {
-    this.send('battleEnd');
+  public sendFightBattleEnd(damage: number): void {
+    this.send('battleEnd', {
+      damage
+    });
   }
 
   public sendFightClientRemove(): void {

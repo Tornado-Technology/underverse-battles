@@ -11,6 +11,7 @@ function ClassSettingsMobileElement(menu_instance, sprite) constructor {
 	scale_max = 1;
 	
 	display_name = "";
+	is_enabled_shift = false;
 	
 	key_name = "";
 	key_position = "";
@@ -18,11 +19,20 @@ function ClassSettingsMobileElement(menu_instance, sprite) constructor {
 	
 	UI = UIImageButton(sprite);
 	
+	static change_sprite = function(sprite) {
+		self.sprite = sprite;
+		self.UI.set_image(sprite);
+	}
+	
 	static init = function() {
 		display_name = translate_get(key_name);
 		position_x = data_get(key_position + ".X");
 		position_y = data_get(key_position + ".Y");
 		scale = data_get(key_scale);
+	}
+	
+	static update_display_name = function() {
+		display_name = translate_get(key_name);
 	}
 	
 	static draw = function() {

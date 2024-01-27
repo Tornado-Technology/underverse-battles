@@ -1,5 +1,5 @@
 edit_attack_number = 0;
-edit_attack_number_max = 6;
+edit_attack_number_max = 7;
 is_can_input = true;
 
 edited_objects_number = 0;
@@ -11,13 +11,15 @@ edit_button = UIImageButton(spr_edit_button_green, function() {
 });
 
 edit_objects = function() {
-	var size = array_length(attack_creator_green.editing_object);
+	var pattern_instance = obj_pattern_edit;
+	var size = array_length(pattern_instance.editing_object);
 	var i = 1;
 	repeat (size) {
-		if (instance_exists(attack_creator_green.editing_object[size - i])) {
-			attack_creator_green.editing_object[size - i].edit();
+		if (instance_exists(pattern_instance.editing_object[size - i])) {
+			var instance = pattern_instance.editing_object[size - i];
+			instance.edit(instance, instance.edit_color, instance.edit_particle_count, instance.edit_particle_distance, fight_network_mode);
 		}
-		array_pop(attack_creator_green.editing_object);
+		array_pop(pattern_instance.editing_object);
 		i++;
 	}
 }
@@ -33,17 +35,17 @@ press = function() {
 	}
 	edit_objects();
 	
-	with (attack_creator_green) {
+	with (obj_pattern_edit) {
 		var period = 7;
 		if (edit_button != noone) {
 			if (edit_button.edit_attack_number >= 6) period = 50;
 		}
 		
-		time_source_destroy(time_source_update_3_0);
-		time_source_update_3_0 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-			update_3_0();
+		time_source_destroy(time_source_update);
+		time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+			update();
 		}, [], -1);
-		time_source_start(time_source_update_3_0);
+		time_source_start(time_source_update);
 	}
 	
 	is_can_input = false;

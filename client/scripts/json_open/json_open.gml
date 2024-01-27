@@ -7,7 +7,7 @@ function json_open(path) {
 	try {
 		return json_parse(str);
 	} catch(error) {
-		logger.warning("Json open failed, reason: \"{0}\" path: \"{1}\".", error.message, path);
+		logger.warning($"Json open failed, reason: \"{error.message}\" path: \"{path}\".");
 		return undefined;
 	}
 }  
