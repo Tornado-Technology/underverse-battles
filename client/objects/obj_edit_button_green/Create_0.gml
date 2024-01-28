@@ -17,7 +17,7 @@ edit_objects = function() {
 	repeat (size) {
 		if (instance_exists(pattern_instance.editing_object[size - i])) {
 			var instance = pattern_instance.editing_object[size - i];
-			instance.edit(instance, instance.edit_color, instance.edit_particle_count, instance.edit_particle_distance, fight_network_mode);
+			instance.edit(instance, instance.edit_color, instance.edit_particle_count, instance.edit_particle_distance);
 		}
 		array_pop(pattern_instance.editing_object);
 		i++;

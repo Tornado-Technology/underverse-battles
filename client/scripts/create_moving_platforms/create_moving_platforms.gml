@@ -1,4 +1,4 @@
-function create_moving_platforms(_x, _y, _num, _xscale, _dist, _speed, send_data = false) {
+function create_moving_platforms(_x, _y, _num, _xscale, _dist, _speed, send_data = fight_network_mode) {
 	if (send_data) send_battle_object_moving_platforms(_x, _y, _num, _xscale, _dist, _speed);
 	
 	var i = 0;

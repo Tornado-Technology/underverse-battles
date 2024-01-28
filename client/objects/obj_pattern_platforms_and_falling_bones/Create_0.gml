@@ -15,15 +15,15 @@ callback = function () {
 		final_function: destroy
 	}).callback();
 	
-	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y - 20, platform_count, platform_scale, platform_distance, main_speed, fight_network_mode);
-	create_moving_platforms(border_instance.x + border_instance.right + 40, border_instance.y + 20, platform_count, platform_scale, platform_distance, -main_speed, fight_network_mode);
+	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y - 20, platform_count, platform_scale, platform_distance, main_speed);
+	create_moving_platforms(border_instance.x + border_instance.right + 40, border_instance.y + 20, platform_count, platform_scale, platform_distance, -main_speed);
 	
 	time_source_start(time_source_update_platforms);
 }
 
 update_platforms = function() {
-	create_next_moving_platform(border_instance.x - border_instance.left - 40, border_instance.y - 20, platform_count, platform_scale, platform_distance, main_speed, fight_network_mode);
-	create_next_moving_platform(border_instance.x + border_instance.right + 40, border_instance.y + 20, platform_count, platform_scale, platform_distance, -main_speed, fight_network_mode);
+	create_next_moving_platform(border_instance.x - border_instance.left - 40, border_instance.y - 20, platform_count, platform_scale, platform_distance, main_speed);
+	create_next_moving_platform(border_instance.x + border_instance.right + 40, border_instance.y + 20, platform_count, platform_scale, platform_distance, -main_speed);
 }
 
 destroy = function() {

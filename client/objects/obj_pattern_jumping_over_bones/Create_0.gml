@@ -1,7 +1,7 @@
 // Arguments: bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 8, battle_soul_type.blue, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 8, battle_soul_type.blue);
 		
 	update();
 	time_source_start(time_source_update);
@@ -26,12 +26,12 @@ update = function() {
 		bone_up_size = 7.8 - bone_size;
 			
 	if (side == 0 || side == 2) {
-		create_bone(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 0, 0, fight_network_mode);
-		create_bone(border_instance.x - border_instance.left, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 0, 180, fight_network_mode);
+		create_bone(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 0, 0);
+		create_bone(border_instance.x - border_instance.left, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 0, 180);
 	}
 	if (side == 1 || side == 2) {
-		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 180, 0, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 180, 180, fight_network_mode);
+		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 180, 0);
+		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 180, 180);
 	}
 }
 

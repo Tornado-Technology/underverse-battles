@@ -1,21 +1,21 @@
 // Argument : bone, bone_spinning, spining_bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
 
 	var i = 0; 
 	repeat(20) {
-		create_bone(border_instance.x - border_instance.left + 3 + i * 8, border_instance.y + border_instance.down + 3, bone, 0, 5, 0, 0, fight_network_mode);
+		create_bone(border_instance.x - border_instance.left + 3 + i * 8, border_instance.y + border_instance.down + 3, bone, 0, 5, 0, 0);
 		i++;
 	};
 	 
-	create_moving_platforms(border_instance.x - 8, border_instance.y + 5, 1, 5, 0, 0, fight_network_mode);
-	create_moving_platforms(border_instance.x - 8, border_instance.y - 25, 1, 5, 0, 0, fight_network_mode);
+	create_moving_platforms(border_instance.x - 8, border_instance.y + 5, 1, 5, 0, 0);
+	create_moving_platforms(border_instance.x - 8, border_instance.y - 25, 1, 5, 0, 0);
 
 	var bone_scale = 9.4;
-	bone_instances[0] = create_bone(border_instance.x - border_instance.left, border_instance.y, bone_spinning, 0, 0, 0, -45, fight_network_mode);
+	bone_instances[0] = create_bone(border_instance.x - border_instance.left, border_instance.y, bone_spinning, 0, 0, 0, -45);
 	bone_instances[0].change_scale(bone_scale, 0.1);
-	bone_instances[1] = create_bone(border_instance.x + border_instance.right, border_instance.y, bone_spinning, 0, 0, 135, 45, fight_network_mode);
+	bone_instances[1] = create_bone(border_instance.x + border_instance.right, border_instance.y, bone_spinning, 0, 0, 135, 45);
 	bone_instances[1].change_scale(bone_scale, 0.1);
 	
 	var bone_angle_speed = (_power div 2 + 1);

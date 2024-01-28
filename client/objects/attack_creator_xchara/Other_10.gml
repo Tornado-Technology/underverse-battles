@@ -6,7 +6,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 			update_0_0();
 			time_source_start(time_source_update_0_0);
@@ -19,7 +19,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 	
 			update_0_1();
 			time_source_start(time_source_update_0_1);
@@ -32,7 +32,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 			update_0_2();
 			time_source_start(time_source_update_0_2);
@@ -45,7 +45,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 			_side = 90;
 			step = 20;

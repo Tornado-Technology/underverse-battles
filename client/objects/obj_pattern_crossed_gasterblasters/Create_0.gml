@@ -1,7 +1,7 @@
 // Arguments: gasterblaster
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -37,7 +37,7 @@ update = function(pow) {
 				y_gb = -gb_size;
 				break;
 		}
-		create_gasterblaster(gasterblaster, x_gb, y_gb, border_instance.x, border_instance.y, point_direction(x_gb, y_gb, border_instance.x, border_instance.y) + 90, 1/6, 1 - _power * 0.1,  15/60, 1/6, fight_network_mode);
+		create_gasterblaster(gasterblaster, x_gb, y_gb, border_instance.x, border_instance.y, point_direction(x_gb, y_gb, border_instance.x, border_instance.y) + 90, 1/6, 1 - _power * 0.1,  15/60, 1/6);
 		pos = (pos + 1) % 4;
 	}
 }

@@ -5,9 +5,9 @@ bone_count = 4;
 
 callback = function () {
 	if (use_gravity_attack)
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue, fight_network_mode);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
 	else
-		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
 	update();
 	time_source_start(time_source_update);
@@ -20,15 +20,15 @@ update = function() {
 		soul_instance.change_gravity_force(side);
 	}
 	
-	destroy_battle_object_array(bone_instances, fight_network_mode);
+	destroy_battle_object_array(bone_instances);
 	
 	if (use_gravity_attack) {
 		var bone_scale = 1.9;
 		var bone_speed = 1.1 + _power * 0.1;
 		bone_instances[0] = create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
-			bone_speed, bone_scale, 180, 180, fight_network_mode);
+			bone_speed, bone_scale, 180, 180);
 		bone_instances[1] = create_bone(border_instance.x - border_instance.left - 10, border_instance.y + border_instance.down + 15, bone,
-			bone_speed, bone_scale, 0, 0, fight_network_mode);
+			bone_speed, bone_scale, 0, 0);
 	}
 	else
 	{
@@ -43,7 +43,7 @@ update = function() {
 		}
 		
 		bone_instances[0] = create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
-			bone_speed, bone_scale, side, side, fight_network_mode);
+			bone_speed, bone_scale, side, side);
 	}
 	
 	character_instance.change_sprite_hand_dir(side);

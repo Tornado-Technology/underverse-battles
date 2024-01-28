@@ -1,7 +1,7 @@
 // Arguments: damage_wave
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -21,7 +21,7 @@ update = function() {
 		var _shift_y = irandom_range(-8 - _power, 8 + _power);
 		var wave_angle = point_direction(coord[0], coord[1], soul_instance.x + _shift_x, soul_instance.y + _shift_y);
 		
-		create_damage_wave(coord[0], coord[1], damage_wave, wave_angle, wave_speed, fight_network_mode);
+		create_damage_wave(coord[0], coord[1], damage_wave, wave_angle, wave_speed);
 	}
 }
 

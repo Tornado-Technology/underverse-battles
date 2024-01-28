@@ -8,7 +8,7 @@ source = time_source_create(time_source_game, 1/12, time_source_units_seconds, f
 	var inst_drop = choose(obj_drop_ink_sans, obj_drop_ink_sans,
 							obj_drop_orange_ink_sans,
 							obj_drop_black_ink_sans);	
-	create_drop(x, y, inst_drop, 1.8, random_range(0, 360), false, fight_network_mode);
+	create_drop(x, y, inst_drop, 1.8, random_range(0, 360), false);
 }, [], amount);
 
 time_source_start(source);

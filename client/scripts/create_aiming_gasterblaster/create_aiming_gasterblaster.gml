@@ -1,6 +1,6 @@
 ///@param {Asset.GMObject} gaster_blaster
 ///@param {Asset.GMInstance} target
-function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6, send_data = false) {
+function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6, send_data = fight_network_mode) {
 	var x_gb, y_gb;
 	var gb_size = 60;
 	var pos = irandom_range(0, 3);

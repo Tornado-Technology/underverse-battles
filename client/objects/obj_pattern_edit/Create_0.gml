@@ -10,7 +10,7 @@ _side = 90;
 rot = irandom_range(0, 1);
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	
 	edit_button = instance_create(obj_edit_button_green);
 
@@ -25,7 +25,7 @@ switch (edit_button.edit_attack_number) {
 	case 0:
 		var coord = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);
 		var spike_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
-		var spike_instance = create_spike(coord[0], coord[1], spike, 2.6, spike_direction, fight_network_mode);
+		var spike_instance = create_spike(coord[0], coord[1], spike, 2.6, spike_direction);
 		array_push(editing_object, spike_instance);
 		audio_play_sound_plugging(snd_projectile);
 		break;
@@ -42,14 +42,14 @@ switch (edit_button.edit_attack_number) {
 			spike_direction = 180;
 		}
 		var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
-		var spike_instance = create_spike(x_rand, y_rand, spike, 2.6, spike_direction, fight_network_mode);
+		var spike_instance = create_spike(x_rand, y_rand, spike, 2.6, spike_direction);
 		array_push(editing_object, spike_instance);
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 2:
 		var coord = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);
 		var bone_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
-		var bone_instance = create_bone(coord[0], coord[1], bone, 2.6, 1, bone_direction, bone_direction - 90, fight_network_mode);
+		var bone_instance = create_bone(coord[0], coord[1], bone, 2.6, 1, bone_direction, bone_direction - 90);
 		array_push(editing_object, bone_instance);
 		audio_play_sound_plugging(snd_projectile);
 		break;
@@ -66,7 +66,7 @@ switch (edit_button.edit_attack_number) {
 			bone_direction = 180;
 		}
 		var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
-		var bone_instance = create_bone(x_rand, y_rand, bone, 2.6, 1, bone_direction, bone_direction - 90, fight_network_mode);
+		var bone_instance = create_bone(x_rand, y_rand, bone, 2.6, 1, bone_direction, bone_direction - 90);
 		array_push(editing_object, bone_instance);
 		audio_play_sound_plugging(snd_projectile);
 		break;
@@ -84,7 +84,7 @@ switch (edit_button.edit_attack_number) {
 		
 		var _inst = create_battle_object(rX, rY, 0, knife_spin, {
 			_target_angle: point_direction(rX, rY, soul_instance.x, soul_instance.y),
-		}, fight_network_mode);
+		});
 		array_push(editing_object, _inst);
 		break;
 	case 5:
@@ -98,7 +98,7 @@ switch (edit_button.edit_attack_number) {
 			var _knife = create_battle_object(rX, rY, 0, knife_directed, {
 				image_alpha: 0,
 				_target_angle: point_direction(rX, rY, border_instance.x, border_instance.y)
-			}, fight_network_mode);
+			});
 			array_push(editing_object, _knife);
 					
 			step_angle += 90;
@@ -115,15 +115,15 @@ switch (edit_button.edit_attack_number) {
 			var con = room_height + gb_size;
 			var coord = rand_side_from(-gb_size, -gb_size, con, con);
 			gasterblaster_instance = create_solo_gasterblaster(coord[0], coord[1], gasterblaster_aiming_solo,
-				(period - 4) / 60, period / 60, 15 / 60, fight_network_mode);
+				(period - 4) / 60, period / 60, 15 / 60);
 			array_push(editing_object, gasterblaster_instance);
 		}
 		var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-		change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1], fight_network_mode);
-		change_solo_gasterblaster_target(gasterblaster_instance, soul_instance, fight_network_mode);
+		change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1]);
+		change_solo_gasterblaster_target(gasterblaster_instance, soul_instance);
 		break;
 	case 7:
-		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6, fight_network_mode);
+		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
 		break;
 	}
 }

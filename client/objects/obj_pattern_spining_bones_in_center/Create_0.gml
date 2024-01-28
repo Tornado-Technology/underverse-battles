@@ -4,15 +4,15 @@ bone_instance_1 = noone;
 bone_instance_2 = noone;
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x - 30, border_instance.y - 30, battle_soul_type.orange, fight_network_mode);
+	soul_instance = create_soul(border_instance.x - 30, border_instance.y - 30, battle_soul_type.orange);
 		
 	var bone_speed = 0;
 	var bone_size = 8;
 	var angle_speed = 1 + _power * 0.2;
 	var random_number = irandom_range(0, 1);
 	if (random_number == 1) angle_speed = -angle_speed;
-	bone_instance_1 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 0, angle_speed, fight_network_mode);
-	bone_instance_2 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 90, angle_speed, fight_network_mode);
+	bone_instance_1 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 0, angle_speed);
+	bone_instance_2 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 90, angle_speed);
 	bone_instance_1.change_scale(bone_size, 0.1);
 	bone_instance_2.change_scale(bone_size, 0.1);
 		

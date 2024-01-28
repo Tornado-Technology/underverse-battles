@@ -1,7 +1,5 @@
 draw_reset();
 
-if (input_lock) exit;
-
 // Rectangle
 draw_set_color(c_black);
 draw_rectangle(rec_x1, rec_y1, rec_x2, rec_y2, false);

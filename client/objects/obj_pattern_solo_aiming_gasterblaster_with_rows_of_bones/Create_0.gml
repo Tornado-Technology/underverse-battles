@@ -10,7 +10,7 @@ callback = function () {
 	var con = room_height + gb_size;
 	var coord = rand_side_from(-gb_size, -gb_size, con, con);
 	gasterblaster_instance = create_solo_gasterblaster(coord[0], coord[1], gasterblaster_aiming,
-		(period - 10) / 60, period / 60, 15 / 60, fight_network_mode);
+		(period - 10) / 60, period / 60, 15 / 60);
 		
 	update();
 	update_bones();
@@ -21,14 +21,14 @@ callback = function () {
 	
 update = function() {
 	var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-	change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1], fight_network_mode);
-	change_solo_gasterblaster_target(gasterblaster_instance, soul_instance, fight_network_mode);
+	change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1]);
+	change_solo_gasterblaster_target(gasterblaster_instance, soul_instance);
 }
 
 update_bones = function() {
-	create_bone(border_instance.x - border_instance.left / 2 - 10, border_instance.y - border_instance.up - 20, bone, 1 + _power * 0.2, 1, 270, 180, fight_network_mode);
-	create_bone(border_instance.x, border_instance.y + border_instance.down + 20, bone, 1 + _power * 0.2, 1, 90, 0, fight_network_mode);
-	create_bone(border_instance.x + border_instance.right / 2 + 10, border_instance.y - border_instance.up - 20, bone, 1 + _power * 0.2, 1, 270, 180, fight_network_mode);
+	create_bone(border_instance.x - border_instance.left / 2 - 10, border_instance.y - border_instance.up - 20, bone, 1 + _power * 0.2, 1, 270, 180);
+	create_bone(border_instance.x, border_instance.y + border_instance.down + 20, bone, 1 + _power * 0.2, 1, 90, 0);
+	create_bone(border_instance.x + border_instance.right / 2 + 10, border_instance.y - border_instance.up - 20, bone, 1 + _power * 0.2, 1, 270, 180);
 }
 
 var period = 60 - _power * 5;

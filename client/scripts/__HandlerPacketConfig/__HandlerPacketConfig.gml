@@ -247,55 +247,55 @@ packet_handler_register("battleCreateSoul", function(data) {
 packet_handler_register("battleCreateObject", function(data) {
 	switch (data.objectName) {
 		case "drop":
-			create_drop(data.x, data.y, data.object, data.speed, data.direction, data.useGravity);
+			create_drop(data.x, data.y, data.object, data.speed, data.direction, data.useGravity, false);
 			break;
 		case "broomie":
-			create_broomie(data.x, data.y, data.object, data.direction, data.side, data.angleSpeed, data.maxAcceleration);
+			create_broomie(data.x, data.y, data.object, data.direction, data.side, data.angleSpeed, data.maxAcceleration, false);
 			break;
 		case "bone":
-			create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle);
+			create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, false);
 			break;
 		case "falling bone":
-			create_falling_bone(data.x, data.y, data.object, data.angle, data.direction, data.scale, data.acceleration);
+			create_falling_bone(data.x, data.y, data.object, data.angle, data.direction, data.scale, data.acceleration, false);
 			break;
 		case "poking bone":
-			create_poking_bone(data.x, data.y, data.object, data.speed, data.size, data.direction);
+			create_poking_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, false);
 			break;
 		case "spinning bone":
-			create_spinning_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.angleSpeed);
+			create_spinning_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.angleSpeed, false);
 			break;
 		case "moving platforms":
-			create_moving_platforms(data.x, data.y, data.count, data.scale, data.distance, data.speed);
+			create_moving_platforms(data.x, data.y, data.count, data.scale, data.distance, data.speed, false);
 			break;
 		case "next moving platform":
-			create_next_moving_platform(data.x, data.y, data.count, data.scale, data.distance, data.speed);
+			create_next_moving_platform(data.x, data.y, data.count, data.scale, data.distance, data.speed, false);
 			break;
 		case "gasterblaster":
-			create_gasterblaster(data.object, data.x, data.y, data.targetX, data.targetY, data.angle, data.flyTime, data.chargeTime, data.flyoutTime, data.destroyTime);
+			create_gasterblaster(data.object, data.x, data.y, data.targetX, data.targetY, data.angle, data.flyTime, data.chargeTime, data.flyoutTime, data.destroyTime, false);
 			break;
 		case "solo gasterblaster":
-			create_solo_gasterblaster(data.x, data.y, data.object, data.targetTime, data.chargeTime, data.destroyTime);
+			create_solo_gasterblaster(data.x, data.y, data.object, data.targetTime, data.chargeTime, data.destroyTime, false);
 			break;
 		case "error string":
-			create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.scaleSpeed);
+			create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.scaleSpeed, false);
 			break;
 		case "knife swing":
-			create_knife_swing(data.x, data.y, data.object, data.angle, data.distance);
+			create_knife_swing(data.x, data.y, data.object, data.angle, data.distance, false);
 			break;
 		case "big knife x":
-			create_big_knife_x(data.x, data.y, data.object, data.direction, data.angle, data.pointStopX);
+			create_big_knife_x(data.x, data.y, data.object, data.direction, data.angle, data.pointStopX, false);
 			break;
 		case "big knife y":
-			create_big_knife_y(data.x, data.y, data.object, data.direction, data.angle, data.pointStopY);
+			create_big_knife_y(data.x, data.y, data.object, data.direction, data.angle, data.pointStopY, false);
 			break;
 		case "damage wave":
-			create_damage_wave(data.x, data.y, data.object, data.angle, data.speed);
+			create_damage_wave(data.x, data.y, data.object, data.angle, data.speed, false);
 			break;
 		case "spike":
-			create_damage_wave(data.x, data.y, data.object, data.speed, data.direction);
+			create_damage_wave(data.x, data.y, data.object, data.speed, data.direction, false);
 			break;
 		default:
-			create_battle_object(data.x, data.y, data.depth, data.object, data.varStruct);
+			create_battle_object(data.x, data.y, data.depth, data.object, data.varStruct, false);
 			break;
 	}
 });
@@ -303,17 +303,17 @@ packet_handler_register("battleCreateObject", function(data) {
 packet_handler_register("battleChangeObjectData", function(data) {
 	switch (data.objectName) {
 		case "bone":
-			if (data.eventName == "move") move_bone(data.object, data.speed, data.direction);
-			if (data.eventName == "scale") scale_bone(data.object, data.scale, data.scale_step);
-			if (data.eventName == "shake") shake_bone(data.object);
+			if (data.eventName == "move") move_bone(data.object, data.speed, data.direction, false);
+			if (data.eventName == "scale") scale_bone(data.object, data.scale, data.scale_step, false);
+			if (data.eventName == "shake") shake_bone(data.object, false);
 		break;
 		case "solo gasterblaster":
-			if (data.eventName == "change position") change_solo_gasterblaster_target(data.object, data.newX, data.newY);
-			if (data.eventName == "change target") change_solo_gasterblaster_target(data.object, data.target);
+			if (data.eventName == "change position") change_solo_gasterblaster_position(data.object, data.newX, data.newY, false);
+			if (data.eventName == "change target") change_solo_gasterblaster_target(data.object, data.target, false);
 		case "big knife":
-			if (data.eventName == "move") set_big_knife_move(data.object, data.distance);
-			if (data.eventName == "move up") set_big_knife_move_up(data.object);
-			if (data.eventName == "spin") set_big_knife_spin(data.object, data.rotatingSpeed);
+			if (data.eventName == "move") set_big_knife_move(data.object, data.distance, false);
+			if (data.eventName == "move up") set_big_knife_move_up(data.object, false);
+			if (data.eventName == "spin") set_big_knife_spin(data.object, data.rotatingSpeed, false);
 		break;
 	}
 });
@@ -327,7 +327,7 @@ packet_handler_register("battleDestroyObjectArray", function(data) {
 });
 
 packet_handler_register("battleDestroyByEdit", function(data) {
-	destroy_by_edit(data.object, data.color, data.count, data.distance);
+	destroy_by_edit(data.object, data.color, data.count, data.distance, false);
 });
 
 packet_handler_register("fightDodge", function(data) {

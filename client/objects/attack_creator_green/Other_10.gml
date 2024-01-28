@@ -4,7 +4,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 			update_0_0_2(_power);
 			time_source_start(time_source_update_0_0);
@@ -18,7 +18,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 25, battle_border.down - 25, battle_border.left, battle_border.right);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
+			_soul = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 			update_0_1(_power);
 			time_source_start(time_source_update_0_1);
@@ -32,7 +32,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 			num = 7;
 			sum_num = num * 4;
@@ -83,7 +83,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 30, battle_border.down - 30, battle_border.left - 45, battle_border.right - 45);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x, _border.y, battle_soul_type.red, fight_network_mode);
+			create_soul(_border.x, _border.y, battle_soul_type.red);
 		
 			update_0_3(_power);
 			time_source_start(time_source_update_0_3);

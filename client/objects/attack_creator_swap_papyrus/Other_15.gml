@@ -245,7 +245,7 @@ if (_id == 3 && attack_num == 0) {
 	
 	time_source_update_destroy_3_4 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
 		//character_instance.stop_hand_wave();
-		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red, fight_network_mode);
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red);
 		_angle = choose(0, 90, -180, -90);
 		angle_step = 10;
 		update_3_5();
@@ -293,7 +293,7 @@ if (_id == 3 && attack_num == 1) {
 	
 	time_source_update_destroy_3_2 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function (pow) {
 		//character_instance.stop_hand_wave();
-		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange, fight_network_mode);
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.orange);
 		update_0_0(pow);
 		time_source_stop(time_source_update_3_0);
 		time_source_stop(time_source_update_3_1);
@@ -317,7 +317,7 @@ if (_id == 3 && attack_num == 1) {
 	
 	time_source_update_destroy_3_4 = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
 		//character_instance.stop_hand_wave();
-		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red, fight_network_mode);
+		_soul = change_soul(_soul, _soul.x, _soul.y, battle_soul_type.red);
 		_angle = choose(0, 90, -180, -90);
 		angle_step = 10;
 		update_3_5();

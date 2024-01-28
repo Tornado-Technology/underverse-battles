@@ -1,7 +1,7 @@
 // Arguments:
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -15,7 +15,7 @@ update = function () {
 					obj_drop_black_ink_sans, obj_drop_black_ink_sans,
 					obj_drop_blue_ink_sans,
 					obj_drop_green_ink_sans);
-	create_drop(x0, border_instance.y - border_instance.up - 5, drop_instance, 1.5 + _power * 0.1, 270, false, fight_network_mode);
+	create_drop(x0, border_instance.y - border_instance.up - 5, drop_instance, 1.5 + _power * 0.1, 270, false);
 }
 
 var period = 10 - _power;

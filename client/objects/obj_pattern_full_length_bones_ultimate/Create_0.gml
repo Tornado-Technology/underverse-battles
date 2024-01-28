@@ -1,7 +1,7 @@
 // Arguments: bone, sharp_bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 	
 	update();
 	update_sharp();
@@ -16,20 +16,20 @@ update = function() {
 	var random_side = choose(dir.up, dir.down, dir.left, dir.right);
 		
 	if (random_side == dir.up) {
-		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone, bone_speed, bone_size, 270, 90, fight_network_mode);
-		create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 0, 0, fight_network_mode);
+		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone, bone_speed, bone_size, 270, 90);
+		create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 0, 0);
 	}
 	if (random_side == dir.down) {
-		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone, bone_speed, bone_size, 90, 90, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 180, 0, fight_network_mode);
+		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone, bone_speed, bone_size, 90, 90);
+		create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 180, 0);
 	}
 	if (random_side == dir.left) {
-		create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 0, 0, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone, bone_speed, bone_size, 90, 90, fight_network_mode);
+		create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 0, 0);
+		create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone, bone_speed, bone_size, 90, 90);
 	}
 	if (random_side == dir.right) {
-		create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 180, 0, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone, bone_speed, bone_size, 270, 90, fight_network_mode);
+		create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone, bone_speed, bone_size, 180, 0);
+		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone, bone_speed, bone_size, 270, 90);
 	}
 }
 	
@@ -52,7 +52,7 @@ update_sharp = function() {
 		bone_y = border_instance.y - border_instance.up - 10;
 	}
 	var bone_direction = point_direction(bone_x, bone_y, soul_instance.x, soul_instance.y);
-	create_bone(bone_x, bone_y, sharp_bone, bone_speed, bone_size, bone_direction, bone_direction - 90, fight_network_mode);
+	create_bone(bone_x, bone_y, sharp_bone, bone_speed, bone_size, bone_direction, bone_direction - 90);
 	audio_play_sound_plugging(snd_projectile);
 }
 

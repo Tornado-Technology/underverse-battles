@@ -1,4 +1,4 @@
-function create_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time, send_data = false) {
+function create_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time, send_data = fight_network_mode) {
 	if (send_data) send_battle_object_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time);
 	
 	return instance_create_depth(x, y, fight_depth.bullet_outside_hight, object, {

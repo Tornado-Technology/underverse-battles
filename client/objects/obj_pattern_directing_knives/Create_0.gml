@@ -1,7 +1,7 @@
 // Arguments: knife
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -22,7 +22,7 @@ update = function() {
 	
 	create_battle_object(rX, rY, 0, knife, {
 		_target_angle: point_direction(rX, rY, soul_instance.x, soul_instance.y),
-	}, fight_network_mode);
+	});
 }
 
 time_source_update = time_source_create(time_source_game, (18 - _power * 2) / 60, time_source_units_seconds, function () {

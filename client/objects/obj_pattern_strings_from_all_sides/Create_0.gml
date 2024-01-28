@@ -1,7 +1,7 @@
 // Arguments: bone, thread
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
 	update(_power);
 	time_source_start(time_source_update);
@@ -11,14 +11,14 @@ callback = function () {
 update = function() {
 	var coord = [];
 	coord = rand_side_from(-1, -1, room_width + 1, room_height + 1);
-	create_error_string(coord[0], coord[1], thread, soul_instance.x, soul_instance.y, 3.4 + _power * 0.1, fight_network_mode);
+	create_error_string(coord[0], coord[1], thread, soul_instance.x, soul_instance.y, 3.4 + _power * 0.1);
 }
 	
 update_bone = function() {
 	var coord = [];
 	coord = rand_side_from(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 15, border_instance.x + border_instance.right + 15, border_instance.y + border_instance.down + 15);
 	var bone_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
-	create_bone(coord[0], coord[1], bone, 4, 1, bone_direction, bone_direction - 90, fight_network_mode);
+	create_bone(coord[0], coord[1], bone, 4, 1, bone_direction, bone_direction - 90);
 	audio_play_sound_plugging(snd_projectile);
 }
 

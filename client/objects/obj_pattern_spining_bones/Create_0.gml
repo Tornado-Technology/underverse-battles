@@ -1,7 +1,7 @@
 // Arguments: rotating_bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 		
 	update();
 	time_source_start(time_source_update);
@@ -17,9 +17,9 @@ update = function() {
 	var random_y = choose(-30, -15, 0, 15, 30);
 	var random_angle = choose(0, 20, 45, 65, 90);
 	if (random_side == dir.left)
-		create_spinning_bone(border_instance.x - border_instance.left * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 0, random_angle, angle_speed, fight_network_mode);
+		create_spinning_bone(border_instance.x - border_instance.left * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 0, random_angle, angle_speed);
 	if (random_side == dir.right)
-		create_spinning_bone(border_instance.x + border_instance.right * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 180, random_angle, angle_speed, fight_network_mode);
+		create_spinning_bone(border_instance.x + border_instance.right * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 180, random_angle, angle_speed);
 }
 
 var period = 50 - _power * 5;

@@ -1,7 +1,7 @@
 /// Arguments: big_star, star
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	var star_big_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside, big_star, {
 	});	

@@ -1,7 +1,7 @@
 // Arguments: spining_bone
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -14,10 +14,10 @@ update = function() {
 			
 	if (side == 0) {
 		bone_instance = create_spinning_bone(border_instance.x - border_instance.left - 10, soul_instance.y, spining_bone,
-			3 + _power * 0.1, 1, 0, 0, 5, fight_network_mode);
+			3 + _power * 0.1, 1, 0, 0, 5);
 	} else {
 		bone_instance = create_spinning_bone(border_instance.x - border_instance.left - 10, soul_instance.y, spining_bone,
-			3 + _power * 0.1, 1, 180, 0, 5, fight_network_mode);
+			3 + _power * 0.1, 1, 180, 0, 5);
 	}
 }
 

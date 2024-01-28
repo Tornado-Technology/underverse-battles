@@ -1,7 +1,7 @@
 // Arguments: spike
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -21,8 +21,8 @@ update = function() {
 		spike_direction = 180;
 	}
 	var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
-	create_spike(x_rand, y_rand, spike, 2 + _power * 0.2, spike_direction, fight_network_mode);
-	create_spike(x_rand, y_rand + 10, spike, 2 + _power * 0.2, spike_direction, fight_network_mode);
+	create_spike(x_rand, y_rand, spike, 2 + _power * 0.2, spike_direction);
+	create_spike(x_rand, y_rand + 10, spike, 2 + _power * 0.2, spike_direction);
 }
 
 var period = 22 - _power * 3;

@@ -1,4 +1,4 @@
-function create_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed, send_data = false) {
+function create_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed, send_data = fight_network_mode) {
 	if (send_data) send_battle_object_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed);
 	
 	var instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, object);

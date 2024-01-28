@@ -3,7 +3,7 @@
 bone_size = 8.3;
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 	
 	update();
 	time_source_start(time_source_update);
@@ -16,19 +16,19 @@ update = function () {
 	var bone_speed = 2 + _power * 0.2;
 	if (rand_side == dir.left) {
 		var bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone,
-		bone_speed, bone_size, 0, 0, fight_network_mode);
+		bone_speed, bone_size, 0, 0);
 	}
 	else if (rand_side == dir.right) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone,
-		bone_speed, bone_size, 180, 0, fight_network_mode);
+		bone_speed, bone_size, 180, 0);
 	}
 	else if (rand_side == dir.down) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone,
-		bone_speed, bone_size, 90, 90, fight_network_mode);
+		bone_speed, bone_size, 90, 90);
 	}
 	else if (rand_side == dir.up) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone,
-		bone_speed, bone_size, 270, 90, fight_network_mode);
+		bone_speed, bone_size, 270, 90);
 	}
 }
 

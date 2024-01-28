@@ -17,12 +17,12 @@ update = function() {
 	}
 	
 	if (side == dir.left) {
-		create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_size, 0, 180, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right + 20, border_instance.y + border_instance.right + 20, bone, bone_speed, bone_size, 180, 0, fight_network_mode);
+		create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_size, 0, 180);
+		create_bone(border_instance.x + border_instance.right + 20, border_instance.y + border_instance.right + 20, bone, bone_speed, bone_size, 180, 0);
 	}
 	if (side == dir.up) {
-		create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_size, 270, 270, fight_network_mode);
-		create_bone(border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 90, 90, fight_network_mode);
+		create_bone(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_size, 270, 270);
+		create_bone(border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 90, 90);
 	}
 }
 

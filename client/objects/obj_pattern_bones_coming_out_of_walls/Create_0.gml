@@ -6,27 +6,27 @@ num = 10;
 bone_instances = [];
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 	
 	var i = 0;
 	repeat (num) {
-		bone_instances[i] = create_bone(border_instance.x - border_instance.left + i * 10, border_instance.y - border_instance.up - 20, bone, 0, 1, 270, 180, fight_network_mode);
-		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step, fight_network_mode);
+		bone_instances[i] = create_bone(border_instance.x - border_instance.left + i * 10, border_instance.y - border_instance.up - 20, bone, 0, 1, 270, 180);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step);
 		i++;
 	}
 	repeat (num) {
-		bone_instances[i] = create_bone(border_instance.x + border_instance.right - (i - num) * 10, border_instance.y + border_instance.down + 20, bone, 0, 1, 90, 0, fight_network_mode);
-		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step, fight_network_mode);
+		bone_instances[i] = create_bone(border_instance.x + border_instance.right - (i - num) * 10, border_instance.y + border_instance.down + 20, bone, 0, 1, 90, 0);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step);
 		i++;
 	}
 	repeat (num) {
-		bone_instances[i] = create_bone(border_instance.x - border_instance.left - 20, border_instance.y + border_instance.down - (i - 2*num) * 10, bone, 0, 1, 0, 270, fight_network_mode);
-		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step, fight_network_mode);
+		bone_instances[i] = create_bone(border_instance.x - border_instance.left - 20, border_instance.y + border_instance.down - (i - 2*num) * 10, bone, 0, 1, 0, 270);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step);
 		i++;
 	}
 	repeat (num) {
-		bone_instances[i] = create_bone(border_instance.x + border_instance.right + 20, border_instance.y - border_instance.up + (i - 3*num) * 10, bone, 0, 1, 180, 90, fight_network_mode);
-		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step, fight_network_mode);
+		bone_instances[i] = create_bone(border_instance.x + border_instance.right + 20, border_instance.y - border_instance.up + (i - 3*num) * 10, bone, 0, 1, 180, 90);
+		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, bone_scale_step);
 		i++;
 	}
 	audio_play_sound_plugging(snd_emergence);
@@ -39,13 +39,13 @@ callback = function () {
 update = function () {
 	var random_number = choose(2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39);
 	bone_moving = bone_instances[random_number];
-	bone_instances[random_number] = create_bone(bone_moving.x, bone_moving.y, bone, 0, 1, bone_moving.direction, bone_moving.image_angle, fight_network_mode);
-	shake_bone(bone_moving, fight_network_mode);
+	bone_instances[random_number] = create_bone(bone_moving.x, bone_moving.y, bone, 0, 1, bone_moving.direction, bone_moving.image_angle);
+	shake_bone(bone_moving);
 	bone_new = bone_instances[random_number];
 }
 update_shot = function () {
-	bone_moving = move_bone(bone_moving, 4, bone_moving.direction, fight_network_mode);
-	bone_new = scale_bone(bone_new, 2, 0.1, fight_network_mode);
+	bone_moving = move_bone(bone_moving, 4, bone_moving.direction);
+	bone_new = scale_bone(bone_new, 2, 0.1);
 	audio_play_sound_plugging(snd_spare_up);
 }
 

@@ -15,12 +15,12 @@ callback = function () {
 	if (side_random == dir.right) {
 		soul_position = new Vector2(border_instance.x + border_instance.right - 15, border_instance.y);
 	}
-	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
 
 	var bone_scale = 9.4;
-	bone_instances[0] = create_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 45, -45, fight_network_mode);
+	bone_instances[0] = create_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 45, -45);
 	bone_instances[0].change_scale(bone_scale, 0.1);
-	bone_instances[1] = create_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 135, 45, fight_network_mode);
+	bone_instances[1] = create_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 135, 45);
 	bone_instances[1].change_scale(bone_scale, 0.1);
 	audio_play_sound_once(snd_spare_up);
 

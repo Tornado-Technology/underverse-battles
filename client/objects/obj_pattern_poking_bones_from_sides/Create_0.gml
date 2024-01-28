@@ -3,7 +3,7 @@
 num = 0;
 
 callback = function () {
-	create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -36,7 +36,7 @@ update = function() {
 		bone_direction = 270;
 	}
 	var bone_speed = 1.4 + 0.1 * _power;
-	bone_instances[num] = create_poking_bone(bone_x, bone_y, bone, bone_speed, 3.4, bone_direction, fight_network_mode);
+	bone_instances[num] = create_poking_bone(bone_x, bone_y, bone, bone_speed, 3.4, bone_direction);
 	num++;
 	audio_play_sound_plugging(snd_projectile);
 }

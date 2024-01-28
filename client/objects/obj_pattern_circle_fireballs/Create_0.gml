@@ -9,7 +9,7 @@ is_find_random_position_nead_soul = true;
 projectiles = [];
 
 callback = function() {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	update();
 	time_source_start(time_source_update);

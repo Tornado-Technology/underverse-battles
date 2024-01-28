@@ -1,7 +1,7 @@
 // Arguments: soul_type, gasterblaster, distance, custom_repeats (optional)
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y + 20, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y + 20, battle_soul_type.red);
 		
 	var border_dist = 180;
 	var period = 40 - _power * 5;
@@ -11,7 +11,7 @@ callback = function () {
 	if (rand_pos == 2) gb_x = border_instance.x + 12;
 	var gb_x = border_instance.x - 12;
 	gasterblaster_instance = create_solo_gasterblaster(gb_x, border_instance.y - border_dist, gasterblaster,
-		(period - 6) / 60, period / 60, 15 / 60, fight_network_mode);
+		(period - 6) / 60, period / 60, 15 / 60);
 	
 	update();
 	time_source_start(time_source_update);
@@ -20,7 +20,7 @@ callback = function () {
 	
 update = function() {
 	var gasterblaster_x = choose(border_instance.x - 12, border_instance.x, border_instance.x + 12);
-	change_solo_gasterblaster_position(gasterblaster_instance, gasterblaster_x, border_instance.y - border_instance.up - distance, fight_network_mode);
+	change_solo_gasterblaster_position(gasterblaster_instance, gasterblaster_x, border_instance.y - border_instance.up - distance);
 }
 
 var period = 65 - _power * 5;

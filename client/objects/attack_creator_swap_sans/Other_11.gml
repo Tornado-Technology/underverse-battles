@@ -4,7 +4,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 20, battle_border.down - 20, battle_border.left - 10, battle_border.right - 10);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
+			create_soul(_border.x, _border.y, battle_soul_type.orange);
 		
 			rand_num = irandom_range(0, 3);
 		
@@ -19,7 +19,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x - 30, _border.y - 30, battle_soul_type.orange, fight_network_mode);
+			create_soul(_border.x - 30, _border.y - 30, battle_soul_type.orange);
 		
 			var bone_speed = 0;
 			var bone_size = 8;
@@ -42,7 +42,7 @@ switch (attack_num) {
 		_border = battle_border_create(battle_border.up - 20, battle_border.down - 20, battle_border.left - 10, battle_border.right - 10);
 		
 		time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function () {
-			create_soul(_border.x, _border.y, battle_soul_type.orange, fight_network_mode);
+			create_soul(_border.x, _border.y, battle_soul_type.orange);
 		
 			update_1_2(_power);
 			time_source_start(time_source_update_1_2);

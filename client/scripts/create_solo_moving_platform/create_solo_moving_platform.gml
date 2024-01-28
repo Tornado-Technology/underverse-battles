@@ -1,4 +1,4 @@
-function create_solo_moving_platform(x, y, scale, speed, left_station, right_station, send_data = false) {
+function create_solo_moving_platform(x, y, scale, speed, left_station, right_station, send_data = fight_network_mode) {
 	if (send_data) send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station);
 	
 	return instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_platform, {

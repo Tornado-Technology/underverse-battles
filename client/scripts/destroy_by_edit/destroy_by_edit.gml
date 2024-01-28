@@ -1,4 +1,4 @@
-function destroy_by_edit(instance, color, count, distance, send_data = false) {
+function destroy_by_edit(instance, color, count, distance, send_data = fight_network_mode) {
 	if (send_data) send_destroy_by_edit(instance, color, count, distance);
 	
 	// Particle

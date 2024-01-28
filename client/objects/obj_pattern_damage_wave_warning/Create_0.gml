@@ -1,7 +1,7 @@
 // Arguments: damage_wave, zone_damage_wave
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update_zone();
 	time_source_start(time_source_update_zone);
@@ -33,7 +33,7 @@ update = function() {
 	var wave_speed = (3.2 + _power * 0.2) * 1.4;
 	repeat(num) {
 		var wave_angle = point_direction(coord_wave[i, 0], coord_wave[i, 1], zone_instances[i].x_side, zone_instances[i].y_side);
-		create_damage_wave(coord_wave[i, 0], coord_wave[i, 1], damage_wave, wave_angle, wave_speed, fight_network_mode);
+		create_damage_wave(coord_wave[i, 0], coord_wave[i, 1], damage_wave, wave_angle, wave_speed);
 		instance_destroy(zone_instances[i]);
 		i++;
 	}

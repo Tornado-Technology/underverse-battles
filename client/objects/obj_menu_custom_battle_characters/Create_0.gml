@@ -31,16 +31,19 @@ tabSkin.on_click_on_character = function() {
 	
 	selected_characters[1] = selected_character.object;
 	
-	input_lock = true;
+	//input_lock = true;
 	
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, selected_characters[0]);
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, selected_characters[1]);
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.SOUNDTRACK, selected_character.statistics.soundtrack);
 	
-	effect_fade(1, 0, c_black, c_black, true, -1);
+	effect_fade(0.5, 0, c_black, c_black, true, -1, function() {
+		room_goto(room_fight);
+		instance_destroy();
+	});
 	
 	audio_play_sound_plugging(snd_selection);
-	
-	room_goto(room_fight);
-	instance_destroy();
+	audio_stop_sound(obj_menu.menu_soundtrack_current);
+
+	is_switch_menu_pause = true;
 }

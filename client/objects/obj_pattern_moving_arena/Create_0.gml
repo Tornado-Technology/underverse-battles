@@ -4,7 +4,7 @@ num = 7;
 sum_num = num * 4;
 
 callback = function () {
-	create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	x_start = border_instance.x;
 	y_start = border_instance.y;
@@ -35,7 +35,7 @@ callback = function () {
 			angle_spike = 90;
 		}
 		
-		bone_instances[i] = create_spike(x_spike, y_spike, spike, speed_spike, angle_spike, fight_network_mode);
+		bone_instances[i] = create_spike(x_spike, y_spike, spike, speed_spike, angle_spike);
 		i++;
 	}
 	audio_play_sound_plugging(snd_emergence);

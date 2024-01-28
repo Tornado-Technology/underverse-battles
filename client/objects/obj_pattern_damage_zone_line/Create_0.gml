@@ -1,7 +1,7 @@
 // Arguments: damage_zone
 		
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red, fight_network_mode);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -10,7 +10,7 @@ callback = function () {
 
 update = function() {
 	var random_position = new Vector2(irandom_range(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), border_instance.y);
-	create_battle_object(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {}, fight_network_mode);
+	create_battle_object(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 
 var period = 28 - _power * 2;

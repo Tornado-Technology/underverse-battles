@@ -26,7 +26,7 @@ update = function() {
 	var rand_dir = point_direction(rand_px1, py1, rand_px2, py2);
 	var rand_dist = point_distance(rand_px1, py1, rand_px2, py2);
 	
-	create_knife_swing(rand_px1, py1, knife_swing, rand_dir, rand_dist, fight_network_mode);
+	create_knife_swing(rand_px1, py1, knife_swing, rand_dir, rand_dist);
 }
 	
 var repeats = 4 + (_power div 2);

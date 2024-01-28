@@ -15,7 +15,9 @@ tabSkin.on_click_on_character = function() {
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_selected_character);
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.SOUNDTRACK, selected_character.statistics.soundtrack);
 	
-	effect_fade(1, 0, c_black, c_black, true, -1, function() {
+	input_lock = true;
+	
+	effect_fade(0.5, 0, c_black, c_black, true, -1, function() {
 		send_fight_join(tabCharacters.selected_character, tabSkin.selected_character);
 		instance_create(obj_menu_matchmaking);
 		instance_destroy();
@@ -24,6 +26,5 @@ tabSkin.on_click_on_character = function() {
 	audio_play_sound_plugging(snd_selection);
 	audio_stop_sound(obj_menu.menu_soundtrack_current);
 
-	
 	is_switch_menu_pause = true;
 }

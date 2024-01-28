@@ -1,4 +1,4 @@
-function create_soul(px, py, type, send_data = false) {
+function create_soul(px, py, type, send_data = fight_network_mode) {
 	if (instance_exists(obj_battle_soul)) {
 		if (send_data) send_battle_soul(obj_battle_soul.x, obj_battle_soul.y, type);
 		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type, send_data);
