@@ -11,8 +11,11 @@ callback = function () {
 update = function() {
 	var random_x = irandom_range(-border_instance.left, border_instance.right);
 	var angle_speed = 5;
-	create_spinning_bone(border_instance.x + random_x, border_instance.y - border_instance.up - 10, spining_bone,
-		3 + _power * 0.1, 1, point_direction(bone_instance.x, bone_instance.y, soul_instance.x, soul_instance.y), 0, angle_speed);
+	var bone_x = border_instance.x + random_x;
+	var bone_y = border_instance.y - border_instance.up - 10;
+	var bone_direction = point_direction(bone_x, bone_y, soul_instance.x, soul_instance.y);
+	create_spinning_bone(bone_x, bone_y, spining_bone,
+		3 + _power * 0.1, 1, bone_direction, 0, angle_speed);
 }
 
 var period = 33 - 3 * _power;
