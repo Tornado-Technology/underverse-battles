@@ -303,7 +303,7 @@ packet_handler_register("battleCreateObject", function(data) {
 packet_handler_register("battleChangeObjectData", function(data) {
 	switch (data.objectName) {
 		case "bone":
-			if (data.eventName == "move") move_bone(data.object, data.speed, data.direction, false);
+			if (data.eventName == "move") move_bone(data.instacne, data.speed, data.direction, false);
 			if (data.eventName == "scale") scale_bone(data.object, data.scale, data.scale_step, false);
 			if (data.eventName == "shake") shake_bone(data.object, false);
 		break;

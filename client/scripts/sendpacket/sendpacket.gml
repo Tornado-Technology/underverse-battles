@@ -450,6 +450,7 @@ function send_battle_object_bone_scale(instance, scale, scale_step) {
 	send("battleChangeObjectData", {
 		objectName: "bone",
 		eventName: "scale",
+		object: instance,
 		scale: scale,
 		scale_step: scale_step
 	});
