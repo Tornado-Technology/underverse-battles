@@ -4,6 +4,8 @@ collider_soul.x = x;
 collider_soul.y = y;
 collider_soul.image_angle = image_angle;
 
+if (!instance_exists(obj_battle_border)) exit;
+
 border_delta_x = obj_battle_border.x - obj_battle_border.xprevious;
 border_delta_y = obj_battle_border.y - obj_battle_border.yprevious;
 
