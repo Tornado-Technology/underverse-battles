@@ -1,5 +1,9 @@
 event_inherited();
 
+// Type
+color_type = battle_soul_type.orange;
+
+// Movement
 _speed = 1.8 * dtime;
 
 is_dashing = false;

@@ -25,7 +25,7 @@ if (random_type == 3) {
 blast_object = obj_gb_blast_green;
 charge_object = obj_gb_charge_green;
 
-edit_color = c_white;
+edit_color = c_green;
 edit_particle_count = 50;
 edit_particle_distance = 25;
 edit = destroy_by_edit;

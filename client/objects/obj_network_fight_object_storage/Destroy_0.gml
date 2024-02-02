@@ -1,0 +1,1 @@
+global.network_fight_object_storage = noone;

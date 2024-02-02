@@ -1,6 +1,6 @@
 if (state == fight_state.battle) {
 	timer_stop();
-	statistics_set_selection_attack_network(0, fight_get_player_action(0));
+	statistics_set_selection_attack_network(0, 2 + fight_get_player_action(0));
 	if (initiative == 1) {
 		instance_create_one(obj_battle);
 	}

@@ -20,7 +20,7 @@ callback = function () {
 	
 update = function() {
 	var gasterblaster_x = choose(border_instance.x - 12, border_instance.x, border_instance.x + 12);
-	change_solo_gasterblaster_position(gasterblaster_instance, gasterblaster_x, border_instance.y - border_instance.up - distance);
+	change_solo_gasterblaster_position(gasterblaster, 0, gasterblaster_x, border_instance.y - border_instance.up - distance);
 }
 
 var period = 65 - _power * 5;

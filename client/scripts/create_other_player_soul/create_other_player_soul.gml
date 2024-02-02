@@ -11,15 +11,19 @@ function create_other_player_soul(px, py, type) {
 	}
 	switch (type) {
 		case battle_soul_type.red:
+			soul_.color_type = battle_soul_type.red;
 			soul_.sprite_index = spr_battle_soul_red;
 		break;
 		case battle_soul_type.orange:
+			soul_.color_type = battle_soul_type.orange;
 			soul_.sprite_index = spr_battle_soul_orange;
 		break;
 		case battle_soul_type.blue:
+			soul_.color_type = battle_soul_type.blue;
 			soul_.sprite_index = spr_battle_soul_blue;
 		break;
 		case battle_soul_type.yellow:
+			soul_.color_type = battle_soul_type.yellow;
 			soul_.sprite_index = spr_battle_soul_yellow;
 		break;
 	}

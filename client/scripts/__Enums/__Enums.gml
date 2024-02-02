@@ -87,7 +87,8 @@ enum battle_soul_type {
 	green,
 	cyan,
 	blue,
-	purple
+	purple,
+	white
 }
 
 enum gameover {

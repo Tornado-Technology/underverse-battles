@@ -21,8 +21,8 @@ callback = function () {
 	
 update = function() {
 	var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-	change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1]);
-	change_solo_gasterblaster_target(gasterblaster_instance, soul_instance);
+	change_solo_gasterblaster_position(gasterblaster, 0, coord_new[0], coord_new[1]);
+	//change_solo_gasterblaster_target(gasterblaster, soul_instance);
 }
 
 update_bones = function() {

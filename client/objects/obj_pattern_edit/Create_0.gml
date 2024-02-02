@@ -12,7 +12,7 @@ rot = irandom_range(0, 1);
 callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	
-	edit_button = instance_create(obj_edit_button_green);
+	edit_button = create_battle_object(0, 0, 0, obj_edit_button_green);
 
 	update();
 	time_source_start(time_source_update);
@@ -119,8 +119,8 @@ switch (edit_button.edit_attack_number) {
 			array_push(editing_object, gasterblaster_instance);
 		}
 		var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-		change_solo_gasterblaster_position(gasterblaster_instance, coord_new[0], coord_new[1]);
-		change_solo_gasterblaster_target(gasterblaster_instance, soul_instance);
+		change_solo_gasterblaster_position(gasterblaster, 0, coord_new[0], coord_new[1]);
+		//change_solo_gasterblaster_target(gasterblaster, soul_instance);
 		break;
 	case 7:
 		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);

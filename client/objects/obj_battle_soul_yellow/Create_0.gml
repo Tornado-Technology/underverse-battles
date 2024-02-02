@@ -1,5 +1,7 @@
-// Inherit the parent event
 event_inherited();
+
+// Type
+color_type = battle_soul_type.yellow;
 
 can_shoot = true;
 shoot_projectile = obj_battle_soul_yellow_projectile;

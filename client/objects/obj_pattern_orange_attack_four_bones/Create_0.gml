@@ -44,19 +44,15 @@ update = function() {
 	var bone__speed = 2 + _power * 0.1;
 	if (side == dir.up) {
 		bone_instances[0] = create_bone_up(bone_scale, bone__speed);
-		bone_instances[1] = create_bone_left(bone_scale / 2, bone__speed);
 	}
 	if (side == dir.down) {
 		bone_instances[0] = create_bone_down(bone_scale, bone__speed);
-		bone_instances[1] = create_bone_right(bone_scale / 2, bone__speed);
 	}
 	if (side == dir.left) {
 		bone_instances[0] = create_bone_left(bone_scale, bone__speed);
-		bone_instances[1] = create_bone_down(bone_scale / 2, bone__speed);
 	}
 	if (side == dir.right) {
 		bone_instances[0] = create_bone_right(bone_scale, bone__speed);
-		bone_instances[1] = create_bone_up(bone_scale / 2, bone__speed);
 	}
 	
 	character_instance.change_sprite_hand_dir(side);

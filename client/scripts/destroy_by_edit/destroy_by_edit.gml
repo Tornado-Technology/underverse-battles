@@ -1,5 +1,5 @@
-function destroy_by_edit(instance, color, count, distance, send_data = fight_network_mode) {
-	if (send_data) send_destroy_by_edit(instance, color, count, distance);
+function destroy_by_edit(instance, color, count, distance, storage_index = 0, send_data = fight_network_mode) {
+	if (send_data) send_destroy_by_edit(color, count, distance, storage_index);
 	
 	// Particle
 	part_glitch = part_type_create();

@@ -2,7 +2,7 @@
 
 _angle = irandom_range(0, 359);
 angle_step = 10;
-steps = 8;
+steps = 10;
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);

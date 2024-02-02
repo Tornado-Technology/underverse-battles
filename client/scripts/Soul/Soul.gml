@@ -23,6 +23,8 @@ function create_soul(px, py, type, send_data = fight_network_mode) {
 }
 
 function change_soul(old_soul, px, py, type, send_data) {
+	if (old_soul.color_type == type) return;
+	
 	instance_destroy(old_soul);
 	audio_play_sound_once(snd_swing);
 	var new_soul = create_soul(px, py, type, send_data);

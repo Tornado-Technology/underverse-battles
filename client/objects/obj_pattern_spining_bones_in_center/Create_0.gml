@@ -13,8 +13,8 @@ callback = function () {
 	if (random_number == 1) angle_speed = -angle_speed;
 	bone_instance_1 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 0, angle_speed);
 	bone_instance_2 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 90, angle_speed);
-	bone_instance_1.change_scale(bone_size, 0.1);
-	bone_instance_2.change_scale(bone_size, 0.1);
+	scale_bone(bone_instance_1, 0, bone_size, 0.1);
+	scale_bone(bone_instance_2, 1, bone_size, 0.1);
 		
 	update();
 	time_source_start(time_source_update);
@@ -24,8 +24,8 @@ callback = function () {
 update = function() {
 	var random_number = irandom_range(0, 1);
 	if (random_number == 0) {
-		bone_instance_1.angle_speed = -bone_instance_1.angle_speed;
-		bone_instance_2.angle_speed = -bone_instance_2.angle_speed;
+		change_angle_speed_spinning_bone(bone_instance_1, 0, -bone_instance_1.angle_speed);
+		change_angle_speed_spinning_bone(bone_instance_2, 1, -bone_instance_2.angle_speed);
 	}
 }
 

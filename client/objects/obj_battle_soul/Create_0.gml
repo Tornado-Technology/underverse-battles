@@ -1,6 +1,9 @@
 // I so lasy make it hands
 depth = fight_depth.soul;
 
+// Type
+color_type = battle_soul_type.white;
+
 // Size
 half_width = sprite_width / 2;
 half_height = sprite_height / 2;

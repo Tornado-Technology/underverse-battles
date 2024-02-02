@@ -1,5 +1,9 @@
 event_inherited();
 
+// Type
+color_type = battle_soul_type.blue;
+
+// Movement
 platform_inertion = 0;
 grav = 0.05;
 

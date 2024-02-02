@@ -441,19 +441,18 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'battleCreateObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
+    case 'battleReplaceObject':
+      client.fight.instance?.transferDataFromClient(client, index, data);
+      break;
     case 'battleChangeObjectData':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
     case 'battleDestroyObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
-    case 'battleDestroyObjectArray':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
     case 'battleDestroyByEdit':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
-
     default:
       Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
       break;

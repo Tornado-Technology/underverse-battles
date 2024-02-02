@@ -180,7 +180,7 @@ update = function() {
 update_up = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i] = scale_bone(bone_instances[i], bone_scale, 0.2);
+		scale_bone(bone_instances[i], i, bone_scale, 0.2);
 		++i;
 	}
 	instance_destroy(obj_warning);
@@ -190,7 +190,7 @@ update_up = function() {
 update_down = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		bone_instances[i] = scale_bone(bone_instances[i], 0, 0.2);
+		scale_bone(bone_instances[i], i, 0, 0.2);
 		++i;
 	}
 }

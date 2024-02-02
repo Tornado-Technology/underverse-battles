@@ -215,7 +215,7 @@ function send_battle_soul(x, y, type) {
 
 // Battle object
 
-function send_battle_object_drop(x, y, object, speed, direction, use_gravity_force) {
+function send_battle_object_drop(x, y, object, speed, direction, use_gravity_force, storage_index) {
 	send("battleCreateObject", {
 		objectName: "drop",
 		x: x,
@@ -223,11 +223,12 @@ function send_battle_object_drop(x, y, object, speed, direction, use_gravity_for
 		object: object,
 		speed: speed,
 		direction: direction,
-		useGravity: use_gravity_force
+		useGravity: use_gravity_force,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_broomie(x, y, object, direction, side, angle_speed, max_acceleration) {
+function send_battle_object_broomie(x, y, object, direction, side, angle_speed, max_acceleration, storage_index) {
 	send("battleCreateObject", {
 		objectName: "broomie",
 		x: x,
@@ -236,11 +237,12 @@ function send_battle_object_broomie(x, y, object, direction, side, angle_speed, 
 		direction: direction,
 		side: side,
 		angleSpeed: angle_speed,
-		maxAcceleration: max_acceleration
+		maxAcceleration: max_acceleration,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_bone(x, y, object, speed, size, direction, angle) {
+function send_battle_object_bone(x, y, object, speed, size, direction, angle, storage_index) {
 	send("battleCreateObject", {
 		objectName: "bone",
 		x: x,
@@ -249,7 +251,8 @@ function send_battle_object_bone(x, y, object, speed, size, direction, angle) {
 		speed: speed,
 		size: size,
 		direction: direction,
-		angle: angle
+		angle: angle,
+		storageIndex: storage_index
 	});
 }
 
@@ -292,7 +295,7 @@ function send_battle_object_spinning_bone(x, y, object, speed, size, direction, 
 	});
 }
 
-function send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station) {
+function send_battle_object_solo_moving_platform(x, y, scale, speed, left_station, right_station, storage_index) {
 	send("battleCreateObject", {
 		objectName: "solo moving platform",
 		x: x,
@@ -300,11 +303,12 @@ function send_battle_object_solo_moving_platform(x, y, scale, speed, left_statio
 		scale: scale,
 		speed: speed,
 		leftStation: left_station,
-		rightStation: right_station
+		rightStation: right_station,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_moving_platforms(x, y, count, scale, distance, speed) {
+function send_battle_object_moving_platforms(x, y, count, scale, distance, speed, storage_index) {
 	send("battleCreateObject", {
 		objectName: "moving platforms",
 		x: x,
@@ -312,11 +316,12 @@ function send_battle_object_moving_platforms(x, y, count, scale, distance, speed
 		count: count,
 		scale: scale,
 		distance: distance,
-		speed: speed
+		speed: speed,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_next_moving_platform(x, y, count, scale, distance, speed) {
+function send_battle_object_next_moving_platform(x, y, count, scale, distance, speed, storage_index) {
 	send("battleCreateObject", {
 		objectName: "next moving platform",
 		x: x,
@@ -324,11 +329,12 @@ function send_battle_object_next_moving_platform(x, y, count, scale, distance, s
 		count: count,
 		scale: scale,
 		distance: distance,
-		speed: speed
+		speed: speed,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_gasterblaster(x, y, object, target_x, target_y, angle, fly_time, charge_time, flyout_time, destroy_time) {
+function send_battle_object_gasterblaster(x, y, object, target_x, target_y, angle, fly_time, charge_time, flyout_time, destroy_time, storage_index) {
 	send("battleCreateObject", {
 		objectName: "gasterblaster",
 		x: x,
@@ -340,11 +346,12 @@ function send_battle_object_gasterblaster(x, y, object, target_x, target_y, angl
 		flyTime: fly_time,
 		chargeTime: charge_time,
 		flyoutTime: flyout_time,
-		destroyTime: destroy_time
+		destroyTime: destroy_time,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time) {
+function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge_time, destroy_time, storage_index) {
 	send("battleCreateObject", {
 		objectName: "solo gasterblaster",
 		x: x,
@@ -352,11 +359,12 @@ function send_battle_object_solo_gasterblaster(x, y, object, target_time, charge
 		object: object,
 		targetTime: target_time,
 		chargeTime: charge_time,
-		destroyTime: destroy_time
+		destroyTime: destroy_time,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_error_string(x, y, object, target_x, target_y, scale_speed) {
+function send_battle_object_error_string(x, y, object, target_x, target_y, scale_speed, storage_index) {
 	send("battleCreateObject", {
 		objectName: "error string",
 		x: x,
@@ -364,22 +372,24 @@ function send_battle_object_error_string(x, y, object, target_x, target_y, scale
 		object: object,
 		targetX: target_x,
 		targetY: target_y,
-		scaleSpeed: scale_speed
+		scaleSpeed: scale_speed,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_knife_swing(x, y, object, angle, distance) {
+function send_battle_object_knife_swing(x, y, object, angle, distance, storage_index) {
 	send("battleCreateObject", {
 		objectName: "knife swing",
 		x: x,
 		y: y,
 		object: object,
 		angle: angle,
-		distance: distance
+		distance: distance,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_big_knife_x(x, y, object, direction, angle, point_stop_x) {
+function send_battle_object_big_knife_x(x, y, object, direction, angle, point_stop_x, storage_index) {
 	send("battleCreateObject", {
 		objectName: "big knife x",
 		x: x,
@@ -387,11 +397,12 @@ function send_battle_object_big_knife_x(x, y, object, direction, angle, point_st
 		object: object,
 		direction: direction,
 		angle: angle,
-		pointStopX: point_stop_x
+		pointStopX: point_stop_x,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_big_knife_y(x, y, object, direction, angle, point_stop_y) {
+function send_battle_object_big_knife_y(x, y, object, direction, angle, point_stop_y, storage_index) {
 	send("battleCreateObject", {
 		objectName: "big knife y",
 		x: x,
@@ -399,133 +410,165 @@ function send_battle_object_big_knife_y(x, y, object, direction, angle, point_st
 		object: object,
 		direction: direction,
 		angle: angle,
-		pointStopY: point_stop_y
+		pointStopY: point_stop_y,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_damage_wave(x, y, object, angle, speed) {
+function send_battle_object_damage_wave(x, y, object, angle, speed, storage_index) {
 	send("battleCreateObject", {
 		objectName: "damage wave",
 		x: x,
 		y: y,
 		object: object,
 		angle: angle,
-		speed: speed
+		speed: speed,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_spike(x, y, object, speed, direction) {
+function send_battle_object_spike(x, y, object, speed, direction, storage_index) {
 	send("battleCreateObject", {
 		objectName: "spike",
 		x: x,
 		y: y,
 		object: object,
 		speed: speed,
-		direction: direction
+		direction: direction,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object(x, y, depth, object, var_struct) {
+function send_battle_object(x, y, depth, object, var_struct, storage_index) {
 	send("battleCreateObject", {
 		objectName: "object",
 		x: x,
 		y: y,
 		depth: depth,
 		object: object,
-		varStruct: var_struct
+		varStruct: var_struct,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_bone_move(instance, speed, direction) {
+function send_battle_replace_object_bone(number, x, y, object, speed, size, direction, angle, storage_index) {
+	send("battleReplaceObject", {
+		objectName: "bone",
+		number: number,
+		x: x,
+		y: y,
+		object: object,
+		speed: speed,
+		size: size,
+		direction: direction,
+		angle: angle,
+		storageIndex: storage_index
+	});
+}
+
+function send_battle_object_bone_move(number, speed, direction, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "bone",
 		eventName: "move",
-		object: instance,
+		number: number,
 		speed: speed,
-		direction: direction
+		direction: direction,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_bone_scale(instance, scale, scale_step) {
+function send_battle_object_bone_scale(number, scale, scale_step, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "bone",
 		eventName: "scale",
-		object: instance,
+		number: number,
 		scale: scale,
-		scale_step: scale_step
+		scaleStep: scale_step,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_bone_shake(instance) {
+function send_battle_object_bone_shake(number, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "bone",
 		eventName: "shake",
-		object: instance
+		number: number,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_change_solo_gasterblaster_position(instance, new_x, new_y) {
+function send_battle_object_change_angle_speed_spinning_bone(number, angle_speed, is_smooth, storage_index) {
+	send("battleChangeObjectData", {
+		objectName: "spinning bone",
+		eventName: "change angle speed",
+		number: number,
+		angleSpeed: angle_speed,
+		isSmooth: is_smooth,
+		storageIndex: storage_index
+	});
+}
+
+function send_battle_object_change_solo_gasterblaster_position(number, new_x, new_y, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "solo gasterblaster",
 		eventName: "change position",
-		object: instance,
+		number: number,
 		newX: new_x,
-		newY: new_y
+		newY: new_y,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_change_solo_gasterblaster_target(instance, target) {
+function send_battle_object_change_solo_gasterblaster_target(number, target, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "solo gasterblaster",
 		eventName: "change target",
-		object: instance,
-		target: target
+		number: number,
+		target: target,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_big_knife_move(instance, distance) {
+function send_battle_object_big_knife_move(number, distance, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "big knife",
 		eventName: "move",
-		object: instance,
-		distance: distance
+		number: number,
+		distance: distance,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_big_knife_move_up(instance) {
+function send_battle_object_big_knife_move_up(number, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "big knife",
 		eventName: "move up",
-		object: instance
+		number: number,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_big_knife_spin(instance, rotating_speed) {
+function send_battle_object_big_knife_spin(number, rotating_speed, storage_index) {
 	send("battleChangeObjectData", {
 		objectName: "big knife",
 		eventName: "spin",
-		object: instance,
-		rotatingSpeed: rotating_speed
+		number: number,
+		rotatingSpeed: rotating_speed,
+		storageIndex: storage_index
 	});
 }
 
-function send_destroy_battle_object(object) {
+function send_destroy_battle_object(storage_index) {
 	send("battleDestroyObject", {
-		object: object
+		storageIndex: storage_index
 	});
 }
 
-function send_destroy_battle_object_array(array) {
-	send("battleDestroyObjectArray", {
-		array: array
-	});
-}
-
-function send_destroy_by_edit(object, color, count, distance) {
+function send_destroy_by_edit(color, count, distance, storage_index) {
 	send("battleDestroyByEdit", {
-		object: object,
 		color: color,
 		count: count,
-		distance: distance
+		distance: distance,
+		storageIndex: storage_index
 	});
 }
