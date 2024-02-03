@@ -11,8 +11,13 @@ function buffer_copy_real(src_buffer, src_offset, size, dest_buffer, dest_offset
 	buffer_seek(dest_buffer, buffer_seek_start, dest_offset);
 	
 	repeat(size) {
-		var value = buffer_read(src_buffer, buffer_u8);
-		buffer_write(dest_buffer, buffer_u8, value);
+		try {
+			var value = buffer_read(src_buffer, buffer_u8);
+			buffer_write(dest_buffer, buffer_u8, value);
+		}
+		catch (ex) {
+			logger.error($"Buffer Error: {ex}");
+		}
 	}
 			
 	buffer_seek(src_buffer, buffer_seek_start, src_buffer_old_tell);
