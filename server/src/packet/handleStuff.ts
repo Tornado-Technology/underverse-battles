@@ -440,18 +440,15 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     case 'battleCreateObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      console.log(`${JSON.stringify(data)}`);
       break;
     case 'battleReplaceObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
     case 'battleChangeObjectData':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      console.log(`${JSON.stringify(data)}`);
       break;
     case 'battleDestroyObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      console.log(`${JSON.stringify(data)}`);
       break;
     case 'battleDestroyByEdit':
       client.fight.instance?.transferDataFromClient(client, index, data);
