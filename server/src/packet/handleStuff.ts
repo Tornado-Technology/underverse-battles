@@ -440,18 +440,18 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     case 'battleCreateObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      Logger.debug(`PACKET ${index}: ${data.toString()}`);
+      Logger.debug(`PACKET ${index}: ${JSON.stringify(data)}`);
       break;
     case 'battleReplaceObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
       break;
     case 'battleChangeObjectData':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      Logger.debug(`PACKET ${index}: ${data.toString()}`);
+      Logger.debug(`PACKET ${index}: ${JSON.stringify(data)}`);
       break;
     case 'battleDestroyObject':
       client.fight.instance?.transferDataFromClient(client, index, data);
-      Logger.debug(`PACKET ${index}: ${data.toString()}`);
+      Logger.debug(`PACKET ${index}: ${JSON.stringify(data)}`);
       break;
     case 'battleDestroyByEdit':
       client.fight.instance?.transferDataFromClient(client, index, data);
