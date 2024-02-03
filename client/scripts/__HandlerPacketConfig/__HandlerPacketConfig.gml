@@ -246,53 +246,56 @@ packet_handler_register("battleCreateSoul", function(data) {
 });
 
 packet_handler_register("battleCreateObject", function(data) {
-	switch (data.objectName) {
-		case "drop":
+	switch (data.objectType) {
+		case 0:
 			global.network_fight_object_storage.push(data.storageIndex, create_drop(data.x, data.y, data.object, data.speed, data.direction, data.useGravity, data.storageIndex, false));
 			break;
-		case "broomie":
+		case 1:
 			global.network_fight_object_storage.push(data.storageIndex, create_broomie(data.x, data.y, data.object, data.direction, data.side, data.angleSpeed, data.maxAcceleration, data.storageIndex, false));
 			break;
-		case "bone":
+		case 2:
 			global.network_fight_object_storage.push(data.storageIndex, create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.storageIndex, false));
 			break;
-		case "falling bone":
+		case 3:
 			global.network_fight_object_storage.push(data.storageIndex, create_falling_bone(data.x, data.y, data.object, data.angle, data.direction, data.scale, data.acceleration, data.storageIndex, false));
 			break;
-		case "poking bone":
+		case 4:
 			global.network_fight_object_storage.push(data.storageIndex, create_poking_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.storageIndex, false));
 			break;
-		case "spinning bone":
+		case 5:
 			global.network_fight_object_storage.push(data.storageIndex, create_spinning_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.angleSpeed, data.storageIndex, false));
 			break;
-		case "moving platforms":
+		case 6:
+			global.network_fight_object_storage.push(data.storageIndex, create_solo_moving_platform(data.x, data.y, data.scale, data.speed, data.leftStation, data.rightStation, data.storageIndex, false));
+			break;
+		case 7:
 			global.network_fight_object_storage.push(data.storageIndex, create_moving_platforms(data.x, data.y, data.count, data.scale, data.distance, data.speed, data.storageIndex, false));
 			break;
-		case "next moving platform":
+		case 8:
 			global.network_fight_object_storage.push(data.storageIndex, create_next_moving_platform(data.x, data.y, data.count, data.scale, data.distance, data.speed, data.storageIndex, false));
 			break;
-		case "gasterblaster":
+		case 9:
 			global.network_fight_object_storage.push(data.storageIndex, create_gasterblaster(data.object, data.x, data.y, data.targetX, data.targetY, data.angle, data.flyTime, data.chargeTime, data.flyoutTime, data.destroyTime, data.storageIndex, false));
 			break;
-		case "solo gasterblaster":
+		case 10:
 			global.network_fight_object_storage.push(data.storageIndex, create_solo_gasterblaster(data.x, data.y, data.object, data.targetTime, data.chargeTime, data.destroyTime, data.storageIndex, false));
 			break;
-		case "error string":
+		case 11:
 			global.network_fight_object_storage.push(data.storageIndex, create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.scaleSpeed, data.storageIndex, false));
 			break;
-		case "knife swing":
+		case 12:
 			global.network_fight_object_storage.push(data.storageIndex, create_knife_swing(data.x, data.y, data.object, data.angle, data.distance, data.storageIndex, false));
 			break;
-		case "big knife x":
+		case 13:
 			global.network_fight_object_storage.push(data.storageIndex, create_big_knife_x(data.x, data.y, data.object, data.direction, data.angle, data.pointStopX, data.storageIndex, false));
 			break;
-		case "big knife y":
+		case 14:
 			global.network_fight_object_storage.push(data.storageIndex, create_big_knife_y(data.x, data.y, data.object, data.direction, data.angle, data.pointStopY, data.storageIndex, false));
 			break;
-		case "damage wave":
+		case 15:
 			global.network_fight_object_storage.push(data.storageIndex, create_damage_wave(data.x, data.y, data.object, data.angle, data.speed, data.storageIndex, false));
 			break;
-		case "spike":
+		case 16:
 			global.network_fight_object_storage.push(data.storageIndex, create_spike(data.x, data.y, data.object, data.speed, data.direction, data.storageIndex, false));
 			break;
 		default:
@@ -302,31 +305,31 @@ packet_handler_register("battleCreateObject", function(data) {
 });
 
 packet_handler_register("battleReplaceObject", function(data) {
-	switch (data.objectName) {
-		case "bone":
+	switch (data.objectType) {
+		case 2:
 			global.network_fight_object_storage.replace(data.storageIndex, create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.storageIndex, false), data.number);
 			break;
 	}
 });
 
 packet_handler_register("battleChangeObjectData", function(data) {
-	switch (data.objectName) {
-		case "bone":
-			if (data.eventName == "move") move_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.speed, data.direction, data.storageIndex, false);
-			if (data.eventName == "scale") scale_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.scale, data.scaleStep, data.storageIndex, false);
-			if (data.eventName == "shake") shake_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
+	switch (data.objectType) {
+		case 2:
+			if (data.eventName == 0) move_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.speed, data.direction, data.storageIndex, false);
+			if (data.eventName == 1) scale_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.scale, data.scaleStep, data.storageIndex, false);
+			if (data.eventName == 2) shake_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
 		break;
-		case "spinning bone":
-			if (data.eventName == "change angle speed") change_angle_speed_spinning_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.angleSpeed, data.isSmooth, data.storageIndex, false);
+		case 5:
+			if (data.eventName == 0) change_angle_speed_spinning_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.angleSpeed, data.isSmooth, data.storageIndex, false);
 		break;
-		case "solo gasterblaster":
-			if (data.eventName == "change position") change_solo_gasterblaster_position(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.newX, data.newY, data.storageIndex, false);
-			if (data.eventName == "change target") change_solo_gasterblaster_target(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.target, data.storageIndex, false);
+		case 10:
+			if (data.eventName == 0) change_solo_gasterblaster_position(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.newX, data.newY, data.storageIndex, false);
+			if (data.eventName == 1) change_solo_gasterblaster_target(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.target, data.storageIndex, false);
 		break;
-		case "big knife":
-			if (data.eventName == "move") set_big_knife_move(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.distance, data.storageIndex, false);
-			if (data.eventName == "move up") set_big_knife_move_up(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
-			if (data.eventName == "spin") set_big_knife_spin(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.rotatingSpeed, data.storageIndex, false);
+		case 13:
+			if (data.eventName == 0) set_big_knife_move(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.distance, data.storageIndex, false);
+			if (data.eventName == 1) set_big_knife_move_up(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
+			if (data.eventName == 2) set_big_knife_spin(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.rotatingSpeed, data.storageIndex, false);
 		break;
 	}
 });
