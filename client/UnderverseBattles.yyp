@@ -1596,7 +1596,6 @@
     {"id":{"name":"spr_xchara_secretive","path":"sprites/spr_xchara_secretive/spr_xchara_secretive.yy",},},
     {"id":{"name":"snd_stab","path":"sounds/snd_stab/snd_stab.yy",},},
     {"id":{"name":"snd_start_battle","path":"sounds/snd_start_battle/snd_start_battle.yy",},},
-    {"id":{"name":"destroy_by_edit","path":"scripts/destroy_by_edit/destroy_by_edit.yy",},},
     {"id":{"name":"obj_knife_spin_green","path":"objects/obj_knife_spin_green/obj_knife_spin_green.yy",},},
     {"id":{"name":"spr_drop_tea","path":"sprites/spr_drop_tea/spr_drop_tea.yy",},},
     {"id":{"name":"obj_pattern_directing_knife_blast","path":"objects/obj_pattern_directing_knife_blast/obj_pattern_directing_knife_blast.yy",},},

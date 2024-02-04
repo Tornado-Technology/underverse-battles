@@ -3,7 +3,6 @@
   "resourceVersion": "1.0",
   "name": "obj_bone_spinning_fell_sans",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
@@ -13,8 +12,8 @@
     "path": "folders/Characteres/Fell Sans/Attacks/Bullets.yy",
   },
   "parentObjectId": {
-    "name": "obj_bone_fell_sans",
-    "path": "objects/obj_bone_fell_sans/obj_bone_fell_sans.yy",
+    "name": "obj_bone_rotating_swap_sans",
+    "path": "objects/obj_bone_rotating_swap_sans/obj_bone_rotating_swap_sans.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

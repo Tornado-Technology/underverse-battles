@@ -123,7 +123,6 @@
     {"name":"obj_character_attack","order":2,"path":"objects/obj_character_attack/obj_character_attack.yy",},
     {"name":"spr_gasterblaster_green","order":5,"path":"sprites/spr_gasterblaster_green/spr_gasterblaster_green.yy",},
     {"name":"spr_swap_papyrus_attack_2_left_right","order":7,"path":"sprites/spr_swap_papyrus_attack_2_left_right/spr_swap_papyrus_attack_2_left_right.yy",},
-    {"name":"destroy_by_edit","order":8,"path":"scripts/destroy_by_edit/destroy_by_edit.yy",},
     {"name":"obj_pattern_directing_knife_blast","order":3,"path":"objects/obj_pattern_directing_knife_blast/obj_pattern_directing_knife_blast.yy",},
     {"name":"create_error_string","order":6,"path":"scripts/create_error_string/create_error_string.yy",},
     {"name":"create_battle_object","order":8,"path":"scripts/create_battle_object/create_battle_object.yy",},

@@ -19,10 +19,5 @@ charge_object = obj_gb_charge_green;
 
 is_shaked = false;
 
-edit_color = c_green;
-edit_particle_count = 50;
-edit_particle_distance = 25;
-edit = destroy_by_edit;
-
 // Time sources
 event_user(0);

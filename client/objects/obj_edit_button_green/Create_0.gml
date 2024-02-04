@@ -12,16 +12,8 @@ edit_button = UIImageButton(spr_edit_button_green, function() {
 
 edit_objects = function() {
 	var pattern_instance = obj_pattern_edit;
-	var size = array_length(pattern_instance.editing_object);
-	var i = 1;
-	repeat (size) {
-		if (instance_exists(pattern_instance.editing_object[size - i])) {
-			var instance = pattern_instance.editing_object[size - i];
-			instance.edit(instance, instance.edit_color, instance.edit_particle_count, instance.edit_particle_distance);
-		}
-		array_pop(pattern_instance.editing_object);
-		i++;
-	}
+	destroy_battle_object(pattern_instance.editing_object);
+	array_clear(pattern_instance.editing_object);
 }
 
 cooldown = time_source_create(time_source_game, 1, time_source_units_seconds, function () {

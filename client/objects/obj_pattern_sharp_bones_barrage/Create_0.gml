@@ -29,7 +29,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 }, [], -1);
 var final_time = 240 + 60 * _power;
 time_source_update_stop = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
-	time_source_stop(time_source_update_0_2);
+	time_source_stop(time_source_update);
 });
 time_source_update_destroy = time_source_create(time_source_game, final_time / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
