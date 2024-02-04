@@ -14,21 +14,21 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-create_bone_right = function(bone_scale, bone__speed) {
+create_bone_right = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x + border_instance.right + 15, border_instance.y + border_instance.down + 10, bone,
-			bone__speed, bone_scale, 90, 90);
+			bone_speed, bone_scale, 90, 90);
 }
-create_bone_left = function(bone_scale, bone__speed) {
+create_bone_left = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 10, bone,
-			bone__speed, bone_scale, 270, 270);
+			bone_speed, bone_scale, 270, 270);
 }
-create_bone_up = function(bone_scale, bone__speed) {
+create_bone_up = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
-			bone__speed, bone_scale, 180, 180);
+			bone_speed, bone_scale, 180, 180);
 }
-create_bone_down = function(bone_scale, bone__speed) {
+create_bone_down = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x - border_instance.left - 10, border_instance.y + border_instance.down + 15, bone,
-			bone__speed, bone_scale, 0, 0);
+			bone_speed, bone_scale, 0, 0);
 }
 
 update = function() {
@@ -41,18 +41,18 @@ update = function() {
 	destroy_battle_object_array(bone_instances);
 	
 	var bone_scale = 4.6;
-	var bone__speed = 2 + _power * 0.1;
+	var bone_speed = 2 + _power * 0.1;
 	if (side == dir.up) {
-		bone_instances[0] = create_bone_up(bone_scale, bone__speed);
+		bone_instances[0] = create_bone_up(bone_scale, bone_speed);
 	}
 	if (side == dir.down) {
-		bone_instances[0] = create_bone_down(bone_scale, bone__speed);
+		bone_instances[0] = create_bone_down(bone_scale, bone_speed);
 	}
 	if (side == dir.left) {
-		bone_instances[0] = create_bone_left(bone_scale, bone__speed);
+		bone_instances[0] = create_bone_left(bone_scale, bone_speed);
 	}
 	if (side == dir.right) {
-		bone_instances[0] = create_bone_right(bone_scale, bone__speed);
+		bone_instances[0] = create_bone_right(bone_scale, bone_speed);
 	}
 	
 	character_instance.change_sprite_hand_dir(side);

@@ -20,7 +20,7 @@ create_bone_right = function(bone_scale, bone_speed) {
 }
 create_bone_left = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 10, bone,
-			bone__speed, bone_scale, 270, 270);
+			bone_speed, bone_scale, 270, 270);
 }
 create_bone_up = function(bone_scale, bone_speed) {
 	return create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up - 15, bone,
@@ -41,27 +41,27 @@ update = function() {
 	
 	if (use_gravity_attack) {
 		var bone_scale = 2;
-		var bone__speed = 1.7 + _power * 0.1;
-		bone_instances[0] = create_bone_left(bone_scale, bone__speed);
-		bone_instances[1] = create_bone_right(bone_scale, bone__speed);
-		bone_instances[2] = create_bone_down(bone_scale, bone__speed);
-		bone_instances[3] = create_bone_up(bone_scale, bone__speed);
+		var bone_speed = 1.7 + _power * 0.1;
+		bone_instances[0] = create_bone_left(bone_scale, bone_speed);
+		bone_instances[1] = create_bone_right(bone_scale, bone_speed);
+		bone_instances[2] = create_bone_down(bone_scale, bone_speed);
+		bone_instances[3] = create_bone_up(bone_scale, bone_speed);
 	}
 	else
 	{
 		var bone_scale = 4.6;
-		var bone__speed = 1.8 + _power * 0.1;
+		var bone_speed = 1.8 + _power * 0.1;
 		if (side == dir.up) {
-			bone_instances[0] = create_bone_up(bone_scale, bone__speed);
+			bone_instances[0] = create_bone_up(bone_scale, bone_speed);
 		}
 		if (side == dir.down) {
-			bone_instances[0] = create_bone_down(bone_scale, bone__speed);
+			bone_instances[0] = create_bone_down(bone_scale, bone_speed);
 		}
 		if (side == dir.left) {
-			bone_instances[0] = create_bone_left(bone_scale, bone__speed);
+			bone_instances[0] = create_bone_left(bone_scale, bone_speed);
 		}
 		if (side == dir.right) {
-			bone_instances[0] = create_bone_right(bone_scale, bone__speed);
+			bone_instances[0] = create_bone_right(bone_scale, bone_speed);
 		}
 	}
 	

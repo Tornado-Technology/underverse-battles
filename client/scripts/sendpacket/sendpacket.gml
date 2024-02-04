@@ -270,7 +270,7 @@ function send_battle_object_falling_bone(x, y, object, angle, direction, scale, 
 	});
 }
 
-function send_battle_object_poking_bone(x, y, object, speed, size, direction) {
+function send_battle_object_poking_bone(x, y, object, speed, size, direction, storage_index) {
 	send("battleCreateObject", {
 		objectType: 4,
 		x: x,
@@ -278,11 +278,12 @@ function send_battle_object_poking_bone(x, y, object, speed, size, direction) {
 		object: object,
 		speed: speed,
 		size: size,
-		direction: direction
+		direction: direction,
+		storageIndex: storage_index
 	});
 }
 
-function send_battle_object_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed) {
+function send_battle_object_spinning_bone(x, y, object, speed, size, direction, angle, angle_speed, storage_index) {
 	send("battleCreateObject", {
 		objectType: 5,
 		x: x,
@@ -292,7 +293,8 @@ function send_battle_object_spinning_bone(x, y, object, speed, size, direction, 
 		size: size,
 		direction: direction,
 		angle: angle,
-		angleSpeed: angle_speed
+		angleSpeed: angle_speed,
+		storageIndex: storage_index
 	});
 }
 
