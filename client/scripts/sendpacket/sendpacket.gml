@@ -256,7 +256,7 @@ function send_battle_object_bone(x, y, object, speed, size, direction, angle, st
 	});
 }
 
-function send_battle_object_falling_bone(x, y, object, angle, direction, scale, acceleration) {
+function send_battle_object_falling_bone(x, y, object, angle, direction, scale, acceleration, storage_index) {
 	send("battleCreateObject", {
 		objectType: 3,
 		x: x,
@@ -265,7 +265,8 @@ function send_battle_object_falling_bone(x, y, object, angle, direction, scale, 
 		angle: angle,
 		direction: direction,
 		scale: scale,
-		acceleration: acceleration
+		acceleration: acceleration,
+		storageIndex: storage_index
 	});
 }
 
