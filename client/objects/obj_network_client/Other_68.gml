@@ -58,7 +58,6 @@ switch (type) {
 		// Clean up
 		buffer_delete(pack);
 	}
-	logger.debug($"Pack count: {pack_count}");
 	break;
 		
 	case network_type_non_blocking_connect:
