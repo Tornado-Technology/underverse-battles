@@ -2,13 +2,15 @@ var type = async_load[? "type"];
 var buffer = async_load[? "buffer"];
 
 switch (type) {
+	
 	case network_type_data:
-			// If this is the second half of a packet
+
+	// If this is the second half of a packet
 	if (buffer_exists(halfpack)) {
 		// Concat the half packet with the freshly arrived buffer
 		var new_buff = buffer_create(buffer_get_size(halfpack) + buffer_get_size(buffer), buffer_fixed, 1);
-		buffer_copy_real(halfpack, 0, buffer_get_size(halfpack), new_buff, 0);
-		buffer_copy_real(buffer, 0, buffer_get_size(buffer), new_buff, buffer_get_size(halfpack));
+		buffer_copy(halfpack, 0, buffer_get_size(halfpack), new_buff, 0);
+		buffer_copy(buffer, 0, buffer_get_size(buffer), new_buff, buffer_get_size(halfpack));
 			
 		// This is the most important fix of All Time
 		buffer = new_buff;
@@ -21,26 +23,26 @@ switch (type) {
 		
 	for (var i = 0; i < size;) { // Break up the binary blob into single packets
 		// Read the packet size
-		if (i + 4 > size) { // Cannot read the size bits (outside buffer)
+		if (i + size_info_bytes > size) { // Cannot read the size bits (outside buffer)
 			halfpack = buffer_create(size - i, buffer_fixed, 1);
-			buffer_copy_real(buffer, i, size - i, halfpack, 0);
+			buffer_copy(buffer, i, size - i, halfpack, 0);
 			break;
 		}
-			
+
 		var packet_size = buffer_peek(buffer, i, buffer_u32);
 			
 		// If exceding the packet size
-		if (i + packet_size > size) {
+		if (i + size_info_bytes + packet_size > size) {
 			halfpack = buffer_create(size - i, buffer_fixed, 1);
-			buffer_copy_real(buffer, i, size - i, halfpack, 0);
+			buffer_copy(buffer, i, size - i, halfpack, 0);
 			break;
 		}
-			
-		i += 4;
+		
+		i += size_info_bytes;
 			
 		// Read the packet contents
 		var pack = buffer_create(packet_size, buffer_fixed, 1);
-		buffer_copy_real(buffer, i, packet_size, pack, 0);
+		buffer_copy(buffer, i, packet_size, pack, 0);
 			
 		i += packet_size;
 			
@@ -56,7 +58,8 @@ switch (type) {
 		// Clean up
 		buffer_delete(pack);
 	}
-		break;
+	logger.debug($"Pack count: {pack_count}");
+	break;
 		
 	case network_type_non_blocking_connect:
 		if (!async_load[? "succeeded"]) {

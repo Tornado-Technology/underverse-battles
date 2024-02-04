@@ -2,6 +2,10 @@ event_inherited();
 
 pattern_index = 0;
 start_next_pattern = function() {
+	if (fight_get_player(fight_get_next_initiative()).is_defeated()) {
+		finish_attack();
+	}
+	
 	pattern_instance = pattern_instances[pattern_index];
 	pattern_instance.callback();
 	pattern_index++;

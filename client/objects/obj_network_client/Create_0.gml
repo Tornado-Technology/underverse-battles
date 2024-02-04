@@ -13,6 +13,8 @@ socket = undefined;
 state = network_client_state.disconnected;
 ping = 0;
 
+size_info_bytes = 4;
+
 // Connect/Disconnect events
 connecting_failed = new Event();
 connecting = new Event();
