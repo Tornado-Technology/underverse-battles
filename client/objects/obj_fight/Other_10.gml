@@ -20,7 +20,7 @@ switch(state) {
 			
 			var player_id_current = initiative;
 			if (player_is_acting(player_id_current)) {
-				fight_remove_player_stamina(player_id_current, fight_get_player_action_stamina_cost(player_id_current, fight_get_player_action(player_id_current)));
+				fight_remove_player_stamina(player_id_current, fight_get_player_action_stamina_cost(player_id_current, fight_get_player_attack(player_id_current)));
 				fight_remove_player_mana(player_id_current, fight_get_player_action_mana_cost(player_id_current, fight_get_player_power(player_id_current)));
 			}
 			else if (player_is_skipping(player_id_current))

@@ -27,7 +27,7 @@ var period = 45;
 time_source_update_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_bone();
 }, [], -1);
-var period = 38 - _power * 3;
+var period = 38 - _power * 2;
 time_source_update_thread = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_thread();
 }, [], -1);

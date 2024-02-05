@@ -21,8 +21,8 @@ callback = function () {
 	
 update = function() {
 	var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-	change_solo_gasterblaster_position(gasterblaster, 0, coord_new[0], coord_new[1]);
-	//change_solo_gasterblaster_target(gasterblaster, soul_instance);
+	change_solo_gasterblaster_position(gasterblaster_instance, 0, coord_new[0], coord_new[1]);
+	change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
 }
 
 update_bones = function() {
@@ -45,7 +45,7 @@ time_source_update_destroy = time_source_create(time_source_game, (period * repe
 	instance_destroy();
 });
 
-period = 60 - _power * 4;
+period = 80 - _power * 4;
 time_source_update_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_bones();
 }, [], -1);

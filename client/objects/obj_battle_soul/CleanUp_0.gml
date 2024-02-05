@@ -1,2 +1,3 @@
-/// @desc Destroy collider_soul
+time_source_destroy(time_source_slowdown);
+
 instance_destroy(collider_soul);

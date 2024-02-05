@@ -47,7 +47,7 @@ if (use_gravity_attack) {
 		
 		i = 0;
 		repeat(bone_count) {
-			bone_instances[i] = scale_bone(bone_instances[i], bone_scale, 0.3);
+			scale_bone(bone_instances[i], i, bone_scale, 0.3);
 			i++;
 		}
 		
@@ -56,7 +56,7 @@ if (use_gravity_attack) {
 	update_down = function() {
 		var i = 0;
 		repeat(bone_count) {
-			bone_instances[i] = scale_bone(bone_instances[i], 0, 0.3);
+			scale_bone(bone_instances[i], i, 0, 0.3);
 			i++;
 		}
 	}
@@ -67,27 +67,27 @@ if (use_gravity_attack) {
 
 	var period = 80;
 	var time_step = 28;
-	var final_time = period*5;
+	repeats = 5;
 	switch (_power) {
 		case 1:
 			period = 70;
 			time_step = 25;
-			final_time = period*6;
+			repeats = 6;
 			break;
 		case 2:
 			period = 65;
 			time_step = 22;
-			final_time = period*7;
+			repeats = 7;
 			break;
 		case 3:
 			period = 60;
 			time_step = 18;
-			final_time = period*8;
+			repeats = 8;
 			break;
 		case 4:
 			period = 55;
 			time_step = 15;
-			final_time = period*10;
+			repeats = 10;
 			break;
 	}
 	
@@ -100,7 +100,7 @@ if (use_gravity_attack) {
 		update_down();
 	});
 	
-	time_source_update_destroy = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
+	time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
 		character_instance.stop_hand_wave();
 		instance_destroy();
 	});

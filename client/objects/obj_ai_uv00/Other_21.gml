@@ -6,13 +6,13 @@ var att = 0;
 
 _hits = 0;
 _damage = 0;
-if (fight_get_player_action(0) == 0)
+if (fight_get_player_attack(0) == 0)
 	att = 1;
-if (fight_get_player_action(0) == 1)
+if (fight_get_player_attack(0) == 1)
 	att = irandom_range(1, 2);
-if (fight_get_player_action(0) == 2)
+if (fight_get_player_attack(0) == 2)
 	att = 2;
-if (fight_get_player_action(0) == 3)
+if (fight_get_player_attack(0) == 3)
 	exit;
 
 if (pow == 0) {

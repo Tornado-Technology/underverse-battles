@@ -11,7 +11,7 @@ callback = function () {
 }
 	
 update = function() {
-	repeat (count) create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
+	repeat (count) create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1 - _power * 0.2, 15/60, 1/6);
 }
 
 var period = 46 - _power * 6 + count * 3;

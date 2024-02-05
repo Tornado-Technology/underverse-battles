@@ -67,7 +67,7 @@ else if (scenario == 17) {
 	scenario = 18;
 }
 else if (scenario == 18) {
-	if (fight_get_player_action(0) >= 0) {
+	if (fight_get_player_attack(0) >= 0) {
 		dlg = dialog_create(episode + "WrongSkip", dir.down);
 		
 		fight_reset_player_action(0);

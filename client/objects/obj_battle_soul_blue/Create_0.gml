@@ -4,6 +4,8 @@ event_inherited();
 color_type = battle_soul_type.blue;
 
 // Movement
+speed_const = 1.8;
+
 platform_inertion = 0;
 grav = 0.05;
 
@@ -35,3 +37,8 @@ change_gravity_force = function(angle) {
 	fly_time = max_fly_time;
 	blue_attack = true;
 }
+
+// Time source
+time_source_slowdown = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {
+	speed_const = 1.8;
+});

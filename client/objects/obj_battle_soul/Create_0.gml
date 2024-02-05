@@ -11,6 +11,7 @@ half_height = sprite_height / 2;
 // Movement
 moveable = true;
 
+speed_const = 0;
 movement_speed_x = 0;
 movement_speed_y = 0;
 
@@ -119,6 +120,11 @@ change_effect = function () {
 	part_type_size(part_type_change, 1, 1, 0.1, 0);
 	part_particles_create(global.part_system_soul, x, y, part_type_change, 1);
 }
+
+// Time source
+time_source_slowdown = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {
+	speed_const = 0;
+});
 
 // Create collider soul
 event_user(5);

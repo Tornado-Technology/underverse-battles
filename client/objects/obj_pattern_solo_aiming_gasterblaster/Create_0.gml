@@ -22,9 +22,8 @@ callback = function () {
 	
 update = function() {
 	var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-	gasterblaster_instance.x_dir = coord_new[0];
-	gasterblaster_instance.y_dir = coord_new[1];
-	gasterblaster_instance.target = soul_instance;
+	change_solo_gasterblaster_position(gasterblaster_instance, 0, coord_new[0], coord_new[1]);
+	change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
 }
 
 var period = 65 - _power * 5;

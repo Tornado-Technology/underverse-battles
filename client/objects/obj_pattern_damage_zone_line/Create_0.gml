@@ -13,7 +13,7 @@ update = function() {
 	create_battle_object(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 
-var period = 28 - _power * 2;
+var period = 26 - _power * 2;
 var amount = 12 + _power * 2;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();

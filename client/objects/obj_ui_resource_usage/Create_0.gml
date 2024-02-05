@@ -21,12 +21,12 @@ frame_rate_style = {
 	good: {
 		color: c_lime,
 		fps_value: 49,
-		rfps_value: 1399,
+		rfps_value: 999,
 	},
 	normal: {
 		color: c_yellow,
 		fps_value: 29,
-		rfps_value: 999
+		rfps_value: 119
 	},
 	bad: {
 		color: c_red,
@@ -104,7 +104,7 @@ fps_update = function() {
 	if (frame_rate != frame_rate_tpye.fps && frame_rate != frame_rate_tpye.fps_and_real_fps) return;
 	
 	var text = $"{fps}fps";
-	var color = frame_rate_style.bad;
+	var color = frame_rate_style.bad.color;
 	
 	if (fps > frame_rate_style.normal.fps_value) {
 		color = frame_rate_style.normal.color;

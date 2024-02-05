@@ -6,7 +6,7 @@ right = input_check_held(input.down);
 left = input_check_held(input.up);
 up = input_check_held(input.right) && !input_check_held(input.left);
 
-var HSPD = 1.8 * dtime;
+var HSPD = speed_const * dtime;
 var VSPD = 2.5 * dtime;
 var FALL_SPD = 3 * dtime;
 

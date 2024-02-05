@@ -2,7 +2,12 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_string_green",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +15,8 @@
     "path": "folders/Characteres/Green/Attacks/Bullets.yy",
   },
   "parentObjectId": {
-    "name": "obj_thread_error_sans",
-    "path": "objects/obj_thread_error_sans/obj_thread_error_sans.yy",
+    "name": "obj_battle_slowing_bullet",
+    "path": "objects/obj_battle_slowing_bullet/obj_battle_slowing_bullet.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -39,7 +39,8 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_flying_bones, {
 			bone: obj_bone_error_sans,
 			sides: [dir.left, dir.right],
-			is_aiming: false
+			is_aiming: false,
+			custom_bone_size: 2.2
 		});
 		break;
 }

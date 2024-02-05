@@ -22,6 +22,7 @@ pattern_instances = [
 		bone: obj_bone_sharp_error_sans,
 		sides: [dir.left, dir.right],
 		is_aiming: false,
+		custom_period: 5,
 		custom_repeats: 75
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 4, {

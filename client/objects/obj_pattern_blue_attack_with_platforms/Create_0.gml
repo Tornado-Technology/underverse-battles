@@ -37,10 +37,10 @@ update = function() {
 	var x_position = border_instance.x - border_instance.left;
 	while (x_position < border_instance.x + border_instance.right) {
 		if (side == dir.up) {
-			bone_instances[i] = create_bone(x_position, border_instance.y - border_instance.up - 25, bone, 0, 1, 0, 180);
+			bone_instances[i] = create_bone(x_position, border_instance.y - border_instance.up - 25, bone, 0, 0, 0, 180);
 		}
 		if (side == dir.down) {
-			bone_instances[i] = create_bone(x_position, border_instance.y + border_instance.down + 25, bone, 0, 1, 0, 0);
+			bone_instances[i] = create_bone(x_position, border_instance.y + border_instance.down + 25, bone, 0, 0, 0, 0);
 		}
 		x_position += 10;
 		i++;

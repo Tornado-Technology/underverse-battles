@@ -20,7 +20,7 @@ switch (type) {
 		});
 		break;
 	case 1:
-		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left, battle_border.right);
+		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_solo_aiming_gasterblaster_with_rows_of_bones, {
 			soul_type: battle_soul_type.red,
 			gasterblaster_aiming: obj_turboblaster_aiming_green,

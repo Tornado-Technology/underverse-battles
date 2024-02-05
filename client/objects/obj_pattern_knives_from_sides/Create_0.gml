@@ -41,7 +41,7 @@ update = function() {
 	
 	create_battle_object(position_x, position_y, 0, knife, {
 		image_alpha: 0,
-		_target_angle: point_direction(position_x, position_y, border_instance.x, border_instance.y),
+		_target_angle: point_direction(position_x, position_y, soul_instance.x, soul_instance.y),
 	});
 }
 

@@ -3,7 +3,7 @@ event_inherited();
 if (!moveable)
 	exit;
 
-var main_speed = _speed;
+var main_speed = speed_const * dtime;
 if (is_dashing) {
 	main_speed *= 2;
 }

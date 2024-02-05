@@ -3,7 +3,7 @@ event_inherited();
 if (!moveable)
 	exit;
 
-var main_speed = 1.8 * dtime;
+var main_speed = speed_const * dtime;
 main_speed = (ability ? main_speed / 2 : main_speed);
 
 /* control */

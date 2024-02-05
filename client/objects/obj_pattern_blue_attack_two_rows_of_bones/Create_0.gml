@@ -47,7 +47,7 @@ update = function() {
 	character_instance.change_sprite_hand_dir(side);
 }
 
-var period = 75 - _power * 5;
+var period = 55 - _power * 2;
 var repeats = 5 + _power;
 
 if (variable_instance_exists(id, "custom_repeats")) {

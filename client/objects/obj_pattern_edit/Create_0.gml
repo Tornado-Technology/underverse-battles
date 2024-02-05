@@ -5,7 +5,7 @@ edit_button = noone;
 editing_object = [];
 gasterblaster_instance = noone;
 
-step = 6;
+step = 8;
 _side = 90;
 rot = irandom_range(0, 1);
 
@@ -118,9 +118,11 @@ switch (edit_button.edit_attack_number) {
 				(period - 4) / 60, period / 60, 15 / 60);
 			array_push(editing_object, gasterblaster_instance);
 		}
-		var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-		change_solo_gasterblaster_position(gasterblaster, 0, coord_new[0], coord_new[1]);
-		//change_solo_gasterblaster_target(gasterblaster, soul_instance);
+		if (gasterblaster_instance != noone) {
+			var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
+			change_solo_gasterblaster_position(gasterblaster_instance, 0, coord_new[0], coord_new[1]);
+			change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
+		}
 		break;
 	case 7:
 		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
@@ -131,7 +133,7 @@ switch (edit_button.edit_attack_number) {
 var period = 7;
 if (edit_button != noone) {
 	if (edit_button.edit_attack_number == 6) period = 30;
-	if (edit_button.edit_attack_number == 7) period = 20;
+	if (edit_button.edit_attack_number == 7) period = 10;
 }
 var final_time = 11;
 	

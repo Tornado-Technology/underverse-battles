@@ -60,7 +60,7 @@ var period = 100;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-period = 60;
+period = 40;
 time_source_update_sharp = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_sharp();
 }, [], -1);

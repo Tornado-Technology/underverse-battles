@@ -1,4 +1,4 @@
-// Arguments: bone, sides, is_aiming, custom_repeats (optional)
+// Arguments: bone, sides, is_aiming, custom_bone_size (optional), custom_period (optional), custom_repeats (optional)
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -29,13 +29,22 @@ update = function () {
 		bone_y = is_aiming ? soul_instance.y : irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 	}
 	
-	create_bone(bone_x, bone_y, bone, 2 + 0.2 * _power, 1, random_side + 180, random_side + 90);
+	var bone_size = 1;
+	if (variable_instance_exists(id, "custom_bone_size")) {
+		bone_size = custom_bone_size;
+	}
+	
+	create_bone(bone_x, bone_y, bone, 2 + 0.2 * _power, bone_size, random_side + 180, random_side + 90);
+	
 	audio_play_sound_plugging(snd_projectile);
 }
 
-var period = 18 - 2 * _power;
+var period = 16 - _power * 2;
 var repeats = 20 + _power * 5;
 
+if (variable_instance_exists(id, "custom_period")) {
+	period = custom_period;
+}
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
 }

@@ -12,7 +12,7 @@ edit_button = UIImageButton(spr_edit_button_green, function() {
 
 edit_objects = function() {
 	var pattern_instance = obj_pattern_edit;
-	destroy_battle_object(pattern_instance.editing_object);
+	destroy_battle_object_array(pattern_instance.editing_object);
 	array_clear(pattern_instance.editing_object);
 }
 
