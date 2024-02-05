@@ -8,6 +8,7 @@ if (cooldown <= 0 && place) {
 	
 	if (fight_network_mode) {
 		send_fight_collider_soul_data();
+		send_fight_mana(mana_give);
 	}
 }
 

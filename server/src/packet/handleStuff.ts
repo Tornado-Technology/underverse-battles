@@ -395,7 +395,6 @@ export const handlePacket = async (client: Client, data: any) => {
 
     case 'fightColliderSoul':
       if (client.fight.instance.state === fightState.battle) {
-        client.fight.instance?.addMana(client, 2);
         client.fight.instance?.getOtherClient(client)?.sendFightCollider(target.opponent);
       }
       break;
