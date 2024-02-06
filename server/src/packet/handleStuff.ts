@@ -374,7 +374,8 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightHealAction':
-      await client.fight.instance?.addHp(client, data.hp);
+      const healingPlayer = data.playerId === 0 ? client : client.fight.instance?.getOtherClient(client);
+      await client.fight.instance?.addHp(healingPlayer, data.hp);
       break;
 
     case 'fightSkip':

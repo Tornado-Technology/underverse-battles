@@ -61,10 +61,6 @@ if (use_gravity_attack) {
 		}
 	}
 
-	if (variable_instance_exists(id, "custom_repeats")) {
-		repeats = custom_repeats;
-	}
-
 	var period = 80;
 	var time_step = 28;
 	repeats = 5;
@@ -89,6 +85,10 @@ if (use_gravity_attack) {
 			time_step = 15;
 			repeats = 10;
 			break;
+	}
+	
+	if (variable_instance_exists(id, "custom_repeats")) {
+		repeats = custom_repeats;
 	}
 	
 	time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {

@@ -38,24 +38,16 @@ update = function() {
 	}
 		
 	if (side == dir.up) {
+		var gasterblaster_x = obj_camera.camera_position.x - gasterblaster_height;
 		var gasterblaster_y = border_instance.y - border_instance.up + 15;
-		create_gasterblaster(gasterblaster, -gasterblaster_height, gasterblaster_y,
-			border_instance.x - border_instance.left + 60, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
+		create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
+		border_instance.x - border_instance.left + 60, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
 	}
 	if (side == dir.down) {
+		var gasterblaster_x = obj_camera.camera_position.x + obj_camera.view_width + gasterblaster_height;
 		var gasterblaster_y = border_instance.y + border_instance.down - 15;
-		create_gasterblaster(gasterblaster, room_width + gasterblaster_height, gasterblaster_y,
-			border_instance.x + border_instance.right - 60, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
-	}
-	if (side == dir.left) {
-		var gasterblaster_x = border_instance.x - border_instance.left + 15;
-		create_gasterblaster(gasterblaster, gasterblaster_x, room_height + gasterblaster_height,
-			gasterblaster_x, border_instance.y + border_instance.down - 60, 180, fly_time, charge_time, flyout_time, destroy_time);
-	}
-	if (side == dir.right) {
-		var gasterblaster_x = border_instance.x + border_instance.right - 15;
-		create_gasterblaster(gasterblaster, gasterblaster_x, -gasterblaster_height,
-			gasterblaster_x, border_instance.y - border_instance.up + 60, 0, fly_time, charge_time, flyout_time, destroy_time);
+		create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
+		border_instance.x + border_instance.right - 60, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
 	}
 }
 

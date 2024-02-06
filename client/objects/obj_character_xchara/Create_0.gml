@@ -55,7 +55,6 @@ on_dodged = function(player_id) {
 		fight_add_player_mana(player_id, added_points);
 		fight_player_add_special_action_percent_custom(player_id, added_points);
 		if (fight_network_mode) send_fight_mana(added_points);
-		if (fight_network_mode) {/* Send special action percent */};
 	}
 };
 

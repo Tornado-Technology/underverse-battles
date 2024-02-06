@@ -14,7 +14,7 @@ push = function(storage_index, instance) {
 }
 
 replace = function(storage_index, instance, index) {
-	ds_map_replace(instances[storage_index], [index], instance);
+	ds_map_replace(instances[storage_index], index, instance);
 }
 
 clear = function(storage_index) {

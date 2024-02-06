@@ -171,8 +171,9 @@ function send_fight_hp(hp) {
 }
 
 /// @param {Real} hp
-function send_heal_action(hp) {
+function send_heal_action(player_id, hp) {
 	send("fightHealAction", {
+		playerId: player_id,
 		hp: hp,
 	});
 }

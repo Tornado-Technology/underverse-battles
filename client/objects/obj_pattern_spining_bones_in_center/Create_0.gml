@@ -24,8 +24,8 @@ callback = function () {
 update = function() {
 	var random_number = irandom_range(0, 1);
 	if (random_number == 0) {
-		change_angle_speed_spinning_bone(bone_instance_1, 0, -bone_instance_1.angle_speed);
-		change_angle_speed_spinning_bone(bone_instance_2, 1, -bone_instance_2.angle_speed);
+		change_angle_speed_spinning_bone(bone_instance_1, 0, -bone_instance_1.angle_speed, true);
+		change_angle_speed_spinning_bone(bone_instance_2, 1, -bone_instance_2.angle_speed, true);
 	}
 }
 

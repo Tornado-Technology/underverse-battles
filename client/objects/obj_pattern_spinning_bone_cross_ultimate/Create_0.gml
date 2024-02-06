@@ -29,8 +29,8 @@ callback = function () {
 
 update_3_0 = function() {
 	var bone_angle_speed = choose(1, -1);
-	change_angle_speed_spinning_bone(bone_instances[0], 0, bone_angle_speed, 1);
-	change_angle_speed_spinning_bone(bone_instances[1], 0, bone_angle_speed, 1);
+	change_angle_speed_spinning_bone(bone_instances[0], 0, bone_angle_speed, false, 1);
+	change_angle_speed_spinning_bone(bone_instances[1], 0, bone_angle_speed, false, 1);
 }
 	
 update_3_1 = function() {

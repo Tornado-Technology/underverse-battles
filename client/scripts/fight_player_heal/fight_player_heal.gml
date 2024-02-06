@@ -17,6 +17,6 @@ function fight_player_heal(player_id, value) {
 
 	// Some network sync
 	if (fight_network_mode) {
-		send_heal_action(value);
+		send_heal_action(player_id, value);
 	}
 }
