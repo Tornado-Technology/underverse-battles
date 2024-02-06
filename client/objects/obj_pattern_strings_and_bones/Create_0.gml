@@ -20,17 +20,17 @@ update_thread = function() {
 	var coord = [];
 	coord = rand_side_from(-1, -1, room_width + 1, room_height + 1);
 	
-	create_error_string(coord[0], coord[1], thread, soul_instance.x, soul_instance.y, 3.2 + _power * 0.1);
+	create_error_string(coord[0], coord[1], thread, soul_instance.x, soul_instance.y, 3.4 + _power * 0.1);
 }
 
 var period = 45;
 time_source_update_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_bone();
 }, [], -1);
-var period = 38 - _power * 2;
+var period = 40 - _power * 2;
 time_source_update_thread = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_thread();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 20) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 5 + _power * 0.2, time_source_units_seconds, function () {
 	instance_destroy();
 });

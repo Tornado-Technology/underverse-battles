@@ -27,7 +27,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [], -1);
 	
-time_source_update_stop = time_source_create(time_source_game, 5, time_source_units_seconds, function () {
+time_source_update_stop = time_source_create(time_source_game, 5 + _power * 0.2, time_source_units_seconds, function () {
 	if (!soul_instance.is_stunned) {
 		instance_destroy();
 	}

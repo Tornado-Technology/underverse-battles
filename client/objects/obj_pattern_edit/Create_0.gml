@@ -5,6 +5,8 @@ edit_button = noone;
 editing_object = [];
 gasterblaster_instance = noone;
 
+period = 7;
+
 step = 8;
 _side = 90;
 rot = irandom_range(0, 1);
@@ -23,6 +25,8 @@ update = function() {
 if (!instance_exists(edit_button)) return;
 switch (edit_button.edit_attack_number) {
 	case 0:
+		period = 7;
+		
 		var coord = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);
 		var spike_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
 		var spike_instance = create_spike(coord[0], coord[1], spike, 2.6, spike_direction);
@@ -30,6 +34,8 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 1:
+		period = 7;
+		
 		var side = irandom_range(0, 1);
 		var x_rand;
 		var bone_direction = 0;
@@ -47,6 +53,8 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 2:
+		period = 7;
+		
 		var coord = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);
 		var bone_direction = point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y);
 		var bone_instance = create_bone(coord[0], coord[1], bone, 2.6, 1, bone_direction, bone_direction - 90);
@@ -54,6 +62,8 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 3:
+		period = 7;
+		
 		var side = irandom_range(0, 1);
 		var x_rand;
 		var bone_direction = 0;
@@ -71,6 +81,8 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 4:
+		period = 7;
+		
 		var va_x1_ = obj_camera.camera_position.x;
 		var va_x2_ = obj_camera.view_width + obj_camera.camera_position.x;
 		var va_y1_ = obj_camera.camera_position.y;
@@ -88,6 +100,8 @@ switch (edit_button.edit_attack_number) {
 		array_push(editing_object, _inst);
 		break;
 	case 5:
+		period = 5;
+		
 		var dist_ = 120;
 		var step_angle = 0;
 		repeat (2) {
@@ -109,32 +123,29 @@ switch (edit_button.edit_attack_number) {
 			_side -= step;
 		break;
 	case 6:
-		if (gasterblaster_instance == noone) {
-			var period = 25;
+		period = 30;
+		
+		if (!instance_exists(gasterblaster_instance)) {
+			var gb_period = 25;
 			var gb_size = 60;
 			var con = room_height + gb_size;
 			var coord = rand_side_from(-gb_size, -gb_size, con, con);
 			gasterblaster_instance = create_solo_gasterblaster(coord[0], coord[1], gasterblaster_aiming_solo,
-				(period - 4) / 60, period / 60, 15 / 60);
+				(gb_period - 4) / 60, gb_period / 60, 15 / 60);
 			array_push(editing_object, gasterblaster_instance);
 		}
-		if (gasterblaster_instance != noone) {
-			var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
-			change_solo_gasterblaster_position(gasterblaster_instance, 0, coord_new[0], coord_new[1]);
-			change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
-		}
+		var coord_new = rand_side_from(border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down);
+		change_solo_gasterblaster_position(gasterblaster_instance, 0, coord_new[0], coord_new[1]);
+		change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
 		break;
 	case 7:
+		period = 20;
+		
 		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
 		break;
 	}
 }
 
-var period = 7;
-if (edit_button != noone) {
-	if (edit_button.edit_attack_number == 6) period = 30;
-	if (edit_button.edit_attack_number == 7) period = 10;
-}
 var final_time = 11;
 	
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
