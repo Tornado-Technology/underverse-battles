@@ -19,23 +19,23 @@ update = function() {
 	switch (sides[index]) {
 		case dir.up:
 			position_x = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-			position_y = obj_camera.camera_position.y + border_instance.up;
-			target_angle = 270;
+			position_y = border_instance.y - border_instance.up - 30;
+			target_angle = dir.up;
 			break;
 		case dir.down:
 			position_x = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-			position_y = obj_camera.camera_position.y - border_instance.down;
-			target_angle = 90;
+			position_y = border_instance.y + border_instance.down + 30;
+			target_angle = dir.down;
 			break;
 		case dir.left:
-			position_x = obj_camera.camera_position.x + 30 + border_instance.left;
+			position_x = border_instance.x - border_instance.left - 30;
 			position_y = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
-			target_angle = 0;
+			target_angle = dir.right;
 			break;
 		case dir.right:
-			position_x = obj_camera.camera_position.x - 30 - border_instance.right;
+			position_x = border_instance.x + border_instance.right + 30;
 			position_y = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
-			target_angle = 180;
+			target_angle = dir.left;
 			break;
 	}
 	
