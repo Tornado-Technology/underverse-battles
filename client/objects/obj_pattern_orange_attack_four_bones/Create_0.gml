@@ -38,7 +38,7 @@ update = function() {
 		audio_play_sound_once(snd_emergence);
 	}
 		
-	destroy_battle_object_array(bone_instances);
+	instance_destroy_array(bone_instances);
 	
 	var bone_scale = 4.6;
 	var bone_speed = 2 + _power * 0.1;

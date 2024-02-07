@@ -14,7 +14,7 @@ rot = irandom_range(0, 1);
 callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	
-	edit_button = create_battle_object(0, 0, 0, obj_edit_button_green);
+	edit_button = instance_create_depth(0, 0, 0, obj_edit_button_green);
 
 	update();
 	time_source_start(time_source_update);
@@ -94,7 +94,7 @@ switch (edit_button.edit_attack_number) {
 			var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
 		}
 		
-		var _inst = create_battle_object(rX, rY, 0, knife_spin, {
+		var _inst = instance_create_depth(rX, rY, 0, knife_spin, {
 			_target_angle: point_direction(rX, rY, soul_instance.x, soul_instance.y),
 		});
 		array_push(editing_object, _inst);
@@ -109,7 +109,7 @@ switch (edit_button.edit_attack_number) {
 			var rX = border_instance.x - dist_ * dcos(alpha);
 			var rY = border_instance.y - dist_ * dsin(alpha);
 			
-			var _knife = create_battle_object(rX, rY, 0, knife_directed, {
+			var _knife = instance_create_depth(rX, rY, 0, knife_directed, {
 				image_alpha: 0,
 				_target_angle: point_direction(rX, rY, border_instance.x, border_instance.y)
 			});

@@ -1,5 +1,4 @@
-function destroy_battle_object_by_edit(object, color, count, distance, storage_index = 0, send_data = fight_network_mode) {
-	if (send_data) send_destroy_battle_object_by_edit(color, count, distance, storage_index);
+function destroy_battle_object_by_edit(object, color, count, distance) {
 
 	part_glitch = part_type_create();
 	part_type_shape(part_glitch, pt_shape_square);

@@ -37,7 +37,7 @@ update = function() {
 		soul_instance.change_gravity_force(side);
 	}
 		
-	destroy_battle_object_array(bone_instances);
+	instance_destroy_array(bone_instances);
 	
 	if (use_gravity_attack) {
 		var bone_scale = 2;

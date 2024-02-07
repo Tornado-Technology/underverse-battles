@@ -374,8 +374,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightHealAction':
-      const healingPlayer = data.playerId === 0 ? client : client.fight.instance?.getOtherClient(client);
-      await client.fight.instance?.addHp(healingPlayer, data.hp);
+      await client.fight.instance?.addHp(client, data.hp);
       break;
 
     case 'fightSkip':
@@ -432,27 +431,6 @@ export const handlePacket = async (client: Client, data: any) => {
       client.fight.instance?.sync();
       break;
     
-    case 'battleCreateBorder':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleCreateSoul':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleCreateObject':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleReplaceObject':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleChangeObjectData':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleDestroyObject':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
-    case 'battleDestroyByEdit':
-      client.fight.instance?.transferDataFromClient(client, index, data);
-      break;
     default:
       Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
       break;

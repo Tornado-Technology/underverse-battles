@@ -20,7 +20,7 @@ update = function() {
 		rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
 	}
 	
-	create_battle_object(rX, rY, 0, knife, {
+	instance_create_depth(rX, rY, 0, knife, {
 		_target_angle: point_direction(rX, rY, soul_instance.x, soul_instance.y),
 	});
 }

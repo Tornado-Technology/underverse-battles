@@ -39,7 +39,7 @@ update = function() {
 			break;
 	}
 	
-	create_battle_object(position_x, position_y, 0, knife, {
+	instance_create_depth(position_x, position_y, 0, knife, {
 		image_alpha: 0,
 		_target_angle: target_angle
 	});

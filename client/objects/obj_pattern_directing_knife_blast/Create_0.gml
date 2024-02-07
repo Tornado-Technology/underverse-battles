@@ -10,7 +10,7 @@ callback = function () {
 
 update = function() {
 	var coord = rand_side_from(border_instance.x - border_instance.left - 60, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 60, border_instance.y + border_instance.down + 40);
-	create_battle_object(coord[0], coord[1], 0, knife_blast, {});
+	instance_create_depth(coord[0], coord[1], 0, knife_blast, {});
 }
 
 time_source_update = time_source_create(time_source_game, (26 - _power * 2) / 60, time_source_units_seconds, function () {

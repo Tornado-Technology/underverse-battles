@@ -7,7 +7,6 @@ on_border_created = function() {}
 
 create_border = function(up, down, left, right) {
 	border_instance = battle_border_create(up, down, left, right);
-	if (fight_network_mode) send_battle_border(up, down, left, right);
 	time_source_start(time_source_border_delay);
 }
 

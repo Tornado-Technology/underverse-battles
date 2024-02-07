@@ -4,6 +4,7 @@ import App from '../../app.js';
 import Matchmaker from '../../util/matchmaker.js';
 import { statusCode } from '../../status.js';
 import config from '../../config.js';
+import { randomInt } from 'crypto';
 
 export enum state {
   wait = 'wait',
@@ -340,10 +341,12 @@ export default class Fight {
   public updateStateAttack(): void {
     if (this.state === state.battle) return;
 
+    const seed = randomInt(0, 2000000000);
+
     this.setState(state.battle);
 
     this.clients.forEach((client) => {
-      client?.sendFightStartBattle();
+      client?.sendFightStartBattle(seed);
     });
   }
 

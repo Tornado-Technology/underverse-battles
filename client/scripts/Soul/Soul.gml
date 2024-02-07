@@ -1,7 +1,9 @@
-function create_soul(px, py, type, send_data = fight_network_mode) {
+function create_soul(px, py, type) {
 	if (instance_exists(obj_battle_soul)) {
-		if (send_data) send_battle_soul(obj_battle_soul.x, obj_battle_soul.y, type);
 		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type, send_data);
+	}
+	if (fight_network_mode && fight_get_initiative() == 0) {
+		return create_other_player_soul(px, py, type);
 	}
 	var soul_ = obj_battle_soul_standart;
 	switch (type) {
@@ -18,7 +20,6 @@ function create_soul(px, py, type, send_data = fight_network_mode) {
 			soul_ = obj_battle_soul_yellow;
 		break;
 	}
-	if (send_data) send_battle_soul(px, py, type);
 	return instance_create_depth(px, py, fight_depth.soul, soul_);
 }
 
@@ -27,7 +28,7 @@ function change_soul(old_soul, px, py, type, send_data) {
 	
 	instance_destroy(old_soul);
 	audio_play_sound_once(snd_swing);
-	var new_soul = create_soul(px, py, type, send_data);
+	var new_soul = create_soul(px, py, type);
 	new_soul.change_effect();
 	return new_soul;
 }

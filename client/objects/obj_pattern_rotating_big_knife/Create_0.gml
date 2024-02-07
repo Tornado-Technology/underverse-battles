@@ -10,8 +10,10 @@ callback = function () {
 }
 
 update = function() {
-	set_big_knife_spin(knife_instance, 0, choose(-1, 1) * (3 + _power * 0.2));
-	set_big_knife_move(knife_instance, 0, 3 + _power * 0.2);
+	knife_instance.spin(choose(-1, 1) * (3 + _power * 0.2));
+	knife_instance.move(3 + _power * 0.2);
+	audio_play_sound_once(snd_projectile);
+	
 }
 
 time_source_update = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {

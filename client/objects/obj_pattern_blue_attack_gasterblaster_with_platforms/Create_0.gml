@@ -10,7 +10,7 @@ callback = function () {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	}
 	
-	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y + 2, 5, 5, 60, platform_speed, 1);
+	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y + 2, 5, 5, 60, platform_speed);
 	
 	update();
 	time_source_start(time_source_update);
@@ -52,7 +52,7 @@ update = function() {
 }
 
 update_platforms = function() {
-	create_next_moving_platform(border_instance.x - border_instance.left - 40, border_instance.y + 2, 5, 5, 60, platform_speed, 1);
+	create_next_moving_platform(border_instance.x - border_instance.left - 40, border_instance.y + 2, 5, 5, 60, platform_speed);
 }
 
 switch (_power) {

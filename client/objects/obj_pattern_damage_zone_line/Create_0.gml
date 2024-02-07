@@ -10,7 +10,7 @@ callback = function () {
 
 update = function() {
 	var random_position = new Vector2(irandom_range(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), border_instance.y);
-	create_battle_object(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
+	instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 
 var period = 26 - _power * 2;

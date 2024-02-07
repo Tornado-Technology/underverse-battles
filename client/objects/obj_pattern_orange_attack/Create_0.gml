@@ -17,7 +17,7 @@ if (use_gravity_attack) {
 	}
 
 	update = function() {
-		destroy_battle_object_array(bone_instances);
+		instance_destroy_array(bone_instances);
 		
 		var side = choose(dir.up, dir.down, dir.left, dir.right);
 		
@@ -47,7 +47,7 @@ if (use_gravity_attack) {
 		
 		i = 0;
 		repeat(bone_count) {
-			scale_bone(bone_instances[i], i, bone_scale, 0.3);
+			bone_instances[i].change_scale(bone_scale, 0.3);
 			i++;
 		}
 		
@@ -56,7 +56,7 @@ if (use_gravity_attack) {
 	update_down = function() {
 		var i = 0;
 		repeat(bone_count) {
-			scale_bone(bone_instances[i], i, 0, 0.3);
+			bone_instances[i].change_scale(0, 0.3);
 			i++;
 		}
 	}
@@ -126,7 +126,7 @@ update = function() {
 		soul_instance.change_gravity_force(side);
 	}
 	
-	destroy_battle_object_array(bone_instances);
+	instance_destroy_array(bone_instances);
 	
 	character_instance.change_sprite_hand_dir(side);
 	
@@ -180,7 +180,7 @@ update = function() {
 update_up = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		scale_bone(bone_instances[i], i, bone_scale, 0.2);
+		bone_instances[i].change_scale(bone_scale, 0.2);
 		++i;
 	}
 	instance_destroy(obj_warning);
@@ -190,7 +190,7 @@ update_up = function() {
 update_down = function() {
 	var i = 0;
 	repeat(is_double ? bone_count * 2 : bone_count) {
-		scale_bone(bone_instances[i], i, 0, 0.2);
+		bone_instances[i].change_scale(0, 0.2);
 		++i;
 	}
 }
