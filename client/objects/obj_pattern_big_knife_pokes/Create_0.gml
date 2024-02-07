@@ -15,7 +15,7 @@ callback = function () {
 
 update = function() {
 	set_big_knife_move(knife_instance, 0, 3 + _power * 0.2, 1);
-	set_big_knife_move_up(knife_instance, 0, 1);
+	//set_big_knife_move_up(knife_instance, 0, 1);
 }
 
 destroy = function () {

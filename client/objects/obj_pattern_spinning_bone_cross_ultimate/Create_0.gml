@@ -46,10 +46,9 @@ update_3_2 = function() {
 		create_bone(rand_side[0], rand_side[1], bone, bone_speed, 1, bone_dir, bone_dir - 90);
 	}
 	if (variable_instance_exists(id, "knife")) {
-		var knife_instance = instance_create_depth(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife);
 		create_battle_object(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife, {
-			image_alpha: 0,
-			_target_angle: point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y)
+			_target_angle: point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y),
+			image_alpha: 0
 		});
 	}
 	audio_play_sound_plugging(snd_projectile);
