@@ -12,7 +12,16 @@ edit_button = UIImageButton(spr_edit_button_green, function() {
 
 edit_objects = function() {
 	var pattern_instance = obj_pattern_edit;
-	destroy_battle_object_array(pattern_instance.editing_object);
+	
+	var i = 0;
+	repeat(array_length(pattern_instance.editing_object)) {
+		var editable_instance = pattern_instance.editing_object[i];
+		if (instance_exists(editable_instance)) {
+			var editable_instance = pattern_instance.editing_object[i];
+			destroy_battle_object_by_edit(editable_instance, c_green, editable_instance.edit_particle_count, editable_instance.edit_particle_distance);
+		}
+		i++;
+	}
 	array_clear(pattern_instance.editing_object);
 }
 

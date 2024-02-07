@@ -24,3 +24,6 @@ if (random_type == 3) {
 
 blast_object = obj_gb_blast_green;
 charge_object = obj_gb_charge_green;
+
+edit_particle_count = 50;
+edit_particle_distance = 25;

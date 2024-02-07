@@ -145,6 +145,7 @@
     {"name":"spr_swap_papyrus_christmas_attack_2_left_down","order":7,"path":"sprites/spr_swap_papyrus_christmas_attack_2_left_down/spr_swap_papyrus_christmas_attack_2_left_down.yy",},
     {"name":"replace_bone","order":8,"path":"scripts/replace_bone/replace_bone.yy",},
     {"name":"create_spike","order":7,"path":"scripts/create_spike/create_spike.yy",},
+    {"name":"destroy_battle_object_by_edit","order":12,"path":"scripts/destroy_battle_object_by_edit/destroy_battle_object_by_edit.yy",},
     {"name":"spr_spear_green","order":6,"path":"sprites/spr_spear_green/spr_spear_green.yy",},
     {"name":"spr_swap_papyrus_attack_2_right_down","order":10,"path":"sprites/spr_swap_papyrus_attack_2_right_down/spr_swap_papyrus_attack_2_right_down.yy",},
     {"name":"spr_bone_green","order":7,"path":"sprites/spr_bone_green/spr_bone_green.yy",},

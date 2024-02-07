@@ -567,3 +567,12 @@ function send_destroy_battle_object(storage_index) {
 		storageIndex: storage_index
 	});
 }
+
+function send_destroy_battle_object_by_edit(color, count, distance, storage_index) {
+	send("battleDestroyObjectByEdit", {
+		color: color,
+		count: count,
+		distance: distance,
+		storageIndex: storage_index
+	});
+}

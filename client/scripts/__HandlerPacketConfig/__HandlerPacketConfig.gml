@@ -338,6 +338,10 @@ packet_handler_register("battleDestroyObject", function(data) {
 	global.network_fight_object_storage.clear(data.storageIndex);
 });
 
+packet_handler_register("battleDestroyObjectByEdit", function(data) {
+	global.network_fight_object_storage.clear_by_edit(data.storageIndex, data.color, data.count, data.distance);
+});
+
 packet_handler_register("fightDodge", function(data) {
 	logger.info("Dodging");
 	

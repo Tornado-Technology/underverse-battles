@@ -1935,6 +1935,7 @@
     {"id":{"name":"spr_fell_sans_attack_2_left_up","path":"sprites/spr_fell_sans_attack_2_left_up/spr_fell_sans_attack_2_left_up.yy",},},
     {"id":{"name":"obj_attack_xchara_0","path":"objects/obj_attack_xchara_0/obj_attack_xchara_0.yy",},},
     {"id":{"name":"fight_get_state","path":"scripts/fight_get_state/fight_get_state.yy",},},
+    {"id":{"name":"destroy_battle_object_by_edit","path":"scripts/destroy_battle_object_by_edit/destroy_battle_object_by_edit.yy",},},
     {"id":{"name":"spr_ink_sans_walking_right_calm","path":"sprites/spr_ink_sans_walking_right_calm/spr_ink_sans_walking_right_calm.yy",},},
     {"id":{"name":"spr_gasterblaster_charging_error_sans","path":"sprites/spr_gasterblaster_charging_error_sans/spr_gasterblaster_charging_error_sans.yy",},},
     {"id":{"name":"spr_cross_attack_2_up_right","path":"sprites/spr_cross_attack_2_up_right/spr_cross_attack_2_up_right.yy",},},

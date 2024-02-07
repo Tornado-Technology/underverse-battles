@@ -141,7 +141,8 @@ switch (edit_button.edit_attack_number) {
 	case 7:
 		period = 20;
 		
-		create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
+		gasterblaster_instance = create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
+		array_push(editing_object, gasterblaster_instance);
 		break;
 	}
 }
