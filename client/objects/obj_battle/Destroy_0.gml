@@ -6,7 +6,5 @@ time_source_destroy(time_sourse);
 
 if (fight_network_mode && fight_get_initiative() == 1) {
 	send_fight_finish_battle(initiative, damage);
-}
-if (!fight_network_mode) {
 	fight_set_state(fight_state.reset);
 }
