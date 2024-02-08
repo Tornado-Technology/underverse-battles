@@ -68,7 +68,8 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
-			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas)
+			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas),
+			new Character(obj_character_swap_papyrus_changed_reality, "SwapPapyrus", "ChangedReality", spr_swap_papyrus_frame_changed_reality)
 		],
 		[
 			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
