@@ -86,7 +86,6 @@
     {"name":"spr_swap_papyrus_attack_2_up","order":2,"path":"sprites/spr_swap_papyrus_attack_2_up/spr_swap_papyrus_attack_2_up.yy",},
     {"name":"spr_swap_papyrus_christmas_attack_2_right","order":2,"path":"sprites/spr_swap_papyrus_christmas_attack_2_right/spr_swap_papyrus_christmas_attack_2_right.yy",},
     {"name":"obj_pattern_diagonale_string","order":1,"path":"objects/obj_pattern_diagonale_string/obj_pattern_diagonale_string.yy",},
-    {"name":"attack_creator_green","order":2,"path":"objects/attack_creator_green/attack_creator_green.yy",},
     {"name":"spr_gasterblaster_charging_green","order":4,"path":"sprites/spr_gasterblaster_charging_green/spr_gasterblaster_charging_green.yy",},
     {"name":"spr_swap_papyrus_attack_2_down_left","order":4,"path":"sprites/spr_swap_papyrus_attack_2_down_left/spr_swap_papyrus_attack_2_down_left.yy",},
     {"name":"spr_swap_papyrus_christmas_attack_2_left","order":3,"path":"sprites/spr_swap_papyrus_christmas_attack_2_left/spr_swap_papyrus_christmas_attack_2_left.yy",},
