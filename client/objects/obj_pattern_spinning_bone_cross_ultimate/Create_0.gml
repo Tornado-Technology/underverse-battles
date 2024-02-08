@@ -18,9 +18,9 @@ callback = function () {
 	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
 
 	var bone_scale = 9.4;
-	bone_instances[0] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 45, -45, 0, 1);
+	bone_instances[0] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 45, -45, 0);
 	bone_instances[0].change_scale(bone_scale, 0.1);
-	bone_instances[1] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 135, 45, 0, 1);
+	bone_instances[1] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 135, 45, 0);
 	bone_instances[1].change_scale(bone_scale, 0.1);
 	audio_play_sound_once(snd_spare_up);
 
@@ -46,7 +46,6 @@ update_3_2 = function() {
 		create_bone(rand_side[0], rand_side[1], bone, bone_speed, 1, object_direction, object_direction - 90);
 	}
 	if (variable_instance_exists(id, "knife")) {
-		var knife_instance = instance_create_depth(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife);
 		instance_create_depth(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife, {
 			image_alpha: 0,
 			_target_angle: object_direction
