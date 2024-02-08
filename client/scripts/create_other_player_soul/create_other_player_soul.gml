@@ -3,6 +3,8 @@ function create_other_player_soul(px, py, type) {
 	if (instance_exists(obj_battle_soul_otherplayer)) {
 		soul_ = obj_battle_soul_otherplayer;
 		
+		if (soul_.color_type == type) return soul_;
+		
 		soul_.change_effect();
 		audio_play_sound_once(snd_swing);
 	}
