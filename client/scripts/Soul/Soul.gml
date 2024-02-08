@@ -1,6 +1,6 @@
 function create_soul(px, py, type) {
 	if (instance_exists(obj_battle_soul)) {
-		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type, send_data);
+		return change_soul(obj_battle_soul, obj_battle_soul.x, obj_battle_soul.y, type);
 	}
 	if (fight_network_mode && fight_get_initiative() == 0) {
 		return create_other_player_soul(px, py, type);
@@ -23,7 +23,7 @@ function create_soul(px, py, type) {
 	return instance_create_depth(px, py, fight_depth.soul, soul_);
 }
 
-function change_soul(old_soul, px, py, type, send_data) {
+function change_soul(old_soul, px, py, type) {
 	if (old_soul.color_type == type) return old_soul;
 	
 	instance_destroy(old_soul);
