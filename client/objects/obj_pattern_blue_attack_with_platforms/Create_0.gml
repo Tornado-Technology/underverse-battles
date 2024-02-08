@@ -31,6 +31,9 @@ update = function() {
 	character_instance.change_sprite_hand_dir(side);
 	
 	var warning_scale = 5;
+	if (!use_gravity_attack) {
+		warning_scale = 7.5;
+	}
 	draw_warning(side, warning_scale);
 	
 	var i = 0;
@@ -53,7 +56,7 @@ update_up = function() {
 	repeat(array_length(bone_instances)) {
 		var bone_scale = 3;
 		if (!use_gravity_attack) {
-			bone_scale = 3.5;
+			bone_scale = 3.8;
 		}
 		bone_instances[i].change_scale(bone_scale, 0.2);
 		++i;
