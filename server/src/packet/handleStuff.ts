@@ -415,6 +415,12 @@ export const handlePacket = async (client: Client, data: any) => {
       }
       break;
 
+    case 'fightSpecialActionAddCharge':
+      {
+        client.fight.instance?.addSpecialActionCharge(client, data.charge);
+      }
+      break;
+
     case 'fightStun':
       if (client.fight.instance.state === fightState.battle) {
         client.fight.instance.getOtherClient(client)?.sendFightStun(target.opponent);

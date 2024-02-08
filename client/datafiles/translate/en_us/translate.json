@@ -545,8 +545,8 @@
         "Name": "Gasterblasters",
         "Description": "Firing damaging gasterblasters" },
       "SpecialAttack": {
-        "Name": "Bone veil",
-        "Description": "The bones cover the arena completely, moving in all directions. In addition, small bones targeting the soul" }
+        "Name": "Bone barrage",
+        "Description": "Full-wide bones moving in and out, in addition to smaller bones aiming the soul" }
     },
     "SwapPapyrus": {
       "Name": "Swap Papyrus",
@@ -613,8 +613,8 @@
       "Description": "The unstable child",
       "Bio": "A child from the XTale Universe who managed to survive in a monster body after genocide and destruction of his Universe. Due to his soul having been taken by Error Sans, he had to seek a replacement to it, so in searches, he made his way to the Original Universe as the only place he could reach. X!Chara is strong-willed and confident, although with occasional rage breakdowns. He loves chocolate.",
       "PassiveSkill": {
-        "Name": "Magical surge",
-        "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
+        "Name": "Magic burst",
+        "Description": "When under 20 HP, dodging an attack grants XChara +10 magic and +10% special attack charge" },
       "Attack0": {
         "Name": "Knives",
         "Description": "Damaging knives targeting the soul" },
@@ -633,8 +633,8 @@
       "Description": "The code editor",
       "Bio": "Outcode and non-multiverse editor that roams the worlds in search of inspiration. He is the creation of Error 404. He was created to eliminate buggy anomalies by having the ability to edit code. He independently created the most secure timeline that thrives to this day. Due to one incident during creation, his soul was twisted into a non-standard form, and Green himself gained a one-of-a-kind editing power, which he developed over time. He knows perfectly well what is in the game and sees all the players that control the characters. Unlike the others, he is not her prisoner, because he himself often comes here to challenge the players.",
       "PassiveSkill": {
-        "Name": "Two types of damage",
-        "Description": "Green can deal 1 damage with karma and 5 damage without karma" },
+        "Name": "Editable damage",
+        "Description": "Green can choose between dealing 1 karmic damage or 5 non-karmic damage" },
       "Attack0": {
         "Name": "Bones and spikes",
         "Description": "Bones and spikes targeting the soul and dealing damage on impact" },
@@ -721,7 +721,9 @@
     "Magenta": "Magenta",
     "Hallowtide": "Hallowtide",
     "Steampunk": "Steampunk",
-	  "Garland": "Garland"
+	  "Garland": "Garland",
+    "AntiPiracy": "Anti piracy",
+    "NoTextures": "No textures"
   },
   "Battle": {
     "Target": "Target",

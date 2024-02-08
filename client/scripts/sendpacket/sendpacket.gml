@@ -184,6 +184,13 @@ function send_fight_mana(mana) {
 	});
 }
 
+// @param {Real} charge
+function send_fight_special_action_add_charge(charge) {
+    send("fightSpecialActionAddCharge", {
+		charge: charge,
+	});
+}
+
 function send_fight_stun() {
 	send("fightStun");
 }

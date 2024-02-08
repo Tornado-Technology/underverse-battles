@@ -259,9 +259,7 @@ packet_handler_register("fightHp", function(data) {
 });
 
 packet_handler_register("battleEnd", function(data) {
-	statistics_set_damage(data.damage);
 	fight_set_state(fight_state.reset);
-	
 	logger.info("Battle finished");
 });
 
