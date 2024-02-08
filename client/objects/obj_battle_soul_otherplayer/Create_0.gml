@@ -6,3 +6,6 @@ is_otherplayer_soul = true;
 
 next_x = x;
 next_y = y;
+
+change_gravity_force = function() {};
+change_direction = function() {};

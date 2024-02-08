@@ -16,7 +16,7 @@ update = function() {
 	var dist_ = 120;
 	var rX = border_instance.x - dist_ * cos(_side * pi / 180);
 	var rY = border_instance.y - dist_ * sin(_side * pi / 180);
-	create_battle_object(rX, rY, 0, knife, {
+	instance_create_depth(rX, rY, 0, knife, {
 		image_alpha: 0,
 		_target_angle: point_direction(rX, rY, border_instance.x, border_instance.y),
 	});

@@ -19,9 +19,9 @@ callback = function () {
 
 	var bone_scale = 9.4;
 	bone_instances[0] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 45, -45, 0, 1);
-	scale_bone(bone_instances[0], 0, bone_scale, 0.1, 1);
+	bone_instances[0].change_scale(bone_scale, 0.1);
 	bone_instances[1] = create_spinning_bone(border_instance.x, border_instance.y, bone_spinning, 0, 0, 135, 45, 0, 1);
-	scale_bone(bone_instances[1], 1, bone_scale, 0.1, 1);
+	bone_instances[1].change_scale(bone_scale, 0.1);
 	audio_play_sound_once(snd_spare_up);
 
 	time_source_start(time_source_update_3_0);
@@ -29,8 +29,8 @@ callback = function () {
 
 update_3_0 = function() {
 	var bone_angle_speed = choose(1, -1);
-	change_angle_speed_spinning_bone(bone_instances[0], 0, bone_angle_speed, false, 1);
-	change_angle_speed_spinning_bone(bone_instances[1], 1, bone_angle_speed, false, 1);
+	bone_instances[0].angle_speed = bone_angle_speed;
+	bone_instances[1].angle_speed = bone_angle_speed;
 }
 	
 update_3_1 = function() {
@@ -39,24 +39,25 @@ update_3_1 = function() {
 	
 update_3_2 = function() {
 	var rand_side = rand_side_from(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 15, border_instance.x + border_instance.right + 15, border_instance.y + border_instance.down + 15);
+	var object_direction = point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y);
 	
 	if (variable_instance_exists(id, "bone")) {
-		var bone_dir = point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y);
 		var bone_speed = 2.2;
-		create_bone(rand_side[0], rand_side[1], bone, bone_speed, 1, bone_dir, bone_dir - 90);
+		create_bone(rand_side[0], rand_side[1], bone, bone_speed, 1, object_direction, object_direction - 90);
 	}
 	if (variable_instance_exists(id, "knife")) {
-		create_battle_object(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife, {
-			_target_angle: point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y),
-			image_alpha: 0
+		var knife_instance = instance_create_depth(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife);
+		instance_create_depth(rand_side[0], rand_side[1], fight_depth.bullet_outside, knife, {
+			image_alpha: 0,
+			_target_angle: object_direction
 		});
 	}
 	audio_play_sound_plugging(snd_projectile);
 }
 	
 update_3_3 = function() {
-	scale_bone(bone_instances[0], 0, 0, 0.1, 1);
-	scale_bone(bone_instances[1], 1, 0, 0.1, 1);
+	bone_instances[0].change_scale(0, 0.1);
+	bone_instances[1].change_scale(0, 0.1);
 }
 
 time_source_update_3_0 = time_source_create(time_source_game, 1, time_source_units_seconds, function () {

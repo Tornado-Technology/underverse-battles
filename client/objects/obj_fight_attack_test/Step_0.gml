@@ -2,6 +2,7 @@
 if (keyboard_check_pressed(vk_f1)) {
 	if (selected_character == 0) exit;
 	selected_character--;
+	selected_skin = 0;
 	instance_destroy(player[0]);
 	player_object[0] = global.characters[selected_character, 0].object;
 	player[0] = instance_create_depth(center_player_position_x[0], center_player_position_y[0], fight_depth.player, player_object[0]);
@@ -11,6 +12,7 @@ if (keyboard_check_pressed(vk_f1)) {
 if (keyboard_check_pressed(vk_f2)) {
 	if (selected_character == array_length(global.characters) - 1) exit;
 	selected_character++;
+	selected_skin = 0;
 	instance_destroy(player[0]);
 	player_object[0] = global.characters[selected_character, 0].object;
 	player[0] = instance_create_depth(center_player_position_x[0], center_player_position_y[0], fight_depth.player, player_object[0]);
@@ -39,13 +41,33 @@ if (keyboard_check_pressed(vk_f4)) {
 }
 
 // Change FPS
-if (keyboard_check_pressed(vk_numpad2)) {
+if (keyboard_check_pressed(vk_f5)) {
 	if (room_speed > room_speed_delta)
 		room_speed -= room_speed_delta;
 }
-if (keyboard_check_pressed(vk_numpad8)) {
+if (keyboard_check_pressed(vk_f6)) {
 	if (room_speed < 60)
 		room_speed += room_speed_delta;
+}
+
+// Change attack type
+if (keyboard_check_pressed(vk_numpad0)) {
+	type = 0;
+}
+if (keyboard_check_pressed(vk_numpad1)) {
+	type = 1;
+}
+if (keyboard_check_pressed(vk_numpad2)) {
+	type = 2;
+}
+if (keyboard_check_pressed(vk_numpad3)) {
+	type = 3;
+}
+if (keyboard_check_pressed(vk_numpad4)) {
+	type = 4;
+}
+if (keyboard_check_pressed(vk_numpad5)) {
+	type = 5;
 }
 
 // Exit

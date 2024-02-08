@@ -232,114 +232,10 @@ packet_handler_register("fightSoul", function(data) {
 
 packet_handler_register("battleStart", function(data) {
 	// Send obj_fight this info
+	random_set_seed(data.seed);
+	
 	fight_set_state(fight_state.battle);
-	instance_create(obj_network_fight_object_storage);
 	logger.info("Battle begins");
-});
-
-packet_handler_register("battleCreateBorder", function(data) {
-	battle_border_create(data.up, data.down, data.left, data.right);
-});
-
-packet_handler_register("battleCreateSoul", function(data) {
-	create_other_player_soul(data.x, data.y, data.type);
-});
-
-packet_handler_register("battleCreateObject", function(data) {
-	switch (data.objectType) {
-		case 0:
-			global.network_fight_object_storage.push(data.storageIndex, create_drop(data.x, data.y, data.object, data.speed, data.direction, data.useGravity, data.storageIndex, false));
-			break;
-		case 1:
-			global.network_fight_object_storage.push(data.storageIndex, create_broomie(data.x, data.y, data.object, data.direction, data.side, data.angleSpeed, data.maxAcceleration, data.storageIndex, false));
-			break;
-		case 2:
-			global.network_fight_object_storage.push(data.storageIndex, create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.storageIndex, false));
-			break;
-		case 3:
-			global.network_fight_object_storage.push(data.storageIndex, create_falling_bone(data.x, data.y, data.object, data.angle, data.direction, data.scale, data.acceleration, data.storageIndex, false));
-			break;
-		case 4:
-			global.network_fight_object_storage.push(data.storageIndex, create_poking_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.storageIndex, false));
-			break;
-		case 5:
-			global.network_fight_object_storage.push(data.storageIndex, create_spinning_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.angleSpeed, data.storageIndex, false));
-			break;
-		case 6:
-			global.network_fight_object_storage.push(data.storageIndex, create_solo_moving_platform(data.x, data.y, data.scale, data.speed, data.leftStation, data.rightStation, data.storageIndex, false));
-			break;
-		case 7:
-			global.network_fight_object_storage.push(data.storageIndex, create_moving_platforms(data.x, data.y, data.count, data.scale, data.distance, data.speed, data.storageIndex, false));
-			break;
-		case 8:
-			global.network_fight_object_storage.push(data.storageIndex, create_next_moving_platform(data.x, data.y, data.count, data.scale, data.distance, data.speed, data.storageIndex, false));
-			break;
-		case 9:
-			global.network_fight_object_storage.push(data.storageIndex, create_gasterblaster(data.object, data.x, data.y, data.targetX, data.targetY, data.angle, data.flyTime, data.chargeTime, data.flyoutTime, data.destroyTime, data.storageIndex, false));
-			break;
-		case 10:
-			global.network_fight_object_storage.push(data.storageIndex, create_solo_gasterblaster(data.x, data.y, data.object, data.targetTime, data.chargeTime, data.destroyTime, data.storageIndex, false));
-			break;
-		case 11:
-			global.network_fight_object_storage.push(data.storageIndex, create_error_string(data.x, data.y, data.object, data.targetX, data.targetY, data.scaleSpeed, data.storageIndex, false));
-			break;
-		case 12:
-			global.network_fight_object_storage.push(data.storageIndex, create_knife_swing(data.x, data.y, data.object, data.angle, data.distance, data.storageIndex, false));
-			break;
-		case 13:
-			global.network_fight_object_storage.push(data.storageIndex, create_big_knife_x(data.x, data.y, data.object, data.direction, data.angle, data.pointStopX, data.storageIndex, false));
-			break;
-		case 14:
-			global.network_fight_object_storage.push(data.storageIndex, create_big_knife_y(data.x, data.y, data.object, data.direction, data.angle, data.pointStopY, data.storageIndex, false));
-			break;
-		case 15:
-			global.network_fight_object_storage.push(data.storageIndex, create_damage_wave(data.x, data.y, data.object, data.angle, data.speed, data.storageIndex, false));
-			break;
-		case 16:
-			global.network_fight_object_storage.push(data.storageIndex, create_spike(data.x, data.y, data.object, data.speed, data.direction, data.storageIndex, false));
-			break;
-		default:
-			global.network_fight_object_storage.push(data.storageIndex, create_battle_object(data.x, data.y, data.depth, data.object, data.varStruct, data.storageIndex, false));
-			break;
-	}
-});
-
-packet_handler_register("battleReplaceObject", function(data) {
-	switch (data.objectType) {
-		case 2:
-			global.network_fight_object_storage.replace(data.storageIndex, create_bone(data.x, data.y, data.object, data.speed, data.size, data.direction, data.angle, data.storageIndex, false), data.number);
-			break;
-	}
-});
-
-packet_handler_register("battleChangeObjectData", function(data) {
-	switch (data.objectType) {
-		case 2:
-			if (data.eventName == 0) move_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.speed, data.direction, data.storageIndex, false);
-			if (data.eventName == 1) scale_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.scale, data.scaleStep, data.storageIndex, false);
-			if (data.eventName == 2) shake_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
-		break;
-		case 5:
-			if (data.eventName == 0) change_angle_speed_spinning_bone(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.angleSpeed, data.isSmooth, data.storageIndex, false);
-		break;
-		case 10:
-			if (data.eventName == 0) change_solo_gasterblaster_position(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.newX, data.newY, data.storageIndex, false);
-			if (data.eventName == 1) change_solo_gasterblaster_target(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.target, data.storageIndex, false);
-		break;
-		case 13:
-			if (data.eventName == 0) set_big_knife_move(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.distance, data.storageIndex, false);
-			if (data.eventName == 1) set_big_knife_move_up(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.storageIndex, false);
-			if (data.eventName == 2) set_big_knife_spin(global.network_fight_object_storage.instances[data.storageIndex][? data.number], data.number, data.rotatingSpeed, data.storageIndex, false);
-		break;
-	}
-});
-
-packet_handler_register("battleDestroyObject", function(data) {
-	global.network_fight_object_storage.clear(data.storageIndex);
-});
-
-packet_handler_register("battleDestroyObjectByEdit", function(data) {
-	global.network_fight_object_storage.clear_by_edit(data.storageIndex, data.color, data.count, data.distance);
 });
 
 packet_handler_register("fightDodge", function(data) {
@@ -363,16 +259,10 @@ packet_handler_register("fightHp", function(data) {
 });
 
 packet_handler_register("battleEnd", function(data) {
-	logger.info("Battle finished");
-	
-	instance_destroy(global.network_fight_object_storage);
-	instance_destroy(obj_battle_soul);
-	instance_destroy(obj_battle_element);
-	battle_border_start_animation("Destroy");
-	
 	statistics_set_damage(data.damage);
-	
 	fight_set_state(fight_state.reset);
+	
+	logger.info("Battle finished");
 });
 
 packet_handler_register("fightMana", function(data) {

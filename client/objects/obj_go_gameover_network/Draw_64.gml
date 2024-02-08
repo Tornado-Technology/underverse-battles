@@ -8,7 +8,7 @@ draw_set_halign(fa_middle);
 draw_set_alpha(1);
 
 // End slpah
-draw_sprite(state == gameover.win ? spr_ui_victory : spr_ui_gameover, 0, gui_width / 2, gui_height / 5);
+draw_sprite(state == gameover.win ? spr_ui_victory : spr_ui_gameover, 0, gui_width / 2, gui_height / 5 - 8);
 
 // Buttons
 var local_wave = wave(2, -2, 1, 0);

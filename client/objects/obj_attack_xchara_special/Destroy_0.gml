@@ -1,1 +1,1 @@
-end_wave();
+instance_destroy(obj_battle);

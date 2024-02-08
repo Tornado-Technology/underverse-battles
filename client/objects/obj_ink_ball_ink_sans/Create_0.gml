@@ -1,7 +1,5 @@
 event_inherited();
 
-if (fight_get_initiative() == 0) exit;
-
 damage = get_char_damage(obj_character_ink_sans);
 
 amount = 96;

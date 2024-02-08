@@ -200,8 +200,10 @@ export default class SendStuff {
     this.send('fightExtraAction');
   }
 
-  public sendFightStartBattle(): void {
-    this.send('battleStart');
+  public sendFightStartBattle(seed: number): void {
+    this.send('battleStart', {
+      seed
+    });
   }
 
   public sendDataToClient(index: string, data: any): void {
