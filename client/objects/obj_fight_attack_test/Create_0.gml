@@ -15,3 +15,5 @@ player_object[0] = global.characters[0, 0].object;
 player_object[1] = obj_character;
 
 room_speed_delta = 10;
+
+type = 0;
