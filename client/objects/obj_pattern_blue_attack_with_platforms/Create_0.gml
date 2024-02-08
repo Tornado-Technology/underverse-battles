@@ -51,7 +51,11 @@ update = function() {
 update_up = function() {
 	var i = 0;
 	repeat(array_length(bone_instances)) {
-		bone_instances[i].change_scale(3, 0.2);
+		var bone_scale = 3;
+		if (!use_gravity_attack) {
+			bone_scale = 3.5;
+		}
+		bone_instances[i].change_scale(bone_scale, 0.2);
 		++i;
 	}
 	instance_destroy(obj_warning);
