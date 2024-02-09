@@ -1,3 +1,10 @@
+// Exit
+if (keyboard_check_pressed(vk_escape)) {
+	room_goto(room_menu);
+}
+
+if (instance_exists(obj_battle)) exit;
+
 // Change character
 if (keyboard_check_pressed(vk_f1)) {
 	if (selected_character == 0) exit;
@@ -68,9 +75,4 @@ if (keyboard_check_pressed(vk_numpad4)) {
 }
 if (keyboard_check_pressed(vk_numpad5)) {
 	type = 5;
-}
-
-// Exit
-if (keyboard_check_pressed(vk_escape)) {
-	room_goto(room_menu);
 }
