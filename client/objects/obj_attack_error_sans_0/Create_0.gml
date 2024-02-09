@@ -40,7 +40,7 @@ switch (type) {
 			bone: obj_bone_error_sans,
 			sides: [dir.left, dir.right],
 			is_aiming: false,
-			custom_bone_size: 2.2
+			custom_bone_size: 1.4
 		});
 		break;
 }

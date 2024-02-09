@@ -27,7 +27,7 @@ max_mana = 100;
 action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
-soul = spr_battle_soul;
+soul = spr_soul_error;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Classic");

@@ -29,8 +29,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Girlanda",
-    "path": "folders/Characteres/Swap Sans/Sprites/Char/Girlanda.yy",
+    "name": "Garland",
+    "path": "folders/Characteres/Swap Sans/Sprites/Char/Garland.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

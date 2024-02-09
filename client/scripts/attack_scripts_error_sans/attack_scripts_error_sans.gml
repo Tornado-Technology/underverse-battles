@@ -31,3 +31,37 @@ function error_sans_special_attack(player) {
 		character_instance: player
 	});
 }
+
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function error_sans_anti_piracy_attack0(_power, player) {
+	instance_create(obj_attack_error_sans_anti_piracy_0, {
+		character_instance: player,
+		_power: _power
+	});
+}
+
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function error_sans_anti_piracy_attack1(_power, player) {
+	instance_create(obj_attack_error_sans_anti_piracy_1, {
+		character_instance: player,
+		_power: _power
+	});
+}
+
+/// @param {Real} _power
+/// @param {Id.Instance} player
+function error_sans_anti_piracy_attack2(_power, player) {
+	instance_create(obj_attack_error_sans_anti_piracy_2, {
+		character_instance: player,
+		_power: _power
+	});
+}
+
+/// @param {Id.Instance} player
+function error_sans_anti_piracy_special_attack(player) {
+	instance_create(obj_attack_error_sans_anti_piracy_special, {
+		character_instance: player
+	});
+}

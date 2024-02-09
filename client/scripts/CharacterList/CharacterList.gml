@@ -50,6 +50,7 @@ function CharacterList() {
 			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
 			new Character(obj_character_error_sans_new_clothes, "ErrorSans", "NewClothes", spr_error_sans_new_clothes_frame),
 			new Character(obj_character_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame),
+			new Character(obj_character_error_sans_anti_piracy, "ErrorSans", "AntiPiracy", spr_error_sans_anti_piracy_frame),
 		],
 		[
 			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
@@ -64,7 +65,8 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
-			new Character(obj_character_swap_sans_garland, "SwapSans", "Garland", spr_swap_sans_garland_frame)
+			new Character(obj_character_swap_sans_garland, "SwapSans", "Garland", spr_swap_sans_garland_frame),
+			new Character(obj_character_swap_sans_voodoo_doll, "SwapSans", "VoodooDoll", spr_swap_sans_voodoo_doll_frame)
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),

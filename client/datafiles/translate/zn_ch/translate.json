@@ -545,8 +545,8 @@
         "Name": "Gasterblasters",
         "Description": "发射具有破坏性的Gasterblasters" },
       "SpecialAttack": {
-        "Name": "Bone veil",
-        "Description": "骨头攻击将场地完全包围住，\n并朝各方向移动。此外，小的骨头会对准灵魂" }
+        "Name": "骨刺攻击",
+        "Description": "全宽的骨头进进出出，&还有更小的骨头瞄准灵魂" }
     },
     "SwapPapyrus": {
       "Name": "Swap Papyrus",
@@ -613,8 +613,8 @@
       "Description": "不稳定的小孩(各种意义上)",
       "Bio": "一个来自XTale宇宙的孩子，在屠杀线导致他的宇宙被\n摧毁后，他成功地在一个怪物的身体里存活了下来。由于他的灵魂已经被Error Sans带走，\n他不得不寻找它的替代品，所以在寻找的\n过程中，他来到了主宇宙，作为他唯一能到达的地方。X!Chara意志坚强，自信，尽管偶尔会\n出现愤怒情绪崩溃的情况，喜欢巧克力。",
       "PassiveSkill": {
-        "Name": "魔力激增",
-        "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
+        "Name": "魔力爆发",
+        "Description": "低于20 HP时, 躲避攻击可给XChara\n+10 魔力值 和 +10% 特殊攻击蓄力加成" },
       "Attack0": {
         "Name": "刀子",
         "Description": "以灵魂为目标的\n具有破坏性的刀子" },
@@ -633,8 +633,8 @@
       "Description": "代码编辑者",
       "Bio": "外码和非多元宇宙的编辑者，时常漫游于世界中，这是为了寻找灵感。\n他是错误404的创造者。他创造错误404以拥有编辑代码的能力，然后消除一些错误异常\n他自己创造了最安全的时间线，其历史一直延续至今。\n由于创造过程中的一次意外，他的灵魂被扭曲成了一种奇怪的模样，\n而随着时间的推移，Green获得了一种独一无二的“编辑能力”。\n他对游戏中的内容运筹帷幄，能看见操控着一个个角色的所有玩家，\n与其他人不同，他经常直接挑战玩家，这也使得他不再是“她”的囚犯。",
       "PassiveSkill": {
-        "Name": "双类型伤害",
-        "Description": "Green可造成1点业报伤害\n和5点真实伤害" },
+        "Name": "伤害控制",
+        "Description": "Green可选择造成1次kr伤害\n或5次非kr伤害" },
       "Attack0": {
         "Name": "骨刺",
         "Description": "以灵魂为目标发射骨刺，\n受击时造成伤害" },
@@ -721,7 +721,9 @@
     "Magenta": "品红",
     "Hallowtide": "万圣节",
     "Steampunk": "蒸汽朋克",
-    "Garland": "圣诞花环"
+    "Garland": "圣诞花环",
+    "AntiPiracy": "反盗版",
+    "NoTextures": "无纹理"
   },
   "Battle": {
     "Target": "目标",
@@ -778,7 +780,7 @@
         "{Ink:normal}Sans，站在我身后。我会尽量快一点。"
       ],
       "Dialog4": [
-        "{Ink:normal}你好，玩家。欢迎来到Underverse Battles。",
+        "{Ink:normal}你好，玩家。\n欢迎来到Underverse Battles。",
         "{Ink:normal}现在我将会教你如何在这个游戏中战斗。",
         "{Ink:normal}看到上面那些条了吗？",
         "{Ink:normal}红条是HP，白条是体力，蓝色是魔力值。",
@@ -850,7 +852,7 @@
 				"{Sans:tired}拜托，把我的灵魂还我。",
 				"{Sans:tired}我相信这位艺术家会帮你的。",
 				"{Ink:calm}Chara，Cross，我们回家吧。\n我们会找到更好的方法的...",
-				"{C:secretive}我只是不想死...我只是...我需要...",
+				"{C:secretive}我只是不想死...\n我只是...\n我需要...",
 				"{C:satisfied}我 们 需 要 我 们 自 己 的 平 行 宇 宙 ！",
 				"{Ink:surprised}不，等等！",
 				"{Ink:confused}糟透了...",
@@ -860,15 +862,15 @@
     "Underverse_Episode2": {
       "Dialog1": [
         "{Sans:tired}所以...你叫Ink，对吧？",
-        "{Ink:combat}...是的。认识你是我的荣幸。"
+        "{Ink:combat}...是的。\n认识你是我的荣幸。"
       ],
       "Dialog2": [
-        "{Ink:calm}我-我很抱歉，Sans，我没想到竟会发生这种事...",
-        "{Sans:tired}没事的伙计，我还没死翘翘...至少现在还没。",
+        "{Ink:calm}我-我很抱歉，Sans，\n我没想到竟会发生这种事...",
+        "{Sans:tired}没事的伙计，我还没死翘翘...\n至少现在还没。",
         "{Sans:tired}我不该在这睡觉了。",
         "{Sans:tired}看起来那家伙喜欢到处惹事呢。",
         "{Ink:calm}其实，这是他第一次这样做。",
-        "{Ink:calm}从那以后他就害怕了...这...说来话长..."
+        "{Ink:calm}从那以后他就害怕了...\n这...\n说来话长..."
       ],
       "Choise1": [
         "画家版本的Sans想和某人说话。",
@@ -876,46 +878,46 @@
         "没门。快离开这里"
       ],
       "Dialog3_Line1": [
-        "{Sans:normal}嗯...我兄弟和其他人20分钟后就到了，所以我想我们可以谈上那么--"
+        "{Sans:normal}嗯...我兄弟和其他人20分钟后就到了，\n所以我想我们可以谈上那么--"
       ],
       "Dialog4_Line1": [
-				"{Ink:glad}你想知道更多关于C的事吗！？太棒辣！！",
+				"{Ink:glad}你想知道更多关于C的事吗！？\n太棒辣！！",
 				"{Ink:normal}噢！抱歉失礼了，呵呵...",
-				"{Ink:normal}好吧...这一切都始于遥远宇宙中的一个小水滴..."
+				"{Ink:normal}好吧...\n这一切都始于遥远宇宙中的一个小水滴..."
       ],
       "Dialog5_Line1": [
-        "{Ink:none}一切似乎都是一如往常。你的宇宙和现存的数千种变体仍然和平地持续着。",
-        "{Ink:none}突然，我感觉到一个新宇宙的出现。它的存在非常强烈...",
+        "{Ink:none}一切似乎都是一如往常。\n你的宇宙和现存的数千种变体\n仍然和平地持续着。",
+        "{Ink:none}突然，我感觉到一个新宇宙的出现。\n它的存在非常强烈...",
         "{Ink:none}...尽管有滴水声。",
-        "{Ink:none}我抑制不住自己的兴奋，于是我决定去那里。"
+        "{Ink:none}我抑制不住自己的兴奋，\n于是我决定去那里。"
       ],
       "Dialog6_Line1": [
 				"{Ink:none}我渴望见到这个新世界及其居民...",
 				"{Ink:none}...但除了一个人，什么都没有。",
-				"{Ink:none}没想到的是...那几滴其实是他的眼泪。",
-				"{Ink:none}他非常害怕。脑子里充满了恐惧。",
-				"{Ink:none}他注意到还有其他人...也就是我。",
-				"{Ink:none}然而，很快我们就打破僵局，他告诉了我他的名字。"
+				"{Ink:none}没想到的是...\n那几滴其实是他的眼泪。",
+				"{Ink:none}他非常害怕。\n脑子里充满了恐惧。",
+				"{Ink:none}他注意到还有其他人...\n也就是我。",
+				"{Ink:none}不过，很快我们就打破了僵局，\n他告诉了我他的名字。"
       ],
       "Dialog7_Line1": [
-        "{Ink:none}他自称Cross，唯一一个没有重置可能性的灭族路线幸存者。"
+        "{Ink:none}他自称Cross，唯一一个没有\n重置可能性的灭族路线幸存者。"
       ],
       "Dialog8_Line1": [
-        "{Sans:confused}等一下下...如果他在屠杀时间线中，导致这场屠杀的人在哪里？",
-        "{Ink:calm}Chara封在他体内。怎么做到的？他从没告诉我过...",
+        "{Sans:confused}等一下下...\n如果他在屠杀时间线中，\n导致这场屠杀的人在哪里？",
+        "{Ink:calm}Chara封在他体内。\n怎么做到的？他从没告诉我过...",
         "{Ink:calm}起初，他们是两个独立的人。",
-        "{Ink:calm}然而，当我拜访Cross，和他画画时，他赢得了对两个灵魂的完全控制。"
+        "{Ink:calm}然而，当我拜访Cross，和他画画时，\n他赢得了对两个灵魂的完全控制。"
       ],
       "Dialog9_Line1": [
         "{Ink:none}一天，在画画的时候，他站了起来。",
         "{Ink:none}他看起来很沮丧。"
       ],
       "Dialog10_Line1": [
-        "{Ink:none}他告诉我，他的世界里出现了一个陌生的孩子，并试图说服他和其他像他一样的幸存者一起去一个地方。"
+        "{Ink:none}他告诉我，他的世界里出现了一个\n陌生的孩子，并试图说服他和其他像他一样的\n幸存者一起去一个地方。"
       ],
       "Dialog11_Line2": [
         "{Ink:calm}他拒绝了，因为他确信自己的世界还活着。",
-        "{Ink:calm}Cross认为他可以在我的帮助下可以完好如初。",
+        "{Ink:calm}Cross认为他可以在我的帮助下\n可以完好如初。",
         "{Ink:calm}但当我告诉他死者不能复生时...",
         "{Ink:emotionless}他的脸上..."
       ],
@@ -927,11 +929,11 @@
         "{Sans:none}呼，所以那家伙怎么了？"
       ],
       "Dialog3_Line2": [
-				"{Sans:tired}听着，你最好得走了。我对你的小丑表演不感兴趣。",
-				"{Ink:surprised}但是Sans...你一半灵魂都被偷走了。",
-				"{Sans:tired}我会活下来的。自己做好该做的事。",
-				"{Ink:calm}好我懂了。毕竟这是我的弱点嘛。",
-				"{Ink:combat}别担心，Sans。我会尽我所能找回你的一半灵魂的。"
+				"{Sans:tired}听着，你最好得走了。\n我对你的小丑表演不感兴趣。",
+				"{Ink:surprised}但是Sans...\n你一半灵魂都被偷走了。",
+				"{Sans:tired}我会活下来的。\n自己做好该做的事。",
+				"{Ink:calm}好我懂了。\n毕竟这是我的弱点嘛。",
+				"{Ink:combat}别担心，Sans。\n我会尽我所能找回你的一半灵魂的。"
       ],
       "Dialog4_Line2": [
         "{Ink:combat}呃...祝好运。"
@@ -941,12 +943,12 @@
         "{Sans:tired}好了，是时候走了。"
       ],
       "Dialog14": [
-        "{Ink:calm}C，拜托！你知道我不能创造一个新的世界...你还好吗？",
+        "{Ink:calm}C，拜托！\n你知道我不能创造一个新的世界...\n你还好吗？",
         "{CrossXEvent:angry}离我远点！"
       ],
       "Dialog15": [
-        "{Ink:combat}好吧...我会离开，C...不要伤心...因为...",
-        "{Ink:combat}你就像我兄弟...我不想让我兄弟伤心。"
+        "{Ink:combat}好吧...我会离开，\nC...不要伤心...因为...",
+        "{Ink:combat}你就像我兄弟...\n我不想让我兄弟伤心。"
       ],
       "Dialog16": [
         "{CrossXEvent:normal}Ink? 是你吗？"
@@ -956,7 +958,7 @@
         "{Error:normal}这有点自私，知道吗？"
       ],
       "Dialog18": [
-				"{Error:normal}Ink... Ink...你为什么要保护这个古怪东西？",
+				"{Error:normal}Ink... Ink...\n你为什么要保护这个古怪东西？",
 				"{Error:normal}你知道你不能再帮助他们了。",
 				"{Error:normal}这次让我给他一个快乐的结局吧。",
 				"{Ink:angry}不！这不是你的工作！",
@@ -968,20 +970,20 @@
         "{Ink:combat}我不会让你为所欲为的！"
       ],
       "TakeDamage": [
-        "{Error:angry}嘿，你，玩家！不要再用你的心去抓墨水了!",
-        "{Error:angry}如果你不能正确地躲避，那就按住[Shift]键，慢点移动。"
+        "{Error:angry}嘿，你，玩家！\n不要再用你的心去抓墨水了!",
+        "{Error:angry}如果你不能好好躲开，\n那就按住[Shift]键，慢点移动。"
       ],
       "TakeDamageMobile": [
-        "{Error:angry}嘿，你，玩家！不要再用你的心去抓墨水了!",
-        "{Error:angry}如果你不能正确地躲避，那么就按下主动能力按钮，使其移动速度变慢。"
+        "{Error:angry}嘿，你，玩家！\n不要再用你的心去抓墨水了!",
+        "{Error:angry}如果你不能好好躲开，\n那么就按下主动能力按钮，\n让其移动速度变慢。"
       ],
       "DontTakeDamage": [
         "{Error:normal}躲的好，玩家。",
-        "{Error:normal}如果你需要慢点移动，那就按住[Shift]键。"
+        "{Error:normal}如果你需要慢点移动，\n那就按住[Shift]键。"
       ],
       "DontTakeDamageMobile": [
         "{Error:normal}躲的好，玩家。",
-        "{Error:normal}如果你需要慢点移动，那就按住主动能力按钮。"
+        "{Error:normal}如果你需要慢点移动，\n那就按住主动能力按钮。"
       ],
       "Dialog20": [
         "{Error:normal}可恶，Ink擅长躲开我的攻击。",
