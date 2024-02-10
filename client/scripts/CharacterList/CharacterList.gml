@@ -51,6 +51,7 @@ function CharacterList() {
 			new Character(obj_character_error_sans_new_clothes, "ErrorSans", "NewClothes", spr_error_sans_new_clothes_frame),
 			new Character(obj_character_error_sans_lord, "ErrorSans", "Lord", spr_error_sans_lord_frame),
 			new Character(obj_character_error_sans_anti_piracy, "ErrorSans", "AntiPiracy", spr_error_sans_anti_piracy_frame),
+			new Character(obj_character_error_sans_no_textures, "ErrorSans", "NoTextures", spr_error_sans_no_textures_frame),
 		],
 		[
 			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
