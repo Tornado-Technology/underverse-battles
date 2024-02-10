@@ -4,6 +4,8 @@
   "name": "obj_character_nightmare",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -31,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_sans_after_battle",
-    "path": "sprites/spr_sans_after_battle/spr_sans_after_battle.yy",
+    "name": "spr_nightmaer_idle",
+    "path": "sprites/spr_nightmaer_idle/spr_nightmaer_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
