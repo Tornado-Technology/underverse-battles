@@ -34,9 +34,18 @@ skin_name = translate_get("CharactersStyles.Classic");
 frame = spr_sans_frame;
 
 // Animations
-idle_animation = spr_char_sans_idle;
-after_battle_animation = spr_sans_after_battle;
-defeated_animation = spr_char_sans_defeated;
+idle_animation = spr_dream_Idle;
+after_battle_animation = spr_dream_Idle;
+defeated_animation = spr_dream_defeated;
+fight_0_start_animation = spr_dream_starrod_start;
+fight_0_idle_animation = spr_dream_starrod_idle;
+fight_0_finish_animation = spr_dream_starrod_finish;
+fight_1_start_animation = spr_dream_blades_start;
+fight_1_idle_animation = spr_dream_blades_idle;
+fight_1_finish_animation = spr_dream_blades_finish;
+fight_2_start_animation = spr_dream_bow_start;
+fight_2_idle_animation = spr_dream_bow_idle;
+fight_2_finish_animation = spr_dream_bow_finish;
 
 // Actions
 passive_skill = PassiveSkill("Character.Dream.PassiveSkill");
@@ -45,7 +54,7 @@ actions = [
 	Action("Character.Dream.Attack1", call_attack_dream_1),
 	Action("Character.Dream.Attack2", call_attack_dream_2)
 ];
-special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);
+special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, error_sans_special_attack);
 
 on_battle_end = function(damage) {
 	if (damage == 0) {

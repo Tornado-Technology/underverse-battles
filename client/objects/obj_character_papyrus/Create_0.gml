@@ -29,6 +29,13 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 //Soul
 soul = spr_battle_soul;
 
+idle_animation = spr_papyrus_idle;
+after_battle_animation = spr_swap_sans_idle;
+defeated_animation = spr_papyrus_idle;
+fight_0_start_animation = spr_paperus_start0;
+fight_0_idle_animation = spr_papyrus_fight0;
+fight_0_finish_animation = spr_papyrus_end0;
+
 // Skin
 skin_name = translate_get("CharactersStyles.Classic");
 frame = spr_sans_frame;
