@@ -663,7 +663,7 @@ on_goto_page = function() {
 }
 
 translate_update = on_translate_update.connect(function() {
-	anykey_text = translate_get("Menu.PressAnyKey");
+	anykey_text.set_text(translate_get("Menu.PressAnyKey"));
 	
 	//title_text.translate_update();
 	
