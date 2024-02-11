@@ -58,6 +58,7 @@ credits = [
 	"CrazyBanka",
 	"AltRA",
 	"Studiet_hero",
+	"izver",
 	"",
 	$"[yellow]{translate_get("Credits.YouTubers")}",
 	"ReStart",
