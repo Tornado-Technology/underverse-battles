@@ -1,0 +1,1 @@
+camera_set_overwrite_position(0, 0);
