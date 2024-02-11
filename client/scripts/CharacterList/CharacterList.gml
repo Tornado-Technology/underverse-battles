@@ -83,7 +83,8 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
-			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame)
+			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
+			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame)
 		],
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
