@@ -5,6 +5,7 @@
   "ConfigValues": {
     "Mobile": {"option_windows_borderless":"true",},
     "Localserver": {"option_windows_version":"2.1.4.0",},
+    "Development": {"option_windows_version":"2.1.5.0","option_windows_borderless":"true",},
   },
   "option_windows_allow_fullscreen_switching": false,
   "option_windows_borderless": false,

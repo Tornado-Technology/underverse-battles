@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Ink Sans/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_battle_pusher",

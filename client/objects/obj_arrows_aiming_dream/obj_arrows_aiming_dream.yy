@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Dream/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Dream/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_arrows_dream",

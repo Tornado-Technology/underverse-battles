@@ -34,12 +34,12 @@ skin_name = translate_get("CharactersStyles.Classic");
 frame = spr_sans_frame;
 
 // Animations
-idle_animation = spr_dream_Idle;
-after_battle_animation = spr_dream_Idle;
+idle_animation = spr_dream_idle;
+after_battle_animation = spr_dream_idle;
 defeated_animation = spr_dream_defeated;
-fight_0_start_animation = spr_dream_starrod_start;
-fight_0_idle_animation = spr_dream_starrod_idle;
-fight_0_finish_animation = spr_dream_starrod_finish;
+fight_0_start_animation = spr_dream_star_rod_start;
+fight_0_idle_animation = spr_dream_star_rod_idle;
+fight_0_finish_animation = spr_dream_star_rod_finish;
 fight_1_start_animation = spr_dream_blades_start;
 fight_1_idle_animation = spr_dream_blades_idle;
 fight_1_finish_animation = spr_dream_blades_finish;

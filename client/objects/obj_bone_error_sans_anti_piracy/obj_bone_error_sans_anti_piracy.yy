@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Error Sans/Attaks/Anti Piracy/Bullets.yy",
+    "name": "Anti Piracy",
+    "path": "folders/Characteres/Error Sans/Bullets/Anti Piracy.yy",
   },
   "parentObjectId": {
     "name": "obj_bone_error_sans",

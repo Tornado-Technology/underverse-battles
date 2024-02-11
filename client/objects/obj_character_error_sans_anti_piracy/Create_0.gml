@@ -1,4 +1,8 @@
 event_inherited();
+
+// Soul
+soul = spr_soul_error_anti_piracy;
+
 //Skin
 skin_name = translate_get("CharactersStyles.AntiPiracy");
 frame = spr_error_sans_anti_piracy_frame;

@@ -2,6 +2,9 @@
   "resourceType": "GMMacOptions",
   "resourceVersion": "1.0",
   "name": "macOS",
+  "ConfigValues": {
+    "Development": {"option_mac_copyright":"© TornadoTeam, 2023","option_mac_team_id":"TornadoTeam","option_mac_output_dir":"~/undervesebattles","option_mac_build_number":"2010501","option_mac_version":"2.1.5","option_mac_display_name":"UnderverseBattles","option_mac_icon_png":"icons/1024.png","option_mac_splash_png":"splash/splash.png",},
+  },
   "option_mac_allow_fullscreen": false,
   "option_mac_allow_incoming_network": false,
   "option_mac_allow_outgoing_network": false,

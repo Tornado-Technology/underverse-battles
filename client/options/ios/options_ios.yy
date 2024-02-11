@@ -2,6 +2,9 @@
   "resourceType": "GMiOSOptions",
   "resourceVersion": "1.3",
   "name": "iOS",
+  "ConfigValues": {
+    "Development": {"option_ios_team_id":"Tornado Team","option_ios_output_dir":"~/underversebattles","option_ios_build_number":"2010501","option_ios_version":"2.1.5","option_ios_launchscreen_image_landscape":"splash/launchscreen-landscape.png","option_ios_launchscreen_image":"splash/launchscreen.png",},
+  },
   "option_ios_build_number": 0,
   "option_ios_bundle_name": "com.company.game",
   "option_ios_cocoapods_checkbox": true,

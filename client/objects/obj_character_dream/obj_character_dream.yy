@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_dream_Idle",
-    "path": "sprites/spr_dream_Idle/spr_dream_Idle.yy",
+    "name": "spr_dream_idle",
+    "path": "sprites/spr_dream_idle/spr_dream_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

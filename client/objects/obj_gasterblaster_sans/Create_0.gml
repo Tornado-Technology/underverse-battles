@@ -17,5 +17,9 @@ blast_instance = noone;
 
 is_shaked = false;
 
+// Sounds
+charge_sound = snd_gb_charge1;
+shot_sound = snd_gb_shot;
+
 // Time sources
 event_user(0);

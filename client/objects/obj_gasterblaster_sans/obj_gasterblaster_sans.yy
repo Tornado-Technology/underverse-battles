@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Sans/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Sans/Bullets.yy",
   },
   "parentObjectId": null,
   "persistent": false,

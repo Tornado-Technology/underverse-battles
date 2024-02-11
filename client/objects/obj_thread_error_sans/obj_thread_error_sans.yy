@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Error Sans/Attaks/Bullets.yy",
+    "path": "folders/Characteres/Error Sans/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_battle_stun",

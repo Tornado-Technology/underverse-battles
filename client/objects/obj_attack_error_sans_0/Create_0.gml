@@ -37,7 +37,7 @@ switch (type) {
 	case 4:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_flying_bones, {
-			bone: obj_bone_error_sans,
+			bone: obj_bone_topref_error_sans,
 			sides: [dir.left, dir.right],
 			is_aiming: false,
 			custom_bone_size: 1.4

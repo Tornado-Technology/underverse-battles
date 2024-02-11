@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Green/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Green/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_gb_blast_sans",

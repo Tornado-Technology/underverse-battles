@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Nightmare/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Nightmare/Bullets.yy",
   },
   "parentObjectId": null,
   "persistent": false,

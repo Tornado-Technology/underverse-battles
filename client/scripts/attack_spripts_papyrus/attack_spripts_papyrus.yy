@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Papyrus/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Papyrus/Bullets.yy",
   },
 }

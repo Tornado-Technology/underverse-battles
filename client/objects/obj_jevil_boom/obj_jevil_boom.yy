@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Jevil/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Jevil/Bullets.yy",
   },
   "parentObjectId": null,
   "persistent": false,

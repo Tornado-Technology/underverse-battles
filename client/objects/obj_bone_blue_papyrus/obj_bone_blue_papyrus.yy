@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Papyrus/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Papyrus/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_battle_blue_attack",

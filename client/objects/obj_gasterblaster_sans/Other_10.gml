@@ -1,8 +1,10 @@
 /// @description Time sources
 time_source_flying = time_source_create(time_source_game, fly_time, time_source_units_seconds, function () {
 	sprite_index = charge_sprite;
-	charge_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, charge_object);
-	audio_play_sound_plugging(snd_gb_charge1);
+	if (charge_object != noone) {
+		charge_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, charge_object);
+	}
+	audio_play_sound_plugging(charge_sound);
 	time_source_start(time_source_charging);
 });
 
@@ -15,7 +17,7 @@ time_source_charging = time_source_create(time_source_game, charge_time, time_so
 		is_shaked = true;
 		effect_shake(2, 0.3);
 	}
-	audio_play_sound_plugging(snd_gb_shot);
+	audio_play_sound_plugging(shot_sound);
 	time_source_start(time_source_flying_out);
 });
 

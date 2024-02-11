@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Cross/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Cross/Bullets.yy",
   },
   "parentObjectId": null,
   "persistent": false,

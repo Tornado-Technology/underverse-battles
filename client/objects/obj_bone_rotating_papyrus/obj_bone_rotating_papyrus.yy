@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Papyrus/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Papyrus/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_bone_rotating_swap_sans",
