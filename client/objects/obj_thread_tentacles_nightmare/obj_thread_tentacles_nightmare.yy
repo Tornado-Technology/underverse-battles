@@ -15,8 +15,8 @@
     "path": "folders/Characteres/Nightmare/Bullets.yy",
   },
   "parentObjectId": {
-    "name": "obj_battle_stun",
-    "path": "objects/obj_battle_stun/obj_battle_stun.yy",
+    "name": "obj_battle_bullet_stun",
+    "path": "objects/obj_battle_bullet_stun/obj_battle_bullet_stun.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
