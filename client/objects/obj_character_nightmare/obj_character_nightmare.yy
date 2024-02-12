@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_nightmaer_idle",
-    "path": "sprites/spr_nightmaer_idle/spr_nightmaer_idle.yy",
+    "name": "spr_nightmare_idle",
+    "path": "sprites/spr_nightmare_idle/spr_nightmare_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

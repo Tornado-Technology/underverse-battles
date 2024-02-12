@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_red_knife",
-    "path": "sprites/spr_red_knife/spr_red_knife.yy",
+    "name": "spr_arrows_dream",
+    "path": "sprites/spr_arrows_dream/spr_arrows_dream.yy",
   },
   "spriteMaskId": null,
   "visible": true,

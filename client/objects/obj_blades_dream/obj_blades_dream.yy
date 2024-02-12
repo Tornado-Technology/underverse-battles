@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bullets",
-    "path": "folders/Characteres/Dream/Attacks/Bullets.yy",
+    "path": "folders/Characteres/Dream/Bullets.yy",
   },
   "parentObjectId": {
     "name": "obj_big_knife_cross_event",

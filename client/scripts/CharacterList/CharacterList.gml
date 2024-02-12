@@ -92,6 +92,18 @@ function CharacterList() {
 			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
 		]
 	];
+	if (development_mode) {
+		array_push(global.characters, [
+			new Character(obj_character_dream, "Dream", "Standard", spr_tornado_frame),
+		],
+		[
+			new Character(obj_character_nightmare, "Nightmare", "Standard", spr_tornado_frame),
+		],
+		[
+			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_tornado_frame),
+		]
+		);
+	}
 }
 
 function init_characters() {

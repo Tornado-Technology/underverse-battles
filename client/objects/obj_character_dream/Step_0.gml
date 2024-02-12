@@ -3,7 +3,7 @@ event_inherited();
 if (global.fight_instance == noone || player_num == -1)
 	exit;
 
-var player_action = fight_get_player_action(player_num);
+var player_action = fight_get_player_attack(player_num);
 
 if (sprite_index == idle_animation && fight_get_initiative() == player_num && 
 fight_get_state() == fight_state.battle &&

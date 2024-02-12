@@ -33,13 +33,14 @@ skin_name = translate_get("CharactersStyles.Classic");
 frame = spr_sans_frame;
 
 // Animations
-idle_animation = spr_nightmaer_idle;
-after_battle_animation = spr_nightmaer_after_battle;
-defeated_animation = spr_nightmaer_defeated;
+idle_animation = spr_nightmare_idle;
+after_battle_animation = spr_nightmare_after_battle;
+defeated_animation = spr_nightmare_defeated;
+defeated_animation_last_image = spr_nightmare_defeated_last_image;
 
-fight_1_start_animation = spr_nightmaer_start1;
-fight_1_idle_animation = spr_nightmaer_fight1;
-fight_1_finish_animation = spr_nightmaer_end1;
+fight_1_start_animation = spr_nightmare_start1;
+fight_1_idle_animation = spr_nightmare_fight1;
+fight_1_finish_animation = spr_nightmare_end1;
 
 // Actions
 passive_skill = PassiveSkill("Character.Nightmare.PassiveSkill");

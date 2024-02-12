@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_staff_star_dream",
-  "bbox_bottom": 17,
+  "bbox_bottom": 12,
   "bbox_left": 0,
   "bbox_right": 65,
   "bbox_top": 0,
@@ -16,14 +16,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46eb5a20-c534-49a4-97c0-861afbe3dfee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04950585-3690-45fc-86a7-94f5d3283dc8",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 18,
+  "height": 13,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2c193dc8-c2ff-4ba6-b46c-24284fd355ea","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c055552b-233c-49fc-a193-609088e028aa","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
@@ -49,7 +49,7 @@
     ],
     "top": 0,
   },
-  "origin": 9,
+  "origin": 5,
   "parent": {
     "name": "Bullets",
     "path": "folders/Characteres/Dream/Sprites/Bullets.yy",
@@ -80,13 +80,13 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"46eb5a20-c534-49a4-97c0-861afbe3dfee","path":"sprites/spr_staff_star_dream/spr_staff_star_dream.yy",},},},"Disabled":false,"id":"2e2bacd4-f58f-415f-827a-1b3d951eee60","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"04950585-3690-45fc-86a7-94f5d3283dc8","path":"sprites/spr_staff_star_dream/spr_staff_star_dream.yy",},},},"Disabled":false,"id":"404c9b4f-240e-4468-a9d0-55d95c40139d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 66,
-    "yorigin": 8,
+    "yorigin": 6,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
