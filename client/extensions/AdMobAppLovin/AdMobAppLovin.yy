@@ -12,8 +12,11 @@
   "androidsourcedir": "",
   "author": "",
   "classname": "",
+  "ConfigValues": {
+    "Development": {"androidcodeinjection":"\\r\\n<YYAndroidGradleDependencies>\\r\\n    implementation  'com.google.ads.mediation:applovin:11.5.2.0'\\r\\n</YYAndroidGradleDependencies>\\r\\n","copyToTargets":"12","HTML5CodeInjection":"","ioscodeinjection":"\\r\\n<YYIosCocoaPods>\\r\\npod 'GoogleMobileAdsMediationAppLovin'\\r\\n</YYIosCocoaPods>\\r\\n","tvoscodeinjection":"",},
+  },
   "copyToTargets": 12,
-  "date": "2022-10-15T08:22:36.4639933+03:00",
+  "date": "2022-10-15T11:22:36.4639933+06:00",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "1.0.0",

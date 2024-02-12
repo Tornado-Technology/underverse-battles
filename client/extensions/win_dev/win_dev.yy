@@ -13,15 +13,15 @@
   "author": "",
   "classname": "",
   "ConfigValues": {
-    "Development": {"copyToTargets":"3035426170322551010","HTML5CodeInjection":"","ioscodeinjection":"","tvoscodeinjection":"",},
+    "Development": {"copyToTargets":"-1","HTML5CodeInjection":"","ioscodeinjection":"","tvoscodeinjection":"",},
   },
   "copyToTargets": -1,
-  "date": "2020-10-04T17:42:17.9816143+03:00",
+  "date": "2020-10-04T20:42:17.9816143+06:00",
   "description": "Adds several Windows-specific functions for GameMaker: Studio.\r\nSee blog post for details:\r\nhttp://yal.cc/gamemaker-windows-functions-for-gamemaker-studio",
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":49385710,"filename":"GMS-WinDev.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GMS-WinDev.dll","constants":[],"copyToTargets":49385710,"filename":"GMS-WinDev.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"delay","argCount":1,"args":[
             2,
           ],"documentation":"","externalName":"delay","help":"delay(ms) : sleep(ms) equivalent.","hidden":false,"kind":12,"returnType":2,},

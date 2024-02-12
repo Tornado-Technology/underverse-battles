@@ -14,13 +14,16 @@
   "androidsourcedir": "",
   "author": "",
   "classname": "GoogleMobileAdsGM",
+  "ConfigValues": {
+    "Development": {"androidcodeinjection":"\\r\\n<YYAndroidManifestApplicationInject>\\r\\n\\r\\n<meta-data\\r\\n            android:name=\\\"com.google.android.gms.ads.APPLICATION_ID\\\"\\r\\n            android:value=\\\"${YYEXTOPT_AdMob_Android_AppID}\\\"/>\\r\\n\\r\\n<meta-data\\r\\n            android:name=\\\"com.google.android.gms.ads.AD_MANAGER_APP\\\"\\r\\n            android:value=\\\"true\\\"/>\\r\\n\\r\\n<meta-data\\r\\n          android:name=\\\"com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION\\\"\\r\\n          android:value=\\\"true\\\"/>\\r\\n\\r\\n<meta-data\\r\\n          android:name=\\\"com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING\\\"\\r\\n          android:value=\\\"true\\\"/>\\r\\n\\r\\n</YYAndroidManifestApplicationInject>\\r\\n\\r\\n\\r\\n\\r\\n<YYAndroidGradleAndroid>\\r\\n  compileOptions {\\r\\n                   sourceCompatibility 1.8\\r\\n                   targetCompatibility 1.8\\r\\n               }\\r\\n</YYAndroidGradleAndroid>\\r\\n\\r\\n\\r\\n<YYAndroidGradleDependencies>\\r\\n\\r\\nimplementation 'com.google.android.gms:play-services-ads:21.3.0'\\r\\nconstraints {\\r\\n  implementation('androidx.work:work-runtime:2.7.0')\\r\\n}\\r\\n\\r\\n// The include below was giving issues uploading to the google store.\\r\\n//GDPR -> https://developers.google.com/admob/ump/android/quick-start\\r\\n// implementation 'com.google.android.ads.consent:consent-library:1.0.8'\\r\\n\\r\\n//Mediations Here:\\r\\n\\r\\n\\r\\n</YYAndroidGradleDependencies>\\r\\n\\r\\n\\r\\n<YYAndroidManifestManifestInject>\\r\\n        <meta-data\\r\\n            android:name=\\\"com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT\\\"\\r\\n            android:value=\\\"true\\\"/>\\r\\n</YYAndroidManifestManifestInject>\\r\\n\\r\\n","copyToTargets":"12","HTML5CodeInjection":"","ioscodeinjection":"<YYIosPlist>\\r\\n<key>GADIsAdManagerApp</key>\\r\\n    <true/>\\r\\n\\r\\n<key>GADApplicationIdentifier</key>\\r\\n<string>${YYEXTOPT_AdMob_iOS_AppID}</string>\\r\\n\\r\\n<key>SKAdNetworkItems</key>\\r\\n<array>\\r\\n<dict>\\r\\n<key>SKAdNetworkIdentifier</key>\\r\\n<string>cstr6suwn9.skadnetwork</string>\\r\\n</dict>\\r\\n</array>\\r\\n</YYIosPlist>\\r\\n\\r\\n<YYIosCocoaPods>\\r\\npod 'Google-Mobile-Ads-SDK','9.11.0.1'\\r\\n\\r\\n</YYIosCocoaPods>\\r\\n\\r\\n","tvoscodeinjection":"",},
+  },
   "copyToTargets": 12,
   "date": "2020-06-14T00:54:26",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "1.2.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"AdMob.ext","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"AdMob_Banner_NORMAL","hidden":false,"value":"0",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"AdMob_Banner_LARGE","hidden":false,"value":"1",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"AdMob_Banner_MEDIUM","hidden":false,"value":"2",},

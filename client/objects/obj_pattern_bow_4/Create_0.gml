@@ -11,21 +11,13 @@ callback = function () {
 	
 update = function () {
 var radius = 70;
-var offset = 90;
+var offset = 50;
 var _cos = dcos(180) * radius;
-var _sin = dsin(choose(90, 270)) * radius;
-var i = 0;
+var _sin = -dsin(90) * radius;
 var j = 0;
-repeat (2) { 
-var _xx = border_instance.x - border_instance.left + 5;
-var _yy = border_instance.y - offset;
-
-	//var bow_instance = instance_create_depth(_xx, _yy + _sin * i, fight_depth.bullet_outside, bow, {
-	//	target_time : 1 - _power * 0.1,
-	//	shot_time : 0.7 - _power * 0.1 ,
-	//	destroy_time : 0.5 - _power * 0.1,
-	//	_power : _power
-	//});
+repeat (2) { 	
+ var _xx = border_instance.x - border_instance.left + offset;
+ var _yy = soul_instance.y - offset;
 	var bow_instance_02 = instance_create_depth(_xx + _cos + j, _yy, fight_depth.bullet_outside, bow, {
 		target_time : 1 - _power * 0.1,
 		shot_time : 0.7 - _power * 0.1 ,
@@ -34,7 +26,6 @@ var _yy = border_instance.y - offset;
 	});		
 		
 	j += 180;	
-	i += 3;	
 	}	
 }
 var period = 33 + _power * 2;

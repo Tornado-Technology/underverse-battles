@@ -2,6 +2,8 @@ event_inherited();
 
 damage = get_char_damage(obj_character_error_sans);
 
+depth = fight_depth.bullet_outside_hight
+
 hspd_inert = 0;
 
 is_falling = false;

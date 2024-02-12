@@ -1,4 +1,4 @@
-/// Arguments: star_spinning
+/// Arguments: star_spining
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -15,28 +15,27 @@ update = function () {
 	
 	repeat (_power div 1 + 2) {
 		var size = irandom_range(0, 3);
-		
 		var decrease = choose(-25, -20, -17, 17, 20, 25);
 		switch (size) {
 			case 0:
-					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spinning);
+					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spining);
 					star_instance.speed_const = 3 + _power * _speed;
 					star_instance.direction_const = 180;
 					break;
 	
 			case 1 :
-					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spinning);
+					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spining);
 					star_instance.speed_const = 3 + _power * _speed;
 					star_instance.direction_const = 180;	
 					break;
 	
 			case 2 :		
-					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spinning);
+					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spining);
 					star_instance.speed_const = 3 + _power * _speed;		
 					break;
 	
 			case 3 :
-					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spinning);
+					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spining);
 					star_instance.speed_const = 3 + _power * _speed;			
 					break;
 			};

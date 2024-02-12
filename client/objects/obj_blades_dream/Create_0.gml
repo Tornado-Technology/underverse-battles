@@ -4,16 +4,17 @@ is_trap = false;
 is_target = false;
 is_swung = false;
 is_moving_left = false;
+is_moving_line = false;
 stop_alpha = false;
+is_waves = false;
+
 
 step_alpha = 0.03;
-
 stage = 0;
 alpha = 0;
-image_alpha = 0;
 acc = 0;
 max_acc = 0;
-
+ 
 target_ = undefined;
 
 trap = function () {
@@ -35,7 +36,7 @@ _target = function (target) {
 swung = function (_max_acc) {
 	max_acc = _max_acc;
 	is_swung = true;
-	
+		
 	time_source_move_start = time_source_create(time_source_game, 1/2, time_source_units_seconds, function () {
 	audio_play_sound_plugging(snd_projectile);
 	stage = 1;
@@ -53,4 +54,14 @@ swung = function (_max_acc) {
 	time_source_start(time_source_move_start);
 	time_source_start(time_source_move_next);
 	time_source_start(time_source_move_finish);
+	
+	return self;
+}
+
+waves = function () {
+	is_waves = true;
+}
+
+move_line = function () {
+	is_moving_line = true;
 }
