@@ -297,6 +297,7 @@ export const handlePacket = async (client: Client, data: any) => {
       try {
         const matchType = data.matchType;
         const clients = Matchmaker.getTypeClients(matchType);
+        const clientCount = clients.length;
 
         if (!client.account || !client.verified) {
           client.sendFightJoin(statusCode.error, undefined);
@@ -311,7 +312,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
         client.fight.setCharacter(data.characterId, data.skinId);
 
-        if (clients.length == 1) {
+        if (clientCount < 1) {
           client.setState(state.waitFight);
           Logger.info('Clients not found, wait...');
           break;

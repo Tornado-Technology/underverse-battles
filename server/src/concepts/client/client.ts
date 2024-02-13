@@ -277,7 +277,7 @@ export default class Client extends SendStuff {
 
   public setState(state: state): void {
     this._state = state;
-    Logger.debug(`Client set new state "${Object.keys(state)}"`);
+    Logger.debug(`Client set new state "${state}"`);
   }
 
   public get state(): state {
