@@ -1,12 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_thread_tentacles_nightmare",
+  "name": "obj_spike_pushing_nightmare",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -15,8 +14,8 @@
     "path": "folders/Characteres/Nightmare/Bullets.yy",
   },
   "parentObjectId": {
-    "name": "obj_battle_bullet_stun",
-    "path": "objects/obj_battle_bullet_stun/obj_battle_bullet_stun.yy",
+    "name": "obj_battle_pusher",
+    "path": "objects/obj_battle_pusher/obj_battle_pusher.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -34,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_string_tentacles",
-    "path": "sprites/spr_string_tentacles/spr_string_tentacles.yy",
+    "name": "spr_spike_pushing_nightmare",
+    "path": "sprites/spr_spike_pushing_nightmare/spr_spike_pushing_nightmare.yy",
   },
   "spriteMaskId": null,
   "visible": true,

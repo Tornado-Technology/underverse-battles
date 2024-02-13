@@ -1,20 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_tentacles_nightmare",
+  "name": "obj_attack_nightmare_1",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Nightmare/Bullets.yy",
+    "name": "Attacks",
+    "path": "folders/Characteres/Nightmare/Attacks.yy",
   },
   "parentObjectId": {
-    "name": "obj_battle_bullet",
-    "path": "objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name": "obj_attack",
+    "path": "objects/obj_attack/obj_attack.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_tentacles",
-    "path": "sprites/spr_tentacles/spr_tentacles.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
