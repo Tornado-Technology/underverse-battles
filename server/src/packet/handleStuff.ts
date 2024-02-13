@@ -297,7 +297,6 @@ export const handlePacket = async (client: Client, data: any) => {
       try {
         const matchType = data.matchType;
         const clients = Matchmaker.getTypeClients(matchType);
-        const opponent = clients[clients.length - 1];
 
         if (!client.account || !client.verified) {
           client.sendFightJoin(statusCode.error, undefined);
@@ -317,9 +316,13 @@ export const handlePacket = async (client: Client, data: any) => {
           Logger.info('Clients not found, wait...');
           break;
         }
+
+        const opponent = clients[clients.length - 1];
         
+        Logger.debug(Matchmaker.getTypeClients(matchType).length.toString());
         client.setState(state.inFight);
         opponent.setState(state.inFight);
+        Logger.debug(Matchmaker.getTypeClients(matchType).length.toString());
 
         Matchmaker.removeWaiting(client, matchType);
         Matchmaker.removeWaiting(opponent, matchType);

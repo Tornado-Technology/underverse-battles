@@ -13,5 +13,5 @@ function network_reconnect() {
 	
 	network_client.disconnect();
 	
-    network_client.connect(network_offical_ip, network_offical_port);
+    network_client.connect(network_offical_ip, network_offical_port;
 }
