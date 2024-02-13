@@ -8,7 +8,7 @@
 
 // Game mode macros
 #macro default_mode (os_get_config() == "Default")
-#macro development_mode (os_get_config() != "Default")
+#macro development_mode (os_get_config() != "Default" && os_get_config() != "Tournament")
 #macro localserver_mode (os_get_config() == "Localserver")
 #macro cinematic_mode (os_get_config() == "Cinematic")
 #macro mobile_mode (os_get_config() == "Mobile")
