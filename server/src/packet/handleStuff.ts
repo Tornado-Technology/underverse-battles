@@ -317,12 +317,10 @@ export const handlePacket = async (client: Client, data: any) => {
           break;
         }
 
-        const opponent = clients[clients.length - 1];
+        const opponent = clients[0];
         
-        Logger.debug(Matchmaker.getTypeClients(matchType).length.toString());
         client.setState(state.inFight);
         opponent.setState(state.inFight);
-        Logger.debug(Matchmaker.getTypeClients(matchType).length.toString());
 
         Matchmaker.removeWaiting(client, matchType);
         Matchmaker.removeWaiting(opponent, matchType);
