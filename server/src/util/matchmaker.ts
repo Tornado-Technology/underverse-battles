@@ -3,7 +3,51 @@ import App from '../app.js';
 import Fight from '../game/fight/fight.js';
 import Logger from './logging.js';
 
+export enum matchType {
+  common_1vs1,
+	rating_1vs1,
+	tournament_1vs1,
+	common_2vs2,
+	rating_2vs2,
+	tournament_2vs2
+}
+
 export default class Matchmaker {
+  private static matches = new Map<matchType, Array<Client>>();
+
+  public static addWaiting(client: Client, type: matchType): void {
+    const array = this.matches.get(type);
+    if (!array) {
+      this.matches.set(type, [client]);
+      return;
+    }
+    array.push(client);
+  }
+
+  public static tryAddWaiting(client: Client, type: matchType): boolean {
+    if (client.fight.hasInstance) {
+      Logger.info(`The client ${client.username} is trying to start a battle during other battle`);
+      return false;
+    }
+
+    const array = this.matches.get(type) ?? [];
+    if (array.includes(client)) {
+      Logger.info(`The client is trying to start a battle with himself: ${client.username}`);
+      return false;
+    }
+
+    this.addWaiting(client, type);
+    return true;
+  }
+
+  public static removeWaiting(client: Client, type: matchType): void {
+    const array = this.matches.get(type);
+    if (!array) {
+      return;
+    }
+    array.splice(array.indexOf(client), 1);
+  }
+
   public static makeMatch(client1: Client, client2: Client): void {
     if (!client1.account || !client2.account) {
       Logger.warn(`Some client is trying to start a fight without account!`);
@@ -31,6 +75,10 @@ export default class Matchmaker {
 
   public static findClientsWithState(state: state): Client[] {
     return App.clients.filter((client) => client.state === state);
+  }
+
+  public static getTypeClients(type: matchType): Client[] {
+    return this.matches.get(type) ?? [];
   }
 
   public static async addRating(client: Client): Promise<number> {

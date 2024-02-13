@@ -95,3 +95,12 @@ enum gameover {
 	lose,
 	win
 }
+
+enum match_type {
+	common_1vs1,
+	rating_1vs1,
+	tournament_1vs1,
+	common_2vs2,
+	rating_2vs2,
+	tournament_2vs2
+}

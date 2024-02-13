@@ -3,7 +3,7 @@ import { actionType, state as fightState, target } from '../game/fight/fight.js'
 import { send as mailSend} from '../util/mail.js';
 import Client, { state } from '../concepts/client/client.js';
 import { statusCode } from '../status.js';
-import { versions, connectionOptions } from '../config.js';
+import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
@@ -295,15 +295,18 @@ export const handlePacket = async (client: Client, data: any) => {
     // Fight stuff
     case 'fightJoin':
       try {
-        if (!connectionOptions["MatchmakerIsWorking"]) {
-          Logger.info('Fight join locked');
-          break;
-        }
+        const matchType = data.matchType;
+        const clients = Matchmaker.getTypeClients(matchType);
+        const opponent = clients[clients.length - 1];
 
-        const clients = Matchmaker.findClientsWithState(state.waitFight);
-        if (client.account === null || !client.verified) {
+        if (!client.account || !client.verified) {
           client.sendFightJoin(statusCode.error, undefined);
           Logger.info('Fight join failed, client not logged');
+          break;
+        }
+        
+        if (!Matchmaker.tryAddWaiting(client, matchType)) {
+          client.sendFightJoin(statusCode.error, undefined);
           break;
         }
 
@@ -311,39 +314,23 @@ export const handlePacket = async (client: Client, data: any) => {
 
         if (clients.length < 1) {
           client.setState(state.waitFight);
-          client.sendFightJoin(statusCode.error, undefined);
           Logger.info('Clients not found, wait...');
-          break;
-        }
-
-        const opponent = clients[clients.length - 1];
-        Logger.info('Waiting players: ');
-        clients.forEach(element => {
-          Logger.info(element.username);
-        });
-        if (client.fight.hasInstance) {
-          Logger.info(`The client ${client.username} is trying to start a battle during other battle`);
-          break;
-        }
-        if (opponent.fight.hasInstance) {
-          Logger.info(`The client ${opponent.username} is trying to start a battle during other battle`);
-          break;
-        }
-        if (client.username === opponent.username) {
-          client.sendFightJoin(statusCode.error, undefined);
-          Logger.info('The client is trying to start a battle with himself:');
-          Logger.info(client.username);
-          Logger.info(opponent.username);
           break;
         }
         
         client.setState(state.inFight);
         opponent.setState(state.inFight);
+
+        Matchmaker.removeWaiting(client, matchType);
+        Matchmaker.removeWaiting(opponent, matchType);
         
         Matchmaker.makeMatch(client, opponent);
       } catch (error) {
         client.setState(state.inMenu);
         client.sendFightJoin(statusCode.error, undefined);
+
+        Matchmaker.removeWaiting(client, data.matchType);
+
         Logger.info(`Fight join failed, reason: ${error.stack}`);
       }
       break;

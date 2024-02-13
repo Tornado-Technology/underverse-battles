@@ -159,7 +159,11 @@ packet_handler_register("information", function(data) {
 
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
-
+	
+	if (status == status_code.error) {
+		logger.info("Matchmaking error");
+		display_show_message_info("Matchmaking error", c_red);
+	}
 	if (status == status_code.success) {
 		logger.info("Successful join to fight");
 		var opponent_data = json_parse(data.data);

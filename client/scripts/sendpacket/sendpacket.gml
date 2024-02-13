@@ -91,8 +91,9 @@ function send_password_retrieval(identifier, password) {
 
 /// @param {Real} character_id
 /// @param {Real} skin_id
-function send_fight_join(character_id, skin_id) { 
+function send_fight_join(type, character_id, skin_id) { 
     send("fightJoin", {
+		matchType: type,
 		characterId: character_id,
 		skinId: skin_id,
 	});
