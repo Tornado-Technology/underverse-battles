@@ -46,7 +46,7 @@
     ],
     "top": 6,
   },
-  "origin": 4,
+  "origin": 7,
   "parent": {
     "name": "Bullets",
     "path": "folders/Characteres/Papyrus/Sprites/Bullets.yy",
@@ -83,7 +83,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 5,
-    "yorigin": 9,
+    "yorigin": 18,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

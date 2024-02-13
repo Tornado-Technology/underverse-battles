@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Papyrus/Bullets.yy",
+    "name": "Attacks",
+    "path": "folders/Characteres/Papyrus/Attacks.yy",
   },
 }

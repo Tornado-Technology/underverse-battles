@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_bone_papyrus",
-    "path": "sprites/spr_bone_papyrus/spr_bone_papyrus.yy",
+    "name": "spr_bone_sans",
+    "path": "sprites/spr_bone_sans/spr_bone_sans.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_bone_rotating_papyrus",
+  "name": "obj_pattern_jumping_over_bones_with_blue_bones",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Papyrus/Bullets.yy",
+    "name": "Blue soul",
+    "path": "folders/Attack Patterns/Bones/Blue soul.yy",
   },
   "parentObjectId": {
-    "name": "obj_bone_rotating_swap_sans",
-    "path": "objects/obj_bone_rotating_swap_sans/obj_bone_rotating_swap_sans.yy",
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -30,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_bone_spining_papyrus",
-    "path": "sprites/spr_bone_spining_papyrus/spr_bone_spining_papyrus.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
