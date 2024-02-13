@@ -311,7 +311,7 @@ export const handlePacket = async (client: Client, data: any) => {
 
         client.fight.setCharacter(data.characterId, data.skinId);
 
-        if (clients.length < 1) {
+        if (clients.length == 1) {
           client.setState(state.waitFight);
           Logger.info('Clients not found, wait...');
           break;
@@ -324,7 +324,6 @@ export const handlePacket = async (client: Client, data: any) => {
 
         Matchmaker.removeWaiting(client, matchType);
         Matchmaker.removeWaiting(opponent, matchType);
-        Logger.debug(Matchmaker.getTypeClients(matchType).length.toString());
         
         Matchmaker.makeMatch(client, opponent);
       } catch (error) {
