@@ -337,6 +337,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
 
     case 'fightJoinReject':
+      Matchmaker.removeWaiting(client, data.matchType);
       client.setState(state.inMenu);
       break;
 

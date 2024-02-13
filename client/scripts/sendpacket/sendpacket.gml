@@ -103,8 +103,10 @@ function send_fight_joined() {
     send("fightJoined");
 }
 
-function send_fight_join_reject() {
-    send("fightJoinReject");
+function send_fight_join_reject(type) {
+    send("fightJoinReject", {
+		matchType: type
+	});
 }
 
 /// @param {Real} action
