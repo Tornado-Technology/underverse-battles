@@ -22,27 +22,27 @@ switch(type) {
 	})
 	break;
 
-	case 2 :
-	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-	pattern_instance = create_pattern(obj_pattern_rotating_bone, {
-		 bone_rotating : obj_bone_line_papyrus	
-	})
-	break;
+	//case 2 :
+	//create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+	//pattern_instance = create_pattern(obj_pattern_rotating_bone, {
+	//	 bone_rotating : obj_bone_line_papyrus	
+	//})
+	//break;
 	
-	case 3 :
-	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-	pattern_instance = create_pattern(obj_pattern_rotating_bone, {
-		 bone_rotating : obj_bone_changing_papyrus	
-	})
-	break;
+	//case 3 :
+	//create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+	//pattern_instance = create_pattern(obj_pattern_rotating_bone, {
+	//	 bone_rotating : obj_bone_changing_papyrus	
+	//})
+	//break;
 	
-	case 4 :
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 20, battle_border.right + 20);
-		pattern_instance = create_pattern(obj_pattern_jumping_over_changing_bones, {
-			bone: obj_bone_papyrus,
-			bone_changing : obj_bone_changing_papyrus
-		});
+	//case 4 :
+	//	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 20, battle_border.right + 20);
+	//	pattern_instance = create_pattern(obj_pattern_jumping_over_changing_bones, {
+	//		bone: obj_bone_papyrus,
+	//		bone_changing : obj_bone_changing_papyrus
+	//	});
 	
 	
-	break;
+	//break;
 };
