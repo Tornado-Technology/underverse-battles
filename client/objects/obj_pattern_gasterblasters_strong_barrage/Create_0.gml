@@ -17,7 +17,7 @@ update = function() {
 	var radius = border_instance.up * 2;
 	var x_gb = border_instance.x + radius * cos(degtorad(_angle));
 	var y_gb = border_instance.y + radius * sin(degtorad(_angle));
-	create_gasterblaster(gasterblaster, x_gb, y_gb, border_instance.x, border_instance.y, point_direction(x_gb, y_gb, border_instance.x, border_instance.y) + 90, 1/8, 1, 15/60, 1/6);
+	create_gasterblaster(gasterblaster, x_gb, y_gb, border_instance.x, border_instance.y, point_direction(x_gb, y_gb, border_instance.x, border_instance.y) + 90, 1/10, 1, 15/60, 1/6);
 	_angle += angle_step * (reversed ? -1 : 1);
 }
 	

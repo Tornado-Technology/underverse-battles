@@ -11,7 +11,7 @@ create_border = function(up, down, left, right) {
 }
 
 finish_attack = function() {
-	instance_destroy();
+	instance_destroy(id);
 }
 
 /// @param {Asset.GMObject} pattern

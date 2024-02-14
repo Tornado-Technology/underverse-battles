@@ -17,13 +17,13 @@ update = function () {
 						obj_drop_black_ink_sans, obj_drop_black_ink_sans,
 						obj_drop_blue_ink_sans,
 						obj_drop_green_ink_sans);
-		create_drop(x0, y0, inst_drop, irandom_range(0.5 + _power * 0.1, 1.5 + _power * 0.1), inst_dir, true);
+		create_drop(x0, y0, inst_drop, random_range(0.5 + _power * 0.1, 1.5 + _power * 0.1), inst_dir, true);
 	}
 
 var period = 10 - _power;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 20) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 30) / 60 + 0.5, time_source_units_seconds, function () {
 	instance_destroy();
 });
