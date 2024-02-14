@@ -5,7 +5,7 @@ on_border_created = function () {
 };
 
 
-type = irandom_range(7, 7);
+type = irandom_range(0, 6);
 switch (type) {
 	case 0 :
 	create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
