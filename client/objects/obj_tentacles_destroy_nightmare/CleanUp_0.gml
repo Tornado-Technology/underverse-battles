@@ -1,0 +1,1 @@
+instance_destroy(time_source_destroy_tentacles);
