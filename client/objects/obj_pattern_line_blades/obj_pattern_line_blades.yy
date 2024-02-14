@@ -1,15 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_gb_charge_nightmare",
-  "eventList": [],
+  "name": "obj_pattern_line_blades",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Nightmare/Bullets.yy",
+    "name": "Blades",
+    "path": "folders/Attack Patterns/Blades.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_gb_charge_ink_sans",
-    "path": "sprites/spr_gb_charge_ink_sans/spr_gb_charge_ink_sans.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

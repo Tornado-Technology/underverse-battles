@@ -1,22 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_gasterblaster_nightmare",
+  "name": "obj_pattern_spining_blades",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bullets",
-    "path": "folders/Characteres/Nightmare/Bullets.yy",
+    "name": "Blades",
+    "path": "folders/Attack Patterns/Blades.yy",
   },
   "parentObjectId": {
-    "name": "obj_battle_element",
-    "path": "objects/obj_battle_element/obj_battle_element.yy",
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_gasterblaster_nightmare",
-    "path": "sprites/spr_gasterblaster_nightmare/spr_gasterblaster_nightmare.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
