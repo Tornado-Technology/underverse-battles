@@ -5,6 +5,7 @@
   "ConfigValues": {
     "Development": {"option_android_icon_adaptive_mdpi":"icons_adaptive/mdpi.png","option_android_icon_xxxhdpi":"icons/xxxhdpi.png","option_android_icon_xxhdpi":"icons/xxhdpi.png","option_android_icon_xhdpi":"icons/xhdpi.png","option_android_icon_hdpi":"icons/hdpi.png","option_android_icon_adaptive_xxxhdpi":"icons_adaptive/xxxhdpi.png","option_android_icon_adaptive_xhdpi":"icons_adaptive/xhdpi.png","option_android_minimum_sdk":"21",},
     "Localserver": {"option_android_version":"2.1.8",},
+    "Tournament": {"option_android_version":"2.1.9","option_android_icon_xxxhdpi":"icons/xxxhdpi.png","option_android_icon_xxhdpi":"icons/xxhdpi.png","option_android_icon_xhdpi":"icons/xhdpi.png","option_android_icon_hdpi":"icons/hdpi.png","option_android_icon_adaptive_xxxhdpi":"icons_adaptive/xxxhdpi.png","option_android_icon_adaptive_xxhdpi":"icons_adaptive/xxhdpi.png","option_android_icon_adaptive_xhdpi":"icons_adaptive/xhdpi.png","option_android_icon_adaptive_hdpi":"icons_adaptive/hdpi.png","option_android_icon_adaptive_mdpi":"icons_adaptive/mdpi.png","option_android_icon_adaptive_ldpi":"icons_adaptive/ldpi.png",},
   },
   "option_android_application_tag_inject": "",
   "option_android_arch_arm64": true,
@@ -66,7 +67,7 @@
   "option_android_scale": 0,
   "option_android_screen_depth": 0,
   "option_android_sleep_margin": 4,
-  "option_android_splash_screens_landscape": "${base_options_dir}/android/splash/landscape.png",
+  "option_android_splash_screens_landscape": "splash/landscape.png",
   "option_android_splash_screens_portrait": "${base_options_dir}/android/splash/portrait.png",
   "option_android_splash_time": 0,
   "option_android_splashscreen_background_colour": 255,
@@ -79,5 +80,5 @@
   "option_android_tv_isgame": true,
   "option_android_tv_supports_leanback": true,
   "option_android_use_facebook": false,
-  "option_android_version": "2.1.8",
+  "option_android_version": "2.1.9",
 }
