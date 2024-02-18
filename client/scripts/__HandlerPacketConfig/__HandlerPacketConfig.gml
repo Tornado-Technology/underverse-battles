@@ -77,18 +77,8 @@ packet_handler_register("schemes", function(data) {
 
 packet_handler_register("verification", function(data) {
 	if (is_desktop) {
-		_id = undefined;
-		
-		global.verify_code_control = instance_create(obj_verify_code_control);
-		global.verify_code_connection = global.verify_code_control.on_data.connect(function(args) {
-			if (args[1] != _id) { 
-				return; 
-			}
-			send_verification(args[0]);
-			global.verify_code_control.on_data.disconnect(global.verify_code_connection);
-		})
-				
-		_id = get_string_async(translate_get("Menu.SignUp.MessageCode"), "");
+		send_verification(get_string(translate_get("Menu.SignUp.MessageCode"), ""));
+		return;
 	}
 			
 	if (is_mobile) {
