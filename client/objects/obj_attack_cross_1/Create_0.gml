@@ -23,7 +23,7 @@ switch (type) {
 	case 2:
 		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_gasterblasters_with_platforms, {
-			bone: obj_bone_sans,
+			bone: obj_bone_cross,
 			gasterblaster: obj_gasterblaster_cross
 		});
 		break;
