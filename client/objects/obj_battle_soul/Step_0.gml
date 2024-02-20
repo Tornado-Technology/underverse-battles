@@ -34,3 +34,4 @@ update_push_damage();
 tremble_update();
 
 ability = is_desktop ? input_check_held(input.skip) : input_check_held(input.action);
+ability_pressed = is_desktop ? input_check_pressed(input.skip) : input_check_pressed(input.action);

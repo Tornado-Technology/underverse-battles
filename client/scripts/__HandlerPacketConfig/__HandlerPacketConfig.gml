@@ -48,9 +48,10 @@ packet_handler_register("login", function(data) {
 	if (data.status == status_code.success) {
 		network_profile = data.profile;
 		network_account = data.account;
+		on_network_login.invoke(data.status);
+		achievement_give(achievement_id.a_cybers_world);
 		logger.info("Login success");
 		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
-		on_network_login.invoke(data.status);
 		return;
 	}
 
