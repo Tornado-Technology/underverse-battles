@@ -136,10 +136,15 @@ export default class Client extends SendStuff {
   }
 
   public async save(): Promise<void> {
-    if (!this.isLogin) return;
-    await this.account?.save();
-    await this.profile?.save();
-    await this.fight?.save();
+    try {
+      if (!this.isLogin) return;
+      await this.account?.save();
+      await this.profile?.save();
+      await this.fight?.save();
+    }
+    catch (execution) {
+      Logger.error(`Saving failed: ${execution}`);
+    }
   }
 
   public async deleteAccount(): Promise<void> {
@@ -166,10 +171,15 @@ export default class Client extends SendStuff {
   }
 
   public async addRating(rating: number): Promise<void> {
-    if (this.hasProfile) {
-      this.profile.rating += Math.abs(rating);
-      this.update();
-      await this.save();
+    try {
+      if (this.hasProfile) {
+        this.profile.rating += Math.abs(rating);
+        this.update();
+        await this.save();
+      }
+    }
+    catch (execution) {
+      Logger.error(`Rating adding failed: ${execution}`)
     }
   }
 
