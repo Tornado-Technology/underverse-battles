@@ -96,7 +96,6 @@ export default class ClientFight {
   }
 
   public async leave(): Promise<void> {
-    Logger.debug(`${this.client.username} exit from fight.`);
     await this.save();
 
     this.instance?.leavePlayer(this.client);
@@ -205,7 +204,7 @@ export default class ClientFight {
     const profile = this.client.profile;
 
     if (!profile.fight.id) {
-      Logger.debug('Battle no exists, restore end');
+      Logger.debug('Fight no exists, restore end');
       return;
     }
 
@@ -214,7 +213,7 @@ export default class ClientFight {
       this.unit();
       await this.save();
 
-      Logger.debug('Battle no longer exists, cancellation of resumption!');
+      Logger.debug('Fight no longer exists, cancellation of resumption!');
       return;
     }
 

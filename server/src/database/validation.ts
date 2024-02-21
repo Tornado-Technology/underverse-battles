@@ -27,7 +27,6 @@ export const validateUsername = async (username: string): Promise<statusCode> =>
 }
 
 export const validateNickname = async (nickname: string): Promise<statusCode> => {
-  Logger.debug("Nickanme: " + nickname + " Regex Test: " + String(nickanmeRegex.test(nickname)));
   if (!nickanmeRegex.test(nickname) || nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }

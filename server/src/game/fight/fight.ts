@@ -36,6 +36,8 @@ export default class Fight {
 
   protected destroyTimeout: NodeJS.Timeout;
 
+  protected stateNames = ['empty', 'skip', 'attack 1', 'attack 2', 'attack 3', 'special attack'];
+
   public static create(client1: Client, client2: Client): void {
     const fight = new Fight(client1, client2, String(Date.now()));
     App.fights.push(fight);
@@ -81,7 +83,12 @@ export default class Fight {
   }
 
   public leavePlayer(client: Client): void {
-      const winnerClient = this.clients.find((c) => c);
+      const winnerClient = this.clients.find((c) => c != client);
+      if (!winnerClient) {
+        Logger.debug(`No players in fight[${this.id}]. The fight was over`);
+        this.finishInDraw();
+        return;
+      }
       this.finish(winnerClient);
       winnerClient?.sendFightDisconnect(target.opponent);
       client?.sendFightDisconnect(target.self);
@@ -141,7 +148,7 @@ export default class Fight {
 
   public setState(newState: state): void {
     this._state = newState;
-    Logger.debug(`Fight[${this.id}] set new state "${newState}"`);
+    Logger.debug(`Fight[${this.id}] set new state "${this.stateNames[newState]}"`);
   }
 
   public async finish(winner: Client): Promise<void> {
