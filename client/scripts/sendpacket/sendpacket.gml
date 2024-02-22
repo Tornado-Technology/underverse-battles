@@ -89,6 +89,10 @@ function send_password_retrieval(identifier, password) {
 	});
 }
 
+function send_leaderboard_request() {
+	send("leaderboard");
+}
+
 /// @param {Real} character_id
 /// @param {Real} skin_id
 function send_fight_join(type, character_id, skin_id) { 

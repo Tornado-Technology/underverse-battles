@@ -309,6 +309,7 @@
     {"name":"obj_bone_blue_attack_cross","order":1,"path":"objects/obj_bone_blue_attack_cross/obj_bone_blue_attack_cross.yy",},
     {"name":"__CharacterId__","order":3,"path":"scripts/__CharacterId__/__CharacterId__.yy",},
     {"name":"obj_string_error_sans_anti_piracy","order":4,"path":"objects/obj_string_error_sans_anti_piracy/obj_string_error_sans_anti_piracy.yy",},
+    {"name":"obj_leaderboard","order":1,"path":"objects/obj_leaderboard/obj_leaderboard.yy",},
     {"name":"obj_character_cross","order":1,"path":"objects/obj_character_cross/obj_character_cross.yy",},
     {"name":"spr_gasterblaster_shooting_saness","order":1,"path":"sprites/spr_gasterblaster_shooting_saness/spr_gasterblaster_shooting_saness.yy",},
     {"name":"spr_swap_papyrus_christmas_attack_2_up_left","order":14,"path":"sprites/spr_swap_papyrus_christmas_attack_2_up_left/spr_swap_papyrus_christmas_attack_2_up_left.yy",},

@@ -291,6 +291,10 @@ export const handlePacket = async (client: Client, data: any) => {
       await client.verificationCodeCallback(status);
       client.clearVerificationCode();
       break;
+    
+    case 'leaderboard':
+      client.sendLeaderboard();
+      break;
 
     // Fight stuff
     case 'fightJoin':

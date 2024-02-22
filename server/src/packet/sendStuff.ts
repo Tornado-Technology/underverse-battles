@@ -9,6 +9,7 @@ import Packet from './packet.js';
 import App from '../app.js';
 import { statusCode } from '../status.js';
 import config from '../config.js';
+import ProfileStatistic from '../database/schemas/profileStatistic.js';
 
 const generateNickname = (): string => {
   return `Player${Math.randomRange(0, 1000)}`;
@@ -117,6 +118,12 @@ export default class SendStuff {
 
   public sendVerification(): void {
     this.send('verification');
+  }
+
+  public sendLeaderboard(): void {
+    this.send('leaderboard', {
+      leaderboard: Object.entries(ProfileStatistic.getRatingLeaderboard())
+    });
   }
 
   public sendInformation(): void {

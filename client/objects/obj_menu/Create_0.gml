@@ -17,6 +17,7 @@ enum menu_page {
 	
 	// Account
 	multiplayer_account,
+	leaderboard,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -476,10 +477,20 @@ create_page([
 
 // Statistics
 create_page([
+	Transfer("Leaderboard", menu_page.leaderboard, function() {
+		instance_create(obj_leaderboard);
+	}),
 	Transfer("StandardButtons.Back", menu_page.multiplayer_account, function() {
 		instance_destroy(obj_profile_statistics);
 	}),
 ], menu_page.statistics, "Statistics.Title", true);
+
+// Leaderboard
+create_page([
+	Transfer("StandardButtons.Back", menu_page.statistics, function() {
+		instance_destroy(obj_leaderboard);
+	}),
+], menu_page.leaderboard, "Leaderboard", true);
 
 // Account settings
 account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");

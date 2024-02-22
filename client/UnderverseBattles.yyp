@@ -1874,6 +1874,7 @@
     {"id":{"name":"spr_background_undertale_battle","path":"sprites/spr_background_undertale_battle/spr_background_undertale_battle.yy",},},
     {"id":{"name":"spr_cross_sitting_crying_turns_back","path":"sprites/spr_cross_sitting_crying_turns_back/spr_cross_sitting_crying_turns_back.yy",},},
     {"id":{"name":"obj_string_error_sans_anti_piracy","path":"objects/obj_string_error_sans_anti_piracy/obj_string_error_sans_anti_piracy.yy",},},
+    {"id":{"name":"obj_leaderboard","path":"objects/obj_leaderboard/obj_leaderboard.yy",},},
     {"id":{"name":"obj_pattern_duplet_spikes","path":"objects/obj_pattern_duplet_spikes/obj_pattern_duplet_spikes.yy",},},
     {"id":{"name":"spr_background_doodle_sphere_layer_1","path":"sprites/spr_background_doodle_sphere_layer_1/spr_background_doodle_sphere_layer_1.yy",},},
     {"id":{"name":"spr_background_underverse_forest","path":"sprites/spr_background_underverse_forest/spr_background_underverse_forest.yy",},},

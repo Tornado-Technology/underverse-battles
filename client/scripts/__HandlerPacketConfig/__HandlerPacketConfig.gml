@@ -158,6 +158,10 @@ packet_handler_register("information", function(data) {
 	// TODO: Add TODO)))
 });
 
+packet_handler_register("leaderboard", function(data) {
+	obj_leaderboard.list = data.leaderboard;
+});
+
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
 	
