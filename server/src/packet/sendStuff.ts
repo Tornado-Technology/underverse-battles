@@ -120,9 +120,9 @@ export default class SendStuff {
     this.send('verification');
   }
 
-  public sendLeaderboard(): void {
+  public async sendLeaderboard(): Promise<void> {
     this.send('leaderboard', {
-      leaderboard: Object.entries(ProfileStatistic.getRatingLeaderboard())
+      leaderboard: Object.entries(await ProfileStatistic.getRatingLeaderboard())
     });
   }
 

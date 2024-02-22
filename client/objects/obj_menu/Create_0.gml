@@ -280,6 +280,7 @@ disconnect_callback = on_network_disconnect.connect(function() {
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
 		goto_page(menu_page.multiplayer);
 		instance_destroy(obj_profile_statistics);
+		instance_destroy(obj_leaderboard);
 	}
 });
 
@@ -478,6 +479,7 @@ create_page([
 // Statistics
 create_page([
 	Transfer("Leaderboard", menu_page.leaderboard, function() {
+		instance_destroy(obj_profile_statistics);
 		instance_create(obj_leaderboard);
 	}),
 	Transfer("StandardButtons.Back", menu_page.multiplayer_account, function() {
@@ -489,6 +491,7 @@ create_page([
 create_page([
 	Transfer("StandardButtons.Back", menu_page.statistics, function() {
 		instance_destroy(obj_leaderboard);
+		instance_create(obj_profile_statistics);
 	}),
 ], menu_page.leaderboard, "Leaderboard", true);
 
