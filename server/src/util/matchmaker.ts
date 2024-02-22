@@ -19,7 +19,9 @@ export default class Matchmaker {
   public static addWaiting(client: Client, type: matchType): void {
     const array = this.matches.get(type);
     if (!array) {
-      this.matches.set(type, []);
+      this.matches.set(type, [client]);
+      this.types.set(client, type);
+      return;
     }
     array.push(client);
     this.types.set(client, type);
