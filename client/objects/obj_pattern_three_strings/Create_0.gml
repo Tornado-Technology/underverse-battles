@@ -19,7 +19,7 @@ time_source_delay = time_source_create(time_source_game, time_delay, time_source
 		sides: [dir.left, dir.right],
 		is_aiming: true,
 		custom_period: 25 - 2 * _power,
-		custom_repeats: 16 + _power * 4,
+		custom_repeats: 12 + _power * 3,
 		final_function: destroy
 	}).callback();
 });

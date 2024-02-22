@@ -572,6 +572,7 @@
     {"id":{"name":"obj_menu_custom_battle_characters","path":"objects/obj_menu_custom_battle_characters/obj_menu_custom_battle_characters.yy",},},
     {"id":{"name":"spr_sans_saness_attack_2_down_right","path":"sprites/spr_sans_saness_attack_2_down_right/spr_sans_saness_attack_2_down_right.yy",},},
     {"id":{"name":"spr_swap_papyrus_attack_2_up_down","path":"sprites/spr_swap_papyrus_attack_2_up_down/spr_swap_papyrus_attack_2_up_down.yy",},},
+    {"id":{"name":"obj_fight_ui_test","path":"objects/obj_fight_ui_test/obj_fight_ui_test.yy",},},
     {"id":{"name":"obj_banana_minigame_player","path":"objects/obj_banana_minigame_player/obj_banana_minigame_player.yy",},},
     {"id":{"name":"ContentType","path":"scripts/ContentType/ContentType.yy",},},
     {"id":{"name":"spr_swap_sans_attack_0_idle_voodoo_doll","path":"sprites/spr_swap_sans_attack_0_idle_voodoo_doll/spr_swap_sans_attack_0_idle_voodoo_doll.yy",},},

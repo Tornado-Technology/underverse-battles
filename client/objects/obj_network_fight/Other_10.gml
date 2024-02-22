@@ -1,6 +1,5 @@
 if (state == fight_state.battle) {
 	timer_stop();
-	instance_create_one(obj_battle);
 }
 
 if (state == fight_state.dodge) {

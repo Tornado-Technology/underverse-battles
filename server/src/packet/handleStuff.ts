@@ -323,22 +323,22 @@ export const handlePacket = async (client: Client, data: any) => {
         client.setState(state.inFight);
         opponent.setState(state.inFight);
 
-        Matchmaker.removeWaiting(client, matchType);
-        Matchmaker.removeWaiting(opponent, matchType);
+        Matchmaker.removeWaiting(client);
+        Matchmaker.removeWaiting(opponent);
         
         Matchmaker.makeMatch(client, opponent);
       } catch (error) {
         client.setState(state.inMenu);
         client.sendFightJoin(statusCode.error, undefined);
 
-        Matchmaker.removeWaiting(client, data.matchType);
+        Matchmaker.removeWaiting(client);
 
         Logger.info(`Fight join failed, reason: ${error.stack}`);
       }
       break;
 
     case 'fightJoinReject':
-      Matchmaker.removeWaiting(client, data.matchType);
+      Matchmaker.removeWaiting(client);
       client.setState(state.inMenu);
       break;
 

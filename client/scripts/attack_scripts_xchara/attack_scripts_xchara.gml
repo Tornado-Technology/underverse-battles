@@ -1,21 +1,24 @@
-function xchara_attack0(pow, player) {
+function xchara_attack0(player, _power, type = irandom(3)) {
 	instance_create(obj_attack_xchara_0, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 
-function xchara_attack1(pow, player) {
+function xchara_attack1(player, _power, type = irandom(2)) {
 	instance_create(obj_attack_xchara_1, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 
-function xchara_attack2(pow, player) {
+function xchara_attack2(player, _power, type = irandom(1)) {
 	instance_create(obj_attack_xchara_2, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 

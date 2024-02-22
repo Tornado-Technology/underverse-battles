@@ -1,21 +1,24 @@
-function swap_papyrus_attack0(_power, player) {
+function swap_papyrus_attack0(player, _power, type = irandom(3)) {
 	instance_create(obj_attack_swap_papyrus_0, {
 		character_instance: player,
-		_power: _power
+		_power: _power,
+		type: type,
 	});
 }
 
-function swap_papyrus_attack1(_power, player) {
+function swap_papyrus_attack1(player, _power, type = irandom(2)) {
 	instance_create(obj_attack_swap_papyrus_1, {
 		character_instance: player,
-		_power: _power
+		_power: _power,
+		type: type,
 	});
 }
 
-function swap_papyrus_attack2(_power, player) {
+function swap_papyrus_attack2(player, _power, type = irandom(1)) {
 	instance_create(obj_attack_swap_papyrus_2, {
 		character_instance: player,
 		_power: _power,
+		type: type,
 		use_gravity_attack: player.use_gravity_attack
 	});
 }

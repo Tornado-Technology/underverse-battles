@@ -11,7 +11,9 @@ switch(state) {
 		break;
 	case fight_state.battle:
 		// Create battle
-		instance_create_one(obj_battle);
+		instance_create_one(obj_battle, {
+			attack_type: type
+		});
 		break;
 	
 	case fight_state.reset:

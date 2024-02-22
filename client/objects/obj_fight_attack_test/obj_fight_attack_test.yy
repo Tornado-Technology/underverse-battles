@@ -38,5 +38,5 @@
     "path": "sprites/spr_dev_fight/spr_dev_fight.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

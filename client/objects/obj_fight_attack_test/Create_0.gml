@@ -2,7 +2,7 @@ event_inherited();
 
 // Required
 required_components = {
-	ui: obj_fight_ui,
+	ui: obj_fight_ui_test,
 	input: obj_fight_input
 };
 

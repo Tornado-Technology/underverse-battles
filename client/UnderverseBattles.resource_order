@@ -139,6 +139,7 @@
     {"name":"obj_gasterblaster_aiming_error_sans_anti_piracy","order":3,"path":"objects/obj_gasterblaster_aiming_error_sans_anti_piracy/obj_gasterblaster_aiming_error_sans_anti_piracy.yy",},
     {"name":"create_drop","order":4,"path":"scripts/create_drop/create_drop.yy",},
     {"name":"spr_swap_papyrus_attack_2_up_down","order":13,"path":"sprites/spr_swap_papyrus_attack_2_up_down/spr_swap_papyrus_attack_2_up_down.yy",},
+    {"name":"obj_fight_ui_test","order":1,"path":"objects/obj_fight_ui_test/obj_fight_ui_test.yy",},
     {"name":"spr_swap_sans_attack_0_idle_voodoo_doll","order":3,"path":"sprites/spr_swap_sans_attack_0_idle_voodoo_doll/spr_swap_sans_attack_0_idle_voodoo_doll.yy",},
     {"name":"spr_sans_saness_attack_2_down","order":13,"path":"sprites/spr_sans_saness_attack_2_down/spr_sans_saness_attack_2_down.yy",},
     {"name":"spr_swap_papyrus_changed_reality_attack_2_down_up","order":2,"path":"sprites/spr_swap_papyrus_changed_reality_attack_2_down_up/spr_swap_papyrus_changed_reality_attack_2_down_up.yy",},

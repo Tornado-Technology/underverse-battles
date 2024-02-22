@@ -14,14 +14,15 @@ export enum matchType {
 
 export default class Matchmaker {
   private static matches = new Map<matchType, Array<Client>>();
+  private static types = new Map<Client, matchType>();
 
   public static addWaiting(client: Client, type: matchType): void {
     const array = this.matches.get(type);
     if (!array) {
-      this.matches.set(type, [client]);
-      return;
+      this.matches.set(type, []);
     }
     array.push(client);
+    this.types.set(client, type);
   }
 
   public static tryAddWaiting(client: Client, type: matchType): boolean {
@@ -40,12 +41,13 @@ export default class Matchmaker {
     return true;
   }
 
-  public static removeWaiting(client: Client, type: matchType): void {
-    const array = this.matches.get(type);
+  public static removeWaiting(client: Client): void {
+    const array = this.matches.get(this.types.get(client));
     if (!array) {
       return;
     }
     array.splice(array.indexOf(client), 1);
+    this.types.delete(client);
   }
 
   public static makeMatch(client1: Client, client2: Client): void {

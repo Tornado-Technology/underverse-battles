@@ -1,21 +1,24 @@
-function ink_sans_attack0(pow, player) {
+function ink_sans_attack0(player, _power, type = irandom(1)) {
 	instance_create(obj_attack_ink_sans_0, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 
-function ink_sans_attack1(pow, player) {
+function ink_sans_attack1(player, _power, type = irandom(1)) {
 	instance_create(obj_attack_ink_sans_1, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 
-function ink_sans_attack2(pow, player) {
+function ink_sans_attack2(player, _power, type = irandom(1)) {
 	instance_create(obj_attack_ink_sans_2, {
 		character_instance: player,
-		_power: pow
+		_power: _power,
+		type: type,
 	});
 }
 

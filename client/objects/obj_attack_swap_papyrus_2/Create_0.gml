@@ -4,7 +4,6 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 1);
 switch (type) {
 	case 0:
 		var border_decrease = 25 + _power * 3;

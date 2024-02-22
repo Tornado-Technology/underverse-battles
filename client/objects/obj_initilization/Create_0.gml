@@ -6,7 +6,6 @@ if (netlog_enabled) {
 
 logger.info("Initilization start...");
 
-randomize();
 audio_group_load_all();
 
 input_init_bind_default();
