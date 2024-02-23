@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_big_star_inside_soul",
+  "name": "obj_pattern_aiming_star",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -12,7 +12,10 @@
     "name": "Star",
     "path": "folders/Attack Patterns/Star.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pattern",
+    "path": "objects/obj_pattern/obj_pattern.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -5,11 +5,11 @@ on_border_created = function () {
 };
 
 
-type = irandom_range(0, 4);
+type = irandom_range(0, 0);
 switch (type) {
 	case 0 :
 	create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_arena_blades, {
+		pattern_instance = create_pattern(obj_pattern_intersecting_blades, {
 			blades_swing: obj_blades_dream
 		});
 	break;

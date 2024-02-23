@@ -19,10 +19,10 @@ if (is_spining) {
 }
 	
 if (is_moving) {
-	if (step == 0 && speed < speed_max) { // Набирание скорости
+	if (step == 0 && speed < speed_max) { // Speed up
 		speed += speed_const / 2 * dtime;
 	}
-	else if (step == 0) { // Движение
+	else if (step == 0) { // Movement
 		step = 1;
 		speed = speed_max;
 	}

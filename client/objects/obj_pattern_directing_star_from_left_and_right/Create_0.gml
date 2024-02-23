@@ -9,42 +9,37 @@ callback = function () {
 };
 
 update = function () {
-	
-	var i = 0;
-	var _speed = 0.1;
+	var distance_factor = 0;
+	var speed_step = 0.1;
 	
 	repeat (_power div 1 + 2) {
-		var size = irandom_range(0, 3);
+		var spawn_option_index = irandom_range(0, 3);
+		var distance = choose(-25, -20, -17, 17, 20, 25);
 		
-		var decrease = choose(-25, -20, -17, 17, 20, 25);
-		switch (size) {
+		switch (spawn_option_index) {
 			case 0:
-					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spinning);
-					star_instance.speed_const = 3 + _power * _speed;
-					star_instance.direction_const = 180;
-					break;
-	
+				var star_instance = instance_create_depth(border_instance.x + border_instance.right + 8, soul_instance.y - distance * distance_factor, fight_depth.bullet_outside, star_spinning);
+				star_instance.speed_const = 3 + _power * speed_step;
+				star_instance.direction_const = 180;
+				break;
 			case 1 :
-					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spinning);
-					star_instance.speed_const = 3 + _power * _speed;
-					star_instance.direction_const = 180;	
-					break;
-	
+				var star_instance = instance_create_depth(border_instance.x + border_instance.right + 8, soul_instance.y + distance * distance_factor, fight_depth.bullet_outside, star_spinning);
+				star_instance.speed_const = 3 + _power * speed_step;
+				star_instance.direction_const = 180;	
+				break;
 			case 2 :		
-					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spinning);
-					star_instance.speed_const = 3 + _power * _speed;		
-					break;
-	
+				var star_instance = instance_create_depth(border_instance.x - border_instance.left - 8, soul_instance.y - distance * distance_factor, fight_depth.bullet_outside, star_spinning);
+				star_instance.speed_const = 3 + _power * speed_step;		
+				break;
 			case 3 :
-					var star_instance = instance_create_depth(border_instance.x - border_instance.left, soul_instance.y + decrease * i, fight_depth.bullet_outside, star_spinning);
-					star_instance.speed_const = 3 + _power * _speed;			
-					break;
-			};
-				
-	 i += 1.6;
-	};
-		audio_play_sound_once(snd_projectile);
-};
+				var star_instance = instance_create_depth(border_instance.x - border_instance.left - 8, soul_instance.y + distance * distance_factor, fight_depth.bullet_outside, star_spinning);
+				star_instance.speed_const = 3 + _power * speed_step;			
+				break;
+		}
+		distance_factor += 1.6;
+	}
+	audio_play_sound_plugging(snd_projectile);
+}
 
 var period = 30 - 2 * _power;
 var repeats = 10 + _power * 2;

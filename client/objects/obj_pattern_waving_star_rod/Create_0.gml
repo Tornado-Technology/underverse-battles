@@ -20,12 +20,11 @@ update = function () {
 			target : soul_instance,
 			_power : _power
 		});
-		
 	}
 }
 
 var period = 80 - _power * 10;
-var repeats = 6 + _power;
+var repeats = 6 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
@@ -34,6 +33,6 @@ if (variable_instance_exists(id, "custom_repeats")) {
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

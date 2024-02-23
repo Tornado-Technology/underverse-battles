@@ -22,7 +22,7 @@ spawn_star = function () {
 		star.direction_const = point_direction(star.x, star.y, target.x, target.y);
 	};
 		
-	star.speed_const = 3 + _power * 0.1;	
+	star.speed_const = random_range(2.5 + _power * 0.1, 3.2) + _power * 0.2;	
 }
 
 time_source_spawn_star = time_source_create(time_source_game, time_spawn, time_source_units_seconds, spawn_star, [], star_count);

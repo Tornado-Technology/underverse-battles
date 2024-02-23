@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pattern_star_spawn_in_aren",
+  "name": "obj_pattern_waving_star_rod",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
@@ -9,13 +9,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Star",
-    "path": "folders/Attack Patterns/Star.yy",
+    "name": "Star Rod",
+    "path": "folders/Attack Patterns/Star Rod.yy",
   },
-  "parentObjectId": {
-    "name": "obj_pattern",
-    "path": "objects/obj_pattern/obj_pattern.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

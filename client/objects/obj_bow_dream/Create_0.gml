@@ -9,7 +9,8 @@ target = obj_battle_soul;
 image_angle = point_direction(x, y, target.x, target.y);
 
 arrows_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_arrows_dream, {
-	_power : _power
+	_power : _power,
+	direction: direction,
 });
 
 arrows_instance.speed_const = 3 + _power * step;

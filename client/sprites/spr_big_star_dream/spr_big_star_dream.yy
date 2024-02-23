@@ -49,7 +49,7 @@
     ],
     "top": 1,
   },
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Bullets",
     "path": "folders/Characteres/Dream/Sprites/Bullets.yy",
@@ -86,7 +86,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 64,
-    "yorigin": 64,
+    "yorigin": 62,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

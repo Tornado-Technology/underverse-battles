@@ -3,7 +3,6 @@ event_inherited();
 is_trap = false;
 is_target = false;
 is_swung = false;
-is_moving_left = false;
 is_moving_line = false;
 stop_alpha = false;
 
@@ -15,17 +14,39 @@ image_alpha = 0;
 acc = 0;
 max_acc = 0;
 
-target_ = undefined;
+border = obj_battle_border;
+
+target_ = 0;
+
+move_back = function() {
+	step = 0;
+	
+	if (direction == 0) {
+		point_stop_x = border.x - border.left - 20;
+		direction = 180;
+	}
+	else if (direction == 180) {
+		point_stop_x = border.x + border.right + 20;
+		direction = 0;
+	}
+	
+	if (direction == 270) {
+		point_stop_y = border.y - border.up - 20;
+		direction = 90;
+	}
+	else if (direction == 90) {
+		point_stop_y = border.y + border.down + 20;
+		direction = 270;
+	}
+	
+	audio_play_sound_plugging(snd_projectile);
+}
 
 trap = function () {
 	is_trap = true;
 	time_source_destroy_blades = time_source_create(time_source_game, time_destroy / 60, time_source_units_seconds, function () {
 	 stop_alpha = true;
 	})
-}
-
-move_left = function () {
-	is_moving_left = true;
 }
 
 _target = function (target) {
@@ -55,7 +76,6 @@ swung = function (_max_acc) {
 	time_source_start(time_source_move_next);
 	time_source_start(time_source_move_finish);
 }
-
 
 move_line = function () {
 	is_moving_line = true;

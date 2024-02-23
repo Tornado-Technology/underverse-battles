@@ -1,4 +1,4 @@
-// Arguments: blades_left_swing blades_right_swing
+// Arguments: blades_swing
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
@@ -18,22 +18,14 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-update = function() {
-	blades_instance_01.move(3 + _power * 0.1);
-	blades_instance_01.move_up();
+time_source_update = time_source_create(time_source_game, 0.1, time_source_units_seconds, function () {
+	blades_instance_01.move(3.5 + _power * 0.2);
 	blades_instance_01._target(soul_instance);
 	
-	blades_instance_02.move(3 + _power * 0.2);
-	blades_instance_02.move_left();
-}
+	blades_instance_02.move(3.5 + _power * 0.2);
+	blades_instance_02._target(soul_instance);
+});
 
-var period = 32 - 2 * _power;
-var repeats = 14 + (_power div 2);
-
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	update();
-}, [], -1);
-
-time_source_update_destroy = time_source_create(time_source_game, repeats * period / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 5 + _power * 1, time_source_units_seconds, function () {
 	instance_destroy();	
 });
