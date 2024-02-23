@@ -4,6 +4,7 @@ is_trap = false;
 is_target = false;
 is_swung = false;
 is_moving_left = false;
+is_moving_line = false;
 stop_alpha = false;
 
 step_alpha = 0.03;
@@ -53,4 +54,9 @@ swung = function (_max_acc) {
 	time_source_start(time_source_move_start);
 	time_source_start(time_source_move_next);
 	time_source_start(time_source_move_finish);
+}
+
+
+move_line = function () {
+	is_moving_line = true;
 }
