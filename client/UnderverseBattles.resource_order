@@ -223,6 +223,7 @@
     {"name":"create_falling_bone","order":3,"path":"scripts/create_falling_bone/create_falling_bone.yy",},
     {"name":"spr_sans_saness_attack_2_up_down","order":8,"path":"sprites/spr_sans_saness_attack_2_up_down/spr_sans_saness_attack_2_up_down.yy",},
     {"name":"spr_error_sans_no_textures_frame","order":2,"path":"sprites/spr_error_sans_no_textures_frame/spr_error_sans_no_textures_frame.yy",},
+    {"name":"pseudorandom","order":1,"path":"scripts/pseudorandom/pseudorandom.yy",},
     {"name":"spr_swap_papyrus_christmas_attack_2_right_down","order":10,"path":"sprites/spr_swap_papyrus_christmas_attack_2_right_down/spr_swap_papyrus_christmas_attack_2_right_down.yy",},
     {"name":"obj_attack_error_sans_anti_piracy_2","order":3,"path":"objects/obj_attack_error_sans_anti_piracy_2/obj_attack_error_sans_anti_piracy_2.yy",},
     {"name":"spr_swap_papyrus_attack_2_left_down","order":9,"path":"sprites/spr_swap_papyrus_attack_2_left_down/spr_swap_papyrus_attack_2_left_down.yy",},

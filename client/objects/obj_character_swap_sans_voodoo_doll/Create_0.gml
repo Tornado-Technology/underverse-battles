@@ -31,7 +31,7 @@ head_cross_sprite = spr_voodoo_head_cross;
 head_xchara_sprite = spr_voodoo_head_xchara;
 head_green_sprite = spr_voodoo_head_green;
 
-head_sprites = [head_ink_sprite, head_error_sprite, head_sans_sprite, head_fell_sans_sprite, head_swap_sans_sprite, head_swap_papyrus_sprite, head_cross_sprite, head_xchara_sprite, head_green_sprite];
+head_sprites = [head_ink_sprite, head_error_sprite, head_sans_sprite, head_fell_sans_sprite, head_swap_sans_sprite, head_swap_papyrus_sprite, head_xchara_sprite, head_cross_sprite, head_green_sprite];
 current_head_sprite = spr_empty;
 
 // Method
