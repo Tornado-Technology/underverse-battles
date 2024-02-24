@@ -59,6 +59,7 @@ switch(state) {
 		}
 			
 		// Create battle
+		pseudorandom();
 		instance_create_one(obj_battle);
 		break;
 	

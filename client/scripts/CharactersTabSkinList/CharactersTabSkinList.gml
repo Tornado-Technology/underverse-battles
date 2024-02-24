@@ -8,8 +8,11 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	characters = [];
 	character_frames = [];
 	character_id = 0;
+	is_hover_on_button = false;
+	static color_selected = c_yellow;
 	static button_offset_x = 20;
-	static button_offset_y = 20;
+	static button_offset_y = 15;
+	static base_init = init;
 	static base_update = update;
 	static base_draw = draw;
 	static base_on_draw_cell = on_draw_cell;
@@ -53,18 +56,50 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 		init();
 	}
 	
+	static init = function() {
+		button_close.text_hover_color = color_selected;
+		
+		base_init();
+	}
+	
 	static close = function() {
+		selected_character = 0;
+		
 		audio_play_sound_plugging(snd_selection);
-		change_selected_character(0, false);
+		menu_instance.input_enter = 0;
 		menu_instance.change_tab(characters_tab.characters);
 	}
 	
-	static update = function() {	
+	static update = function() {
 		if (menu_instance.input_back) {
-			audio_play_sound_plugging(snd_selection);
 			close();
+			return;
 		}
-		base_update();
+		
+		if (menu_instance.input_vertical != 0) {
+			var new_id = selected_character + count_cell_horizontal * menu_instance.input_vertical
+			
+			if (new_id >= array_length(character_frames)) {
+				is_hover_on_button = true;
+				button_close.focus();
+				hide_selection();
+				audio_play_sound_plugging(snd_click);
+			} else if(is_hover_on_button) {
+				is_hover_on_button = false;
+				menu_instance.input_vertical = 0;
+				button_close.unfocus();
+				show_selection();
+				audio_play_sound_plugging(snd_click);
+			}
+		}
+		
+		if (!is_hover_on_button) {
+			base_update();
+		}
+		
+		if (menu_instance.input_enter && button_close.is_focus) {
+			button_close.press();
+		}
 	}
 	
 	static draw = function() {

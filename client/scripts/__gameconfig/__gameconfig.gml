@@ -1,6 +1,6 @@
 // Main game information
 #macro game_name "UnderverseBattles"
-#macro game_version "v2.1.5"
+#macro game_version "v2.1.6"
 #macro game_base_fps 60
 
 // Builds

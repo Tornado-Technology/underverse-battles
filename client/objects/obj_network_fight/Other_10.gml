@@ -1,4 +1,5 @@
 if (state == fight_state.battle) {
+	instance_create_one(obj_battle);
 	timer_stop();
 }
 

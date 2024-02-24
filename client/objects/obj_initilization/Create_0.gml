@@ -19,6 +19,9 @@ background_load();
 soundtrack_load();
 translate_load();
 
+// Random set
+pseudorandom();
+
 if (is_desktop) {
 	input_load();
 }

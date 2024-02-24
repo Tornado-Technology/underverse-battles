@@ -19,8 +19,8 @@ rec_line_size = 1;
 
 // Distantion
 dist_frame = sprite_get_width(spr_character_frame);
-dist_x = dist_frame / 4 + 3;
-dist_y = dist_frame / 4 + 5;
+dist_x = 5;
+dist_y = 5;
 
 frame_width = sprite_get_width(spr_character_frame);
 frame_height = sprite_get_height(spr_character_frame);
@@ -43,7 +43,7 @@ time_source_character_animation = time_source_create(time_source_game, 10, time_
 }, [], -1);
 time_source_start(time_source_character_animation);
 
-table_char_max_x = 5;
+table_char_max_x = 6;
 
 // Target
 sprite_target = spr_character_frame_target1;
