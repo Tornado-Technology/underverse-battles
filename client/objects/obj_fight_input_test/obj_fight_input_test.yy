@@ -1,11 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_fight_attack_test",
+  "name": "obj_fight_input_test",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -14,8 +13,8 @@
     "path": "folders/Objects/Test.yy",
   },
   "parentObjectId": {
-    "name": "obj_fight",
-    "path": "objects/obj_fight/obj_fight.yy",
+    "name": "obj_fight_input",
+    "path": "objects/obj_fight_input/obj_fight_input.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,9 +32,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_dev_fight",
-    "path": "sprites/spr_dev_fight/spr_dev_fight.yy",
+    "name": "spr_dev_fight_ui",
+    "path": "sprites/spr_dev_fight_ui/spr_dev_fight_ui.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
