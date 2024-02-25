@@ -12,7 +12,7 @@ function green_attack0(player, _power, type = irandom(3)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function green_attack1(player, _power, type = irandom(3)) {
+function green_attack1(player, _power, type = irandom(2)) {
 	instance_create(obj_attack_green_1, {
 		character_instance: player,
 		_power: _power,
@@ -23,7 +23,7 @@ function green_attack1(player, _power, type = irandom(3)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function green_attack2(player, _power, type = irandom(3)) {
+function green_attack2(player, _power, type = irandom(2)) {
 	instance_create(obj_attack_green_2, {
 		character_instance: player,
 		_power: _power,

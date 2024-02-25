@@ -205,6 +205,7 @@ packet_handler_register("fightPower", function(data) {
 packet_handler_register("fightSkip", function(data) {
 	// Send obj_fight this info
 	fight_set_player_skip(data.playerId);
+	statistics_set_selection_attack_network(data.playerId, fight_action_type.skip);
 });
 
 packet_handler_register("fightSpecialAction", function(data) {

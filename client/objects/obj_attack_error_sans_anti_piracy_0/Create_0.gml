@@ -4,7 +4,6 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 4);
 switch (type) {
 	case 0:
 		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 30, battle_border.right - 30);

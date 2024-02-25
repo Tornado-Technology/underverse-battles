@@ -1,19 +1,27 @@
 if (state == fight_state.battle) {
-	instance_create_one(obj_battle);
 	timer_stop();
+	if (initiative == _opponent) {
+		instance_create_one(obj_battle, {
+			attack_type: attack_type,
+		});
+		exit;
+	}
+	instance_create_one(obj_battle);
 }
 
 if (state == fight_state.dodge) {
-	if (fight_get_initiative() == 1) {
-		player[0].on_dodged(0);
+	if (fight_get_initiative() == _opponent) {
+		player[you].on_dodged(you);
 	}
-	if (fight_get_initiative() == 0) {
-		if (player_is_skipping(0)) {
-			player[0].on_skipping(0);
+	if (fight_get_initiative() == you) {
+		if (player_is_skipping(you)) {
+			player[you].on_skipping(you);
 		}
 	}
 	
 	fight_draw_dodge();
+	statistics_set_selection_attack_network(you, player_action[you]);
+	statistics_set_selection_attack_network(_opponent, player_action[_opponent]);
 	statistics_set_damage(0);
 	timer_stop();
 	state = fight_state.reset;
