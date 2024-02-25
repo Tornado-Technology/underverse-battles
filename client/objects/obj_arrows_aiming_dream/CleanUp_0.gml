@@ -1,2 +1,0 @@
-time_source_destroy(time_source_target);
-time_source_destroy(time_source_mover);

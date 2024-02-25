@@ -14,17 +14,24 @@ callback = function () {
 	blades_instance_02.image_angle = 0;
 	blades_instance_02.point_stop_x = border_instance.x + border_instance.right + 20;
 	
+	blades_instance_01.speed_const = 1 + _power * 0.15;
+	blades_instance_02.speed_const = 1 + _power * 0.15;
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
 }
 
 time_source_update = time_source_create(time_source_game, 0.1, time_source_units_seconds, function () {
-	blades_instance_01.move(3.5 + _power * 0.2);
-	blades_instance_01._target(soul_instance);
-	
-	blades_instance_02.move(3.5 + _power * 0.2);
-	blades_instance_02._target(soul_instance);
+	blades_instance_01.move(3 + _power * 0.2);
+	blades_instance_01.target(soul_instance);
+	blades_instance_02.move(3 + _power * 0.2);
+	blades_instance_02.target(soul_instance);
+	blades_instance_02.move_spinning();
 });
+
+
+var period = 32 - 2 * _power;
+var repeats = 14 + _power * 3;
+
 
 time_source_update_destroy = time_source_create(time_source_game, 5 + _power * 1, time_source_units_seconds, function () {
 	instance_destroy();	

@@ -1,1 +1,1 @@
-instance_destroy(time_source_destroy_tentacles);
+time_source_destroy(time_source_destroy_tentacles);

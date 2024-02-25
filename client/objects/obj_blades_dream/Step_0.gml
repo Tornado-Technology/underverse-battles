@@ -5,12 +5,6 @@ if(!stop_alpha)
 
 image_alpha = alpha;
 
-
-if (is_spining) {
-	image_angle += speed_angle * dtime;
-}
-
-
 if (is_moving) {
 	if (step == 0 && speed < speed_max) { // Speed up
 		speed += speed_const / 2 * dtime;
@@ -36,10 +30,15 @@ if (is_moving) {
 }
 
 if (is_target) {
-	image_angle = lerp(image_angle, target_, speed_const * dtime);
-	x += dcos(target_);
-	y += dsin(target_);
+	image_angle = aim;
+	
+	if (step == 0) {
+		x = approach(x, obj_battle_soul.x,  speed_const * dtime);
+		y = approach(y, obj_battle_soul.y,  speed_const * dtime);
+	}
 }
+
+
 
 if (is_trap) {
 	motion_set(direction, speed_const * dtime);
@@ -73,9 +72,15 @@ if (is_swung) {
 	}
 }
 
+if (is_spinning) {
+	image_angle += angle;
+	angle += speed_const * dtime;
+}
+
+
 if (stop_alpha) {
 	alpha -= step_alpha * dtime;
-	if (alpha <= 0) {
+	if (alpha <= 0.2) {
 		instance_destroy();
 	}	
 }

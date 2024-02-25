@@ -12,7 +12,7 @@ update = function () {
 	repeat (_power > 2 ? 1 : 1) {
 		var coord = [];
 		coord = rand_side_from(border_instance.x - border_instance.left - 69, border_instance.y - border_instance.up - 69, border_instance.x + border_instance.right + 69, border_instance.y + border_instance.down + 69);
-	 	 var  staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_staff_star_dream, {
+	 	 var  staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_glands_star_dream, {
 			image_angle: point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y) + 225,
 			side: -1,
 			angle_speed_const: -1,

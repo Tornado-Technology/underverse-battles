@@ -29,6 +29,7 @@ repeat (count) {
 		_xx = border_instance.x - border_instance.left - offset - blades_x * i;	
 		_yy = soul_instance.y;
 	}
+	
 	var  blades_instance = instance_create_depth(_xx, _yy, fight_depth.bullet_outside_hight, blades_swing, {
 		time_destroy : 32
 	});

@@ -4,9 +4,12 @@ is_trap = false;
 is_target = false;
 is_swung = false;
 is_moving_line = false;
+is_spinning = false;
 stop_alpha = false;
 
 step_alpha = 0.03;
+
+angle = 0;
 
 stage = 0;
 alpha = 0;
@@ -15,8 +18,8 @@ acc = 0;
 max_acc = 0;
 
 border = obj_battle_border;
-
-target_ = 0;
+rotational = false;
+aim = 0;
 
 move_back = function() {
 	step = 0;
@@ -49,18 +52,19 @@ trap = function () {
 	})
 }
 
-_target = function (target) {
+target = function (_target) {
 	is_target = true;
-	target_ = point_direction(x, y, target.x, target.y);	
+	aim = point_direction(x, y, _target.x, _target.y);	
+	_tar = _target;
 }
 
 swung = function (_max_acc) {
 	max_acc = _max_acc;
 	is_swung = true;
 	
-	time_source_move_start = time_source_create(time_source_game, 1/2, time_source_units_seconds, function () {
-	audio_play_sound_plugging(snd_projectile);
-	stage = 1;
+	time_source_move_start = time_source_create(time_source_game, 1 / 2, time_source_units_seconds, function () {
+		audio_play_sound_plugging(snd_projectile);
+		stage = 1;
 	});
 
 	time_source_move_next = time_source_create(time_source_game, (30 + max_acc) / 60, time_source_units_seconds, function () {
@@ -79,4 +83,12 @@ swung = function (_max_acc) {
 
 move_line = function () {
 	is_moving_line = true;
+}
+
+move_spinning = function () {
+	is_spinning = true;
+}
+
+move_rotational = function () {
+	rotational = true;	
 }

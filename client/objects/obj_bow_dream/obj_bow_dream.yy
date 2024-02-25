@@ -15,7 +15,10 @@
     "name": "Bullets",
     "path": "folders/Characteres/Dream/Bullets.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_battle_bullet",
+    "path": "objects/obj_battle_bullet/obj_battle_bullet.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

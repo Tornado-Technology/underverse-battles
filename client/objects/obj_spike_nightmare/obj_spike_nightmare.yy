@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_spear_green",
-    "path": "sprites/spr_spear_green/spr_spear_green.yy",
+    "name": "spr_spike_nightmare",
+    "path": "sprites/spr_spike_nightmare/spr_spike_nightmare.yy",
   },
   "spriteMaskId": null,
   "visible": true,

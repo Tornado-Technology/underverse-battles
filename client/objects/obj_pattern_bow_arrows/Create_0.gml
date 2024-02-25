@@ -19,7 +19,7 @@ if (instance_number(bow) != _power + 1) {
 	var py1 = border_instance.y - border_instance.up - offset_y;
 	var py2 = border_instance.y + border_instance.down + offset_y + 10;
 	
-	var coord_new	= rand_side_from(choose(px1, px2), choose(py1, py2), choose(px2, px1), choose (py1, py2));
+	var coord_new = rand_side_from(choose(px1, px2), choose(py1, py2), choose(px2, px1), choose (py1, py2));
 	
 	var bow_instance = instance_create_depth(coord_new[0] , coord_new[1], fight_depth.bullet_outside, bow, {
 		target_time : 1 - _power * 0.1,
@@ -27,9 +27,10 @@ if (instance_number(bow) != _power + 1) {
 		destroy_time : 0.5 - _power * 0.1,
 		_power : _power,
 		arrows : arrows,
-		border_instance : border_instance
+		speed_const : 3 + _power * 0.3
 	});					
-				
+	
+	bow_instance.spwan();
 	};
 };
 
@@ -46,9 +47,6 @@ update();
 
 
 time_source_update_destroy = time_source_create(time_source_game,  period * (repeats + 1) / 60, time_source_units_seconds, function () {
-	if (instance_exists(bow)) {
-		instance_destroy(bow);	
-	}
 instance_destroy();	
 });	
 	
