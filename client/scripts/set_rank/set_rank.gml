@@ -11,5 +11,8 @@ function set_rank(rp){
 	if (rp >= 250 && rp < 335)	{ rank = translate_get(textpath + "Orange");	rank_color = make_color_rgb(255, 153, 51); }
 	if (rp >= 335)				{ rank = translate_get(textpath + "Red");		rank_color = make_color_rgb(255, 63, 63); }
 
-	return [rank, rank_color];
+	return {
+		rank: rank,
+		color: rank_color,
+	};
 }

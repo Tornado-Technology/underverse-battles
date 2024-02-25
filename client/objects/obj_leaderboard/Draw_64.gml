@@ -11,8 +11,9 @@ draw_set_halign(fa_left);
 
 var i = 0;
 repeat(array_length(list)) {
-	draw_text_outlined(width_quarter, list_top_position + i * list_offset, c_white, c_black, string(i + 1) + ".");
-	draw_text_outlined(width_third, list_top_position + i * list_offset, c_white, c_black, list[i][0]);
-	draw_text_outlined(width - width_third, list_top_position + i * list_offset, c_white, c_black, string(list[i][1]));
+	var struct = set_rank(list[i][1]);
+	draw_text_outlined(width_quarter, list_top_position + i * list_offset, struct.color, c_black, string(i + 1) + ".");
+	draw_text_outlined(width_third, list_top_position + i * list_offset, struct.color, c_black, list[i][0]);
+	draw_text_outlined(width - width_third, list_top_position + i * list_offset, struct.color, c_black, string(list[i][1]));
 	i++;
 }
