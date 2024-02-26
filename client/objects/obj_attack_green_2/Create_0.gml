@@ -26,7 +26,7 @@ switch (type) {
 			bone: obj_bone_green
 		});
 		break;
-	case 2:
+	default:
 		create_border(battle_border.up - 85, battle_border.down - 45, battle_border.left - 50, battle_border.right - 50);
 		pattern_instance = create_pattern(obj_pattern_solo_gasterblaster_from_above, {
 			soul_type: battle_soul_type.red,

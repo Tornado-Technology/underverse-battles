@@ -14,7 +14,7 @@ switch (type) {
 			is_double: choose(true, false)
 		});
 		break;
-	case 1:
+	default:
 		var border_decrease = 20;
 		create_border(battle_border.up - border_decrease, battle_border.down - border_decrease, battle_border.left - border_decrease, battle_border.right - border_decrease);
 		pattern_instance = create_pattern(obj_pattern_orange_attack_four_bones, {

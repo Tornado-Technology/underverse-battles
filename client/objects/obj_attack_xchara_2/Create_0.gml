@@ -12,7 +12,7 @@ switch (type) {
 			damage_zone: obj_damage_zone_warning_xchara
 		});
 		break;
-	case 1:
+	default:
 		create_border(battle_border.up - 60, battle_border.down - 60, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_damage_zone_line, {
 			damage_zone: obj_damage_zone_warning_xchara

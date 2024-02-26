@@ -19,7 +19,7 @@ switch (type) {
 			gasterblaster: obj_gasterblaster_error_sans_anti_piracy
 		});
 		break;
-	case 2:
+	default:
 		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_gasterblasters_with_platforms, {
 			bone: obj_bone_error_sans,

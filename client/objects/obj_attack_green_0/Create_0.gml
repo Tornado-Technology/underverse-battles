@@ -25,7 +25,7 @@ switch (type) {
 			spike: obj_spear_green
 		});
 		break;
-	case 3:
+	default:
 		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left - 25, battle_border.right - 25);
 		pattern_instance = create_pattern(obj_pattern_poking_bones_from_sides, {
 			bone: obj_bone_green,

@@ -13,7 +13,7 @@ switch (type) {
 			is_double: choose(true, false)
 		});
 		break;
-	case 1:
+	default:
 		create_border(battle_border.up - 40, battle_border.down - 40, battle_border.left + 20, battle_border.right + 20);
 		pattern_instance = create_pattern(obj_pattern_blue_attack_with_platforms, {
 			bone: obj_bone_sans,

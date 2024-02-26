@@ -33,7 +33,7 @@ switch (type) {
 			bone: obj_bone_sharp_error_sans_anti_piracy
 		});
 		break;
-	case 4:
+	default:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_flying_bones, {
 			bone: obj_bone_topref_error_sans_anti_piracy,

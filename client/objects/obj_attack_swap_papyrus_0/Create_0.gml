@@ -24,7 +24,7 @@ switch (type) {
 			bone: obj_bone_swap_papyrus
 		});
 		break;
-	case 3:
+	default:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_two_bones, {
 			soul_type: battle_soul_type.orange,

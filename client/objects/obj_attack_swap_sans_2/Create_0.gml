@@ -19,7 +19,7 @@ switch (type) {
 			gasterblaster: obj_gasterblaster_swap_sans
 		});
 		break;
-	case 2:
+	default:
 		create_border(battle_border.up - 35, battle_border.down - 35, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_gasterblasters_with_bone_rows, {
 			bone: obj_bone_swap_sans,
