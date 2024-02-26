@@ -1,4 +1,4 @@
-shift = 0;
+shift = -25;
 size = achievement_list_length;
 
 alpha = 0.4;
@@ -12,8 +12,8 @@ var width = display_get_gui_width();
 var height = display_get_gui_height();
 // ###
 
-surface_cord = new Vector2(120, 50);
-surface_size = new Vector2(width - 20, 180);
+surface_cord = new Vector2(80, 50);
+surface_size = new Vector2(width - 20, 200);
 surface = surface_create(surface_size.x, surface_size.y);
 
 scroll_up = function(coefficient = 1) {

@@ -15,10 +15,10 @@ draw_reset();
 // Arrows
 var arror_sprite_width = sprite_get_width(spr_stat_arrow) / 2;
 var arror_sprite_height = sprite_get_height(spr_stat_arrow) / 2;
-var arror_position_x = width - 12;
+var arror_position_x = width - 60;
 
 if (shift > -25) {
-	var arror_position_y = surface_cord.y + 12;
+	var arror_position_y = surface_cord.y + 22;
 	
 	draw_sprite(spr_stat_arrow, 0, arror_position_x, arror_position_y);
 	
@@ -30,7 +30,7 @@ if (shift > -25) {
 }
 
 if (shift < size * 60 - 200) {
-	var arror_position_y = surface_cord.y + surface_size.y - 12;
+	var arror_position_y = surface_cord.y + surface_size.y - 22;
 	
 	draw_sprite_ext(spr_stat_arrow, 0, arror_position_x, arror_position_y, 1, 1, 180, c_white, 1);
 	
@@ -54,13 +54,13 @@ for (var ach = 0; ach < size; ach++) {
 	
 	draw_sprite_ext(achievement.icon, 0, x + 48, text_y, 1, 1, 0, achievement.is_taken ? c_white : c_dkgray, 1);
 	draw_set_color(c_white);
-	draw_sprite_ext(spr_ui_achievement_border, achievement.is_taken ? 0 : 1, x, text_y, -1.5, 1, 0, c_white, 1);
+	draw_sprite_ext(spr_ui_achievement_border, achievement.is_taken ? 0 : 1, x, text_y, -1.7, 1, 0, c_white, 1);
 	
 	draw_set_font(global._font_main_determination);
 	draw_set_halign(fa_left);
 	
 	draw_text(x + 50, text_y - 19, achievement.name);
-	draw_text_ext(x + 50, text_y + 3, achievement.description, 12, 300);
+	draw_text_ext(x + 50, text_y + 3, achievement.description, 12, 260);
 }
 #endregion
 
