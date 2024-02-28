@@ -1,11 +1,5 @@
 if (state == fight_state.battle) {
 	timer_stop();
-	if (initiative == _opponent) {
-		instance_create_one(obj_battle, {
-			attack_type: attack_type,
-		});
-		exit;
-	}
 	instance_create_one(obj_battle);
 }
 
