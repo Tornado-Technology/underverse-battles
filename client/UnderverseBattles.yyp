@@ -1199,7 +1199,6 @@
     {"id":{"name":"spr_green_christmas_tree_idle","path":"sprites/spr_green_christmas_tree_idle/spr_green_christmas_tree_idle.yy",},},
     {"id":{"name":"spr_cross_attack_2_down_up","path":"sprites/spr_cross_attack_2_down_up/spr_cross_attack_2_down_up.yy",},},
     {"id":{"name":"spr_error_sans_no_textures_frame","path":"sprites/spr_error_sans_no_textures_frame/spr_error_sans_no_textures_frame.yy",},},
-    {"id":{"name":"pseudorandom","path":"scripts/pseudorandom/pseudorandom.yy",},},
     {"id":{"name":"input_reset_all_working_key","path":"scripts/input_reset_all_working_key/input_reset_all_working_key.yy",},},
     {"id":{"name":"input_unbind","path":"scripts/input_unbind/input_unbind.yy",},},
     {"id":{"name":"spr_sans_sitting6","path":"sprites/spr_sans_sitting6/spr_sans_sitting6.yy",},},

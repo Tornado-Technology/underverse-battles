@@ -365,12 +365,12 @@ export default class Fight {
   }
 
   public battleFinish(client: Client, damage: number) {
+    const otherClient = this.getOtherClient(client);
+    otherClient.sendFightBattleEnd(damage);
+
     if (this.state == state.battle) {
       this.resetState();
     }
-
-    const otherClient = this.getOtherClient(client);
-    otherClient.sendFightBattleEnd(damage);
   }
 
   public async setHp(client: Client, hp: number): Promise<void> {

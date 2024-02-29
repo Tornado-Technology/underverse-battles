@@ -20,7 +20,7 @@ soundtrack_load();
 translate_load();
 
 // Random set
-pseudorandom();
+randomize();
 
 if (is_desktop) {
 	input_load();
