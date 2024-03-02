@@ -6,7 +6,7 @@ edited_objects_number = 0;
 
 edit_button = UIImageButton(spr_edit_button_green, function() {
 	if (!is_can_input || fight_get_initiative() != 0) return;
-	press();
+	press(irandom(edit_attack_number_max));
 	send_to_server();
 });
 
