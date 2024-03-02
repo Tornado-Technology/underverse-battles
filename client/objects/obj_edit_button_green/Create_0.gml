@@ -30,8 +30,10 @@ cooldown = time_source_create(time_source_game, 1, time_source_units_seconds, fu
 });
 
 press = function(attack_index) {
-	var edit_attack_number_current = edit_attack_number;
-	while (edit_attack_number == edit_attack_number_current) {
+	if (edit_attack_number == attack_index) {
+		edit_attack_number = (attack_index + irandom_range(1, edit_attack_number_max)) % (edit_attack_number_max + 1);
+	}
+	else {
 		edit_attack_number = attack_index;
 	}
 	edit_objects();
