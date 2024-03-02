@@ -88,7 +88,7 @@ export default class Matchmaker {
     }
 
     setTimeout(() => {
-      let readyСlients = array.slice(0, array.length - 1 - array.length % this.getRequiredPlayerCount(type));
+      let readyСlients = array.slice(0, array.length - array.length % this.getRequiredPlayerCount(type));
       if (type === matchType.rating_1vs1 || type === matchType.rating_2vs2) {
         readyСlients.sort((client1, client2) => client1.rating - client2.rating);
       } else {
