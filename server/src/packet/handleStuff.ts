@@ -360,7 +360,7 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     
     case 'fightExtraAction':
-      client.fight.instance?.setExtraAction(client);
+      client.fight.instance?.setExtraAction(client, data.attackIndex);
       break;
 
     case 'fightHealAction':

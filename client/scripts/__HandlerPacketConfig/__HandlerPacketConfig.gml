@@ -220,7 +220,7 @@ packet_handler_register("fightSpecialActionCharge", function(data) {
 });
 
 packet_handler_register("fightExtraAction", function(data) {
-	battle_use_extra_action();
+	battle_use_extra_action(data.attackIndex);
 });
 
 packet_handler_register("fightResetAction", function(data) {

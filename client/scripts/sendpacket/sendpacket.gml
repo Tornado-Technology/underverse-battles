@@ -127,8 +127,10 @@ function send_fight_special_action() {
     send("fightSpecialAction");
 }
 
-function send_fight_extra_action() {
-    send("fightExtraAction");
+function send_fight_extra_action(attack_index) {
+    send("fightExtraAction", {
+		attackIndex: attack_index,
+	});
 }
 
 function send_fight_skip() {

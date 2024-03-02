@@ -147,11 +147,18 @@ switch (edit_button.edit_attack_number) {
 	}
 }
 
+change_time_source_update = function() {
+	time_source_destroy(time_source_update);
+	time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+		update();
+	}, [], -1);
+	update();
+	time_source_start(time_source_update);
+}
+
 var final_time = 11;
 	
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	update();
-}, [], -1);
+change_time_source_update();
 time_source_update_stop = time_source_create(time_source_game, final_time, time_source_units_seconds, function () {
 	time_source_stop(time_source_update);
 	time_source_start(time_source_update_destroy);

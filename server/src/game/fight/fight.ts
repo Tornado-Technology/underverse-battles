@@ -250,8 +250,8 @@ export default class Fight {
     client?.sendFightResetPower();
   }
 
-  public setExtraAction(client: Client): void {
-    this.getOtherClient(client)?.sendFightExtraAction();
+  public setExtraAction(client: Client, attackIndex: number): void {
+    this.getOtherClient(client)?.sendFightExtraAction(attackIndex);
   }
 
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
