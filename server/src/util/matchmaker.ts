@@ -16,6 +16,24 @@ export default class Matchmaker {
   private static matches = new Map<matchType, Array<Client>>();
   private static types = new Map<Client, matchType>();
 
+  private static waitingTime = 3_000;
+  private static requiredPlayerCount = {
+    common_1vs1: 2,
+    rating_1vs1: 4,
+    tournament_1vs1: 2,
+    common_2vs2: 4,
+    rating_2vs2: 8,
+    tournament_2vs2: 4
+  };
+  private static fightPlayerCount = {
+    common_1vs1: 2,
+    rating_1vs1: 2,
+    tournament_1vs1: 2,
+    common_2vs2: 4,
+    rating_2vs2: 4,
+    tournament_2vs2: 4
+  };
+
   public static addWaiting(client: Client, type: matchType): void {
     const array = this.matches.get(type);
     if (!array) {
@@ -25,6 +43,10 @@ export default class Matchmaker {
     }
     array.push(client);
     this.types.set(client, type);
+    
+    array.forEach(client => {
+      client.sendMatchmakerPlayerCount(array.length);
+    })
   }
 
   public static tryAddWaiting(client: Client, type: matchType): boolean {
@@ -40,6 +62,7 @@ export default class Matchmaker {
     }
 
     this.addWaiting(client, type);
+    client.setState(state.waitFight);
     return true;
   }
 
@@ -50,9 +73,40 @@ export default class Matchmaker {
     }
     array.splice(array.indexOf(client), 1);
     this.types.delete(client);
+
+    array.forEach(client => {
+      client.sendMatchmakerPlayerCount(array.length);
+    })
   }
 
-  public static makeMatch(client1: Client, client2: Client): void {
+  public static async tryMakeMatch(type: matchType): Promise<void> {
+    const array = this.matches.get(type);
+    const clientCount = array.length;
+
+    if (clientCount < Matchmaker.getRequiredPlayerCount(type)) {
+      return;
+    }
+
+    setTimeout(() => {
+      let readyСlients = array.slice(0, array.length - 1 - array.length % this.getRequiredPlayerCount(type));
+      if (type === matchType.rating_1vs1 || type === matchType.rating_2vs2) {
+        readyСlients.sort((client1, client2) => client1.rating - client2.rating);
+      } else {
+        readyСlients = this.shuffle(readyСlients);
+      }
+
+      const step = this.getFightPlayerCount(type);
+      for (let i = 0; i < readyСlients.length; i += step) {
+        for (let j = 0; j < step; j++) {
+          readyСlients[i + j].setState(state.inFight);
+          this.removeWaiting(readyСlients[i + j]);
+        }
+        this.makeMatch(type, readyСlients[i], readyСlients[i + 1]);
+      }
+    }, this.waitingTime)
+  }
+
+  public static makeMatch(type: matchType, client1: Client, client2: Client): void {
     if (!client1.account || !client2.account) {
       Logger.warn(`Some client is trying to start a fight without account!`);
       return;
@@ -70,7 +124,7 @@ export default class Matchmaker {
       return;
     }
 
-    this.createMatch(client1, client2);
+    this.createMatch(type, client1, client2);
   }
 
   public static findFight(id: string): Fight {
@@ -139,11 +193,34 @@ export default class Matchmaker {
     return 0;
   }
 
-  protected static createMatch(client1: Client, client2: Client) {
-    Fight.create(client1, client2);
+  protected static createMatch(type: matchType, client1: Client, client2: Client) {
+    Fight.create(client1, client2, type);
   }
 
   protected static ratingCalculation(val1: number, val2: number): number {
     return Math.ceil((Math.abs(val1 - val2)) / 5) + 1;
+  }
+
+  protected static getRequiredPlayerCount(type: matchType): number {
+    return Object.values(this.requiredPlayerCount)[type];
+  }
+
+  protected static getFightPlayerCount(type: matchType): number {
+    return Object.values(this.fightPlayerCount)[type];
+  }
+
+  protected static shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
   }
 }

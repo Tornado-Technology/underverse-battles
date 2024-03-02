@@ -296,37 +296,20 @@ export const handlePacket = async (client: Client, data: any) => {
     case 'fightJoin':
       try {
         const matchType = data.matchType;
-        const clients = Matchmaker.getTypeClients(matchType);
-        const clientCount = clients.length;
 
         if (!client.account || !client.verified) {
           client.sendFightJoin(statusCode.error, undefined);
           Logger.info('Fight join failed, client not logged');
           break;
         }
-        
         if (!Matchmaker.tryAddWaiting(client, matchType)) {
           client.sendFightJoin(statusCode.error, undefined);
           break;
         }
 
         client.fight.setCharacter(data.characterId, data.skinId);
-
-        if (clientCount < 1) {
-          client.setState(state.waitFight);
-          Logger.info('Clients not found, wait...');
-          break;
-        }
-
-        const opponent = clients.find(element => element != client);
         
-        client.setState(state.inFight);
-        opponent.setState(state.inFight);
-
-        Matchmaker.removeWaiting(client);
-        Matchmaker.removeWaiting(opponent);
-        
-        Matchmaker.makeMatch(client, opponent);
+        await Matchmaker.tryMakeMatch(matchType);
       } catch (error) {
         client.setState(state.inMenu);
         client.sendFightJoin(statusCode.error, undefined);

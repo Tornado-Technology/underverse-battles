@@ -1,7 +1,7 @@
 import Client, { state as clientState } from '../../concepts/client/client.js';
 import Logger from '../../util/logging.js';
 import App from '../../app.js';
-import Matchmaker from '../../util/matchmaker.js';
+import Matchmaker, { matchType } from '../../util/matchmaker.js';
 import { statusCode } from '../../status.js';
 import config from '../../config.js';
 import { randomInt } from 'crypto';
@@ -29,6 +29,8 @@ export enum actionType {
 
 export default class Fight {
   protected _id: string;
+  protected type: matchType;
+  protected isRating: boolean;
   protected clients: Client[];
   protected _state: state;
   protected initiative: number;
@@ -38,8 +40,8 @@ export default class Fight {
 
   protected stateNames = ['empty', 'skip', 'attack 1', 'attack 2', 'attack 3', 'special attack'];
 
-  public static create(client1: Client, client2: Client): void {
-    const fight = new Fight(client1, client2, String(Date.now()));
+  public static create(client1: Client, client2: Client, type: matchType): void {
+    const fight = new Fight(client1, client2, String(Date.now()), type);
     App.fights.push(fight);
   }
 
@@ -48,8 +50,10 @@ export default class Fight {
     Logger.info(`Fight[${fight.id}] destroyed`);
   }
 
-  constructor(client1: Client, client2: Client, id: string) {
+  constructor(client1: Client, client2: Client, id: string, type: matchType) {
     this._id = id;
+    this.type = type;
+    this.isRating = this.type === matchType.rating_1vs1 || this.type === matchType.rating_2vs2;
     this._state = state.wait;
     this.clients = [client1, client2];
     this.initiative = Math.randomRange(0, 1);
@@ -64,7 +68,9 @@ export default class Fight {
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
       client.fight.startResponceTimeout();
     });
-    await Matchmaker.removeRating(this.clients);
+    if (this.isRating) {
+      await Matchmaker.removeRating(this.clients);
+    }
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
@@ -152,7 +158,8 @@ export default class Fight {
   }
 
   public async finish(winner: Client): Promise<void> {
-    const rating = await Matchmaker.addRating(winner);
+    const rating = this.isRating ? await Matchmaker.addRating(winner) : 0;
+    
     this.clients.forEach((client) => {
       const isWinner = client === winner;
       client?.fight.unit();
