@@ -251,7 +251,7 @@ export default class Fight {
   }
 
   public setExtraAction(attackIndex: number): void {
-    this.clients.forEach(client => client.sendFightExtraAction(attackIndex));
+    this.clients.forEach(client => client.sendFightExtraAction(attackIndex, this.setSeed()));
   }
 
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
@@ -348,12 +348,10 @@ export default class Fight {
   public updateStateAttack(): void {
     if (this.state === state.battle) return;
 
-    const seed = randomInt(0, 2000000000);
-
     this.setState(state.battle);
 
     this.clients.forEach((client) => {
-      client?.sendFightStartBattle(seed);
+      client?.sendFightStartBattle(this.setSeed());
     });
   }
 
@@ -454,5 +452,9 @@ export default class Fight {
       this.setClientAction(client, actionType.empty);
       this.setClientPower(client, 0);
     });
+  }
+
+  private setSeed(): number {
+    return randomInt(0, 2000000000);
   }
 }

@@ -196,9 +196,10 @@ export default class SendStuff {
     });
   }
 
-  public sendFightExtraAction(attackIndex: number): void {
+  public sendFightExtraAction(attackIndex: number, seed: number): void {
     this.send('fightExtraAction', {
       attackIndex,
+      seed
     });
   }
 
