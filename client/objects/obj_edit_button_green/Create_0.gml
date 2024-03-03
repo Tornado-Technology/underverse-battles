@@ -6,7 +6,7 @@ edited_objects_number = 0;
 
 edit_button = UIImageButton(spr_edit_button_green, function() {
 	if (!is_can_input || fight_get_initiative() != 0) return;
-	press(irandom(edit_attack_number_max));
+	network_check_press(get_random_attack_type());
 	send_to_server();
 });
 
@@ -30,12 +30,7 @@ cooldown = time_source_create(time_source_game, 1, time_source_units_seconds, fu
 });
 
 press = function(attack_index) {
-	if (edit_attack_number == attack_index) {
-		edit_attack_number = (attack_index + irandom_range(1, edit_attack_number_max)) % (edit_attack_number_max + 1);
-	}
-	else {
-		edit_attack_number = attack_index;
-	}
+	edit_attack_number = attack_index;
 	edit_objects();
 	
 	obj_pattern_edit.change_time_source_update();
@@ -45,8 +40,15 @@ press = function(attack_index) {
 	audio_play_sound_plugging(snd_selection);
 }
 
-send_to_server = function () {
+network_check_press = function(attack_index) {
 	if (fight_network_mode) {
-		send_fight_extra_action(edit_attack_number);
+		send_fight_extra_action(attack_index);
 	}
+	else {
+		press(attack_index);
+	}
+}
+
+get_random_attack_type = function() {
+	return (edit_attack_number + irandom_range(1, edit_attack_number_max)) % (edit_attack_number_max + 1);
 }
