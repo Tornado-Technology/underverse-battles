@@ -105,5 +105,8 @@
     "Soundtrack": -1,
     "Background": 0,
     "Achievements": []
+  },
+  "Game": {
+    "RatingMode": 0
   }
 }
