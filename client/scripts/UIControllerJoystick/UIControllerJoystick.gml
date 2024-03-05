@@ -26,7 +26,7 @@ function ClassUIControllerJoystick() constructor {
 	self.input[$ vk_right] = new __input(false);
 	self.input[$ vk_left] = new __input(false);
 	
-	input_vector = new Vector2();
+	input_vector = new Vector2(0, 0);
 	handle = UIImageButton(handle_image);
 	border = UIImageButton(border_image);
 	
@@ -169,8 +169,6 @@ function ClassUIControllerJoystick() constructor {
 		// Power
 		var _power = raduis / length_x;
 		input_vector.multi(_power, _power);
-		
-		input_update();
 		
 		delete deltaVector;
 	}
