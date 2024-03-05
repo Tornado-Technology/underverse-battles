@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_get_background",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Background",
-    "path": "folders/Scripts/Local/Fight/Fight/Background.yy",
+  "$GMScript":"",
+  "%Name":"fight_get_background",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_get_background",
+  "parent":{
+    "name":"Background",
+    "path":"folders/Scripts/Local/Fight/Fight/Background.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

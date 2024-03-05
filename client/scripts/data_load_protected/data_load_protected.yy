@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "data_load_protected",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Protected",
-    "path": "folders/Scripts/Local/System/Data/Protected.yy",
+  "$GMScript":"",
+  "%Name":"data_load_protected",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"data_load_protected",
+  "parent":{
+    "name":"Protected",
+    "path":"folders/Scripts/Local/System/Data/Protected.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

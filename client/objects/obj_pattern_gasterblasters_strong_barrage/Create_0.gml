@@ -1,6 +1,6 @@
 // Arguments: gasterblaster, reversed
 
-_angle = irandom_range(0, 359);
+_angle = fight_random_integer(0, 359);
 angle_step = 10;
 steps = 10;
 

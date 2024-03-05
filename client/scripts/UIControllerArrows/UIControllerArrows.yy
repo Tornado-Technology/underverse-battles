@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "UIControllerArrows",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Arrows",
-    "path": "folders/Scripts/Local/System/Controls/Arrows.yy",
+  "$GMScript":"",
+  "%Name":"UIControllerArrows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIControllerArrows",
+  "parent":{
+    "name":"Arrows",
+    "path":"folders/Scripts/Local/System/Controls/Arrows.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

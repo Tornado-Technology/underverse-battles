@@ -11,7 +11,7 @@ callback = function () {
 
 update_gasterblasters = function() {
 	repeat (_power == 5 ? 2 : 1) {
-		var _gb_pos = irandom_range(0, 2);
+		var _gb_pos = fight_random_integer(0, 2);
 		var border_dist = 100;
 		switch (_gb_pos) {
 			case 0:
@@ -28,7 +28,7 @@ update_gasterblasters = function() {
 }
 	
 update_bones = function() {
-	var randim_side = choose(dir.left, dir.right);
+	var randim_side = fight_random_choose(dir.left, dir.right);
 	var bone_speed = 1 + _power * 0.1;
 	if (randim_side == dir.left)
 		create_bone(border_instance.x - border_instance.left - 10, border_instance.y + border_instance.down + 10, bone, bone_speed, 1.4, 0, 0);

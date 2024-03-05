@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "point_in_elipse",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Math",
-    "path": "folders/Scripts/Local/Utilities/Math.yy",
+  "$GMScript":"",
+  "%Name":"point_in_elipse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"point_in_elipse",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Local/Utilities/Math.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

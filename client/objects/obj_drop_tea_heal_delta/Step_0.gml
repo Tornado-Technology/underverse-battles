@@ -13,8 +13,8 @@ if (bbox_bottom >= floor_y && !small) {
 	repeat(3) {
 		instance_create_depth(x, y, 0, obj_drop_tea_heal_delta, {
 			small: true,
-			velocity_y: irandom_range(-1, -2),
-			velocity_x: irandom_range(-1, 1),
+			velocity_y: fight_random_integer(-1, -2),
+			velocity_x: fight_random_integer(-1, 1),
 			image_xscale: 0.7,
 			image_yscale: 0.7,
 			floor_y: floor_y

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "soundtrack_get_for_name",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Soundtrack",
-    "path": "folders/Scripts/Local/Data/Soundtrack.yy",
+  "$GMScript":"",
+  "%Name":"soundtrack_get_for_name",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"soundtrack_get_for_name",
+  "parent":{
+    "name":"Soundtrack",
+    "path":"folders/Scripts/Local/Data/Soundtrack.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

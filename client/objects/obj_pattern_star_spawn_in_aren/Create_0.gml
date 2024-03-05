@@ -12,7 +12,7 @@ callback = function () {
 update = function () { 
 	repeat (_power div 2 + 3) {	
 		var radius = 240;
-		var _angle = irandom_range(1, 360);
+		var _angle = fight_random_integer(1, 360);
 		var _lengthdir_x = lengthdir_x(radius, _angle);
 		var _lengthdir_y = lengthdir_y(radius, _angle);		
 		var	star_instance = instance_create_depth(border_instance.x + _lengthdir_x,  border_instance.y + _lengthdir_y, fight_depth.bullet_outside, star);

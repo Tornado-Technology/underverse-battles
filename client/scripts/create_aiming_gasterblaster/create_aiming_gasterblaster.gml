@@ -3,9 +3,9 @@
 function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6) {
 	var x_gb, y_gb;
 	var gb_size = 60;
-	var pos = irandom_range(0, 3);
+	var pos = fight_random_integer(0, 3);
 	var con = room_height + gb_size;
-	var rnd = irandom_range(0, con);
+	var rnd = fight_random_integer(0, con);
 	switch (pos) {
 		case 0:
 			x_gb = 0;

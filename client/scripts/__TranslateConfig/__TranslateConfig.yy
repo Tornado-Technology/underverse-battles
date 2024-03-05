@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__TranslateConfig",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Configs",
-    "path": "folders/Options/Configs.yy",
+  "$GMScript":"",
+  "%Name":"__TranslateConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__TranslateConfig",
+  "parent":{
+    "name":"Configs",
+    "path":"folders/Options/Configs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function () {
-	var brush_side = irandom_range(0, 3);
+	var brush_side = fight_random_integer(0, 3);
 	var coord_x, coord_y;
 	if (brush_side == 0) {
 		coord_x = border_instance.x - border_instance.left - 12;
@@ -32,7 +32,7 @@ update = function () {
 		point_direction(coord_x, coord_y, soul_instance.x, soul_instance.y) + 225, brush_side, 1, max_acceleration);
 }
 
-var period = 80 - _power * 12;
+var period = 85 - _power * 10;
 var repeats = 6 + _power;
 
 if (variable_instance_exists(id, "custom_repeats")) {

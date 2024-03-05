@@ -9,7 +9,7 @@ callback = function () {
 	var bone_speed = 0;
 	var bone_size = 8;
 	var angle_speed = 1 + _power * 0.2;
-	var random_number = irandom_range(0, 1);
+	var random_number = fight_random_integer(0, 1);
 	if (random_number == 1) angle_speed = -angle_speed;
 	bone_instance_1 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 0, angle_speed);
 	bone_instance_2 = create_spinning_bone(border_instance.x, border_instance.y, rotating_bone, bone_speed, 0, 0, 90, angle_speed);
@@ -24,7 +24,7 @@ callback = function () {
 }
 
 update = function() {
-	var random_number = irandom_range(0, 1);
+	var random_number = fight_random_integer(0, 1);
 	if (random_number == 0) {
 		bone_instance_1.angle_speed = -bone_instance_1.angle_speed;
 		bone_instance_2.angle_speed = -bone_instance_2.angle_speed;

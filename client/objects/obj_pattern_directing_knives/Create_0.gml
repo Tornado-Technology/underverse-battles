@@ -13,11 +13,11 @@ update = function() {
 	var va_x2_ = obj_camera.view_width + obj_camera.camera_position.x;
 	var va_y1_ = obj_camera.camera_position.y;
 	var va_y2_ = obj_camera.view_height + obj_camera.camera_position.y;
-	var rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
-	var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+	var rX = fight_random_integer(va_x1_ + 64, va_x2_ - 64);
+	var rY = fight_random_integer(va_y1_ + 24, va_y2_ - 24);
 	while(point_in_rectangle(rX, rY, border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down)) {
-		rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
-		rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+		rX = fight_random_integer(va_x1_ + 64, va_x2_ - 64);
+		rY = fight_random_integer(va_y1_ + 24, va_y2_ - 24);
 	}
 	
 	instance_create_depth(rX, rY, 0, knife, {

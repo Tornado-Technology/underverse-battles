@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__CharacterId__",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Characteres",
-    "path": "folders/Characteres.yy",
+  "$GMScript":"",
+  "%Name":"__CharacterId__",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__CharacterId__",
+  "parent":{
+    "name":"Characteres",
+    "path":"folders/Characteres.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

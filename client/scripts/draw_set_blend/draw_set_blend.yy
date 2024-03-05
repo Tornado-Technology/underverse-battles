@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_set_blend",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Local/Utilities/Draw.yy",
+  "$GMScript":"",
+  "%Name":"draw_set_blend",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_set_blend",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Scripts/Local/Utilities/Draw.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "directory_get_hash",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Data",
-    "path": "folders/Scripts/Local/Utilities/Data.yy",
+  "$GMScript":"",
+  "%Name":"directory_get_hash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"directory_get_hash",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/Utilities/Data.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

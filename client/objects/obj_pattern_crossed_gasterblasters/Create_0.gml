@@ -11,9 +11,9 @@ callback = function () {
 update = function(pow) {
 	var x_gb, y_gb;
 	var gb_size = 60;
-	var pos = irandom_range(0, 3);
+	var pos = fight_random_integer(0, 3);
 	var con = room_height + gb_size;
-	var rnd = irandom_range(-gb_size, con);
+	var rnd = fight_random_integer(-gb_size, con);
 			
 	repeat(2) {
 		switch (pos) {

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tornado_attack_caller",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Attacks",
-    "path": "folders/Characteres/Tornado/Attacks.yy",
+  "$GMScript":"",
+  "%Name":"tornado_attack_caller",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tornado_attack_caller",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Characteres/Tornado/Attacks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

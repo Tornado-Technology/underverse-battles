@@ -16,7 +16,7 @@ touching_walls = false;
 
 time_ricochet = 1;
 
-probabiity_ricochet = irandom_range(1, 100);
+probabiity_ricochet = fight_random_integer(1, 100);
 
 got_ricocher = false;
 

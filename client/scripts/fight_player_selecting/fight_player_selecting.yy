@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_player_selecting",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Action",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Action.yy",
+  "$GMScript":"",
+  "%Name":"fight_player_selecting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_player_selecting",
+  "parent":{
+    "name":"Action",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Action.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

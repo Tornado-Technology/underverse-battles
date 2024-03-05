@@ -59,6 +59,7 @@ switch(state) {
 		}
 			
 		// Create battle
+		fight_random_set_seed(randomize());
 		instance_create_one(obj_battle);
 		break;
 	

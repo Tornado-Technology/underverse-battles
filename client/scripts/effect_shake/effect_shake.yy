@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "effect_shake",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effect",
-    "path": "folders/Scripts/Local/Data/Effect.yy",
+  "$GMScript":"",
+  "%Name":"effect_shake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"effect_shake",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Local/Data/Effect.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

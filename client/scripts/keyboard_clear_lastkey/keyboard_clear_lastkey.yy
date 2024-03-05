@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "keyboard_clear_lastkey",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Keyboard",
-    "path": "folders/Scripts/Local/Utilities/Keyboard.yy",
+  "$GMScript":"",
+  "%Name":"keyboard_clear_lastkey",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"keyboard_clear_lastkey",
+  "parent":{
+    "name":"Keyboard",
+    "path":"folders/Scripts/Local/Utilities/Keyboard.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

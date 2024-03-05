@@ -8,7 +8,7 @@ callback = function () {
 		
 	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 8, battle_soul_type.blue);
 		
-	_side = irandom_range(0, 1);
+	_side = fight_random_integer(0, 1);
 	update_bones();
 	time_source_start(time_source_update_bones);
 	time_source_start(time_source_update_platforms);
@@ -16,7 +16,7 @@ callback = function () {
 }
 
 update_bones = function() {
-	var chance = irandom_range(0, 6);
+	var chance = fight_random_integer(0, 6);
 	if (chance % 2 == 0) {
 		create_bone(border_instance.x - border_instance.left, border_instance.y + border_instance.down, bone, main_speed, 1.4, 0, 0);
 	}

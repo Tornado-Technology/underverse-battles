@@ -17,7 +17,7 @@ callback = function () {
 
 update = function () {
 	var radius = 240;
-	var angle_offset = irandom_range(1, 360);
+	var angle_offset = fight_random_integer(1, 360);
 	var _lengthdir_x = lengthdir_x(radius, angle_offset);
 	var _lengthdir_y = lengthdir_y(radius, angle_offset);		
 	

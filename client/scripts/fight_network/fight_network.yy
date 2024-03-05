@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_network",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fight",
-    "path": "folders/Scripts/Network/Fight.yy",
+  "$GMScript":"",
+  "%Name":"fight_network",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_network",
+  "parent":{
+    "name":"Fight",
+    "path":"folders/Scripts/Network/Fight.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

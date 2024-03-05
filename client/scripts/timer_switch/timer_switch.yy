@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "timer_switch",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Timer",
-    "path": "folders/Scripts/Local/Fight/Fight/Timer.yy",
+  "$GMScript":"",
+  "%Name":"timer_switch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"timer_switch",
+  "parent":{
+    "name":"Timer",
+    "path":"folders/Scripts/Local/Fight/Fight/Timer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

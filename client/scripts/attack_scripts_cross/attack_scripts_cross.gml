@@ -1,7 +1,7 @@
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_attack0(player, _power, type = irandom(3)) {
+function cross_attack0(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_cross_0, {
 		character_instance: player,
 		_power: _power,
@@ -12,7 +12,7 @@ function cross_attack0(player, _power, type = irandom(3)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_attack1(player, _power, type = irandom(2)) {
+function cross_attack1(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_cross_1, {
 		character_instance: player,
 		_power: _power,
@@ -23,7 +23,7 @@ function cross_attack1(player, _power, type = irandom(2)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_attack2(player, _power, type = irandom(1)) {
+function cross_attack2(player, _power, type = fight_random_integer(0, 1)) {
 	instance_create(obj_attack_cross_2, {
 		character_instance: player,
 		_power: _power,
@@ -42,7 +42,7 @@ function cross_special_attack(player) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_xevent_attack0(player, _power, type = irandom(3)) {
+function cross_xevent_attack0(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_cross_xevent_0, {
 		character_instance: player,
 		_power: _power,
@@ -53,7 +53,7 @@ function cross_xevent_attack0(player, _power, type = irandom(3)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_xevent_attack1(player, _power, type = irandom(2)) {
+function cross_xevent_attack1(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_cross_xevent_1, {
 		character_instance: player,
 		_power: _power,
@@ -64,7 +64,7 @@ function cross_xevent_attack1(player, _power, type = irandom(2)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function cross_xevent_attack2(player, _power, type = irandom(2)) {
+function cross_xevent_attack2(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_cross_xevent_2, {
 		character_instance: player,
 		_power: _power,

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "key_vaild",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Key",
-    "path": "folders/Scripts/Local/System/Input/Key.yy",
+  "$GMScript":"",
+  "%Name":"key_vaild",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"key_vaild",
+  "parent":{
+    "name":"Key",
+    "path":"folders/Scripts/Local/System/Input/Key.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

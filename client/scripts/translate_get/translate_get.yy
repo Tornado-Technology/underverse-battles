@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "translate_get",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Translate",
-    "path": "folders/Scripts/Local/System/Translate.yy",
+  "$GMScript":"",
+  "%Name":"translate_get",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"translate_get",
+  "parent":{
+    "name":"Translate",
+    "path":"folders/Scripts/Local/System/Translate.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

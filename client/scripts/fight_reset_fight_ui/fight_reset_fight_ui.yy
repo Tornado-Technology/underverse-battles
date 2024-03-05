@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_reset_fight_ui",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UI",
-    "path": "folders/Scripts/Local/Fight/Fight/UI.yy",
+  "$GMScript":"",
+  "%Name":"fight_reset_fight_ui",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_reset_fight_ui",
+  "parent":{
+    "name":"UI",
+    "path":"folders/Scripts/Local/Fight/Fight/UI.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

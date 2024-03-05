@@ -3,7 +3,7 @@
 bone_instances = [];
 
 callback = function () {
-	side_random = choose(dir.up, dir.down, dir.left, dir.right);
+	side_random = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 
 	var soul_position = new Vector2(border_instance.x, border_instance.y - border_instance.up + 15);
 	if (side_random == dir.down) {
@@ -28,7 +28,7 @@ callback = function () {
 }
 
 update_3_0 = function() {
-	var bone_angle_speed = choose(1, -1);
+	var bone_angle_speed = fight_random_choose(1, -1);
 	bone_instances[0].angle_speed = bone_angle_speed;
 	bone_instances[1].angle_speed = bone_angle_speed;
 }

@@ -3,7 +3,7 @@ function dan_attack_0(pow, player) {
 		character_instance: player,
 		_power: pow,
 		_id: 0,
-		attack_num: irandom_range(0, 2)
+		attack_num: fight_random_integer(0, 2)
 	});
 }
 

@@ -86,7 +86,7 @@ tremble_force_x = 0;
 tremble_force_y = 0;
 tremble_update = function() {
 	if (trembles) {
-		var rand_side = choose(dir.up, dir.down, dir.left, dir.right);
+		var rand_side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 		tremble_force_x = 0;
 		tremble_force_y = 0;
 		

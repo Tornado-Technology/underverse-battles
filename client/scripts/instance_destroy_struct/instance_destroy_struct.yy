@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "instance_destroy_struct",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Instance",
-    "path": "folders/Scripts/Local/Utilities/Instance.yy",
+  "$GMScript":"",
+  "%Name":"instance_destroy_struct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"instance_destroy_struct",
+  "parent":{
+    "name":"Instance",
+    "path":"folders/Scripts/Local/Utilities/Instance.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

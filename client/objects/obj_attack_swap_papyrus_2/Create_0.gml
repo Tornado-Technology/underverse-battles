@@ -11,7 +11,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_orange_attack, {
 			bone: obj_bone_swap_papyrus,
 			use_gravity_attack: use_gravity_attack,
-			is_double: choose(true, false)
+			is_double: fight_random_choose(true, false)
 		});
 		break;
 	default:
@@ -20,7 +20,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_orange_attack_four_bones, {
 			bone: obj_bone_swap_papyrus,
 			use_gravity_attack: use_gravity_attack,
-			is_double: choose(true, false)
+			is_double: fight_random_choose(true, false)
 		});
 		break;
 }

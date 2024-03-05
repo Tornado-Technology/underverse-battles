@@ -10,7 +10,7 @@ callback = function () {
 }
 
 update = function() {
-	knife_instance.spin(choose(-1, 1) * (3 + _power * 0.2));
+	knife_instance.spin(fight_random_choose(-1, 1) * (3 + _power * 0.2));
 	knife_instance.move(3 + _power * 0.2);
 	audio_play_sound_once(snd_projectile);
 	

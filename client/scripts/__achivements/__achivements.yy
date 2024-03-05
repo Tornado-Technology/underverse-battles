@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__Achivements",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Achievement",
-    "path": "folders/Scripts/Local/Data/Achievement.yy",
+  "$GMScript":"",
+  "%Name":"__Achivements",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__Achivements",
+  "parent":{
+    "name":"Achievement",
+    "path":"folders/Scripts/Local/Data/Achievement.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

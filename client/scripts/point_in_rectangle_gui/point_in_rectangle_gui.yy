@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "point_in_rectangle_gui",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Collision",
-    "path": "folders/Scripts/Local/System/Collision.yy",
+  "$GMScript":"",
+  "%Name":"point_in_rectangle_gui",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"point_in_rectangle_gui",
+  "parent":{
+    "name":"Collision",
+    "path":"folders/Scripts/Local/System/Collision.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

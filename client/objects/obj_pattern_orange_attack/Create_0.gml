@@ -19,7 +19,7 @@ if (use_gravity_attack) {
 	update = function() {
 		instance_destroy_array(bone_instances);
 		
-		var side = choose(dir.up, dir.down, dir.left, dir.right);
+		var side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 		
 		soul_instance.change_direction(side);
 		
@@ -121,7 +121,7 @@ callback = function () {
 }
 
 update = function() {
-	side = choose(dir.up, dir.down, dir.left, dir.right);
+	side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 	if (use_gravity_attack) {
 		soul_instance.change_gravity_force(side);
 	}

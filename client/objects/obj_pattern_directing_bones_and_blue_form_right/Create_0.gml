@@ -9,12 +9,12 @@ callback = function () {
 
 update = function () {
 	
-	var rand_side = choose(dir.up, dir.left, dir.right);
+	var rand_side = fight_random_choose(dir.up, dir.left, dir.right);
 	var bone_speed = 2 + _power * 0.2;
-	var chance_blue_bones = irandom_range(1, 100);
+	var chance_blue_bones = fight_random_integer(1, 100);
 	
 	var bones = chance_blue_bones <= 25  ? bone_blue : bone; 
-	var bone_size = random_range(2.9, 4.9);
+	var bone_size = fight_random_float(2.9, 4.9);
 	
 	if (rand_side == dir.right) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bones,

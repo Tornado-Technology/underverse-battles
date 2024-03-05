@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_get_player_position_x",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Get",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Position/Get.yy",
+  "$GMScript":"",
+  "%Name":"fight_get_player_position_x",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_get_player_position_x",
+  "parent":{
+    "name":"Get",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Position/Get.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

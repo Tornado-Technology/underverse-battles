@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "wave",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Math",
-    "path": "folders/Scripts/Local/Utilities/Math.yy",
+  "$GMScript":"",
+  "%Name":"wave",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"wave",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Local/Utilities/Math.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

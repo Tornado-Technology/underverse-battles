@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "bar_power_disappearance",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Gameplay",
-    "path": "folders/Scripts/Local/Gameplay.yy",
+  "$GMScript":"",
+  "%Name":"bar_power_disappearance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bar_power_disappearance",
+  "parent":{
+    "name":"Gameplay",
+    "path":"folders/Scripts/Local/Gameplay.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

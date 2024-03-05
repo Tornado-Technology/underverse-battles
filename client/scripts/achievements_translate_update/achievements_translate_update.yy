@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "achievements_translate_update",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Achievement",
-    "path": "folders/Scripts/Local/Data/Achievement.yy",
+  "$GMScript":"",
+  "%Name":"achievements_translate_update",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"achievements_translate_update",
+  "parent":{
+    "name":"Achievement",
+    "path":"folders/Scripts/Local/Data/Achievement.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

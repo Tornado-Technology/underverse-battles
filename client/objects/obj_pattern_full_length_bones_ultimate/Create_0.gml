@@ -13,7 +13,7 @@ callback = function () {
 update = function() {
 	var bone_speed = 1.5;
 	var bone_size = 8.3;
-	var random_side = choose(dir.up, dir.down, dir.left, dir.right);
+	var random_side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 		
 	if (random_side == dir.up) {
 		create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone, bone_speed, bone_size, 270, 90);
@@ -36,7 +36,7 @@ update = function() {
 update_sharp = function() {
 	var bone_speed = 2.2;
 	var bone_size = 1;
-	var rand_side = irandom_range(0, 3);
+	var rand_side = fight_random_integer(0, 3);
 	var bone_x = border_instance.x - border_instance.left - 10;
 	var bone_y = border_instance.y + border_instance.down + 10;
 	if (rand_side == 1) {

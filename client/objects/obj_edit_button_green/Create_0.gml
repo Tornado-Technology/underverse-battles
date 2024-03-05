@@ -1,5 +1,5 @@
 edit_attack_number = 0;
-edit_attack_number_max = 7;
+edit_attack_number_max = 8;
 is_can_input = true;
 
 edited_objects_number = 0;
@@ -49,5 +49,9 @@ network_check_press = function(attack_index) {
 }
 
 get_random_attack_type = function() {
-	return (edit_attack_number + irandom_range(1, edit_attack_number_max)) % (edit_attack_number_max + 1);
+	edit_attack_number += irandom_range(1, edit_attack_number_max - 1);
+	if (edit_attack_number >= edit_attack_number_max) {
+		edit_attack_number -= edit_attack_number_max;
+	}
+	return edit_attack_number;
 }

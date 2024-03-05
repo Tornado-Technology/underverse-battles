@@ -1,10 +1,10 @@
 // Arguments: fireball
 
-raduis = battle_border.down + irandom_range(100, 100);
+raduis = battle_border.down + fight_random_integer(100, 100);
 border_position = battle_border_get_position();
 
 x = border_position.px - raduis;
-y = border_position.py + irandom_range(-50, 50);
+y = border_position.py + fight_random_integer(-50, 50);
 
 projectile = noone;
 target_position = undefined;

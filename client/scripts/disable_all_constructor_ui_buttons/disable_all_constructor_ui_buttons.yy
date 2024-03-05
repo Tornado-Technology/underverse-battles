@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "disable_all_constructor_ui_buttons",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Constructor",
-    "path": "folders/Scripts/Local/UI/Constructor.yy",
+  "$GMScript":"",
+  "%Name":"disable_all_constructor_ui_buttons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"disable_all_constructor_ui_buttons",
+  "parent":{
+    "name":"Constructor",
+    "path":"folders/Scripts/Local/UI/Constructor.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

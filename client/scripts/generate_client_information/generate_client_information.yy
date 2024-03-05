@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "generate_client_information",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Local",
-    "path": "folders/Scripts/Local.yy",
+  "$GMScript":"",
+  "%Name":"generate_client_information",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"generate_client_information",
+  "parent":{
+    "name":"Local",
+    "path":"folders/Scripts/Local.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -6,7 +6,7 @@ on_border_created = function() {
 
 switch (type) {
 	case 0:
-		var random_border_index = irandom_range(0, 2);
+		var random_border_index = fight_random_integer(0, 2);
 		if (random_border_index == 0)
 			create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		if (random_border_index == 1)

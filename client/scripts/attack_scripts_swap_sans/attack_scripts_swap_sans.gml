@@ -1,4 +1,4 @@
-function swap_sans_attack0(player, _power, type = irandom(3)) {
+function swap_sans_attack0(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_swap_sans_0, {
 		character_instance: player,
 		_power: _power,
@@ -6,7 +6,7 @@ function swap_sans_attack0(player, _power, type = irandom(3)) {
 	});
 }
 
-function swap_sans_attack1(player, _power, type = irandom(2)) {
+function swap_sans_attack1(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_swap_sans_1, {
 		character_instance: player,
 		_power: _power,
@@ -14,7 +14,7 @@ function swap_sans_attack1(player, _power, type = irandom(2)) {
 	});
 }
 
-function swap_sans_attack2(player, _power, type = irandom(2)) {
+function swap_sans_attack2(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_swap_sans_2, {
 		character_instance: player,
 		_power: _power,

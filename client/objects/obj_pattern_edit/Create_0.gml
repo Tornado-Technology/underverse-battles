@@ -9,7 +9,7 @@ period = 7;
 
 step = 8;
 _side = 90;
-rot = irandom_range(0, 1);
+rot = fight_random_integer(0, 1);
 
 callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
@@ -32,7 +32,7 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 1:
-		var side = irandom_range(0, 1);
+		var side = fight_random_integer(0, 1);
 		var x_rand;
 		var bone_direction = 0;
 		if (side == 0) {
@@ -43,7 +43,7 @@ switch (edit_button.edit_attack_number) {
 			x_rand = border_instance.x + border_instance.right + 10;
 			spike_direction = 180;
 		}
-		var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
+		var y_rand = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
 		var spike_instance = create_spike(x_rand, y_rand, spike, 2.6, spike_direction);
 		array_push(editing_object, spike_instance);
 		audio_play_sound_plugging(snd_projectile);
@@ -56,7 +56,7 @@ switch (edit_button.edit_attack_number) {
 		audio_play_sound_plugging(snd_projectile);
 		break;
 	case 3:
-		var side = irandom_range(0, 1);
+		var side = fight_random_integer(0, 1);
 		var x_rand;
 		var bone_direction = 0;
 		if (side == 0) {
@@ -67,7 +67,7 @@ switch (edit_button.edit_attack_number) {
 			x_rand = border_instance.x + border_instance.right + 10;
 			bone_direction = 180;
 		}
-		var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
+		var y_rand = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
 		var bone_instance = create_bone(x_rand, y_rand, bone, 2.6, 1, bone_direction, bone_direction - 90);
 		array_push(editing_object, bone_instance);
 		audio_play_sound_plugging(snd_projectile);
@@ -77,11 +77,11 @@ switch (edit_button.edit_attack_number) {
 		var va_x2_ = obj_camera.view_width + obj_camera.camera_position.x;
 		var va_y1_ = obj_camera.camera_position.y;
 		var va_y2_ = obj_camera.view_height + obj_camera.camera_position.y;
-		var rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
-		var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+		var rX = fight_random_integer(va_x1_ + 64, va_x2_ - 64);
+		var rY = fight_random_integer(va_y1_ + 24, va_y2_ - 24);
 		while(point_in_rectangle(rX, rY, border_instance.x - border_instance.left, border_instance.y - border_instance.up, border_instance.x + border_instance.right, border_instance.y + border_instance.down)) {
-			var rX = irandom_range(va_x1_ + 64, va_x2_ - 64);
-			var rY = irandom_range(va_y1_ + 24, va_y2_ - 24);
+			var rX = fight_random_integer(va_x1_ + 64, va_x2_ - 64);
+			var rY = fight_random_integer(va_y1_ + 24, va_y2_ - 24);
 		}
 		
 		var _inst = instance_create_depth(rX, rY, 0, knife_spin, {

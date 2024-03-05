@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "convert_steps_to_seconds",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Conversion",
-    "path": "folders/Scripts/Local/Utilities/Conversion.yy",
+  "$GMScript":"",
+  "%Name":"convert_steps_to_seconds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"convert_steps_to_seconds",
+  "parent":{
+    "name":"Conversion",
+    "path":"folders/Scripts/Local/Utilities/Conversion.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

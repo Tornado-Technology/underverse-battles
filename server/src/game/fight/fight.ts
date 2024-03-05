@@ -455,6 +455,6 @@ export default class Fight {
   }
 
   private setSeed(): number {
-    return randomInt(0, 2000000000);
+    return randomInt(0, 4294967295);
   }
 }

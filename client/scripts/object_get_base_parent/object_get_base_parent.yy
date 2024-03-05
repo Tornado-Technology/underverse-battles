@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "object_get_base_parent",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Object",
-    "path": "folders/Scripts/Local/Utilities/Object.yy",
+  "$GMScript":"",
+  "%Name":"object_get_base_parent",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"object_get_base_parent",
+  "parent":{
+    "name":"Object",
+    "path":"folders/Scripts/Local/Utilities/Object.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

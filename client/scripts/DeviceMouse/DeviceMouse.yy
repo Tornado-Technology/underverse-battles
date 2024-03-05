@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DeviceMouse",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Device",
-    "path": "folders/Scripts/Local/System/Input/Device.yy",
+  "$GMScript":"",
+  "%Name":"DeviceMouse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DeviceMouse",
+  "parent":{
+    "name":"Device",
+    "path":"folders/Scripts/Local/System/Input/Device.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

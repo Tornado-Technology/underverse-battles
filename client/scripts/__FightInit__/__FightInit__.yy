@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__FightInit__",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fight",
-    "path": "folders/Scripts/Local/Fight/Fight.yy",
+  "$GMScript":"",
+  "%Name":"__FightInit__",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__FightInit__",
+  "parent":{
+    "name":"Fight",
+    "path":"folders/Scripts/Local/Fight/Fight.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

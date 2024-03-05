@@ -9,32 +9,32 @@ callback = function () {
 }
 
 update = function() {
-	var index = irandom_range(0, array_length(sides) - 1);
+	var index = fight_random_integer(0, array_length(sides) - 1);
 	var knife_instance = noone;
 	
-	var position_x = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+	var position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	var position_y = obj_camera.camera_position.y + 10 + border_instance.up;
 	var target_angle = 270;
 	
 	switch (sides[index]) {
 		case dir.up:
-			position_x = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+			position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 			position_y = border_instance.y - border_instance.up - 30;
 			target_angle = dir.up;
 			break;
 		case dir.down:
-			position_x = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+			position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 			position_y = border_instance.y + border_instance.down + 30;
 			target_angle = dir.down;
 			break;
 		case dir.left:
 			position_x = border_instance.x - border_instance.left - 30;
-			position_y = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+			position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 			target_angle = dir.right;
 			break;
 		case dir.right:
 			position_x = border_instance.x + border_instance.right + 30;
-			position_y = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+			position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 			target_angle = dir.left;
 			break;
 	}

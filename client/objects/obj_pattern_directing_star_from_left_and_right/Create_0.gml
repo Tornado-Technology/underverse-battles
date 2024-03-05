@@ -14,9 +14,9 @@ update = function () {
 	var _speed = 0.1;
 	
 	repeat (_power div 1 + 2) {
-		var size = irandom_range(0, 3);
+		var size = fight_random_integer(0, 3);
 		
-		var decrease = choose(-25, -20, -17, 17, 20, 25);
+		var decrease = fight_random_choose(-25, -20, -17, 17, 20, 25);
 		switch (size) {
 			case 0:
 					var star_instance = instance_create_depth(border_instance.x + border_instance.right, soul_instance.y - decrease * i, fight_depth.bullet_outside, star_spinning);

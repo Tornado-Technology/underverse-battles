@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_set_player_stamina",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Set",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Stamina/Set.yy",
+  "$GMScript":"",
+  "%Name":"fight_set_player_stamina",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_set_player_stamina",
+  "parent":{
+    "name":"Set",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Stamina/Set.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

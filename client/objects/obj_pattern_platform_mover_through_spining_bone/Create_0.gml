@@ -29,7 +29,7 @@ callback = function () {
 
 update = function () {
 	
-	var side = irandom_range(0, 1);
+	var side = fight_random_integer(0, 1);
 	var bone_instance;
 			
 	if (side == 0) {

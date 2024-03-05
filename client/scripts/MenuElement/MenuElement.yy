@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MenuElement",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menu",
-    "path": "folders/Scripts/Local/UI/Menu.yy",
+  "$GMScript":"",
+  "%Name":"MenuElement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MenuElement",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Scripts/Local/UI/Menu.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

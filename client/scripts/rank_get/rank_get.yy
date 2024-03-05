@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "rank_get",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Rank",
-    "path": "folders/Scripts/Network/Schemas/Rank.yy",
+  "$GMScript":"",
+  "%Name":"rank_get",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rank_get",
+  "parent":{
+    "name":"Rank",
+    "path":"folders/Scripts/Network/Schemas/Rank.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

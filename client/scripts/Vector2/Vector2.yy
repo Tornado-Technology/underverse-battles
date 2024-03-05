@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Vector2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utilities",
-    "path": "folders/Scripts/Local/Utilities.yy",
+  "$GMScript":"",
+  "%Name":"Vector2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Vector2",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Local/Utilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

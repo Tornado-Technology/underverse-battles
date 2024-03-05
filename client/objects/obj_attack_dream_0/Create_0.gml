@@ -4,7 +4,7 @@ on_border_created = function() {
 	pattern_instance.callback();
 };
 
-type = irandom_range(3, 3);
+type = fight_random_integer(3, 3);
 
 switch (type) {
 	case 0 :	

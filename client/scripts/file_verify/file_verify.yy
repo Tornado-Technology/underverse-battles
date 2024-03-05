@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "file_verify",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Data",
-    "path": "folders/Scripts/Local/Utilities/Data.yy",
+  "$GMScript":"",
+  "%Name":"file_verify",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"file_verify",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/Utilities/Data.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

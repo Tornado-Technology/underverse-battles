@@ -1,4 +1,4 @@
-// Arguments:
+// Arguments: drops
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -9,13 +9,9 @@ callback = function () {
 }
 
 update = function () {
-	var x0 = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-	var drop_instance = choose(obj_drop_ink_sans, obj_drop_ink_sans, obj_drop_ink_sans, obj_drop_ink_sans,
-					obj_drop_orange_ink_sans, obj_drop_orange_ink_sans,
-					obj_drop_black_ink_sans, obj_drop_black_ink_sans,
-					obj_drop_blue_ink_sans,
-					obj_drop_green_ink_sans);
-	create_drop(x0, border_instance.y - border_instance.up - 5, drop_instance, 1.5 + _power * 0.1, 270, false);
+	var x0 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+	var drop_index = fight_random_integer(0, array_length(drops) - 1);
+	create_drop(x0, border_instance.y - border_instance.up - 5, drops[drop_index], 1.5 + _power * 0.1, 270, false);
 }
 
 var period = 10 - _power;

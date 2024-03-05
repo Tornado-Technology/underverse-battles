@@ -1,6 +1,6 @@
 event_inherited();
 
-random_type = irandom_range(0, 3);
+random_type = fight_random_integer(0, 3);
 
 if (random_type == 0) {
 	charge_sprite = spr_gasterblaster_charging_sans;

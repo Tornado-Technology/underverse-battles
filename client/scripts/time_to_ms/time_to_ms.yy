@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "time_to_ms",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Stirng",
-    "path": "folders/Scripts/Local/Utilities/Stirng.yy",
+  "$GMScript":"",
+  "%Name":"time_to_ms",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"time_to_ms",
+  "parent":{
+    "name":"Stirng",
+    "path":"folders/Scripts/Local/Utilities/Stirng.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

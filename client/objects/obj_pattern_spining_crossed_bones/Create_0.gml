@@ -5,7 +5,7 @@ random_side = 0;
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 		
-	random_side = irandom_range(0, 3);
+	random_side = fight_random_integer(0, 3);
 		
 	update();
 	time_source_start(time_source_update);
@@ -16,8 +16,8 @@ update = function() {
 	var bone_speed = 1.5 + _power * 0.2;
 	var bone_size = 6.6;
 	var angle_speed = 1.2 + _power * 0.2;
-	var random_y = choose(-15, 0, 15);
-	var random_angle = choose(0, 20, 45, 65, 90);
+	var random_y = fight_random_choose(-15, 0, 15);
+	var random_angle = fight_random_choose(0, 20, 45, 65, 90);
 	if (random_side == 0) {
 		create_spinning_bone(border_instance.x - border_instance.left * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 0, random_angle, angle_speed);
 		create_spinning_bone(border_instance.x - border_instance.left * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 0, random_angle + 90, angle_speed);

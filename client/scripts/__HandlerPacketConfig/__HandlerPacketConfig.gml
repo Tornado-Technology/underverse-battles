@@ -220,7 +220,7 @@ packet_handler_register("fightSpecialActionCharge", function(data) {
 });
 
 packet_handler_register("fightExtraAction", function(data) {
-	random_set_seed(data.seed);
+	fight_random_set_seed(data.seed);
 	battle_use_extra_action(data.attackIndex);
 });
 
@@ -239,7 +239,7 @@ packet_handler_register("fightSoul", function(data) {
 
 packet_handler_register("battleStart", function(data) {
 	// Send obj_fight this info
-	random_set_seed(data.seed);
+	fight_random_set_seed(data.seed);
 	
 	fight_set_state(fight_state.battle);
 	logger.info("Battle begins");

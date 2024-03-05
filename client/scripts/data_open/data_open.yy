@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "data_open",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Data",
-    "path": "folders/Scripts/Local/System/Data.yy",
+  "$GMScript":"",
+  "%Name":"data_open",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"data_open",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/System/Data.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

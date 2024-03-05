@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "assets_get_sound_elemets",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Assets",
-    "path": "folders/Scripts/Local/Data/Modification/Assets.yy",
+  "$GMScript":"",
+  "%Name":"assets_get_sound_elemets",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"assets_get_sound_elemets",
+  "parent":{
+    "name":"Assets",
+    "path":"folders/Scripts/Local/Data/Modification/Assets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

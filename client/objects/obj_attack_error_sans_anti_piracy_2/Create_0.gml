@@ -10,7 +10,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_aiming_gasterblasters, {
 			soul_type: battle_soul_type.red,
 			gasterblaster_aiming: obj_gasterblaster_aiming_error_sans_anti_piracy,
-			count: irandom_range(1, 2)
+			count: fight_random_integer(1, 2)
 		});
 		break;
 	case 1:

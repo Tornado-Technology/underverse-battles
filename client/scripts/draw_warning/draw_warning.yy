@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_warning",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Warning",
-    "path": "folders/Scripts/Local/Fight/Battle/Warning.yy",
+  "$GMScript":"",
+  "%Name":"draw_warning",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_warning",
+  "parent":{
+    "name":"Warning",
+    "path":"folders/Scripts/Local/Fight/Battle/Warning.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -6,10 +6,14 @@ if (netlog_enabled) {
 
 logger.info("Initilization start...");
 
+// Audio
 audio_group_load_all();
+load_all_soundtracks();
 
+// Bind
 input_init_bind_default();
 
+// Data
 data_load();
 data_apply();
 
@@ -20,7 +24,8 @@ soundtrack_load();
 translate_load();
 
 // Random set
-randomize();
+global.seed = randomize();
+global.max_seed = 4294967296;
 
 if (is_desktop) {
 	input_load();
@@ -47,6 +52,7 @@ if (is_desktop) {
 	window_set_splash();
 }
 
+// Ad
 if (is_mobile) {
 	instance_create(obj_yandex_ad_init);
 }

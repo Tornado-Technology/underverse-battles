@@ -4,7 +4,7 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 1);
+type = fight_random_integer(0, 1);
 switch (type) {
 	case 0:
 		create_border(battle_border.up - 30 - _power * 2, battle_border.down - 30 - _power * 2, battle_border.left - 30 - _power * 2, battle_border.right - 30 - _power * 2);

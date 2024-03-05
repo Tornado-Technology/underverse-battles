@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ClassCharactersTab",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Characters",
-    "path": "folders/Scripts/Local/UI/Characters.yy",
+  "$GMScript":"",
+  "%Name":"ClassCharactersTab",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ClassCharactersTab",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Scripts/Local/UI/Characters.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

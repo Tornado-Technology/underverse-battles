@@ -14,7 +14,7 @@ callback = function () {
 }
 
 update = function() {
-	side = choose(dir.up, dir.down, dir.left, dir.right);
+	side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 	if (use_gravity_attack) {
 		soul_instance.change_gravity_force(side);
 	}
