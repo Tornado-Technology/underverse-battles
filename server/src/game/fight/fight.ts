@@ -251,7 +251,8 @@ export default class Fight {
   }
 
   public setExtraAction(attackIndex: number): void {
-    this.clients.forEach(client => client.sendFightExtraAction(attackIndex, this.setSeed()));
+    const seed = this.setSeed();
+    this.clients.forEach(client => client.sendFightExtraAction(attackIndex, seed));
   }
 
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
@@ -347,11 +348,11 @@ export default class Fight {
 
   public updateStateAttack(): void {
     if (this.state === state.battle) return;
-
     this.setState(state.battle);
 
+    const seed = this.setSeed();
     this.clients.forEach((client) => {
-      client?.sendFightStartBattle(this.setSeed());
+      client?.sendFightStartBattle(seed);
     });
   }
 
