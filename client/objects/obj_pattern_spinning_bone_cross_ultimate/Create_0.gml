@@ -7,7 +7,7 @@ callback = function () {
 
 	var soul_position = new Vector2(border_instance.x, border_instance.y - border_instance.up + 15);
 	if (side_random == dir.down) {
-		soul_position =new Vector2(border_instance.x, border_instance.y + border_instance.down - 15);
+		soul_position = new Vector2(border_instance.x, border_instance.y + border_instance.down - 15);
 	}
 	if (side_random == dir.left) {
 		soul_position = new Vector2(border_instance.x - border_instance.left + 15, border_instance.y);
@@ -24,20 +24,20 @@ callback = function () {
 	bone_instances[1].change_scale(bone_scale, 0.1);
 	audio_play_sound_once(snd_spare_up);
 
-	time_source_start(time_source_update_3_0);
+	time_source_start(time_source_update_spinning_bones);
 }
 
-update_3_0 = function() {
+update_spinning_bones = function() {
 	var bone_angle_speed = fight_random_choose(1, -1);
 	bone_instances[0].angle_speed = bone_angle_speed;
 	bone_instances[1].angle_speed = bone_angle_speed;
 }
 	
-update_3_1 = function() {
+update_gasterblasters_1 = function() {
 	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
 }
 	
-update_3_2 = function() {
+update_projectiles = function() {
 	var rand_side = rand_side_from(border_instance.x - border_instance.left - 15, border_instance.y - border_instance.up - 15, border_instance.x + border_instance.right + 15, border_instance.y + border_instance.down + 15);
 	var object_direction = point_direction(rand_side[0], rand_side[1], soul_instance.x, soul_instance.y);
 	
@@ -53,43 +53,51 @@ update_3_2 = function() {
 	}
 	audio_play_sound_plugging(snd_projectile);
 }
+
+update_gasterblasters_2 = function() {
+	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+}
 	
-update_3_3 = function() {
+update_spinning_bones_back = function() {
 	bone_instances[0].change_scale(0, 0.1);
 	bone_instances[1].change_scale(0, 0.1);
 }
 
-time_source_update_3_0 = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
-	update_3_0();
-	time_source_start(time_source_update_3_1);
-	time_source_start(time_source_update_stop_3_1);
+time_source_update_spinning_bones = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
+	update_spinning_bones();
+	time_source_start(time_source_update_gasterblasters_1);
+	time_source_start(time_source_update_gasterblasters_1_stop);
 });
 
 var period = 25;
 var repeats = 4;
-time_source_update_3_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	update_3_1();
+time_source_update_gasterblasters_1 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+	update_gasterblasters_1();
 }, [], repeats);
 	
-time_source_update_stop_3_1 = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
-	time_source_start(time_source_update_3_2);
-	time_source_start(time_source_update_stop_3_2);
+time_source_update_gasterblasters_1_stop = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
+	time_source_start(time_source_update_projectiles);
+	time_source_start(time_source_update_projectiles_stop);
 });
+
+time_source_update_gasterblasters_2 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+	update_gasterblasters_2();
+}, [], repeats);
 	
-time_source_update_stop_3_3 = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
-	update_3_3();
+time_source_update_gasterblasters_2_stop = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
+	update_spinning_bones_back();
 	time_source_start(time_source_update_destroy);
 });
 	
 period = 20;
 repeats = 5;
-time_source_update_3_2 = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	update_3_2();
+time_source_update_projectiles = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+	update_projectiles();
 }, [], repeats);
 	
-time_source_update_stop_3_2 = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
-	time_source_start(time_source_update_3_1);
-	time_source_start(time_source_update_stop_3_3);
+time_source_update_projectiles_stop = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
+	time_source_start(time_source_update_gasterblasters_2);
+	time_source_start(time_source_update_gasterblasters_2_stop);
 });
 	
 time_source_update_destroy = time_source_create(time_source_game, 1.2, time_source_units_seconds, function () {
