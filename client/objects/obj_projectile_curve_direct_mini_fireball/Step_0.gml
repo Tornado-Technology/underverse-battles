@@ -1,1 +1,0 @@
-event_user(event_id);
