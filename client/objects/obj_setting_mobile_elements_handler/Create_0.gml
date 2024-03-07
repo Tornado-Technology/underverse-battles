@@ -35,8 +35,6 @@ var controller = global.__ui_controls_instance;
 					
 	};
 
-	controllers_switching = UIControlSwitching();
-	controls_switch = method_call (SettingsMobileControl, [id, controllers_switching]);
 	
 	var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
 	for (var i = 0; i < array_length(buttons); i++) {
@@ -49,6 +47,7 @@ var controller = global.__ui_controls_instance;
 
 element = undefined;
 
+controls_switch = SettingsMobileControl(id);
 text_name_x = width / 2;
 text_name_y = height - 100;
 
