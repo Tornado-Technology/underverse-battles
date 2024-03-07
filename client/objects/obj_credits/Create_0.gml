@@ -36,6 +36,7 @@ credits = [
 	"",
 	$"[yellow]{translate_get("Credits.Tester")}",
 	"Fortherehero",
+	"Genno",
 	"",
 	$"[yellow]{translate_get("Credits.StoryCreator")}",
 	"Jael Peñaloza (Jakei)",
