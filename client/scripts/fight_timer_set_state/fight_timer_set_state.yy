@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_timer_set_state",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fight",
-    "path": "folders/Scripts/Local/Fight/Fight.yy",
+  "$GMScript":"",
+  "%Name":"fight_timer_set_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_timer_set_state",
+  "parent":{
+    "name":"Fight",
+    "path":"folders/Scripts/Local/Fight/Fight.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

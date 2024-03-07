@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "char_get_width",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Char",
-    "path": "folders/Scripts/Local/Utilities/Char.yy",
+  "$GMScript":"",
+  "%Name":"char_get_width",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"char_get_width",
+  "parent":{
+    "name":"Char",
+    "path":"folders/Scripts/Local/Utilities/Char.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

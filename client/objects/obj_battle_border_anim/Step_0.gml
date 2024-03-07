@@ -8,10 +8,10 @@ if (animation_id == "Create" && anim_create) {
 
 	var amout = progress / progress_max;
 
-	var up    = dir[dir.up]    * amout;
-	var down  = dir[dir.down]  * amout;
-	var left  = dir[dir.left]  * amout;
-	var right = dir[dir.right] * amout;
+	var up    = side[dir.up]    * amout;
+	var down  = side[dir.down]  * amout;
+	var left  = side[dir.left]  * amout;
+	var right = side[dir.right] * amout;
 	var angl  = angle * amout;
 
 	battle_border_set_size(up, down, left, right);
@@ -25,10 +25,10 @@ if (animation_id == "Destroy") {
 
 	var amout = 1 - progress / progress_max;
 
-	var up    = dir[dir.up]    * amout;
-	var down  = dir[dir.down]  * amout;
-	var left  = dir[dir.left]  * amout;
-	var right = dir[dir.right] * amout;
+	var up    = side[dir.up]    * amout;
+	var down  = side[dir.down]  * amout;
+	var left  = side[dir.left]  * amout;
+	var right = side[dir.right] * amout;
 	var angl  = angle * amout;
 
 	battle_border_set_size(up, down, left, right);

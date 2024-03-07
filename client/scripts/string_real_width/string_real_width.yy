@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "string_real_width",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Stirng",
-    "path": "folders/Scripts/Local/Utilities/Stirng.yy",
+  "$GMScript":"",
+  "%Name":"string_real_width",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_real_width",
+  "parent":{
+    "name":"Stirng",
+    "path":"folders/Scripts/Local/Utilities/Stirng.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

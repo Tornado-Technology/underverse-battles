@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "cutscene_execute",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Cutscene",
-    "path": "folders/Scripts/Local/System/Cutscene.yy",
+  "$GMScript":"",
+  "%Name":"cutscene_execute",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cutscene_execute",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Local/System/Cutscene.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

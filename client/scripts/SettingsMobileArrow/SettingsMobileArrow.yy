@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SettingsMobileArrow",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Elements",
-    "path": "folders/Scripts/Local/Settings(mobile)/Elements.yy",
+  "$GMScript":"",
+  "%Name":"SettingsMobileArrow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SettingsMobileArrow",
+  "parent":{
+    "name":"Elements",
+    "path":"folders/Scripts/Local/Settings(mobile)/Elements.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

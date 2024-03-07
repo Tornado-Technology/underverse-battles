@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "aprroach",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Math",
-    "path": "folders/Scripts/Local/Utilities/Math.yy",
+  "$GMScript":"",
+  "%Name":"aprroach",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"aprroach",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Local/Utilities/Math.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "file_finde_all",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Data",
-    "path": "folders/Scripts/Local/Utilities/Data.yy",
+  "$GMScript":"",
+  "%Name":"file_finde_all",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"file_finde_all",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/Utilities/Data.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

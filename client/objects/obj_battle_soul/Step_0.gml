@@ -10,13 +10,14 @@ if (place_meeting(x, y, pusher)) {
 	pusher_instance = instance_place(x, y, pusher);
 	
 	var blast_angle = pusher_instance._angle;
-	
 	var cos_blast_angle = dcos(blast_angle);
 	var sin_blast_angle = dsin(blast_angle);
 	
-	var outside_force_speed = 8 * dtime;
+	
+	var outside_force_speed = pusher_instance.outside_force_speed  * dtime;
 	outside_force_x = outside_force_speed * cos_blast_angle;
 	outside_force_y = -outside_force_speed * sin_blast_angle;
+	
 	is_pushed = true;
 	
 	movement_speed_x = 0;

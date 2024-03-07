@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "convert_dec_to_hex",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Conversion",
-    "path": "folders/Scripts/Local/Utilities/Conversion.yy",
+  "$GMScript":"",
+  "%Name":"convert_dec_to_hex",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"convert_dec_to_hex",
+  "parent":{
+    "name":"Conversion",
+    "path":"folders/Scripts/Local/Utilities/Conversion.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

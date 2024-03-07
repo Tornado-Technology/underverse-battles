@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "has_key_inputs",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Local/System/Input.yy",
+  "$GMScript":"",
+  "%Name":"has_key_inputs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"has_key_inputs",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Local/System/Input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

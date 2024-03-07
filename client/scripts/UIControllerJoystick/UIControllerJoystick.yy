@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "UIControllerJoystick",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Joystick",
-    "path": "folders/Scripts/Local/System/Controls/Joystick.yy",
+  "$GMScript":"",
+  "%Name":"UIControllerJoystick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIControllerJoystick",
+  "parent":{
+    "name":"Joystick",
+    "path":"folders/Scripts/Local/System/Controls/Joystick.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

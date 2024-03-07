@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_char_damage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Fight",
-    "path": "folders/Scripts/Local/Fight/Fight.yy",
+  "$GMScript":"",
+  "%Name":"get_char_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_char_damage",
+  "parent":{
+    "name":"Fight",
+    "path":"folders/Scripts/Local/Fight/Fight.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

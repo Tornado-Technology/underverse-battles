@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "NetworkAccount",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Schemas",
-    "path": "folders/Scripts/Network/Schemas.yy",
+  "$GMScript":"",
+  "%Name":"NetworkAccount",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"NetworkAccount",
+  "parent":{
+    "name":"Schemas",
+    "path":"folders/Scripts/Network/Schemas.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -101,6 +101,9 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_tornado_frame),
+		],
+		[
+			new Character(obj_character_tesmi, "Payerus", "Standard", spr_tornado_frame)
 		]
 		);
 	}

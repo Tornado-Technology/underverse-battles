@@ -1,5 +1,5 @@
 global.__soundtrack_list = [];
-#macro soundtrack_list global.__soundtrack_list
+#macro soundtrack_list []
 
 /// @param {Asset.GMSound} snd
 /// @param {String} name

@@ -16,6 +16,7 @@ callback = function () {
 	
 	blades_instance_01.speed_const = 1 + _power * 0.15;
 	blades_instance_02.speed_const = 1 + _power * 0.15;
+
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
 }

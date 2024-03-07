@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "HandlerPacket",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Network",
-    "path": "folders/Scripts/Network.yy",
+  "$GMScript":"",
+  "%Name":"HandlerPacket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"HandlerPacket",
+  "parent":{
+    "name":"Network",
+    "path":"folders/Scripts/Network.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

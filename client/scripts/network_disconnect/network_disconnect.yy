@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "network_disconnect",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Other",
-    "path": "folders/Scripts/Network/Other.yy",
+  "$GMScript":"",
+  "%Name":"network_disconnect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"network_disconnect",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Network/Other.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

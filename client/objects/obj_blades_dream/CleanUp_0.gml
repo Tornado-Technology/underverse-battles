@@ -1,4 +1,4 @@
-if (is_trap) {
+if (is_directions) {
 	time_source_destroy(time_source_destroy_blades);
 }
 

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_big_knife_y",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Knives",
-    "path": "folders/Scripts/Local/Fight/Battle/Object/Knives.yy",
+  "$GMScript":"",
+  "%Name":"create_big_knife_y",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_big_knife_y",
+  "parent":{
+    "name":"Knives",
+    "path":"folders/Scripts/Local/Fight/Battle/Object/Knives.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "background_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Background",
-    "path": "folders/Scripts/Local/Data/Background.yy",
+  "$GMScript":"",
+  "%Name":"background_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"background_set",
+  "parent":{
+    "name":"Background",
+    "path":"folders/Scripts/Local/Data/Background.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

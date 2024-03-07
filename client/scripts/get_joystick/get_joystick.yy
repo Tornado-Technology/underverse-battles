@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_joystick",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Joystick",
-    "path": "folders/Scripts/Local/System/Controls/Joystick.yy",
+  "$GMScript":"",
+  "%Name":"get_joystick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_joystick",
+  "parent":{
+    "name":"Joystick",
+    "path":"folders/Scripts/Local/System/Controls/Joystick.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

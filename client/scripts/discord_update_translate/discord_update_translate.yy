@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "discord_update_translate",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Discord",
-    "path": "folders/Scripts/Local/System/Discord.yy",
+  "$GMScript":"",
+  "%Name":"discord_update_translate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"discord_update_translate",
+  "parent":{
+    "name":"Discord",
+    "path":"folders/Scripts/Local/System/Discord.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

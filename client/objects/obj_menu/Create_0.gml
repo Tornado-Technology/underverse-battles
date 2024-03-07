@@ -68,15 +68,14 @@ opening = choose(opening_theme.tangled, opening_theme.alternation);
 
 // Background
 background = opening == opening_theme.tangled ? spr_background_tangled : spr_background_alternation;
-background_height = opening == opening_theme.tangled ? sprite_get_height(background) * 2 : sprite_get_height(background);
-background_width = sprite_get_width(background);
-
+background_height_ = opening == opening_theme.tangled ? sprite_get_height(background)  : sprite_get_height(background);
+background_width_ = sprite_get_width(background);
 background_color_main = opening_theme.tangled ? c_white : background_color;
 
 background_alpha = 1;
 background_target_alpha = 1;
 
-background_target_y = -background_height + height;
+background_target_y = -background_height_ + height;
 background_y = 0;
 
 // Background frame animation

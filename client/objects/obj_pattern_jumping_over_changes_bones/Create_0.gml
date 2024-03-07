@@ -12,22 +12,26 @@ update = function() {
 	var side = irandom_range(0, 2);
 	var bone_speed = 1.6;
 	var bone_size = random_range(1.8, 3.5);
+	var bone_changes_size = random_range(0.8, 1.0);
 	var bone_changes = random_range(2.8, 3.9);
 	if (_power > 1) {
 		bone_speed = 2.3;
 		bone_size = random_range(1.5, 2.9);
+		bone_changes =  random_range(1.6, 3.3);
 	}
 	if (_power > 3) {
 		bone_speed = 2.5;
 		bone_size = random_range(1.3, 2.2);
+		bone_changes =  random_range(1.6, 3.9);
 	}
 			
 	var bone_up_size = 7.4 - bone_size;
-	bone_changes = bone_up_size + random_range(2.8, 3.9);
-	if (_power > 2)
+		bone_changes = irandom_range(7.5, 8.0) - bone_changes_size;
+	if (_power > 2) {
 		bone_up_size = 7.8 - bone_size;
-		bone_changes = bone_up_size + random_range(2.8, 3.9);
-		var speed_change = 0.09;
+		bone_changes = irandom_range(7.8, 8.9) - bone_changes_size;
+	}
+		var speed_change = 0.1;
 	if (side == 0 || side == 2) {
 	   var bone_0 = create_bone(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 0, 0);
 	   var	bone_1 = create_bone(border_instance.x - border_instance.left, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 0, 180);
@@ -35,8 +39,8 @@ update = function() {
 		bone_1.change_scale(speed_change, bone_changes);
 	}
 	if (side == 1 || side == 2) {
-		var bone_0 =  create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 180, 0);
-		var bone_1 =create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 180, 180);
+		var bone_0 = create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 180, 0);
+		var bone_1 = create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 180, 180);
 		bone_0.change_scale(speed_change, bone_changes);
 		bone_1.change_scale(speed_change, bone_changes);
 	}

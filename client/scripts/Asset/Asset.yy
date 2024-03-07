@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Asset",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Modification",
-    "path": "folders/Scripts/Local/Data/Modification.yy",
+  "$GMScript":"",
+  "%Name":"Asset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Asset",
+  "parent":{
+    "name":"Modification",
+    "path":"folders/Scripts/Local/Data/Modification.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

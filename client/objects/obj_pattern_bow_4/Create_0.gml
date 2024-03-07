@@ -1,7 +1,7 @@
 // Arguments bow, arrow
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
+	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	update();
 	time_source_start(time_source_update);	
@@ -10,26 +10,25 @@ callback = function () {
 
 	
 update = function () {
-	var bow_counst =  _power > 3 ?  4 : _power + 1;
+	var up = choose(false, true);
+	var spwan_star = choose(true, false);
+	var orange = irandom_range(1, 100);
+	
 	var radius = 120;
-	var cross = choose(false, true); 
-	var angle_offset = cross ?  360 : 240;
-	var angle = angle_offset / bow_counst;
-	var i = angle;
-	while(i <= angle_offset) {
-		bow_instance = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside_hight, bow, {
-		target_time: 0.2,
-		shot_time: 0.7,
-		destroy_time: 0.5,
-		_power: _power,
-		arrows: arrows,
-		speed_const : 2 + _power * 0.1
+	var angle = irandom_range(0, 360);
+	var offset = irandom_range(20, 50);
+	var arrow_ =  orange <= 25 ? (spwan_star ? arrows_orange_star : arrows_orange) : (spwan_star ? arrows_star : arrows);
+	var border = up ? border_instance.x - border_instance.up - offset : border_instance.x + border_instance.down + offset;
+		bow_instance = instance_create_depth(border_instance.x + dcos(angle) * radius, border + -dsin(angle) * radius, fight_depth.bullet_outside_hight, bow, {
+			target_time: 0.2 - _power * 0.01,
+			shot_time: 0.7 - _power * 0.01,
+			destroy_time: 0.5,
+			_power: _power,
+			arrows: arrow_,
+			speed_const : 2 + _power * 0.5
 		});
-
-		i += angle;
-	}
 }
-var period = 35 - 1 - _power * 2;
+var period = 33 - 3 - _power * 2;
 var repeats = 20 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {
@@ -41,7 +40,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 }, [], repeats - 1);
 
 
-time_source_update_destroy = time_source_create(time_source_game,  period * (repeats + 1) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60, time_source_units_seconds, function () {
 instance_destroy();	
 });	
 	

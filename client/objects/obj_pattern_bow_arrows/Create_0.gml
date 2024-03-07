@@ -30,7 +30,6 @@ if (instance_number(bow) != _power + 1) {
 		speed_const : 3 + _power * 0.3
 	});					
 	
-	bow_instance.spwan();
 	};
 };
 

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DeviceKeyboard",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Device",
-    "path": "folders/Scripts/Local/System/Input/Device.yy",
+  "$GMScript":"",
+  "%Name":"DeviceKeyboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DeviceKeyboard",
+  "parent":{
+    "name":"Device",
+    "path":"folders/Scripts/Local/System/Input/Device.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

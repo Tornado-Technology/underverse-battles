@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "effect_fade",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effect",
-    "path": "folders/Scripts/Local/Data/Effect.yy",
+  "$GMScript":"",
+  "%Name":"effect_fade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"effect_fade",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Local/Data/Effect.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

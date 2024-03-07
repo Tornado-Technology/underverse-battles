@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__GameConfig",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Configs",
-    "path": "folders/Options/Configs.yy",
+  "$GMScript":"",
+  "%Name":"__GameConfig",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__GameConfig",
+  "parent":{
+    "name":"Configs",
+    "path":"folders/Options/Configs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

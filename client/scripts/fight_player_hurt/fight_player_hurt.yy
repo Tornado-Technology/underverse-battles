@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_player_hurt",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Hurt",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Hurt.yy",
+  "$GMScript":"",
+  "%Name":"fight_player_hurt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_player_hurt",
+  "parent":{
+    "name":"Hurt",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Hurt.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

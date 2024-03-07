@@ -1,4 +1,4 @@
-// Arguments:  thread_tentacles
+// Arguments:  thread_tentacles, spike
 callback = function () {
 	soul_instance = create_soul(border_instance.x + 30, border_instance.y, battle_soul_type.red);
 	

@@ -18,7 +18,7 @@ update = function () {
 	
 	if (rand_side == dir.right) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bones,
-		bone_speed, bone_size, 180, 0);
+		bone_speed, bone_size, 180, 0)
 		bone_instance.change_scale(speed_change, random_size);
 	}
 	else if (rand_side == dir.up) {
@@ -34,7 +34,7 @@ update = function () {
 	
 }
 
-var period = 33 - 2 + _power * 2;
+var period = 33 - 2 - _power * 2;
 var repeats = 15 + _power * 3;
 
 if (variable_instance_exists(id, "custom_repeats")) {

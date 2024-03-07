@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_pause",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utils",
-    "path": "folders/Scripts/Local/Fight/Fight/Utils.yy",
+  "$GMScript":"",
+  "%Name":"fight_pause",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_pause",
+  "parent":{
+    "name":"Utils",
+    "path":"folders/Scripts/Local/Fight/Fight/Utils.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

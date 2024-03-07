@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_move_player_position_y",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Move",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Position/Move.yy",
+  "$GMScript":"",
+  "%Name":"fight_move_player_position_y",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_move_player_position_y",
+  "parent":{
+    "name":"Move",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Position/Move.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

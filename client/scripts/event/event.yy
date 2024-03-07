@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Event",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utilities",
-    "path": "folders/Scripts/Local/Utilities.yy",
+  "$GMScript":"",
+  "%Name":"Event",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Event",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Local/Utilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

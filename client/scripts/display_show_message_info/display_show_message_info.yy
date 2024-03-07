@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "display_show_message_info",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UI",
-    "path": "folders/Scripts/Local/UI.yy",
+  "$GMScript":"",
+  "%Name":"display_show_message_info",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_show_message_info",
+  "parent":{
+    "name":"UI",
+    "path":"folders/Scripts/Local/UI.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

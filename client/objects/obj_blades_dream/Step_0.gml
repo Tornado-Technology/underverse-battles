@@ -40,7 +40,7 @@ if (is_target) {
 
 
 
-if (is_trap) {
+if (is_directions) {
 	motion_set(direction, speed_const * dtime);
 	time_source_start(time_source_destroy_blades);
 };
@@ -74,7 +74,11 @@ if (is_swung) {
 
 if (is_spinning) {
 	image_angle += angle;
-	angle += speed_const * dtime;
+	angle += speed_const  * dtime;
+}
+
+if (is_spinning_independent) {
+	image_angle += speed_spinning * dtime;	
 }
 
 

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "soul_start_tremble",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Soul",
-    "path": "folders/Scripts/Local/Fight/Battle/Soul.yy",
+  "$GMScript":"",
+  "%Name":"soul_start_tremble",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"soul_start_tremble",
+  "parent":{
+    "name":"Soul",
+    "path":"folders/Scripts/Local/Fight/Battle/Soul.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

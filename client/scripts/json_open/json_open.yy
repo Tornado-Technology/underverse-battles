@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "json_open",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Data",
-    "path": "folders/Scripts/Local/Utilities/Data.yy",
+  "$GMScript":"",
+  "%Name":"json_open",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"json_open",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/Utilities/Data.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

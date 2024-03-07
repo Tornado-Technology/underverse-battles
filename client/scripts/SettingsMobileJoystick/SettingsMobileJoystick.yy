@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SettingsMobileJoystick",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Controllers",
-    "path": "folders/Scripts/Local/Settings(mobile)/Controllers.yy",
+  "$GMScript":"",
+  "%Name":"SettingsMobileJoystick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SettingsMobileJoystick",
+  "parent":{
+    "name":"Controllers",
+    "path":"folders/Scripts/Local/Settings(mobile)/Controllers.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

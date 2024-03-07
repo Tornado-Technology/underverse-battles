@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CharactersTabSkinList",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Characters",
-    "path": "folders/Scripts/Local/UI/Characters.yy",
+  "$GMScript":"",
+  "%Name":"CharactersTabSkinList",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CharactersTabSkinList",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Scripts/Local/UI/Characters.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

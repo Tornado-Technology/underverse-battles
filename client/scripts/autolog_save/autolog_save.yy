@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "autolog_save",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Autolog",
-    "path": "folders/Scripts/Local/Autolog.yy",
+  "$GMScript":"",
+  "%Name":"autolog_save",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"autolog_save",
+  "parent":{
+    "name":"Autolog",
+    "path":"folders/Scripts/Local/Autolog.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

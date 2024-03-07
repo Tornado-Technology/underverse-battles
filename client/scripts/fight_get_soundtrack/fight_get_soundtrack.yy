@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_get_soundtrack",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Soundtrack",
-    "path": "folders/Scripts/Local/Fight/Fight/Soundtrack.yy",
+  "$GMScript":"",
+  "%Name":"fight_get_soundtrack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_get_soundtrack",
+  "parent":{
+    "name":"Soundtrack",
+    "path":"folders/Scripts/Local/Fight/Fight/Soundtrack.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

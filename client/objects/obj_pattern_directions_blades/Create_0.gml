@@ -38,7 +38,7 @@ repeat (count) {
 		blades_instance.direction = target;
 		blades_instance.image_angle = target;
 		blades_instance.speed_const = 2 + _power * 0.1;
-		blades_instance.trap();
+		blades_instance.directions();
 		i++;
 	}
 }

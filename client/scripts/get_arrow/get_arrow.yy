@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_arrow",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Arrows",
-    "path": "folders/Scripts/Local/System/Controls/Arrows.yy",
+  "$GMScript":"",
+  "%Name":"get_arrow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_arrow",
+  "parent":{
+    "name":"Arrows",
+    "path":"folders/Scripts/Local/System/Controls/Arrows.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

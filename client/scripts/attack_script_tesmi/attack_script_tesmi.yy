@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "attack_script_tesmi",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Attacks",
-    "path": "folders/Characteres/Tesmi/Attacks.yy",
+  "$GMScript":"",
+  "%Name":"attack_script_tesmi",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attack_script_tesmi",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Characteres/Tesmi/Attacks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

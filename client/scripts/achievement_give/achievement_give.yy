@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "achievement_give",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Achievement",
-    "path": "folders/Scripts/Local/Data/Achievement.yy",
+  "$GMScript":"",
+  "%Name":"achievement_give",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"achievement_give",
+  "parent":{
+    "name":"Achievement",
+    "path":"folders/Scripts/Local/Data/Achievement.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

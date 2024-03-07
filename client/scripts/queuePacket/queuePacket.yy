@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "queuePacket",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utilities",
-    "path": "folders/Scripts/Network/Utilities.yy",
+  "$GMScript":"",
+  "%Name":"queuePacket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"queuePacket",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Network/Utilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

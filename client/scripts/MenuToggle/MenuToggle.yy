@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MenuToggle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menu",
-    "path": "folders/Scripts/Local/UI/Menu.yy",
+  "$GMScript":"",
+  "%Name":"MenuToggle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MenuToggle",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Scripts/Local/UI/Menu.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

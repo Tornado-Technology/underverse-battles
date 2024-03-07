@@ -1,14 +1,14 @@
 event_inherited();
 
-is_trap = false;
+is_directions = false;
 is_target = false;
 is_swung = false;
-is_moving_line = false;
 is_spinning = false;
+is_spinning_independent = false;
 stop_alpha = false;
 
 step_alpha = 0.03;
-
+speed_spinning = 0;
 angle = 0;
 
 stage = 0;
@@ -45,8 +45,8 @@ move_back = function() {
 	audio_play_sound_plugging(snd_projectile);
 }
 
-trap = function () {
-	is_trap = true;
+directions = function () {
+	is_directions = true;
 	time_source_destroy_blades = time_source_create(time_source_game, time_destroy / 60, time_source_units_seconds, function () {
 	 stop_alpha = true;
 	})
@@ -81,14 +81,10 @@ swung = function (_max_acc) {
 	time_source_start(time_source_move_finish);
 }
 
-move_line = function () {
-	is_moving_line = true;
-}
-
 move_spinning = function () {
 	is_spinning = true;
 }
 
-move_rotational = function () {
-	rotational = true;	
+move_spinning_independent = function () {
+	is_spinning_independent = true;	
 }

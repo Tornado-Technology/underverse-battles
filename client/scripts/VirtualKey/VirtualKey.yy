@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "VirtualKey",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Key",
-    "path": "folders/Scripts/Local/System/Controls/Key.yy",
+  "$GMScript":"",
+  "%Name":"VirtualKey",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"VirtualKey",
+  "parent":{
+    "name":"Key",
+    "path":"folders/Scripts/Local/System/Controls/Key.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

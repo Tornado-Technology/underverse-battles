@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_regen_player_stamina",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Stamina",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Stamina.yy",
+  "$GMScript":"",
+  "%Name":"fight_regen_player_stamina",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_regen_player_stamina",
+  "parent":{
+    "name":"Stamina",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Stamina.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

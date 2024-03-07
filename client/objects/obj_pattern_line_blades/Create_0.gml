@@ -24,20 +24,22 @@ repeat(_power div 2 + 2) {
 				blades_instance.direction = target;
 				blades_instance.image_angle = target;
 				blades_instance.speed_const = 3 + _power * 0.2;
-				blades_instance.trap();
+				blades_instance.speed_spinning =  2 + _power * 0.1;
+				blades_instance.directions();
+				blades_instance.move_spinning_independent();
 			i += _angle;
 			offset += 15;
 		 }
 	}
 }
 
-var period = 33 - 3 * _power;
-var repeats = 14 + (_power div 2 + 3);
+var period = 33 - 2 - _power * 2;
+var repeats = 14 + (_power  * 3);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, repeats * period / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  period *  repeats / 60, time_source_units_seconds, function () {
 	instance_destroy();	
 });

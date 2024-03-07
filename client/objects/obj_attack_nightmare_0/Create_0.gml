@@ -2,9 +2,9 @@ event_inherited();
 
 on_border_created = function () {
 	pattern_instance.callback();
-};
+};	
 
-type = irandom_range(4, 4);
+type = irandom_range(5, 5);
 switch (type) {
 	case 0:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
@@ -36,12 +36,17 @@ switch (type) {
 	break;
 	
 	case 4:
-		create_border(battle_border.up , battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_tentacles_three, {
-			thread_tentacles: obj_string_tentacles_nightmare,
-			spike: obj_spike_1_nightmare
-		});	
-	break; 
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
+		pattern_instance = create_pattern(obj_pattern_creation, {
+			tentacles: obj_creation_nightmare
+		});
+	break;
 	
+	case 5:
+	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
+		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
+			fist: obj_fist_nightmare
+		});
 	
+	break;
 };

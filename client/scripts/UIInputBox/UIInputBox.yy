@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "UIInputBox",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "InputText",
-    "path": "folders/Scripts/Local/UI/InputText.yy",
+  "$GMScript":"",
+  "%Name":"UIInputBox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIInputBox",
+  "parent":{
+    "name":"InputText",
+    "path":"folders/Scripts/Local/UI/InputText.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

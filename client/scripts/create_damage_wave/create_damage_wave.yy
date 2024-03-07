@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_damage_wave",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Knives",
-    "path": "folders/Scripts/Local/Fight/Battle/Object/Knives.yy",
+  "$GMScript":"",
+  "%Name":"create_damage_wave",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_damage_wave",
+  "parent":{
+    "name":"Knives",
+    "path":"folders/Scripts/Local/Fight/Battle/Object/Knives.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_broomie",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Object",
-    "path": "folders/Scripts/Local/Fight/Battle/Object.yy",
+  "$GMScript":"",
+  "%Name":"create_broomie",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_broomie",
+  "parent":{
+    "name":"Object",
+    "path":"folders/Scripts/Local/Fight/Battle/Object.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

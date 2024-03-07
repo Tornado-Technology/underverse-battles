@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Range",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utilities",
-    "path": "folders/Scripts/Local/Utilities.yy",
+  "$GMScript":"",
+  "%Name":"Range",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Range",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Local/Utilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

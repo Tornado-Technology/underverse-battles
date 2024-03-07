@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "attack_spripts_papyrus",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Attacks",
-    "path": "folders/Characteres/Papyrus/Attacks.yy",
+  "$GMScript":"",
+  "%Name":"attack_spripts_papyrus",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attack_spripts_papyrus",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Characteres/Papyrus/Attacks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

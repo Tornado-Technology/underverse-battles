@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_gasterblaster",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Gasterblaster",
-    "path": "folders/Scripts/Local/Fight/Battle/Object/Gasterblaster.yy",
+  "$GMScript":"",
+  "%Name":"create_gasterblaster",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_gasterblaster",
+  "parent":{
+    "name":"Gasterblaster",
+    "path":"folders/Scripts/Local/Fight/Battle/Object/Gasterblaster.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -51,5 +51,5 @@ actions = [
 
 // Soundtrack
 soundtrack_name = "vsTesmi"; 
-soundtrack = snd_vs_tesmi;
+
 

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__Enums",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Content",
-    "path": "folders/Options/Content.yy",
+  "$GMScript":"",
+  "%Name":"__Enums",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__Enums",
+  "parent":{
+    "name":"Content",
+    "path":"folders/Options/Content.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

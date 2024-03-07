@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "input_clear_last_key",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Local/System/Input.yy",
+  "$GMScript":"",
+  "%Name":"input_clear_last_key",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"input_clear_last_key",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Local/System/Input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

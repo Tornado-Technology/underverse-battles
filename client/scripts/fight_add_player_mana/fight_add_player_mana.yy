@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "fight_add_player_mana",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mana",
-    "path": "folders/Scripts/Local/Fight/Fight/Player/Mana.yy",
+  "$GMScript":"",
+  "%Name":"fight_add_player_mana",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_add_player_mana",
+  "parent":{
+    "name":"Mana",
+    "path":"folders/Scripts/Local/Fight/Fight/Player/Mana.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
