@@ -10,7 +10,7 @@ callback = function () {
 }
 
 update = function() {
-	var random_x = choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
+	var random_x = fight_random_choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
 	var bone_dir = point_direction(random_x, border_instance.y - border_instance.up - 10, soul_instance.x, soul_instance.y);
 	var bone_speed = 2 + 0.2 * _power;
 	create_bone(random_x, border_instance.y - border_instance.up - 5, bone, bone_speed, 1, bone_dir, bone_dir - 90);

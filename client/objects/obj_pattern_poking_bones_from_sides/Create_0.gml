@@ -11,27 +11,27 @@ callback = function () {
 }
 
 update = function() {
-	var random_number = irandom_range(0, array_length(sides) - 1);
+	var random_number = fight_random_integer(0, array_length(sides) - 1);
 	var bone_x;
 	var bone_y;
 	var bone_direction;
 	if (sides[random_number] == dir.left) {
 		bone_x = border_instance.x - border_instance.left - 55;
-		bone_y = irandom_range(border_instance.y - border_instance.up + 5, border_instance.y + border_instance.down - 5);
+		bone_y = fight_random_integer(border_instance.y - border_instance.up + 5, border_instance.y + border_instance.down - 5);
 		bone_direction = 0;
 	}
 	if (sides[random_number] == dir.right) {
 		bone_x = border_instance.x + border_instance.right + 55;
-		bone_y = irandom_range(border_instance.y - border_instance.up + 5, border_instance.y + border_instance.down - 5);
+		bone_y = fight_random_integer(border_instance.y - border_instance.up + 5, border_instance.y + border_instance.down - 5);
 		bone_direction = 180;
 	}
 	if (sides[random_number] == dir.up) {
-		bone_x = irandom_range(border_instance.x - border_instance.left + 5, border_instance.x + border_instance.right - 5);
+		bone_x = fight_random_integer(border_instance.x - border_instance.left + 5, border_instance.x + border_instance.right - 5);
 		bone_y = border_instance.y - border_instance.up - 55;
 		bone_direction = 90;
 	}
 	if (sides[random_number] == dir.down) {
-		bone_x = irandom_range(border_instance.x - border_instance.left + 5, border_instance.x + border_instance.right - 5);
+		bone_x = fight_random_integer(border_instance.x - border_instance.left + 5, border_instance.x + border_instance.right - 5);
 		bone_y = border_instance.y + border_instance.down + 55;
 		bone_direction = 270;
 	}

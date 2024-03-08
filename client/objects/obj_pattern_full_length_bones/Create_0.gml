@@ -12,7 +12,7 @@ callback = function () {
 }
 
 update = function () {
-	var rand_side = choose(dir.up, dir.down, dir.left, dir.right);
+	var rand_side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 	var bone_speed = 2 + _power * 0.2;
 	if (rand_side == dir.left) {
 		var bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone,

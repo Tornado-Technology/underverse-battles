@@ -8,7 +8,7 @@ time_create_ink = 100;
 time_create_ink_step = 0.2;
 time_create_ink_max = 100;
 
-color_num = irandom_range(0, 1);
+color_num = fight_random_integer(0, 1);
 if (color_num == 1)
 	sprite_index = spr_drop_red_ink_sans;
 	

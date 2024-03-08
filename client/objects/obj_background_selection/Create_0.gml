@@ -32,7 +32,7 @@ text_color_selecting = c_purple;
 soundtrack_step_y = 20;
 
 background_x = width / 2;
-background_y = height / 2;
+background_y_ = height / 2;
 
 list_size = 5;
 list_middle = 3;

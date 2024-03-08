@@ -4,7 +4,6 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 3);
 switch (type) {
 	case 0:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
@@ -25,7 +24,7 @@ switch (type) {
 			sides: [dir.left, dir.right]
 		});
 		break;
-	case 3:
+	default:
 		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_knife_circle, {
 			knife: obj_knife_directed_xchara

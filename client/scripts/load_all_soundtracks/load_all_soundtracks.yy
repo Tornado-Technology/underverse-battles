@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"load_all_soundtracks",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"load_all_soundtracks",
+  "parent":{
+    "name":"Soundtrack",
+    "path":"folders/Scripts/Local/Data/Soundtrack.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

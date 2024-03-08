@@ -4,7 +4,7 @@ platforms_speed = 0.5 + _power * 0.1;
 sector_y_step = 35;
 
 callback = function () {
-	var _soul_pos = irandom_range(0, 2);
+	var _soul_pos = fight_random_integer(0, 2);
 		
 	if (_soul_pos == 0)
 		soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down / 2, battle_soul_type.orange);
@@ -21,7 +21,7 @@ callback = function () {
 }
 
 update = function() {
-	var position_number = irandom_range(0, 2);
+	var position_number = fight_random_integer(0, 2);
 	var border_distance = 180;
 	switch (position_number) {
 		case 0:

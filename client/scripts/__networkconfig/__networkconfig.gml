@@ -55,7 +55,7 @@ global.__on_network_connection_timeout = new Event();
 
 // Macros
 #macro network_offical_ip (localserver_mode ? "127.0.0.1" : "82.146.34.152")
-#macro network_offical_port (development_mode ? "1337" : (tournament_mode ? "1337" : "1339"))
+#macro network_offical_port (development_mode ? "1337" : "1339"))
 #macro network_ping_interval 3
 #macro network_connect_interval 15
 #macro network_disconnect_interval 10

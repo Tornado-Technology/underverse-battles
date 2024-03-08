@@ -18,7 +18,8 @@ tabSkin.on_click_on_character = function() {
 	input_lock = true;
 	
 	effect_fade(0.5, 0, c_black, c_black, true, -1, function() {
-		send_fight_join(tabCharacters.selected_character, tabSkin.selected_character);
+		send_fight_join(tournament_mode ? match_type.tournament_1vs1 : match_type.rating_1vs1,
+			tabCharacters.selected_character, tabSkin.selected_character);
 		instance_create(obj_menu_matchmaking);
 		instance_destroy();
 	});

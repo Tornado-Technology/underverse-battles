@@ -25,8 +25,13 @@ function ActionClass(key_name, key_description, callback) constructor {
 	
 	/// @param {Id.Instance} character
 	/// @param {Real} power
-	static invoke = function(character, pow) {
+	/// @param {Real} type
+	static invoke = function(character, _power, type) {
 		if (callback == undefined) return;
-		callback(pow, character);
+		if (type == undefined) {
+			callback(character, _power);
+			return;
+		}
+		callback(character, _power, type);
 	}
 }

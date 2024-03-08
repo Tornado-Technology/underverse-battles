@@ -20,6 +20,8 @@ add_button(text_return, function() {
 
 if (fight_exists) {
 	add_button(text_giveup, function() {
+		if (global.fight_instance == noone) return;
+		
 		var damage = fight_get_player_hp(0);
 		if (damage > 0) {
 			fight_set_player_hp(0, 0);

@@ -8,4 +8,8 @@ if (fight_player_using_special_action(initiative)) {
 	exit;
 }
 
+if (variable_instance_exists(id, "attack_type")) {
+	fight_call_attack(initiative, attack_id, attack_power, attack_type);
+	exit;
+}
 fight_call_attack(initiative, attack_id, attack_power);

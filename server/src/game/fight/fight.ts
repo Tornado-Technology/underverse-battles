@@ -36,6 +36,8 @@ export default class Fight {
 
   protected destroyTimeout: NodeJS.Timeout;
 
+  protected stateNames = ['empty', 'skip', 'attack 1', 'attack 2', 'attack 3', 'special attack'];
+
   public static create(client1: Client, client2: Client): void {
     const fight = new Fight(client1, client2, String(Date.now()));
     App.fights.push(fight);
@@ -81,7 +83,12 @@ export default class Fight {
   }
 
   public leavePlayer(client: Client): void {
-      const winnerClient = this.clients.find((c) => c);
+      const winnerClient = this.clients.find((c) => c != client);
+      if (!winnerClient) {
+        Logger.debug(`No players in fight[${this.id}]. The fight was over`);
+        this.finishInDraw();
+        return;
+      }
       this.finish(winnerClient);
       winnerClient?.sendFightDisconnect(target.opponent);
       client?.sendFightDisconnect(target.self);
@@ -141,7 +148,7 @@ export default class Fight {
 
   public setState(newState: state): void {
     this._state = newState;
-    Logger.debug(`Fight[${this.id}] set new state "${newState}"`);
+    Logger.debug(`Fight[${this.id}] set new state "${this.stateNames[newState]}"`);
   }
 
   public async finish(winner: Client): Promise<void> {
@@ -243,8 +250,9 @@ export default class Fight {
     client?.sendFightResetPower();
   }
 
-  public setExtraAction(client: Client): void {
-    this.getOtherClient(client)?.sendFightExtraAction();
+  public setExtraAction(attackIndex: number): void {
+    const seed = this.setSeed();
+    this.clients.forEach(client => client.sendFightExtraAction(attackIndex, seed));
   }
 
   public setClientSoulData(client: Client, x: number, y: number, angle: number, ability: number): void {
@@ -340,11 +348,9 @@ export default class Fight {
 
   public updateStateAttack(): void {
     if (this.state === state.battle) return;
-
-    const seed = randomInt(0, 2000000000);
-
     this.setState(state.battle);
 
+    const seed = this.setSeed();
     this.clients.forEach((client) => {
       client?.sendFightStartBattle(seed);
     });
@@ -358,12 +364,12 @@ export default class Fight {
   }
 
   public battleFinish(client: Client, damage: number) {
+    const otherClient = this.getOtherClient(client);
+    otherClient.sendFightBattleEnd(damage);
+
     if (this.state == state.battle) {
       this.resetState();
     }
-
-    const otherClient = this.getOtherClient(client);
-    otherClient.sendFightBattleEnd(damage);
   }
 
   public async setHp(client: Client, hp: number): Promise<void> {
@@ -447,5 +453,9 @@ export default class Fight {
       this.setClientAction(client, actionType.empty);
       this.setClientPower(client, 0);
     });
+  }
+
+  private setSeed(): number {
+    return randomInt(0, 4294967295);
   }
 }

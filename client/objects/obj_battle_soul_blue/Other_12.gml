@@ -73,6 +73,10 @@ if (place_meeting(x + full_movement_x, y, obj_platform) && !place_meeting(x, y, 
 	tremble_force_x = 0;
 }
 
+if (movement_speed_x > VSPD) {
+	movement_speed_x = VSPD;
+}
+
 if (movement_speed_x < -FALL_SPD) {
 	movement_speed_x = -FALL_SPD;
 }

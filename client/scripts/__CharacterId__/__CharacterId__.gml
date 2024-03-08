@@ -1,7 +1,4 @@
 enum character_id {
-	tesmi = -5,
-	sock_police = -4,
-	tornado = -3,
 	ink_sans = 0,
 	error_sans = 1,
 	sans = 2,

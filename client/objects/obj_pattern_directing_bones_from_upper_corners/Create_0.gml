@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function() {
-	var random_x = irandom_range(-border_instance.left, border_instance.right);
+	var random_x = fight_random_integer(-border_instance.left, border_instance.right);
 	var angle_speed = 5;
 	var bone_x = border_instance.x + random_x;
 	var bone_y = border_instance.y - border_instance.up - 10;

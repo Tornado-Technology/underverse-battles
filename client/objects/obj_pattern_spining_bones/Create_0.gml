@@ -13,9 +13,9 @@ update = function() {
 	var bone_speed = 1.5 + _power * 0.2;
 	var bone_size = 3.2;
 	var angle_speed = 1.5 + _power * 0.2;
-	var random_side = choose(dir.left, dir.right);
-	var random_y = choose(-30, -15, 0, 15, 30);
-	var random_angle = choose(0, 20, 45, 65, 90);
+	var random_side = fight_random_choose(dir.left, dir.right);
+	var random_y = fight_random_choose(-30, -15, 0, 15, 30);
+	var random_angle = fight_random_choose(0, 20, 45, 65, 90);
 	if (random_side == dir.left)
 		create_spinning_bone(border_instance.x - border_instance.left * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 0, random_angle, angle_speed);
 	if (random_side == dir.right)

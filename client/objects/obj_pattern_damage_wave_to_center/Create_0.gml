@@ -17,8 +17,8 @@ update = function() {
 	repeat(3) {
 		var coord = [];
 		coord = rand_side_from(va_x1_ - 40, va_y1_ - 40, va_x2_ + 40, va_y2_ + 40);
-		var _shift_x = irandom_range(-8 - _power, 8 + _power);
-		var _shift_y = irandom_range(-8 - _power, 8 + _power);
+		var _shift_x = fight_random_integer(-8 - _power, 8 + _power);
+		var _shift_y = fight_random_integer(-8 - _power, 8 + _power);
 		var wave_angle = point_direction(coord[0], coord[1], border_instance.x + _shift_x, border_instance.y + _shift_y);
 		
 		create_damage_wave(coord[0], coord[1], damage_wave, wave_angle, wave_speed);

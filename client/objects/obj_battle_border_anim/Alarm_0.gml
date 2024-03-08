@@ -8,10 +8,10 @@ if (animation_id == "Create") {
 	angle = battle_border_get_angle();
 	angle = angle == 0 ? 360 : angle;
 
-	side[dir.up]    = battle_border_get_size("u");
-	side[dir.down]  = battle_border_get_size("d");
-	side[dir.left]  = battle_border_get_size("l");
-	side[dir.right] = battle_border_get_size("r");
+	size[dir.up]    = battle_border_get_size("u");
+	size[dir.down]  = battle_border_get_size("d");
+	size[dir.left]  = battle_border_get_size("l");
+	size[dir.right] = battle_border_get_size("r");
 
 	battle_border_set_angle(0);
 	battle_border_set_size(0, 0, 0, 0);
@@ -23,8 +23,8 @@ if (animation_id == "Destroy") {
 	angle = battle_border_get_angle();
 	angle = angle == 0 ? 360 : angle;
 
-	side[dir.up]    = battle_border_get_size("u");
-	side[dir.down]  = battle_border_get_size("d");
-	side[dir.left]  = battle_border_get_size("l");
-	side[dir.right] = battle_border_get_size("r");
+	size[dir.up]    = battle_border_get_size("u");
+	size[dir.down]  = battle_border_get_size("d");
+	size[dir.left]  = battle_border_get_size("l");
+	size[dir.right] = battle_border_get_size("r");
 }

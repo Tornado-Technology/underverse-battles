@@ -196,8 +196,11 @@ export default class SendStuff {
     });
   }
 
-  public sendFightExtraAction(): void {
-    this.send('fightExtraAction');
+  public sendFightExtraAction(attackIndex: number, seed: number): void {
+    this.send('fightExtraAction', {
+      attackIndex,
+      seed
+    });
   }
 
   public sendFightStartBattle(seed: number): void {

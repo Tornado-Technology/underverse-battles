@@ -15,7 +15,7 @@ callback = function () {
 update = function() {
 	var indent_x = 100;
 	var interval_x = 4;
-	var bone_x = irandom_range(border_instance.x - border_instance.left - indent_x, border_instance.x + border_instance.right - interval_x);
+	var bone_x = fight_random_integer(border_instance.x - border_instance.left - indent_x, border_instance.x + border_instance.right - interval_x);
 	var bone_speed = 2.6 + _power * 0.2;
 	bone_instances[bone_count] = create_bone(bone_x, border_instance.y - border_instance.up - 20, sharp_bone,
 	bone_speed, 1.5, -60, 210);

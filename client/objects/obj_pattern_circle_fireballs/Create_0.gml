@@ -30,9 +30,9 @@ update = function () {
 		projectile._speed = 1;
 		projectile.angle = point_direction(projectile.x, projectile.y, soul_instance.x, soul_instance.y);
 		
-		if (is_find_random_position_nead_soul && choose(false, true)) {
-			var radius_offset = irandom_range(20, 30);
-			var random_angle = irandom_range(0, 360);
+		if (is_find_random_position_nead_soul && fight_random_choose(false, true)) {
+			var radius_offset = fight_random_integer(20, 30);
+			var random_angle = fight_random_integer(0, 360);
 			projectile.x += lengthdir_x(radius_offset, random_angle);
 			projectile.y += lengthdir_y(radius_offset, random_angle);
 		}

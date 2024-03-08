@@ -93,7 +93,7 @@ disconnect_update_callback = function() {
 }
 
 connecting_update_callback = function() {
-	network_client.connect(network_offical_ip, network_offical_port);
+	network_client.connect(network_offical_ip, network_offical_port;
 }
 
 ping_update = time_source_create(time_source_game, network_ping_interval, time_source_units_seconds, ping_update_callback, [], -1);

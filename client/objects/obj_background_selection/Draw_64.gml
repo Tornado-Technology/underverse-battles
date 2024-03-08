@@ -17,17 +17,17 @@ draw_text_outlined(line_x, line_y - line_height / 2 - 30 - wave(3, -3, 1, 0), c_
 draw_reset();
 
 /* Draw soundtrack */
-draw_name_button(background_x, background_y, text_color_standart, background_id);
+draw_name_button(background_x, background_y_, text_color_standart, background_id);
 
 for (var i = 1; i <= list_size - list_middle; i++) {
 	if (background_id - i >= 0) {
 		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
-		draw_name_button(background_x, background_y - button_step_y * i, color, background_id - i);
+		draw_name_button(background_x, background_y_ - button_step_y * i, color, background_id - i);
 	}
 	
 	if (background_id + i < background_counts) {
 		var color = i == list_size - list_middle ? text_color_last : text_color_standart;
-		draw_name_button(background_x, background_y + button_step_y * i, color, background_id + i);
+		draw_name_button(background_x, background_y_ + button_step_y * i, color, background_id + i);
 	}
 }
 

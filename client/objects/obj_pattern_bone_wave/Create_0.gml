@@ -1,7 +1,7 @@
 // Arguments: bone
 
 bone_shift = 0;
-wave_time = random_range(0, 2*pi);
+wave_time = fight_random_float(0, 2*pi);
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);

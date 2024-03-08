@@ -14,7 +14,7 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 	is_hover_on_button = false;
 	static color_selected = c_yellow;
 	static button_offset_x = 20;
-	static button_offset_y = 20;
+	static button_offset_y = 15;
 	static base_init = init;
 	static base_update = update;
 	static base_draw = draw;
@@ -73,10 +73,14 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 			if (new_id >= array_length(character_frames)) {
 				is_hover_on_button = true;
 				button_close.focus();
+				hide_selection();
+				audio_play_sound_plugging(snd_click);
 			} else if(is_hover_on_button) {
 				is_hover_on_button = false;
 				menu_instance.input_vertical = 0;
 				button_close.unfocus();
+				show_selection();
+				audio_play_sound_plugging(snd_click);
 			}
 		}
 		

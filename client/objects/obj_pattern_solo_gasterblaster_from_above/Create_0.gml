@@ -1,11 +1,14 @@
 // Arguments: soul_type, gasterblaster, distance, custom_repeats (optional)
 
+max_position = 3;
+position = fight_random_integer(0, max_position - 1);
+
 callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y + 20, battle_soul_type.red);
 		
 	var border_dist = 180;
 	var gb_period = 35 - _power * 5;
-	var rand_pos = irandom_range(0, 2);
+	var rand_pos = fight_random_integer(0, 2);
 	var gb_x = border_instance.x - 12;
 	if (rand_pos == 1) gb_x = border_instance.x;
 	if (rand_pos == 2) gb_x = border_instance.x + 12;
@@ -19,7 +22,15 @@ callback = function () {
 }
 	
 update = function() {
-	var gasterblaster_x = choose(border_instance.x - 12, border_instance.x, border_instance.x + 12);
+	position += fight_random_integer(1, max_position - 1);
+	if (position >= max_position) {
+		position -= max_position;
+	}
+	
+	var gasterblaster_x = border_instance.x - 12;
+	if (position == 1) gasterblaster_x = border_instance.x;
+	if (position == 2) gasterblaster_x = border_instance.x + 12;
+	
 	change_solo_gasterblaster_position(gasterblaster, 0, gasterblaster_x, border_instance.y - border_instance.up - distance);
 }
 

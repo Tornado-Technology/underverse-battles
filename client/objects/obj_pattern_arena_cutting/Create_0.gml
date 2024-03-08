@@ -17,8 +17,8 @@ callback = function () {
 update = function() {
 	var py1 = border_instance.y - border_instance.up;
 	var py2 = border_instance.y + border_instance.down;
-	var rand_px1 = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-	var rand_px2 = irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+	var rand_px1 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+	var rand_px2 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	if (rand_px1 < border_instance.x - border_instance.left + 20 && rand_px2 < border_instance.x - border_instance.left + 20)
 		rand_px2 += 20;
 	if (rand_px1 < border_instance.x + border_instance.right - 20 && rand_px2 > border_instance.x + border_instance.right - 20)

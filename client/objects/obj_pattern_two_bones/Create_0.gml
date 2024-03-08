@@ -3,7 +3,7 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, soul_type);
 		
-	side = choose(dir.up, dir.left);
+	side = fight_random_choose(dir.up, dir.left);
 	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
@@ -13,7 +13,7 @@ update = function() {
 	var bone_speed = 1.5 + 0.2 * _power;
 	
 	if (side_is_changing) {
-		side = choose(dir.up, dir.left);
+		side = fight_random_choose(dir.up, dir.left);
 	}
 	
 	if (side == dir.left) {

@@ -1,1 +1,0 @@
-_angle = base_angle;

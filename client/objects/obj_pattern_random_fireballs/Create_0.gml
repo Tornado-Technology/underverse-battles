@@ -1,7 +1,7 @@
 // Arguments: fireball
 
-raduis = battle_border.down + irandom_range(25, 50);
-_angle = irandom_range(0, 360);
+raduis = battle_border.down + fight_random_integer(25, 50);
+_angle = fight_random_integer(0, 360);
 border_position = battle_border_get_position();
 
 x = lengthdir_x(raduis, _angle) + border_position.px;

@@ -1,7 +1,7 @@
 // Arguments: knife
 
-rot = irandom_range(0, 1);
-_side = choose(0, 90, 180, 270);
+rot = fight_random_integer(0, 1);
+_side = fight_random_choose(0, 90, 180, 270);
 step = 20;
 		
 callback = function () {
@@ -32,7 +32,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [], -1);
 time_source_update_direction = time_source_create(time_source_game, (80 - _power * 5) / 60, time_source_units_seconds, function () {
-	var rand_num = irandom_range(0, 1);
+	var rand_num = fight_random_integer(0, 1);
 	if (rand_num == 0)
 		rot = rot ? 0 : 1;
 }, [], -1);

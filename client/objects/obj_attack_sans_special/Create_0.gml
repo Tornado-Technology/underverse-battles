@@ -34,7 +34,7 @@ pattern_instances = [
 	create_pattern_custom_power(obj_pattern_blue_attack, 4, {
 		bone: obj_bone_sans,
 		use_gravity_attack: use_gravity_attack,
-		is_double: choose(true, false),
+		is_double: fight_random_choose(true, false),
 		custom_repeats: 3
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_gasterblasters_strong_barrage, 4, {

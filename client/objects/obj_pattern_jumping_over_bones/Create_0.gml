@@ -9,16 +9,16 @@ callback = function () {
 }
 
 update = function() {
-	var side = irandom_range(0, 2);
+	var side = fight_random_integer(0, 2);
 	var bone_speed = 1.8;
-	var bone_size = random_range(1.8, 3.5);
+	var bone_size = fight_random_float(1.8, 3.5);
 	if (_power > 1) {
 		bone_speed = 2.3;
-		bone_size = random_range(1.5, 2.9);
+		bone_size = fight_random_float(1.5, 2.9);
 	}
 	if (_power > 3) {
 		bone_speed = 2.5;
-		bone_size = random_range(1.3, 2.2);
+		bone_size = fight_random_float(1.3, 2.2);
 	}
 			
 	var bone_up_size = 7.4 - bone_size;

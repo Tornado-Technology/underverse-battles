@@ -63,9 +63,10 @@ if (image_angle != new_image_angle) {
 }
 
 // Dash
-if (ability && can_dash) {
+if (ability_pressed && can_dash) {
 	invulnerability = true;
 	is_dashing = true;
+	can_dash = false;
 	time_source_start(time_source_dash);
 	time_source_start(time_source_cooldown);
 }

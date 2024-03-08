@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Saness",
-    "path":"folders/Characteres/Sans/Sprites/Char/Saness.yy",
+    "name":"Attack 2",
+    "path":"folders/Characteres/Sans/Sprites/Char/Saness/Attack 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

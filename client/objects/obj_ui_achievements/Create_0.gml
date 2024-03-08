@@ -1,6 +1,6 @@
 sprite_index = noone;
-width = room_width; //display_get_gui_width();
-heigth = room_height; //display_get_gui_height();
+width = display_get_gui_width();
+heigth = display_get_gui_height();
 
 alpha = 0;
 alpha_text = 0;
@@ -8,9 +8,6 @@ alpha_text = 0;
 // Render
 text = translate_get("AchievementGet");
 text_progress = 0;
-
-// Achivement
-achievement = noone;
 
 // Sprite border
 sprite_border = spr_ui_achievement_border;
@@ -22,4 +19,4 @@ x = width + sprite_border_width;
 y = sprite_border_height / 2;
 
 // Scale
-scale = max(1, string_length(text) * 8 / 110);
+scale = max(1, string_length(achievement.name) * 8 / 110, string_length(text) * 8 / 110);

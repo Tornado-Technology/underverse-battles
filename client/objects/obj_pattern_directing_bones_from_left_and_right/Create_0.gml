@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function() {
-	var side = irandom_range(0, 1);
+	var side = fight_random_integer(0, 1);
 			
 	if (side == 0) {
 		create_spinning_bone(border_instance.x - border_instance.left - 10, soul_instance.y, spining_bone,

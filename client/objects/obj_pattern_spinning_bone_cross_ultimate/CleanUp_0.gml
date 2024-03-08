@@ -1,8 +1,10 @@
-time_source_destroy(time_source_update_3_0);
-time_source_destroy(time_source_update_3_2);
-time_source_destroy(time_source_update_stop_3_1);
-time_source_destroy(time_source_update_stop_3_2);
-time_source_destroy(time_source_update_stop_3_3);
+time_source_destroy(time_source_update_spinning_bones);
+time_source_destroy(time_source_update_gasterblasters_1);
+time_source_destroy(time_source_update_projectiles);
+time_source_destroy(time_source_update_gasterblasters_2);
+time_source_destroy(time_source_update_gasterblasters_1_stop);
+time_source_destroy(time_source_update_projectiles_stop);
+time_source_destroy(time_source_update_gasterblasters_2_stop);
 time_source_destroy(time_source_update_destroy);
 
 final_function();

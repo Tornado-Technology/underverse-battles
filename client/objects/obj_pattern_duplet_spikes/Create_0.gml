@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function() {
-	var side = irandom_range(0, 1);
+	var side = fight_random_integer(0, 1);
 	var x_rand;
 	var spike_direction = 0;
 	if (side == 0) {
@@ -20,7 +20,7 @@ update = function() {
 		x_rand = border_instance.x + border_instance.right + 10;
 		spike_direction = 180;
 	}
-	var y_rand = irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
+	var y_rand = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
 	create_spike(x_rand, y_rand, spike, 2 + _power * 0.2, spike_direction);
 	create_spike(x_rand, y_rand + 10, spike, 2 + _power * 0.2, spike_direction);
 }

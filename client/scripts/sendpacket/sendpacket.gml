@@ -91,8 +91,9 @@ function send_password_retrieval(identifier, password) {
 
 /// @param {Real} character_id
 /// @param {Real} skin_id
-function send_fight_join(character_id, skin_id) { 
+function send_fight_join(type, character_id, skin_id) { 
     send("fightJoin", {
+		matchType: type,
 		characterId: character_id,
 		skinId: skin_id,
 	});
@@ -102,8 +103,10 @@ function send_fight_joined() {
     send("fightJoined");
 }
 
-function send_fight_join_reject() {
-    send("fightJoinReject");
+function send_fight_join_reject(type) {
+    send("fightJoinReject", {
+		matchType: type
+	});
 }
 
 /// @param {Real} action
@@ -124,8 +127,10 @@ function send_fight_special_action() {
     send("fightSpecialAction");
 }
 
-function send_fight_extra_action() {
-    send("fightExtraAction");
+function send_fight_extra_action(attack_index) {
+    send("fightExtraAction", {
+		attackIndex: attack_index,
+	});
 }
 
 function send_fight_skip() {

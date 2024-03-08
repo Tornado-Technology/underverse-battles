@@ -4,10 +4,9 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 2);
 switch (type) {
 	case 0:
-		var random_border_index = irandom_range(0, 2);
+		var random_border_index = fight_random_integer(0, 2);
 		if (random_border_index == 0)
 			create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		if (random_border_index == 1)
@@ -27,7 +26,7 @@ switch (type) {
 			bone: obj_bone_green
 		});
 		break;
-	case 2:
+	default:
 		create_border(battle_border.up - 85, battle_border.down - 45, battle_border.left - 50, battle_border.right - 50);
 		pattern_instance = create_pattern(obj_pattern_solo_gasterblaster_from_above, {
 			soul_type: battle_soul_type.red,

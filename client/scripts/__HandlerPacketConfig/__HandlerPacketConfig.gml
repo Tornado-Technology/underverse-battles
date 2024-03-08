@@ -48,9 +48,10 @@ packet_handler_register("login", function(data) {
 	if (data.status == status_code.success) {
 		network_profile = data.profile;
 		network_account = data.account;
+		on_network_login.invoke(data.status);
+		achievement_give(achievement_id.a_cybers_world);
 		logger.info("Login success");
 		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
-		on_network_login.invoke(data.status);
 		return;
 	}
 
@@ -159,7 +160,11 @@ packet_handler_register("information", function(data) {
 
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
-
+	
+	if (status == status_code.error) {
+		logger.info("Matchmaking error");
+		display_show_message_info("Matchmaking error", c_red);
+	}
 	if (status == status_code.success) {
 		logger.info("Successful join to fight");
 		var opponent_data = json_parse(data.data);
@@ -200,6 +205,7 @@ packet_handler_register("fightPower", function(data) {
 packet_handler_register("fightSkip", function(data) {
 	// Send obj_fight this info
 	fight_set_player_skip(data.playerId);
+	statistics_set_selection_attack_network(data.playerId, fight_action_type.skip);
 });
 
 packet_handler_register("fightSpecialAction", function(data) {
@@ -214,7 +220,8 @@ packet_handler_register("fightSpecialActionCharge", function(data) {
 });
 
 packet_handler_register("fightExtraAction", function(data) {
-	battle_use_extra_action();
+	fight_random_set_seed(data.seed);
+	battle_use_extra_action(data.attackIndex);
 });
 
 packet_handler_register("fightResetAction", function(data) {
@@ -232,7 +239,7 @@ packet_handler_register("fightSoul", function(data) {
 
 packet_handler_register("battleStart", function(data) {
 	// Send obj_fight this info
-	random_set_seed(data.seed);
+	fight_random_set_seed(data.seed);
 	
 	fight_set_state(fight_state.battle);
 	logger.info("Battle begins");

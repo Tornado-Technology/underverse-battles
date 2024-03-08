@@ -20,8 +20,8 @@ player_ammount = 2;
 you = 0;
 _opponent = 1;
 
-player_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_character_tornado);
-player_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_character_tornado);
+player_object[0] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, obj_character_ink_sans);
+player_object[1] = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, obj_character_ink_sans);
 
 center_player_position_x = [room_width / 6, room_width / 1.2];
 center_player_position_y = [room_height / 1.5, room_height / 1.5];

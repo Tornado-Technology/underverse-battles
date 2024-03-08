@@ -4,7 +4,6 @@ on_border_created = function() {
 	pattern_instance.callback();
 }
 
-type = irandom_range(0, 3);
 switch (type) {
 	case 0:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
@@ -26,7 +25,7 @@ switch (type) {
 			spike: obj_spear_green
 		});
 		break;
-	case 3:
+	default:
 		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left - 25, battle_border.right - 25);
 		pattern_instance = create_pattern(obj_pattern_poking_bones_from_sides, {
 			bone: obj_bone_green,

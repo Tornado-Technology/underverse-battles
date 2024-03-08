@@ -27,12 +27,29 @@ if (is_desktop && !mobile_mode) {
 }
 
 if (is_mobile || mobile_mode) {
-	if (instance_exists(obj_ui_controls)) {
-		var controller = controller_get();
-		movement_speed_x = main_speed * controller.input_vector.x;
-		movement_speed_y = main_speed * controller.input_vector.y;
+	var  controllers_index = global.__ui_controls_instance.controllers_index;
+	
+		if (controllers_index == control_input_mode.ui_joystick) {
+		var joystick = get_joystick();
+		movement_speed_x = main_speed * joystick.input_vector.x;
+		movement_speed_y = main_speed * joystick.input_vector.y;
 	}
-}
+	
+	if (controllers_index == control_input_mode.ui_arrows) {
+		
+	var arrows  =  get_arrow();
+	var	 hmv = (input_check_held(input.down) - input_check_held(input.up)) * main_speed;
+	var	 vmv = (input_check_held(input.right) - input_check_held(input.left)) * main_speed;
+		arrows.input_vector.x = vmv;
+		arrows.input_vector.y = hmv;
+	
+		movement_speed_x = arrows.input_vector.x;
+		movement_speed_y = arrows.input_vector.y;
+		
+		arrows.input_vector.set(0, 0);
+	};
+};
+
 
 x += movement_speed_x + outside_force_x + tremble_force_x;
 y += movement_speed_y + outside_force_y + tremble_force_y;

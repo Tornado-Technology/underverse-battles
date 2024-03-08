@@ -72,10 +72,7 @@ function ClassCharactersTab(menu_instance) constructor {
 	
 	static init = function() {
 		// Clear old frame
-		for (var i = 0; i < array_length(character_frames); i ++) {
-			delete character_frames[i];
-			array_pop(character_frames);
-		}
+		array_clear(character_frames);
 		
 		for (var i = 0; i < array_length(characters); i++) {
 			character_frames[i] = UIImageButton(characters[i].frame);

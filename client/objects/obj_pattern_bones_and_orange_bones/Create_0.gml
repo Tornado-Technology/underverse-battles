@@ -11,13 +11,13 @@ callback = function () {
 
 update = function() {
 	var selected_bone = bone;
-	var rand_side = irandom_range(0, 7);
-	var rand_bone_type = irandom_range(0, 1);
+	var rand_side = fight_random_integer(0, 7);
+	var rand_bone_type = fight_random_integer(0, 1);
 	if (rand_bone_type == 0)
 		selected_bone = orange_bone;
-	var random_speed = 2 + random_range(0, _power * 0.2);
+	var random_speed = 2 + fight_random_float(0, _power * 0.2);
 		var max_size = 8.3;
-		var random_size = rand_bone_type == 0 ? max_size : random_range(3 + _power * 0.2, 6);
+		var random_size = rand_bone_type == 0 ? max_size : fight_random_float(3 + _power * 0.2, 6);
 		if (rand_side == 0) {
 			var bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, selected_bone,
 			random_speed, random_size, 0, 0);

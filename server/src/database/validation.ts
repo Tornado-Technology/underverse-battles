@@ -1,7 +1,6 @@
 import { usernameDefault } from './schemas/account.js';
 import { statusCode } from '../status.js';
 import { Account } from './schemas/account.js';
-import Logger from '../util/logging.js';
 
 // If you want to change the password and name styles, change RegEx below
 const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*?~]{6,999}$/;
@@ -27,7 +26,6 @@ export const validateUsername = async (username: string): Promise<statusCode> =>
 }
 
 export const validateNickname = async (nickname: string): Promise<statusCode> => {
-  Logger.debug("Nickanme: " + nickname + " Regex Test: " + String(nickanmeRegex.test(nickname)));
   if (!nickanmeRegex.test(nickname) || nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }

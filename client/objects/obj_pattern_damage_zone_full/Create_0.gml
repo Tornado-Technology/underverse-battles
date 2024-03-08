@@ -9,7 +9,7 @@ callback = function () {
 }
 
 update = function() {
-	var random_position = new Vector2(irandom_range(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), irandom_range(border_instance.y - border_instance.up + 2, border_instance.y + border_instance.down - 2));
+	var random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), fight_random_integer(border_instance.y - border_instance.up + 2, border_instance.y + border_instance.down - 2));
 	instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 

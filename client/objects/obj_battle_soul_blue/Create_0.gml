@@ -7,6 +7,7 @@ color_type = battle_soul_type.blue;
 speed_const = 1.8;
 
 platform_inertion = 0;
+gravity_sum = 0;
 grav = 0.05;
 
 right = false;

@@ -10,23 +10,23 @@ callback = function () {
 
 update = function () {
 	var sides_count = array_length(sides);
-	var random_side = sides[irandom_range(0, sides_count - 1)];
+	var random_side = sides[fight_random_integer(0, sides_count - 1)];
 	var bone_x, bone_y;
 	if (random_side == dir.up) {
-		bone_x = is_aiming ? soul_instance.x : irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+		bone_x = is_aiming ? soul_instance.x : fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 		bone_y = border_instance.y - border_instance.up - 15;
 	}
 	if (random_side == dir.down) {
-		bone_x = is_aiming ? soul_instance.x : irandom_range(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+		bone_x = is_aiming ? soul_instance.x : fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 		bone_y = border_instance.y + border_instance.down + 15;
 	}
 	if (random_side == dir.left) {
 		bone_x = border_instance.x - border_instance.left - 15;
-		bone_y = is_aiming ? soul_instance.y : irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+		bone_y = is_aiming ? soul_instance.y : fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 	}
 	if (random_side == dir.right) {
 		bone_x = border_instance.x + border_instance.right + 15;
-		bone_y = is_aiming ? soul_instance.y : irandom_range(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+		bone_y = is_aiming ? soul_instance.y : fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 	}
 	
 	var bone_size = 1;

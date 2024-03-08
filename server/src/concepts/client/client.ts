@@ -12,6 +12,7 @@ import SendStuff from '../../packet/sendStuff.js';
 import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Rank from '../../data/rank.js';
+import Matchmaker from '../../util/matchmaker.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -42,6 +43,8 @@ export default class Client extends SendStuff {
   public resultingRating: number;
 
   protected _state: state;
+
+  protected stateNames = ['undefined', 'in menu', 'waiting fight', 'in fight', 'waiting open world', 'in open world'];
 
   constructor(socket: Socket, type: socketType, uuid: string) {
     super(socket, type, uuid);
@@ -98,6 +101,7 @@ export default class Client extends SendStuff {
 
   public async onDisconnect(status: number): Promise<void> {
     Logger.info(`Client disconnected: ${status}`);
+    Matchmaker.removeWaiting(this);
     await this.fight.leave();
     await this.save();
   }
@@ -105,7 +109,6 @@ export default class Client extends SendStuff {
   public logout(): void {
     this.account = undefined;
     this.profile = undefined;
-    this.statistic = undefined;
     this.sendLogout(statusCode.success);
   }
 
@@ -138,7 +141,6 @@ export default class Client extends SendStuff {
     if (!this.isLogin) return;
     await this.account?.save();
     await this.profile?.save();
-    await this.statistic?.save();
   }
 
   public async deleteAccount(): Promise<void> {
@@ -275,9 +277,9 @@ export default class Client extends SendStuff {
     return Boolean(this.profile);
   }
 
-  public setState(state: state): void {
-    this._state = state;
-    Logger.debug(`Client set new state "${Object.keys(state)}"`);
+  public setState(newState: state): void {
+    this._state = newState;
+    Logger.debug(`Client ${this.nickname} set new state "${this.stateNames[newState]}"`);
   }
 
   public get state(): state {

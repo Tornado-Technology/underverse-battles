@@ -1,8 +1,8 @@
 // @desc animate
 if (text_progress == 4) {
-	x = lerp(x, width + sprite_border_width * scale, 0.1);
+	x = lerp(x, width + sprite_border_width * scale, 0.2);
 	
-	alpha = lerp(alpha, 0, 0.1);
+	alpha = lerp(alpha, 0, 0.2);
 	
 	if (alpha == 0) {
 		instance_destroy();
@@ -17,7 +17,7 @@ if (text_progress == 4) {
 if (alpha < 1) exit;
 
 if (text_progress == 0 || text_progress == 2) {
-	alpha_text = lerp(alpha_text, 1, 0.06);
+	alpha_text = lerp(alpha_text, 1, 0.07);
 	
 	if (text_progress == 2) {
 		text = achievement.name;
@@ -29,7 +29,7 @@ if (text_progress == 0 || text_progress == 2) {
 }
 
 if (text_progress == 1 || text_progress == 3) {
-	alpha_text = lerp(alpha_text, 0, 0.08);
+	alpha_text = lerp(alpha_text, 0, 0.1);
 	
 	if (alpha_text <= 0) {
 		text_progress++;

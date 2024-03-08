@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"fight_random_float",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_random_float",
+  "parent":{
+    "name":"Random",
+    "path":"folders/Scripts/Local/System/Random.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

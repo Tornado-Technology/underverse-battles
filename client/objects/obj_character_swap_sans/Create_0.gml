@@ -53,6 +53,7 @@ special_action = SpecialAction("Character.SwapSans.SpecialAttack", spr_special_a
 // Special
 damage_per_hit = 0;
 max_damage_per_hit = 8;
+enabled_damage_delay = false;
 
 // Methods
 on_taking_soul_damage = function(soul, damage) {
@@ -62,7 +63,10 @@ on_taking_soul_damage = function(soul, damage) {
 		soul.invincibility = 20;
 		damage = 0;
 	}
-	alarm[0] = 2;
+	if (!enabled_damage_delay) {
+		alarm[0] = 20 * dtime;
+		enabled_damage_delay = true;
+	}
 		
 	return damage;
 };

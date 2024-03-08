@@ -1,54 +1,80 @@
-function SettingsMobileControl (menu_instance, sprite_control)  {
-	var instance = new ClassSettingsMobileControl(menu_instance, sprite_control);
+function SettingsMobileControl (menu_instance)  {
+	var instance = new ClassSettingsMobileControl(menu_instance);
 	instance.init();
 	
 	return instance;	
 };
 
 
-function ClassSettingsMobileControl(menu_instance, sprite_control) :  ClassSettingsMobileElement(menu_instance, sprite_control) constructor {
+function ClassSettingsMobileControl(menu_instance)  constructor {
+	self.menu_instance = menu_instance;
 	
 	scale_max = 1.8;
 	
-	controller =  0;
-	
+	key_name = "";
 	key_scale = "Settings.MobileControls.Controller.Scale";
 
 	controllers_index = data_get("Settings.MobileControls.ChosetControls.Index");
 
-
-	static base_draw = draw;
-	static base_save_data = save_data;
-	
+	input_pressed = undefined
 	right_position_x = 290;
 	left_position_x =  right_position_x / 1.5;
 	position_y = 100;
 
-	UI = sprite_control
+	UI = { 
+		right: UIImageButton(spr_stat_arrow),
+		left: UIImageButton(spr_stat_arrow)	
+	};
 	
 	static init = function() {
+		declare_predicate();
 		display_name = translate_get(key_name);
 		scale = data_get(key_scale);
 		controllers_index = data_get("Settings.MobileControls.ChosetControls.Index");
 	};
 		
-	static draw = function () {
-	var _controller = global.__ui_controls_instance;
-	UI.controls_switching.right.draw(right_position_x, position_y, , -87);
-	UI.controls_switching.left.draw(left_position_x, position_y, , 87);
-	if (UI.input_pressed == vk_right) 
-	{	
-		controllers_index =  controllers_index == control_input_mode.ui_joystick ?   control_input_mode.ui_arrows :	control_input_mode.ui_joystick;
-		save_data();
-		menu_instance.elements_reset();
-	};	
+		
+	static declare_predicate = function() {
+			
+		UI.left.on_hover = function() { 
+				input_pressed = undefined;
+		};
+		
+		UI.right.on_hover = function () {
+				input_pressed = undefined;
+		}
+		
+		UI.left.on_press = function() {
+				input_pressed = vk_left;
+		};
 
-	if (UI.input_pressed == vk_left) 
-	{	
-		controllers_index = controllers_index  ==  control_input_mode.ui_arrows ? control_input_mode.ui_joystick : control_input_mode.ui_arrows;
-		save_data();
-		menu_instance.elements_reset();
+		UI.right.on_press = function() {
+				input_pressed = vk_right;		
+		}	
+
+		UI.left.on_release = function() {	
+				input_pressed = undefined;
+		};
+
+		UI.right.on_release = function() {
+				input_pressed = undefined;
+		};	
 	};	
+	
+	static draw = function () {
+		UI.right.draw(right_position_x, position_y, , -87);
+		UI.left.draw(left_position_x, position_y, , 87);
+		if (input_pressed == vk_right) {	
+			controllers_index =  controllers_index == control_input_mode.ui_joystick ?   control_input_mode.ui_arrows :	control_input_mode.ui_joystick;
+			save_data();
+			menu_instance.elements_reset();
+		};	
+
+		if (input_pressed ==  vk_left) 	{	
+			controllers_index = controllers_index  ==  control_input_mode.ui_arrows ? control_input_mode.ui_joystick : control_input_mode.ui_arrows;
+			save_data();
+			menu_instance.elements_reset();
+		};	
 	
 	};
 

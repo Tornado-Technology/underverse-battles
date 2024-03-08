@@ -46,7 +46,7 @@ callback = function () {
 
 update_start = function() {
 	border_instance.speed_const = 1 + _power * 0.1;
-	border_instance.direction = irandom_range(0, 359);
+	border_instance.direction = fight_random_integer(0, 359);
 	var i = 0;
 	repeat (sum_num) {
 		bone_instances[i].speed_const = border_instance.speed_const;

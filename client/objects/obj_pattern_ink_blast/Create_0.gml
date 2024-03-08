@@ -1,7 +1,7 @@
 // Arguments: max_acceleration, gasterblaster_aiming
 
 callback = function () {
-	var soul_random_position = new Vector2(choose(border_instance.x - border_instance.left/2, border_instance.x + border_instance.right/2), choose(border_instance.y - border_instance.up/2, border_instance.y + border_instance.down/2));
+	var soul_random_position = new Vector2(fight_random_choose(border_instance.x - border_instance.left/2, border_instance.x + border_instance.right/2), fight_random_choose(border_instance.y - border_instance.up/2, border_instance.y + border_instance.down/2));
 	soul_instance = create_soul(soul_random_position.x, soul_random_position.y, battle_soul_type.red);
 	
 	instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, obj_ink_ball_ink_sans);
@@ -16,7 +16,7 @@ update_gasterblasters = function() {
 }
 
 update_broomie = function () {
-	var brush_side = irandom_range(0, 3);
+	var brush_side = fight_random_integer(0, 3);
 	var coord_x, coord_y;
 	if (brush_side == 0) {
 		coord_x = border_instance.x - border_instance.left - 12;

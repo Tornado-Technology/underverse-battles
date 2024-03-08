@@ -8,7 +8,7 @@ bone_loading = instance_create_depth(room_width / 2, 150, 0, obj_bone_loading);
 waiting_is_over = false;
 
 press_button = function() {
-	send_fight_join_reject();
+	send_fight_join_reject(tournament_mode ? match_type.tournament_1vs1 : match_type.rating_1vs1);
 	audio_play_sound_plugging(snd_selection);
 	audio_play_sound(obj_menu.menu_soundtrack_current, 2, true, 0.5);
 	instance_destroy();
