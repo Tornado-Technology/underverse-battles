@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gb_blast_nightmare",
-    "path":"sprites/spr_gb_blast_nightmare/spr_gb_blast_nightmare.yy",
+    "name":"spr_bomb_nightmare",
+    "path":"sprites/spr_bomb_nightmare/spr_bomb_nightmare.yy",
   },
   "spriteMaskId":null,
   "visible":true,

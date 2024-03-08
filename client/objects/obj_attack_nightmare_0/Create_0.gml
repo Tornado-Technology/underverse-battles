@@ -4,7 +4,6 @@ on_border_created = function () {
 	pattern_instance.callback();
 };	
 
-type = irandom_range(5, 5);
 switch (type) {
 	case 0:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
@@ -42,7 +41,7 @@ switch (type) {
 		});
 	break;
 	
-	case 5:
+	default:
 	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
 			fist: obj_fist_nightmare

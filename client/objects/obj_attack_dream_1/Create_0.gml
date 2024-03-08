@@ -4,8 +4,6 @@ on_border_created = function () {
 	pattern_instance.callback();
 };
 
-
-type = irandom_range(3, 3);
 switch (type) {
 	case 0:
 	create_border(battle_border.up - 40, battle_border.down - 40, battle_border.left, battle_border.right);
@@ -35,7 +33,7 @@ switch (type) {
 	})
 	break;
 	
-	case 4:
+	default:
 	create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
 		pattern_instance = create_pattern(obj_pattern_spining_blades, {
 			blades_swing: obj_blades_dream

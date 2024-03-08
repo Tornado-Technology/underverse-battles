@@ -30,7 +30,7 @@ soul = spr_battle_soul;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Classic");
-frame = spr_sans_frame;
+frame = spr_nightmare_frame;
 
 // Animations
 idle_animation = spr_nightmare_idle;
@@ -61,5 +61,5 @@ on_taking_soul_damage = function(soul, damage) {
 }
 
 // Soundtrack
-soundtrack_name = "Megalovania"; 
-soundtrack = snd_megalovania;
+soundtrack_name = "Black Apple"; 
+soundtrack = snd_black_apple;

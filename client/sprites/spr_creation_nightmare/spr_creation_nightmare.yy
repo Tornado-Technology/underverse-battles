@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Characteres/Nightmare/Sprites.yy",
+    "name":"Bullets",
+    "path":"folders/Characteres/Nightmare/Sprites/Bullets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

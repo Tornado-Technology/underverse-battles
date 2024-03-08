@@ -39,7 +39,7 @@ fight_0_finish_animation = spr_papyrus_attack_0_finish;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Classic");
-frame = spr_sans_frame;
+frame = spr_papyrus_frame;
 
 // Actions
 passive_skill = PassiveSkill("Character.Papyrus.PassiveSkill");
@@ -50,3 +50,6 @@ actions = [
 ];
 special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, char_sans_special_attack);
 
+// Soundtrack
+soundtrack_name = "Bonetrousle"; 
+soundtrack = snd_megalovania;

@@ -17,11 +17,7 @@ function Character(obj, key, skin_key, frame, show = true) constructor {
 	
 	static init = function() {
 		var instance = instance_create(object);
-		try {
-			statistics = instance.get_self();
-		} catch(error) {
-			logger.warn(error);
-		}
+		statistics = instance.get_self();
 		
 		on_translate = on_translate_update.connect(function() {
 			name = translate_get("Character." + key + ".Name");
@@ -94,16 +90,13 @@ function CharacterList() {
 	];
 	if (development_mode) {
 		array_push(global.characters, [
-			new Character(obj_character_dream, "Dream", "Standard", spr_tornado_frame),
+			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
 		],
 		[
-			new Character(obj_character_nightmare, "Nightmare", "Standard", spr_tornado_frame),
+			new Character(obj_character_nightmare, "Nightmare", "Standard", spr_nightmare_frame),
 		],
 		[
-			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_tornado_frame),
-		],
-		[
-			new Character(obj_character_tesmi, "Payerus", "Standard", spr_tornado_frame)
+			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
 		]
 		);
 	}

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "path":"folders/Objects/Fight/Batlle/Components/Elements/Bullets.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_projectile",
