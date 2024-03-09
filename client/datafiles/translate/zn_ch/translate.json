@@ -474,7 +474,7 @@
       "Bio": "AU毁灭者，以摧毁他人的世界为乐，\n还会把人类的灵魂和其他角色\n带到反虚空领域。\nError可以通过错误之门穿梭于各个宇宙。\nError源于何处没人知道; \n甚至Error自己也不知道他是如何进入\n反虚空领域的。\nError是一个自私内向的人，被证实\n患有恐惧症，这意味着除了近视之外，\n还害怕别人的触摸。",
       "PassiveSkill": {
         "Name": "差错",
-        "Description": "Error Sans有6%的几率\n在罪业攻击发生时不受伤害" },
+        "Description": "Error Sans有10%的几率\n在罪业攻击发生时不受伤害" },
       "Attack0": {
         "Name": "Error骨头攻击",
         "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },

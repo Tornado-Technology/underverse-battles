@@ -474,7 +474,7 @@
       "Bio": "Exterminator of Alternate Universes, ruins others' lives for his amusement, including taking human souls and other characters to the Anti-Void. Error can shift between the Universes via glitched portals. Error's origin is unknown; even Error himself has no clue how he ended up in the Anti-Void. Error is a selfish introvert, confirmed to be haphephobic, which means being afraid of others' touches, in addition to being myopic.",
       "PassiveSkill": {
         "Name": "Glitches",
-        "Description": "Error Sans has a 6% chance to take no damage when Karmic damage occurs" },
+        "Description": "Error Sans has a 10% chance to take no damage when Karmic damage occurs" },
       "Attack0": {
         "Name": "Error bones",
         "Description": "Bones targeting the soul and dealing damage on impact" },
