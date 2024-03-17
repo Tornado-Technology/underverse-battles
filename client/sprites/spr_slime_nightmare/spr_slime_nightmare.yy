@@ -30,7 +30,7 @@
   ],
   "name":"spr_slime_nightmare",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Bullets",
     "path":"folders/Characteres/Nightmare/Sprites/Bullets.yy",
@@ -103,7 +103,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":10,
+    "xorigin":12,
     "yorigin":5,
   },
   "swatchColours":null,

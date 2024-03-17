@@ -11,6 +11,9 @@ left  = battle_border.left;
 right = battle_border.right;
 
 speed_const = 0;
+speed_spining = 0;
+
+spining = false;
 
 angle = 0;
 

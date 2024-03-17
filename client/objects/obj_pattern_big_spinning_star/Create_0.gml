@@ -3,9 +3,9 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
-	star_big_instance = instance_create_depth(border_instance.x - 1, border_instance.y, fight_depth.bullet_outside, big_star);	
+	star_big_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside, big_star);	
 			
-	star_big_instance.speed_torsional = 0.8 + _power * 0.2;
+	star_big_instance.speed_const = 0.8 + _power * 0.2;
 	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);	

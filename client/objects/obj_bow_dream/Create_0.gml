@@ -11,8 +11,8 @@ stop_alpha = false;
 target = obj_battle_soul;
 
 arrows_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, arrows, {
-	_power : _power,
-	direction : direction
+	_power: _power,
+	direction: direction
 });
 
 arrows_instance.speed_const = speed_const;

@@ -6,3 +6,4 @@ time_source_destroy_tentacles = time_source_create(time_source_game, time_destro
 	instance_destroy();
 });
 
+time_source_start(time_source_destroy_tentacles);

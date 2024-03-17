@@ -6,7 +6,7 @@ callback = function () {
 	var border_down = border_instance.y + border_instance.down;
 	
 	var slime_instnace = instance_create_depth(border_instance.x, border_down, fight_depth.bullet_outside, slime, {
-		image_xscale : round((border_instance.left + border_instance.right))
+		image_xscale: round((border_instance.left + border_instance.right))
 	});
 	
 	slime_instnace.change_scale(10, time);

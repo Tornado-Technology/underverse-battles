@@ -14,9 +14,10 @@ var _angle =  60;
 var i = _angle;
 var offset = 0;
 repeat(_power div 2 + 2) {
+	
 		while (i <= 120) {
 				var blades_instance = instance_create_depth(soul_instance.x + dcos(i) * raduis + offset, border_instance.y, fight_depth.bullet_outside, blades_swing, {
-				time_destroy : 60	
+					time_destroy: 60	
 				});		
 			
 				var target = point_direction(blades_instance.x, blades_instance.y, soul_instance.x, soul_instance.y);
@@ -24,9 +25,8 @@ repeat(_power div 2 + 2) {
 				blades_instance.direction = target;
 				blades_instance.image_angle = target;
 				blades_instance.speed_const = 3 + _power * 0.2;
-				blades_instance.speed_spinning =  2 + _power * 0.1;
 				blades_instance.directions();
-				blades_instance.move_spinning_independent();
+				blades_instance.move_spinning(2 + _power * 0.1);
 			i += _angle;
 			offset += 15;
 		 }

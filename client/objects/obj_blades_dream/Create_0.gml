@@ -4,12 +4,11 @@ is_directions = false;
 is_target = false;
 is_swung = false;
 is_spinning = false;
-is_spinning_independent = false;
+
 stop_alpha = false;
 
 step_alpha = 0.03;
 speed_spinning = 0;
-angle = 0;
 
 stage = 0;
 alpha = 0;
@@ -50,13 +49,13 @@ directions = function () {
 	time_source_destroy_blades = time_source_create(time_source_game, time_destroy / 60, time_source_units_seconds, function () {
 	 stop_alpha = true;
 	})
-}
+};
 
 target = function (_target) {
 	is_target = true;
 	aim = point_direction(x, y, _target.x, _target.y);	
 	_tar = _target;
-}
+};
 
 swung = function (_max_acc) {
 	max_acc = _max_acc;
@@ -79,12 +78,11 @@ swung = function (_max_acc) {
 	time_source_start(time_source_move_start);
 	time_source_start(time_source_move_next);
 	time_source_start(time_source_move_finish);
-}
+};
 
-move_spinning = function () {
-	is_spinning = true;
-}
 
-move_spinning_independent = function () {
-	is_spinning_independent = true;	
-}
+
+move_spinning = function (spd) {
+	is_spinning = true;	
+	speed_spinning = spd;
+};

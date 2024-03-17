@@ -8,6 +8,6 @@ stage = 0;
 
 speed_const = 3;
 direction_const = direction;
-speed_torsional = speed_const;
+speed_const = 0;
 
 draw_outside_arena = false;

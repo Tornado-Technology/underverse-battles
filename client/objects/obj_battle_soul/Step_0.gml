@@ -8,7 +8,6 @@ if (follow_board) {
 var pusher = obj_battle_pusher;
 if (place_meeting(x, y, pusher)) {
 	pusher_instance = instance_place(x, y, pusher);
-	
 	var blast_angle = pusher_instance._angle;
 	var cos_blast_angle = dcos(blast_angle);
 	var sin_blast_angle = dsin(blast_angle);

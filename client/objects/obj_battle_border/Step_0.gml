@@ -1,6 +1,10 @@
 speed = speed_const * dtime;
 
 _angle = angle;
+image_angle = angle;
+if (spining) {
+	angle += speed_spining * dtime;	
+}
 
 // Position
 _point_x = x - left;

@@ -19,8 +19,7 @@ spwan = function () {
 		i += angle;	
 		}
 		image_alpha = 0;
-	}
+	};
 }
 
 time_source_spwan = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, spwan, [], -1);
-

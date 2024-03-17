@@ -9,8 +9,8 @@
   "name":"obj_pattern_creation",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tentacles",
-    "path":"folders/Attack Patterns/Tentacles.yy",
+    "name":"Slime",
+    "path":"folders/Attack Patterns/Slime.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

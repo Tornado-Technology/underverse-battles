@@ -19,7 +19,7 @@ spawn_star = function () {
 	});
 			
 	if (instance_exists(target)) {
-		star.direction_const = point_direction(star.x, star.y, target.x, target.y);
+		star.direction = point_direction(star.x, star.y, target.x, target.y);
 	};
 		
 	star.speed_const = random_range(2.5 + _power * 0.1, 3.2) + _power * 0.2;	

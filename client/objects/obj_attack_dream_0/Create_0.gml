@@ -15,7 +15,7 @@ switch (type) {
 	case 1 :
 		create_border(battle_border.up, battle_border.down, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_directing_star_from_left_and_right, {
-			star_spinning: obj_star_spinning_dream
+			star_spinning: obj_star_dream
 		});
 	break;
 	

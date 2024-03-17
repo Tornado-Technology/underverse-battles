@@ -12,6 +12,7 @@ switch(type) {
 			arrows: obj_arrows_dream
 		});
 	break;
+	
 	case 1:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_bow_cross, {
@@ -19,6 +20,7 @@ switch(type) {
 				arrows: obj_arrows_spwan_star_dream
 			});
 	break;
+	
 	default:
 	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_bow_4, {

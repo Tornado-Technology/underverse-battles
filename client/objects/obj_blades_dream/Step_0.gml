@@ -69,22 +69,17 @@ if (is_swung) {
 		else if (side == 3) {
 			y -= speed_const * dtime;
 		}
-	}
-}
+	};
+};
 
 if (is_spinning) {
-	image_angle += angle;
-	angle += speed_const  * dtime;
-}
-
-if (is_spinning_independent) {
 	image_angle += speed_spinning * dtime;	
-}
+};
 
 
 if (stop_alpha) {
 	alpha -= step_alpha * dtime;
 	if (alpha <= 0.2) {
 		instance_destroy();
-	}	
-}
+	};	
+};

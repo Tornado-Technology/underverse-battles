@@ -14,6 +14,7 @@ update = function () {
 		image_xscale: 0,
 		image_angle: point_direction(position[0], position[1], border_instance.x, border_instance.y)
 	 });
+	 
 	 tentacles_instance.change_scale(1.6, 0.05);
  };
  
@@ -26,7 +27,7 @@ if (variable_instance_exists(id, "custom_repeats")) {
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], repeats - 1);
+}, [], -1);
 
 time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1.5, time_source_units_seconds, function () {
 	instance_destroy();

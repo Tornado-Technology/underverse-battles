@@ -24,9 +24,8 @@ callback = function () {
 time_source_update = time_source_create(time_source_game, 0.1, time_source_units_seconds, function () {
 	blades_instance_01.move(3 + _power * 0.2);
 	blades_instance_01.target(soul_instance);
-	blades_instance_02.move(3 + _power * 0.2);
-	blades_instance_02.target(soul_instance);
-	blades_instance_02.move_spinning();
+	blades_instance_02.move(3 + _power * 1);
+	blades_instance_02.move_spinning(6 + _power * 1);	
 });
 
 

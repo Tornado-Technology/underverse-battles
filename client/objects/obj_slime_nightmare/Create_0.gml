@@ -1,4 +1,7 @@
+event_inherited();
 depth = fight_depth.bullet;
+
+damage = get_char_damage(obj_character_nightmare);
 
 scale_const = 0;
 scale_time = 0;

@@ -47,7 +47,7 @@ passive_skill = PassiveSkill("Character.Nightmare.PassiveSkill");
 actions = [
 	Action("Character.Nightmare.Attack0", call_attack_nightmare_0),
 	Action("Character.Nightmare.Attack1", call_attack_nightmare_1),
-	Action("Character.Nightmare.Attack2", call_attack_nightmare_0)
+	Action("Character.Nightmare.Attack2", call_attack_nightmare_2)
 ];
 special_action = SpecialAction("Character.Nightmare.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);
 

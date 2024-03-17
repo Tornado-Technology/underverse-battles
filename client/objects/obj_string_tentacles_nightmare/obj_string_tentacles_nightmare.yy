@@ -10,8 +10,8 @@
   "name":"obj_string_tentacles_nightmare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Tentacles",
+    "path":"folders/Characteres/Nightmare/Bullets/Tentacles.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_scare_attack",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_string_tentacles",
-    "path":"sprites/spr_string_tentacles/spr_string_tentacles.yy",
+    "name":"spr_tremble_tentacles",
+    "path":"sprites/spr_tremble_tentacles/spr_tremble_tentacles.yy",
   },
   "spriteMaskId":null,
   "visible":true,
