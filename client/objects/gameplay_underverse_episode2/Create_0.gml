@@ -73,7 +73,7 @@ cutscene_special_attack = function () {
 
 // Cutscenes
 cutscenes = [
-	[
+	[	// Dialog starting with Ink and Sans
 		[cutscene_execute, function () {
 			audio_play_sound(snd_park, 2, true);
 			audio_sound_gain(snd_park, 1, 0);
@@ -627,8 +627,19 @@ cutscenes = [
 		[cutscene_wait, 2],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_lying_wounded],
 		[cutscene_dialog, episode + "Dialog22"],
-		[effect_fade, 3, 1, c_black, c_black, false, fight_depth.ui],
-		[cutscene_wait, 3],
-		[room_goto, room_menu]
+		[effect_fade, 2, 2, c_white, c_white, false, fight_depth.ui],
+		[cutscene_wait, 2],
+		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[cutscene_execute, function () {
+			audio_play_sound(snd_park, 2, true);
+			audio_sound_gain(snd_park, 1, 0);
+		}],
+		[cutscene_execute, function () {
+			instance_destroy(ink_sans);
+			ink_sans = instance_create_depth(255, 197, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_sitting7 });
+			sans = instance_create_depth(223, 197, fight_depth.player, obj_character_sans, { sprite_index: spr_sans_sitting2 });
+		}],
+		
+		[cutscene_wait, 2],
 	]
 ];
