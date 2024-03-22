@@ -17,15 +17,10 @@ switch (type) {
 	
 	
 	default:
-	//create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-	//	pattern_instance = create_pattern(obj_pattern_spikes_flies_up, {
-	//		spike: obj_spike_nightmare,
-	//		spike_timer: obj_spike_times_nightmare
-	//	});
-		
 		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
 		pattern_instance = create_pattern(obj_pattern_spinning_aren, {
-			
+			tentacles_tremble: obj_tentacles_tremble_nightmare,
+			bullets: obj_bullets_nightmare
 		});
 	break;
 };
