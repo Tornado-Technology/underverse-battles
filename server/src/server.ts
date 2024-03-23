@@ -7,6 +7,7 @@ import Packet from './packet/packet.js';
 import { statusCode } from './status.js';
 import Logger from './util/logging.js';
 import config from './config.js';
+import Matchmaker from './util/matchmaker.js';
 
 const { ip, port } = config.main;
 
@@ -30,13 +31,15 @@ export default class Server {
     });
 
     socket.on('close', async () => {
-      Logger.info(`Client ${client.uuid} disconnected`)
+      Logger.info(`Client ${client.uuid} disconnected`);
+      Matchmaker.removeWaiting(client);
       await Client.remove(client);
     });
 
     socket.on('error', (error) => {
       if (error.message.includes('ECONNRESET')) {
         Logger.info('Socket violently disconnected');
+        Matchmaker.removeWaiting(client);
         return;
       }
 

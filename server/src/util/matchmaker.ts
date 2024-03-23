@@ -48,6 +48,9 @@ export default class Matchmaker {
     if (!array) {
       return;
     }
+    if (!array.some(element => element === client)) {
+      return;
+    }
     array.splice(array.indexOf(client), 1);
     this.types.delete(client);
   }
