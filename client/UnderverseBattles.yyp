@@ -390,12 +390,12 @@
         "Localserver":{
           "CopyToMask":"0",
         },
-      },"CopyToMask":3035426170322551022,"filePath":"datafiles/netlog","name":"netlog.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+      },"CopyToMask":0,"filePath":"datafiles/netlog","name":"netlog.exe","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"netlog.n","ConfigValues":{
         "Localserver":{
           "CopyToMask":"0",
         },
-      },"CopyToMask":3035426170322551022,"filePath":"datafiles/netlog","name":"netlog.n","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+      },"CopyToMask":0,"filePath":"datafiles/netlog","name":"netlog.n","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"data.json","CopyToMask":-1,"filePath":"datafiles/system","name":"data.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"font_comic_sans.json","CopyToMask":-1,"filePath":"datafiles/translate/en_us/fonts","name":"font_comic_sans.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"font_comic_sans.ttf","CopyToMask":-1,"filePath":"datafiles/translate/en_us/fonts","name":"font_comic_sans.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

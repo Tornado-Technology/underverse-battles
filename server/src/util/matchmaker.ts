@@ -34,7 +34,7 @@ export default class Matchmaker {
     }
 
     const array = this.matches.get(type) ?? [];
-    if (array.includes(client)) {
+    if (array.some(c => c.account.username === client.account.username)) {
       Logger.info(`The client is trying to start a battle with himself: ${client.username}`);
       return false;
     }
