@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"change_sprite_to_other_sprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"change_sprite_to_other_sprite",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Scripts/Local/System/Characters.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

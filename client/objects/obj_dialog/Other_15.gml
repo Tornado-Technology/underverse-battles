@@ -28,5 +28,9 @@ set_frame("CrossXEvent", "none", spr_empty);
 set_frame("CrossXEvent", "normal", spr_cross_xevent_frame);
 set_frame("CrossXEvent", "angry", spr_cross_xevent_frame_angry);
 // Error
+set_frame("Error", "none", spr_empty);
 set_frame("Error", "normal", spr_error_sans_frame);
 set_frame("Error", "angry", spr_error_sans_frame_angry);
+// Papyrus
+set_frame("Papyrus", "none", spr_empty);
+set_frame("Papyrus", "normal_picnic", spr_empty);

@@ -1,15 +1,13 @@
-/// @param {Id.Instance} obj
+/// @param {Id.Instance} object
 /// @param {Real} x
 /// @param {Real} y
 /// @param {Real} speed
-function cutscene_object_move_to(_obj, _x, _y, _speed) {
-	if (instance_exists(_obj)) {
-		var obj_x = _obj.x;
-		var obj_y = _obj.y;
-		_obj.x = approach(_obj.x, _x, _speed);
-		_obj.y = approach(_obj.y, _y, _speed);
-		return (obj_x == _x) && (obj_y == _y)
-	}
+function cutscene_object_move_to(object, _x, _y, _speed) {
+	if (!instance_exists(object)) return true;
 	
-	return true;
+	var object_x = object.x;
+	var object_y = object.y;
+	object.x = approach(object.x, _x, _speed);
+	object.y = approach(object.y, _y, _speed);
+	return (object_x == _x) && (object_y == _y)
 }
