@@ -330,9 +330,7 @@ create_page([
 		instance_create(obj_menu_achivements);
 	}),
 	Transfer("Main.Settings", menu_page.settings),
-	Execute("Main.DebugRooms", [], function() {
-		room_goto(room_cutscene_test);
-	}),
+	Transfer("Main.DebugRooms", menu_page.debug_rooms),
 	Transfer("Main.Credits", menu_page.credits, function() {
 		instance_create_one(obj_credits);
 	}),
@@ -343,10 +341,13 @@ create_page([
 }
 // Debug rooms
 create_page([
-	Execute("CutsceneTest", [], function() {
-		room_goto(room_underverse_episode2);
+	Execute("Fight Test", [], function() {
+		room_goto(room_fight_test);
 	}),
-	Execute("UITest", [], function() {
+	Execute("Cutscene Test", [], function() {
+		room_goto(room_cutscene_test);
+	}),
+	Execute("UI Test", [], function() {
 		room_goto(room_ui_test);
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),

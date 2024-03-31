@@ -7,6 +7,8 @@ time_source_heal = time_source_create(time_source_game, 0.4, time_source_units_s
 		fight_player_heal(initiative, heal_value);
 		fight_add_player_mana(initiative, -heal_value);
 		audio_play_sound_plugging(snd_healing);
+		
+		if (fight_network_mode) send_fight_mana(-heal_value);
 	}
 	instance_destroy();
 });

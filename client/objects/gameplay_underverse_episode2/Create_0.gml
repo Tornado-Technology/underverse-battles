@@ -11,6 +11,7 @@ sans = obj_character_sans;
 cross = obj_character_cross;
 error_sans = obj_character_error_sans;
 xchara = obj_character_xchara;
+papyrus = obj_character_swap_papyrus;
 
 // Props
 notebook = noone;
@@ -73,7 +74,8 @@ cutscene_special_attack = function () {
 
 // Cutscenes
 cutscenes = [
-	[
+	[	
+		// Dialog starting with Ink and Sans (Index: 0)
 		[cutscene_execute, function () {
 			audio_play_sound(snd_park, 2, true);
 			audio_sound_gain(snd_park, 1, 0);
@@ -95,7 +97,7 @@ cutscenes = [
 		[cutscene_choise, episode + "Choise1", function (index) { cutscene_create(cutscenes[index + 1]); }]
 	],
 	[
-		// Sans selected "Listen"
+		// Sans selected "Listen" (Index: 1)
 		[cutscene_wait, 1],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting1],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting2],
@@ -307,7 +309,7 @@ cutscenes = [
 		[cutscene_execute, function () { cutscene_create(cutscenes[3]); }]
 	],
 	[
-		// Sans selected "No. Get lost"
+		// Sans selected "No. Get lost" (Index: 2)
 		[cutscene_wait, 1],
 		[cutscene_execute, function () { sans.sprite_index = spr_sans_sitting4; }],
 		[cutscene_dialog_async, episode + "Dialog3_Line2"],
@@ -354,7 +356,7 @@ cutscenes = [
 		[cutscene_execute, function () { cutscene_create(cutscenes[3]); }]
 	],
 	[
-		// Ink and Cross in empty Xtale
+		// Ink and Cross in empty Xtale (Index: 3)
 		[layer_background_sprite, background_id, spr_background_empty_xtale],
 		[cutscene_execute, function () {
 			ink_sans = instance_create_depth(250, 167, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_left_regrets0 });
@@ -411,7 +413,7 @@ cutscenes = [
 		[cutscene_execute, function () { cutscene_create(cutscenes[4]); }]
 	],
 	[
-		// Cross in strings
+		// Cross in strings (Index: 4)
 		[layer_background_sprite, background_id, spr_background_empty_xtale_error],
 		[cutscene_execute, function () {
 			if (!instance_exists(cross)) {
@@ -552,17 +554,17 @@ cutscenes = [
 		}],
 	],
 	[
-		// If player took damage
+		// If player took damage (Index: 5)
 		[cutscene_dialog, is_mobile ? episode + "TakeDamageMobile" : episode + "TakeDamage", dir.down],
 		[cutscene_execute, function () { cutscene_create(cutscenes[7]); }]
 	],
 	[
-		// If player didn't take damage
+		// If player didn't take damage (Index: 6)
 		[cutscene_dialog, is_mobile ? episode + "DontTakeDamageMobile" : episode + "DontTakeDamage", dir.down],
 		[cutscene_execute, function () { cutscene_create(cutscenes[7]); }]
 	],
 	[
-		// Fight continue
+		// Fight continue (Index: 7)
 		[cutscene_execute, function () {
 			fight_set_ui_showing_action_box(true);
 			fight_set_player_input(true);
@@ -588,7 +590,7 @@ cutscenes = [
 		}],
 	],
 	[
-		// Special attack
+		// Special attack (Index: 8)
 		[cutscene_execute, function () {
 			fight_position_event = false;
 			instance_destroy(fight);
@@ -627,8 +629,120 @@ cutscenes = [
 		[cutscene_wait, 2],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_lying_wounded],
 		[cutscene_dialog, episode + "Dialog22"],
+		[effect_fade, 2, 2, c_white, c_white, false, fight_depth.ui],
+		[cutscene_wait, 2],
+		// Back to Ink and Sans
+		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[cutscene_execute, function () {
+			audio_play_sound(snd_park, 2, true);
+			audio_sound_gain(snd_park, 1, 0);
+		}],
+		[cutscene_execute, function () {
+			instance_destroy(ink_sans);
+			ink_sans = instance_create_depth(255, 197, fight_depth.player, obj_character_ink_sans, { sprite_index: spr_ink_sans_sitting7 });
+			sans = instance_create_depth(223, 197, fight_depth.player, obj_character_sans, { sprite_index: spr_sans_sitting2 });
+		}],
+		[cutscene_wait, 2],
+		[cutscene_dialog_async, episode + "Dialog23"],
+		[cutscene_wait_by_dialog, 1],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_down_looking_left_down],
+		[cutscene_wait_dialog_end],
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting1],
+		[cutscene_choise, episode + "Choise2", function (index) { cutscene_create(cutscenes[index + 9]); }]
+	],
+	[
+		// Sans selected "Listen" (Index: 9)
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting2],
+		[cutscene_dialog_async, episode + "Dialog24_Line1"],
+		[cutscene_wait_by_dialog, 1],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_looking_left_joyful],
+		[cutscene_wait, 0.5],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting6],
+		[cutscene_wait_by_dialog, 3],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_looking_left],
+		[cutscene_wait_by_dialog, 4],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting2],
+		[cutscene_wait_by_dialog, 5],
+		[cutscene_object_set_sprtie, sans, spr_sans_left_down],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_looking_down_calm],
+		[cutscene_wait_by_dialog, 6],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_getting_broomie],
+		[cutscene_wait_by_dialog, 7],
+		[cutscene_wait, 0.5],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_left],
+		[cutscene_wait_dialog_end],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_drawing_on_ground],
+		[cutscene_wait, 0.5],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_right_down],
+		[cutscene_wait, 0.5],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_teleporting],
+		[cutscene_wait, 2],
+		[cutscene_execute, function () {
+			papyrus = instance_create_depth(obj_camera.x - 20, 186, fight_depth.player, obj_character_swap_papyrus, { sprite_index: spr_papyrus_picnic_walking_right_plaid });
+		}],
+		[cutscene_object_move_to, papyrus, obj_camera.x + 90, 186, 2],
+		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_stopped_right_plaid],
+		[cutscene_wait, 0.5],
+		[cutscene_dialog, episode + "Dialog26"],
+		[cutscene_wait, 2],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_left_closed_eyes],
+		[cutscene_wait, 0.5],
+		[cutscene_dialog, episode + "Dialog27"],
+		[cutscene_object_set_sprtie, sans, spr_sans_walking_left_closed_eyes],
+		[cutscene_object_set_speed, sans, 2, 180],
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_walking_left_plaid],
+		[cutscene_object_set_speed, papyrus, 2, 180],
+		[cutscene_wait, 1],
 		[effect_fade, 3, 1, c_black, c_black, false, fight_depth.ui],
+		[audio_sound_gain, snd_park, 0, 1000],
 		[cutscene_wait, 3],
 		[room_goto, room_menu]
-	]
+	],
+	[	
+		// Sans selected "Stay" (Index: 10)
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting_looking_up],
+		[cutscene_dialog_async, episode + "Dialog24_Line2"],
+		[cutscene_wait_by_dialog, 2],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_looking_left],
+		[cutscene_object_set_sprtie, sans, spr_sans_left_down],
+		[cutscene_wait_by_dialog, 3],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_getting_broomie],
+		[cutscene_wait_dialog_end],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_drawing_on_ground],
+		[cutscene_wait, 1.5],
+		[cutscene_dialog, episode + "Dialog25_Line2"],
+		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_teleporting],
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_right_down],
+		[cutscene_wait, 2],
+		[cutscene_dialog, episode + "Dialog26_Line2"],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_left],
+		[cutscene_execute, function () {
+			papyrus = instance_create_depth(obj_camera.x - 20, 186, fight_depth.player, obj_character_swap_papyrus, { sprite_index: spr_papyrus_picnic_walking_right_plaid });
+		}],
+		[cutscene_object_move_to, papyrus, obj_camera.x + 90, 186, 2],
+		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_stopped_right_plaid],
+		[cutscene_wait, 0.5],
+		[cutscene_dialog, episode + "Dialog27"],
+		[cutscene_wait, 2],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_right_down],
+		[cutscene_wait, 2],
+		[cutscene_object_set_sprtie, sans, spr_sans_down_left_closed_eyes],
+		[cutscene_wait, 0.5],
+		[cutscene_dialog, episode + "Dialog28"],
+		[cutscene_object_set_sprtie, sans, spr_sans_walking_left_closed_eyes],
+		[cutscene_object_set_speed, sans, 2, 180],
+		[cutscene_wait, 1],
+		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_walking_left_plaid],
+		[cutscene_object_set_speed, papyrus, 2, 180],
+		[cutscene_wait, 1],
+		[effect_fade, 3, 1, c_black, c_black, false, fight_depth.ui],
+		[audio_sound_gain, snd_park, 0, 1000],
+		[cutscene_wait, 3],
+		[room_goto, room_menu]
+	],
 ];

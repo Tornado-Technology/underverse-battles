@@ -61,7 +61,7 @@
     },
     "name":"spr_char_ink_sans_defeated",
     "playback":1,
-    "playbackSpeed":1.0,
+    "playbackSpeed":2.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

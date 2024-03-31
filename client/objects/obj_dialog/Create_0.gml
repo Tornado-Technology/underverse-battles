@@ -12,6 +12,8 @@ dialog = [];
 name = "";
 image_type = "";
 frame = noone;
+
+skip_simb = "►";
 	
 restarting_dialog = true;
 restarting_str_num = 0;

@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Stoty Mode",
-    "path":"folders/Characteres/Ink Sans/Sprites/Char/Stoty Mode.yy",
+    "name":"Episode 2",
+    "path":"folders/Characteres/Ink Sans/Sprites/Char/Stoty Mode/Episode 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

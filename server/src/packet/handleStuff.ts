@@ -376,7 +376,11 @@ export const handlePacket = async (client: Client, data: any) => {
       break;
     
     case 'fightMana':
+      if (data.mana >= 0) {
         client.fight.instance?.addMana(client, data.mana);
+      } else {
+        client.fight.instance?.removeMana(client, data.mana);
+      }
         break;
 
     case 'fightSoul':
