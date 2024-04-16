@@ -46,6 +46,16 @@ idle_animation = spr_empty;
 after_battle_animation = spr_empty;
 defeated_animation = spr_empty;
 
+walking_down_animation = spr_empty;
+walking_up_animation = spr_empty;
+walking_left_animation = spr_empty;
+walking_right_animation = spr_empty;
+
+standing_down_animation = spr_empty;
+standing_up_animation = spr_empty;
+standing_left_animation = spr_empty;
+standing_right_animation = spr_empty;
+
 // Actions
 passive_skill = PassiveSkill("");
 actions = [
@@ -59,24 +69,50 @@ special_action = SpecialAction("", spr_empty, spr_empty);
 use_gravity_attack = false;
 
 // Movement
-moving = false;
+is_moving = false;
+is_controlled = false;
+can_run = false;
+is_following = false;
+follow_target = noone;
+follow_distance = 30;
 x_new = x;
 y_new = y;
 speed_const = 0;
 
 // Methods
 move = function(_x, _y, _speed) {
-	moving = true;
+	is_moving = true;
 	x_new = x + _x;
 	y_new = y + _y;
 	speed_const = _speed;
 };
 
-skip_moving = function () {
-	moving = false;
+skip_moving = function() {
+	is_moving = false;
 	x = x_new;
 	y = y_new;
 	speed_const = 0;
+};
+
+set_controlled = function(_speed, _can_run) {
+	is_controlled = true;
+	can_run = _can_run;
+	speed_const = _speed;
+};
+
+set_uncontrolled = function() {
+	is_controlled = false;
+};
+
+follow = function(_speed, _follow_target, _follow_distance = follow_distance) {
+	is_following = true;
+	speed_const = _speed;
+	follow_target = _follow_target;
+	follow_distance = _follow_distance;
+};
+
+unfollow = function() {
+	is_following = false;
 };
 
 on_dodged = function(player_id) {};
@@ -99,6 +135,17 @@ is_defeated = function() {
 
 get_self = function() {
 	return self;
+}
+
+change_sprite_to_other_sprite = function(previous_sprite, new_sprite) {
+	if (sprite_index == previous_sprite)
+		sprite_index = new_sprite;
+}
+
+change_sprite_by_condition = function(condition, new_sprite) {
+	if (condition) {
+		sprite_index = new_sprite;
+	}
 }
 
 // Dev

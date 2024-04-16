@@ -1,6 +1,6 @@
 room_width = 1280;
 
-player_ = instance_create_depth(240, room_height / 2, fight_depth.player, player_sans);
+player_ = instance_create_depth(240, room_height / 2, fight_depth.player, obj_character_sans);
 xchara_ = instance_create_depth(1000, room_height / 2, fight_depth.player, obj_character_xchara);
 xchara_.sprite_index = spr_xchara_secretive;
 
@@ -13,7 +13,7 @@ camera_set_zoom(8);
 camera_set_taget(player_);
 
 var start_time_sec = 3;
-effect_fade(0, start_time_sec, c_black, c_black, false, fight_depth.ui_hight);
+effect_fade(0, 0, start_time_sec, c_black, false, fight_depth.ui_hight);
 camera_change_zoom(4, start_time_sec);
 
 audio_stop_all();

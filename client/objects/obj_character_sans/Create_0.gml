@@ -38,6 +38,16 @@ idle_animation = spr_char_sans_idle;
 after_battle_animation = spr_sans_after_battle;
 defeated_animation = spr_char_sans_defeated;
 
+walking_down_animation = spr_sans_walking_down;
+walking_up_animation = spr_sans_walking_up;
+walking_left_animation = spr_sans_walking_left;
+walking_right_animation = spr_sans_walking_right;
+
+standing_down_animation = spr_sans_standing_down;
+standing_up_animation = spr_sans_standing_up;
+standing_left_animation = spr_sans_standing_left;
+standing_right_animation = spr_sans_standing_right;
+
 hand_up_animation = spr_char_sans_attack_2_up;
 hand_down_up_animation = spr_char_sans_attack_2_down_up;
 hand_left_up_animation = spr_char_sans_attack_2_left_up;

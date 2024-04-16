@@ -42,7 +42,7 @@ height = display_get_gui_height();
 game_hash = client_info.hash;
 
 // Effect fade
-effect_fade(0, 2, c_white, c_white, true, 0);
+effect_fade(0, 0.5, 2, c_white, true, 0);
 
 // Logo
 logo = spr_underverse_battles_logo;
@@ -378,6 +378,9 @@ create_page([
 	}),
 	Execute("StoryMode.Episode2", [], function() {
 		room_goto(room_underverse_episode2);
+	}),
+	Execute("StoryMode.Episode3", [], function() {
+		room_goto(room_underverse_episode_3_part_1);
 	}),
 	Transfer("StandardButtons.Back", menu_page.singleplayer),
 ], menu_page.storymode, "StoryMode.Title", true);

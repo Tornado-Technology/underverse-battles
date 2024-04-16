@@ -13,7 +13,7 @@
   "name":"snd_park",
   "parent":{
     "name":"Embient",
-    "path":"folders/Sounds/Soundtracks/Embient.yy",
+    "path":"folders/Sounds/Embient.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

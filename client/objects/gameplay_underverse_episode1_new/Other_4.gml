@@ -20,7 +20,7 @@ camera_set_zoom(8);
 camera_set_taget(sans);
 
 var start_time_sec = 3;
-effect_fade(0, start_time_sec, c_black, c_black, true, 0);
+effect_fade(0, 0, start_time_sec, c_black, true, 0);
 camera_change_zoom(4, start_time_sec);
 
 // First cutscene

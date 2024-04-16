@@ -1,6 +1,6 @@
 on_into_story_mode.invoke("Tutorial");
 
-
+episode = "Underverse_Episode3.";
 
 // Characters (add characters here)
 

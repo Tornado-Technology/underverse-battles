@@ -215,7 +215,8 @@
       "Tutoriel": "Tutoriel",
       "StartTutorial": "Start the tutorial",
       "Episode1": "Episode 1 - Invasion",
-      "Episode2": "Episode 2 - Cross"
+      "Episode2": "Episode 2 - Cross",
+      "Episode3": "Episode 3 - The beginning of the adventure"
     },
     "Control": {
       "Title": "Control",
@@ -648,6 +649,66 @@
         "Name": "Edit",
         "Description": "An attack which the attacking objects change by pressing a button" }
     },
+    "Dream": {
+      "Name": "Dream",
+      "Description": "The Guardian of Positive feelings",
+      "Bio": "Dream was born out of light by Nim, The Guardian of The Tree of Feelings, to guard The Tree after her death. Dream embodies an essense of positive energy in a skeleton shell of Swap!Sans. Once his brother, Nightmare, accidently plagued The Tree's fruits with negative energy, Dream had to seal the last remaining fruit inside himself, thus making it his soul. Dream is very kind, polite, and always ready to help those who's in need. He's Ink's friend and partner in protecting the Multiverse. ",
+      "PassiveSkill": {
+        "Name": "Good Spirits",
+        "Description": "Every time Dream is undamaged in a turn, he charges his Special Attack by 10%" },
+      "Attack0": {
+        "Name": "Star Staff",
+        "Description": "Attack with stars, that fly towards the enemy and deal damage" },
+      "Attack1": {
+        "Name": "Daggers",
+        "Description": "Two daggers, that swing and deal damage" },
+      "Attack2": {
+        "Name": "Dream's Bow",
+        "Description": "Arrows that aim the enemy and may ricochet" },
+      "SpecialAttack": {
+        "Name": "Positive Commitment",
+        "Description": "Attack with ricocheting arrows. Dealing damage slightly prolongs the attack" }
+    },
+    "Nightmare": {
+      "Name": "Nightmare",
+      "Description": "Your worst nightmare",
+      "Bio": "Nightmare was born out of dark by The Guardian of The Tree of Feelings to protect the negative half of The Tree. In his world of Dreamtale Nightmare was believed to be the harbinger of calamities and bullied for it by humans and monsters. In his attempts to prove them wrong, that he's still capable of good actions, Nightmare grabbed a golden apple, thus turning it in total black, as well as all the other fruits on The Tree. Negative feelings then flooded all over the people of Dreamtale. Appaled, Nightmare started eating the dark fruits, turning himself into essense of the dark matter. Nightmare is a cunning and violent evil. He's able to manipulate beings using his negative emotional control. You shouldn't deal with him.",
+      "PassiveSkill": {
+        "Name": "Negative Commitment",
+        "Description": "When taking damage, Nightmare charges the same amount of Special Attack" },
+      "Attack0": {
+        "Name": "Tenticles",
+        "Description": "Tenticles that wander over arena and deal damage of negative feelings" },
+      "Attack1": {
+        "Name": "Spikes of Negativity",
+        "Description": "Spikes emerging from arena's borders and dealing damage of negative feelings" },
+      "Attack2": {
+        "Name": "Slime",
+        "Description": "Dark substance that creates various forms to attack soul" },
+      "SpecialAttack": {
+        "Name": "Negativity Leech",
+        "Description": "Negativity areas spawn on the arena, healing Nightmare on catching the enemy soul" }
+    },
+    "Papyrus": {
+      "Name": "Papyrus",
+      "Description": "Nyeh-heh-heh",
+      "Bio": "Sans's little brother from the Undertale universe. Wants to be cool and popular, and he's putting his entire backbone into it. Loves cooking, especially with Undyne. Has got his own red car. Papyrus is an open-minded monster, albeit a bit of a dork, but he's always ready to stand up for his friends and family. He believes that there is always something good in every human and monster.",
+      "PassiveSkill": {
+        "Name": "Damage Resistance",
+        "Description": "Papyrus takes maximum of up to 8 damage from every hit" },
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones aiming the enemy soul and dealing damage" },
+      "Attack1": {
+        "Name": "Bones and Blue bones",
+        "Description": "Attack with common bones and blue bones, that damage the soul only when it's moving" },
+      "Attack2": {
+        "Name": "Spinning Bones",
+        "Description": "Spinning bones targeting the soul" },
+      "SpecialAttack": {
+        "Name": "Cool Dude",
+        "Description": "Huge amount of complex bone attacks with a wide leap over bones in the end" }
+    },
     "Tornado": {
       "Name": "Tornado",
       "Description": "Wet developer",
@@ -998,6 +1059,48 @@
       ],
       "Dialog22": [
         "{Ink:injured}This is bad."
+      ],
+      "Dialog23": [
+        "{Ink:calm}Someone capable of manipulating a monster's body with that twisted mind... It could be really difficult trying to stop them.",
+        "{Ink:calm}I have to admit that I can't stop them by myself...",
+        "{Ink:calm}I know this isn't the right thing to do, but... Sans...",
+        "{Ink:calm}I need your help to find Cross... Would you like to come with me?"
+      ],
+      "Choise2": [
+        "Ink Sans suggests that you join him in his searches for Cross.",
+        "Join",
+        "Stay"
+      ],
+      "Dialog24_Line1": [
+        "{Sans:normal}i might help, i guess. besides ►",
+        "{Ink:enthusiastic}Awesome! Off we go then!",
+        "{Sans:confused}woah, wait a sec, artist... right now?",
+        "{Ink:normal}But why wait?",
+        "{Sans:normal}my friends are picnicking right now, i can't just abandon them. papyrus won't ever get off my backbone if i don't show up.",
+        "{Ink:calm}Yeah... I see.",
+        "{Ink:glad}Then I'll come get you later.",
+        "{Papyrus:none}SANS!",
+        "{Ink:surprised}Oh, boy!"
+      ],
+      "Dialog24_Line2": [
+        "{Sans:normal}...heh. sorry bud, but no. actually, i think i can live with this.",
+        "{Sans:normal}...it doesn't worry me at all.",
+        "{Ink:glad}Oh... That's ok! I get it. I was the one who let this happen...",
+        "{Ink:glad}So, I'll do my best to fix this and bring back your soul.",
+        "{Ink:glad}Welp. I have to go now."
+      ],
+      "Dialog25_Line2": [
+        "{Ink:normal}Have a nice day with all your friends!"
+      ],
+      "Dialog26_Line2": [
+        "{Sans:confused}huh... this is too weird...",
+        "{Papyrus:none}SANS!!"
+      ],
+      "Dialog27": [
+        "{Papyrus:normal_picnic}THERE YOU ARE, BROTHER! ARE YOU READY FOR OUR MAGNIFICENT PICNIC?"
+      ],
+      "Dialog28": [
+        "{Sans:normal}...sure! let's go, bro."
       ]
     }
   }

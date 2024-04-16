@@ -162,7 +162,7 @@ else if (scenario == 24) {
 	if (instance_exists(dlg))
 		exit;
 		
-	effect_fade(2, 0, c_black, c_black, true, 0);
+	effect_fade(2, 0, 0, c_black, true, 0);
 	
 	alarm[1] = 120;
 	

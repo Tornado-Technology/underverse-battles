@@ -74,7 +74,7 @@ is_stunned = false;
 stun = function() {
 	moveable = false;
 	is_stunned = true;
-	effect_fade(0.1, 1, c_blue, c_blue, true, 0);
+	effect_fade(0.1, 0, 1, c_blue, true, 0);
 	battle_border_set_color(false, false, c_blue);
 }
 

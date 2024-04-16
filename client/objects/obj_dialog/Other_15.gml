@@ -23,14 +23,37 @@ set_frame("C", "normal", spr_xchara_frame);
 set_frame("C", "secretive", spr_xchara_frame_secretive);
 set_frame("C", "angry", spr_xchara_frame_angry);
 set_frame("C", "satisfied", spr_xchara_frame_satisfied);
+// Chara
+set_frame("XChara", "none", spr_empty);
+set_frame("XChara", "normal", spr_xchara_frame);
+set_frame("XChara", "glad", spr_xchara_frame_glad);
+set_frame("XChara", "tired", spr_xchara_frame_tired);
+set_frame("XChara", "angry", spr_xchara_frame_angry);
+set_frame("XChara", "satisfied", spr_xchara_frame_satisfied);
+// Chara (spirit)
+set_frame("XCharaSpirit", "none", spr_empty);
+set_frame("XCharaSpirit", "normal", spr_xchara_frame_spirit);
+set_frame("XCharaSpirit", "dissatisfied", spr_xchara_frame_spirit_dissatisfied);
+set_frame("XCharaSpirit", "confused", spr_xchara_frame_spirit_confused);
 // Cross XEvent
 set_frame("CrossXEvent", "none", spr_empty);
 set_frame("CrossXEvent", "normal", spr_cross_xevent_frame);
 set_frame("CrossXEvent", "angry", spr_cross_xevent_frame_angry);
+set_frame("CrossXEvent", "tired", spr_cross_xevent_frame_tired);
 // Error
 set_frame("Error", "none", spr_empty);
 set_frame("Error", "normal", spr_error_sans_frame);
 set_frame("Error", "angry", spr_error_sans_frame_angry);
 // Papyrus
 set_frame("Papyrus", "none", spr_empty);
-set_frame("Papyrus", "normal_picnic", spr_empty);
+set_frame("Papyrus", "normal", spr_papyrus_frame);
+// Papyrus (picnic)
+set_frame("PapyrusPicnic", "normal", spr_empty);
+// Nightmare
+set_frame("Nightmare", "none", spr_empty);
+set_frame("Nightmare", "normal", spr_nightmare_frame);
+set_frame("Nightmare", "glad", spr_nightmare_frame_glad);
+// Dream
+set_frame("Dream", "none", spr_empty);
+set_frame("Dream", "normal", spr_dream_frame);
+set_frame("Dream", "afraid", spr_dream_frame_afraid);

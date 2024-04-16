@@ -15,6 +15,8 @@ if (pos < string_length(cur_text)) {
 	    alarm[0] = 2;
 	else if (simb == "!" && string_char_at(cur_text, pos+1) == "?")
 	    alarm[0] = 2;
+	else if (simb == "!" && string_char_at(cur_text, pos+1) == "!")
+	    alarm[0] = 2;
 	else if (simb == "." && string_char_at(cur_text, pos+1) == ".")
 	    alarm[0] = 2;
 	else if (simb == "." || simb == "!" || simb == "?")

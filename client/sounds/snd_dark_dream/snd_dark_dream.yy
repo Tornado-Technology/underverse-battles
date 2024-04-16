@@ -13,7 +13,7 @@
   "name":"snd_dark_dream",
   "parent":{
     "name":"Embient",
-    "path":"folders/Sounds/Soundtracks/Embient.yy",
+    "path":"folders/Sounds/Embient.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

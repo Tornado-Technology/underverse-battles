@@ -2,14 +2,24 @@
 sprite_index = noone;
 fade = false;
 
-target_gui   = false;
-duration_in  = 0; // In seconds
+target_gui = false;
+duration_in = 0; // In seconds
+duration_hold = 0; // In seconds
 duration_out = 0; // In seconds
-color_in     = c_black;
-color_out    = c_black;
+_color = c_black;
 
 on_end_fade = function() {}
 
+// Enum
+enum FADER_STAGE {
+	IN,
+	HOLD,
+	OUT
+}
+
 // Dev
-_state_in = true;
-_alpha    = 0;
+stage = FADER_STAGE.IN;
+_alpha = 0;
+
+// Time source
+time_source_hold = noone;

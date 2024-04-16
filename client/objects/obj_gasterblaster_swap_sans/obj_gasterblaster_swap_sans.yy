@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/Swap Sans/Attacks/Bullets.yy",
+    "path":"folders/Characteres/Swap Sans/Bullets.yy",
   },
   "parentObjectId":{
     "name":"obj_gasterblaster_sans",
