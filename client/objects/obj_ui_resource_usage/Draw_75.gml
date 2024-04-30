@@ -24,6 +24,6 @@ if (frame_rate == frame_rate_tpye.real_fps || frame_rate == frame_rate_tpye.fps_
 	draw_y += 8;
 }
 
-if (development_mode && !(cinematic_mode && global.fight_instance != noone)) {
+if (development_mode && !(cinematic_mode && room != room_menu)) {
 	build_text.draw(draw_x, draw_y);	
 }

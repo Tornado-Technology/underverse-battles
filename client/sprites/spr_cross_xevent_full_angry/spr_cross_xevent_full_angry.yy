@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Full Character",
-    "path":"folders/Sprites/Storymode/Full Character.yy",
+    "path":"folders/Sprites/Storymode/Episode 3/Full Character.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

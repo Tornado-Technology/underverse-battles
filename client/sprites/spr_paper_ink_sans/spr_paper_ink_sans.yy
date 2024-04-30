@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Stuff",
-    "path":"folders/Sprites/Storymode/Stuff.yy",
+    "name":"Episode 2",
+    "path":"folders/Sprites/Storymode/Episode 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

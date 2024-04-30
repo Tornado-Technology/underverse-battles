@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Frames",
-    "path":"folders/Characteres/Sans/Sprites/Frames.yy",
+    "name":"Story Mode",
+    "path":"folders/Characteres/Sans/Sprites/Frames/Story Mode.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

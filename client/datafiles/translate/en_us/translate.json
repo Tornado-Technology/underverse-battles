@@ -823,10 +823,10 @@
   "Dialog": {
     "Underverse_Episode1": {
       "Dialog1": [
-        "{Sans:normal}Emm... hi.",
-        "{Sans:normal}Who are you?",
+        "{Sans:normal}emm... hi.",
+        "{Sans:normal}who are you?",
         "{C:secretive}You will not need for this information soon.",
-        "{Sans:normal}What are you meaning, dude?"
+        "{Sans:normal}what are you meaning, dude?"
       ],
       "Dialog2": [
         "{C:satisfied}Never let your guard down. You should listen to Undyne when she gives you advice.",
@@ -909,10 +909,10 @@
         "{Ink:glad}Well, let's play with time!"
       ],
       "Dialog12": [
-        "{Sans:tired}Look, bud. I dunno what's happening but you don't belong here.",
-        "{Sans:tired}You gotta stop this. Now.",
-        "{Sans:tired}Please, give me back my soul.",
-        "{Sans:tired}I'm sure this artist me will help ya.",
+        "{Sans:tired}look, bud. i dunno what's happening but you don't belong here.",
+        "{Sans:tired}you gotta stop this. now.",
+        "{Sans:tired}please, give me back my soul.",
+        "{Sans:tired}i'm sure this artist me will help ya.",
         "{Ink:calm}Chara, Cross, let's go home. We'll find a better way to...",
         "{C:secretive}I just don't want to die... I just... I need...",
         "{C:satisfied}WE NEED OUR OWN UNIVERSE!",
@@ -923,14 +923,14 @@
     },
     "Underverse_Episode2": {
       "Dialog1": [
-        "{Sans:tired}So... your name's Ink, huh?",
+        "{Sans:tired}so... your name's INK, huh?",
         "{Ink:combat}...Yup. Nice to meet ya."
       ],
       "Dialog2": [
         "{Ink:calm}I-I'm sorry Sans, I never thought this could happen...",
-        "{Sans:tired}Ot's ok bud. I'm not dead... At least not yet.",
-        "{Sans:tired}I shouldn't have slept here.",
-        "{Sans:tired}Looks like that guy loves to cause trouble.",
+        "{Sans:tired}it's ok bud. i'm not dead... at least not yet.",
+        "{Sans:tired}i shouldn't have slept here.",
+        "{Sans:tired}looks like that guy loves to cause trouble.",
         "{Ink:calm}Actually, this is the first time he's done something like this.",
         "{Ink:calm}He's scared since... Well... It's a long story..."
       ],
@@ -940,7 +940,7 @@
         "Nope. Get outta here"
       ],
       "Dialog3_Line1": [
-        "{Sans:normal}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
+        "{Sans:normal}umm... my bro and the others will arrive in 20 minutes, so i guess we can talk for a"
       ],
       "Dialog4_Line1": [
         "{Ink:glad}DO YOU WANNA KNOW MORE ABOUT C!? GREAT!!",
@@ -965,7 +965,7 @@
         "{Ink:none}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities."
       ],
       "Dialog8_Line1": [
-        "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
+        "{Sans:confused}wait a sec... if he was in a Genocide timeline, where's the human that caused it?",
         "{Ink:calm}Chara is sealed inside his body. How did it happen? He never told me...",
         "{Ink:calm}At first they acted as two separate beings.",
         "{Ink:calm}However, as I visited Cross to keep him company, he won full control of both souls."
@@ -984,16 +984,16 @@
         "{Ink:emotionless}His face..."
       ],
       "Dialog12_Line1": [
-        "{Sans:confused}Yeah?"
+        "{Sans:confused}yeah?"
       ],
       "Dialog13_Line1": [
         "{Ink:emotionless}What were we talking about?",
-        "{Sans:none}Pfff, what's up with this guy?"
+        "{Sans:none}pfff, what's up with this guy?"
       ],
       "Dialog3_Line2": [
-        "{Sans:tired}Look, you better go. I'm not interested in your clowning.",
+        "{Sans:tired}look, you better go. i'm not interested in your clowning.",
         "{Ink:surprised}But Sans... Half of your soul was stolen from you.",
-        "{Sans:tired}I will survive. And you do your own shit.",
+        "{Sans:tired}i will survive. and you do your own shit.",
         "{Ink:calm}OK, I get it. After all, it was my fault.",
         "{Ink:combat}Don't worry Sans. I will do anything to get your half of your soul back."
       ],
@@ -1001,8 +1001,8 @@
         "{Ink:combat}Emm... Good luck."
       ],
       "Dialog5_Line2": [
-        "{Sans:tired}Hmm ... What's a day.",
-        "{Sans:tired}Well, time to go."
+        "{Sans:tired}hmm ... what's a day.",
+        "{Sans:tired}well, time to go."
       ],
       "Dialog14": [
         "{Ink:calm}C, please! You know I can't create a new world... are you OK?",

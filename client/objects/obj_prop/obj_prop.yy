@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_prop",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_prop",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"Story Mode",
     "path":"folders/Objects/Fight/Story Mode.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_wall",
+    "path":"objects/obj_wall/obj_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

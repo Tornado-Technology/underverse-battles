@@ -1,6 +1,5 @@
 // Sounds
 audio_stop_all();
-// Добавить эмбиент леса
 
 // Characters create
 xchara = instance_create_depth(223, 176, fight_depth.player, obj_character_xchara, {

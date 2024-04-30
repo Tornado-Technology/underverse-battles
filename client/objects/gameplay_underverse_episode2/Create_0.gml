@@ -176,7 +176,7 @@ cutscenes = [
 		[effect_fade, 1, 0, 1, c_black, false, fight_depth.ui],
 		[cutscene_wait, 1],
 		// Back to Sans and Ink in forest park
-		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
 			audio_play_sound(snd_park, 2, true);
 			audio_sound_gain(snd_park, 1, 0);
@@ -272,7 +272,7 @@ cutscenes = [
 		[effect_fade, 2, 0, 1, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		// Back to Sans and Ink in forest park
-		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
 			audio_play_sound(snd_park, 2, true);
 			audio_sound_gain(snd_park, 1, 0);
@@ -632,7 +632,7 @@ cutscenes = [
 		[effect_fade, 2, 0, 2, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		// Back to Ink and Sans
-		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
 			audio_play_sound(snd_park, 2, true);
 			audio_sound_gain(snd_park, 1, 0);

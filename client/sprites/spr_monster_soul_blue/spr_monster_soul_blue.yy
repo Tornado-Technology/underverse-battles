@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Soul",
-    "path":"folders/Sprites/Storymode/Soul.yy",
+    "name":"Episode 1",
+    "path":"folders/Sprites/Storymode/Episode 1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

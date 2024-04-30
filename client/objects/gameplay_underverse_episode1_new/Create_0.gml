@@ -67,7 +67,7 @@ cutscenes = [
 			audio_stop_sound(snd_dark_dream);
 		}],
 		[cutscene_wait, 1],
-		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
 			audio_play_sound(snd_fallen_child, 1, true, 0.5);
 		}],

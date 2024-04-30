@@ -175,7 +175,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, dream, spr_dream_left_worried_teleporting],
 		[audio_play_sound_once, snd_spare],
 		[cutscene_wait, 1],
-		[effect_fade, 3, 2, 2, c_black, false, fight_depth.ui],
+		[effect_fade, 3, 2, 2, c_black, true, fight_depth.ui],
 		[cutscene_execute, function() {
 			audio_sound_gain(snd_nightmare_appears, 0, 2000);
 		}],

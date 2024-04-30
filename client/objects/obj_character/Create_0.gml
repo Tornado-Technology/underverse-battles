@@ -72,12 +72,19 @@ use_gravity_attack = false;
 is_moving = false;
 is_controlled = false;
 can_run = false;
+is_running = false;
 is_following = false;
 follow_target = noone;
-follow_distance = 30;
+follow_distance = 25;
+movement_x = 0;
+movement_y = 0;
+following = false;
+follow_x = 0;
+follow_y = 0;
 x_new = x;
 y_new = y;
 speed_const = 0;
+run_coefficient = 0.5;
 
 // Methods
 move = function(_x, _y, _speed) {
@@ -94,14 +101,23 @@ skip_moving = function() {
 	speed_const = 0;
 };
 
-set_controlled = function(_speed, _can_run) {
+control = function(_speed, _can_run) {
+	camera_set_taget(self);
 	is_controlled = true;
 	can_run = _can_run;
 	speed_const = _speed;
 };
 
+set_controlled = function() {
+	is_controlled = true;
+};
+
 set_uncontrolled = function() {
 	is_controlled = false;
+	change_sprite_by_condition(sprite_index == walking_right_animation, standing_right_animation);
+	change_sprite_by_condition(sprite_index == walking_left_animation, standing_left_animation);
+	change_sprite_by_condition(sprite_index == walking_down_animation, standing_down_animation);
+	change_sprite_by_condition(sprite_index == walking_up_animation, standing_up_animation);
 };
 
 follow = function(_speed, _follow_target, _follow_distance = follow_distance) {

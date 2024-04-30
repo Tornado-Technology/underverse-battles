@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Full Character",
-    "path":"folders/Sprites/Storymode/Full Character.yy",
+    "name":"Episode 2",
+    "path":"folders/Sprites/Storymode/Episode 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

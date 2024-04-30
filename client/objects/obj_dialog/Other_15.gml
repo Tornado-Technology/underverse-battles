@@ -5,6 +5,7 @@ set_frame("Sans", "normal", spr_sans_frame);
 set_frame("Sans","angry", spr_sans_frame_angry);
 set_frame("Sans","tired", spr_sans_frame_tired);
 set_frame("Sans","confused", spr_sans_frame_confused);
+set_frame("Sans","joking", spr_sans_frame_joking);
 // Ink
 set_frame("Ink", "none", spr_empty);
 set_frame("Ink", "normal", spr_ink_sans_frame);
@@ -48,7 +49,11 @@ set_frame("Error", "angry", spr_error_sans_frame_angry);
 set_frame("Papyrus", "none", spr_empty);
 set_frame("Papyrus", "normal", spr_papyrus_frame);
 // Papyrus (picnic)
-set_frame("PapyrusPicnic", "normal", spr_empty);
+set_frame("PapyrusPicnic", "normal", spr_papyrus_picnic_frame);
+set_frame("PapyrusPicnic", "glad", spr_papyrus_picnic_frame_glad);
+set_frame("PapyrusPicnic", "tired", spr_papyrus_picnic_frame_tired);
+set_frame("PapyrusPicnic", "angry", spr_papyrus_picnic_frame_angry);
+set_frame("PapyrusPicnic", "shocked", spr_papyrus_picnic_frame_shocked);
 // Nightmare
 set_frame("Nightmare", "none", spr_empty);
 set_frame("Nightmare", "normal", spr_nightmare_frame);
@@ -57,3 +62,15 @@ set_frame("Nightmare", "glad", spr_nightmare_frame_glad);
 set_frame("Dream", "none", spr_empty);
 set_frame("Dream", "normal", spr_dream_frame);
 set_frame("Dream", "afraid", spr_dream_frame_afraid);
+// Undyne (picnic)
+set_frame("UndynePicnic", "normal", spr_undyne_picnic_frame);
+set_frame("UndynePicnic", "glad", spr_undyne_picnic_frame_glad);
+set_frame("UndynePicnic", "laughing", spr_undyne_picnic_frame_laughing);
+// Toriel (picnic)
+set_frame("TorielPicnic", "normal", spr_toriel_picnic_frame);
+set_frame("TorielPicnic", "glad", spr_toriel_picnic_frame_glad);
+set_frame("TorielPicnic", "laughing", spr_toriel_picnic_frame_laughing);
+// Asgore (picnic)
+set_frame("AsgorePicnic", "normal", spr_asgore_picnic_frame);
+// Alphys (picnic)
+set_frame("AlphysPicnic", "normal", spr_alphys_picnic_frame);

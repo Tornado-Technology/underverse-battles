@@ -30,7 +30,7 @@ if (_delay == 240) {
 	
 	var bg_layer = layer_get_id("Background");
 	var bg_ = layer_background_get_id(bg_layer);
-	layer_background_sprite(bg_, spr_background_underverse_forest);
+	layer_background_sprite(bg_, spr_background_underverse_forest_park);
 	
 	audio_play_sound(snd_fallen_child, 1, true, 0.5);
 }

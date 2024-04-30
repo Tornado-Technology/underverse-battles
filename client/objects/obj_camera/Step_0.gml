@@ -24,6 +24,10 @@ if (following_traget) {
 	}
 }
 
+// Zoom
+new_position = new Vector2(new_position.x + (zoom_target.x - new_position.x) * (zoom - 1) / zoom, new_position.y + (zoom_target.y - new_position.y) * (zoom - 1) / zoom);
+
+// Shake
 shake_position.x = 0;
 shake_position.y = 0;
 if (shake_time > 0) {

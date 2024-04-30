@@ -73,14 +73,18 @@ function camera_resize() {
     }
 }
 
-function camera_set_zoom(num) {
-	with (obj_camera)
-		zoom = num;
+function camera_set_zoom(zoom_size, zoom_target_x, zoom_target_y) {
+	with (obj_camera) {
+		zoom = zoom_size;
+		zoom_required = zoom_size;
+		zoom_target = new Vector2(zoom_target_x, zoom_target_y);
+	}
 }
 
-function camera_change_zoom(num, time) {
+function camera_change_zoom(num, time, zoom_target_x, zoom_target_y) {
 	with (obj_camera) {
 		zoom_required = num;
-		zoom_speed = 4/convert_seconds_to_steps(time);
+		zoom_speed = 1 / convert_seconds_to_steps(time);
+		zoom_target = new Vector2(zoom_target_x, zoom_target_y);
 	}
 }
