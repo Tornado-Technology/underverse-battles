@@ -10,7 +10,6 @@ callback = function () {
 
 	
 update = function () {
-	if (instance_number(bow) != _power + 1) {
 		var offset_x = irandom_range(70, 90);
 		var offset_y = 20;
 				
@@ -19,7 +18,7 @@ update = function () {
 		var py1 = border_instance.y - border_instance.up - offset_y;
 		var py2 = border_instance.y + border_instance.down + offset_y + 10;
 	
-		var coord_new = rand_side_from(choose(px1, px2), choose(py1, py2), choose(px2, px1), choose (py1, py2));
+		var coord_new = rand_side_from(choose(px1, px2), choose(py1, py2), choose(px2, px1), choose(py1, py2));
 	
 		var bow_instance = instance_create_depth(coord_new[0] , coord_new[1], fight_depth.bullet_outside, bow, {
 			target_time: 1 - _power * 0.1,
@@ -28,20 +27,16 @@ update = function () {
 			_power: _power,
 			arrows: arrows,
 			speed_const: 3 + _power * 0.3
-		});					
-	};
+		});
+
 };
 
-var period = 33 + _power * 2;
-var repeats = 20 + _power;
-
-if (variable_instance_exists(id, "custom_repeats")) {
-	repeats = custom_repeats;
-}
+var period = 40 - _power * 2;
+var repeats = 10 + _power;
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 update();	
-}, [], repeats - 1);
+}, [], -1);
 
 
 time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60, time_source_units_seconds, function () {
