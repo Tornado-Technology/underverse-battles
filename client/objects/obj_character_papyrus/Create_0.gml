@@ -45,8 +45,8 @@ frame = spr_papyrus_frame;
 passive_skill = PassiveSkill("Character.Papyrus.PassiveSkill");
 actions = [
 	Action("Character.Papyrus.Attack0", call_attack_papyrus_0),
-	Action("Character.Papyrus.Attack1", call_attack_papyrus_0),
-	Action("Character.Papyrus.Attack2", call_attack_papyrus_0)
+	Action("Character.Papyrus.Attack1", call_attack_papyrus_1),
+	Action("Character.Papyrus.Attack2", call_attack_papyrus_2)
 ];
 special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, char_sans_special_attack);
 

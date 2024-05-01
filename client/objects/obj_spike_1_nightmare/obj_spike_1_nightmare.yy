@@ -10,8 +10,8 @@
   "name":"obj_spike_1_nightmare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Spike",
+    "path":"folders/Characteres/Nightmare/Bullets/Spike.yy",
   },
   "parentObjectId":{
     "name":"obj_bone_sharp_error_sans",

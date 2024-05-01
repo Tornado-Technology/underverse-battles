@@ -10,8 +10,8 @@
   "name":"obj_spike_pushing_nightmare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Spike",
+    "path":"folders/Characteres/Nightmare/Bullets/Spike.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_pusher",

@@ -14,9 +14,9 @@ var collision =  collision_rectangle(px1 + offset, py1 + offset, px2 - offset, p
 
 if (collision != noone) {
 	 touching_walls = true;	
-}
+};
 
-if (collision == noone) {
+if (collision == noone) {	
 	if (touching_walls) {
 		result_ricochet();
 		size_ricochet--;

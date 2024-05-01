@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"40cfd8b2-f69d-4e6c-a1e3-eb240ae461fe","name":"40cfd8b2-f69d-4e6c-a1e3-eb240ae461fe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2d31d393-be3a-4146-825e-a3f8b402cd58","name":"2d31d393-be3a-4146-825e-a3f8b402cd58","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":18,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a322adb8-57b2-47e8-b15d-a6bc6c056123","blendMode":0,"displayName":"default","isLocked":false,"name":"a322adb8-57b2-47e8-b15d-a6bc6c056123","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a9f9187d-aaf6-4ea8-ae45-393554b7b752","blendMode":0,"displayName":"default","isLocked":false,"name":"a9f9187d-aaf6-4ea8-ae45-393554b7b752","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_bone_papyrus",
   "nineSlice":{
@@ -40,7 +40,7 @@
       0,
       0,
     ],
-    "top":6,
+    "top":7,
   },
   "origin":4,
   "parent":{
@@ -88,8 +88,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"40cfd8b2-f69d-4e6c-a1e3-eb240ae461fe","path":"sprites/spr_bone_papyrus/spr_bone_papyrus.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"407ada02-5bca-4496-a311-89b4320606f8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d31d393-be3a-4146-825e-a3f8b402cd58","path":"sprites/spr_bone_papyrus/spr_bone_papyrus.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ec3d9f52-4bd8-48b8-8578-6293500319e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -98,7 +98,7 @@
     "yorigin":9,
   },
   "swatchColours":null,
-  "swfPrecision":2.525,
+  "swfPrecision":0.5,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

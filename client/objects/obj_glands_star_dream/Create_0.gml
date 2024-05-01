@@ -15,7 +15,7 @@ spawn_star = function () {
 	var time_target = 1; 
 		
 	var star = instance_create_depth(x + star_x, y + star_y, fight_depth.bullet_outside, obj_star_target_dream, {
-		time_target : time_target					
+		time_target: time_target					
 	});
 			
 	if (instance_exists(target)) {

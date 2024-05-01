@@ -34,7 +34,7 @@ update = function () {
 	bomb_instnace._power = _power;
 	bomb_instnace.spike_count = _power > 1 ?  _power + 4 :  _power + 2;
 	bomb_instnace.speed_const = 3 + _power * 0.1;
-	bomb_instnace.target_position =  border_instance.y + border_instance.down + irandom_range(-125, 50);
+	bomb_instnace.target_position =  new Vector2(bomb_instnace.x, border_instance.y + border_instance.down + irandom_range(-125, 50));
  }
  
 var period =  33 - 2 - ( _power > 1 ?   _power * 4 :  _power * 2);

@@ -10,11 +10,12 @@ callback = function () {
 
 update = function () {
 	var offset_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-	var offset_y = border_instance.y - border_instance.up;
+	var offset_y = border_instance.y - border_instance.up - 50;
 	var spd = 2 + _power * 0.4;
 
 	var tentacles_instance = create_bone(offset_x , offset_y, bomb, spd, 1, 270, 1);
-	tentacles_instance.target_position = border_instance.y + border_instance.down - irandom_range(0, 100);
+	var target_place =  new Vector2(tentacles_instance.x, border_instance.y + border_instance.down - irandom_range(0, 100))
+	tentacles_instance.target_position = target_place;
  };
  
 var period = 33 - 2 - _power * 2;

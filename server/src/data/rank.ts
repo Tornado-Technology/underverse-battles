@@ -17,3 +17,7 @@ export default class Rank {
     return this.belongs(x) ? (Math.min(limited, this.limit)) : x;
   }
 }
+
+var zx = obj_mobilecontrols.zx
+var zy = obj_mobilecontrols.zy
+z_button = virtual_key_add(zx, zy, (sprite_get_width(spr_z_button) * obj_mobilecontrols.z_scale), (sprite_get_width(spr_z_button) * obj_mobilecontrols.z_scale), 90)

@@ -11,4 +11,5 @@ enum character_id {
 	dream = 9,
 	nightmare = 10,
 	papyrus = 11,
+	x_anastasia = 12
 }

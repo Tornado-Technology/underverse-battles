@@ -30,7 +30,7 @@ if (is_moving) {
 }
 
 if (is_target) {
-	image_angle = aim;
+	image_angle = on_target;
 	
 	if (step == 0) {
 		x = approach(x, obj_battle_soul.x,  speed_const * dtime);

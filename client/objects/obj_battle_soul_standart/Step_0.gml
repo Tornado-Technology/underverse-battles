@@ -1,5 +1,7 @@
 event_inherited();
 
+
+
 if (!moveable)
 	exit;
 
@@ -49,7 +51,9 @@ if (is_mobile || mobile_mode) {
 		arrows.input_vector.set(0, 0);
 	};
 };
-
+if (obj_battle_border.wave_ane) {
+	movement_speed_y ++;	
+}
 
 x += movement_speed_x + outside_force_x + tremble_force_x;
 y += movement_speed_y + outside_force_y + tremble_force_y;

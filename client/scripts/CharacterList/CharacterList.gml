@@ -97,6 +97,9 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
+		],
+		[
+			new Character(obj_character_anastasia, "Anastasia", "Standard", spr_sans_frame)
 		]
 		);
 	}

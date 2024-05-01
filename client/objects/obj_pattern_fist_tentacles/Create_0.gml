@@ -11,7 +11,7 @@ callback = function () {
 	
 	var time = 0.1 + _power * 0.01;
 	 slime_instnace = instance_create_depth(border_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside, slime, {
-		image_xscale : round((border_instance.left + border_instance.right))
+		image_xscale: round((border_instance.left + border_instance.right))
 	});
 	
 	slime_instnace.change_scale(slime_xscale, time);

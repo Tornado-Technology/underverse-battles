@@ -38,6 +38,7 @@ update = function() {
 		bone_0.change_scale(speed_change, bone_changes);
 		bone_1.change_scale(speed_change, bone_changes);
 	}
+	
 	if (side == 1 || side == 2) {
 		var bone_0 = create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 20, bone, bone_speed, bone_size, 180, 0);
 		var bone_1 = create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 20, bone, bone_speed, bone_up_size, 180, 180);

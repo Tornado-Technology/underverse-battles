@@ -13,7 +13,7 @@ bonb = function () {
 }
 
 time_source_spwan = time_source_create(time_source_game,  20 / 60, time_source_units_seconds, function () {
-	var target = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y)
+	var target = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y);
 	create_spike(x, y + -dsin(40) * sprite_height,  obj_bullets_nightmare, 3, target);
 }, [], -1);
 
