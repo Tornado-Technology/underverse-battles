@@ -1,10 +1,14 @@
 event_inherited();
-_angle = 20
+_angle = 20;
+
 soul_invulnerability = 20;
 damage = get_char_damage(obj_character_nightmare);
 
 index_sprite = 0;
 outside_force_speed = 0;
+
+capture = false;
+
 
 target_beginning = new Vector2(x, y);
 target_end = new Vector2(x, y);
@@ -16,7 +20,7 @@ target = function (beginning, _end) {
 	target_end = _end;
 };
 
-capture = false;
+
 on_soul_touch = function (soul) {
 	index_sprite = 1;
 	self.soul = soul;

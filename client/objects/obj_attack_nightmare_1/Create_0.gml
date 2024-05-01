@@ -17,7 +17,7 @@ switch (type) {
 		create_border(battle_border.up , battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_tentacles_three, {
 			thread_tentacles: obj_string_tentacles_nightmare,
-			spike: obj_spike_1_nightmare
+			spike:  obj_spike_nightmare
 		});	
 	break; 
 	
@@ -25,15 +25,14 @@ switch (type) {
 	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_spwan_tentacles, {
 			bomb: obj_bomb_grow_tentacles_nightmare,
-			spike: obj_spike_1_nightmare
+			spike:  obj_spike_nightmare
 		});
 	break;
 	
 	default:
 	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_spikes_flies_up, {
-			spike: obj_spike_nightmare,
-			spike_timer: obj_spike_times_nightmare
+			spike: obj_spike_nightmare
 		});
 	break;
 };
