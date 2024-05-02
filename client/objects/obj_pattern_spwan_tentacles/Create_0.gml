@@ -14,7 +14,7 @@ callback = function () {
 			direction: _dir * multiplication,
 			scale_const: scale_const
 		});
-		
+		bomb_instnace.moving_up_down();
 		multiplication += 2;
 	}
 	

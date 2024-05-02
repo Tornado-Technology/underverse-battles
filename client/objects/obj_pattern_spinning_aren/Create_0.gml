@@ -7,23 +7,28 @@ callback = function () {
 		left: border_instance.x - border_instance.left,
 		right: border_instance.x + border_instance.right		
 	};
+	var fram = [border_instance._inst_frame_up, border_instance._inst_frame_down, border_instance._inst_frame_left, border_instance._inst_frame_right];
 	
 	soul_instance = create_soul(border_instance.x + 30, border_instance.y, battle_soul_type.red);
 	slime_count = 4;
+	
 	var i = 0;
 	repeat (slime_count) {
-	var fram = [border_instance._inst_frame_up, border_instance._inst_frame_down, border_instance._inst_frame_left, border_instance._inst_frame_right];
-		slime_instance[i] = instance_create_depth(border.left + 20 * i, fram[0].y, fight_depth.bullet_outside, tentacles_tremble, {
-			image_xscale: 2	
+		slime_instance[i] = instance_create_depth(border.left + 20 * i, fram[0].y, fight_depth.bullet_outside, obj_slime_nightmare, {
+			image_xscale: 6.5
 		});
-	
-		slime_instance[i].sprite_index = spr_big_slime_nightmare;	
+		
+		slime_instance[i].draw_no_in_arena = true;
+		
+		with(slime_instance[i]) {
+			sprite_set_offset(sprite_index, 0, 4);
+		}
+		
 		i++;
 	}
 		
 	border_instance.spining = true;	
 	border_instance.speed_spining = 1 + _power * 0.1;
-	border_instance.depth = 0;
 	
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_start);
@@ -52,9 +57,9 @@ update = function () {
 
 
 var period = 30 - (2 - _power) * 2;
-var repeats = 15 + _power * 3;
+var repeats = 10 + _power * 3;
 
-time_source_update_start = time_source_create(time_source_game, 1/ 60, time_source_units_seconds, function () {
+time_source_update_start = time_source_create(time_source_game, 1 / 60, time_source_units_seconds, function () {
 	update_start();
 }, [], -1);
 

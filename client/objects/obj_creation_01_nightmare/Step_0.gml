@@ -1,0 +1,1 @@
+motion_set(direction, speed_count * dtime);

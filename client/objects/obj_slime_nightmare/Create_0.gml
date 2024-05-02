@@ -5,7 +5,7 @@ damage = get_char_damage(obj_character_nightmare);
 
 scale_const = 0;
 scale_time = 0;
-back_const = image_yscale;
+back_const = image_yscale;	
 
 back = false;
 
@@ -14,3 +14,4 @@ change_scale = function(scale, step) {
 	scale_time = step;
 }
 
+draw_no_in_arena = false;

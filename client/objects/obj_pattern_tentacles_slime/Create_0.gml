@@ -21,7 +21,7 @@ update = function () {
 	var offset_x = 25;
 	
 	var border_up = border_instance.y - border_instance.up;
-	if (!irandom_range(0, 1)) {
+	if (!irandom(1)) {
 		var start_x = border_instance.x - border_instance.right - 10;
 		random_position = start_x - irandom_range(offset_x, offset_x * 2);
 	} else {
@@ -32,9 +32,10 @@ update = function () {
 	var bomb_instnace =  create_bone(random_position,  border_up, bomb, 4, 1, 270, 1);
 	
 	bomb_instnace._power = _power;
+	bomb_instnace.draw_no_arena = true;
 	bomb_instnace.spike_count = _power > 1 ?  _power + 4 :  _power + 2;
 	bomb_instnace.speed_const = 3 + _power * 0.1;
-	bomb_instnace.target_position =  border_instance.y + border_instance.down + irandom_range(-125, 50);
+	bomb_instnace.target_position =  new Vector2(bomb_instnace.x, border_instance.y + border_instance.down + irandom_range(-125, 50));
  }
  
 var period =  33 - 2 - ( _power > 1 ?   _power * 4 :  _power * 2);

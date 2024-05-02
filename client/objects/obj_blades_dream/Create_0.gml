@@ -18,7 +18,7 @@ max_acc = 0;
 
 border = obj_battle_border;
 rotational = false;
-aim = 0;
+on_target = 0
 
 move_back = function() {
 	step = 0;
@@ -53,8 +53,8 @@ directions = function () {
 
 target = function (_target) {
 	is_target = true;
-	aim = point_direction(x, y, _target.x, _target.y);	
-	_tar = _target;
+	on_target = point_direction(x, y, _target.x, _target.y);	
+	
 };
 
 swung = function (_max_acc) {

@@ -8,3 +8,8 @@ if (image_alpha <= 1) {
 if (x == target_position.x && y == target_position.y) {
 	bonb();
 }
+
+
+image_xscale = x > obj_battle_soul.x ? -1 : 1;
+
+

@@ -13,9 +13,9 @@ switch (type) {
 	break;
 	
 	case 1:
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left  + 21, battle_border.right  + 21);
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left  + 10, battle_border.right  + 10);
 		pattern_instance = create_pattern(obj_pattern_tentacles_changes, {
-			tentacles: obj_tentacles_back_nightmare
+			tentacles: obj_tentacles_destroy_back_nightmare
 		});
 	break;
 	
@@ -34,13 +34,6 @@ switch (type) {
 		});
 	break;
 	
-	case 4:
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
-		pattern_instance = create_pattern(obj_pattern_creation, {
-			tentacles: obj_creation_nightmare
-		});
-	break;
-	
 	default:
 	create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 15, battle_border.right + 5);
 		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
@@ -49,6 +42,5 @@ switch (type) {
 			slime: obj_slime_nightmare,
 			fist_capture: obj_fist_capture_nightmare
 		});
-	
 	break;
 };

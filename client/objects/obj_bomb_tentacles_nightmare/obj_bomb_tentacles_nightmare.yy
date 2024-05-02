@@ -3,8 +3,6 @@
   "%Name":"obj_bomb_tentacles_nightmare",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_bomb_tentacles_nightmare",
@@ -14,8 +12,8 @@
     "path":"folders/Characteres/Nightmare/Bullets/Bobm.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_bomb_bone_nightmare",
+    "path":"objects/obj_bomb_bone_nightmare/obj_bomb_bone_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

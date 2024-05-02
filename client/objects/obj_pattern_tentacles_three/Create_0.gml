@@ -3,11 +3,11 @@ callback = function () {
 	soul_instance = create_soul(border_instance.x + 30, border_instance.y, battle_soul_type.red);
 	
 	var border = {
-		up : border_instance.y - border_instance.up,
-		down : border_instance.y + border_instance.down,
-		left : border_instance.x - border_instance.left,
-		right : border_instance.x + border_instance.right		
-	}
+		up: border_instance.y - border_instance.up,
+		down: border_instance.y + border_instance.down,
+		left: border_instance.x - border_instance.left,
+		right: border_instance.x + border_instance.right		
+	};
 
 		var tentacles_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, thread_tentacles);
 		var target = new Vector2(border.right - 40 , border.up);
@@ -20,12 +20,13 @@ callback = function () {
 }
 
 update = function () { 
-		var offset = irandom_range(10, 160);
-		var spike_instance = instance_create_depth(border_instance.x - border_instance.left + offset, border_instance.y - border_instance.up - 20, fight_depth.bullet_outside_hight, spike, {
-			direction : 270, 
-			image_angle : 270
-		});
-		spike_instance.speed_const = 3 + _power * 0.2;
+	var offset = irandom_range(10, 160);
+	var spike_instance = instance_create_depth(border_instance.x - border_instance.left + offset, border_instance.y - border_instance.up - 20, fight_depth.bullet_outside_hight, spike, {
+		direction: 270, 
+		image_angle: 270
+	});
+		
+	spike_instance.speed_const = 3 + _power * 0.2;
 }
 
 
