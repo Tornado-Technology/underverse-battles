@@ -71,7 +71,7 @@ background = opening == opening_theme.tangled ? spr_background_tangled : spr_bac
 background_height_ = opening == opening_theme.tangled ? sprite_get_height(background) * 2 : sprite_get_height(background);
 background_width_ = sprite_get_width(background);
 
-background_color_main = opening_theme.tangled ? c_white : background_color;
+background_color_main = opening_theme.tangled ? c_white : c_black;
 
 background_alpha = 1;
 background_target_alpha = 1;

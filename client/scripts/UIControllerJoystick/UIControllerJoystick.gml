@@ -35,8 +35,6 @@ function ClassUIControllerJoystick() constructor {
 	death_radius = 0;
 	is_enable = true;
 	
-	background_color = c_white;
-	
 	delta_angle = 40;
 	
 	is_active = false;

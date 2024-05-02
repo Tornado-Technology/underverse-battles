@@ -28,18 +28,18 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"","%Name":"width","filters":[],"listItems":[],"multiselect":false,"name":"width","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
-    {"$GMObjectProperty":"","%Name":"height","filters":[],"listItems":[],"multiselect":false,"name":"height","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
-    {"$GMObjectProperty":"","%Name":"color","filters":[],"listItems":[],"multiselect":false,"name":"color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"c_white","varType":7,},
-    {"$GMObjectProperty":"","%Name":"image","filters":[
+    {"$GMObjectProperty":"v1","%Name":"width","filters":[],"listItems":[],"multiselect":false,"name":"width","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"height","filters":[],"listItems":[],"multiselect":false,"name":"height","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"color","filters":[],"listItems":[],"multiselect":false,"name":"color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"c_white","varType":7,},
+    {"$GMObjectProperty":"v1","%Name":"image","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"image","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":5,},
-    {"$GMObjectProperty":"","%Name":"scale_x","filters":[],"listItems":[],"multiselect":false,"name":"scale_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
-    {"$GMObjectProperty":"","%Name":"scale_y","filters":[],"listItems":[],"multiselect":false,"name":"scale_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
-    {"$GMObjectProperty":"","%Name":"url","filters":[],"listItems":[],"multiselect":false,"name":"url","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-    {"$GMObjectProperty":"","%Name":"event","filters":[
+      ],"listItems":[],"multiselect":false,"name":"image","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"scale_x","filters":[],"listItems":[],"multiselect":false,"name":"scale_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"scale_y","filters":[],"listItems":[],"multiselect":false,"name":"scale_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"url","filters":[],"listItems":[],"multiselect":false,"name":"url","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"event","filters":[
         "GMScript",
-      ],"listItems":[],"multiselect":false,"name":"event","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"event","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -23,3 +23,5 @@ if (sprite_index == hand_up_right_animation ||
 	sprite_index == hand_down_right_animation) {
 	sprite_index = hand_right_animation;
 }
+
+event_user(3);

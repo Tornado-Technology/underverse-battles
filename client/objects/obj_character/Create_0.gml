@@ -7,7 +7,6 @@ description = "Base character class (Oh no, GML haven't normal OOP).";
 bio = "Written by TornadoTech, hears for the benefit of all who want it.";
 creator = "TornadoTech";
 universe = "UnderverseBattles";
-ver = game_version;
 
 // HP
 hp = 100000000;
@@ -106,6 +105,9 @@ control = function(_speed, _can_run) {
 	is_controlled = true;
 	can_run = _can_run;
 	speed_const = _speed;
+	instance_create_depth(x, y - sprite_height - 1, depth, obj_control_character, {
+		target: id
+	});
 };
 
 set_controlled = function() {
