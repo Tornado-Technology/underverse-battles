@@ -25,6 +25,14 @@ if (is_controlled) {
 	var sum_speed = speed_const + (speed_const * run_coefficient * is_running) * dtime;
 	movement_x = (input_check_held(input.right) - input_check_held(input.left)) * sum_speed;
 	movement_y = (input_check_held(input.down) - input_check_held(input.up)) * sum_speed;
+	
+	// Collision
+	if (place_meeting(x + movement_x, y, obj_wall)) movement_x = 0;
+	if (place_meeting(x, y + movement_y, obj_wall)) movement_y = 0;
+	if (place_meeting(x + movement_x, y + movement_y, obj_wall)) {
+		movement_x = 0;
+		movement_y = 0;
+	}
 }
 
 // Following to object

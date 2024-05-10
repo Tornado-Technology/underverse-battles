@@ -30,7 +30,7 @@ function UIButtonClass(text, sprite, callback) constructor {
 	
 	if (text != "") {
 		width = string_real_width(text, global._font_main_determination);
-		height = char_get_height("W");
+		height = char_get_height("W") * 2;
 		sep = 4;
 	}
 	
@@ -85,8 +85,8 @@ function UIButtonClass(text, sprite, callback) constructor {
 	
 	static change_text = function(text) {
 		self.text = text;
-		width = string_width(text);
-		height = char_get_height("W") / 2;
+		width = string_real_width(text, global._font_main_determination);
+		height = char_get_height("W") * 2;
 	}
 	
 	static set_image = function(sprite) {

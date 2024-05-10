@@ -25,3 +25,7 @@ finish_interact_callback = function() {
 is_last_dialog = function() {
 	return (index >= array_length(dialog_keys) - 1);
 }
+
+dialog_update = function(index, str) {
+	dialog_keys[index] = str;
+}

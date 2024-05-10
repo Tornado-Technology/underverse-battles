@@ -1,4 +1,6 @@
 /// @desc Set frame
+// NPC
+set_frame("NPC", "none", spr_empty);
 // Sans
 set_frame("Sans", "none", spr_empty);
 set_frame("Sans", "normal", spr_sans_frame);

@@ -15,6 +15,7 @@ toriel = obj_character_toriel;
 asgore = obj_character_asgore;
 
 // Stuff
+steak = obj_steak;
 
 // Soul
 soul_sans_half = noone;
@@ -56,6 +57,15 @@ cutscenes = [
 		//	sans.follow(2, frisk);
 		//}],
 		[audio_play_sound, snd_park, 2, true],
+		[cutscene_execute, function() {
+			frisk.sprite_index = spr_frisk_with_plate;
+			sans.sprite_index = spr_sans_sitting_eating;
+			papyrus.sprite_index = spr_papyrus_picnic_sitting_eating;
+			undyne.sprite_index = spr_undyne_picnic_eating_closed_eyes;
+			alphys.sprite_index = spr_alphys_picnic_sitting_eating;
+			toriel.sprite_index = spr_toriel_picnic_sitting_eating;
+			asgore.sprite_index = spr_asgore_picnic_cooking;
+		}],
 		[cutscene_wait, 3],
 		[cutscene_dialog, episode + "Dialog17", dir.down],
 		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilling_ketchup],
@@ -94,7 +104,10 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 11],
 		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilled_ketchup_glad],
 		[cutscene_wait_dialog_end],
+		[cutscene_object_set_sprtie, sans, spr_sans_sitting_putting_steak],
+		[cutscene_wait, 1.5],
 		[cutscene_execute, function() {
+			instance_create_depth(sans.x + 4, sans.y, fight_depth.player, obj_steak);
 			sans.follow(2, frisk);
 		}],
 		[cutscene_wait, 1.5],
@@ -104,3 +117,6 @@ cutscenes = [
 		}],
 	]
 ];
+
+// First cutscene
+cutscene_create(cutscenes[0]);

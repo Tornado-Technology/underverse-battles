@@ -1,9 +1,9 @@
 /// @param {Any} dialog
-function cutscene_choise(dialog, callback, shift = 0) {
+function cutscene_choise(dialog, callback, side = dir.up) {
 	if (!instance_exists(instance_dialog)) {
 		if (!dialog_created) {
 			instance_dialog = choise_create(dialog, callback);
-			instance_dialog.shift = shift;
+			instance_dialog.side = side;
 			dialog_created = true;
 			return false;
 		}

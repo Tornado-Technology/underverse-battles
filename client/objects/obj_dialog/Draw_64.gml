@@ -15,7 +15,7 @@ draw_set_font(font);
 draw_set_halign(fa_left);
 draw_set_colour(text_color);
 		
-draw_text_ext(local_camera_position.x + 83, local_camera_position.y + 10, str, 16, 290);
+draw_text_ext(local_camera_position.x + 85, local_camera_position.y + 10, str, 16, 290);
     
 // Speaker's frame
 if (frame != noone) {

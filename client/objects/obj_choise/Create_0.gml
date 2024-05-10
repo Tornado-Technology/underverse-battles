@@ -10,7 +10,7 @@ index = undefined;
 
 callback = undefined;
 
-input_on_press = function(amout) {
+input_on_press = function(amount) {
 	audio_play_sound_once(snd_click);
 	
 	if (!answer_options[current_option].focus) {
@@ -19,6 +19,6 @@ input_on_press = function(amout) {
 	}
 
 	answer_options[current_option].set_focus(false);
-	current_option += amout;
+	current_option += amount;
 	answer_options[current_option].set_focus(true);
 };

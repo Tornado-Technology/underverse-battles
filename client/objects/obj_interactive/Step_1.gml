@@ -1,4 +1,4 @@
-if (!dialog_created && place_meeting(x, y, target_character) && input_check_pressed(input.action)) {
+if (!dialog_created && place_meeting(x, y, target_character) && target_character.is_controlled && input_check_pressed(input.action)) {
 	target_character.set_uncontrolled();
 	
 	var gui_half_height = display_get_gui_height() / 2;
