@@ -71,10 +71,7 @@ cutscene_special_attack = function() {
 cutscenes = [
 	[	
 		// Dialog starting with Ink and Sans (Index: 0)
-		[cutscene_execute, function () {
-			audio_play_sound(snd_park, 2, true);
-			audio_sound_gain(snd_park, 1, 0);
-		}],
+		[cutscene_execute, function () { audio_play_soundtrack(snd_park); }],
 		[cutscene_wait, 4],
 		[cutscene_dialog, episode + "Dialog1"],
 		[cutscene_wait, 3],
@@ -115,7 +112,7 @@ cutscenes = [
 		[layer_background_sprite, background_id, spr_background_doodle_sphere_layer_0],
 		[cutscene_execute, function () {
 			background_animator = instance_create(obj_background_doodle_sphere_without_platform);
-			audio_play_sound(snd_into_clear_void, 2, true);
+			audio_play_soundtrack(snd_into_clear_void);
 			audio_stop_sound(snd_park);
 			instance_destroy(sans);
 			ink_sans.x -= 20;
@@ -173,8 +170,7 @@ cutscenes = [
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
-			audio_play_sound(snd_park, 2, true);
-			audio_sound_gain(snd_park, 1, 0);
+			audio_play_soundtrack(snd_park);
 		}],
 		[cutscene_camera_set_position, 0, 0],
 		[cutscene_execute, function () {
@@ -269,8 +265,7 @@ cutscenes = [
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
-			audio_play_sound(snd_park, 2, true);
-			audio_sound_gain(snd_park, 1, 0);
+			audio_play_soundtrack(snd_park);
 		}],
 		[cutscene_execute, function () {
 			instance_destroy(core_frisk);
@@ -629,8 +624,7 @@ cutscenes = [
 		// Back to Ink and Sans
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
-			audio_play_sound(snd_park, 2, true);
-			audio_sound_gain(snd_park, 1, 0);
+			audio_play_soundtrack(snd_park);
 		}],
 		[cutscene_execute, function () {
 			instance_destroy(ink_sans);

@@ -6,13 +6,8 @@ restart_time = 5;
 previous_room = room;
 
 // Methods
-room_start_effect_fade = function() {
-	effect_fade(0, 0, 1, c_black, true, fight_depth.ui);
-}
-
 room_start_callback = function(callback = function() {}, new_room = room, _previous_room = previous_room) {
 	if (previous_room == _previous_room && room == new_room) {
-		room_start_effect_fade();
 		callback();
 		previous_room = room;
 	}

@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_bush_4",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":48,
   "bbox_left":0,
   "bbox_right":57,
-  "bbox_top":0,
+  "bbox_top":18,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

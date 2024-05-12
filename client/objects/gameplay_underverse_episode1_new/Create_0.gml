@@ -69,7 +69,7 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
-			audio_play_sound(snd_fallen_child, 1, true, 0.5);
+			audio_play_soundtrack(snd_fallen_child, true, 0.5);
 		}],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () {

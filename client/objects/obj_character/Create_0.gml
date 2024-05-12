@@ -100,11 +100,16 @@ skip_moving = function() {
 	speed_const = 0;
 };
 
-control = function(_can_run = can_run, _speed = speed_const) {
+control = function(is_showing_arrows = false, _can_run = can_run, _speed = speed_const) {
 	camera_set_taget(self);
 	is_controlled = true;
 	can_run = _can_run;
 	speed_const = _speed;
+	
+	previous_positions = ds_queue_create();
+	ds_queue_enqueue(previous_positions, new Vector2(x, y));
+	
+	if (!is_showing_arrows) return;
 	instance_create_depth(x, y - sprite_height - 1, depth, obj_control_character, {
 		target: id
 	});

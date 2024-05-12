@@ -32,7 +32,7 @@ if (_delay == 240) {
 	var bg_ = layer_background_get_id(bg_layer);
 	layer_background_sprite(bg_, spr_background_underverse_forest_park);
 	
-	audio_play_sound(snd_fallen_child, 1, true, 0.5);
+	audio_play_soundtrack(snd_fallen_child, true, 0.5);
 }
 if (_delay == 270) {
 	player_.x = room_width - 340;

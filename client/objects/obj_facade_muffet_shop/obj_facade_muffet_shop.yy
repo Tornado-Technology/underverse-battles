@@ -9,7 +9,10 @@
     "name":"Facades",
     "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Facades.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_prop",
+    "path":"objects/obj_prop/obj_prop.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

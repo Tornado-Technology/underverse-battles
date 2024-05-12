@@ -16,10 +16,10 @@ if (fade) {
 
 // State check
 if (stage == FADER_STAGE.IN && _alpha == 1) {
+	on_end_fade();
 	stage = FADER_STAGE.HOLD;
 }
 
 if (stage == FADER_STAGE.OUT && _alpha == 0) {
-	on_end_fade();
 	instance_destroy();
 }

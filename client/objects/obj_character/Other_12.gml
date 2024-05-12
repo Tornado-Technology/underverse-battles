@@ -26,12 +26,9 @@ if (is_controlled) {
 	movement_x = (input_check_held(input.right) - input_check_held(input.left)) * sum_speed;
 	movement_y = (input_check_held(input.down) - input_check_held(input.up)) * sum_speed;
 	
-	// Collision
-	if (place_meeting(x + movement_x, y, obj_wall)) movement_x = 0;
-	if (place_meeting(x, y + movement_y, obj_wall)) movement_y = 0;
-	if (place_meeting(x + movement_x, y + movement_y, obj_wall)) {
-		movement_x = 0;
-		movement_y = 0;
+	if (movement_x == movement_y == 0) {
+		ds_queue_enqueue(previous_positions, new Vector2(x, y));
+		if (ds_queue_size(previous_positions) > follow_distance) ds_queue_dequeue(previous_positions);
 	}
 }
 
@@ -54,16 +51,21 @@ if (is_following) {
 		var sum_speed = speed_const + (speed_const * run_coefficient * is_running) * dtime;
 		
 		if (follow_x == 0) {
-			movement_x = approach(x, follow_target.x, sum_speed);
-			movement_x -= x;
+			movement_x = approach(x, follow_target.x, sum_speed) - x;
 		} else {
 			movement_x = follow_x;
 		}
 		if (follow_y == 0) {
-			movement_y = approach(y, follow_target.y, sum_speed);
-			movement_y -= y;
+			movement_y = approach(y, follow_target.y, sum_speed) - y;
 		} else {
 			movement_y = follow_y;
+		}
+		
+		// Collision
+		if (point_distance(x, y, follow_target.x, follow_target.y) > follow_distance + 15) {
+			var position = ds_queue_head(follow_target.previous_positions);
+			movement_x = approach(x, position.x, sum_speed) - x;
+			movement_y = approach(y, position.y, sum_speed) - y;
 		}
 	}
 	else {
@@ -73,6 +75,14 @@ if (is_following) {
 }
 
 if (!is_controlled && !is_following) exit;
+
+// Collision
+if (place_meeting(x + movement_x, y, obj_wall)) movement_x = 0;
+if (place_meeting(x, y + movement_y, obj_wall)) movement_y = 0;
+if (place_meeting(x + movement_x, y + movement_y, obj_wall)) {
+	movement_x = 0;
+	movement_y = 0;
+}
 
 change_sprite_by_condition(movement_x > 0, walking_right_animation);
 change_sprite_by_condition(movement_x < 0, walking_left_animation);

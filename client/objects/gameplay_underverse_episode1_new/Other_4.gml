@@ -1,6 +1,6 @@
 // Sounds
 audio_stop_all();
-audio_play_sound(snd_dark_dream, 1, true);
+audio_play_soundtrack(snd_dark_dream);
 
 // Characters create
 sans = instance_create_depth(240, room_height / 2, fight_depth.player, player_sans);

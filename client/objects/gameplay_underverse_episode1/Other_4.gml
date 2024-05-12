@@ -17,6 +17,6 @@ effect_fade(0, 0, start_time_sec, c_black, false, fight_depth.ui_hight);
 camera_change_zoom(1, start_time_sec, 120, room_height / 4);
 
 audio_stop_all();
-audio_play_sound(snd_dark_dream, 1, true);
+audio_play_soundtrack(snd_dark_dream);
 
 alarm[3] = convert_seconds_to_steps(start_time_sec);
