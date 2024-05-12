@@ -1,4 +1,4 @@
-on_into_story_mode.invoke("Tutorial");
+event_inherited();
 
 episode = "Underverse_Episode2.";
 
@@ -46,17 +46,12 @@ part_type_speed(particle_pencil, 2.5, 2.5, -0.01, 0);
 part_type_direction(particle_pencil, -50, -50, 0, 0);
 part_type_orientation(particle_pencil, 0, 0, 10, 0, false);
 
-// Time sources
-time_source_restart = time_source_create(time_source_game, 5, time_source_units_seconds, function() {
-	cutscene_set(4);
-});
-
 // Methods
-cutscene_set = function (index) {
-	cutscene_create(cutscenes[index]);
+restart = function() {
+	cutscene_create(cutscenes[4]);
 }
 
-cutscene_after_death = function () {
+cutscene_after_death = function() {
 	effect_blackout_start(c_black, false, fight_depth.ui);
 	
 	instance_destroy(obj_cutscene);
@@ -68,8 +63,8 @@ cutscene_after_death = function () {
 	time_source_start(time_source_restart);
 }
 
-cutscene_special_attack = function () {
-	cutscene_set(8);
+cutscene_special_attack = function() {
+	cutscene_create(cutscenes[8]);
 }
 
 // Cutscenes

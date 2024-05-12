@@ -3,7 +3,6 @@
   "%Name":"gameplay_underverse_episode_3_part_1",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
@@ -13,7 +12,10 @@
     "name":"Underverse Episode 3",
     "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_gameplay",
+    "path":"objects/obj_gameplay/obj_gameplay.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

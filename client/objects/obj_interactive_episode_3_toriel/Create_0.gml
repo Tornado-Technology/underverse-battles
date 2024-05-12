@@ -1,3 +1,8 @@
 event_inherited();
 
-dialog_keys = ["Underverse_Episode3.Toriel"];
+cutscenes = [
+	[
+		[cutscene_dialog, "Underverse_Episode3.Toriel", dialog_direction],
+		[cutscene_execute, function () { finish_interact(); }]
+	]
+];

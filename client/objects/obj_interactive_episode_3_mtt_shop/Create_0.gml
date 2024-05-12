@@ -1,5 +1,28 @@
 event_inherited();
 
-dialog_keys = ["Underverse_Episode3.MTT_Shop_1"];
+index = 1;
 
-is_found = false;
+cutscene_was_changed = false;
+interact_callback = function() {
+	if (!cutscene_was_changed && variable_instance_get(gameplay_underverse_episode_3_surface, "mtt_is_late_became_known")) {
+		index = 0;
+		cutscene_was_changed = true;
+	}
+	
+	cutscene_create(cutscenes[index]);
+	
+	if (!is_last_cutscene()) {
+		index++;
+	}
+}
+
+cutscenes = [
+	[
+		[cutscene_dialog, "Underverse_Episode3.MTT_Shop_1", dialog_direction],
+		[cutscene_execute, function() { finish_interact(); }]
+	],
+	[
+		[cutscene_dialog, "Underverse_Episode3.MTT_Shop_2", dialog_direction],
+		[cutscene_execute, function() { finish_interact(); }]
+	]
+];

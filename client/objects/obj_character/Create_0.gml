@@ -82,7 +82,7 @@ follow_x = 0;
 follow_y = 0;
 x_new = x;
 y_new = y;
-speed_const = 0;
+speed_const = 2;
 run_coefficient = 0.5;
 
 // Methods
@@ -100,7 +100,7 @@ skip_moving = function() {
 	speed_const = 0;
 };
 
-control = function(_speed, _can_run) {
+control = function(_can_run = can_run, _speed = speed_const) {
 	camera_set_taget(self);
 	is_controlled = true;
 	can_run = _can_run;
@@ -122,7 +122,7 @@ set_uncontrolled = function() {
 	change_sprite_by_condition(sprite_index == walking_up_animation, standing_up_animation);
 };
 
-follow = function(_speed, _follow_target, _follow_distance = follow_distance) {
+follow = function(_follow_target, _follow_distance = follow_distance, _speed = speed_const) {
 	is_following = true;
 	speed_const = _speed;
 	follow_target = _follow_target;

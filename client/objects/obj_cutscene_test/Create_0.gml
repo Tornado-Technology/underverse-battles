@@ -24,9 +24,6 @@ var background_id = layer_background_get_id(layer_background_current);
 // Time sources (add data here)
 
 // Methods (add methods here)
-cutscene_set = function (index) {
-	cutscene_create(cutscenes[index]);
-}
 
 // Cutscenes
 cutscenes = [

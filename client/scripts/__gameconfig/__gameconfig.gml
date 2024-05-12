@@ -35,5 +35,6 @@
 
 global.__data_save = undefined;
 global.fight_instance = noone;
+global.gameplay_instance = noone;
 global.pause_game = false;
 fight_network_mode = false;

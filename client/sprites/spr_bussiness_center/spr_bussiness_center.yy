@@ -23,7 +23,7 @@
   ],
   "name":"spr_bussiness_center",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Facades",
     "path":"folders/Sprites/Storymode/Episode 3/Facades.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":303,
-    "yorigin":549,
+    "yorigin":496,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

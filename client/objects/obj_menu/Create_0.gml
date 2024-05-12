@@ -380,7 +380,7 @@ create_page([
 		room_goto(room_underverse_episode2);
 	}),
 	Execute("StoryMode.Episode3", [], function() {
-		room_goto(room_underverse_episode_3_part_2);
+		room_goto(room_underverse_episode_3_surface);
 	}),
 	Transfer("StandardButtons.Back", menu_page.singleplayer),
 ], menu_page.storymode, "StoryMode.Title", true);

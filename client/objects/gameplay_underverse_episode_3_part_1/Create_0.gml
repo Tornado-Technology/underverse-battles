@@ -1,4 +1,4 @@
-on_into_story_mode.invoke("Tutorial");
+event_inherited();
 
 episode = "Underverse_Episode3.";
 

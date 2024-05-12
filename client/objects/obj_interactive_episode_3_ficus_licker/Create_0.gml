@@ -1,13 +1,23 @@
 event_inherited();
 
-dialog_keys = ["Underverse_Episode3.FicusLicker_1", "Underverse_Episode3.FicusLicker_2"];
+npc = obj_npc_ficus_licker;
 
-finish_interact_callback = function() {
-	if (npc_is_speacking) {
-		npc.finish_interact();
-	}
-	target_character.set_controlled();
-	dialog_created = false;
-	
-	gameplay_underverse_episode_3_part_2.search_event_is_started = true;
-}
+cutscenes = [
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.FicusLicker_1", dialog_direction],
+		[cutscene_execute, function() {
+			npc.finish_interact();
+			finish_interact();
+			variable_instance_set(gameplay_underverse_episode_3_surface, "search_event_is_started", true);
+		}]
+	],
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.FicusLicker_2", dialog_direction],
+		[cutscene_execute, function() {
+			npc.finish_interact();
+			finish_interact();
+		}]
+	]
+];

@@ -1,7 +1,22 @@
 event_inherited();
 
-npc = obj_npc_raspberries_licker;
-npc_is_speacking = true;
-dialog_keys = ["Underverse_Episode3.RaspberriesLicker_1", "Underverse_Episode3.RaspberriesLicker_3"];
+npc = obj_npc_mint_licker;
 
-is_found = false;
+cutscenes = [
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.MintLicker_1", dialog_direction],
+		[cutscene_execute, function () {
+			npc.finish_interact();
+			finish_interact();
+		}]
+	],
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.MintLicker_2", dialog_direction],
+		[cutscene_execute, function () {
+			npc.finish_interact();
+			finish_interact();
+		}]
+	]
+];

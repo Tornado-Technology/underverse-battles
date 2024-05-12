@@ -1,4 +1,4 @@
-if (gameplay_underverse_episode_3_part_2.search_event_is_started && !is_found) {
+if (gameplay_underverse_episode_3_surface.search_event_is_started && !is_found) {
 	dialog_keys = ["Underverse_Episode3.MushroomLicker_2", "Underverse_Episode3.MushroomLicker_3"];
 	index = 0;
 	is_found = true;

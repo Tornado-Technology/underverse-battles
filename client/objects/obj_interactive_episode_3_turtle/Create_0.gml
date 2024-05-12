@@ -1,5 +1,14 @@
 event_inherited();
 
 npc = obj_npc_turtle;
-npc_is_speacking = true;
-dialog_keys = ["Underverse_Episode3.Turtle"];
+
+cutscenes = [
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.Turtle", dialog_direction],
+		[cutscene_execute, function () {
+			npc.finish_interact();
+			finish_interact();
+		}]
+	]
+];

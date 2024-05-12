@@ -9,8 +9,8 @@
   "name":"obj_interactive",
   "overriddenProperties":[],
   "parent":{
-    "name":"Story Mode",
-    "path":"folders/Objects/Fight/Story Mode.yy",
+    "name":"Collision",
+    "path":"folders/Objects/Collision.yy",
   },
   "parentObjectId":null,
   "persistent":false,

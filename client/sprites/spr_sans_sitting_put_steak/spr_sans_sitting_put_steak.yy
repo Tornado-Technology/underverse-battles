@@ -23,7 +23,7 @@
   ],
   "name":"spr_sans_sitting_put_steak",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Episode 3",
     "path":"folders/Characteres/Sans/Sprites/Char/Story Mode/Episode 3.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":12,
+    "xorigin":11,
     "yorigin":35,
   },
   "swatchColours":null,

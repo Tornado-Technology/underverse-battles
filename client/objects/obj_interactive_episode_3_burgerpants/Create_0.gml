@@ -1,5 +1,15 @@
 event_inherited();
 
 npc = obj_npc_burgerpants;
-npc_is_speacking = true;
-dialog_keys = ["Underverse_Episode3.Burgerpants"];
+
+cutscenes = [
+	[
+		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_dialog, "Underverse_Episode3.Burgerpants", dialog_direction],
+		[cutscene_execute, function() {
+			npc.finish_interact();
+			finish_interact();
+			variable_instance_set(gameplay_underverse_episode_3_surface, "mtt_is_late_became_known", true);
+		}]
+	]
+];

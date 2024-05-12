@@ -1,4 +1,4 @@
-player_.control(2, false);
+player_.control();
 alarm[4] = 30;
 
 if (is_mobile || mobile_mode) {

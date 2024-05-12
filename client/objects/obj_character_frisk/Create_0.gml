@@ -57,6 +57,9 @@ actions = [
 ];
 special_action = SpecialAction("CharacterFrisk.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, char_sans_special_attack);
 
+// Movement
+can_run = false;
+
 // Soundtrack
 soundtrack_name = "Megalovania"; 
 soundtrack = snd_megalovania;

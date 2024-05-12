@@ -9,6 +9,7 @@ text_report = translate_get("Pause.ReportPlayer");
 text_giveup = translate_get("Pause.GiveUp");
 text_exit = translate_get("Pause.ExitToMenu");
 
+gameplay_exists = global.gameplay_instance != noone;
 fight_exists = global.fight_instance != noone;
 
 add_button(text_return, function() {
@@ -20,8 +21,6 @@ add_button(text_return, function() {
 
 if (fight_exists) {
 	add_button(text_giveup, function() {
-		if (global.fight_instance == noone) return;
-		
 		var damage = fight_get_player_hp(0);
 		if (damage > 0) {
 			fight_set_player_hp(0, 0);
@@ -37,6 +36,9 @@ if (fight_exists) {
 
 if (!fight_network_mode) {
 	add_button(text_exit, function() {
+		if (gameplay_exists) {
+			instance_destroy(global.gameplay_instance);
+		}
 		room_goto(room_menu);
 	});
 	
