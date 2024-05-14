@@ -83,13 +83,6 @@ function CharacterList() {
 			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame)
 		],
 		[
-			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
-			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
-			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
-		]
-	];
-	if (development_mode) {
-		array_push(global.characters, [
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
 		],
 		[
@@ -99,9 +92,17 @@ function CharacterList() {
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
 		],
 		[
-			new Character(obj_character_anastasia, "Anastasia", "Standard", spr_sans_frame)
+			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
+			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
+			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
+		],
+		[
+			new Character(obj_character_anastasia, "XAnastasia", "Standard", spr_xanastasia_frame)
 		]
-		);
+	];
+	// Unfinished characters
+	if (development_mode) {
+		
 	}
 }
 

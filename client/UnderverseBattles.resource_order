@@ -53,6 +53,7 @@
     {"name":"Episode 3","order":1,"path":"folders/Characteres/Undyne/Sprites/Char/Story Mode/Episode 3.yy",},
     {"name":"Frames","order":2,"path":"folders/Characteres/Undyne/Sprites/Frames.yy",},
     {"name":"Story Mode","order":1,"path":"folders/Characteres/Undyne/Sprites/Frames/Story Mode.yy",},
+    {"name":"Frames","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Frames.yy",},
     {"name":"Skins","order":1,"path":"folders/Characteres/XChara/Skins.yy",},
     {"name":"Bullets","order":2,"path":"folders/Characteres/XChara/Sprites/Bullets.yy",},
     {"name":"Char","order":3,"path":"folders/Characteres/XChara/Sprites/Char.yy",},

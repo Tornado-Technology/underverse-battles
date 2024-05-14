@@ -41,7 +41,7 @@
   "origin":9,
   "parent":{
     "name":"scythe",
-    "path":"folders/Characteres/X Anastasia/Sprite/Char/scythe.yy",
+    "path":"folders/Characteres/X Anastasia/Sprites/Char/scythe.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

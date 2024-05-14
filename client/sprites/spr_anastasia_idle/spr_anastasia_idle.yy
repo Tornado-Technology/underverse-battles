@@ -29,7 +29,7 @@
   "origin":9,
   "parent":{
     "name":"Char",
-    "path":"folders/Characteres/X Anastasia/Sprite/Char.yy",
+    "path":"folders/Characteres/X Anastasia/Sprites/Char.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

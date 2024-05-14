@@ -38,7 +38,7 @@ fight_0_idle_animation = spr_papyrus_attack_0_idle;
 fight_0_finish_animation = spr_papyrus_attack_0_finish;
 
 // Skin
-skin_name = translate_get("CharactersStyles.Classic");
+skin_name = translate_get("CharactersStyles.Standard");
 frame = spr_papyrus_frame;
 
 // Actions
