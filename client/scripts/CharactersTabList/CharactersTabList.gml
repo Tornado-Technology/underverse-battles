@@ -96,15 +96,14 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 	static draw = function() {
 		base_draw();
 		
-		var rectangle_x = menu_instance.rec_x1;
-		var rectangle_y = menu_instance.rec_y1;
 		var offset_x = menu_instance.dist_x;
 		var offset_y = menu_instance.dist_y;
 		var frame_height = menu_instance.frame_height;
 		var top_shift = menu_instance.top_shift;
 		
-		var position_y = rectangle_y + frame_height * count_cell_vertical + offset_y * count_cell_vertical + top_shift + button_offset_y;
+		var position_x = (menu_instance.rec_x1 + menu_instance.rec_x2) / 2;
+		var position_y = menu_instance.rec_y1 + frame_height * count_cell_vertical + offset_y * count_cell_vertical + top_shift + button_offset_y;
 		
-		button_close.draw(rectangle_x + offset_x + button_offset_x, position_y);
+		button_close.draw(position_x, position_y);
 	}
 }

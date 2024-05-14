@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bear_on_blanket",
-    "path":"sprites/spr_bear_on_blanket/spr_bear_on_blanket.yy",
+    "name":"spr_undyne_picnic_eating_closed_eyes",
+    "path":"sprites/spr_undyne_picnic_eating_closed_eyes/spr_undyne_picnic_eating_closed_eyes.yy",
   },
   "spriteMaskId":null,
   "visible":true,

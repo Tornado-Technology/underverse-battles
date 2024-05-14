@@ -13,14 +13,14 @@ if (!surface_exists(surface)) { surface = surface_create(surface_size.x, surface
 draw_reset();
 
 // Arrows
-var arror_sprite_width = sprite_get_width(spr_stat_arrow) / 2;
-var arror_sprite_height = sprite_get_height(spr_stat_arrow) / 2;
+var arror_sprite_width = sprite_get_width(spr_ui_arrow) / 2;
+var arror_sprite_height = sprite_get_height(spr_ui_arrow) / 2;
 var arror_position_x = width - 60;
 
 if (shift > -25) {
 	var arror_position_y = surface_cord.y + 22;
 	
-	draw_sprite(spr_stat_arrow, 0, arror_position_x, arror_position_y);
+	draw_sprite(spr_ui_arrow, 0, arror_position_x, arror_position_y);
 	
 	if (point_in_rectangle_gui(arror_position_x - arror_sprite_width, arror_position_y - arror_sprite_height, arror_position_x + arror_sprite_width, arror_position_y + arror_sprite_height)) {
 		if (mouse_check_button(mb_any)) {
@@ -32,7 +32,7 @@ if (shift > -25) {
 if (shift < size * 60 - 200) {
 	var arror_position_y = surface_cord.y + surface_size.y - 22;
 	
-	draw_sprite_ext(spr_stat_arrow, 0, arror_position_x, arror_position_y, 1, 1, 180, c_white, 1);
+	draw_sprite_ext(spr_ui_arrow, 0, arror_position_x, arror_position_y, 1, 1, 180, c_white, 1);
 	
 	if (point_in_rectangle_gui(arror_position_x - arror_sprite_width, arror_position_y - arror_sprite_height, arror_position_x + arror_sprite_width, arror_position_y + arror_sprite_height)) {
 		if (mouse_check_button(mb_any)) {

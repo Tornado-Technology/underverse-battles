@@ -21,10 +21,12 @@ function ClassSettingsMobileControl(menu_instance)  constructor {
 	left_position_x =  right_position_x / 1.5;
 	position_y = 100;
 
-	UI = { 
-		right: UIImageButton(spr_stat_arrow),
-		left: UIImageButton(spr_stat_arrow)	
-	};
+	UI = {
+		right: UIImageButton(spr_ui_arrow),
+		left: UIImageButton(spr_ui_arrow)
+	}
+	UI.right.padding = 5;
+	UI.left.padding = 5;
 	
 	static init = function() {
 		declare_predicate();

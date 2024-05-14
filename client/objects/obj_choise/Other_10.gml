@@ -16,9 +16,12 @@ if (act == 1) {
 			callback(current_option);
 			instance_destroy();
 		});
-
+		
+		answer_options[i].text_hover_color = c_yellow;
 		answer_options[i].is_auto_focus = false;
 		answer_options[i].index = index;
+		answer_options[i].halign = fa_center;
+		answer_options[i].valign = fa_bottom;
 		answer_options[i].is_separate = true;
 		answer_options[i].sep = 16;
 		answer_options[i].w = 130;

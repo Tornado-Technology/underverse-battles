@@ -53,15 +53,15 @@ cutscenes = [
 			frisk.control(true);
 			sans.follow(frisk);
 		}],
-		//[cutscene_execute, function() {
-		//	frisk.sprite_index = spr_frisk_with_plate;
-		//	sans.sprite_index = spr_sans_sitting_eating;
-		//	papyrus.sprite_index = spr_papyrus_picnic_sitting_eating;
-		//	undyne.sprite_index = spr_undyne_picnic_eating_closed_eyes;
-		//	alphys.sprite_index = spr_alphys_picnic_sitting_eating;
-		//	toriel.sprite_index = spr_toriel_picnic_sitting_eating;
-		//	asgore.sprite_index = spr_asgore_picnic_cooking;
-		//}],
+		[cutscene_execute, function() {
+			frisk.sprite_index = spr_frisk_with_plate;
+			sans.sprite_index = spr_sans_sitting_eating;
+			papyrus.sprite_index = spr_papyrus_picnic_sitting_eating;
+			undyne.sprite_index = spr_undyne_picnic_eating_closed_eyes;
+			alphys.sprite_index = spr_alphys_picnic_sitting_eating;
+			toriel.sprite_index = spr_toriel_picnic_sitting_eating;
+			asgore.sprite_index = spr_asgore_picnic_cooking;
+		}],
 		//[cutscene_wait, 3],
 		//[cutscene_dialog, episode + "Dialog17", dir.down],
 		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilling_ketchup],

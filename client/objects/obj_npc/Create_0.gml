@@ -1,10 +1,10 @@
 image_speed = 0;
 
-interact = function() {
+speak = function() {
 	image_speed = 1;
 }
 
-finish_interact = function() {
+stop_speaking = function() {
 	image_index = 0;
 	image_speed = 0;
 }

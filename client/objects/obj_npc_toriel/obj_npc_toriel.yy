@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_undyne_picnic_eating_closed_eyes",
-    "path":"sprites/spr_undyne_picnic_eating_closed_eyes/spr_undyne_picnic_eating_closed_eyes.yy",
+    "name":"spr_toriel_picnic_sitting_eating",
+    "path":"sprites/spr_toriel_picnic_sitting_eating/spr_toriel_picnic_sitting_eating.yy",
   },
   "spriteMaskId":null,
   "visible":true,

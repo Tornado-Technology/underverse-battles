@@ -17,8 +17,8 @@ function ClassUIScroll(width, height, callback) constructor {
 	speed_scroll = 1;
 	static arrow_offset_x = 10;
 	static arrow_offset_y = 10;
-	static arrow_width = sprite_get_width(spr_stat_arrow);
-	static arrow_height = sprite_get_height(spr_stat_arrow);
+	static arrow_width = sprite_get_width(spr_ui_arrow);
+	static arrow_height = sprite_get_height(spr_ui_arrow);
 	
 	static scroll_up = function(_speed = speed_scroll) {
 		if (shift >= 0) {
@@ -41,11 +41,13 @@ function ClassUIScroll(width, height, callback) constructor {
 	}
 	
 	static init = function() {
-		arrows.up = UIImageButton(spr_stat_arrow)
+		arrows.up = UIImageButton(spr_ui_arrow);
+		arrows.up.padding = 5;
 		arrows.up.on_held = function() {
 			scroll_up();
 		}
-		arrows.down = UIImageButton(spr_stat_arrow)
+		arrows.down = UIImageButton(spr_ui_arrow);
+		arrows.down.padding = 5;
 		arrows.down.on_held = function() {
 			scroll_down();
 		}

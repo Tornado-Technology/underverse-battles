@@ -49,13 +49,15 @@ arrow_y_down = height / 2 + 30;
 arrow_x = width - 20;
 
 arrow_vertical = {
-	up: UIImageButton(spr_stat_arrow, function() {
+	up: UIImageButton(spr_ui_arrow, function() {
 		change_background_up();
 	}),
-	down: UIImageButton(spr_stat_arrow, function() {
+	down: UIImageButton(spr_ui_arrow, function() {
 		change_background_down();
 	}),
 }
+arrow_vertical.up.padding = 5;
+arrow_vertical.down.padding = 5;
 
 arrow_y = height / 2 + 75;
 arrow_x_left = width / 2 - 15;

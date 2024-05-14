@@ -2,6 +2,7 @@ target_character = obj_character_frisk;
 
 new_room = undefined;
 transition_time = 0.4;
+required_pressing = false;
 
 transition = function() {
 	target_character.set_uncontrolled();

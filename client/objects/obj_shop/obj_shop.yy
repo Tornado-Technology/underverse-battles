@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_interactive_episode_3_alphys",
+  "%Name":"obj_shop",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_interactive_episode_3_alphys",
+  "name":"obj_shop",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactive",
-    "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Interactive.yy",
+    "name":"Story Mode",
+    "path":"folders/Objects/Fight/Story Mode.yy",
   },
-  "parentObjectId":{
-    "name":"obj_interactive",
-    "path":"objects/obj_interactive/obj_interactive.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_interactive",
-    "path":"sprites/spr_interactive/spr_interactive.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

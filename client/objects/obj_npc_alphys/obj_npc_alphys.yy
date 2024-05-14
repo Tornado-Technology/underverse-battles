@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_toriel_picnic_sitting_eating",
-    "path":"sprites/spr_toriel_picnic_sitting_eating/spr_toriel_picnic_sitting_eating.yy",
+    "name":"spr_alphys_picnic_sitting_eating",
+    "path":"sprites/spr_alphys_picnic_sitting_eating/spr_alphys_picnic_sitting_eating.yy",
   },
   "spriteMaskId":null,
   "visible":true,

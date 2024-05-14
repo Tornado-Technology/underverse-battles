@@ -14,7 +14,7 @@ draw_set_alpha(alpha);
 
 for (var i = 0; i < array_length(buttons); i++) {
 	var button = buttons[i];
-	button.draw(width / 2, height / 2.5 + 20 * i, alpha);
+	button.draw(width / 2, height / 3 + 30 * i, alpha);
 }
 
 draw_reset();

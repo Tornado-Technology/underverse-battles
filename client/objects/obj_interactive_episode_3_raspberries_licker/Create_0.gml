@@ -19,30 +19,30 @@ interact_callback = function() {
 
 cutscenes = [
 	[
-		[cutscene_execute, function() { npc.interact() }],
-		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_1", dialog_direction()],
+		[cutscene_execute, function() { npc.speak() }],
+		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_1", dialog_direction],
 		[cutscene_execute, function() {
-			npc.finish_interact();
+			npc.stop_speaking();
 			target_character.set_controlled();
 			index = 2;
 		}]
 	],
 	[
-		[cutscene_dialog_async, "Underverse_Episode3.RaspberriesLicker_2", dialog_direction()],
+		[cutscene_dialog_async, "Underverse_Episode3.RaspberriesLicker_2", dialog_direction],
 		[cutscene_wait_by_dialog, 1],
-		[cutscene_execute, function() { npc.interact() }],
+		[cutscene_execute, function() { npc.speak() }],
 		[cutscene_wait_dialog_end],
 		[cutscene_execute, function() {
-			npc.finish_interact();
+			npc.stop_speaking();
 			target_character.set_controlled();
 			index = 2;
 		}]
 	],
 	[
-		[cutscene_execute, function() { npc.interact() }],
-		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_3", dialog_direction()],
+		[cutscene_execute, function() { npc.speak() }],
+		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_3", dialog_direction],
 		[cutscene_execute, function() {
-			npc.finish_interact();
+			npc.stop_speaking();
 			target_character.set_controlled();
 		}]
 	]

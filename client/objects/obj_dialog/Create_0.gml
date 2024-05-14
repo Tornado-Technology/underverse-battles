@@ -19,8 +19,14 @@ restarting_dialog = true;
 restarting_str_num = 0;
 	
 dialog_swich = 0;
-
+is_showing_dialog_window = true;
+dialog_window_sprite = spr_dialog_window;
+dialog_window_position = new Vector2(obj_camera.view_width / 2, 5);
+dialog_window_xscale = 20;
+dialog_window_yscale = 5;
+dialog_window_size = new Vector2(sprite_get_width(dialog_window_sprite) * dialog_window_xscale, sprite_get_height(dialog_window_sprite) * dialog_window_yscale);
 shift = 184;
+text_indent = 8;
 
 death_name_function = "";
 
@@ -59,7 +65,9 @@ set_font = function (character_name, character_emote, character_font, color) {
 	}
 }
 
-skip_arrow = UIImageButton(spr_stat_arrow);
+skip_arrow = UIImageButton(spr_ui_arrow);
+skip_arrow.padding = 5;
+
 skip_arrow.on_press = function() {
 	if (pos < string_length(cur_text)) {
 	    keyboard_key_press(vk_shift);

@@ -15,17 +15,6 @@ if (is_first_appearance) {
 }
 
 room_start_callback(function() {
-	frisk.x = 239;
-	frisk.y = 266;
-	frisk.sprite_index = frisk.standing_up_animation;
-	frisk.control();
-	sans.x = 239;
-	sans.y = 289;
-	sans.sprite_index = sans.standing_up_animation;
-	sans.follow(frisk);
-	audio_stop_sound(snd_park);
-}, room_underverse_episode_3_muffet_bakery);
-room_start_callback(function() {
 	frisk.x = 1530;
 	frisk.y = 1100;
 	frisk.sprite_index = frisk.standing_down_animation;
