@@ -53,7 +53,7 @@ actions = [
 	Action("Character.Dream.Attack1", call_attack_dream_1),
 	Action("Character.Dream.Attack2", call_attack_dream_2)
 ];
-special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);
+special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_dream, spr_special_attack_dream_locked, call_attack_dream_special);
 
 on_taking_soul_damage = function(soul, damage) {
 	if (damage > dtime)
