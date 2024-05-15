@@ -2,4 +2,3 @@ time_source_destroy(time_source_update);
 time_source_destroy(time_source_update_platforms);
 time_source_destroy(time_source_update_shot);
 time_source_destroy(time_source_destroy_update);
-final_function();

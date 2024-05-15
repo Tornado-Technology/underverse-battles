@@ -6,5 +6,3 @@ time_source_destroy(time_source_update_gasterblasters_1_stop);
 time_source_destroy(time_source_update_projectiles_stop);
 time_source_destroy(time_source_update_gasterblasters_2_stop);
 time_source_destroy(time_source_update_destroy);
-
-final_function();

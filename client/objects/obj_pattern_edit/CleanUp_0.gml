@@ -4,4 +4,3 @@ time_source_destroy(time_source_update_destroy);
 
 instance_destroy(edit_button);
 
-final_function();
