@@ -30,7 +30,7 @@ soul = spr_battle_soul;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Standard");
-frame = spr_dream_frame;
+frame = spr_xanastasia_frame;
 
 // Animations
 idle_animation = spr_anastasia_idle;

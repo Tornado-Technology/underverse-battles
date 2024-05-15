@@ -28,7 +28,7 @@ update = function() {
 	var destroy_time = 1/8;
 	repeat (is_double ? 2 : 1) {
 		if (!use_gravity_attack) {
-			create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, fly_time, charge_time, flyout_time, destroy_time);
+			create_aiming_gasterblaster_with_pattern(gasterblaster_aiming, soul_instance, fly_time, charge_time, flyout_time, destroy_time);
 			break;
 		}
 		

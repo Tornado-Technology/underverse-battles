@@ -34,7 +34,7 @@ update_spinning_bones = function() {
 }
 	
 update_gasterblasters_1 = function() {
-	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+	create_aiming_gasterblaster_with_pattern(gasterblaster_aiming, soul_instance);
 }
 	
 update_projectiles = function() {
@@ -55,7 +55,7 @@ update_projectiles = function() {
 }
 
 update_gasterblasters_2 = function() {
-	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+	create_aiming_gasterblaster_with_pattern(gasterblaster_aiming, soul_instance);
 }
 	
 update_spinning_bones_back = function() {

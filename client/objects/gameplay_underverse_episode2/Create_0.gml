@@ -585,7 +585,7 @@ cutscenes = [
 			fight_position_event = false;
 			instance_destroy(fight);
 			
-			repeat (3) create_aiming_gasterblaster(obj_gasterblaster_aiming_error_sans, ink_sans);
+			repeat (3) create_aiming_gasterblaster_with_pattern(obj_gasterblaster_aiming_error_sans, ink_sans);
 		}],
 		[cutscene_wait, 1],
 		[effect_fade, 0.5, 3, 4, c_white, false, fight_depth.ui],

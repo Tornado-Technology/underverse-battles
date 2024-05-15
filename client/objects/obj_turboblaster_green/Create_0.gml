@@ -5,8 +5,8 @@ started = false;
 
 step = 0.4;
 
-x_dir = x;
-y_dir = y;
+target_x = x;
+target_y = y;
 
 fly_time = 1/6;
 

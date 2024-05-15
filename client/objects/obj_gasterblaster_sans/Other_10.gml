@@ -28,3 +28,5 @@ time_source_flying_out = time_source_create(time_source_game, flyout_time, time_
 time_source_destroying = time_source_create(time_source_game, destroy_time, time_source_units_seconds, function () {
 	instance_destroy();
 });
+
+time_source_start(time_source_flying);

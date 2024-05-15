@@ -33,17 +33,18 @@ update_gasterblasters = function() {
 	if (position >= max_position) {
 		position -= max_position;
 	}
-	var border_dist = 180;
+	var border_distance = obj_camera.view_width + object_get_sprite_max_size(gasterblaster);
+	var final_position_x = border_instance.x + border_instance.right + 25;
 	var sector_y = border_instance.y - border_instance.up + 25;
 	switch (position) {
 		case 0:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y - 5, border_instance.x, sector_y - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y - 5, final_position_x, sector_y - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
 			break;
 		case 1:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step - 5, border_instance.x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step - 5, final_position_x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
 			break;
 		case 2:
-			create_gasterblaster(gasterblaster, border_instance.x + border_dist, sector_y + sector_y_step * 2 - 5, border_instance.x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step * 2 - 5, final_position_x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
 			break;
 	}
 }

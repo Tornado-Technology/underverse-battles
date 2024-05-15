@@ -6,6 +6,6 @@ if (!started) {
 step = 0.4 * dtime;
 
 if (time_source_get_state(time_source_flying) == time_source_state_active) {
-	x = lerp(x, x_dir, step);
-	y = lerp(y, y_dir, step);
+	x = lerp(x, target_x, step);
+	y = lerp(y, target_y, step);
 }

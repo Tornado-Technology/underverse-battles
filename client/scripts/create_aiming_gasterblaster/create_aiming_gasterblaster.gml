@@ -1,40 +1,25 @@
-///@param {Asset.GMObject} gaster_blaster
+///@param {Asset.GMObject} gasterblaster
+///@param {Number} position_x
+///@param {Number} position_y
+///@param {Number} final_position_x
+///@param {Number} final_position_y
 ///@param {Asset.GMInstance} target
-function create_aiming_gasterblaster(gaster_blaster, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6) {
-	var x_gb, y_gb;
-	var gb_size = 60;
-	var pos = fight_random_integer(0, 3);
-	var con = room_height + gb_size;
-	var rnd = fight_random_integer(0, con);
-	switch (pos) {
-		case 0:
-			x_gb = 0;
-			y_gb = rnd;
-			break;
-		
-		case 1:
-			x_gb = rnd;
-			y_gb = con;
-			break;
-		
-		case 2:
-			x_gb = con;
-			y_gb = rnd;
-			break;
-		
-		case 3:
-			x_gb = rnd;
-			y_gb = 0;
-			break;
-	}
-	
+///@param {Number} fly_time
+///@param {Number} charge_time
+///@param {Number} flyout_time
+///@param {Number} destroy_time
+///@param {Number} max_spread
+function create_aiming_gasterblaster(gasterblaster, position_x, position_y, final_position_x, final_position_y, target, fly_time = 1/6, charge_time = 1, flyout_time = 15/60, destroy_time = 1/6, max_spread = 0) {	
 	var var_struct = {};
-	var_struct.x_dir = target.x;
-	var_struct.y_dir = target.y;
+	var_struct.target_x = target.x;
+	var_struct.target_y = target.y;
+	var_struct.final_position_x = final_position_x;
+	var_struct.final_position_y = final_position_y;
 	var_struct.fly_time = fly_time;
 	var_struct.charge_time = charge_time;
 	var_struct.flyout_time = flyout_time;
 	var_struct.destroy_time = destroy_time;
+	var_struct.max_spread = max_spread;
 	
-	return instance_create_depth(x_gb, y_gb, fight_depth.bullet_outside_hight, gaster_blaster, var_struct);
+	return instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, gasterblaster, var_struct);
 }

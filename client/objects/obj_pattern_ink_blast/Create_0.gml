@@ -12,7 +12,7 @@ callback = function () {
 }
 
 update_gasterblasters = function() {
-	create_aiming_gasterblaster(gasterblaster_aiming, soul_instance);
+	create_aiming_gasterblaster_with_pattern(gasterblaster_aiming, soul_instance);
 }
 
 update_broomie = function () {

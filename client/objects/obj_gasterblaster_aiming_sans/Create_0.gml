@@ -1,4 +1,3 @@
 event_inherited();
 
-// Time sources
-event_user(0);
+if (!variable_instance_exists(id, "max_spread")) max_spread = 0;
