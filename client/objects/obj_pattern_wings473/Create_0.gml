@@ -12,7 +12,7 @@ update = function() {
 	var angle = 360 / 4
 	var r = 190;
 	repeat(4) {
-		var feathers = instance_create_depth(border_instance.x + dcos(i) * r, border_instance.y + -dsin(25) * r, fight_depth.bullet_outside, obj_feathers_target_anastasia, {
+		var feathers = instance_create_depth(border_instance.x + dcos(i) * r, border_instance.y + -dsin(25) * r, fight_depth.bullet_outside, obj_feathers_target_XAnastasia, {
 			center_x: soul_instance.x,
 			center_y: soul_instance.y
 		})

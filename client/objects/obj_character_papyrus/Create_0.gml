@@ -30,7 +30,7 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 soul = spr_battle_soul;
 
 idle_animation = spr_papyrus_idle;
-after_battle_animation = spr_swap_sans_idle;
+after_battle_animation = spr_papyrus_idle;
 defeated_animation = spr_papyrus_defeated;
 defeated_animation_last_image = spr_papyrus_defeated_last_image;
 fight_0_start_animation = spr_papyrus_attack_0_start;

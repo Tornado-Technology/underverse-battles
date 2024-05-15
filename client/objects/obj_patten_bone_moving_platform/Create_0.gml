@@ -1,8 +1,5 @@
 
-
-
 platforms_speed = 0.5 + _power * 0.2;
-
 callback = function () {
 	soul_instance = create_soul(border_instance.x + 15, border_instance.y + 4, battle_soul_type.blue);
 			
@@ -36,7 +33,7 @@ update = function () {
 update_shot = function () {
 	var i = irandom(array_length(bone_counst_0) - 1);
 
-	if (irandom_range(0, 1)) {
+	if (irandom(1)) {
 		bone_counst_0[i].move = border_instance.y - border_instance.up;
 		bone_counst_0[i].moving = true;
 	}

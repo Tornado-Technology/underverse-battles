@@ -10,9 +10,9 @@ if (can_move_spinning) {
 		can_move_spinning = false;
 		image_angle = 0;
 	};
-}
+};
 
 if (place_meeting(x, y, obj_fist_nightmare)) {
-	obj_fist_nightmare.id.destroy = true;
+
 	can_move_spinning = true;
-}
+};

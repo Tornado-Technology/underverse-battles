@@ -9,8 +9,8 @@
   "name":"obj_patten_bone_moving_platform",
   "overriddenProperties":[],
   "parent":{
-    "name":"Patterns",
-    "path":"folders/Characteres/Papyrus/Patterns.yy",
+    "name":"Papyrus",
+    "path":"folders/Attack Patterns/Bones/Papyrus.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

@@ -35,10 +35,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_feathers_anastasia",
-    "path":"sprites/spr_feathers_anastasia/spr_feathers_anastasia.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

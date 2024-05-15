@@ -1,0 +1,14 @@
+event_inherited();
+
+idle_animation = spr_x_anastasia_demon_idle;
+after_battle_animation = spr_x_anastasia_demon_idle;
+defeated_animation =  spr_x_anastasia_demon_defeated;
+fight_0_start_animation = spr_x_anastasia_demon_idle;
+fight_0_idle_animation = spr_x_anastasia_demon_idle;
+fight_0_finish_animation = spr_x_anastasia_demon_idle;
+fight_1_start_animation = spr_x_anastasia_demon_swords_start;
+fight_1_idle_animation = spr_x_anastasia_demon_swords_idle;
+fight_1_finish_animation = spr_x_anastasia_demon_swords_finish;
+fight_2_start_animation = spr_x_anastasia_demon_scythe_start;
+fight_2_idle_animation = spr_x_anastasia_demon_scythe_idle;
+fight_2_finish_animation = spr_x_anastasia_demon_scythe_finish;

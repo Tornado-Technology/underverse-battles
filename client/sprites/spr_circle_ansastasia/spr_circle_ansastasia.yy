@@ -26,7 +26,11 @@
   "origin":4,
   "parent":{
     "name":"Bullets",
+<<<<<<< Updated upstream
     "path":"folders/Characteres/X Anastasia/Sprites/Char/Bullets.yy",
+=======
+    "path":"folders/Characteres/X Anastasia/Sprite/Bullets.yy",
+>>>>>>> Stashed changes
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

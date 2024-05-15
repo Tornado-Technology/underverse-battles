@@ -1,4 +1,4 @@
-// Arguments: tentacles_tremble, bullets
+// Arguments: slime, bullets
 
 callback = function () {
 	var border = {
@@ -7,6 +7,7 @@ callback = function () {
 		left: border_instance.x - border_instance.left,
 		right: border_instance.x + border_instance.right		
 	};
+	
 	var fram = [border_instance._inst_frame_up, border_instance._inst_frame_down, border_instance._inst_frame_left, border_instance._inst_frame_right];
 	
 	soul_instance = create_soul(border_instance.x + 30, border_instance.y, battle_soul_type.red);
@@ -14,7 +15,7 @@ callback = function () {
 	
 	var i = 0;
 	repeat (slime_count) {
-		slime_instance[i] = instance_create_depth(border.left + 20 * i, fram[0].y, fight_depth.bullet_outside, obj_slime_nightmare, {
+		slime_instance[i] = instance_create_depth(border.left + 20 * i, fram[0].y, fight_depth.bullet_outside, slime, {
 			image_xscale: 6.5
 		});
 		
@@ -22,13 +23,14 @@ callback = function () {
 		
 		with(slime_instance[i]) {
 			sprite_set_offset(sprite_index, 0, 4);
-		}
+		};
 		
 		i++;
 	}
 		
 	border_instance.spining = true;	
 	border_instance.speed_spining = 1 + _power * 0.1;
+	
 	
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_start);
@@ -51,8 +53,9 @@ update_start = function() {
 update = function () { 
 	var x0 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	var	bullets_instance = instance_create_depth(x0, border_instance.y - border_instance.up - 5, fight_depth.bullet_outside, bullets);
-		bullets_instance.speed_const = 3 + _power * 0.1;
-		bullets_instance.image_angle = 270;
+	
+	bullets_instance.speed_const = 3 + _power * 0.1;
+	bullets_instance.direction = 270;
 }
 
 

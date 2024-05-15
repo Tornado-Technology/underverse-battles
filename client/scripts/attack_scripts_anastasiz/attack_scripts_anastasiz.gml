@@ -1,20 +1,20 @@
-function call_attack_anastasia_0(player, _power, type = fight_random_integer(0, 3)) {
-	instance_create(obj_attack_anastasia_0, {
+function call_attack_x_anastasia_0(player, _power, type = fight_random_integer(0, 3)) {
+	instance_create(obj_attack_x_anastasia_0, {
 		character_instance: player,
 		_power: _power,
 		type: type,
 	});
 }
 
-function call_attack_anastasia_1(player, _power, type = fight_random_integer(0, 4)) {
-	instance_create(obj_attack_anastasia_1, {
+function call_attack_x_anastasia_1(player, _power, type = fight_random_integer(0, 4)) {
+	instance_create(obj_attack_x_anastasia_1, {
 		character_instance: player,
 		_power: _power,
 		type: type,
 	});
 }
 
-function call_attack_anastasia_2(player, _power, type = fight_random_integer(0, 2)) {
+function call_attack_XAnastasia_2(player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_dream_2, {
 		character_instance: player,
 		_power: _power,
@@ -22,7 +22,7 @@ function call_attack_anastasia_2(player, _power, type = fight_random_integer(0, 
 	});
 }
 
-function call_attack_anastasia_special(player) {
+function call_attack_XAnastasia_special(player) {
 	instance_create(obj_attack_dream_special, {
 		character_instance: player
 	});

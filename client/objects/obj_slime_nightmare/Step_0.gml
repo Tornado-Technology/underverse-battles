@@ -6,3 +6,13 @@ if  (image_yscale >= scale_const) {
 else if (image_yscale <= back_const) {
 	back = false;	
 }
+
+if (instance_exists(obj_battle_soul)) {
+	if (place_meeting(x, y, obj_battle_soul)) {
+		obj_battle_soul.image_alpha = 0;
+	}
+	else {
+		obj_battle_soul.image_alpha = 1;	
+	};
+	
+}

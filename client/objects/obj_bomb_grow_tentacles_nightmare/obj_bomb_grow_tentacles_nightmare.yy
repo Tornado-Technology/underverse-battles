@@ -10,8 +10,8 @@
   "name":"obj_bomb_grow_tentacles_nightmare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bobm",
-    "path":"folders/Characteres/Nightmare/Bullets/Bobm.yy",
+    "name":"Bomb",
+    "path":"folders/Characteres/Nightmare/Bullets/Bomb.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_bullet",

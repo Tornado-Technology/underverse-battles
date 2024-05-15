@@ -805,7 +805,10 @@
 	  "Garland": "Гирлянда",
     "AntiPiracy": "Анти пиратство",
     "NoTextures": "Без текстур",
-    "Samurai": "Самурай"
+    "Samurai": "Самурай",
+	"IceCream": "Мороженое",
+	"Mecha": "Меха",
+	"Demon": "Демон"
   },
   "Battle": {
     "Target": "Цель",

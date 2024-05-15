@@ -1,6 +1,6 @@
 motion_set(direction, speed_const * dtime);
 
-var wave_ = obj_wave_from_wings_anastasia;
+var wave_ = obj_wave_from_wings_XAnastasia;
 
 if (place_meeting(x, y, wave_) && !wave_.disappearance) {
 	direction = wave_.image_angle;

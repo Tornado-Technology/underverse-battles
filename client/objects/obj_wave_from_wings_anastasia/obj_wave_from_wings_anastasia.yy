@@ -35,10 +35,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_wave_from_wings_anastasia",
-    "path":"sprites/spr_wave_from_wings_anastasia/spr_wave_from_wings_anastasia.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

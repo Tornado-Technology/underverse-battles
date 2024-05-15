@@ -9,7 +9,7 @@ callback = function () {
 		image_xscale: round((border_instance.left + border_instance.right))
 	});
 	
-	slime_instnace.change_scale(10, time);
+	slime_instnace.change_scale(border_instance.y - border_instance.up, time);
 
 	update();
 	time_source_start(time_source_update);

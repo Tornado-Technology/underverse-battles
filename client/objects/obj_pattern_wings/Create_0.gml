@@ -14,7 +14,7 @@ update = function() {
 	repeat(2) {
 		var x0 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	
-		var feathers_instnace = instance_create_depth(x0, border_instance.y - border_instance.up - 10, fight_depth.bullet_outside_hight, obj_feathers_anastasia)
+		var feathers_instnace = instance_create_depth(x0, border_instance.y - border_instance.up - 10, fight_depth.bullet_outside_hight, obj_feathers_XAnastasia)
 			feathers_instnace.speed_const = 2;
 	}
 }

@@ -87,17 +87,23 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_nightmare, "Nightmare", "Standard", spr_nightmare_frame),
+			new Character(obj_character_nightmare_ice_cream, "Nightmare", "IceCream", spr_nightmare_ice_cream_frame),
+			new Character(obj_character_nightmare_mecha, "Nightmare", "Mecha", spr_nightmare_mecha_frame),
 		],
 		[
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
 		],
 		[
+
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
 			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
 			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
 		],
 		[
-			new Character(obj_character_anastasia, "XAnastasia", "Standard", spr_xanastasia_frame)
+	
+			new Character(obj_character_x_anastasia, "XAnastasia", "Standard", spr_frames_x_anastasia),
+			new Character(obj_character_x_anastasia_demon, "XAnastasia", "Demon", spr_frames_x_anastasia_demon)
+
 		]
 	];
 	// Unfinished characters

@@ -4,6 +4,8 @@ collider_soul.x = x;
 collider_soul.y = y;
 collider_soul.image_angle = image_angle;
 
+var border = obj_battle_border;
+
 if (!instance_exists(obj_battle_border)) exit;
 
 border_delta_x = obj_battle_border.x - obj_battle_border.xprevious;
@@ -20,8 +22,8 @@ has_collision_down = false;
 has_collision_left = false;
 has_collision_right = false;
 
-
-if  (obj_battle_border.spining) {
+	
+if  (border.spining) {
 	if (place_meeting(x, y, obj_solid)) {
 		x = xprevious;
 		y = yprevious;

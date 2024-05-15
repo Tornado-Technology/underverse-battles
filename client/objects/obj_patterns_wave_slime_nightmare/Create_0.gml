@@ -7,7 +7,6 @@ callback = function () {
 	});
 	slime_instance.change_scale(12, 0.1);
 
-	
 	border_instance.wave_ane = true;
 	update();
 	time_source_start(time_source_update);
