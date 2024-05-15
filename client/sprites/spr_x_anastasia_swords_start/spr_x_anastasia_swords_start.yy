@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_anastasia_swords_start",
+  "%Name":"spr_x_anastasia_swords_start",
   "bboxMode":0,
   "bbox_bottom":50,
   "bbox_left":0,
@@ -34,7 +34,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"7504be62-7ec2-4a8d-8afe-3a6274da56b7","blendMode":0,"displayName":"default","isLocked":false,"name":"7504be62-7ec2-4a8d-8afe-3a6274da56b7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_anastasia_swords_start",
+  "name":"spr_x_anastasia_swords_start",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -46,7 +46,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_anastasia_swords_start",
+    "%Name":"spr_x_anastasia_swords_start",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -70,7 +70,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_anastasia_swords_start",
+    "name":"spr_x_anastasia_swords_start",
     "playback":1,
     "playbackSpeed":10.0,
     "playbackSpeedType":0,
@@ -82,46 +82,46 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"79ee9aa6-dedf-4939-b11f-ea4a5a75692f","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"79ee9aa6-dedf-4939-b11f-ea4a5a75692f","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9ca7cf68-c18a-4858-bc1d-abc88c82c569","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d4bdf7a-6834-4439-bc3c-17116d139511","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d4bdf7a-6834-4439-bc3c-17116d139511","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"279be06c-d8a5-4761-9c9e-913232d18657","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30ca8c82-dfdc-43c7-b198-906e31244c5d","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30ca8c82-dfdc-43c7-b198-906e31244c5d","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a447214f-9537-4eca-9bf1-8a529a72b985","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4ccc809-67b8-44c1-bbf4-3582b4ab591b","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4ccc809-67b8-44c1-bbf4-3582b4ab591b","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f5e0c6fd-1ab6-4e9d-a601-d5af357c9418","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f8d5b6cc-ad26-4012-a4a3-88cd251e4faf","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f8d5b6cc-ad26-4012-a4a3-88cd251e4faf","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"198a9f9a-f210-4090-bb9c-e98222d969fc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f329411f-e1ed-46e3-8566-2fb6a5543d03","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f329411f-e1ed-46e3-8566-2fb6a5543d03","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"79087a8d-e1fe-41ad-88c8-3aae8a883c28","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c4b58d5e-f801-4056-bf80-794e31ccce07","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c4b58d5e-f801-4056-bf80-794e31ccce07","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"18848b3f-fb4d-4aa9-99e4-a2505c9b77c0","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c495e21a-3f72-4fac-aa5d-9965cf0912d4","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c495e21a-3f72-4fac-aa5d-9965cf0912d4","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"3fac175f-811d-4fe2-a3e3-0e2590c3a777","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2925024c-ceb9-4e18-9216-9fab5e62aa05","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2925024c-ceb9-4e18-9216-9fab5e62aa05","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"2552bc76-9629-4995-af2c-f4511e34cfd9","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"65329d4f-36f2-4b1d-8615-2e3d8c9e4b4c","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"65329d4f-36f2-4b1d-8615-2e3d8c9e4b4c","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ed5b37da-6f46-462a-833d-281815325387","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f30121ea-d382-4566-af8b-58b3ebe535e3","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f30121ea-d382-4566-af8b-58b3ebe535e3","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1dbf5e04-4312-4aff-9766-2b7f90b5702f","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a5e40d8-99db-4a0d-989c-bc9f089331fa","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a5e40d8-99db-4a0d-989c-bc9f089331fa","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1715d52e-1b19-4a42-b264-22fdb1836d3c","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9874fd9d-1e9b-4a37-9d53-caa732c82563","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9874fd9d-1e9b-4a37-9d53-caa732c82563","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ebc019ac-b1eb-45c9-88f3-8f174e7c0fc3","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2390d7e8-afa8-44af-94b9-d540efbfa277","path":"sprites/spr_anastasia_swords_start/spr_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2390d7e8-afa8-44af-94b9-d540efbfa277","path":"sprites/spr_x_anastasia_swords_start/spr_x_anastasia_swords_start.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4030aa47-b18a-4ccd-895a-f0ffca864da5","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
