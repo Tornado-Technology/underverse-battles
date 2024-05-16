@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_character_x_anastasia_demon",
+  "%Name":"obj_attack_xanastasia_0",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_character_x_anastasia_demon",
+  "name":"obj_attack_xanastasia_0",
   "overriddenProperties":[],
   "parent":{
-    "name":"Skins",
-    "path":"folders/Characteres/X Anastasia/Skins.yy",
+    "name":"Attacks",
+    "path":"folders/Characteres/X Anastasia/Attacks.yy",
   },
   "parentObjectId":{
-    "name":"obj_character_xanastasia",
-    "path":"objects/obj_character_xanastasia/obj_character_xanastasia.yy",
+    "name":"obj_attack",
+    "path":"objects/obj_attack/obj_attack.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_xanastasia_demon_idle",
-    "path":"sprites/spr_xanastasia_demon_idle/spr_xanastasia_demon_idle.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

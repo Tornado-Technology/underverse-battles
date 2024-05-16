@@ -1,4 +1,19 @@
 {
-  "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"Demon","order":2,"path":"folders/Characteres/X Anastasia/Sprites/Demon.yy",},
+    {"name":"Frames","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Frames.yy",},
+    {"name":"Demon","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Frames/Demon.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_attack_ice_cream_1","order":1,"path":"objects/obj_attack_ice_cream_1/obj_attack_ice_cream_1.yy",},
+    {"name":"obj_attack_ice_cream_2","order":2,"path":"objects/obj_attack_ice_cream_2/obj_attack_ice_cream_2.yy",},
+    {"name":"obj_attack_mecha_1","order":1,"path":"objects/obj_attack_mecha_1/obj_attack_mecha_1.yy",},
+    {"name":"obj_attack_mecha_2","order":2,"path":"objects/obj_attack_mecha_2/obj_attack_mecha_2.yy",},
+    {"name":"obj_circle_x_anastasia","order":4,"path":"objects/obj_circle_x_anastasia/obj_circle_x_anastasia.yy",},
+    {"name":"obj_feathers_target_x_anastasia","order":3,"path":"objects/obj_feathers_target_x_anastasia/obj_feathers_target_x_anastasia.yy",},
+    {"name":"obj_feathers_x_anastasia","order":1,"path":"objects/obj_feathers_x_anastasia/obj_feathers_x_anastasia.yy",},
+    {"name":"obj_wave_from_wings_x_anastasia","order":2,"path":"objects/obj_wave_from_wings_x_anastasia/obj_wave_from_wings_x_anastasia.yy",},
+    {"name":"spr_xanastasia_scythe_idle","order":2,"path":"sprites/spr_xanastasia_scythe_idle/spr_xanastasia_scythe_idle.yy",},
+    {"name":"spr_xanastasia_scythe_start","order":1,"path":"sprites/spr_xanastasia_scythe_start/spr_xanastasia_scythe_start.yy",},
+  ],
 }
