@@ -61,7 +61,8 @@ function CharacterList() {
 		[
 			new Character(obj_character_fell_sans, "FellSans", "Standard", spr_fell_sans_frame),
 			new Character(obj_character_fell_sans_murderer, "FellSans", "Murderer", spr_fell_sans_murderer_frame),
-			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame)
+			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame),
+			new Character(obj_character_fell_sans_echo, "FellSans", "Echo", spr_fell_sans_echo_frame)
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
@@ -101,8 +102,8 @@ function CharacterList() {
 		],
 		[
 	
-			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_frames_x_anastasia),
-			new Character(obj_character_x_anastasia_demon, "XAnastasia", "Demon", spr_frames_xanastasia_demon)
+			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_xanastasia_frame),
+			new Character(obj_character_xanastasia_demon, "XAnastasia", "Demon", spr_frames_xanastasia_demon)
 
 		]
 	];
