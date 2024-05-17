@@ -2,8 +2,8 @@
   "FolderOrderSettings":[
     {"name":"Echo","order":1,"path":"folders/Characteres/Fell Sans/Sprites/Char/Echo.yy",},
     {"name":"Attack 2","order":3,"path":"folders/Characteres/Fell Sans/Sprites/Char/Echo/Attack 2.yy",},
-    {"name":"Galactic","order":1,"path":"folders/Characteres/Ink Sans/Sprites/Char/Galactic.yy",},
     {"name":"Blob","order":2,"path":"folders/Characteres/Ink Sans/Sprites/Char/Blob.yy",},
+    {"name":"Galactic","order":1,"path":"folders/Characteres/Ink Sans/Sprites/Char/Galactic.yy",},
     {"name":"Demon","order":2,"path":"folders/Characteres/X Anastasia/Sprites/Demon.yy",},
     {"name":"Frames","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Frames.yy",},
     {"name":"Demon","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Frames/Demon.yy",},
@@ -40,6 +40,7 @@
     {"name":"spr_fell_sans_echo_idle","order":2,"path":"sprites/spr_fell_sans_echo_idle/spr_fell_sans_echo_idle.yy",},
     {"name":"spr_ink_sans_blob_defeated","order":1,"path":"sprites/spr_ink_sans_blob_defeated/spr_ink_sans_blob_defeated.yy",},
     {"name":"spr_ink_sans_blob_frame","order":2,"path":"sprites/spr_ink_sans_blob_frame/spr_ink_sans_blob_frame.yy",},
+    {"name":"spr_ink_sans_blob_idle","order":4,"path":"sprites/spr_ink_sans_blob_idle/spr_ink_sans_blob_idle.yy",},
     {"name":"spr_ink_sans_blob_transformation_finish","order":2,"path":"sprites/spr_ink_sans_blob_transformation_finish/spr_ink_sans_blob_transformation_finish.yy",},
     {"name":"spr_ink_sans_blob_transformation_idle","order":3,"path":"sprites/spr_ink_sans_blob_transformation_idle/spr_ink_sans_blob_transformation_idle.yy",},
     {"name":"spr_ink_sans_galactic_broomie_finish","order":1,"path":"sprites/spr_ink_sans_galactic_broomie_finish/spr_ink_sans_galactic_broomie_finish.yy",},

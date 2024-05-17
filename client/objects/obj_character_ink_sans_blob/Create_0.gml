@@ -5,7 +5,7 @@ skin_name = translate_get("CharactersStyles.Blob");
 frame = spr_ink_sans_blob_frame;
 
 // Animations
-idle_animation = spr_ink_sans_blob_defeated;
+idle_animation = spr_ink_sans_blob_idle;
 after_battle_animation = idle_animation;
 defeated_animation = spr_ink_sans_blob_defeated;
 

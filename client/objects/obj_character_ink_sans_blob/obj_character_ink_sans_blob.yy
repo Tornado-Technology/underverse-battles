@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ink_sans_blob_transformation_idle",
-    "path":"sprites/spr_ink_sans_blob_transformation_idle/spr_ink_sans_blob_transformation_idle.yy",
+    "name":"spr_ink_sans_blob_idle",
+    "path":"sprites/spr_ink_sans_blob_idle/spr_ink_sans_blob_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
