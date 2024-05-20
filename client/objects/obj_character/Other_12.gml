@@ -36,16 +36,17 @@ if (is_controlled && !global.pause_game) {
 	
 	if (movement_x == movement_y == 0) {
 		ds_queue_enqueue(previous_positions, new Vector2(x, y));
-		if (ds_queue_size(previous_positions) > follow_distance + 5) ds_queue_dequeue(previous_positions);
+		if (ds_queue_size(previous_positions) > follow_distance + 2) ds_queue_dequeue(previous_positions);
 	}
 }
 
 // Following to object
 if (is_following) {
-	if (point_distance(x, y, follow_target.x, follow_target.y) > follow_distance) {
+	if (point_distance(x, y, follow_target.x, follow_target.y) > follow_distance ||
+		collision_line(x, y, follow_target.x, follow_target.y, obj_wall, false, false) != noone) {
 		following = true;
 	}
-	if (point_distance(x, y, follow_target.x, follow_target.y) < unfollow_distance) {
+	else if (point_distance(x, y, follow_target.x, follow_target.y) < unfollow_distance) {
 		following = false;
 	}
 	if (following) {
@@ -58,24 +59,9 @@ if (is_following) {
 	
 		var sum_speed = speed_const + (speed_const * run_coefficient * is_running) * dtime;
 		
-		if (follow_x == 0) {
-			movement_x = approach(x, follow_target.x, sum_speed) - x;
-		} else {
-			movement_x = follow_x;
-		}
-		if (follow_y == 0) {
-			movement_y = approach(y, follow_target.y, sum_speed) - y;
-		} else {
-			movement_y = follow_y;
-		}
-		
-		// Collision
-		if (point_distance(x, y, follow_target.x, follow_target.y) > follow_distance + sum_speed ||
-			collision_line(x, y, follow_target.x, follow_target.y, obj_wall, false, false) != noone) {
-			var position = ds_queue_head(follow_target.previous_positions);
-			movement_x = approach(x, position.x, sum_speed) - x;
-			movement_y = approach(y, position.y, sum_speed) - y;
-		}
+		var position = ds_queue_head(follow_target.previous_positions);
+		movement_x = approach(x, position.x, sum_speed) - x;
+		movement_y = approach(y, position.y, sum_speed) - y;
 	}
 	else {
 		movement_x = 0;
