@@ -1,6 +1,8 @@
 /// @desc Start monolog
 if (act != 1) exit;
 
+npc.speak();
+
 cur_num = 0;
 str_num = array_length(monolog);
 		

@@ -15,6 +15,9 @@ current_option = 0;
 current_item_option = 0;
 current_talk_option = 0;
 
+// NPC
+npc = obj_muffet_seller;
+
 // Menu
 menu_button_count = 4;
 menu_button_text = [

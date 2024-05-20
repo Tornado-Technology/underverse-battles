@@ -25,4 +25,6 @@ if (pos < string_length(cur_text)) {
 	    alarm[0] = 10;
 	else
 	    alarm[0] = 2;
+} else {
+	npc.stop_speaking();
 }
