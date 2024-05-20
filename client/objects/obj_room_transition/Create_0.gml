@@ -16,7 +16,7 @@ transition = function() {
 transition_callback = function() {}
 
 time_source_transition = time_source_create(time_source_game, transition_time, time_source_units_seconds, function () {
-	if (variable_instance_exists(id, "new_room")) {
+	if (new_room != undefined) {
 		room_goto(new_room);
 	}
 });

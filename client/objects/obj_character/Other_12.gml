@@ -14,7 +14,7 @@ if (is_moving) {
 }
 
 // Player control
-if (is_controlled) {
+if (is_controlled && !global.pause_game) {
 	image_speed =  1;
 	is_running = false;
 	if (can_run && input_check_held(input.skip)) {

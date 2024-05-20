@@ -14,11 +14,9 @@ image_type = "";
 frame = noone;
 
 skip_simb = "►";
-	
-restarting_dialog = true;
-restarting_str_num = 0;
-	
-dialog_swich = 0;
+
+if (!variable_instance_exists(id, "side")) side = dir.up;
+
 is_showing_dialog_window = true;
 dialog_window_sprite = spr_dialog_window;
 dialog_window_position = new Vector2(obj_camera.view_width / 2, 5);
@@ -77,8 +75,8 @@ skip_arrow.on_press = function() {
 	}
 }
 skip_arrow.on_release = function() {
-	keyboard_key_release(vk_enter);
 	keyboard_key_release(vk_shift);
+	keyboard_key_release(vk_enter);
 }
 
 next_dialog = function() {

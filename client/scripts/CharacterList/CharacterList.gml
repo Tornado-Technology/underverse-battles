@@ -105,7 +105,7 @@ function CharacterList() {
 		[
 	
 			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_xanastasia_frame),
-			new Character(obj_character_xanastasia_demon, "XAnastasia", "Demon", spr_frames_xanastasia_demon)
+			new Character(obj_character_xanastasia_demon, "XAnastasia", "Demon", spr_xanastasia_demon_frame)
 
 		]
 	];

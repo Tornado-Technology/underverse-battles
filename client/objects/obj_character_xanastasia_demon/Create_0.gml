@@ -1,7 +1,7 @@
 event_inherited();
 
 
-frame = spr_frames_xanastasia_demon
+frame = spr_xanastasia_demon_frame;
 
 idle_animation = spr_xanastasia_demon_idle;
 after_battle_animation = spr_xanastasia_demon_idle;

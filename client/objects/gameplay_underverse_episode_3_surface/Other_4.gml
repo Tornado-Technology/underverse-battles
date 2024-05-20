@@ -24,6 +24,10 @@ room_start_callback(function() {
 	sans.sprite_index = sans.standing_up_animation;
 	sans.follow(frisk);
 	audio_stop_sound(snd_park);
+}, room_underverse_episode_3_muffet_bakery, room_underverse_episode_3_surface);
+
+room_start_callback(function() {
+	frisk.control();
 }, room_underverse_episode_3_muffet_bakery);
 
 room_start_callback(function() {

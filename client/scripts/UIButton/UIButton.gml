@@ -153,8 +153,8 @@ function UIButtonClass(text, sprite, callback) constructor {
 			
 			var shift = 2;
 			var halign_shift_left = 2; var halign_shift_right = 2;
-			if (halign == fa_left) { halign_shift_left = 1; halign_shift_right = 4; }
-			if (halign == fa_right) { halign_shift_left = 4; halign_shift_right = 1; }
+			if (halign == fa_left) { halign_shift_left = 4; halign_shift_right = 1; }
+			if (halign == fa_right) { halign_shift_left = 1; halign_shift_right = 4; }
 			var valign_shift_top = 2; var valign_shift_bottom = 2;
 			if (valign == fa_top) { valign_shift_top = 4; valign_shift_bottom = 1; }
 			if (valign == fa_bottom) { valign_shift_top = 1; valign_shift_bottom = 4; }
