@@ -1,4 +1,3 @@
 /// @desc
-button = UITextButton("", function() {
-	show_message("");
-});
+button = new UITextButton(0, "")
+	.set_bind_input(input.back);

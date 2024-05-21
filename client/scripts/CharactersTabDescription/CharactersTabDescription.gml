@@ -145,16 +145,15 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	}
 	
 	static create_buttons = function() {
-		buttons[0] = UITextButton(menu_instance.text.attacks);
-		buttons[1] = UITextButton(menu_instance.text.description);
-		buttons[2] = UITextButton(menu_instance.text.back);
+		buttons[0] = new UITextButton(0, menu_instance.text.attacks);
+		buttons[1] = new UITextButton(1, menu_instance.text.description);
+		buttons[2] = new UITextButton(2, menu_instance.text.back);
 		
 		for (var i = 0; i < array_length(buttons); i++) {
 			buttons[i].is_auto_focus = false;
 			buttons[i].text_hover_color = color_selected;
-			buttons[i]._id = i;
-			buttons[i].on_hover = function(button) { on_hover_on_button(button._id) };
-			buttons[i].callback = function(button) { on_click_on_button(button._id) };
+			buttons[i].on_hover = function(button) { on_hover_on_button(button.index) };
+			buttons[i].callback = function(button) { on_click_on_button(button.index) };
 		}
 	}
 	

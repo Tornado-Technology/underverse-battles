@@ -8,7 +8,7 @@ function VirtualKey(sprite, key) {
 function ClassVirtualKey(sprite, key) constructor {
 	self.key = key;
 	
-	UI = UIImageButton(sprite);
+	UI = new UIImageButton(0, sprite);
 	
 	static init = function() {
 		keyboard_key_release(key)

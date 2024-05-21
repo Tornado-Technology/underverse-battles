@@ -17,7 +17,7 @@ function ClassSettingsMobileElement(menu_instance, sprite) constructor {
 	key_position = "";
 	key_scale = "";
 	
-	UI = UIImageButton(sprite);
+	UI = new UIImageButton(0, sprite);
 	
 	static change_sprite = function(sprite) {
 		self.sprite = sprite;

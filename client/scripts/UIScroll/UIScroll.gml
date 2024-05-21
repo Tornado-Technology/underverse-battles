@@ -41,12 +41,12 @@ function ClassUIScroll(width, height, callback) constructor {
 	}
 	
 	static init = function() {
-		arrows.up = UIImageButton(spr_ui_arrow);
+		arrows.up = new UIImageButton(0, spr_ui_arrow);
 		arrows.up.padding = 5;
 		arrows.up.on_held = function() {
 			scroll_up();
 		}
-		arrows.down = UIImageButton(spr_ui_arrow);
+		arrows.down = new UIImageButton(1, spr_ui_arrow);
 		arrows.down.padding = 5;
 		arrows.down.on_held = function() {
 			scroll_down();

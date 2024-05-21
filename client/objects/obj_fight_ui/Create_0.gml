@@ -78,9 +78,10 @@ text_name_actions_height = [0, 0, 0];
 special_action_position_x = size.x - 90;
 special_action_position_y = size.y - 40;
 
-special_button = UIImageButton(spr_empty, function() {
-	obj_fight_input.special_action();
-});
+special_button = new UIImageButton(0, spr_empty)
+	.set_on_press(function() {
+		obj_fight_input.special_action();
+	});
 
 if (is_mobile || mobile_mode) {
 	special_action_position_x = data_get("Settings.MobileControls.Buttons.SpecialAction.Position.X");

@@ -18,9 +18,10 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	static base_on_draw_cell = on_draw_cell;
 	static base_on_click_on_character = on_click_on_character;
 	
-	button_close = UITextButton(menu_instance.text.back, function() {
-		close();
-	});
+	button_close = new UITextButton(0, menu_instance.text.back)
+		.set_on_press(function() {
+			close();
+		});
 	
 	// Overwrited in object
 	static on_click_on_character = function(_id) {

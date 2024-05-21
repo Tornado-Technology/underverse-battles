@@ -27,8 +27,8 @@ function ClassUIControllerJoystick() constructor {
 	self.input[$ vk_left] = new __input(false);
 	
 	input_vector = new Vector2(0, 0);
-	handle = UIImageButton(handle_image);
-	border = UIImageButton(border_image);
+	handle = new UIImageButton(0, handle_image);
+	border = new UIImageButton(1, border_image);
 	
 	death_color = c_black;
 	is_show_death_radius = true;

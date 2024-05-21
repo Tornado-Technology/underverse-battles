@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"UIImage",
+  "%Name":"UITextButton",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"UIImage",
+  "name":"UITextButton",
   "parent":{
     "name":"UI",
     "path":"folders/Scripts/Local/UI.yy",

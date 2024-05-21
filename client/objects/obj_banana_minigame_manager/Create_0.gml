@@ -17,10 +17,11 @@ trnaslate_highscore = translate_get("MiniGame.Highscore");
 
 text_width_back = string_real_width(translate_back, global._font_main_determination);
 
-button_exit = UITextButton(translate_back, function() {
-	global.__ui_controls_instance.enable = false;
-	room_goto(room_menu);
-});
+button_exit = new UITextButton(0, translate_back)
+	.set_on_press(function() {
+		global.__ui_controls_instance.enable = false;
+		room_goto(room_menu);
+	});
 
 if (is_mobile) {
 	global.__ui_controls_instance.enable = true;

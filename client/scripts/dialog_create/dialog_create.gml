@@ -1,24 +1,13 @@
-function dialog_create(str, _side = dir.up) {
+function dialog_create(str, side = dir.up) {
 	var dialog = str;
 	if (!is_array(str)) {
 		dialog = translate_get("Dialog." + str);
 	}
 	
-	var inst = instance_create(obj_dialog, {side: _side});	
-	inst.dialog = dialog;
-	
-	return inst;
-}
-
-function choise_create(str, callback) {
-	var dialog = str;
-	if (!is_array(str)) {
-		dialog = translate_get("Dialog." + str);
-	}
-	
-	var inst = instance_create(obj_choise, {side: dir.up});	
-	inst.dialog = dialog;
-	inst.callback = callback;
+	var inst = instance_create(obj_dialog, {
+		dialog: dialog,
+		side: side,
+	});	
 	
 	return inst;
 }

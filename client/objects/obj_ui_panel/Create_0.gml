@@ -9,15 +9,13 @@ free_index = 0;
 /// @param {String} name
 /// @param {Function} callback
 add_button = function(name, callback) {
-	var button = UITextButton(name, callback);
-	button.index = free_index;
+	var button = new UITextButton(free_index, name)
+		.set_on_press(callback)
+		.set_on_hover(function(self_button) {
+			buttons[index].set_focus(false);
+			index = self_button.index;
+		});
 	free_index ++;
-	button.on_hover = function(self_button) {
-		buttons[index].set_focus(false);
-		index = self_button.index;
-	}
-	
-	if (is_mobile) { button.is_auto_focus = false; }
 	
 	array_push(buttons, button);
 };

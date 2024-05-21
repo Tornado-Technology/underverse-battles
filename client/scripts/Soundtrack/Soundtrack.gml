@@ -58,6 +58,5 @@ function Soundtrack(snd, name = "Name", author = "NotSeted", description = "Desc
 	source.index = soundtrack_get_count("all");
 	source.index_au = soundtrack_get_count("au", au);
 	array_push(soundtrack_list, source);
-	logger.debug($"{array_length(soundtrack_list)}");
 	return source;
 }

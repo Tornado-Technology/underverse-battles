@@ -19,8 +19,7 @@ draw_set_colour(text_color);
 draw_text_ext(dialog_window_position.x - dialog_window_size.x / 2 + text_indent, dialog_window_position.y + text_indent, str, 16, 300);
 
 //Answer options
-draw_set_halign(fa_center);
 if (act == 2 && pos == string_length(cur_text)) {
-	answer_options[0].draw(dialog_window_position.x - dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
-	answer_options[1].draw(dialog_window_position.x + dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
+	selector.draw(0, dialog_window_position.x - dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
+	selector.draw(1, dialog_window_position.x + dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
 }

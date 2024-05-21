@@ -14,12 +14,13 @@ audio_play_sound(snd_gameover, 2, true);
 text_menu = translate_get("Gameover.Menu");
 
 buttons = {
-	menu: UITextButton(text_menu, function() {
-		room_goto(room_menu);
-		instance_destroy(obj_statistics);
-		audio_stop_sound(snd_gameover);
-		audio_play_sound(snd_click, 0, false);
-	}),
+	menu: new UITextButton(0, text_menu)
+		.set_on_press(function() {
+			room_goto(room_menu);
+			instance_destroy(obj_statistics);
+			audio_stop_sound(snd_gameover);
+			audio_play_sound(snd_click, 0, false);
+		}),
 }
 
 button_count = array_length(variable_struct_get_names(buttons));

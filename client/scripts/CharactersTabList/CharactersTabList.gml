@@ -21,9 +21,10 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 	static base_on_draw_cell = on_draw_cell;
 	static base_on_click_on_character = on_click_on_character;
 	
-	button_close = UITextButton(menu_instance.text.back, function() {
-		close();
-	});
+	button_close = new UITextButton(0, menu_instance.text.back)
+		.set_on_press(function() {
+			close();
+		});
 	
 	static on_click_on_character = function(_id) {
 		menu_instance.get_tab(tab_to_transfer).change_character(_id);

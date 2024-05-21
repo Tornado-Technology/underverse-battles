@@ -1,24 +1,14 @@
 event_inherited();
 
-sprite_index = spr_empty;
+if (!variable_instance_exists(id, "callback")) callback = function() {}
 
-answer_options = [];
-current_option = 0;
-answers_amount = 0;
-
-index = undefined;
-
-callback = undefined;
-
-input_on_press = function(amount) {
-	audio_play_sound_once(snd_click);
-	
-	if (!answer_options[current_option].focus) {
-		answer_options[current_option].set_focus(true);
-		return;
-	}
-
-	answer_options[current_option].set_focus(false);
-	current_option += amount;
-	answer_options[current_option].set_focus(true);
-};
+selector = new UITextButtonSelector([dialog[1], dialog[2]], input.left, input.right) 
+	.set_bind_input(input.action)
+	.set_color(c_white, c_yellow)
+	.set_align(fa_center, fa_bottom)
+	.set_separate(16, 130)
+	.set_on_press(function(self_button) {
+		audio_play_sound_once(snd_selection);
+		callback(self_button.index);
+		instance_destroy();
+	});

@@ -75,7 +75,7 @@ function ClassCharactersTab(menu_instance) constructor {
 		array_clear(character_frames);
 		
 		for (var i = 0; i < array_length(characters); i++) {
-			character_frames[i] = UIImageButton(characters[i].frame);
+			character_frames[i] = new UIImageButton(i, characters[i].frame);
 			character_frames[i]._id = i;
 			character_frames[i].is_auto_focus = false;
 			character_frames[i].is_animation_hover = true;

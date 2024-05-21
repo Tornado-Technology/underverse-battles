@@ -22,8 +22,8 @@ function ClassSettingsMobileControl(menu_instance)  constructor {
 	position_y = 100;
 
 	UI = {
-		right: UIImageButton(spr_ui_arrow),
-		left: UIImageButton(spr_ui_arrow)
+		right: new UIImageButton(0, spr_ui_arrow),
+		left: new UIImageButton(1, spr_ui_arrow)
 	}
 	UI.right.padding = 5;
 	UI.left.padding = 5;

@@ -14,9 +14,10 @@ press_button = function() {
 	instance_destroy();
 }
 
-button_cancel = UITextButton(cancel, function() {
-	press_button();
-})
+button_cancel = new UITextButton(0, cancel)
+	.set_on_press(function() {
+		press_button();
+	});
 
 disconnect_callback = on_network_connection_timeout.connect(function() {
 	display_show_message_info("No connection to server", c_red);

@@ -1,21 +1,20 @@
 sprite_index = spr_empty;
 
+if (!variable_instance_exists(id, "dialog")) dialog = [];
+if (!variable_instance_exists(id, "side")) side = dir.up;
+
 pos = 0;
 act = 1;
 cur_text = "";
 str = "";
 str_num = 0;
 cur_num = 0;
-
-dialog = [];
 	
 name = "";
 image_type = "";
 frame = noone;
 
 skip_simb = "►";
-
-if (!variable_instance_exists(id, "side")) side = dir.up;
 
 is_showing_dialog_window = true;
 dialog_window_sprite = spr_dialog_window;
@@ -32,7 +31,36 @@ voice = snd_voice_main;
 font = global._font_main_determination;
 text_color = c_white;
 
+#region Buttons
+
+skip_arrow = new UIImageButton(0, spr_ui_arrow)
+	.set_padding(5)
+	.set_bind_input(input.skip)
+	.set_on_press(function() {
+		if (pos < string_length(cur_text)) {
+			str = cur_text;
+			pos = string_length(cur_text);
+		}
+	});
+	
+next_arrow = new UIImageButton(0, spr_ui_arrow)
+	.set_padding(5)
+	.set_bind_input(input.action)
+	.set_on_press(function() {
+		if (pos == string_length(cur_text)) {
+			if (cur_num == str_num - 1) {
+				instance_destroy();
+			}
+			else {
+				next_dialog();
+			}
+		}
+	});
+
+#endregion
+
 #region Methods
+
 set_frame = function (character_name, character_emote, character_frame) {
 	if (name == character_name && character_emote == "") {
 		frame = character_frame;
@@ -61,22 +89,6 @@ set_font = function (character_name, character_emote, character_font, color) {
 		font = character_font;
 		text_color = color;
 	}
-}
-
-skip_arrow = UIImageButton(spr_ui_arrow);
-skip_arrow.padding = 5;
-
-skip_arrow.on_press = function() {
-	if (pos < string_length(cur_text)) {
-	    keyboard_key_press(vk_shift);
-	}
-	else {
-		keyboard_key_press(vk_enter);
-	}
-}
-skip_arrow.on_release = function() {
-	keyboard_key_release(vk_shift);
-	keyboard_key_release(vk_enter);
 }
 
 next_dialog = function() {

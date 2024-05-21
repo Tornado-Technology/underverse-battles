@@ -24,27 +24,25 @@ switch (tab) {
 	case 0:
 		var i = 0;
 		repeat(menu_button_count) {
-			buttons[i].draw(dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * (i + 1));
+			ui_shop.main_button.draw(i, dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * (i + 1));
 			i++;
 		}
 		break;
 	case 1:
 		var i = 0;
-		repeat(array_length(item_buttons)) {
-			item_buttons[i].draw(gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
+		repeat(item_button_count) {
+			ui_shop.item_button.draw(i, gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
 			i++;
 		}
 		break;
 	case 3:
 		var i = 0;
-		repeat(array_length(talk_buttons)) {
-			talk_buttons[i].draw(gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
+		repeat(talk_button_count) {
+			ui_shop.talk_button.draw(i, gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
 			i++;
 		}
 		break;
 }
-
-if (act < 1) exit;
 
 // Monolog
 draw_set_font(font);
@@ -69,4 +67,10 @@ draw_text(gui_position.right_down.x - padding, dividing_line_position_up.y + pad
 // Skip arrow
 if ((tab == 0 || tab == 1 || tab == 3) && cur_num >= str_num - 1) exit;
 
-skip_arrow.draw(dividing_line_position_down.x - skip_arrow.width - 5, dividing_line_position_down.y - skip_arrow.height - 5, 1, 270);
+var arrow_position = new Vector2(dividing_line_position_down.x - skip_arrow.width - 5, dividing_line_position_down.y - skip_arrow.height - 5);
+if (pos < string_length(cur_text)) {
+	skip_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
+}
+else {
+	next_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
+}

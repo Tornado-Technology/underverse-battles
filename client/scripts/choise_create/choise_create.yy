@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"choise_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"choise_create",
+  "parent":{
+    "name":"Dialog",
+    "path":"folders/Scripts/Local/System/Dialog.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -30,9 +30,10 @@ if (frame != noone) {
 }	
 
 // Skip arrow
-skip_arrow.draw(
-	dialog_window_position.x + dialog_window_size.x / 2 - skip_arrow.width,
-	dialog_window_position.y + dialog_window_size.y - skip_arrow.height,
-	1,
-	270
-);
+var arrow_position = new Vector2(dialog_window_position.x + dialog_window_size.x / 2 - skip_arrow.width, dialog_window_position.y + dialog_window_size.y - skip_arrow.height);
+if (pos < string_length(cur_text)) {
+	skip_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
+}
+else {
+	next_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
+}
