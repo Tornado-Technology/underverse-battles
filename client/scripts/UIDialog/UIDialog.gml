@@ -9,7 +9,6 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	w = 0;
 	
 	letter_position = 0;
-	act = 1;
 	current_text = "";
 	size = array_length(dialog);
 	current_index = 0;
@@ -46,6 +45,14 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	static set_delay = function(time_delay = self.time_delay) {
 		self.current_delay = time_delay;
 		return self;
+	}
+	
+	static is_flipping = function() {
+		return letter_position < string_length(current_text);
+	}
+	
+	static is_final_text = function() {
+		return current_index == size - 1;
 	}
 	
 	static set_dialog = function(index) {
