@@ -68,8 +68,6 @@ function UITextButton(index, text, font = global._font_main_determination) : UIB
 	}
 	
 	static set_hover = function(position_x, position_y) {
-		padding = 5;
-			
 		var shift = 2;
 		var halign_shift_left = 2; var halign_shift_right = 2;
 		if (halign == fa_left) { halign_shift_left = 4; halign_shift_right = 1; }

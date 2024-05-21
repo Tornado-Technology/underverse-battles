@@ -1736,6 +1736,7 @@
     {"id":{"name":"UIButton","path":"scripts/UIButton/UIButton.yy",},},
     {"id":{"name":"UIControllerArrows","path":"scripts/UIControllerArrows/UIControllerArrows.yy",},},
     {"id":{"name":"UIControllerJoystick","path":"scripts/UIControllerJoystick/UIControllerJoystick.yy",},},
+    {"id":{"name":"UIDialog","path":"scripts/UIDialog/UIDialog.yy",},},
     {"id":{"name":"UIImageButton","path":"scripts/UIImageButton/UIImageButton.yy",},},
     {"id":{"name":"UIInputBox","path":"scripts/UIInputBox/UIInputBox.yy",},},
     {"id":{"name":"UIScroll","path":"scripts/UIScroll/UIScroll.yy",},},

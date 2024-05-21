@@ -135,6 +135,7 @@ function UIButton() constructor {
 		if (is_binded && (needs_hover && hover || !needs_hover)) {
 			if (input_check_pressed(bind)) {
 				on_press(self);
+				keyboard_clear_lastkey();
 			}
 		}
 	}

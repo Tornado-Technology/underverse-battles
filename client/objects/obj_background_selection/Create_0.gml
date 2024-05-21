@@ -79,6 +79,7 @@ button_y = height / 2 - 10;
 
 buttons = [
 	new UITextButton(0, translate_get().Menu.CustomSound.Cancel)
+		.set_padding(5)
 		.set_on_press(function() {
 			instance_destroy();
 		}),

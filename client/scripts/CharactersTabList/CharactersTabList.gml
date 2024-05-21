@@ -22,6 +22,7 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 	static base_on_click_on_character = on_click_on_character;
 	
 	button_close = new UITextButton(0, menu_instance.text.back)
+		.set_padding(5)
 		.set_on_press(function() {
 			close();
 		});

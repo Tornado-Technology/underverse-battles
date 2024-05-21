@@ -15,6 +15,7 @@ text_menu = translate_get("Gameover.Menu");
 
 buttons = {
 	menu: new UITextButton(0, text_menu)
+		.set_padding(5)
 		.set_on_press(function() {
 			room_goto(room_menu);
 			instance_destroy(obj_statistics);

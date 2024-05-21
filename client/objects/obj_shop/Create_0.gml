@@ -28,21 +28,21 @@ menu_button_count = array_length(menu_button_text);
 
 // Items
 items = [
-	"Item 1",
-	"Item 2",
-	"Item 3",
-	"Item 4",
-	"Exit",
+	{name: "Item 1", descroption: "Desc 1", cost: 0},
+	{name: "Item 2", descroption: "Desc 2", cost: 0},
+	{name: "Item 3", descroption: "Desc 3", cost: 0},
+	{name: "Item 4", descroption: "Desc 4", cost: 0},
+	{name: "Exit"},
 ];
 item_button_count = array_length(items);
 
 // Talk
 talks = [
-	"Talk 1",
-	"Talk 2",
-	"Talk 3",
-	"Talk 4",
-	"Exit",
+	{name: "Talk 1", monolog: ["I say 1"], cost: 0},
+	{name: "Talk 2", monolog: ["I say 2"], cost: 0},
+	{name: "Talk 3", monolog: ["I say 3"], cost: 0},
+	{name: "Talk 4", monolog: ["I say 4"], cost: 0},
+	{name: "Exit"},
 ];
 talk_button_count = array_length(talks);
 
@@ -59,7 +59,7 @@ sell_monolog = ["No!"];
 greeting_monolog = ["Hello!"];
 item_monolog = ["Buy!"];
 talk_monolog = ["Ask!"];
-farewell_monolog = ["Bye!"];
+farewell_monolog = ["Bye 1!", "Bye 2!"];
 
 voice = snd_voice_main;
 font = global._font_main_determination;

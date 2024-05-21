@@ -10,6 +10,7 @@ free_index = 0;
 /// @param {Function} callback
 add_button = function(name, callback) {
 	var button = new UITextButton(free_index, name)
+		.set_padding(5)
 		.set_on_press(callback)
 		.set_on_hover(function(self_button) {
 			buttons[index].set_focus(false);

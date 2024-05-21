@@ -32,6 +32,7 @@
     {"name":"Menu","order":4,"path":"scripts/Menu/Menu.yy",},
     {"name":"Tag","order":2,"path":"scripts/Tag/Tag.yy",},
     {"name":"UIButton","order":5,"path":"scripts/UIButton/UIButton.yy",},
+    {"name":"UIDialog","order":1,"path":"scripts/UIDialog/UIDialog.yy",},
     {"name":"UIImageButton","order":16,"path":"scripts/UIImageButton/UIImageButton.yy",},
     {"name":"UIScroll","order":3,"path":"scripts/UIScroll/UIScroll.yy",},
     {"name":"UIShift","order":9,"path":"scripts/UIShift/UIShift.yy",},

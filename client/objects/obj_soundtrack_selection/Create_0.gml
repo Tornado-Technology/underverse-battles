@@ -82,10 +82,12 @@ button_y = height / 2 - 10;
 
 buttons = [
 	new UITextButton(0, translate_get().Menu.CustomSound.Default)
+		.set_padding(5)
 		.set_on_press(function() {
 			soundtrack_set(undefined);
 		}),
 	new UITextButton(1, translate_get().Menu.CustomSound.Cancel)
+		.set_padding(5)
 		.set_on_press(function() {
 			instance_destroy();
 		}),

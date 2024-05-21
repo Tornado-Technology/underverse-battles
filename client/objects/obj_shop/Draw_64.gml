@@ -65,7 +65,7 @@ draw_set_halign(fa_right);
 draw_text(gui_position.right_down.x - padding, dividing_line_position_up.y + padding * 5, "0/0");
 
 // Skip arrow
-if ((tab == 0 || tab == 1 || tab == 3) && cur_num >= str_num - 1) exit;
+if (tab == 0 || tab == 1 || tab == 3) exit;
 
 var arrow_position = new Vector2(dividing_line_position_down.x - skip_arrow.width - 5, dividing_line_position_down.y - skip_arrow.height - 5);
 if (pos < string_length(cur_text)) {

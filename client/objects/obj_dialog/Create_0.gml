@@ -92,7 +92,6 @@ set_font = function (character_name, character_emote, character_font, color) {
 }
 
 next_dialog = function() {
-	keyboard_clear(keyboard_lastkey);
 	cur_num++;
 	event_user(2);
 }

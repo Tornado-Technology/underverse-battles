@@ -7,7 +7,9 @@ function UIShop(main_button_texts, item_button_texts, talk_button_texts, set_tab
 	
 	main_button = new UITextButtonSelector(main_button_texts)
 		.set_bind_input(input.action)
+		.set_padding(2)
 		.set_color(c_white, c_yellow)
+		.set_align(fa_left)
 		.set_on_press(function(self_button) {
 			audio_play_sound_once(snd_selection);
 			set_tab_callback(self_button.index + 1);
@@ -15,14 +17,18 @@ function UIShop(main_button_texts, item_button_texts, talk_button_texts, set_tab
 	
 	item_button = new UITextButtonSelector(item_button_texts)
 		.set_bind_input(input.action)
-		.set_color(c_white, c_yellow);
+		.set_padding(2)
+		.set_color(c_white, c_yellow)
+		.set_align(fa_left);
 	item_button.button[item_button_count - 1].set_on_press(function() {
 		set_tab_callback(0);
 	});
 	
 	talk_button = new UITextButtonSelector(talk_button_texts)
 		.set_bind_input(input.action)
+		.set_padding(2)
 		.set_color(c_white, c_yellow)
+		.set_align(fa_left);
 	talk_button.button[talk_button_count - 1].set_on_press(function() {
 		set_tab_callback(0);
 	});

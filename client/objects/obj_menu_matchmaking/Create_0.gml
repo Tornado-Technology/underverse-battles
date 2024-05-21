@@ -15,6 +15,7 @@ press_button = function() {
 }
 
 button_cancel = new UITextButton(0, cancel)
+	.set_padding(5)
 	.set_on_press(function() {
 		press_button();
 	});

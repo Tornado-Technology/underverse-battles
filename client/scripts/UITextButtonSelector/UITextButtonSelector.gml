@@ -8,6 +8,7 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 	var i = 0;
 	repeat (count) {
 		button[i] = new UITextButton(i, button_texts[i])
+			.set_padding(5)
 			.set_on_hover(function(self_button) {
 				button[current_option].set_focus(false);
 				current_option = self_button.index;
@@ -16,6 +17,15 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 		i++;
 	}
 	button[0].focus();
+	
+	static set_padding = function(padding) {
+		var i = 0;
+		repeat (count) {
+			button[i].padding = padding;
+			i++;
+		}
+		return self;
+	}
 	
 	static set_color = function(text_color, text_hover_color) {
 		var i = 0;
@@ -27,7 +37,7 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 		return self;
 	}
 	
-	static set_align = function(halign, valign = self.valign) {
+	static set_align = function(halign, valign = button[0].valign) {
 		var i = 0;
 		repeat (count) {
 			button[i].halign = halign;

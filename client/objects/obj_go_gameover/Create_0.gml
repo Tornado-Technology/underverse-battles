@@ -16,6 +16,7 @@ text_restart = translate_get("Gameover.Restart");
 
 buttons = {
 	menu: new UITextButton(0, text_menu)
+		.set_padding(5)
 		.set_on_press(function() {
 			room_goto(room_menu);
 			instance_destroy(obj_statistics);
@@ -23,6 +24,7 @@ buttons = {
 			audio_play_sound(snd_click, 0, false);
 		}),
 	restart: new UITextButton(1, text_restart)
+		.set_padding(5)
 		.set_on_press(function() {
 			room_goto(room_fight);
 			instance_destroy(obj_statistics);

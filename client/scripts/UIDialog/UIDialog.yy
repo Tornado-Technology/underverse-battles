@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"UIDialog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIDialog",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Scripts/Local/UI/Menu.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
