@@ -24,6 +24,7 @@ string_cross = [];
 soul_cross = noone;
 
 // Data
+ink_has_gone = false;
 fight_position_event = false;
 player0_hp_turn2 = 100;
 
@@ -86,7 +87,12 @@ cutscenes = [
 		[cutscene_wait_dialog_end],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting3],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting3],
-		[cutscene_choise, episode + "Choise1", function (index) { cutscene_create(cutscenes[index + 1]); }]
+		[cutscene_choise, episode + "Choise1", function (index) {
+			if (index == 1) {
+				ink_has_gone = true;
+			}
+			cutscene_create(cutscenes[index + 1]);
+		}]
 	],
 	[
 		// Sans selected "Listen" (Index: 1)
@@ -131,8 +137,8 @@ cutscenes = [
 			part_particles_create(global.part_system_bullet, ink_sans.x + 3, ink_sans.y - 27, particle_pencil, 1);
 		}],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 1, 0, 1, c_black, false, fight_depth.ui_hight],
-		[cutscene_wait, 1],
+		[effect_fade, 1, 0.5, 1, c_black, false, fight_depth.ui_hight],
+		[cutscene_wait, 1.5],
 		// Empty XTale universe
 		[layer_background_sprite, background_id, spr_background_empty_xtale],
 		[cutscene_execute, function () { instance_destroy(background_animator); }],
@@ -154,7 +160,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sits_down],
 		[cutscene_wait_dialog_end],
 		// Ink and Cross are sitting together
-		[effect_fade, 1, 0, 1, c_black, false, fight_depth.ui],
+		[effect_fade, 0.9, 0.1, 1, c_black, false, fight_depth.ui],
 		[cutscene_wait, 1],
 		[cutscene_dialog_async, episode + "Dialog7_Line1"],
 		[cutscene_object_set_position, ink_sans, 10, 0],
@@ -165,7 +171,7 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting_looking_right],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 1, 0, 1, c_black, false, fight_depth.ui],
+		[effect_fade, 0.9, 0.1, 1, c_black, false, fight_depth.ui],
 		[cutscene_wait, 1],
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
@@ -230,7 +236,7 @@ cutscenes = [
 		[cutscene_character_move, ink_sans, 625, 0, 2],
 		[cutscene_character_move, cross, 625, 0, 2],
 		[cutscene_wait, 4],
-		[effect_fade, 1, 1, c_black, c_black, false, fight_depth.ui],
+		[effect_fade, 0.9, 0.1, 1, c_black, false, fight_depth.ui],
 		[cutscene_wait, 1],
 		// Ink and Cross are sitting
 		[cutscene_execute, function () {
@@ -248,7 +254,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting_right1],
 		[cutscene_object_set_sprtie, cross, spr_cross_left_calm],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 2, 0, 2, c_white, false, fight_depth.ui],
+		[effect_fade, 1.5, 0.5, 1.5, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		// Core Frisk
 		[layer_background_sprite, background_id, spr_background_dream],
@@ -260,7 +266,7 @@ cutscenes = [
 			core_frisk = instance_create_depth(240, 220, fight_depth.player, obj_prop, { sprite_index: spr_core_frisk_full });
 		}],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 2, 0, 1, c_white, false, fight_depth.ui],
+		[effect_fade, 1.5, 0.5, 1, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		// Back to Sans and Ink in forest park
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
@@ -289,7 +295,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting6],
 		[cutscene_wait_dialog_end],
 		[cutscene_execute, function () { audio_sound_gain(snd_park, 0, 2000); }],
-		[effect_fade, 2, 0, 2, c_white, false, fight_depth.ui],
+		[effect_fade, 1.5, 0.5, 1.5, c_white, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		[cutscene_execute, function () {
 			audio_stop_sound(snd_park);
@@ -337,7 +343,7 @@ cutscenes = [
 		[cutscene_character_move, sans, -300, 0, 2],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () { audio_sound_gain(snd_park, 0, 2000); }],
-		[effect_fade, 2, 0, 2, c_black, false, fight_depth.ui],
+		[effect_fade, 1.5, 0.5, 1.5, c_black, false, fight_depth.ui],
 		[cutscene_wait, 2],
 		[cutscene_execute, function () {
 			instance_destroy(sans);
@@ -371,8 +377,8 @@ cutscenes = [
 		[cutscene_character_move, ink_sans, 420, 0, 2],
 		[cutscene_object_set_sprtie, cross, spr_cross_left_closed_eyes],
 		[cutscene_wait_dialog_end],
-		[effect_fade, 1, 0, 1, c_black, false, fight_depth.ui],
-		[cutscene_wait, 1],
+		[effect_fade, 1, 0.5, 1, c_black, false, fight_depth.ui],
+		[cutscene_wait, 1.5],
 		// Cross alone
 		[cutscene_execute, function () {
 			instance_destroy(ink_sans);
@@ -619,9 +625,20 @@ cutscenes = [
 		[cutscene_wait, 2],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_lying_wounded],
 		[cutscene_dialog, episode + "Dialog22"],
-		[effect_fade, 2, 0, 2, c_white, false, fight_depth.ui],
+		[cutscene_execute, function() {
+			if (ink_has_gone) {
+				effect_fade(2, 0, 0, c_white, false, fight_depth.ui);
+			} else {
+				effect_fade(2, 0, 2, c_white, false, fight_depth.ui);
+			}
+		}],
 		[cutscene_wait, 2],
 		// Back to Ink and Sans
+		[cutscene_execute, function() {
+			if (ink_has_gone) {
+				room_goto(room_menu);
+			}
+		}],
 		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
 			audio_play_soundtrack(snd_park);
@@ -668,7 +685,7 @@ cutscenes = [
 		[audio_play_sound_once, snd_grab],
 		[cutscene_wait, 0.5],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_teleporting],
-		[cutscene_wait, 1],
+		[cutscene_wait, 1.5],
 		[audio_play_sound_once, snd_wing],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () {
@@ -710,7 +727,7 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog25_Line2"],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_left_down_teleporting],
-		[cutscene_wait, 1],
+		[cutscene_wait, 1.5],
 		[cutscene_object_set_sprtie, sans, spr_sans_down_looking_right_down],
 		[audio_play_sound_once, snd_wing],
 		[cutscene_wait, 2],
@@ -735,7 +752,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_walking_left_plaid],
 		[cutscene_object_set_speed, papyrus, 2, 180],
 		[cutscene_wait, 1],
-		[effect_fade, 3, 1, 0, c_black, false, fight_depth.ui],
+		[effect_fade, 3, 0, 0, c_black, false, fight_depth.ui],
 		[audio_sound_gain, snd_park, 0, 1000],
 		[cutscene_wait, 3],
 		[room_goto, room_menu]

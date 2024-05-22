@@ -2,14 +2,12 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	self.dialog = dialog;
 	self.font = font;
 	
-	halign = fa_center;
-	valign = fa_middle;
 	is_separate = false;
 	sep = 0;
 	w = 0;
 	
 	letter_position = 0;
-	current_text = "";
+	current_text = dialog[0];
 	size = array_length(dialog);
 	current_index = 0;
 	
@@ -22,13 +20,9 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	emotion = "";
 	
 	current_delay = 0;
-	time_delay = 2;
+	time_delay = 1;
 	
-	static set_align = function(halign, valign = self.valign) {
-		self.halign = halign;
-		self.valign = valign;
-		return self;
-	}
+	final_action = function() {}
 	
 	static set_separate = function(sep, w) {
 		self.is_separate = true;
@@ -47,6 +41,15 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 		return self;
 	}
 	
+	static set_voice = function(main_voice) {
+		self.main_voice = main_voice;
+	}
+	
+	static set_final_action = function(callback) {
+		self.final_action = callback;
+		return self;
+	}
+	
 	static is_flipping = function() {
 		return letter_position < string_length(current_text);
 	}
@@ -55,16 +58,20 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 		return current_index == size - 1;
 	}
 	
+	static set_new_dialog = function(dialog) {
+		self.dialog = dialog;
+		set_dialog(0);
+	}
+	
 	static set_dialog = function(index) {
+		letter_position = 0;
 		current_index = index;
 		
 		if (current_index < size) {
 			current_text = dialog[current_index];
-			process_current_text();
+		} else {
+			final_action();
 		}
-
-		letter_position = 0;
-		flip_dialog();
 	}
 	
 	static next_dialog = function() {
@@ -85,6 +92,8 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 			next_dialog();
 			exit;
 		}
+		
+		var simb = string_char_at(current_text, letter_position);
 	
 		if (letter_position == string_length(current_text))
 		    set_delay(time_delay);
@@ -104,9 +113,16 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	
 	static skip_dialog = function() {
 		letter_position = string_length(current_text);
+		
+		if (string_char_at(current_text, letter_position) == skip_char) {
+			next_dialog();
+			exit;
+		}
 	}
 	
-	static process_current_text = function() {
+	static process_current_text = function(callback) {
+		if (letter_position != 0) exit;
+		
 		if (string_char_at(current_text, 1) != "{") exit;
 
 		var i = 2;
@@ -127,11 +143,10 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 		}
 
 		current_text = string_delete(current_text, 1, i);
+		callback();
 	}
 	
-	static update = function(main_voice = self.main_voice) {
-		self.main_voice = main_voice;
-		
+	static update = function() {
 		if (current_delay > 0) {
 			current_delay -= dtime;
 		} else {
@@ -140,27 +155,17 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 		
 	}
 	
-	static draw = function(position_x, position_y, main_color = self.main_color) {
+	static draw = function(position_x, position_y, main_color = self.main_color, font = self.font) {
 		draw_reset();
 		
 		draw_set_font(font);
 		draw_set_color(main_color);
-		draw_set_halign(halign);
-		draw_set_valign(valign);
 		
-		var i = 0;
-		var width = 0;
-		var height = 0;
-		repeat (letter_position) {
-			if (is_separate && width > w) {
-				width = 0;
-				height += sep;
-			}
-			
-			draw_text(position_x + width, position_y + height, current_text[i]);
-			width += string_width(current_text[i]);
-			i++;
-		}
+		var visible_text = string_copy(current_text, 0, letter_position);
+		if (is_separate)
+			draw_text_ext(position_x, position_y, visible_text, sep, w);
+		else
+			draw_text(position_x, position_y, visible_text);
 		
 		draw_reset();
 	}

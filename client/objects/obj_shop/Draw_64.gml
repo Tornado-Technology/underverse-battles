@@ -20,55 +20,38 @@ draw_sprite_ext(border_sprite, 0,
 );
 
 // Menu buttons
-switch (tab) {
+switch (ui.tab) {
 	case 0:
-		var i = 0;
-		repeat(menu_button_count) {
-			ui_shop.main_button.draw(i, dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * (i + 1));
-			i++;
-		}
+		ui.draw_buttons(dividing_line_position_up.x + padding, dividing_line_position_up.y + padding, padding);
 		break;
 	case 1:
-		var i = 0;
-		repeat(item_button_count) {
-			ui_shop.item_button.draw(i, gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
-			i++;
-		}
-		break;
 	case 3:
-		var i = 0;
-		repeat(talk_button_count) {
-			ui_shop.talk_button.draw(i, gui_position.left_up.x + padding, gui_position.left_up.y + padding * (i + 1));
-			i++;
-		}
+		ui.draw_buttons(gui_position.left_up.x + padding, gui_position.left_up.y + padding, padding);
 		break;
 }
 
 // Monolog
-draw_set_font(font);
-draw_set_halign(fa_left);
-draw_set_colour(text_color);
-
 var text_position = new Vector2(gui_position.left_up.x + text_indent, gui_position.left_up.y + text_indent);
 var w = gui_position.right_up.x - gui_position.left_up.x - text_indent * 2;
-if (tab == 1 || tab == 3) {
+if (ui.tab == 1 || ui.tab == 3) {
 	text_position = new Vector2(dividing_line_position_up.x + text_indent, dividing_line_position_up.y + text_indent);
 	w = dividing_line_position_up.x - gui_position.left_up.x - text_indent * 2;
 }
 
-draw_text_ext(text_position.x, text_position.y, str, 16, w);
+ui.draw_dialog(text_position.x, text_position.y, 16, w);
 
 // Money
+draw_set_font(global._font_main_determination);
 draw_set_halign(fa_left);
 draw_text(dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * 5, "0G");
 draw_set_halign(fa_right);
 draw_text(gui_position.right_down.x - padding, dividing_line_position_up.y + padding * 5, "0/0");
 
 // Skip arrow
-if (tab == 0 || tab == 1 || tab == 3) exit;
+if (ui.tab == 0 || ui.tab == 1 || ui.tab == 3) exit;
 
 var arrow_position = new Vector2(dividing_line_position_down.x - skip_arrow.width - 5, dividing_line_position_down.y - skip_arrow.height - 5);
-if (pos < string_length(cur_text)) {
+if (ui.dialog.is_flipping()) {
 	skip_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
 }
 else {

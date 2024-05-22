@@ -3,7 +3,7 @@
 if (instance_exists(dlg)) {
 
 	var soul_ = obj_scene_soul;
-	if (dlg.cur_num == 3) {
+	if (dlg.ui.current_index == 3) {
 		if (!instance_exists(soul_)) {
 			var inst_soul_ = instance_create_depth(room_width - 320, room_height / 2, 0, soul_);
 			scene_soul_set_sprite(inst_soul_, spr_battle_soul_red);
@@ -11,7 +11,7 @@ if (instance_exists(dlg)) {
 			scene_soul_collider(inst_soul_, true, 60);
 		}
 	}
-	if (dlg.cur_num == 4) {
+	if (dlg.ui.current_index == 4) {
 		if (instance_exists(soul_))
 			instance_destroy(soul_);
 	}

@@ -1,37 +1,22 @@
-if (act < 1) exit;
-
 // Reset
 draw_reset();
 
-// Position
-dialog_window_position.y += side == dir.down ? shift : 0;
-
 // Dialog window
 if (is_showing_dialog_window) {
-	draw_sprite_ext(dialog_window_sprite, 0, dialog_window_position.x, dialog_window_position.y, dialog_window_xscale, dialog_window_yscale, 0, c_white, 1);
+	draw_sprite_ext(dialog_window_sprite, 0, dialog_window_position.x, dialog_window_position.y + shift, dialog_window_xscale, dialog_window_yscale, 0, c_white, 1);
 }
     
 // Main text
-draw_set_font(font);
-draw_set_halign(fa_left);
-draw_set_colour(text_color);
-		
-draw_text_ext(
-	dialog_window_position.x - dialog_window_size.x / 2 + text_indent,
-	dialog_window_position.y + text_indent, 
-	str, 
-	16,
-	dialog_window_size.x - text_indent * 2
-);
+ui.draw(dialog_window_position.x - dialog_window_size.x / 2 + text_indent, dialog_window_position.y + shift + text_indent, text_color, font);
     
 // Speaker's frame
 if (frame != noone) {
-	draw_sprite(frame, 0, dialog_window_position.x - dialog_window_size.x / 2 - 60, dialog_window_position.y + 16);
+	draw_sprite(frame, 0, dialog_window_position.x - dialog_window_size.x / 2 - 60, dialog_window_position.y + shift + 16);
 }	
 
 // Skip arrow
-var arrow_position = new Vector2(dialog_window_position.x + dialog_window_size.x / 2 - skip_arrow.width, dialog_window_position.y + dialog_window_size.y - skip_arrow.height);
-if (pos < string_length(cur_text)) {
+var arrow_position = new Vector2(dialog_window_position.x + dialog_window_size.x / 2 - skip_arrow.width, dialog_window_position.y + shift + dialog_window_size.y - skip_arrow.height);
+if (ui.is_flipping()) {
 	skip_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
 }
 else {

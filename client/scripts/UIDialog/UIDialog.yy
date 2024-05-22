@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"UIDialog",
   "parent":{
-    "name":"Menu",
-    "path":"folders/Scripts/Local/UI/Menu.yy",
+    "name":"UI",
+    "path":"folders/Scripts/Local/UI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,5 +1,3 @@
-if (act < 1) exit;
-
 // Reset
 draw_reset();
 
@@ -12,14 +10,14 @@ if (is_showing_dialog_window) {
 }
 
 // Main text
-draw_set_font(font);
-draw_set_halign(fa_left);
-draw_set_colour(text_color);
-
-draw_text_ext(dialog_window_position.x - dialog_window_size.x / 2 + text_indent, dialog_window_position.y + text_indent, str, 16, 300);
+ui.draw(dialog_window_position.x - dialog_window_size.x / 2 + text_indent, dialog_window_position.y + text_indent, text_color, font);
 
 //Answer options
-if (act == 2 && pos == string_length(cur_text)) {
+var arrow_position = new Vector2(dialog_window_position.x + dialog_window_size.x / 2 - skip_arrow.width, dialog_window_position.y + dialog_window_size.y - skip_arrow.height);
+if (ui.is_flipping()) {
+	skip_arrow.draw(arrow_position.x, arrow_position.y, 1, 270);
+}
+else {
 	selector.draw(0, dialog_window_position.x - dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
 	selector.draw(1, dialog_window_position.x + dialog_window_size.x / 4, dialog_window_position.y + dialog_window_size.y - text_indent);
 }

@@ -217,7 +217,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 		}
 		
 		if (menu_instance.input_enter) {
-			buttons[button_id].press();
+			buttons[button_id].on_press();
 		}
 	}
 	

@@ -1,6 +1,6 @@
-function cutscene_execute_by_dialog(str_num, callback) {
+function cutscene_execute_by_dialog(index, callback) {
 	if (instance_exists(instance_dialog)) {
-		if (instance_dialog.cur_num == str_num) {
+		if (instance_dialog.ui.current_index == index) {
 			callback();
 			return true;
 		}

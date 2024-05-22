@@ -9,7 +9,7 @@ creator		= "AU Community";
 
 // HP
 max_hp = 120;
-hp = 12000;
+hp = 120;
 
 // Damage
 damage = 6;

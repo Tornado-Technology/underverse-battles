@@ -1,12 +1,12 @@
 ///@desc Первая атака Икс Чары
 
 if (instance_exists(dlg)) {
-	if (dlg.cur_num == 2) {
+	if (dlg.ui.current_index == 2) {
 		if (!instance_exists(obj_bar_border_outline))
 			instance_create_depth(room_width - 320, 25, 0, obj_bar_border_outline);
 	}
 
-	if (dlg.cur_num == 4) {
+	if (dlg.ui.current_index == 4) {
 		if (instance_exists(obj_bar_border_outline))
 			instance_destroy(obj_bar_border_outline);
 	}

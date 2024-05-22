@@ -9,10 +9,10 @@ function create_aiming_gasterblaster_with_pattern(gasterblaster, target, fly_tim
 	var gasterblaster_size = object_get_sprite_max_size(gasterblaster);
 	var position = fight_random_outside_position(gasterblaster_size, gasterblaster_size);
 	var target_distance = 50;
-	var gasterblaster_direction = point_direction(position.x, position.y, soul_instance.x, soul_instance.y);
+	var gasterblaster_direction = point_direction(position.x, position.y, target.x, target.y);
 	var final_position = new Vector2(
-		soul_instance.x - target_distance * dcos(gasterblaster_direction),
-		soul_instance.y + target_distance * dsin(gasterblaster_direction)
+		target.x - target_distance * dcos(gasterblaster_direction),
+		target.y + target_distance * dsin(gasterblaster_direction)
 	);
 	
 	if (instance_exists(obj_battle_border)) {
@@ -20,8 +20,8 @@ function create_aiming_gasterblaster_with_pattern(gasterblaster, target, fly_tim
 		do {
 			target_distance += 10;
 			final_position = new Vector2(
-				soul_instance.x - target_distance * dcos(gasterblaster_direction),
-				soul_instance.y + target_distance * dsin(gasterblaster_direction)
+				target.x - target_distance * dcos(gasterblaster_direction),
+				target.y + target_distance * dsin(gasterblaster_direction)
 			);
 		}
 		until (!point_in_rectangle(final_position.x, final_position.y,

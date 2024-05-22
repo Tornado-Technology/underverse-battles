@@ -91,7 +91,7 @@ function ClassCharactersTabList(menu_instance, count_characters, max_count_frame
 		}
 		
 		if (menu_instance.input_enter && button_close.is_focus) {
-			button_close.press();
+			button_close.on_press();
 		}
 	}
 	

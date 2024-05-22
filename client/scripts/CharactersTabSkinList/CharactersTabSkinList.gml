@@ -100,7 +100,7 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 		}
 		
 		if (menu_instance.input_enter && button_close.is_focus) {
-			button_close.press();
+			button_close.on_press();
 		}
 	}
 	

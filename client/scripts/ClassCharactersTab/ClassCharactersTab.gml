@@ -41,10 +41,6 @@ function ClassCharactersTab(menu_instance) constructor {
 		is_show_selection = true;
 	}
 	
-	static activate_button = function() {
-		character_frames[selected_character].press();
-	}
-	
 	static on_draw_cell = function(array_x, array_y) {
 		var character_id = array_x + count_cell_horizontal * array_y;
 		
@@ -75,17 +71,17 @@ function ClassCharactersTab(menu_instance) constructor {
 		array_clear(character_frames);
 		
 		for (var i = 0; i < array_length(characters); i++) {
-			character_frames[i] = new UIImageButton(i, characters[i].frame);
+			character_frames[i] = new UIImageButton(i, characters[i].frame)
+				.set_bind_input(input.action)
+				.set_on_press(function(button) {
+					on_click_on_character(button._id);
+				})
+				.set_on_hover(function(button) {
+					on_hover_on_character(button._id);
+				});
 			character_frames[i]._id = i;
 			character_frames[i].is_auto_focus = false;
 			character_frames[i].is_animation_hover = true;
-			character_frames[i].callback = function(button) {
-				on_click_on_character(button._id);
-			}
-			
-			character_frames[i].on_hover = function(button) {
-				on_hover_on_character(button._id);
-			}
 		}
 		
 		if (array_length(character_frames) > 0) {
@@ -99,10 +95,6 @@ function ClassCharactersTab(menu_instance) constructor {
 		}
 		if (menu_instance.input_vertical != 0) {
 			change_selected_character(selected_character + count_cell_horizontal * menu_instance.input_vertical);
-		}
-		
-		if (menu_instance.input_enter) {
-			activate_button();
 		}
 	}
 	

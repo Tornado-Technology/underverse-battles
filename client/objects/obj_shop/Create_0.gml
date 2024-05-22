@@ -9,29 +9,24 @@ text_indent = 15;
 padding = 20;
 border_sprite = spr_bg_border;
 
-tab = 0;
-current_option = 0;
-current_item_option = 0;
-current_talk_option = 0;
-
 // NPC
 npc = obj_muffet_seller;
 
 // Menu
 menu_button_text = [
-	"Buy",
-	"Sell",
-	"Talk",
-	"Exit"
+	{name: "Buy"},
+	{name: "Sell"},
+	{name: "Talk"},
+	{name: "Exit"}
 ];
 menu_button_count = array_length(menu_button_text);
 
 // Items
 items = [
-	{name: "Item 1", descroption: "Desc 1", cost: 0},
-	{name: "Item 2", descroption: "Desc 2", cost: 0},
-	{name: "Item 3", descroption: "Desc 3", cost: 0},
-	{name: "Item 4", descroption: "Desc 4", cost: 0},
+	{name: "Item 1", description: "Desc 1", cost: 0},
+	{name: "Item 2", description: "Desc 2", cost: 0},
+	{name: "Item 3", description: "Desc 3", cost: 0},
+	{name: "Item 4", description: "Desc 4", cost: 0},
 	{name: "Exit"},
 ];
 item_button_count = array_length(items);
@@ -46,61 +41,24 @@ talks = [
 ];
 talk_button_count = array_length(talks);
 
-// For monolog
-pos = 0;
-act = 1;
-cur_text = "";
-str = "";
-str_num = 0;
-cur_num = 0;
-
-monolog = ["Hello!"];
-sell_monolog = ["No!"];
-greeting_monolog = ["Hello!"];
-item_monolog = ["Buy!"];
-talk_monolog = ["Ask!"];
-farewell_monolog = ["Bye 1!", "Bye 2!"];
+// Monolog
+greeting_dialog = ["Hello!"];
+item_dialog = ["Buy!"];
+sell_dialog = ["No!"];
+talk_dialog = ["Ask!"];
+farewell_dialog = ["Bye!"];
 
 voice = snd_voice_main;
 font = global._font_main_determination;
 text_color = c_white;
 
-skip_simb = "►";
-
 // For transition
 previous_room = undefined;
 transition_time = 0.4;
 
+ui = new UIShop(greeting_dialog, item_dialog, sell_dialog, talk_dialog, farewell_dialog, menu_button_text, items, talks);
+
 // Methods
-set_tab = function(index) {
-	tab = index;
-	
-	switch(tab) {
-		case 0:
-			monolog = greeting_monolog;
-			break;
-		case 1:
-			monolog = item_monolog;
-			break;
-		case 2:
-			monolog = sell_monolog;
-			break;
-		case 3:
-			monolog = talk_monolog;
-			break;
-		case 4:
-			monolog = farewell_monolog;
-			break;
-	}
-	act = 1;
-}
-
-next_dialog = function() {
-	keyboard_clear(keyboard_lastkey);
-	cur_num++;
-	event_user(2);
-}
-
 transition = function() {
 	effect_fade(transition_time, 0, transition_time, c_black, true, fight_depth.ui);
 	time_source_start(time_source_transition);
@@ -108,36 +66,29 @@ transition = function() {
 
 #region Buttons
 
-ui_shop = new UIShop(menu_button_text, items, talks, set_tab);
-
 skip_arrow = new UIImageButton(0, spr_ui_arrow)
 	.set_padding(5)
 	.set_bind_input(input.skip)
 	.set_on_press(function() {
-		if (pos < string_length(cur_text)) {
-			str = cur_text;
-			pos = string_length(cur_text);
-		}
+		ui.dialog.skip_dialog();
 	});
 	
 next_arrow = new UIImageButton(0, spr_ui_arrow)
 	.set_padding(5)
 	.set_bind_input(input.action)
 	.set_on_press(function() {
-		if (pos == string_length(cur_text)) {
-			if (cur_num == str_num - 1) {
-				switch(tab) {
-					case 2:
-						set_tab(0);
-						break;
-					case 4:
-						transition();
-						break;
-				}
+		if (ui.dialog.is_final_text()) {
+			switch(ui.tab) {
+				case 2:
+					ui.set_tab(0);
+					break;
+				case 4:
+					transition();
+					break;
 			}
-			else {
-				next_dialog();
-			}
+		}
+		else {
+			ui.dialog.next_dialog();
 		}
 	});
 
