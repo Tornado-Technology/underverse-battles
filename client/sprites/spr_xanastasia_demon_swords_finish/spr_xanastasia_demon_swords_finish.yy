@@ -30,7 +30,7 @@
   "origin":7,
   "parent":{
     "name":"swords",
-    "path":"folders/Characteres/X Anastasia/Sprites/Demon/swords.yy",
+    "path":"folders/Characteres/X Anastasia/Sprites/Char/Demon/swords.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -12,7 +12,6 @@ callback = function () {
 update = function () {
 		var bow_counst =  _power > 3 ?  4 : _power + 1;
 	if (instance_number(bow) <= bow_counst) {
-		
 		var radius = 120;
 		var cross = choose(false, true); 
 		var angle_offset = cross ?  360 : 240;

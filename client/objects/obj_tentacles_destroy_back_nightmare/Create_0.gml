@@ -12,4 +12,4 @@ change_scale = function(scale_new = scale_const, step) {
 	new_counst = scale_new;
 };
 
-
+draw_no_in_arena = false;

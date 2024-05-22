@@ -9,8 +9,8 @@
   "name":"obj_patterns_bone_nightmare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Patterns",
-    "path":"folders/Characteres/Nightmare/Attacks/Patterns.yy",
+    "name":"Slime",
+    "path":"folders/Attack Patterns/Slime.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

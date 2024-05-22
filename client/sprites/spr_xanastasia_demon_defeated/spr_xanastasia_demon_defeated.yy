@@ -37,7 +37,7 @@
   "origin":7,
   "parent":{
     "name":"Demon",
-    "path":"folders/Characteres/X Anastasia/Sprites/Demon.yy",
+    "path":"folders/Characteres/X Anastasia/Sprites/Char/Demon.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -4,7 +4,7 @@ on_border_created = function () {
 	pattern_instance.callback();
 };	
 
-switch (type) {
+switch (type) {	
 	case 0:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_tentacles, {
@@ -32,6 +32,15 @@ switch (type) {
 			bomb: obj_bomb_bone_nightmare,
 			slime: obj_fog_nightmare
 		});
+	break;
+	
+	case 4:
+	create_border(battle_border.up, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
+		pattern_instance = create_pattern(obj_pattern_stretched_tentacles, {
+			bomb: obj_bomb_bone_nightmare,
+			slime: obj_fog_nightmare
+		});
+
 	break;
 	
 	default:

@@ -9,8 +9,8 @@
   "name":"obj_patterns_bone_undyne",
   "overriddenProperties":[],
   "parent":{
-    "name":"Patterns",
-    "path":"folders/Characteres/Nightmare/Attacks/Patterns.yy",
+    "name":"Undyne",
+    "path":"folders/Characteres/Undyne.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

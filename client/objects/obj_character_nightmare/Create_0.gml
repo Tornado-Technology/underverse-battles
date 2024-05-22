@@ -45,8 +45,8 @@ fight_1_finish_animation = spr_nightmare_end1;
 // Actions
 passive_skill = PassiveSkill("Character.Nightmare.PassiveSkill");
 actions = [
-	Action("Character.Nightmare.Attack0",  call_attack_nightmare_2),
-	Action("Character.Nightmare.Attack1",  call_attack_nightmare_2),
+	Action("Character.Nightmare.Attack0",  call_attack_nightmare_0),
+	Action("Character.Nightmare.Attack1",  call_attack_nightmare_1),
 	Action("Character.Nightmare.Attack2", call_attack_nightmare_2)
 ];
 special_action = SpecialAction("Character.Nightmare.SpecialAttack", spr_special_attack_nightmare, spr_special_attack_nightmare_locked, call_attack_dream_special);

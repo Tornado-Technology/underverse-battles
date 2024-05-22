@@ -1,7 +1,7 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
-	slime_instance = instance_create_depth(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 10, fight_depth.bullet_outside_hight, obj_slime_nightmare, {
+	slime_instance = instance_create_depth(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 10, fight_depth.bullet_outside_hight, slime, {
 		image_xscale: 20,
 		image_yscale: 10
 	});
@@ -16,11 +16,11 @@ callback = function () {
 
 update_tentacles = function () {
 	var cood = [fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right), fight_random_integer(slime_instance.y - 50, slime_instance.y - 10)]
-	var tentacles = instance_create_depth(cood[0], cood[1], fight_depth.border, obj_tentacles_destroy_back_nightmare, {
+	var tentacles_instance = instance_create_depth(cood[0], cood[1], fight_depth.border, tentacles, {
 		image_angle: 90,	
 		image_xscale: 0
 	});
-	tentacles.change_scale(1.3, 0.05);
+	tentacles_instance.change_scale(1.3, 0.05);
 }
 
 	
