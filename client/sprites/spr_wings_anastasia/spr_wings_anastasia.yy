@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/X Anastasia/Sprite/Bullets.yy",
+    "name":"UnderverseBattles",
+    "path":"UnderverseBattles.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

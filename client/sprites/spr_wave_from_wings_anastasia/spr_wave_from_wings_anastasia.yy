@@ -28,9 +28,7 @@
   "origin":5,
   "parent":{
     "name":"Bullets",
-
     "path":"folders/Characteres/X Anastasia/Sprites/Char/Bullets.yy",
-
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

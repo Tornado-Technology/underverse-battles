@@ -6,19 +6,17 @@ on_border_created = function () {
 
 switch(type) {
 	case 0:
-		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_wings, {
-			wings: obj_wings_x_anastasia
+		create_border(battle_border.up-30, battle_border.down-20, battle_border.left-50, battle_border.right-50);
+		pattern_instance = create_pattern(obj_pattern_accelerating_feathers, {
+			feathers: obj_accelerating_feathers_xanastasia
 		});
 	break;
 	
 	case 1:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_wings473, {
-			
+		pattern_instance = create_pattern(obj_pattern_falling_feathers, {
+			feathers: obj_falling_feathers_xanastasia
 		});
-	
-	
 	break;
 
 	case 2:
@@ -31,7 +29,7 @@ switch(type) {
 	default:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_wings, {
-			wings: obj_wings_XAnastasia
+			wings: obj_wings_anastasia
 		});	
 	break;
 }

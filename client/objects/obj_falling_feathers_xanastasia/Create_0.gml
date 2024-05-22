@@ -3,11 +3,10 @@ image_alpha = 0
 depth = fight_depth.bullet_outside_hight;
 damage = 6
 soul_invulnerability = 20;
-time = 0;
+time = fight_random_float(-400,400);
+primal_x = x
 /* speed */
-_speed = 3.7;
+_speed = 0;
 
 /* alpha */
 alpha_step = 0.05;
-
-audio_play_sound_plugging(snd_projectile);
