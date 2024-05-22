@@ -21,6 +21,12 @@ switch(type) {
 	
 	break;
 
+	case 2:
+		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+		pattern_instance = create_pattern(obj_pattern_feathers, {
+			feathers: obj_feathers_xanastasia
+		});
+	break;
 
 	default:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
