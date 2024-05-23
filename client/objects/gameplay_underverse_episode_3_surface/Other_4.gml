@@ -30,6 +30,8 @@ room_start_callback(function() {
 	frisk.control();
 }, room_underverse_episode_3_muffet_bakery);
 
+
+
 room_start_callback(function() {
 	frisk.x = 1530;
 	frisk.y = 1100;
@@ -41,3 +43,31 @@ room_start_callback(function() {
 	sans.follow(frisk);
 	audio_play_soundtrack(snd_park);
 }, room_underverse_episode_3_surface, room_underverse_episode_3_muffet_bakery);
+
+room_start_callback(function() {
+	frisk.x = 239;
+	frisk.y = 246;
+	frisk.sprite_index = frisk.standing_up_animation;
+	frisk.control();
+	sans.x = 239;
+	sans.y = 289;
+	sans.sprite_index = sans.standing_up_animation;
+	sans.follow(frisk);
+	audio_stop_sound(snd_park);
+}, room_underverse_episode_3_ketchup_shop, room_underverse_episode_3_surface);
+
+room_start_callback(function() {
+	frisk.control();
+}, room_underverse_episode_3_ketchup_shop);
+
+room_start_callback(function() {
+	frisk.x = 1919;
+	frisk.y = 1100;
+	frisk.sprite_index = frisk.standing_down_animation;
+	frisk.control();
+	sans.x = 1919;
+	sans.y = 1084;
+	sans.sprite_index = sans.standing_down_animation;
+	sans.follow(frisk);
+	audio_play_soundtrack(snd_park);
+}, room_underverse_episode_3_surface, room_underverse_episode_3_ketchup_shop);
