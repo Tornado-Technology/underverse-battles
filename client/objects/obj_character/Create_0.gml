@@ -110,6 +110,8 @@ control = function(is_showing_arrows = false, _can_run = can_run, _speed = speed
 	previous_positions = ds_queue_create();
 	ds_queue_enqueue(previous_positions, new Vector2(x, y));
 	
+	toggle_mobile_controls(true);
+	
 	if (!is_showing_arrows) return;
 	instance_create_depth(x, y - sprite_height - 1, depth, obj_control_character, {
 		target: id
@@ -118,15 +120,25 @@ control = function(is_showing_arrows = false, _can_run = can_run, _speed = speed
 
 set_controlled = function() {
 	is_controlled = true;
+	toggle_mobile_controls(true);
 };
 
 set_uncontrolled = function() {
 	is_controlled = false;
+	toggle_mobile_controls(false);
 	change_sprite_by_condition(sprite_index == walking_right_animation, standing_right_animation);
 	change_sprite_by_condition(sprite_index == walking_left_animation, standing_left_animation);
 	change_sprite_by_condition(sprite_index == walking_down_animation, standing_down_animation);
 	change_sprite_by_condition(sprite_index == walking_up_animation, standing_up_animation);
 };
+
+toggle_mobile_controls = function(enable) {
+	if (is_mobile || mobile_mode) {
+		global.__ui_controls_instance.enable = enable;
+		global.__ui_walk_virtual_buttons_instance.is_enable = enable;
+		global.__ui_walk_virtual_buttons_instance.is_enable_run_button = can_run;
+	}
+}
 
 follow = function(_follow_target, _follow_distance = follow_distance, _speed = speed_const) {
 	is_following = true;

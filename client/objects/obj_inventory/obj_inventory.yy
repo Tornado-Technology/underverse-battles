@@ -1,19 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_virtual_keyboard",
+  "%Name":"obj_inventory",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":63,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_virtual_keyboard",
+  "name":"obj_inventory",
   "overriddenProperties":[],
   "parent":{
-    "name":"Virtual",
-    "path":"folders/Objects/System/Virtual.yy",
+    "name":"Story Mode",
+    "path":"folders/Objects/Fight/Story Mode.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -32,5 +31,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -18,7 +18,7 @@ function ClassSettingsMobileButton(menu_instance, sprite, name) : ClassSettingsM
 	static save_data = function() {
 		base_save_data();
 		
-		var virtual_buttons = global.__ui_virtual_buttons_instance;
+		var virtual_buttons = global.__ui_fight_virtual_buttons_instance;
 		var button = virtual_buttons.get_button(name);
 		
 		if (button == undefined) {

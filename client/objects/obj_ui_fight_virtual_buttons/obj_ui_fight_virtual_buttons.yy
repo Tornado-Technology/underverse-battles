@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_virtual_keyboard",
+  "%Name":"obj_ui_fight_virtual_buttons",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":63,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_virtual_keyboard",
+  "name":"obj_ui_fight_virtual_buttons",
   "overriddenProperties":[],
   "parent":{
     "name":"Virtual",
     "path":"folders/Objects/System/Virtual.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_ui_virtual_buttons",
+    "path":"objects/obj_ui_virtual_buttons/obj_ui_virtual_buttons.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,5 +34,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

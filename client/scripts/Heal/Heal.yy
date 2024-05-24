@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Heal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Heal",
+  "parent":{
+    "name":"Item",
+    "path":"folders/Scripts/Local/Item.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -33,13 +33,13 @@ cutscene_after_death = function () {
 enable_mobile_ui = function() {
 	if (is_mobile || mobile_mode) {
 		global.__ui_controls_instance.enable = true;
-		global.__ui_virtual_buttons_instance.is_enable = true;
+		global.__ui_fight_virtual_buttons_instance.is_enable = true;
 	}
 }
 
 disable_mobile_ui = function() {
 	if (is_mobile || mobile_mode) {
 		global.__ui_controls_instance.enable = false;
-		global.__ui_virtual_buttons_instance.is_enable = false;
+		global.__ui_fight_virtual_buttons_instance.is_enable = false;
 	}
 }
