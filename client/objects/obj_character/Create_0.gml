@@ -86,7 +86,17 @@ y_new = y;
 speed_const = 2;
 run_coefficient = 0.5;
 
-// Methods
+#region Methods
+
+heal = function(hp , ignore_max_hp = false) {
+	var restored_hp = hp;
+	if (!ignore_max_hp) {
+		restored_hp = min(max_hp - self.hp, self.hp);
+	}
+	self.hp += restored_hp;
+	return restored_hp;
+}
+
 move = function(_x, _y, _speed) {
 	is_moving = true;
 	x_new = x + _x;
@@ -101,10 +111,10 @@ skip_moving = function() {
 	speed_const = 0;
 };
 
-control = function(is_showing_arrows = false, _can_run = can_run, _speed = speed_const) {
+control = function(is_showing_arrows = false, can_run = self.can_run, _speed = speed_const) {
 	camera_set_taget(self);
 	is_controlled = true;
-	can_run = _can_run;
+	self.can_run = can_run;
 	speed_const = _speed;
 	
 	previous_positions = ds_queue_create();
@@ -183,6 +193,8 @@ change_sprite_by_condition = function(condition, new_sprite) {
 		sprite_index = new_sprite;
 	}
 }
+
+#endregion
 
 // Dev
 player_num = -1;

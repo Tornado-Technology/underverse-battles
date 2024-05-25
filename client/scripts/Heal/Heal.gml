@@ -1,7 +1,8 @@
-function Heal(name, description, heal) : Item(name, description) constructor {
+function Heal(name, description, hp, cost = 0) : Item(name, description, cost) constructor {
 	self.name = name;
 	self.description = description;
-	self.heal = heal;
+	self.hp = hp;
+	self.cost = cost;
 	
 	type = ITEM_TYPE.HEAL;
 }

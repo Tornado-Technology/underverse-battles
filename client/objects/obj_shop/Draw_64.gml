@@ -41,11 +41,13 @@ if (ui.tab == 1 || ui.tab == 3) {
 ui.draw_dialog(text_position.x, text_position.y, 16, w);
 
 // Money
-draw_set_font(global._font_main_determination);
-draw_set_halign(fa_left);
-draw_text(dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * 5, "0G");
-draw_set_halign(fa_right);
-draw_text(gui_position.right_down.x - padding, dividing_line_position_up.y + padding * 5, "0/0");
+if (instance_exists(obj_inventory)) {
+	draw_set_font(global._font_main_determination);
+	draw_set_halign(fa_left);
+	draw_text(dividing_line_position_up.x + padding, dividing_line_position_up.y + padding * 5, $"{obj_inventory.money}G");
+	draw_set_halign(fa_right);
+	draw_text(gui_position.right_down.x - padding, dividing_line_position_up.y + padding * 5, $"{obj_inventory.ui.item_count}/{obj_inventory.max_item_count}");
+}
 
 // Skip arrow
 if (ui.tab == 0 || ui.tab == 1 || ui.tab == 3) exit;

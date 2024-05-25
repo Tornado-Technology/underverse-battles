@@ -8,7 +8,12 @@ function UIButton() constructor {
 	is_binded = false;
 	bind = input.action;
 	
+	hover = false;
+	is_focus = false;
 	needs_hover = false;
+	is_multi_touch = false;
+	
+	device_index = undefined; // Mobile
 	
 	// I don't work with memory leaks with Events
 	// Because use functions

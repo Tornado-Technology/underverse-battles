@@ -16,7 +16,6 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 		button[i].needs_hover = true;
 		i++;
 	}
-	button[0].focus();
 	
 	static set_padding = function(padding) {
 		var i = 0;
@@ -95,15 +94,25 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 		return self;
 	}
 	
+	static set_focus = function(index = 0) {
+		current_option = index;
+		button[index].focus();
+		return self;
+	}
+	
 	static update = function() {
 		if (input_check_pressed(scroll_up_input) || mouse_wheel_up()) {
 			if (current_option > 0) {
 				scroll(-1);
+			} else {
+				scroll(count - 1);
 			}
 		}
 		if (input_check_pressed(scroll_down_input) || mouse_wheel_down()) {
 			if (current_option < count - 1) {
 				scroll(1);
+			} else {
+				scroll(1 - count);
 			}
 		}
 	}

@@ -18,11 +18,6 @@ function UITextButton(index, text, font = global._font_main_determination) : UIB
 	text_color = c_white;
 	text_hover_color = c_purple;
 	
-	hover = false;
-	is_focus = false;
-	
-	device_index = undefined; // Mobile
-	
 	is_enable_interaction = true;
 	
 	color_merge = 0;
@@ -36,7 +31,6 @@ function UITextButton(index, text, font = global._font_main_determination) : UIB
 	is_animation_pressed = true;
 	is_auto_focus = true;
 	is_animation_hover = false;
-	is_multi_touch = false;
 	
 	/// @param {String} text
 	/// @param {Asset.GMFont} font

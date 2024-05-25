@@ -18,44 +18,62 @@ function UIShop(main_dialog, item_dialog, sell_dialog, talk_dialog, farewell_dia
 		array_push(main_button_texts, main_button_struct[i].name);
 	}
 	
-	item_button_count = array_length(item_button_struct);
+	item_button_count = array_length(item_button_struct) + 1;
 	item_button_texts = [];
-	for (var i = 0; i < item_button_count; i++) {
-		array_push(item_button_texts, item_button_struct[i].name);
+	for (var i = 0; i < item_button_count - 1; i++) {
+		array_push(item_button_texts, $"{item_button_struct[i].cost}G - {item_button_struct[i].name}");
 	}
+	array_push(item_button_texts, "Exit");
 	
-	talk_button_count = array_length(talk_button_struct);
+	talk_button_count = array_length(talk_button_struct) + 1;
 	talk_button_texts = [];
-	for (var i = 0; i < talk_button_count; i++) {
+	for (var i = 0; i < talk_button_count - 1; i++) {
 		array_push(talk_button_texts, talk_button_struct[i].name);
 	}
+	array_push(talk_button_texts, "Exit");
 	
 	main_button = new UITextButtonSelector(main_button_texts)
 		.set_bind_input(input.action)
 		.set_padding(2)
 		.set_color(c_white, c_yellow)
 		.set_align(fa_left)
+		.set_focus()
 		.set_on_press(function(self_button) {
-			audio_play_sound_once(snd_selection);
 			set_tab(self_button.index + 1);
+			audio_play_sound_plugging(snd_selection);
 		});
 	
 	item_button = new UITextButtonSelector(item_button_texts)
 		.set_bind_input(input.action)
 		.set_padding(2)
 		.set_color(c_white, c_yellow)
-		.set_align(fa_left);
+		.set_align(fa_left)
+		.set_focus();
+	for (var i = 0; i < item_button_count - 1; i++) {
+		item_button.button[i].on_press = function(_self) {
+			var cost = item_button_struct[_self.index].cost;
+			
+			if (cost <= obj_inventory.money) {
+				obj_inventory.add_item(item_button_struct[_self.index]);
+				obj_inventory.money -= cost;
+				audio_play_sound_plugging(snd_selection);
+			}
+		}
+	}
 	item_button.button[item_button_count - 1].set_on_press(function() {
 		set_tab(0);
+		audio_play_sound_plugging(snd_selection);
 	});
 	
 	talk_button = new UITextButtonSelector(talk_button_texts)
 		.set_bind_input(input.action)
 		.set_padding(2)
 		.set_color(c_white, c_yellow)
-		.set_align(fa_left);
+		.set_align(fa_left)
+		.set_focus();
 	talk_button.button[talk_button_count - 1].set_on_press(function() {
 		set_tab(0);
+		audio_play_sound_plugging(snd_selection);
 	});
 	
 	static set_tab = function(tab) {

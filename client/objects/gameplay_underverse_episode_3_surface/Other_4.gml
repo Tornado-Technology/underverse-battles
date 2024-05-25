@@ -3,6 +3,8 @@ camera_set_taget(frisk);
 
 // Room transition
 if (is_first_appearance) {
+	instance_create(obj_inventory);
+	
 	cutscene_create(cutscenes[0]);
 	effect_fade(0, 0.1, 2, c_black, true, fight_depth.ui);
 	

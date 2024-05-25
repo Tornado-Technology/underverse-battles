@@ -8,11 +8,6 @@ function UIImageButton(index, sprite) : UIButton() constructor {
 	offset_x = sprite_get_xoffset(sprite);
 	offset_y = sprite_get_yoffset(sprite);
 	
-	hover = false;
-	is_focus = false;
-	
-	device_index = undefined; // Mobile
-	
 	is_enable_interaction = true;
 	
 	color_merge = 0;
@@ -23,7 +18,6 @@ function UIImageButton(index, sprite) : UIButton() constructor {
 	is_auto_focus = true;
 	image_default_alpha = 1;
 	is_animation_hover = false;
-	is_multi_touch = false;
 	
 	// I don't work with memory leaks with Events
 	// Because use functions

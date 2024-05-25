@@ -1,7 +1,45 @@
+position_x_start = -100;
+position_x_finish = 20;
+position_x = position_x_start;
+position_y = 40;
+text_padding = 20;
+
+character = obj_character_frisk;
+money = 50;
+
 max_item_count = 8;
+sprite_index = spr_empty;
+
+is_open = false;
 
 items = [
-	new Item("Item 1", "Desc 1")
+	new Item("Item 1", "Desc 1", 0),
+	new Item("Item 2", "Description 2", 0),
 ];
 
-ui = UIInventory(max_item_count);
+ui = new UIInventory(character, items, max_item_count);
+
+open = function() {
+	is_open = true;
+	ui.init();
+	character.set_uncontrolled();
+	audio_play_sound_plugging(snd_selection);
+}
+
+close = function() {
+	is_open = false;
+	character.set_controlled();
+	audio_play_sound_plugging(snd_selection);
+}
+
+add_item = function(item) {
+	array_push(items, item);
+}
+
+delete_item = function(item) {
+	array_delete(items, array_find_index(items, function(value) {
+		return value.name == item.name
+	}), 1);
+}
+
+ui.set_back_function(close);

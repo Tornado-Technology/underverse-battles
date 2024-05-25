@@ -23,11 +23,10 @@ menu_button_count = array_length(menu_button_text);
 
 // Items
 items = [
-	{name: "Item 1", description: "Desc 1", cost: 0},
-	{name: "Item 2", description: "Desc 2", cost: 0},
-	{name: "Item 3", description: "Desc 3", cost: 0},
-	{name: "Item 4", description: "Desc 4", cost: 0},
-	{name: "Exit"},
+	new Heal("Хавчик", "Восстановит 24 ХП", 24, 12),
+	new Heal("Хавчик круче", "Восстановит 30 ХП", 30, 12),
+	new Heal("Хавчик хуже", "Восстановит 12 ХП", 12, 12),
+	new Heal("Хавчик норм", "Восстановит 20 ХП", 20, 12)
 ];
 item_button_count = array_length(items);
 
@@ -36,8 +35,7 @@ talks = [
 	{name: "Talk 1", monolog: ["I say 1"], cost: 0},
 	{name: "Talk 2", monolog: ["I say 2"], cost: 0},
 	{name: "Talk 3", monolog: ["I say 3"], cost: 0},
-	{name: "Talk 4", monolog: ["I say 4"], cost: 0},
-	{name: "Exit"},
+	{name: "Talk 4", monolog: ["I say 4"], cost: 0}
 ];
 talk_button_count = array_length(talks);
 

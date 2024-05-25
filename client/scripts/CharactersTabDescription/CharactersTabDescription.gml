@@ -154,7 +154,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 			buttons[i].padding = 5;
 			buttons[i].text_hover_color = color_selected;
 			buttons[i].on_hover = function(button) { on_hover_on_button(button.index) };
-			buttons[i].callback = function(button) { on_click_on_button(button.index) };
+			buttons[i].on_press = function(button) { on_click_on_button(button.index) };
 		}
 	}
 	
