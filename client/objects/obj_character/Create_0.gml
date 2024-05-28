@@ -1,5 +1,6 @@
 /// @desc Main character parameters
-// Base
+#region Base
+
 index = 0;
 
 name = "Char";
@@ -7,6 +8,8 @@ description = "Base character class (Oh no, GML haven't normal OOP).";
 bio = "Written by TornadoTech, hears for the benefit of all who want it.";
 creator = "TornadoTech";
 universe = "UnderverseBattles";
+
+#endregion
 
 // HP
 hp = 100000000;
@@ -91,9 +94,12 @@ run_coefficient = 0.5;
 heal = function(hp , ignore_max_hp = false) {
 	var restored_hp = hp;
 	if (!ignore_max_hp) {
-		restored_hp = min(max_hp - self.hp, self.hp);
+		restored_hp = min(max_hp - self.hp, restored_hp);
 	}
 	self.hp += restored_hp;
+	
+	audio_play_sound_plugging(snd_healing);
+	
 	return restored_hp;
 }
 
@@ -207,5 +213,5 @@ y_shift = 0;
 play_animation_after_battle = false;
 
 // Soundtrack
-soundtrack_name = "Megalorchestra"; 
-soundtrack = snd_megalorchestra;
+soundtrack_name = "Rude Buster"; 
+soundtrack = snd_rude_buster;

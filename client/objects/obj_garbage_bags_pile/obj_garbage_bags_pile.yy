@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_interactive_episode_3_asgore",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_garbage_bags_pile",
+  "eventList":[],
   "managed":true,
-  "name":"obj_interactive_episode_3_asgore",
+  "name":"obj_garbage_bags_pile",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactive",
-    "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Interactive.yy",
+    "name":"Objects",
+    "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_interactive",
-    "path":"objects/obj_interactive/obj_interactive.yy",
+    "name":"obj_prop",
+    "path":"objects/obj_prop/obj_prop.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_interactive",
-    "path":"sprites/spr_interactive/spr_interactive.yy",
+    "name":"spr_garbage_bags_pile",
+    "path":"sprites/spr_garbage_bags_pile/spr_garbage_bags_pile.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

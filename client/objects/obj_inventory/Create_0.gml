@@ -13,8 +13,8 @@ sprite_index = spr_empty;
 is_open = false;
 
 items = [
-	new Item("Item 1", "Desc 1", 0),
-	new Item("Item 2", "Description 2", 0),
+	new Item(translate_get("Item.HeartShaped.Name"), translate_get("Item.HeartShaped.Description"))
+		.set_can_destroy_by_use(false),
 ];
 
 ui = new UIInventory(character, items, max_item_count);
@@ -33,7 +33,7 @@ close = function() {
 }
 
 add_item = function(item) {
-	array_push(items, item);
+	ui.add_item(item);
 }
 
 delete_item = function(item) {

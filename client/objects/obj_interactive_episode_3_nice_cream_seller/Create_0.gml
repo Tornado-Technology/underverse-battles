@@ -20,6 +20,8 @@ cutscenes = [
 		[cutscene_execute, function() {
 			is_saled = true;
 			npc.speak();
+			with (obj_inventory) add_item(new Heal(translate_get("Item.NiceCream.Name"), translate_get("Item.NiceCream.Description"), 20, 12))
+			audio_play_sound_plugging(snd_purchase);
 		}],
 		[cutscene_dialog, "Underverse_Episode3.NiceCreamSeller_2", dialog_direction],
 		[cutscene_execute, function() {

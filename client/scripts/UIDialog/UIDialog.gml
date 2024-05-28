@@ -60,6 +60,7 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	
 	static set_new_dialog = function(dialog) {
 		self.dialog = dialog;
+		size = array_length(dialog);
 		set_dialog(0);
 	}
 	

@@ -1,5 +1,11 @@
 if (global.pause_game) exit;
 
 ui.update();
-event_user(0);
-event_user(1);
+
+if (npc == noone) exit;
+
+if (ui.dialog.is_flipping()) {
+	npc.speak();
+} else {
+	npc.stop_speaking();
+}

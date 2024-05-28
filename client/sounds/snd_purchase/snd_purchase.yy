@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_cant_select",
+  "%Name":"snd_purchase",
   "audioGroupId":{
     "name":"sound",
     "path":"audiogroups/sound",
@@ -8,10 +8,9 @@
   "bitDepth":0,
   "bitRate":64,
   "compression":1,
-  "ConfigValues":{},
   "conversionMode":0,
-  "duration":0.241927,
-  "name":"snd_cant_select",
+  "duration":0.646689,
+  "name":"snd_purchase",
   "parent":{
     "name":"Menu",
     "path":"folders/Sounds/SFX/Menu.yy",
@@ -20,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":32000,
-  "soundFile":"snd_cant_select.wav",
+  "soundFile":"snd_purchase.ogg",
   "type":0,
   "volume":1.0,
 }

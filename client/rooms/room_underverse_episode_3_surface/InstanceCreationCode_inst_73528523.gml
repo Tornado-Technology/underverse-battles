@@ -1,5 +1,3 @@
-event_inherited();
-
 npc = obj_npc_raspberries_licker;
 
 is_found = false;

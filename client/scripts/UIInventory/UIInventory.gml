@@ -9,23 +9,26 @@ function UIInventory(character, items, max_item_count) constructor {
 	buttons = [];
 	item_count = array_length(items);
 	button_shift_y = 20;
-	description_position_x = 85;
+	description_position_x = 118;
 
 	on_press = function(_self) {
 		var item = items[_self.index];
-		switch (item) {
+		switch (item.type) {
+			case ITEM_TYPE.UNDEFINED:
+				item.special_function();
+				audio_play_sound_plugging(snd_cant_select);
+				break;
 			case ITEM_TYPE.HEAL:
 				character.heal(item.hp);
+				item.special_function();
+				back();
+				break;
 		}
-		
-		back();
 		
 		if (item.can_destroy_by_use) {
 			array_delete(items, buttons.current_option, 1);
 			item_count--;
 		}
-		
-		audio_play_sound_plugging(snd_selection);
 	}
 	
 	back = function() {}
@@ -62,9 +65,10 @@ function UIInventory(character, items, max_item_count) constructor {
 			button_names[i] = items[i].name;
 			i++;
 		}
-		button_names[i] = "Back";
+		button_names[i] = translate_get("Menu.StandardButtons.Back");
 		
 		buttons = new UITextButtonSelector(button_names, input.up, input.down, item_count)
+			.set_padding(0)
 			.set_color(c_white, c_yellow)
 			.set_align(fa_left)
 			.set_bind_input(input.action)
@@ -83,6 +87,11 @@ function UIInventory(character, items, max_item_count) constructor {
 			})
 		buttons.button[i].is_auto_focus = false;
 		buttons.button[i].needs_hover = true;
+	}
+	
+	static add_item = function(item) {
+		array_push(items, item);
+		item_count++;
 	}
 	
 	static draw = function(position_x, position_y) {

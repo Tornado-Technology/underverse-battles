@@ -12,7 +12,7 @@ papyrus = obj_npc_papyrus;
 undyne = obj_npc_undyne;
 alphys = obj_npc_alphys;
 toriel = obj_npc_toriel;
-asgore = obj_character_asgore;
+asgore = obj_npc_asgore;
 
 // Stuff
 steak = obj_steak;

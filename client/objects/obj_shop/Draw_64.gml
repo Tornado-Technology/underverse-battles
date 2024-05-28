@@ -32,10 +32,10 @@ switch (ui.tab) {
 
 // Monolog
 var text_position = new Vector2(gui_position.left_up.x + text_indent, gui_position.left_up.y + text_indent);
-var w = gui_position.right_up.x - gui_position.left_up.x - text_indent * 2;
+var w = dividing_line_position_up.x - gui_position.left_up.x - text_indent * 2;
 if (ui.tab == 1 || ui.tab == 3) {
 	text_position = new Vector2(dividing_line_position_up.x + text_indent, dividing_line_position_up.y + text_indent);
-	w = dividing_line_position_up.x - gui_position.left_up.x - text_indent * 2;
+	w = gui_position.right_up.x - dividing_line_position_up.x - text_indent * 2;
 }
 
 ui.draw_dialog(text_position.x, text_position.y, 16, w);

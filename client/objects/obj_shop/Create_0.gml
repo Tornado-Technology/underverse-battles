@@ -10,14 +10,14 @@ padding = 20;
 border_sprite = spr_bg_border;
 
 // NPC
-npc = obj_muffet_seller;
+npc = noone;
 
 // Menu
 menu_button_text = [
-	{name: "Buy"},
-	{name: "Sell"},
-	{name: "Talk"},
-	{name: "Exit"}
+	{name: translate_get("Shop.Button.Buy")},
+	{name: translate_get("Shop.Button.Sell")},
+	{name: translate_get("Shop.Button.Talk")},
+	{name: translate_get("Shop.Button.Exit")}
 ];
 menu_button_count = array_length(menu_button_text);
 
@@ -40,11 +40,13 @@ talks = [
 talk_button_count = array_length(talks);
 
 // Monolog
+main_dialog = ["What are you want?"];
 greeting_dialog = ["Hello!"];
 item_dialog = ["Buy!"];
 sell_dialog = ["No!"];
 talk_dialog = ["Ask!"];
 farewell_dialog = ["Bye!"];
+gratitude_dialog = ["Thank you!"];
 
 voice = snd_voice_main;
 font = global._font_main_determination;
@@ -54,7 +56,7 @@ text_color = c_white;
 previous_room = undefined;
 transition_time = 0.4;
 
-ui = new UIShop(greeting_dialog, item_dialog, sell_dialog, talk_dialog, farewell_dialog, menu_button_text, items, talks);
+ui = new UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dialog, farewell_dialog, gratitude_dialog, menu_button_text, items, talks);
 
 // Methods
 transition = function() {
@@ -82,6 +84,9 @@ next_arrow = new UIImageButton(0, spr_ui_arrow)
 					break;
 				case 4:
 					transition();
+					break;
+				case 5:
+					ui.set_tab(3);
 					break;
 			}
 		}
