@@ -2,6 +2,9 @@ event_inherited();
 
 episode = "Underverse_Episode3.";
 
+room_list = [room_underverse_episode_3_surface, room_underverse_episode_3_ketchup_shop, room_underverse_episode_3_muffet_bakery];
+set_rooms_persistant(room_list, true);
+
 // Fight
 fight = obj_fight_underverse_episode2;
 

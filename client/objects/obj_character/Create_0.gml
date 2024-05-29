@@ -108,14 +108,14 @@ move = function(_x, _y, _speed) {
 	x_new = x + _x;
 	y_new = y + _y;
 	speed_const = _speed;
-};
+}
 
 skip_moving = function() {
 	is_moving = false;
 	x = x_new;
 	y = y_new;
 	speed_const = 0;
-};
+}
 
 control = function(is_showing_arrows = false, can_run = self.can_run, _speed = speed_const) {
 	camera_set_taget(self);
@@ -132,12 +132,12 @@ control = function(is_showing_arrows = false, can_run = self.can_run, _speed = s
 	instance_create_depth(x, y - sprite_height - 1, depth, obj_control_character, {
 		target: id
 	});
-};
+}
 
 set_controlled = function() {
 	is_controlled = true;
 	toggle_mobile_controls(true);
-};
+}
 
 set_uncontrolled = function() {
 	is_controlled = false;
@@ -146,7 +146,14 @@ set_uncontrolled = function() {
 	change_sprite_by_condition(sprite_index == walking_left_animation, standing_left_animation);
 	change_sprite_by_condition(sprite_index == walking_down_animation, standing_down_animation);
 	change_sprite_by_condition(sprite_index == walking_up_animation, standing_up_animation);
-};
+}
+
+change_direction_by_movement = function() {
+	if (movement_x > 0 && movement_y == 0) direction = dir.right;
+	if (movement_x < 0 && movement_y == 0) direction = dir.left;
+	if (movement_y > 0 && movement_x == 0) direction = dir.down;
+	if (movement_y < 0 && movement_x == 0) direction = dir.up;
+}
 
 toggle_mobile_controls = function(enable) {
 	if (is_mobile || mobile_mode) {

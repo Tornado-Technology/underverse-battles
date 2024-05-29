@@ -1,5 +1,4 @@
-event_inherited();
-
+sides = [dir.up];
 index = 1;
 
 cutscene_was_changed = false;

@@ -1,5 +1,0 @@
-event_inherited();
-
-room_set_persistent(room_underverse_episode_3_surface, false);
-room_set_persistent(room_underverse_episode_3_muffet_bakery, false);
-room_set_persistent(room_underverse_episode_3_ketchup_shop, false);

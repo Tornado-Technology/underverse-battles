@@ -6,3 +6,5 @@ if (is_mobile || mobile_mode) {
 }
 
 camera_set_position(0, 0);
+
+set_rooms_persistant(room_list, false);

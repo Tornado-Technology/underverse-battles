@@ -36,5 +36,5 @@
     "path":"sprites/spr_dev_gameplay_object/spr_dev_gameplay_object.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

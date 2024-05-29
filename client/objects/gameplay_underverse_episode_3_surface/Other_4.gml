@@ -1,5 +1,7 @@
-// Camera
-camera_set_taget(frisk);
+// Persistent
+//room_set_persistent(room_underverse_episode_3_surface, true);
+//room_set_persistent(room_underverse_episode_3_muffet_bakery, true);
+//room_set_persistent(room_underverse_episode_3_ketchup_shop, true);
 
 // Room transition
 if (is_first_appearance) {
@@ -19,12 +21,12 @@ if (is_first_appearance) {
 room_start_callback(function() {
 	frisk.x = 239;
 	frisk.y = 266;
-	frisk.sprite_index = frisk.standing_up_animation;
 	frisk.control();
+	frisk.direction = dir.up;
 	sans.x = 239;
 	sans.y = 289;
-	sans.sprite_index = sans.standing_up_animation;
 	sans.follow(frisk);
+	sans.direction = dir.up;
 	audio_stop_sound(snd_park);
 }, room_underverse_episode_3_muffet_bakery, room_underverse_episode_3_surface);
 
@@ -32,29 +34,27 @@ room_start_callback(function() {
 	frisk.control();
 }, room_underverse_episode_3_muffet_bakery);
 
-
-
 room_start_callback(function() {
 	frisk.x = 1530;
 	frisk.y = 1100;
-	frisk.sprite_index = frisk.standing_down_animation;
 	frisk.control();
+	frisk.direction = dir.down;
 	sans.x = 1530;
 	sans.y = 1084;
-	sans.sprite_index = sans.standing_down_animation;
 	sans.follow(frisk);
+	sans.direction = dir.down;
 	audio_play_soundtrack(snd_park);
 }, room_underverse_episode_3_surface, room_underverse_episode_3_muffet_bakery);
 
 room_start_callback(function() {
 	frisk.x = 239;
-	frisk.y = 246;
-	frisk.sprite_index = frisk.standing_up_animation;
+	frisk.y = 266;
 	frisk.control();
+	frisk.direction = dir.up;
 	sans.x = 239;
 	sans.y = 289;
-	sans.sprite_index = sans.standing_up_animation;
 	sans.follow(frisk);
+	sans.direction = dir.up;
 	audio_stop_sound(snd_park);
 }, room_underverse_episode_3_ketchup_shop, room_underverse_episode_3_surface);
 
@@ -63,13 +63,13 @@ room_start_callback(function() {
 }, room_underverse_episode_3_ketchup_shop);
 
 room_start_callback(function() {
-	frisk.x = 1919;
+	frisk.x = 1916;
 	frisk.y = 1100;
-	frisk.sprite_index = frisk.standing_down_animation;
 	frisk.control();
-	sans.x = 1919;
+	frisk.direction = dir.down;
+	sans.x = 1916;
 	sans.y = 1084;
-	sans.sprite_index = sans.standing_down_animation;
 	sans.follow(frisk);
+	sans.direction = dir.down;
 	audio_play_soundtrack(snd_park);
 }, room_underverse_episode_3_surface, room_underverse_episode_3_ketchup_shop);

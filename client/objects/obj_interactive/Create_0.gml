@@ -6,6 +6,7 @@ index = 0;
 dialog_instance = noone;
 dialog_created = false;
 dialog_direction = 0;
+sides = [dir.up, dir.down, dir.left, dir.right];
 
 gui_half_height = display_get_gui_height() / 2;
 

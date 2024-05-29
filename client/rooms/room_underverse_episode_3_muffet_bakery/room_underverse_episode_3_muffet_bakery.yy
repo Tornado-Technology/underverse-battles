@@ -22,6 +22,8 @@
     {"name":"inst_35EBBCBA","path":"rooms/room_underverse_episode_3_muffet_bakery/room_underverse_episode_3_muffet_bakery.yy",},
     {"name":"inst_5E22C268","path":"rooms/room_underverse_episode_3_muffet_bakery/room_underverse_episode_3_muffet_bakery.yy",},
     {"name":"inst_2E78065A","path":"rooms/room_underverse_episode_3_muffet_bakery/room_underverse_episode_3_muffet_bakery.yy",},
+    {"name":"inst_62F90D28","path":"rooms/room_underverse_episode_3_muffet_bakery/room_underverse_episode_3_muffet_bakery.yy",},
+    {"name":"inst_3F8D9733","path":"rooms/room_underverse_episode_3_muffet_bakery/room_underverse_episode_3_muffet_bakery.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -41,6 +43,8 @@
         {"$GMRInstance":"","%Name":"inst_24E59746","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24E59746","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":11.875,"scaleY":1.1875,"x":145.0,"y":178.0,},
         {"$GMRInstance":"","%Name":"inst_5E22C268","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5E22C268","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":1.0,"x":208.0,"y":270.0,},
         {"$GMRInstance":"","%Name":"inst_2E78065A","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2E78065A","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":217.0,"y":197.0,},
+        {"$GMRInstance":"","%Name":"inst_62F90D28","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_62F90D28","objectId":{"name":"obj_interactive","path":"objects/obj_interactive/obj_interactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5625,"scaleY":2.8125,"x":165.0,"y":197.0,},
+        {"$GMRInstance":"","%Name":"inst_3F8D9733","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F8D9733","objectId":{"name":"obj_interactive","path":"objects/obj_interactive/obj_interactive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5625,"scaleY":2.8125,"x":306.0,"y":197.0,},
       ],"layers":[],"name":"Collisions","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Props","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_1F722794","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F722794","objectId":{"name":"obj_character_frisk","path":"objects/obj_character_frisk/obj_character_frisk.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":239.0,"y":266.0,},
@@ -68,7 +72,7 @@
   "roomSettings":{
     "Height":270,
     "inheritRoomSettings":false,
-    "persistent":false,
+    "persistent":true,
     "Width":480,
   },
   "sequenceId":null,
