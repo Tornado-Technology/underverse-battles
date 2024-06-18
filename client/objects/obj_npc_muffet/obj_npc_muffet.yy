@@ -9,7 +9,10 @@
     "name":"NPC",
     "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/NPC.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_npc",
+    "path":"objects/obj_npc/obj_npc.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

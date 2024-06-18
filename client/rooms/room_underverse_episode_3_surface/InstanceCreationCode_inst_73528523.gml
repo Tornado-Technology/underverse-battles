@@ -1,45 +1,24 @@
 npc = obj_npc_raspberries_licker;
 
-is_found = false;
-
-interact_callback = function() {
-	target_character.set_uncontrolled();
-	
-	if (variable_instance_get(gameplay_underverse_episode_3_surface, "search_event_is_started") && !is_found) {
-		cutscene_create(cutscenes[1]);
-		is_found = true;	
-	}
-	else {
-		cutscene_create(cutscenes[index]);
-	}
+found = function() {
+	gameplay_underverse_episode_3_surface.lickers_found[0] = true;
 }
-
 
 cutscenes = [
 	[
-		[cutscene_execute, function() { npc.speak() }],
-		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_1", dialog_direction],
+		[cutscene_execute, npc.speak],
+		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_1", dir.up],
 		[cutscene_execute, function() {
+			found();
 			npc.stop_speaking();
 			target_character.set_controlled();
-			index = 2;
 		}]
 	],
 	[
-		[cutscene_dialog_async, "Underverse_Episode3.RaspberriesLicker_2", dialog_direction],
-		[cutscene_wait_by_dialog, 1],
-		[cutscene_execute, function() { npc.speak() }],
-		[cutscene_wait_dialog_end],
+		[cutscene_execute, npc.speak],
+		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_2", dir.up],
 		[cutscene_execute, function() {
-			npc.stop_speaking();
-			target_character.set_controlled();
-			index = 2;
-		}]
-	],
-	[
-		[cutscene_execute, function() { npc.speak() }],
-		[cutscene_dialog, "Underverse_Episode3.RaspberriesLicker_3", dialog_direction],
-		[cutscene_execute, function() {
+			found();
 			npc.stop_speaking();
 			target_character.set_controlled();
 		}]

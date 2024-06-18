@@ -3,9 +3,9 @@ npc = obj_muffet_seller;
 
 // Items
 items = [
-	new Heal(translate_get("Item.SpiderDonut.Name"), translate_get("Item.SpiderDonut.Description"), 18, 9),
-	new Heal(translate_get("Item.SpiderCider.Name"), translate_get("Item.SpiderCider.Description"), 24, 12),
-	new Heal(translate_get("Item.MuffetMuffin.Name"), translate_get("Item.MuffetMuffin.Description"), 30, 14)
+	new Heal("SpiderDonut", 18, 9),
+	new Heal("SpiderCider", 24, 12),
+	new Heal("MuffetMuffin", 30, 14)
 ];
 item_button_count = array_length(items);
 

@@ -1,6 +1,4 @@
-function Protection(name, description, defend) : Item(name, description) constructor {
-	self.name = name;
-	self.description = description;
+function Protection(key, defend, cost) : Item(key, cost) constructor {
 	self.defend = defend;
 	
 	type = ITEM_TYPE.PROTECTION;

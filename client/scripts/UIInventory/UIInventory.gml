@@ -62,7 +62,7 @@ function UIInventory(character, items, max_item_count) constructor {
 		
 		var i = 0;
 		repeat (item_count) {
-			button_names[i] = items[i].name;
+			button_names[i] = items[i].short_name;
 			i++;
 		}
 		button_names[i] = translate_get("Menu.StandardButtons.Back");

@@ -68,15 +68,17 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 	
 	/// @param {struct.Key} key
 	static has_key = function(key) {
+		checking_key = key;
 		return method(self, array_find_index(default_keys, function(founded_key, i) {
-			return key.value == founded_key.value && key.device_type == founded_key.device_type;
+			return checking_key.value == founded_key.value && checking_key.device_type == founded_key.device_type;
 		})) != -1;
 	}
 	
 	/// @param {struct.Key} key
 	static key_index = function(key) {
+		checking_key = key;
 		return method(self, array_find_index(default_keys, function(founded_key, i) {
-			return key.value == founded_key.value && key.device_type == founded_key.device_type;
+			return checking_key.value == founded_key.value && checking_key.device_type == founded_key.device_type;
 		}));
 	}
 	
@@ -85,7 +87,7 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 		if (!rebinding) return;
 		
 		if (has_key(key)) {
-			logger.warn("InputKey add \"{0}\"key failed, reasone: Already in the keys.");
+			logger.warning($"InputKey add \"{key}\"key failed, reasone: Already in the keys.");
 			return;
 		}
 		
@@ -97,7 +99,7 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 		if (!rebinding) return;
 		
 		if (!has_key(key)) {
-			logger.warn("InputKey remove \"{0}\"key failed, reasone: Not found in the keys.");
+			logger.warning($"InputKey remove \"{key}\"key failed, reasone: Not found in the keys.");
 			return;
 		}
 

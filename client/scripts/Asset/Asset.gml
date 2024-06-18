@@ -21,7 +21,7 @@ function Asset(index) : Modification(index) constructor {
 
 	static erase = function() {
 		if (!directory_exists(path)) {
-			logger.alert("Asset \"{0}\" erase failed, reasone: Path \"{1}\" not exists.", index, path);
+			logger.alert($"Asset \"{index}\" erase failed, reasone: Path \"{path}\" not exists.");
 			return;
 		}
 		

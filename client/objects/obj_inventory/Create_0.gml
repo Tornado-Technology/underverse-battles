@@ -12,8 +12,10 @@ sprite_index = spr_empty;
 
 is_open = false;
 
+searching_name = "";
+
 items = [
-	new Item(translate_get("Item.HeartShaped.Name"), translate_get("Item.HeartShaped.Description"))
+	new Item("HeartShaped")
 		.set_can_destroy_by_use(false),
 ];
 
@@ -38,8 +40,21 @@ add_item = function(item) {
 
 delete_item = function(item) {
 	array_delete(items, array_find_index(items, function(value) {
-		return value.name == item.name
+		return value.name == item.name;
 	}), 1);
+}
+
+remove_money = function(cost) {
+	if (money < cost) return false;
+	money -= cost;
+	return true;
+}
+
+has = function(name) {
+	searching_name = name;
+	return array_any(ui.items, function(item) {
+		return item.name == searching_name;
+	});
 }
 
 ui.set_back_function(close);

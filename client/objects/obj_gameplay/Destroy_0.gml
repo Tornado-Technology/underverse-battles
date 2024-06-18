@@ -5,6 +5,11 @@ if (is_mobile || mobile_mode) {
 	global.__ui_walk_virtual_buttons_instance.is_enable = false;
 }
 
-camera_set_position(0, 0);
+var i = 0;
+repeat(array_length(persistent_rooms)) {
+	room_goto(persistent_rooms[i]);
+	room_persistent = false;
+	logger.debug($"{room_persistent}")
+}
 
-set_rooms_persistant(room_list, false);
+camera_set_position(0, 0);
