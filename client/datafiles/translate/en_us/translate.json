@@ -1012,7 +1012,7 @@
         "{Ink:combat}Emm... Good luck."
       ],
       "Dialog5_Line2": [
-        "{Sans:tired}hmm ... what's a day.",
+        "{Sans:tired}hmm... what's a day.",
         "{Sans:tired}well, time to go."
       ],
       "Dialog14": [
@@ -1112,6 +1112,61 @@
       ],
       "Dialog28": [
         "{Sans:normal}...sure! let's go, bro."
+      ]
+    },
+    "Underverse_Episode3": {
+      "Dialog17": [
+        "{UndynePicnic:glad}Dang, it's been a while since we last gathered like that!",
+        "{PapyrusPicnic:glad}THAT'S RIGHT! AND IN SUCH A BIG GROUP!",
+        "{UndynePicnic:glad}Asgore, wrap up cooking those royal steaks, would ya?",
+        "{UndynePicnic:glad}Our ambassador must be starving their guts out!"
+      ],
+      "Dialog18": [
+        "{UndynePicnic:laughing}Hahahaha! I spilled the ketchup!"
+      ],
+      "Dialog19": [
+        "{TorielPicnic:glad}What a beautiful day! Everybody is having fun. What do you think, Sans?",
+        "{Sans:normal}well, staying at home would be a...",
+        "{Sans:joking}...MISSED-STEAK."
+      ],
+      "Dialog20": [
+        "{TorielPicnic:laughing}Ha-ha-ha!",
+        "{PapyrusPicnic:tired}UGH...",
+        "{UndynePicnic:normal}Hey, Papyrus, go get us some more ketchup.",
+        "{PapyrusPicnic:shocked}WHAT? I DON'T EVEN KNOW WHERE IT'S SOLD!",
+        "{Sans:normal}yeah, about that. you shouldn't send him shopping all alone.",
+        "{Sans:joking}he once ended up looking for clothes in a soup store.",
+        "{PapyrusPicnic:angry}I ACTUALLY MENT TO BUY THE SOUP! I JUST DIDN'T WANT TO TELL YOU!",
+        "{Sans:normal}alright, i'll go myself.",
+        "{PapyrusPicnic:angry}NO YOU WON'T! WE'RE NOT IN FOR ANOTHER SEARCH IF YOU FALL ASLEEP SOMEWHERE ON YOUR WAY AGAIN.",
+        "{UndynePicnic:normal}Then why not send Frisk with him? Our ambassador would keep him up for sure.",
+        "{PapyrusPicnic:tired}THAT WOULD DO IT, I GUESS.",
+        "{UndynePicnic:normal}Frisk, could you and Sans go get some ketchup from the store?"
+      ],
+      "Dialog21": [
+        "{Sans:normal}right behind you."
+      ],
+      "Undyne": [
+        "{UndynePicnic:normal}Hurry up, punk."
+      ],
+      "Papyrus": [
+        "{PapyrusPicnic:normal}HUMAN, KEEP AN EYE ON SANS."
+      ],
+      "Alphys": [
+        "{AlphysPicnic:normal}Get back soon, guys."
+      ],
+      "Toriel": [
+        "{TorielPicnic:normal}Be careful on the roads."
+      ],
+      "Asgore": [
+        "{AsgorePicnic:normal}Don't worry, Frisk. You will get your steak. I'll make sure of it."
+      ],
+      "Bear_1": [
+        "Ah, nothing beats the kick from moving to the warm woods after the cold ones.",
+        "I just feel like I've found my niche in this world."
+      ],
+      "Bear_2": [
+        "Cool!"
       ]
     }
   }

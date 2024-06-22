@@ -4,7 +4,6 @@ function discrod_update_translate() {
 		return;
 	}
 	
-	
 	discord_set_info_action(discord.info_action);
 	discord_set_info_state(discord.info_state);
 	

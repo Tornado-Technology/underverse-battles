@@ -1,6 +1,6 @@
 target_character = obj_character_frisk;
 npc = obj_npc;
-is_destroying = false;
+required_pressing = true;
 
 index = 0;
 dialog_instance = noone;

@@ -43,8 +43,8 @@ if (!fight_network_mode) {
 		if (to_close) exit;
 		
 		if (gameplay_exists) {
-			instance_destroy(obj_inventory);
-			instance_destroy(global.gameplay_instance);
+			game_restart();
+			return;
 		}
 		instance_destroy();
 		room_goto(room_menu);

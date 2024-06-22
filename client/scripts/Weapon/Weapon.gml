@@ -1,6 +1,4 @@
-function Weapon(name, description, attack) : Item(name, description) constructor {
-	self.name = name;
-	self.description = description;
+function Weapon(key, attack, cost = 0) : Item(key, cost) constructor {
 	self.attack = attack;
 	
 	type = ITEM_TYPE.WEAPON;
