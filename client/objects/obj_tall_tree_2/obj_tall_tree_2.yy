@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tall_tree_1",
+  "%Name":"obj_tall_tree_2",
   "eventList":[],
   "managed":true,
-  "name":"obj_tall_tree_1",
+  "name":"obj_tall_tree_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Underverse Episode 4",
     "path":"folders/Objects/Fight/Story Mode/Underverse Episode 4.yy",
   },
-  "parentObjectId":{
-    "name":"obj_prop",
-    "path":"objects/obj_prop/obj_prop.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tall_tree_1",
-    "path":"sprites/spr_tall_tree_1/spr_tall_tree_1.yy",
+    "name":"spr_tall_tree_2",
+    "path":"sprites/spr_tall_tree_2/spr_tall_tree_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -186,6 +186,7 @@
     {"name":"obj_stretched_tentacles_nightmare","order":1,"path":"objects/obj_stretched_tentacles_nightmare/obj_stretched_tentacles_nightmare.yy",},
     {"name":"obj_string_error_sans_story_mode","order":2,"path":"objects/obj_string_error_sans_story_mode/obj_string_error_sans_story_mode.yy",},
     {"name":"obj_tall_tree_1","order":3,"path":"objects/obj_tall_tree_1/obj_tall_tree_1.yy",},
+    {"name":"obj_tall_tree_2","order":4,"path":"objects/obj_tall_tree_2/obj_tall_tree_2.yy",},
     {"name":"obj_traffic_light_left","order":35,"path":"objects/obj_traffic_light_left/obj_traffic_light_left.yy",},
     {"name":"obj_traffic_light_right","order":38,"path":"objects/obj_traffic_light_right/obj_traffic_light_right.yy",},
     {"name":"obj_traffic_light_with_sign_down","order":30,"path":"objects/obj_traffic_light_with_sign_down/obj_traffic_light_with_sign_down.yy",},
