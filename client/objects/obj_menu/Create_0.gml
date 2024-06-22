@@ -345,7 +345,7 @@ create_page([
 		room_goto(room_fight_test);
 	}),
 	Execute("Cutscene Test", [], function() {
-		room_goto(room_cutscene_test);
+		room_goto(room_underverse_episode_4_pt1);
 	}),
 	Execute("UI Test", [], function() {
 		room_goto(room_ui_test);
