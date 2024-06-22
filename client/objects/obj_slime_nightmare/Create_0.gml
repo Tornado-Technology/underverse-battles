@@ -2,8 +2,6 @@ event_inherited();
 depth = fight_depth.bullet;
 
 
-draw_no_in_arena = false;
-
 damage = get_char_damage(obj_character_nightmare);
 
 soul_invulnerability = 60;

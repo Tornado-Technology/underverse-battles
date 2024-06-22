@@ -1,4 +1,4 @@
-// Arguments: max_acceleration, custom_repeats (optional)
+// Arguments: brush, max_acceleration, custom_repeats (optional)
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -11,7 +11,7 @@ callback = function () {
 update = function () {
 	var coord = [];
 	coord = rand_side_from(border_instance.x - border_instance.left - 8, border_instance.y - border_instance.up - 8, border_instance.x + border_instance.right + 8, border_instance.y + border_instance.down + 8);
-	create_broomie(coord[0], coord[1], obj_brush_ink_sans,
+	create_broomie(coord[0], coord[1], brush,
 		point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y) + 225, -1, -1, max_acceleration);
 }
 

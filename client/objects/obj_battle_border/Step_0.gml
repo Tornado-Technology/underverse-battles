@@ -95,6 +95,7 @@ if (enable_frame) {
 	_inst_frame_down.image_yscale=0;
 	_inst_frame_right.image_xscale=0;
 	_inst_frame_right.image_yscale=0;
+	
 }
 
 

@@ -2,7 +2,6 @@
   "$GMObject":"",
   "%Name":"obj_wave_from_wings_x_anastasia",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -12,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/X Anastasia/Attacks/Bullets.yy",
+    "path":"folders/Characteres/X Anastasia/Bullets.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_bullet",
@@ -35,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_wave_from_wings_anastasia",
+    "path":"sprites/spr_wave_from_wings_anastasia/spr_wave_from_wings_anastasia.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

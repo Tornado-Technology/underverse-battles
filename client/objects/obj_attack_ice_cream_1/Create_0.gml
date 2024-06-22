@@ -32,7 +32,8 @@ switch (type) {
 	default:
 	create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_spikes_flies_up, {
-			spike: obj_spike_nightmare_ice_cream
+			spike: obj_spike_nightmare_ice_cream,
+			spike_target: obj_spike_target_nightmare_ice_cream
 		});
 	break;
 };

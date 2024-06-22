@@ -17,8 +17,8 @@ update = function () {
 			side: -1,
 			angle_speed_const: -1,
 			max_acc: max_acceleration,
-			target : soul_instance,
-			_power : _power
+			target: soul_instance,
+			_power: _power
 		});
 	}
 }

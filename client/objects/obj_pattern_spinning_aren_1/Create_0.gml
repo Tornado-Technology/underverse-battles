@@ -26,8 +26,7 @@ callback = function () {
 			sprite_set_offset(sprite_index, 0, 5);
 		};
 		
-		slime_instance[i].draw_no_in_arena = true;
-	
+		slime_instance[i].disable_surface = true;
 		i++;
 	}
 

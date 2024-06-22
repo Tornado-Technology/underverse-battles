@@ -1,11 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_string_tentacles_nightmare_ice_cream",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_string_tentacles_nightmare_ice_cream",
   "overriddenProperties":[],
@@ -14,8 +10,8 @@
     "path":"folders/Characteres/Nightmare/Bullets/Ice cream/Tentacles.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_scare_attack",
-    "path":"objects/obj_battle_scare_attack/obj_battle_scare_attack.yy",
+    "name":"obj_string_tentacles_nightmare",
+    "path":"objects/obj_string_tentacles_nightmare/obj_string_tentacles_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tremble_tentacles_ice_cream",
-    "path":"sprites/spr_tremble_tentacles_ice_cream/spr_tremble_tentacles_ice_cream.yy",
+    "name":"spr_two_sides_tentacles_ice_cream",
+    "path":"sprites/spr_two_sides_tentacles_ice_cream/spr_two_sides_tentacles_ice_cream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

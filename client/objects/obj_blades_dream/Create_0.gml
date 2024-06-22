@@ -12,7 +12,7 @@ speed_spinning = 0;
 
 stage = 0;
 alpha = 0;
-image_alpha = 0;
+image_alpha = alpha;
 acc = 0;
 max_acc = 0;
 

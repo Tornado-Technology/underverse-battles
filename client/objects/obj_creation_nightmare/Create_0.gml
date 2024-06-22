@@ -1,5 +1,7 @@
 event_inherited();
 
+disable_surface = true;
+
 damage = get_char_damage(obj_character_nightmare);
 
 soul_invulnerability = 20;

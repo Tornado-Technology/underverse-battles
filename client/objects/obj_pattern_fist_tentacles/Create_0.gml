@@ -27,6 +27,7 @@ update = function () {
 	slime_instnace.scale_const = irandom_range(10, 17);
 	var angle = 90;
 	var speed_count = 2 + _power * 0.3;
+	
 	var left_soul = collision_rectangle(border_instance.x - border_instance.left + 25, border_instance.y - border_instance.up, border_instance.x - border_instance.left + 70, border_instance.y - border_instance.up + 20, soul_instance, false, false);
 	var right_soul = collision_rectangle(border_instance.x + border_instance.right - 70, border_instance.y - border_instance.up, border_instance.x + border_instance.right - 25, border_instance.y - border_instance.up + 20, soul_instance, false, false);
 		

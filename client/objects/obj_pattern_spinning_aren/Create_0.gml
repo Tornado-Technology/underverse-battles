@@ -19,7 +19,7 @@ callback = function () {
 			image_xscale: 6.5
 		});
 		
-		slime_instance[i].draw_no_in_arena = true;
+		slime_instance[i].disable_surface = true;
 		
 		with(slime_instance[i]) {
 			sprite_set_offset(sprite_index, 0, 4);
@@ -44,6 +44,10 @@ update_start = function() {
 	repeat(slime_count) {
 		slime_instance[i].x = fram[i].x;
 		slime_instance[i].y = fram[i].y; 
+		
+		if (i == 2) {
+			slime_instance[i].image_yscale = -slime_instance[i].image_yscale;
+		};
 		
 		slime_instance[i].image_angle = angle[i];
 		i++;

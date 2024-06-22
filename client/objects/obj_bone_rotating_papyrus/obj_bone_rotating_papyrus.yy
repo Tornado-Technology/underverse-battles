@@ -13,8 +13,8 @@
     "path":"folders/Characteres/Papyrus/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_bone_rotating_swap_sans",
-    "path":"objects/obj_bone_rotating_swap_sans/obj_bone_rotating_swap_sans.yy",
+    "name":"obj_bone_spinning_papyrus",
+    "path":"objects/obj_bone_spinning_papyrus/obj_bone_spinning_papyrus.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bone_spining_papyrus",
-    "path":"sprites/spr_bone_spining_papyrus/spr_bone_spining_papyrus.yy",
+    "name":"spr_bone_papyrus",
+    "path":"sprites/spr_bone_papyrus/spr_bone_papyrus.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,5 @@
 event_inherited();
+
 _angle = 20;
 
 soul_invulnerability = 20;
@@ -15,7 +16,7 @@ target_end = new Vector2(x, y);
 
 move_beginning = true;
 
-draw_no_in_arena = false;
+
 
 destroy = false;
 step = 0.5;

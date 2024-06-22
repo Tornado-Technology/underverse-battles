@@ -1,8 +1,18 @@
-event_inherited();
+if (gradually_alpha) {
+	if (image_alpha <= 1) {
+		image_alpha += 0.1;	
+	};	
+};
 
-if (time_source_get_state(time_source_destroy_star) == time_source_state_stopped) {
+image_angle -= speed_const * dtime;
+
+
+motion_set(direction, speed_const * dtime);	
+
+
+if (destroy) {
 	image_alpha -= 0.1 * dtime;
 	if (image_alpha <= 0) {
 		instance_destroy();	
-	}
-}
+	};	
+};

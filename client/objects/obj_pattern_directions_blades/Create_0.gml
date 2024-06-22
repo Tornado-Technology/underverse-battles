@@ -8,7 +8,7 @@ callback = function () {
 
 
 update = function() {
-var radius = 220;
+var radius = 240;
 var point = choose(90, 180);
 var offset = 50;
 var _xx = 0;

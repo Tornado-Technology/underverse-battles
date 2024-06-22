@@ -5,7 +5,7 @@ callback = function () {
 	speed_const = 1 + _power * 0.1;
 	var _dir = 90;
 	var multiplication = 1;
-	var offset_x = 35;
+	var offset_x = 40;
 	var offset_y = 30;
 	var scale_const = 0.7;
 	repeat (2) {
@@ -23,14 +23,16 @@ callback = function () {
 };
 update = function () {
 	var offset = irandom_range(-20, 20);
-	if (irandom_range(0, 1)) {
-		var spike_instance = instance_create_depth(border_instance.x - offset, border_instance.y - border_instance.up - 20, fight_depth.bullet_outside_hight, spike, {
+	var spike_instance;
+	
+	if (irandom(1)) {
+		spike_instance = instance_create_depth(border_instance.x - offset, border_instance.y - border_instance.up - 20, fight_depth.bullet_outside_hight, spike, {
 			direction: 270, 
 			image_angle: 270
 		});
 	}
 	else {
-		var spike_instance = instance_create_depth(border_instance.x - offset, border_instance.y + border_instance.down + 20, fight_depth.bullet_outside_hight, spike, {
+		 spike_instance = instance_create_depth(border_instance.x - offset, border_instance.y + border_instance.down + 20, fight_depth.bullet_outside_hight, spike, {
 			direction: 90, 
 			image_angle: 90
 		});

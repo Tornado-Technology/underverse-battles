@@ -1,1 +1,1 @@
-time_source_destroy(time_source_destroy_star);
+time_source_destroy(time_source_self_destroy);

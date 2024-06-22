@@ -1,6 +1,8 @@
 event_inherited();
 
-damage = get_char_damage(obj_character_x_XAnastasia);
+disable_surface = true;
+
+damage = get_char_damage(obj_character_xanastasia);
 
 
 alpha = 0;

@@ -8,8 +8,8 @@
   "name":"obj_character_swap_papyrus_christmas",
   "overriddenProperties":[],
   "parent":{
-    "name":"Swap Papyrus",
-    "path":"folders/Characteres/Swap Papyrus.yy",
+    "name":"Skins",
+    "path":"folders/Characteres/Swap Papyrus/Skins.yy",
   },
   "parentObjectId":{
     "name":"obj_character_swap_papyrus",

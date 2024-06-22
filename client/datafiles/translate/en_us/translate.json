@@ -785,7 +785,18 @@
 	  "Garland": "Garland",
     "AntiPiracy": "Anti piracy",
     "NoTextures": "No textures",
-    "Samurai": "Samurai"
+    "Samurai": "Samurai",
+	"IceCream": "IceCream",
+	"Mecha": "Mecha",
+	"Demon": "Demon",
+	"Echo": "Echo",
+	"Galactic": "Ton-618",
+	"Blob": "Blob",
+	"Robber": "Robber",
+	"Basketbro": "Basketbro",
+	"Negative": "Negative",
+	"Magma": "Magma",
+	"OldOutfit": "Old Outfit"
   },
   "Battle": {
     "Target": "Target",

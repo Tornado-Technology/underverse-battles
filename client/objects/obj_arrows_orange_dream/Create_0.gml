@@ -1,29 +1,57 @@
-event_inherited();
-
 depth = fight_depth.bullet_outside_hight;
 
 damage = get_char_damage(obj_character_dream);
 
-soul_invulnerability = 20;
+disable_surface = true;
 
-speed_const = 3;
+soul_invulnerability = 20;
+speed_const = 0;
+
 
 size_ricochet = _power;
+half_width = sprite_width / 2;
+half_height = sprite_height / 2;
 
-result_ricochet = function () {
-	image_angle = point_direction(x, y, target.x, target.y);
+
+result_ricochet = function () {	
+	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
+	var angle = new Vector2(x, y).math_dot(obj_battle_border);
+	
+	image_angle = lerp(image_angle, image_angle - (angle), speed_const * dtime);
+	move_contact_solid(direction_center_arena, speed_const);
 }
 
 move = false;
-
+ricochet = false;
 touching_walls = false;
 
-target = obj_battle_soul;
+collision = function () {
+	var collision_border =  function () {
+		result_ricochet();
+		size_ricochet--;
+	};	
+	
+	if (size_ricochet == -1) {
+		exit;
+	};
+	
+	if (collision_line(x - half_width, y, 0, y, obj_solid, false, false) == noone) {
+		collision_border();
+	};
+	
+	if (collision_line(x + half_width, y, room_width, y, obj_solid, false, false) == noone) {
+		collision_border();		
+	};
+	
+	if (collision_line(x, y - half_height, x, 0, obj_solid, false, false) == noone) {
+		collision_border();
+	};
+	
+	if (collision_line(x, y + half_height, x, room_height, obj_solid, false, false) == noone) {
+		collision_border();
+	};
+}
 
-probabiity_ricochet = irandom_range(1, 100);
-
-got_ricocher = false;
-
-if (probabiity_ricochet <= 15 + _power * 10) {
-	got_ricocher = true;
+if (irandom_range(1, 100) <= (15 + _power * 10)) {
+	ricochet = true;
 };
