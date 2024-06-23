@@ -50,6 +50,7 @@ cutscenes = [
 		//	frisk.control(true);
 		//	sans.follow(frisk);
 		//}],
+		[cutscene_object_set_sprtie, frisk, spr_frisk_with_plate],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
 		[cutscene_wait, 3],
 		[cutscene_dialog, episode + "Dialog17", dir.down],
@@ -95,7 +96,7 @@ cutscenes = [
 		[cutscene_object_set_sprtie, frisk, spr_frisk_putting_plate],
 		[cutscene_wait, 1.2],
 		[cutscene_object_set_sprtie, frisk, spr_frisk_walking_down],
-		[cutscene_object_move_to, frisk, 444, 2936, 2],
+		[cutscene_character_move, frisk, 0, 50, 2],
 		[cutscene_object_set_sprtie, frisk, spr_frisk_standing_down],
 		[cutscene_wait, 0.2],
 		[cutscene_execute, function() {

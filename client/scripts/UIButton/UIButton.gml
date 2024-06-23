@@ -12,6 +12,7 @@ function UIButton() constructor {
 	is_focus = false;
 	needs_hover = false;
 	is_multi_touch = false;
+	can_be_on_pause = true;
 	
 	device_index = undefined; // Mobile
 	
@@ -61,6 +62,11 @@ function UIButton() constructor {
 		return self;
 	}
 	
+	static set_can_be_on_pause = function(value) {
+		can_be_on_pause = value;
+		return self;
+	}
+	
 	static set_hover = function(position_x, position_y) {
 		if (!is_enable_interaction) return;
 		
@@ -79,7 +85,7 @@ function UIButton() constructor {
 	}
 	
 	static update = function(position_x, position_y) {
-		if (!is_enable_interaction) return;
+		if (!is_enable_interaction || can_be_on_pause && global.pause_game) return;
 		
 		set_hover(position_x, position_y);
 		

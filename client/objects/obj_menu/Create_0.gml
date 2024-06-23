@@ -42,7 +42,7 @@ height = display_get_gui_height();
 game_hash = client_info.hash;
 
 // Effect fade
-effect_fade(0, 0.5, 2, c_white, true, 0);
+effect_fade(0, 0.5, 2, c_white, true);
 
 // Logo
 logo = spr_underverse_battles_logo;

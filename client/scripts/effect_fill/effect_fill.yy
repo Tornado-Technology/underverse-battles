@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"effect_fill",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"effect_fill",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Local/Data/Effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

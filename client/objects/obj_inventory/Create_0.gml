@@ -53,7 +53,7 @@ remove_money = function(cost) {
 has = function(name) {
 	searching_name = name;
 	return array_any(ui.items, function(item) {
-		return item.name == searching_name;
+		return item.key == searching_name;
 	});
 }
 

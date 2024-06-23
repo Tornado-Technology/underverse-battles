@@ -141,8 +141,6 @@ function UITextClass(text) constructor {
 		for (var i = 0; i < array_length(tags); i++) {
 			var tag = tags[i];
 		
-			logger.debug(tag);
-		
 			// Check all names
 			if (tag.has_name(name)) {
 				return tag;

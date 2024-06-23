@@ -1,14 +1,8 @@
-function camera_set_position(vector){
+function camera_set_position(x, y){
 	var camera = global.camera_instance;
-    
-    if (argument_count > 1) {
-        var _x = argument[0];
-        var _y = argument[1];
-        vector = new Vector2(_x, _y);
-    }
-	
-	camera.overwrite_position = vector;
-    camera.is_using_speed = false;
+	camera.is_overwrite = true;
+	camera.is_using_speed = false;
+	camera.overwrite_position = new Vector2(x, y);
 }
 
 function camera_get_position() {
@@ -31,18 +25,11 @@ function camera_reset_size() {
 	if (!instance_exists(obj_camera)) return;
 }
 
-function camera_set_overwrite_position(vector) {
+function camera_set_overwrite_position(x, y) {
 	var camera = global.camera_instance;
 	camera.is_overwrite = true;
 	camera.is_using_speed = true;
-	
-	if (argument_count > 1) {
-		var _x = argument[0];
-		var _y = argument[1];
-		vector = new Vector2(_x, _y);
-	}
-	
-	camera.overwrite_position = vector; 
+	camera.overwrite_position = new Vector2(x, y);
 }
 
 function camera_set_speed(vector){
@@ -57,7 +44,7 @@ function camera_set_speed(vector){
 	camera._speed = vector;
 }
 
-function camera_set_taget(obj) {
+function camera_set_target(obj) {
 	if (!instance_exists(obj_camera)) return;
 	obj_camera.target = obj;
 	obj_camera.is_using_speed = false;
@@ -65,9 +52,7 @@ function camera_set_taget(obj) {
 	obj_camera.is_overwrite = false;
 }
 
-function camera_resize() {
-    if (!instance_exists(obj_camera)) return;
-    
+function camera_resize() {    
     with (obj_camera) {
         event_user(0);
     }

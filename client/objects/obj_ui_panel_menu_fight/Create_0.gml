@@ -43,9 +43,9 @@ if (!fight_network_mode) {
 		if (to_close) exit;
 		
 		if (gameplay_exists) {
-			game_restart();
-			return;
+			instance_destroy(global.gameplay_instance);
 		}
+		camera_resize();
 		instance_destroy();
 		room_goto(room_menu);
 	});

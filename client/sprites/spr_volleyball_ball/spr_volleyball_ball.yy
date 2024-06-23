@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Objects",
-    "path":"folders/Sprites/Storymode/Episode 3/Objects.yy",
+    "name":"Volleyball",
+    "path":"folders/Sprites/Storymode/Episode 3/Volleyball.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

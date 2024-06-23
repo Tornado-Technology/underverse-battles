@@ -31,7 +31,7 @@ soul = spr_battle_soul_red;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Standard");
-frame = spr_empty;
+frame = spr_frisk_frame;
 
 // Animations
 idle_animation = spr_empty;

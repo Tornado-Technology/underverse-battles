@@ -18,7 +18,7 @@ tabSkin.on_click_on_character = function() {
 	input_lock = true;
 	
 	var transition_time = 0.4;
-	effect_fade(transition_time, 0, transition_time, c_black, true, -1, function() {
+	effect_fade(transition_time, 0, transition_time, c_black, true, true, function() {
 		send_fight_join(tournament_mode ? match_type.tournament_1vs1 : match_type.rating_1vs1,
 			tabCharacters.selected_character, tabSkin.selected_character);
 		instance_create(obj_menu_matchmaking);

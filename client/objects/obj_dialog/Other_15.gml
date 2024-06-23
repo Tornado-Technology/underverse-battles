@@ -76,3 +76,5 @@ set_frame("TorielPicnic", "laughing", spr_toriel_picnic_frame_laughing);
 set_frame("AsgorePicnic", "normal", spr_asgore_picnic_frame);
 // Alphys (picnic)
 set_frame("AlphysPicnic", "normal", spr_alphys_picnic_frame);
+// Frisk
+set_frame("Frisk", "normal", spr_frisk_frame);

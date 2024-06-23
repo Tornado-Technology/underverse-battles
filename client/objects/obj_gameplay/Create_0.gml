@@ -6,7 +6,7 @@ restart_time = 5;
 previous_room = room;
 
 // Methods
-room_start_callback = function(callback = function() {}, new_room = room, _previous_room = previous_room) {
+room_start_callback = function(_previous_room, new_room = room, callback = function() {}) {
 	if (previous_room == _previous_room && room == new_room) {
 		callback();
 		previous_room = room;
@@ -15,7 +15,7 @@ room_start_callback = function(callback = function() {}, new_room = room, _previ
 
 cutscene_after_death = function() {
 	room_instance_clear(room);
-	effect_blackout_start(c_black, false, fight_depth.ui);
+	effect_fill(c_black, 1, false, fight_depth.ui);
 	
 	instance_create(obj_soul_destroyed);
 	time_source_start(time_source_restart);

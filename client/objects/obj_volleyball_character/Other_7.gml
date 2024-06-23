@@ -1,0 +1,1 @@
+if (sprite_index == punch_sprite) sprite_index = standing_sprite;

@@ -2,9 +2,9 @@
 if (is_first_appearance) {
 	instance_create(obj_inventory);
 	
-	camera_set_taget(frisk);
+	camera_set_target(frisk);
 	cutscene_create(cutscenes[0]);
-	effect_fade(0, 0.1, 2, c_black, true, fight_depth.ui);
+	effect_fade(0, 0, 2, c_black, true);
 	
 	audio_stop_all();
 	audio_play_soundtrack(snd_surface);
@@ -14,7 +14,7 @@ if (is_first_appearance) {
 	exit;
 }
 
-room_start_callback(function() {
+room_start_callback(room_underverse_episode_3_surface, room_underverse_episode_3_muffet_bakery, function() {
 	frisk.x = 239;
 	frisk.y = 266;
 	frisk.control();
@@ -24,9 +24,11 @@ room_start_callback(function() {
 	sans.follow(frisk);
 	sans.direction = dir.up;
 	audio_stop_sound(snd_park);
-}, room_underverse_episode_3_muffet_bakery, room_underverse_episode_3_surface);
+});
 
-room_start_callback(function() {
+room_start_callback(room_underverse_episode_3_muffet_bakery, room_shop_muffet_bakery);
+
+room_start_callback(room_shop_muffet_bakery, room_underverse_episode_3_muffet_bakery, function() {
 	frisk.x = 223;
 	frisk.y = 204;
 	frisk.control();
@@ -35,9 +37,9 @@ room_start_callback(function() {
 	sans.y = 222;
 	sans.follow(frisk);
 	sans.direction = dir.up;
-}, room_underverse_episode_3_muffet_bakery, room_shop_muffet_bakery);
+});
 
-room_start_callback(function() {
+room_start_callback(room_underverse_episode_3_muffet_bakery, room_underverse_episode_3_surface, function() {
 	frisk.x = 1530;
 	frisk.y = 1100;
 	frisk.control();
@@ -47,9 +49,9 @@ room_start_callback(function() {
 	sans.follow(frisk);
 	sans.direction = dir.down;
 	audio_play_soundtrack(snd_park);
-}, room_underverse_episode_3_surface, room_underverse_episode_3_muffet_bakery);
+});
 
-room_start_callback(function() {
+room_start_callback(room_underverse_episode_3_surface, room_underverse_episode_3_ketchup_shop, function() {
 	frisk.x = 239;
 	frisk.y = 266;
 	frisk.control();
@@ -59,20 +61,22 @@ room_start_callback(function() {
 	sans.follow(frisk);
 	sans.direction = dir.up;
 	audio_stop_sound(snd_park);
-}, room_underverse_episode_3_ketchup_shop, room_underverse_episode_3_surface);
+});
 
-room_start_callback(function() {
-	frisk.x = 204;
+room_start_callback(room_underverse_episode_3_ketchup_shop, room_shop_ketchup_shop);
+
+room_start_callback(room_shop_ketchup_shop, room_underverse_episode_3_ketchup_shop, function() {
+	frisk.x = 203;
 	frisk.y = 204;
 	frisk.control();
 	frisk.direction = dir.up;
-	sans.x = 204;
+	sans.x = 203;
 	sans.y = 222;
 	sans.follow(frisk);
 	sans.direction = dir.up;
-}, room_underverse_episode_3_ketchup_shop, room_shop_ketchup_shop);
+});
 
-room_start_callback(function() {
+room_start_callback(room_underverse_episode_3_ketchup_shop, room_underverse_episode_3_surface, function() {
 	frisk.x = 1916;
 	frisk.y = 1100;
 	frisk.control();
@@ -94,4 +98,4 @@ room_start_callback(function() {
 		undyne.sprite_index = spr_undyne_picnic_sitting_down;
 		toriel.sprite_index = spr_toriel_picnic_sitting_left;
 	}
-}, room_underverse_episode_3_surface, room_underverse_episode_3_ketchup_shop);
+});

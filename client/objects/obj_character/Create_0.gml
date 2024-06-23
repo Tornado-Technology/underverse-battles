@@ -110,6 +110,13 @@ move = function(_x, _y, _speed) {
 	speed_const = _speed;
 }
 
+move_to = function(_x, _y, _speed) {
+	is_moving = true;
+	x_new = _x;
+	y_new = _y;
+	speed_const = _speed;
+}
+
 skip_moving = function() {
 	is_moving = false;
 	x = x_new;
@@ -118,7 +125,7 @@ skip_moving = function() {
 }
 
 control = function(is_showing_arrows = false, can_run = self.can_run, _speed = speed_const) {
-	camera_set_taget(self);
+	camera_set_target(self);
 	is_controlled = true;
 	self.can_run = can_run;
 	speed_const = _speed;

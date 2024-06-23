@@ -9,11 +9,11 @@ wall_left.image_yscale = room_height / wall_left.sprite_height;
 wall_right = instance_create_depth(room_width - sprite_get_width(spr_wall), 0, 0, obj_wall);
 wall_right.image_yscale = room_height / wall_left.sprite_height;
 
-camera_set_taget(player_);
+camera_set_target(player_);
 camera_set_zoom(2, 120, room_height / 4);
 
 var start_time_sec = 3;
-effect_fade(0, 0, start_time_sec, c_black, false, fight_depth.ui_hight);
+effect_fade(0, 0, start_time_sec, c_black, true);
 camera_change_zoom(1, start_time_sec, 120, room_height / 4);
 
 audio_stop_all();

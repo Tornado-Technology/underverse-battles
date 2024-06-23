@@ -2,7 +2,7 @@
 sprite_index = noone;
 fade = false;
 
-target_gui = false;
+use_draw_gui_end = false;
 duration_in = 0; // In seconds
 duration_hold = 0; // In seconds
 duration_out = 0; // In seconds

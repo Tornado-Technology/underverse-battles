@@ -1542,7 +1542,41 @@
       "Dialog24": [
         "{PapyrusPicnic:normal}Я ПОДАЮ."
       ],
-      "UndyneGoal": [
+      "PapyrusGoal_1": [
+        "{PapyrusPicnic:glad}НЬА-ХА-ХА! ОТЛИЧНО!"
+      ],
+      "PapyrusGoal_2": [
+        "{PapyrusPicnic:glad}ГОЛ!"
+      ],
+      "PapyrusOut": [
+        "{PapyrusPicnic:glad}АУТ!"
+      ],
+      "FriskGoal": [
+        "{PapyrusPicnic:glad}МОЛОДЕЦ, ФРИСК!"
+      ],
+      "SansGoal": [
+        "{PapyrusPicnic:glad}ГОЛ! ОТЛИЧНАЯ РАБОТА, САНС!",
+        "{SansVolleybro:normal}да? прикольно"
+      ],
+      "AsgoreGoal": [
+        "{UndynePicnic:glad}Молодчина, Азгор!",
+        "{AsgorePicnic:normal}Спасибо, стараюсь."
+      ],
+      "AlphysGoal": [
+        "{UndynePicnic:glad}Альфис, ты забила!",
+        "{AlphysPicnic:normal}Д-да?",
+        "{UndynePicnic:glad}Молодец!",
+        "{AlphysPicnic:normal}Спасибо."
+      ],
+      "AlphysLose": [
+        "{PapyrusPicnic:glad}АУТ!",
+        "{UndynePicnic:glad}Эй, Альфис, соберись!",
+        "{AlphysPicnic:normal}П-Прости!"
+      ],
+      "UndyneGoal_1": [
+        "{UndynePicnic:glad}ГОЛ! ВОТ ЭТО Я ПОНИМАЮ!"
+      ],
+      "UndyneGoal_2": [
         "{UndynePicnic:glad}ДА! ГОЛ!"
       ],
       "UndyneOut_1": [
@@ -1550,23 +1584,6 @@
       ],
       "UndyneOut_2": [
         "{UndynePicnic:glad}АУТ!"
-      ],
-      "PapyrusGoal_1": [
-        "{PapyrusPicnic:glad}НЬА-ХА-ХА! ОТЛИЧНО!"
-      ],
-      "PapyrusGoal_2": [
-        "{PapyrusPicnic:glad}ГОЛ!"
-      ],
-      "FriskGoal": [
-        "{PapyrusPicnic:glad}МОЛОДЕЦ, ФРИСК!"
-      ],
-      "AsgoreGoal": [
-        "{UndynePicnic:glad}Молодчина, Азгор!",
-        "{AsgorePicnic:normal}Спасибо, стараюсь."
-      ],
-      "AlphysLose": [
-        "{UndynePicnic:glad}Эй, Альфис, соберись!",
-        "{AlphysPicnic:normal}П-Прости!"
       ],
       "Dialog25": [
         "{UndynePicnic:glad}Спорим, что моя команда выиграет эту подачу?",

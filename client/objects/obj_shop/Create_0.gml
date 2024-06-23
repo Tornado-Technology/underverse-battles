@@ -60,7 +60,7 @@ ui = new UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dia
 
 // Methods
 transition = function() {
-	effect_fade(transition_time, 0, transition_time, c_black, true, fight_depth.ui);
+	effect_fade(transition_time, 0, transition_time, c_black, true);
 	time_source_start(time_source_transition);
 }
 

@@ -16,7 +16,7 @@ wall_right = instance_create_depth(room_width - sprite_get_width(spr_wall), 0, 0
 wall_right.image_yscale = room_height / wall_left.sprite_height;
 
 // Effects
-camera_set_taget(sans);
+camera_set_target(sans);
 camera_set_zoom(2, sans.x, sans.y - 24);
 
 var start_time_sec = 3;

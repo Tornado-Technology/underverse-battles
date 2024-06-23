@@ -7,7 +7,7 @@ required_pressing = false;
 transition = function() {
 	target_character.set_uncontrolled();
 	
-	effect_fade(transition_time, 0, transition_time, c_black, true, fight_depth.ui);
+	effect_fade(transition_time, 0, transition_time, c_black, true, true);
 	time_source_start(time_source_transition);
 	
 	transition_callback();
