@@ -11,36 +11,35 @@ if (stage == 1) {
 		spawn_star();
 		time_source_start(time_source_spawn_star);
 		stop_spawn = true;
-	}
-}
-
+	};
+};
 
 if (stage == 2) {			
 	if (acc > 0) acc -= dtime;
 	image_angle += acc * angle_speed_const * dtime;
-}
+};
 
 if (stage == 1 || stage == 2) {
 	if (side == 0) {
 		x += speed_const * dtime;
-		
 	}
 	else if (side == 1) {
 		y += speed_const * dtime;
-		
 	}
 	else if (side == 2) {
 		x -= speed_const * dtime;
 	}
 	else if (side == 3) {
 		y -= speed_const * dtime;
-	}
-}
+	};
+};
 
 
 if (stage == 3) {
-	if (image_alpha > 0)
+	if (image_alpha > 0) {
 		image_alpha -= 0.05 * dtime;
-	else
+	}
+	else {
 		instance_destroy();
-}
+	};
+};

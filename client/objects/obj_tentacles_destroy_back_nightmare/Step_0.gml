@@ -12,6 +12,5 @@ if (image_xscale <= start_scale) {
 	if (!back) {
 		instance_destroy();
 	};
-	
 	scale_const = new_counst;
 };

@@ -35,7 +35,7 @@ switch (type) {
 	break;
 	
 	default:
-	create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 15, battle_border.right + 5);
+	create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 30, battle_border.right + 25);
 		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
 			fist: obj_fist_nightmare_ice_cream,
 			platform: obj_spinning_platform,

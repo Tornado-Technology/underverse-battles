@@ -10,12 +10,12 @@
   "name":"obj_bone_spinning_nightmare_mecha",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Mecha",
+    "path":"folders/Characteres/Nightmare/Bullets/Mecha.yy",
   },
   "parentObjectId":{
-    "name":"obj_bone_sans",
-    "path":"objects/obj_bone_sans/obj_bone_sans.yy",
+    "name":"obj_bone_spinning_nightmare",
+    "path":"objects/obj_bone_spinning_nightmare/obj_bone_spinning_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bone_rotating_nightmare",
-    "path":"sprites/spr_bone_rotating_nightmare/spr_bone_rotating_nightmare.yy",
+    "name":"spr_bone_rotating_nightmare_mecha",
+    "path":"sprites/spr_bone_rotating_nightmare_mecha/spr_bone_rotating_nightmare_mecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,

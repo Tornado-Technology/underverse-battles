@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/X Anastasia/Attacks/Bullets.yy",
+    "path":"folders/Characteres/X Anastasia/Bullets.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_bullet",

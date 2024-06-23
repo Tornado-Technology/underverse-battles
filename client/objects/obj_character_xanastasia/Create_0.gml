@@ -50,9 +50,9 @@ fight_2_finish_animation = spr_xanastasia_scythe_finish;
 passive_skill = PassiveSkill("Character.XAnastasia.PassiveSkill");
 actions = [
 
-	Action("Character.Dream.Attack0", call_attack_x_anastasia_0),
-	Action("Character.Dream.Attack1", call_attack_x_anastasia_0),
-	Action("Character.Dream.Attack2", call_attack_dream_2)
+	Action("Character.Dream.Attack0", call_attack_xanastasia_0),
+	Action("Character.Dream.Attack1", call_attack_xanastasia_0),
+	Action("Character.Dream.Attack2", call_attack_xanastasia_2)
 
 ];
 special_action = SpecialAction("Character.XAnastasia.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_dream_special);

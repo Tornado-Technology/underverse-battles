@@ -23,7 +23,7 @@ has_collision_left = false;
 has_collision_right = false;
 
 	
-if  (border.spining) {
+if(border.spining) {
 	if (place_meeting(x, y, obj_solid)) {
 		x = xprevious;
 		y = yprevious;

@@ -11,7 +11,8 @@ callback = function () {
 			speed_count: 2 + _power * 0.1,
 			time_state: 20,
 			time_return: 35,
-			scale_time: _power * 0.1
+			scale_time: _power * 0.1,
+			scale_const: -2
 		})
 		,
 		instance_create_depth(border_instance.x + 10, border_instance.y - border_instance.up, fight_depth.bullet_outside_hight, obj_stretched_tentacles_nightmare, {
@@ -19,7 +20,8 @@ callback = function () {
 			speed_count: 2 + _power * 0.1,
 			time_state: 20,
 			time_return: 35,
-			scale_time: _power * 0.1
+			scale_time: _power * 0.1,
+			scale_const: -2
 		})
 	];
 	
@@ -35,7 +37,7 @@ update_tentacles = function () {
 		image_xscale: 0,
 		image_angle: 90
 	});
-		tentacles_instance.change_scale(1.3, speed_tentacles)
+		tentacles_instance.change_scale(1.3, speed_tentacles);
 }
 
 update = function () {
@@ -61,12 +63,7 @@ if (variable_instance_exists(id, "custom_repeats")) {
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-	if (shot) {
-		time_source_start(time_source_update_shot);
-	}
-	else {
-		time_source_start(time_source_cooldown);	
-	};
+	time_source_start(shot ? time_source_update_shot : time_source_cooldown);
 }, [], -1);
 
 time_source_update_tentacles = time_source_create(time_source_game, (period + 20) /  60, time_source_units_seconds, function () {

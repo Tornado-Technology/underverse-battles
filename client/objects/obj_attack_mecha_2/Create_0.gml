@@ -41,8 +41,8 @@ switch (type) {
 	default:
 		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
 		pattern_instance = create_pattern(obj_pattern_spinning_aren, {
-			tentacles_tremble: obj_tentacles_tremble_nightmare_mecha,
-			bullets: obj_bullets_nightmare
+			slime: obj_slime_nightmare_mecha,
+			bullets: obj_bullets_nightmare_mecha
 		});
 	break;
 };

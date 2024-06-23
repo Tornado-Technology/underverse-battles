@@ -43,6 +43,7 @@ function CharacterList() {
 			new Character(obj_character_ink_sans_christmas, "InkSans", "Christmas", spr_ink_sans_christmas_frame),
 			new Character(obj_character_ink_sans_blob, "InkSans", "Blob", spr_ink_sans_blob_frame),
 			new Character(obj_character_ink_sans_galactic, "InkSans", "Galactic", spr_ink_sans_galactic_frame),
+			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IceBlood", spr_ink_sans_ice_blood_frame)
 		],
 		[
 			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
@@ -64,26 +65,33 @@ function CharacterList() {
 			new Character(obj_character_fell_sans, "FellSans", "Standard", spr_fell_sans_frame),
 			new Character(obj_character_fell_sans_murderer, "FellSans", "Murderer", spr_fell_sans_murderer_frame),
 			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame),
-			new Character(obj_character_fell_sans_echo, "FellSans", "Echo", spr_fell_sans_echo_frame)
+			new Character(obj_character_fell_sans_echo, "FellSans", "Echo", spr_fell_sans_echo_frame),
+			new Character(obj_character_fell_sans_old_outfit, "FellSans", "OldOutfit", spr_fell_sans_old_outfit_frame),
+			new Character(obj_character_fell_sans_showman, "FellSans", "Showman", spr_fell_sans_showman_frame)
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),
 			new Character(obj_character_swap_sans_garland, "SwapSans", "Garland", spr_swap_sans_garland_frame),
-			new Character(obj_character_swap_sans_voodoo_doll, "SwapSans", "VoodooDoll", spr_swap_sans_voodoo_doll_frame)
+			new Character(obj_character_swap_sans_voodoo_doll, "SwapSans", "VoodooDoll", spr_swap_sans_voodoo_doll_frame),
+			new Character(obj_character_swap_sans_negative, "SwapSans", "Negative", spr_swap_sans_negative_frame),
+			new Character(obj_character_swap_sans_basketbro, "SwapSans", "Basketbro", spr_swap_sans_basketbro_frame),
 		],
 		[
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
 			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas),
-			new Character(obj_character_swap_papyrus_changed_reality, "SwapPapyrus", "ChangedReality", spr_swap_papyrus_frame_changed_reality)
+			new Character(obj_character_swap_papyrus_changed_reality, "SwapPapyrus", "ChangedReality", spr_swap_papyrus_frame_changed_reality),
+			new Character(obj_character_swap_papyrus_robber, "SwapPapyrus", "Robber", spr_swap_papyrus_robber_frame)
 		],
 		[
 			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
-			new Character(obj_character_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas)
+			new Character(obj_character_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas),
+			new Character(obj_character_xchara_magma, "XtaleChara", "Magma", spr_xchara_magma_frame),
 		],
 		[
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
 			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
-			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame)
+			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame),
+			new Character(obj_character_cross_magenta, "Cross", "Magenta", spr_cross_magenta_frame)
 		],
 		[
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
@@ -103,10 +111,11 @@ function CharacterList() {
 			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
 		],
 		[
-	
 			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_xanastasia_frame),
 			new Character(obj_character_xanastasia_demon, "XAnastasia", "Demon", spr_xanastasia_demon_frame)
-
+		],
+		[
+			new Character(obj_character_jevil, "Jevil", "Standard", spr_jevil_frame),
 		]
 	];
 	// Unfinished characters

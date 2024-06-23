@@ -14,7 +14,7 @@ fight_1_finish_animation = spr_ngihtmare_ice_cream_tentacles_finish;
 
 
 actions = [
-	Action("Character.Nightmare.Attack0",  call_attack_nightmare_ice_cream_0),
-	Action("Character.Nightmare.Attack1",  call_attack_nightmare_ice_cream_1),
+	Action("Character.Nightmare.Attack0", call_attack_nightmare_ice_cream_0),
+	Action("Character.Nightmare.Attack1", call_attack_nightmare_ice_cream_1),
 	Action("Character.Nightmare.Attack2", call_attack_nightmare_ice_cream_2)
 ];

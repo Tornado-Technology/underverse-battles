@@ -802,7 +802,7 @@
     "Magenta": "Пурпурный",
     "Hallowtide": "Хэллоутайд",
     "Steampunk": "Стимпанк",
-	  "Garland": "Гирлянда",
+	"Garland": "Гирлянда",
     "AntiPiracy": "Анти пиратство",
     "NoTextures": "Без текстур",
     "Samurai": "Самурай",
@@ -811,7 +811,14 @@
 	"Demon": "Демон",
 	"Echo": "Эхо",
 	"Galactic": "Ton-618",
-	"Blob": "Сгусток"
+	"Blob": "Сгусток",
+	"Robber": "Вор в законе",
+	"Basketbro": "Баскетбольный свам",
+	"Negative": "Отрицательный",
+	"Magma": "Магма",
+	"OldOutfit": "Дед",
+	"Showman": "Великий шутняра мен",
+	"IceBlood": "Ледяная кровь"
   },
   "Battle": {
     "Target": "Цель",

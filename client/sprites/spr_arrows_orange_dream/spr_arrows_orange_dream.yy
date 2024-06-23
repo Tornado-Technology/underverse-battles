@@ -1,9 +1,9 @@
 {
   "$GMSprite":"",
   "%Name":"spr_arrows_orange_dream",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":8,
-  "bbox_left":0,
+  "bbox_left":7,
   "bbox_right":53,
   "bbox_top":0,
   "collisionKind":1,

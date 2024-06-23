@@ -6,7 +6,11 @@ soul_invulnerability = 20;
 scale_const = 0;
 scale_time = 0;
 
-speed_spinning = 5;
+speed_spinning = 0;
+
+left = irandom(1);
+
+
 
 change_scale = function(counst, step) {	
 	scale_const = counst;

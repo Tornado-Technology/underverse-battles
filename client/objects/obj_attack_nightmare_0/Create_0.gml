@@ -34,17 +34,17 @@ switch (type) {
 		});
 	break;
 	
-	case 4:
-	create_border(battle_border.up, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_pattern_stretched_tentacles, {
-			bomb: obj_bomb_bone_nightmare,
-			slime: obj_fog_nightmare
-		});
-
-	break;
+	
+	//case 4:
+	//create_border(battle_border.up, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
+	//	pattern_instance = create_pattern(obj_pattern_stretched_tentacles_1, {
+	//		bomb: obj_bomb_bone_nightmare,
+	//		slime: obj_fog_nightmare
+	//	});
+	//break;
 	
 	default:
-	create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 15, battle_border.right + 5);
+	create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 30, battle_border.right + 25);
 		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
 			fist: obj_fist_nightmare,
 			platform: obj_spinning_platform,

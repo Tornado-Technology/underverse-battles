@@ -1,9 +1,7 @@
 event_inherited();
 spike_count = 8;
-
+disable_surface = true;
 damage = get_char_damage(obj_character_nightmare);
-
-draw_no_arena = false;
 
 spwan = function () {
 if (_power > 1) {

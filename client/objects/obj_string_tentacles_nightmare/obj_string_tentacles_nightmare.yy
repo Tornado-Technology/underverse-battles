@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tremble_tentacles",
-    "path":"sprites/spr_tremble_tentacles/spr_tremble_tentacles.yy",
+    "name":"spr_two_sides_tentacles",
+    "path":"sprites/spr_two_sides_tentacles/spr_two_sides_tentacles.yy",
   },
   "spriteMaskId":null,
   "visible":true,

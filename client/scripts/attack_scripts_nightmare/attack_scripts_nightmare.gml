@@ -22,6 +22,13 @@ function call_attack_nightmare_2(player, _power, type = fight_random_integer(0, 
 	});	
 }
 
+function call_attack_nightmare_special(player) {
+	instance_create(obj_attack_nightmare_special, {
+		character_instance: player
+	});
+}
+
+
 function call_attack_nightmare_ice_cream_0(player, _power, type = fight_random_integer(0, 5)) {
 	instance_create(obj_attack_ice_cream_0, {
 		character_instance: player,

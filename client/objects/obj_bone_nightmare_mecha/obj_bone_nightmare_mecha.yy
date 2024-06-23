@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"obj_bone_nightmare_mecha",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_bone_nightmare_mecha",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Mecha",
+    "path":"folders/Characteres/Nightmare/Bullets/Mecha.yy",
   },
   "parentObjectId":{
-    "name":"obj_bone_sans",
-    "path":"objects/obj_bone_sans/obj_bone_sans.yy",
+    "name":"obj_bone_nightmare",
+    "path":"objects/obj_bone_nightmare/obj_bone_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bone_nightmare",
-    "path":"sprites/spr_bone_nightmare/spr_bone_nightmare.yy",
+    "name":"spr_bone_nightmare_mecha",
+    "path":"sprites/spr_bone_nightmare_mecha/spr_bone_nightmare_mecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,

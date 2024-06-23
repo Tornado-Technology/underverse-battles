@@ -1,5 +1,7 @@
 event_inherited();
 
-time_source_destroy_star = time_source_create(time_source_game, 30 / 60, time_source_units_seconds, function(){
+destroy = false;
+
+time_source_self_destroy = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, function () {
+	destroy = true;	
 });
-time_source_start(time_source_destroy_star);

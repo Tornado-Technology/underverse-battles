@@ -8,8 +8,8 @@
   "name":"obj_attack_swap_papyrus_special",
   "overriddenProperties":[],
   "parent":{
-    "name":"Attacks",
-    "path":"folders/Characteres/Swap Papyrus/Attacks.yy",
+    "name":"Bullets",
+    "path":"folders/Characteres/Swap Papyrus/Bullets.yy",
   },
   "parentObjectId":{
     "name":"obj_attack",

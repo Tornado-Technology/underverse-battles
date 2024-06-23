@@ -1,6 +1,6 @@
-if (image_alpha < 1)
+if (image_alpha < 1) {
 	image_alpha += alpha_step * dtime;
-
+}
 if (is_rotating) {
 	accelerating_time += dtime;
 	image_angle = (sin(accelerating_time/30)*371)
@@ -12,3 +12,4 @@ else {
 
 motion_set(image_angle, _speed * dtime);
 	
+

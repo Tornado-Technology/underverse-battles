@@ -1,1 +1,0 @@
-image_angle += (dcos(30) * sprite_width / 24) + scale_speed * dtime;

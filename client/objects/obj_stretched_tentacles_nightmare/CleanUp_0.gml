@@ -1,2 +1,0 @@
-time_source_destroy(time_source_state);
-time_source_destroy(time_source_return_state);

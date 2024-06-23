@@ -5,22 +5,15 @@ on_border_created = function () {
 };
 
 switch(type) {
-	case 0:
-		create_border(battle_border.up + 10, battle_border.down, battle_border.left, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_pattern_platform_mover_through_spining_bone, {
-			bone: obj_bone_papyrus,
-			spining_bone: obj_bone_spinning_papyrus,
-		});
-	break;
 	
-	case 1:
+	case 0:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_platform_mover_through_changes_bone, {
 			bone: obj_bone_changes_papyrus
 		});
 	break;
 		
-	case 2:
+	case 1:
 	create_border(battle_border.up + 10, battle_border.down, battle_border.left + 20, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_spinning_aren_four_bone, {
 			bone: obj_bone_papyrus,
@@ -29,13 +22,19 @@ switch(type) {
 	break;
 	
 	
-	case 3:
-		create_border(battle_border.up + 10, battle_border.down, battle_border.left + 20, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_pattern_spinning_rondom_bone, {
-			bone: obj_bone_papyrus,
-			changes_bone: obj_bone_changes_papyrus
+	case 2:
+	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 10, battle_border.right - 10);
+		pattern_instance = create_pattern(obj_patten_bone_moving_platform, {
+			bone: obj_bone_papyrus
 		});
-
+	break;
+	
+	case 3:
+	create_border(battle_border.up, battle_border.down, battle_border.left - 5, battle_border.right - 5);
+		pattern_instance = create_pattern(obj_pattern_spinning_attack_bone, {
+			bone: obj_bone_rotating_papyrus,
+			bone_shaking: obj_bone_shaking_papyrus
+		});
 	break;
 	
 		

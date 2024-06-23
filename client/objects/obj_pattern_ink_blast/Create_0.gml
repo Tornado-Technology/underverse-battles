@@ -35,7 +35,7 @@ update_broomie = function () {
 		coord_y = border_instance.y + border_instance.down + 12;
 	}
 	var brush_direction = point_direction(coord_x, coord_y, soul_instance.x, soul_instance.y) + 225;
-	create_broomie(coord_x, coord_y, obj_brush_ink_sans, brush_direction, brush_side, 1, max_acceleration);
+	create_broomie(coord_x, coord_y, brush, brush_direction, brush_side, 1, max_acceleration);
 }
 
 var period = 100;
