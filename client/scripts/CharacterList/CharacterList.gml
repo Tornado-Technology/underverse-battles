@@ -42,8 +42,8 @@ function CharacterList() {
 			new Character(obj_character_ink_sans, "InkSans", "Standard", spr_ink_sans_frame),
 			new Character(obj_character_ink_sans_christmas, "InkSans", "Christmas", spr_ink_sans_christmas_frame),
 			new Character(obj_character_ink_sans_blob, "InkSans", "Blob", spr_ink_sans_blob_frame),
-			new Character(obj_character_ink_sans_galactic, "InkSans", "Galactic", spr_ink_sans_galactic_frame),
-			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IceBlood", spr_ink_sans_ice_blood_frame)
+			new Character(obj_character_ink_sans_galactic, "InkSans", "TON618", spr_ink_sans_galactic_frame),
+			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IcyBlood", spr_ink_sans_ice_blood_frame)
 		],
 		[
 			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
@@ -67,7 +67,7 @@ function CharacterList() {
 			new Character(obj_character_fell_sans_pumpkin_hell, "FellSans", "PumpkinHell", spr_fell_sans_pumpkin_hell_frame),
 			new Character(obj_character_fell_sans_echo, "FellSans", "Echo", spr_fell_sans_echo_frame),
 			new Character(obj_character_fell_sans_old_outfit, "FellSans", "OldOutfit", spr_fell_sans_old_outfit_frame),
-			new Character(obj_character_fell_sans_showman, "FellSans", "Showman", spr_fell_sans_showman_frame)
+			new Character(obj_character_fell_sans_magician, "FellSans", "Magician", spr_fell_sans_magician_frame)
 		],
 		[
 			new Character(obj_character_swap_sans, "SwapSans", "Standard", spr_swap_sans_frame),

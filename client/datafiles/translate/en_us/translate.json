@@ -541,7 +541,7 @@
         "Description": "Bones targeting the soul and dealing damage on impact" },
       "Attack1": {
         "Name": "Spinning bones",
-        "Description": "Spinning bones targeting the SOUL and dealing damage on impact" },
+        "Description": "Spinning bones targeting the soul and dealing damage on impact" },
       "Attack2": {
         "Name": "Gasterblasters",
         "Description": "Firing damaging gasterblasters" },
@@ -709,6 +709,26 @@
         "Name": "Cool Dude",
         "Description": "Huge amount of complex bone attacks with a wide leap over bones in the end" }
     },
+    "XAnastasia": {
+      "Name": "X Anastasia",
+      "Description": "A fluttering miracle",
+      "Bio": "She is a trial original creation of XGaster, but he did not like her and left her data in his notes.",
+      "PassiveSkill": {
+        "Name": "Maneuverability",
+        "Description": "X Anastasia's soul moves faster and jumps higher when the soul turns blue" },
+      "Attack0": {
+        "Name": "Feathers",
+        "Description": "Pointed feathers flying towards the soul" },
+      "Attack1": {
+        "Name": "Swords",
+        "Description": "Attack using swords that deal damage" },
+      "Attack2": {
+        "Name": "Scythe",
+        "Description": "A scythe that swings in different directions, causing damage" },
+      "SpecialAttack": {
+        "Name": "Fast flight",
+        "Description": "The soul rushes upward, is attacked by feathers, swords and scythes" }
+    },
     "Tornado": {
       "Name": "Tornado",
       "Description": "Wet developer",
@@ -786,17 +806,18 @@
     "AntiPiracy": "Anti piracy",
     "NoTextures": "No textures",
     "Samurai": "Samurai",
-	"IceCream": "IceCream",
-	"Mecha": "Mecha",
-	"Demon": "Demon",
-	"Echo": "Echo",
-	"Galactic": "Ton-618",
-	"Blob": "Blob",
-	"Robber": "Robber",
-	"Basketbro": "Basketbro",
-	"Negative": "Negative",
-	"Magma": "Magma",
-	"OldOutfit": "Old Outfit"
+    "IceCream": "Ice cream",
+    "Mecha": "Mecha",
+    "Demon": "Demon",
+    "Echo": "Echo",
+    "TON618": "TON 618",
+    "Blob": "Blob",
+    "Robber": "Robber",
+    "Basketbro": "Basketbro",
+    "Magma": "Magma",
+    "OldOutfit": "Old outfit",
+    "Magician": "Magician",
+    "IceBlood": "Ice blood"
   },
   "Battle": {
     "Target": "Target",

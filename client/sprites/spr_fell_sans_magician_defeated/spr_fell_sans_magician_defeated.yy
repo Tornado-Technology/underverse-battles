@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_fell_sans_showman_defeated",
+  "%Name":"spr_fell_sans_magician_defeated",
   "bboxMode":0,
   "bbox_bottom":45,
   "bbox_left":0,
@@ -25,19 +25,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"80bf3f78-d0ee-41fe-b09c-c2ff96c76e28","blendMode":0,"displayName":"default","isLocked":false,"name":"80bf3f78-d0ee-41fe-b09c-c2ff96c76e28","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_fell_sans_showman_defeated",
+  "name":"spr_fell_sans_magician_defeated",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
-    "name":"Showman",
-    "path":"folders/Characteres/Fell Sans/Sprites/Char/Showman.yy",
+    "name":"Magician",
+    "path":"folders/Characteres/Fell Sans/Sprites/Char/Magician.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_fell_sans_showman_defeated",
+    "%Name":"spr_fell_sans_magician_defeated",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -61,9 +61,9 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_fell_sans_showman_defeated",
+    "name":"spr_fell_sans_magician_defeated",
     "playback":1,
-    "playbackSpeed":4.0,
+    "playbackSpeed":5.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -73,26 +73,26 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ce459e56-daa4-40bd-bde7-79b5ea315676","path":"sprites/spr_fell_sans_showman_defeated/spr_fell_sans_showman_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ce459e56-daa4-40bd-bde7-79b5ea315676","path":"sprites/spr_fell_sans_magician_defeated/spr_fell_sans_magician_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d520e7b2-1866-4761-b201-1ef84620e0ee","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"815b4f54-778b-409a-bf5a-78fbbd33ef44","path":"sprites/spr_fell_sans_showman_defeated/spr_fell_sans_showman_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"815b4f54-778b-409a-bf5a-78fbbd33ef44","path":"sprites/spr_fell_sans_magician_defeated/spr_fell_sans_magician_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b75c3d5d-9455-4424-bbb1-04d834f779b0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b49fbfbc-7654-4337-ad68-be464f5df74e","path":"sprites/spr_fell_sans_showman_defeated/spr_fell_sans_showman_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b49fbfbc-7654-4337-ad68-be464f5df74e","path":"sprites/spr_fell_sans_magician_defeated/spr_fell_sans_magician_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"3ca11e1a-d37e-4c12-ae18-209d5e8c5957","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0d1ce18e-28bc-456f-8c5a-8dd6e9ecd433","path":"sprites/spr_fell_sans_showman_defeated/spr_fell_sans_showman_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0d1ce18e-28bc-456f-8c5a-8dd6e9ecd433","path":"sprites/spr_fell_sans_magician_defeated/spr_fell_sans_magician_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"70d12d51-17c9-44f3-8f6e-693d2a3a6e55","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7ec15cea-9890-4dc9-9338-da5ee93462c3","path":"sprites/spr_fell_sans_showman_defeated/spr_fell_sans_showman_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7ec15cea-9890-4dc9-9338-da5ee93462c3","path":"sprites/spr_fell_sans_magician_defeated/spr_fell_sans_magician_defeated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9333b7a0-e25c-40eb-9ac9-ae835d1154bf","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":29,
-    "yorigin":46,
+    "yorigin":44,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

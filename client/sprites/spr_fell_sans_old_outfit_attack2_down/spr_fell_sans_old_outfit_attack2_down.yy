@@ -23,7 +23,7 @@
   ],
   "name":"spr_fell_sans_old_outfit_attack2_down",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Attack 2",
     "path":"folders/Characteres/Fell Sans/Sprites/Char/Old Outfit/Attack 2.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":12,
+    "xorigin":14,
     "yorigin":38,
   },
   "swatchColours":null,

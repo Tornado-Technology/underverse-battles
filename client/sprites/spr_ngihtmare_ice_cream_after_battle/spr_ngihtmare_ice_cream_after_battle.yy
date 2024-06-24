@@ -29,7 +29,7 @@
   ],
   "name":"spr_ngihtmare_ice_cream_after_battle",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Ice Cream",
     "path":"folders/Characteres/Nightmare/Sprites/Char/Ice Cream.yy",
@@ -99,7 +99,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":15,
+    "xorigin":16,
     "yorigin":48,
   },
   "swatchColours":null,

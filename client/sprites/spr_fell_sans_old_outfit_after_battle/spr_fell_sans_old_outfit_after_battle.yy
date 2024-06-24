@@ -23,6 +23,8 @@
     {"$GMSpriteFrame":"","%Name":"76139fe0-ab61-44f0-b29d-d25042394d27","name":"76139fe0-ab61-44f0-b29d-d25042394d27","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"624ba90e-ddc1-4b81-a5b6-a06287ebc611","name":"624ba90e-ddc1-4b81-a5b6-a06287ebc611","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"2672017a-5e30-42eb-b9e6-6f3c29e738b2","name":"2672017a-5e30-42eb-b9e6-6f3c29e738b2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"a2614480-b885-493d-b955-f0d0ac0ad5a5","name":"a2614480-b885-493d-b955-f0d0ac0ad5a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b9120475-c2c2-4140-985c-6940bd085fa3","name":"b9120475-c2c2-4140-985c-6940bd085fa3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"063ed717-2f96-4358-a059-7e44c8533c02","name":"063ed717-2f96-4358-a059-7e44c8533c02","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"78f740a8-ddcc-4d36-8007-820d7d942d39","name":"78f740a8-ddcc-4d36-8007-820d7d942d39","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"a0c2d6b4-7fc3-4bf3-b43a-e1af6f58bd8c","name":"a0c2d6b4-7fc3-4bf3-b43a-e1af6f58bd8c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -40,7 +42,7 @@
   ],
   "name":"spr_fell_sans_old_outfit_after_battle",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Old Outfit",
     "path":"folders/Characteres/Fell Sans/Sprites/Char/Old Outfit.yy",
@@ -66,7 +68,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":18.0,
+    "length":20.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -76,7 +78,7 @@
     },
     "name":"spr_fell_sans_old_outfit_after_battle",
     "playback":1,
-    "playbackSpeed":10.0,
+    "playbackSpeed":6.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -119,31 +121,37 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2672017a-5e30-42eb-b9e6-6f3c29e738b2","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"56af5ea8-9fd9-4b3e-9168-d09c2981ba4b","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2614480-b885-493d-b955-f0d0ac0ad5a5","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4c8b490f-b1da-4430-b139-b40e61f8ad27","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9120475-c2c2-4140-985c-6940bd085fa3","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1f23a193-a52e-4085-93a2-2f56258aaa02","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"063ed717-2f96-4358-a059-7e44c8533c02","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9a63ff7b-6e4d-422e-9832-38148b292e53","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"9a63ff7b-6e4d-422e-9832-38148b292e53","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"78f740a8-ddcc-4d36-8007-820d7d942d39","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f197b18c-6f1d-4434-9a7d-ff42a623ab3f","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"f197b18c-6f1d-4434-9a7d-ff42a623ab3f","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0c2d6b4-7fc3-4bf3-b43a-e1af6f58bd8c","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c58496f8-6155-4df4-98fd-80762a0fd820","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"c58496f8-6155-4df4-98fd-80762a0fd820","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"682d51b4-c8e3-41ec-82e6-77a2842866b5","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"be803d1e-38d5-47fe-8f44-cb5690fe779b","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"be803d1e-38d5-47fe-8f44-cb5690fe779b","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a4fe031-fff7-4e98-bcbf-3a60dbef9eeb","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3decf894-54f4-407f-871d-994dc92a6885","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"3decf894-54f4-407f-871d-994dc92a6885","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2c298b19-a392-48d9-b33b-b2803d6110a4","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fbabc6b1-b058-469c-b022-0482b2cc9dfa","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"fbabc6b1-b058-469c-b022-0482b2cc9dfa","IsCreationKey":false,"Key":18.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1f66e603-2cda-43e6-95b4-ecbf587b4428","path":"sprites/spr_fell_sans_old_outfit_after_battle/spr_fell_sans_old_outfit_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6bb720ad-b89a-4aa7-a55b-6aa819844206","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"6bb720ad-b89a-4aa7-a55b-6aa819844206","IsCreationKey":false,"Key":19.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":12,
+    "xorigin":14,
     "yorigin":38,
   },
   "swatchColours":null,

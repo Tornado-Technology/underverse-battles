@@ -1,7 +1,7 @@
 event_inherited();
 
 // Skin
-skin_name = translate_get("CharactersStyles.Galactic");
+skin_name = translate_get("CharactersStyles.TON618");
 frame = spr_ink_sans_galactic_frame;
 
 // Animations

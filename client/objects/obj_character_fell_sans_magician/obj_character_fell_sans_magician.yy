@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_character_fell_sans_showman",
+  "%Name":"obj_character_fell_sans_magician",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_character_fell_sans_showman",
+  "name":"obj_character_fell_sans_magician",
   "overriddenProperties":[],
   "parent":{
     "name":"Skins",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fell_sans_showman_idle",
-    "path":"sprites/spr_fell_sans_showman_idle/spr_fell_sans_showman_idle.yy",
+    "name":"spr_fell_sans_magician_idle",
+    "path":"sprites/spr_fell_sans_magician_idle/spr_fell_sans_magician_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

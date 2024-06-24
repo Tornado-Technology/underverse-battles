@@ -26,7 +26,7 @@
   ],
   "name":"spr_nightmaer_ice_cream_tentacles_idle",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Ice Cream",
     "path":"folders/Characteres/Nightmare/Sprites/Char/Ice Cream.yy",
@@ -87,7 +87,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":24,
+    "xorigin":28,
     "yorigin":63,
   },
   "swatchColours":null,

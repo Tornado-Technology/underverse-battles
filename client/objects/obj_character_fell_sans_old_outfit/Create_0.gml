@@ -1,6 +1,4 @@
 event_inherited();
-// Base
-name = translate_get("CharactersStyles..OldOutfit");
 
 // Skins
 skin_name = translate_get("CharactersStyles.OldOutfit");

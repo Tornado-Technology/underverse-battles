@@ -81,7 +81,7 @@
     },
     "name":"spr_fell_sans_echo_after_battle",
     "playback":1,
-    "playbackSpeed":5.0,
+    "playbackSpeed":6.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

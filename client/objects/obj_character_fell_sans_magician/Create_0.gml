@@ -1,15 +1,14 @@
 event_inherited();
 
-
 // Skins
-skin_name = translate_get("CharactersStyles.Showman");
+skin_name = translate_get("CharactersStyles.Magician");
 frame = spr_fell_sans_old_outfit_frame;
 
 // Animations
-idle_animation = spr_fell_sans_showman_idle;
-after_battle_animation = spr_fell_sans_showman_after_battle;
-defeated_animation = spr_fell_sans_showman_defeated;
-defeated_animation_last_image = spr_fell_sans_showman_defeated_last_image;
+idle_animation = spr_fell_sans_magician_idle;
+after_battle_animation = spr_fell_sans_magician_after_battle;
+defeated_animation = spr_fell_sans_magician_defeated;
+defeated_animation_last_image = spr_fell_sans_magician_defeated_last_image;
 
 hand_up_animation = spr_fell_sans_old_outfit_attack2_up;
 hand_down_up_animation = spr_fell_sans_old_outfit_attack2_down_up;

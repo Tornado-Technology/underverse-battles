@@ -99,7 +99,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":34,
+    "xorigin":35,
     "yorigin":52,
   },
   "swatchColours":null,

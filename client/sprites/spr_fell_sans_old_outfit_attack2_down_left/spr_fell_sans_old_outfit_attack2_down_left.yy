@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":37,
   "bbox_left":0,
-  "bbox_right":27,
+  "bbox_right":28,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -30,7 +30,7 @@
   ],
   "name":"spr_fell_sans_old_outfit_attack2_down_left",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Attack 2",
     "path":"folders/Characteres/Fell Sans/Sprites/Char/Old Outfit/Attack 2.yy",
@@ -88,7 +88,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":12,
+    "xorigin":14,
     "yorigin":38,
   },
   "swatchColours":null,
@@ -99,5 +99,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":28,
+  "width":29,
 }

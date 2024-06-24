@@ -8,6 +8,11 @@
   "bbox_top":54,
   "collisionKind":1,
   "collisionTolerance":0,
+  "ConfigValues":{
+    "Development":{
+      "textureGroupId":"{ \"name\":\"Default\", \"path\":\"texturegroups/Default\" }",
+    },
+  },
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -43,6 +48,10 @@
     "top":0,
   },
   "origin":7,
+  "parent":{
+    "name":"Volleyball",
+    "path":"folders/Sprites/Storymode/Episode 3/Volleyball.yy",
+  },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",

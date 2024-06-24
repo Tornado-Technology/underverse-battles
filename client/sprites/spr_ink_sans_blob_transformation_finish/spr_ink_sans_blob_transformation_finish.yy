@@ -30,7 +30,7 @@
   ],
   "name":"spr_ink_sans_blob_transformation_finish",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Blob",
     "path":"folders/Characteres/Ink Sans/Sprites/Char/Blob.yy",
@@ -103,7 +103,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":42,
+    "xorigin":43,
     "yorigin":57,
   },
   "swatchColours":null,

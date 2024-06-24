@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_volleyball_net_1",
-    "path":"sprites/spr_volleyball_net_1/spr_volleyball_net_1.yy",
+    "name":"spr_volleyball_net",
+    "path":"sprites/spr_volleyball_net/spr_volleyball_net.yy",
   },
   "spriteMaskId":null,
   "visible":true,
