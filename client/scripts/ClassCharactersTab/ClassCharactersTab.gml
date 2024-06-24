@@ -72,7 +72,6 @@ function ClassCharactersTab(menu_instance) constructor {
 		
 		for (var i = 0; i < array_length(characters); i++) {
 			character_frames[i] = new UIImageButton(i, characters[i].frame)
-				.set_bind_input(input.action)
 				.set_on_press(function(button) {
 					on_click_on_character(button._id);
 				})
@@ -95,6 +94,9 @@ function ClassCharactersTab(menu_instance) constructor {
 		}
 		if (menu_instance.input_vertical != 0) {
 			change_selected_character(selected_character + count_cell_horizontal * menu_instance.input_vertical);
+		}
+		if (menu_instance.input_enter != 0) {
+			on_click_on_character(selected_character);
 		}
 	}
 	

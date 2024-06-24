@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_volleyball_net",
+  "%Name":"spr_volleyball_net_1",
   "bboxMode":2,
   "bbox_bottom":58,
   "bbox_left":0,
@@ -8,6 +8,11 @@
   "bbox_top":54,
   "collisionKind":1,
   "collisionTolerance":0,
+  "ConfigValues":{
+    "Development":{
+      "textureGroupId":"{ \"name\":\"Default\", \"path\":\"texturegroups/Default\" }",
+    },
+  },
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -21,7 +26,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"635db5d2-6d0e-4c61-b292-d13ce3bdbc84","blendMode":0,"displayName":"default","isLocked":false,"name":"635db5d2-6d0e-4c61-b292-d13ce3bdbc84","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_volleyball_net",
+  "name":"spr_volleyball_net_1",
   "nineSlice":{
     "$GMNineSliceData":"",
     "bottom":0,
@@ -43,6 +48,10 @@
     "top":0,
   },
   "origin":7,
+  "parent":{
+    "name":"Volleyball",
+    "path":"folders/Sprites/Storymode/Episode 3/Volleyball.yy",
+  },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
@@ -84,7 +93,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66b42bca-6e64-41be-bb01-049276a5eecb","path":"sprites/spr_volleyball_net/spr_volleyball_net.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66b42bca-6e64-41be-bb01-049276a5eecb","path":"sprites/spr_volleyball_net_1/spr_volleyball_net_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"18a1fbac-c6bf-4006-a821-4d3cdfcea633","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

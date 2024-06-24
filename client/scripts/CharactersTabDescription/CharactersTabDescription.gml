@@ -153,8 +153,8 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 			buttons[i].is_auto_focus = false;
 			buttons[i].padding = 5;
 			buttons[i].text_hover_color = color_selected;
-			buttons[i].on_hover = function(button) { on_hover_on_button(button.index) };
-			buttons[i].on_press = function(button) { on_click_on_button(button.index) };
+			buttons[i].set_on_hover(function(button) { on_hover_on_button(button.index) });
+			buttons[i].set_on_press(function(button) { on_click_on_button(button.index) });
 		}
 	}
 	
@@ -217,7 +217,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 		}
 		
 		if (menu_instance.input_enter) {
-			buttons[button_id].on_press();
+			buttons[button_id].on_press(buttons[button_id]);
 		}
 	}
 	
