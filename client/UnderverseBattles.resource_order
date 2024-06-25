@@ -89,6 +89,7 @@
     {"name":"obj_gameplay","order":12,"path":"objects/obj_gameplay/obj_gameplay.yy",},
     {"name":"obj_garbage_bags_pile","order":46,"path":"objects/obj_garbage_bags_pile/obj_garbage_bags_pile.yy",},
     {"name":"obj_grill","order":47,"path":"objects/obj_grill/obj_grill.yy",},
+    {"name":"obj_ink_puddle","order":48,"path":"objects/obj_ink_puddle/obj_ink_puddle.yy",},
     {"name":"obj_interactive","order":1,"path":"objects/obj_interactive/obj_interactive.yy",},
     {"name":"obj_interactive_episode_3_nice_cream_seller","order":17,"path":"objects/obj_interactive_episode_3_nice_cream_seller/obj_interactive_episode_3_nice_cream_seller.yy",},
     {"name":"obj_inventory","order":13,"path":"objects/obj_inventory/obj_inventory.yy",},

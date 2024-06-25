@@ -1045,6 +1045,7 @@
     {"id":{"name":"obj_initilization","path":"objects/obj_initilization/obj_initilization.yy",},},
     {"id":{"name":"obj_ink_ball_ink_sans","path":"objects/obj_ink_ball_ink_sans/obj_ink_ball_ink_sans.yy",},},
     {"id":{"name":"obj_ink_curcle_ink_sans","path":"objects/obj_ink_curcle_ink_sans/obj_ink_curcle_ink_sans.yy",},},
+    {"id":{"name":"obj_ink_puddle","path":"objects/obj_ink_puddle/obj_ink_puddle.yy",},},
     {"id":{"name":"obj_interactive","path":"objects/obj_interactive/obj_interactive.yy",},},
     {"id":{"name":"obj_interactive_episode_3_nice_cream_seller","path":"objects/obj_interactive_episode_3_nice_cream_seller/obj_interactive_episode_3_nice_cream_seller.yy",},},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},},
