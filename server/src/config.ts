@@ -104,6 +104,9 @@ const developmentConfig = {
       enabled: false,
     }
   },
+  api: {
+    enabled: false,
+  },
   database: {
     address: 'mongodb://127.0.0.1:27017/development',
   },
