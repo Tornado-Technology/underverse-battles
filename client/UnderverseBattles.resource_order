@@ -454,6 +454,7 @@
     {"name":"spr_turtles","order":12,"path":"sprites/spr_turtles/spr_turtles.yy",},
     {"name":"spr_ui_control_character","order":1,"path":"sprites/spr_ui_control_character/spr_ui_control_character.yy",},
     {"name":"spr_ui_virtual_button_inventory","order":1,"path":"sprites/spr_ui_virtual_button_inventory/spr_ui_virtual_button_inventory.yy",},
+    {"name":"spr_undyne_picnic_frame_dissatisfied","order":3,"path":"sprites/spr_undyne_picnic_frame_dissatisfied/spr_undyne_picnic_frame_dissatisfied.yy",},
     {"name":"spr_undyne_picnic_frame_glad","order":1,"path":"sprites/spr_undyne_picnic_frame_glad/spr_undyne_picnic_frame_glad.yy",},
     {"name":"spr_undyne_picnic_frame_laughing","order":2,"path":"sprites/spr_undyne_picnic_frame_laughing/spr_undyne_picnic_frame_laughing.yy",},
     {"name":"spr_undyne_picnic_sitting_down","order":6,"path":"sprites/spr_undyne_picnic_sitting_down/spr_undyne_picnic_sitting_down.yy",},

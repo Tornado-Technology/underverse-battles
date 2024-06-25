@@ -1538,7 +1538,7 @@
         "{UndynePicnic:normal}А вы кетчуп принесли?",
         "{Sans:normal}малой решил купить вместо кетчупа другую всячину.",
         "{TorielPicnic:normal}Ничего страшного. Поедим без кетчупа.",
-        "{UndynePicnic:normal}Вот чёрт.",
+        "{UndynePicnic:dissatisfied}Вот чёрт.",
         "{TorielPicnic:normal}Фриск, присаживайся. Твой стейк уже готов."
       ],
       "Dialog23": [
@@ -1571,32 +1571,32 @@
       "AlphysGoal": [
         "{UndynePicnic:glad}Альфис, ты забила!",
         "{AlphysPicnic:normal}Д-да?",
-        "{UndynePicnic:glad}Молодец!",
+        "{UndynePicnic:normal}Молодец!",
         "{AlphysPicnic:normal}Спасибо."
       ],
       "AlphysLose": [
-        "{PapyrusPicnic:glad}АУТ!",
-        "{UndynePicnic:glad}Эй, Альфис, соберись!",
+        "{PapyrusPicnic:normal}АУТ!",
+        "{UndynePicnic:normal}Эй, Альфис, соберись!",
         "{AlphysPicnic:normal}П-Прости!"
       ],
       "UndyneGoal_1": [
-        "{UndynePicnic:glad}ГОЛ! ВОТ ЭТО Я ПОНИМАЮ!"
+        "{UndynePicnic:normal}ГОЛ! ВОТ ЭТО Я ПОНИМАЮ!"
       ],
       "UndyneGoal_2": [
-        "{UndynePicnic:glad}ДА! ГОЛ!"
+        "{UndynePicnic:normal}ДА! ГОЛ!"
       ],
       "UndyneOut_1": [
-        "{UndynePicnic:glad}ХА! У ВАС АУТ!"
+        "{UndynePicnic:normal}ХА! У ВАС АУТ!"
       ],
       "UndyneOut_2": [
-        "{UndynePicnic:glad}АУТ!"
+        "{UndynePicnic:normal}АУТ!"
       ],
       "Dialog25": [
         "{UndynePicnic:glad}Спорим, что моя команда выиграет эту подачу?",
-        "{PapyrusPicnic:glad}ХАХ! С ЧЕГО ТАКАЯ УВЕРЕННОСТЬ, АНДАЙН?",
-        "{UndynePicnic:glad}Ты не знал, но мы тренировались весь день, чтобы одолеть вас, лузеры!",
-        "{PapyrusPicnic:glad}НАША КОМАНДА НЕПОБЕДИМА!",
-        "{UndynePicnic:glad}Ну, держись, Папирус!"
+        "{PapyrusPicnic:normal}ХАХ! С ЧЕГО ТАКАЯ УВЕРЕННОСТЬ, АНДАЙН?",
+        "{UndynePicnic:normal}Ты не знал, но мы тренировались весь день, чтобы одолеть вас, лузеры!",
+        "{PapyrusPicnic:angry}НАША КОМАНДА НЕПОБЕДИМА!",
+        "{UndynePicnic:normal}Ну, держись, Папирус!"
       ],
       "Dialog26": [
         "{PapyrusPicnic:worry}САНС!"
@@ -1605,12 +1605,12 @@
         "{PapyrusPicnic:worry}Ты в порядке?"
       ],
       "Dialog28": [
-        "{Sans:shocked}ммм...",
-        "{Sans:tired}прости, я отрубился.",
-        "{Sans:tired}возможно, мне нужен перерыв. как считаешь, бро?",
+        "{SansVolleybro:shocked}ммм...",
+        "{SansVolleybro:tired}прости, я отрубился.",
+        "{SansVolleybro:tired}возможно, мне нужен перерыв. как считаешь, бро?",
         "{PapyrusPicnic:worry}КОНЕЧНО, БРАТ. НО НЕ ЗАСЫПАЙ.",
         "{PapyrusPicnic:worry}ТЫ НАМ НУЖЕН, ЧТОБЫ ВЫИГРАТЬ.",
-        "{Sans:tired}ок, бро."
+        "{SansVolleybro:tired}ок, бро."
       ],
       "Dialog29": [
         "{TorielPicnic:tired}Ты в порядке, Санс?"
