@@ -51,6 +51,11 @@ const commonConfig = {
       timeout: 3000,
     },
   },
+  api: {
+    enabled: true,
+    ip: 'localhost',
+    port: 1331,
+  },
   database: {
     enabled: true,
     address: 'mongodb://127.0.0.1:27017/main',
