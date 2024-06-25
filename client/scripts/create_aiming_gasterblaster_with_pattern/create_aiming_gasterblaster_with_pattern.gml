@@ -17,10 +17,8 @@ function create_aiming_gasterblaster_with_pattern(gasterblaster, target, fly_tim
 		target_distance = 20;
 		do {
 			target_distance += 10;
-			final_position = new Vector2(
-				target.x - target_distance * dcos(gasterblaster_direction),
-				target.y + target_distance * dsin(gasterblaster_direction)
-			);
+			final_position_x = target.x - target_distance * dcos(gasterblaster_direction);
+			final_position_y = target.y + target_distance * dsin(gasterblaster_direction);
 		}
 		until (!point_in_rectangle(final_position_x, final_position_y,
 			obj_battle_border.x - obj_battle_border.left, obj_battle_border.y - obj_battle_border.up,
