@@ -16,5 +16,6 @@ export enum statusCode {
   databaseEmailWrong = 311,
   databaseVerificationWrongCode = 312,
   databaseVerificationTimeout = 313,
+  databaseBanExists = 314,
   updateRequired = 426
 }
