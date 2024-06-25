@@ -1,5 +1,6 @@
 import { IncomingMessage, Server, ServerResponse, createServer } from 'http';
 import { ApiCommand, apiCommandAccess } from './command.js';
+import { Token } from '../database/schemas/token.js';
 
 export class ApiServer {
   private readonly ip: string;
@@ -34,7 +35,7 @@ export class ApiServer {
     this.commands.set(command.id, command);
   }
 
-  private listener(req: IncomingMessage, res: ServerResponse) {
+  private async listener(req: IncomingMessage, res: ServerResponse) {
     const url = new URL(req.url, `http://${req.headers.host}`);
     const command = this.getCommand(url.pathname);
 
@@ -47,7 +48,8 @@ export class ApiServer {
       return;
     }
 
-    if (!this.hasAccess(command, url)) {
+    const hasAccess = await this.hasAccess(command, url);
+    if (!hasAccess) {
       res.statusCode = 403;
       res.write(JSON.stringify({
           error: 'No access to this method',
@@ -66,23 +68,18 @@ export class ApiServer {
     return this.commands.get(id);
   }
 
-  private hasAccess(command: ApiCommand, url: URL): boolean {
-    switch (command.access) {
-      case apiCommandAccess.Guest:
-        return true;
+  private async hasAccess(command: ApiCommand, url: URL): Promise<boolean> {
+    if (apiCommandAccess.Guest) return true;
 
-      case apiCommandAccess.Authorized:
-        return this.hasToken(url.searchParams.get('token'));
+    if (apiCommandAccess.Authorized) {
+      const token = url.searchParams.get('token');
+      const instance = await Token.findOne({ token }).clone();
 
-      default:
-        throw new Error(`Unknown ApiCommandAccess ${command.access}`);
+      if (!instance) return false;
+      
+      return command.tokenAccess <= instance.access;
     }
-  }
 
-  private hasToken(token: string | null): boolean {
-    if (!token)
-      return false;
-
-    return true;
+    throw new Error(`Unknown ApiCommandAccess ${command.access}`);
   }
 }

@@ -105,7 +105,8 @@ const developmentConfig = {
     }
   },
   api: {
-    enabled: false,
+    ip: 'localhost',
+    port: 1332,
   },
   database: {
     address: 'mongodb://127.0.0.1:27017/development',

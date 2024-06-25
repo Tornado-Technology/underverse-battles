@@ -1,7 +1,12 @@
-import { ApiCommand, ApiCommandAccess } from './api/command.js';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { ApiServer } from './api/server.js';
 import config from './config.js';
 import Server from './server.js';
+import { ApiCommandLoader } from './api/loader.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const { enabled, port, ip } = config.api;
 
@@ -13,24 +18,9 @@ server.loadInitializers().then(() => {
 // Run Api server if it's enabled
 if (enabled) {
   const apiServer = new ApiServer(ip, port);
-
-  // Add test command
-  apiServer.registerCommand(new ApiCommand(
-    '/test',
-    ApiCommandAccess.Guest,
-    (cmd, _req, res, _url, method) => {
-      if (method !== 'GET') {
-        cmd.send(res, {
-          message: 'Fuck you <3',
-        });
-        return;
-      }
-
-      cmd.send(res, {
-        message: 'Hello from server!'
-      });
-    })
-  );
-
+  const loader = new ApiCommandLoader(apiServer, `${__dirname}/api/commands/`);
+  
+  await loader.load();
+  
   apiServer.run();
 }

@@ -1,4 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http';
+import { tokenAccess } from '../database/schemas/token';
 
 type apiCommandCallback = (
     cmd: ApiCommand,
@@ -11,11 +12,13 @@ type apiCommandCallback = (
 export class ApiCommand {
   public readonly id: string; 
   public readonly access: apiCommandAccess;
+  public readonly tokenAccess: tokenAccess;
   public readonly callback: apiCommandCallback; 
 
-  constructor(id: string, access: apiCommandAccess, callback: apiCommandCallback) {
+  constructor(id: string, access: apiCommandAccess, tokenAccess: tokenAccess, callback: apiCommandCallback) {
     this.id = id;
     this.access = access;
+    this.tokenAccess = tokenAccess;
     this.callback = callback;
   }
 
