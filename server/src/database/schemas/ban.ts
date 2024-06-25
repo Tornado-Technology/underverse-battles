@@ -3,6 +3,7 @@ import { createRequire } from 'module';
 import { profileModelName } from './profile.js';
 import { statusCode } from '../../status.js';
 import Logger from '../../util/logging.js';
+import { Account } from './account.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
@@ -31,10 +32,18 @@ const schema = new Schema({
   collection: banCollection,
 });
 
-export const ban = async (target: string, executor: string, reason: string, ip: string | null = null, hardAddress: string | null = null): Promise<statusCode> =>  {
+export const banUsername = async (username: string, executor: string, reason: string, ip: string | null = null, hardAddress: string | null = null): Promise<statusCode> => {
+  const account = await Account.findOne({ username }).clone();
+  if (!account)
+    return statusCode.databaseAccountNotExists;
+
+  return await ban(account._id, executor, reason, ip, hardAddress);
+};
+
+export const ban = async (target: string, executor: string, reason: string, ip: string | null = null, hardAddress: string | null = null): Promise<statusCode> => {
   if (await Ban.findOne({ target }))
       throw statusCode.databaseBanExists;
-  
+
   const ban = new Ban({
     target,
     executor,

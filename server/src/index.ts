@@ -11,9 +11,9 @@ const __dirname = dirname(__filename);
 const { enabled, port, ip } = config.api;
 
 const server = new Server();
-server.loadInitializers().then(() => {
-  server.run();
-});
+await server.loadInitializers();
+server.run();
+
 
 // Run Api server if it's enabled
 if (enabled) {
