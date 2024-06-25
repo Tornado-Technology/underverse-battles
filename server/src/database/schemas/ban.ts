@@ -2,7 +2,6 @@ import { ObjectId, Model } from 'mongoose';
 import { createRequire } from 'module';
 import { profileModelName } from './profile.js';
 import { statusCode } from '../../status.js';
-import Client from '../../concepts/client/client.js';
 import Logger from '../../util/logging.js';
 
 const require = createRequire(import.meta.url);
@@ -13,17 +12,17 @@ export const banCollection = 'bans';
 export const banModelName = 'Ban';
 
 export interface IBan {
-  executor: ObjectId,
+  executor: string,
   target: ObjectId,
   reason: string,
   date: Date,
   ip: string,
-  hardAddress : string,
+  hardAddress: string,
 }
 
 const schema = new Schema({
-  executor: { type: Schema.Types.ObjectId, ref: profileModelName },
-  target: { type: Schema.Types.ObjectId, ref: profileModelName },
+  executor: { type: String, default: "by console" },
+  target: { type: Schema.Types.ObjectId, unique: true, ref: profileModelName },
   reason: { type: String, default: null },
   date: { type: Date, default: Date.now },
   ip: { type: String, default: null },
@@ -32,24 +31,26 @@ const schema = new Schema({
   collection: banCollection,
 });
 
-export const ban = (target: Client, executor: Client, reason: string, ip = false, hardAddress = false): Promise<statusCode> => new Promise(async (resolve, reject) => {
+export const ban = async (target: string, executor: string, reason: string, ip: string | null = null, hardAddress: string | null = null): Promise<statusCode> =>  {
+  if (await Ban.findOne({ target }))
+      throw statusCode.databaseBanExists;
+  
   const ban = new Ban({
     target,
     executor,
     reason,
-    ip: ip ? target.ip : null,
-    hardAddress: hardAddress ? target.hardAddress : null,
+    ip,
+    hardAddress,
   });
 
-  await ban.save((error) => {
-    if (error) {
-      Logger.error(error.message);
-      reject(statusCode.error);
-      return;
-    }
+  try {
+    await ban.save();
+  } catch(error) {
+    Logger.error(error.message);
+    throw statusCode.error;
+  }
 
-    resolve(statusCode.success);
-  });
-});
+  return statusCode.success;
+};
 
 export const Ban: Model<IBan> = model(banModelName, schema);
