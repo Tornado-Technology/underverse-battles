@@ -1,6 +1,7 @@
 import { IncomingMessage, Server, ServerResponse, createServer } from 'http';
 import { ApiCommand, apiCommandAccess } from './command.js';
 import { Token } from '../database/schemas/token.js';
+import Logger from '../util/logging.js';
 
 export class ApiServer {
   private readonly ip: string;
@@ -36,29 +37,45 @@ export class ApiServer {
   }
 
   private async listener(req: IncomingMessage, res: ServerResponse) {
-    const url = new URL(req.url, `http://${req.headers.host}`);
-    const command = this.getCommand(url.pathname);
+    try {
+      const url = new URL(req.url, `http://${req.headers.host}`);
+      const command = this.getCommand(url.pathname);
+  
+      if (!command) {
+        res.statusCode = 404;
+        res.write(JSON.stringify({
+          error: 'No handler was found for the request',
+        }));
+        res.end();
+        return;
+      }
+  
+      if (command.access !== apiCommandAccess.Guest) {
+        const token = typeof(req.headers.token) === 'string' ? req.headers.token : undefined;
+        if (!token) {
+          res.statusCode = 400;
+          res.write(JSON.stringify({
+            error: 'Not a valid token',
+          }));
+          res.end();
+          return;
+        }
 
-    if (!command) {
-      res.statusCode = 404;
-      res.write(JSON.stringify({
-        error: 'No handler was found for the request',
-      }));
-      res.end();
-      return;
+        const hasAccess = await this.hasAccess(command, token);
+        if (!hasAccess) {
+          res.statusCode = 403;
+          res.write(JSON.stringify({
+            error: 'No access to this method',
+          }));
+          res.end();
+          return;
+        }
+      }
+  
+      command.run(req, res, url);
+    } catch (error) {
+      Logger.error(`Api failed with ${error}`);
     }
-
-    const hasAccess = await this.hasAccess(command, url);
-    if (!hasAccess) {
-      res.statusCode = 403;
-      res.write(JSON.stringify({
-          error: 'No access to this method',
-      }));
-      res.end();
-      return;
-    }
-
-    command.run(req, res, url);
   }
 
   private getCommand(id: string): ApiCommand | undefined {
@@ -68,18 +85,10 @@ export class ApiServer {
     return this.commands.get(id);
   }
 
-  private async hasAccess(command: ApiCommand, url: URL): Promise<boolean> {
-    if (apiCommandAccess.Guest) return true;
+  private async hasAccess(command: ApiCommand, token: string): Promise<boolean> {
+    const instance = await Token.findOne({ token }).clone();
+    if (!instance) return false;
 
-    if (apiCommandAccess.Authorized) {
-      const token = url.searchParams.get('token');
-      const instance = await Token.findOne({ token }).clone();
-
-      if (!instance) return false;
-      
-      return command.tokenAccess <= instance.access;
-    }
-
-    throw new Error(`Unknown ApiCommandAccess ${command.access}`);
+    return command.tokenAccess <= instance.access;
   }
 }

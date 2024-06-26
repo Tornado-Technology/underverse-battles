@@ -26,8 +26,8 @@ export class ApiCommand {
     this.callback(this, req, res, url, this.getMethod(req));
   }
 
-  public send(res: ServerResponse, data: object) {
-    res.statusCode = 200;
+  public send(res: ServerResponse, data: object, statusCode: number = 200) {
+    res.statusCode = statusCode;
     res.write(JSON.stringify(data));
     res.end();
   }
