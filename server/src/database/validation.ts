@@ -5,15 +5,15 @@ import { Account } from './schemas/account.js';
 // If you want to change the password and name styles, change RegEx below
 const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*?~]{6,999}$/;
 const usernameRegex = /^[a-zA-Z][a-zA-Z0-9_.]{1,29}$/;
-const nickanmeRegex = /^[a-zA-Z0-9_.!?]{1,29}$/;
+const nicknameRegex = /^[a-zA-Z0-9_.!?]{1,29}$/;
 
 const usernameBlacklist = [
   usernameDefault,
 ];
 
-const nikcnameBlacklist = [];
+const nicknameBlacklist = [];
 
-export const validatePassword = (password: string): number => {
+export const validatePassword = (password: string): statusCode => {
   return passwordRegex.test(password) ? statusCode.success : statusCode.databasePasswordWrong;
 }
 
@@ -26,18 +26,18 @@ export const validateUsername = async (username: string): Promise<statusCode> =>
 }
 
 export const validateNickname = async (nickname: string): Promise<statusCode> => {
-  if (!nickanmeRegex.test(nickname) || nikcnameBlacklist.find((item) => item === nickname) !== undefined) {
+  if (!nicknameRegex.test(nickname) || nicknameBlacklist.find((item) => item === nickname) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
   return statusCode.success;
 }
 
-export const validateEmail = async (email: string): Promise<number> => {
+export const validateEmail = async (email: string): Promise<statusCode> => {
   return await Account.findOne({ email }) ? statusCode.databaseEmailBusy : statusCode.success;
 }
 
-export const infoValidate = async (username: string, password: string, email: string): Promise<number> => {
+export const infoValidate = async (username: string, password: string, email: string): Promise<statusCode> => {
   const usernameValidation = await validateUsername(username);
   if (usernameValidation !== statusCode.success) {
     return usernameValidation;
