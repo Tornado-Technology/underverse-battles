@@ -1,6 +1,7 @@
 import { statusCode } from './status.js';
 
 declare global {
+  var app: App;
   var commands: globalCommands;
 }
 
