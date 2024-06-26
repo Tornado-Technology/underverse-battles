@@ -114,7 +114,7 @@ export default class Client extends SendStuff {
     await this.fight.leave();
     await this.save();
 
-    this.logout();
+    this.logout(false);
   }
 
   public logout(send: boolean = true) {
