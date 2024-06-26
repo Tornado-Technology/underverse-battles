@@ -7,31 +7,39 @@ import Packet from './packet/packet.js';
 import { statusCode } from './status.js';
 import Logger from './util/logging.js';
 import config from './config.js';
-import Matchmaker from './util/matchmaker.js';
+import { Address } from './util/address.js';
 
-const { ip, port } = config.main;
-
+/**
+ * The main class of the server, is actually the entry point
+ * Creates clients and process information from them, before the `run` method,
+ * load the `loadInitializers` modules.
+ */
 export default class Server {
   /**
-   * Current `NetServer` instance
+   * Current `NetServer` instance.
    */
   private readonly instance: NetServer;
+  private readonly address: Address;
 
-  constructor() {
+  constructor(ip: string, port: number) {
     // Create a server instance by binding the wiretap function
     // to the server context to have access inside the method
     // to local fields and methods
     this.instance = createServer(this.connectionListener.bind(this));
+    this.address = new Address(ip, port);
   }
 
   public async run(): Promise<void> {
+    // We're return promise to wait until the server is finally up and running
     return new Promise((resolve, reject) => {
       if (this.instance.listening) {
+        // If we run the same server 2 times, this is a serious error
         reject(new Error('Attempt start an already running server'));
       }
   
-      this.instance.listen(Number(port), () => {
-        Logger.info(`Server started on ${ip}:${port}`);
+      // Start listening to the selected address 
+      this.instance.listen(this.address.port, this.address.ip, () => {
+        Logger.info(`Server started on ${this.address}`);
         resolve();
       });
     });
@@ -39,7 +47,7 @@ export default class Server {
 
   private connectionListener(socket: Socket) {
     const client = Client.create(socket, socketType.tcp);
-    Logger.info(`Client ${client.uuid} connected`);
+    Logger.info(`${client} connected`);
     this.verifyClient(client);
 
     socket.on('data', async data => {
@@ -47,33 +55,29 @@ export default class Server {
     });
 
     socket.on('close', async _ => {
-      Logger.info(`Client ${client.uuid} disconnected`);
-      this.onClientRemoved(client);
+      Logger.info(`${client} disconnected`);
       await Client.remove(client);
     });
 
     socket.on('error', async error => {
-      this.onClientRemoved(client);
-      await Client.remove(client);
-
+      // We will work out this error separately,
+      // since forcible closing of the socket is normal
       if (error.message.includes('ECONNRESET')) {
-        Logger.info('Socket violently disconnected');
+        Logger.info(`${client} violently disconnected`);
+        await Client.remove(client);
         return;
       }
 
-      Logger.error(`Socket error handled: ${error.stack}`);
+      Logger.error(`${client} error handled: ${error.stack}`);
+      await Client.remove(client);
     });
   }
 
-  private onClientRemoved(client: Client) {
-    Matchmaker.removeWaiting(client);
-  }
-
   /**
-   * Load all files from `src/initializers`
+   * Load all files from `src/initializers`.
    */
   public async loadInitializers(): Promise<void> {
-    // Get current directory, for us src
+    // Get current directory, for us `src`
     const directory = dirname(fileURLToPath(import.meta.url));
     const initFiles = fs.readdirSync(`${directory}/initializers`, 'utf8');
 

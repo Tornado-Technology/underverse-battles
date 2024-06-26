@@ -39,7 +39,7 @@ const commonConfig = {
   },
   main: {
     ip: '127.0.0.1',
-    port: '1337',
+    port: 1337,
   },
   client: {
     // Requires logging into an account to work with the server
@@ -79,7 +79,7 @@ const productionConfig = {
     necessaryEmailCode: false,
   },
   main: {
-    port: '1339',
+    port: 1339,
   },
 }
 
@@ -97,7 +97,7 @@ const developmentConfig = {
     ],
   },
   main: {
-    port: '1337',
+    port: 1337,
   },
   client: {
     verification: {

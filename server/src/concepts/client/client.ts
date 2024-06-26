@@ -46,6 +46,14 @@ export default class Client extends SendStuff {
 
   protected stateNames = ['undefined', 'in menu', 'waiting fight', 'in fight', 'waiting open world', 'in open world'];
 
+  /**
+   * When we work in different threads with clients,
+   * we may encounter a moment when a database operation
+   * will need to access information that is already in use,
+   * this way we prohibit it.
+   */
+  private dbLock: boolean = false; 
+
   constructor(socket: Socket, type: socketType, uuid: string) {
     super(socket, type, uuid);
     this.fight = new ClientFight(this);
@@ -99,8 +107,8 @@ export default class Client extends SendStuff {
     }, timeout);
   }
 
-  public async onDisconnect(status: number): Promise<void> {
-    Logger.info(`Client disconnected: ${status}`);
+  public async onDisconnect(status: statusCode): Promise<void> {
+    Logger.info(`${this} disconnected: ${status}`);
     Matchmaker.removeWaiting(this);
     await this.fight.leave();
     await this.save();
@@ -138,9 +146,15 @@ export default class Client extends SendStuff {
   }
 
   public async save(): Promise<void> {
+    if (this.dbLock) return;
     if (!this.isLogin) return;
+    
+    this.dbLock = true;
+
     await this.account?.save();
     await this.profile?.save();
+
+    this.dbLock = false;
   }
 
   public async deleteAccount(): Promise<void> {
@@ -312,5 +326,9 @@ export default class Client extends SendStuff {
       online: this.isLogin ? this.profile.online : null,
       lastOnline: this.isLogin ? this.profile.lastOnline : null,
     }
+  }
+
+  public toString() {
+    return this.username ? `client(${this.uuid}, ${this.username})` : `client(${this.uuid})`;
   }
 }
