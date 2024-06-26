@@ -1,6 +1,5 @@
-import { usernameDefault } from './schemas/account.js';
+import { usernameDefault, Account } from './schemas/account.js';
 import { statusCode } from '../status.js';
-import { Account } from './schemas/account.js';
 
 // If you want to change the password and name styles, change RegEx below
 const passwordRegex = /^(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*?~]{6,999}$/;
