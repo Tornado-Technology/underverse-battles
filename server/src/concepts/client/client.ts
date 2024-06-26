@@ -110,17 +110,32 @@ export default class Client extends SendStuff {
   public async onDisconnect(status: statusCode): Promise<void> {
     Logger.info(`${this} disconnected: ${status}`);
     Matchmaker.removeWaiting(this);
+
     await this.fight.leave();
     await this.save();
+
+    this.logout();
   }
 
-  public logout(): void {
+  public logout(send: boolean = true) {
     this.account = undefined;
     this.profile = undefined;
+
+    if (this.profile) {
+      this.profile.online = false;
+      this.profile.lastOnline = new Date();
+    }
+
+    if (!send) return;
+
     this.sendLogout(statusCode.success);
   }
 
   public async onLogin(): Promise<void> {
+    if (this.profile) {
+      this.profile.online = true;
+    }
+
     await this.fight.tryRestore();
   }
 
