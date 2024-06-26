@@ -12,34 +12,52 @@ import Matchmaker from './util/matchmaker.js';
 const { ip, port } = config.main;
 
 export default class Server {
-  private netServer: NetServer = null;
+  /**
+   * Current `NetServer` instance
+   */
+  private readonly instance: NetServer;
 
-  public run() {
-    this.netServer = createServer(this.connectionListener.bind(this));
-    this.netServer.listen(Number(port), () => {
-      Logger.info(`Server started on ${ip}:${port}`);
+  constructor() {
+    // Create a server instance by binding the wiretap function
+    // to the server context to have access inside the method
+    // to local fields and methods
+    this.instance = createServer(this.connectionListener.bind(this));
+  }
+
+  public async run(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (this.instance.listening) {
+        reject(new Error('Attempt start an already running server'));
+      }
+  
+      this.instance.listen(Number(port), () => {
+        Logger.info(`Server started on ${ip}:${port}`);
+        resolve();
+      });
     });
   }
 
-  private connectionListener(socket: Socket): void {
+  private connectionListener(socket: Socket) {
     const client = Client.create(socket, socketType.tcp);
     Logger.info(`Client ${client.uuid} connected`);
     this.verifyClient(client);
 
-    socket.on('data', async (data) => {
+    socket.on('data', async data => {
       await Packet.parse(client, data);
     });
 
-    socket.on('close', async () => {
+    socket.on('close', async _ => {
       Logger.info(`Client ${client.uuid} disconnected`);
-      Matchmaker.removeWaiting(client);
+      this.onClientRemoved(client);
       await Client.remove(client);
     });
 
-    socket.on('error', (error) => {
+    socket.on('error', async error => {
+      this.onClientRemoved(client);
+      await Client.remove(client);
+
       if (error.message.includes('ECONNRESET')) {
         Logger.info('Socket violently disconnected');
-        Matchmaker.removeWaiting(client);
         return;
       }
 
@@ -47,19 +65,30 @@ export default class Server {
     });
   }
 
+  private onClientRemoved(client: Client) {
+    Matchmaker.removeWaiting(client);
+  }
+
+  /**
+   * Load all files from `src/initializers`
+   */
   public async loadInitializers(): Promise<void> {
+    // Get current directory, for us src
     const directory = dirname(fileURLToPath(import.meta.url));
     const initFiles = fs.readdirSync(`${directory}/initializers`, 'utf8');
 
-    for (let i = 0; i < initFiles.length; i++) {
-      const file = initFiles[i];
+    for (const file of initFiles) {
+      if (!file.endsWith('.js'))
+        continue;
+      
       Logger.info(`Initialize: ${file}...`);
       await import(`file://${directory}/initializers/${file}`);
     }
+
     Logger.info('Initialize done');
   }
 
-  private verifyClient(client: Client): void {
+  private verifyClient(client: Client) {
     if (!config.client.verification.enabled) {
       client.verify();
       return;

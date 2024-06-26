@@ -12,7 +12,7 @@ const { enabled, port, ip } = config.api;
 
 const server = new Server();
 await server.loadInitializers();
-server.run();
+await server.run();
 
 
 // Run Api server if it's enabled
