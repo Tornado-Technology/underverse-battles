@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_round_justice",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":8.0,
+  "name":"snd_round_justice",
+  "parent":{
+    "name":"Underverse",
+    "path":"folders/Sounds/Soundtracks/Underverse.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_round_justice.ogg",
+  "type":1,
+  "volume":1.0,
+}

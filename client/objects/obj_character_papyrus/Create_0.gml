@@ -52,4 +52,4 @@ special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_at
 
 // Soundtrack
 soundtrack_name = "Bonetrousle"; 
-soundtrack = snd_megalovania;
+soundtrack = snd_bonetrousle;

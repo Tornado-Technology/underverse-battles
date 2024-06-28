@@ -1,4 +1,5 @@
 /// @param {Any} dialog
+/// @param {Real} side
 function cutscene_dialog(dialog, side = dir.up) {
 	if (!instance_exists(instance_dialog)) {
 		if (!dialog_created) {

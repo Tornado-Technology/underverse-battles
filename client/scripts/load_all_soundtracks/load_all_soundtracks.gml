@@ -1,6 +1,7 @@
 function load_all_soundtracks() {
 	// Undertale
-	Soundtrack(snd_asgore, "Asgore", "NyxTheShield OFFICIAL", "Original Undertale OST", universe.undertale);
+	Soundtrack(snd_asgore, "Asgore", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.undertale);
+	Soundtrack(snd_bonetrousle, "Bonetrousle", "Marsilies", "Remix by Marsilies", universe.undertale);
 	
 	// Underverse
 	Soundtrack(snd_black_apple, "Black Apple", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
@@ -16,6 +17,7 @@ function load_all_soundtracks() {
 	Soundtrack(snd_mismatch, "Mismatch", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 	Soundtrack(snd_occisor, "Occisor", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
 	Soundtrack(snd_overwrite, "Overwrite", "NyxTheShield OFFICIAL", "Original Underverse OST", universe.underverse);
+	Soundtrack(snd_valiant_heart_rock_remix, "Valiant Heart", "Marsilies", "Remix by Marsilies", universe.underverse);
 	
 	// Deltarune
 	Soundtrack(snd_attack_of_the_killer_queen, "Attack of The Killer Queen", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.deltarune);

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_omen",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":122.927414,
+  "name":"snd_omen",
+  "parent":{
+    "name":"Underverse",
+    "path":"folders/Sounds/Soundtracks/Underverse.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_omen.ogg",
+  "type":1,
+  "volume":1.0,
+}
