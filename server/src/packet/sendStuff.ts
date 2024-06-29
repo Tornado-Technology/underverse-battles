@@ -294,4 +294,11 @@ export default class SendStuff {
   public sendFightClientAdd(): void {
     this.send('fightClientAdd');
   }
+
+  public sendGetAccountsInfo(status: statusCode, profiles: Map<string, object> = new Map()) {
+    this.send('getAccountsInfo', {
+      status,
+      profiles,
+    });
+  }
 }

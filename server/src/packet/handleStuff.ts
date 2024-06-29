@@ -8,6 +8,7 @@ import Matchmaker from '../util/matchmaker.js';
 import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
 import { infoValidate, validatePassword, validateUsername, validateNickname } from '../database/validation.js';
+import { Profile } from '../database/schemas/profile.js';
 
 export const handlePacket = async (client: Client, data: any) => {
   const index: string = data.index ?? '';
@@ -431,6 +432,39 @@ export const handlePacket = async (client: Client, data: any) => {
       client.fight.instance?.sync();
       break;
     
+    case 'getAccountsInfo':
+      {
+        const map = new Map<string, object>();
+
+        for (const username of data.usernames) {
+          const account = await Account.findOne({ username }).clone();
+          
+          if (!account)
+            continue;
+  
+          const profile = await Profile.findOne({ accountId: account._id }).clone();
+  
+          if (!profile)
+            continue;
+  
+          map.set(username, {
+            accountId: account._id,
+            username: account.username,
+            nickname: account.nickname,
+            date: account.date,
+            online: profile.online,
+            lastOnline: profile.lastOnline,
+            friends: profile.friends,
+            rating: profile.rating,
+            gold: profile.gold,
+            badge: profile.badge,
+          });
+        }
+  
+        client.sendGetAccountsInfo(statusCode.success, map);
+      }
+      break;
+
     default:
       Logger.warn(`Handled unknown command index: ${index}, data: ${data}`);
       break;
