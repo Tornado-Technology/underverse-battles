@@ -1,4 +1,4 @@
-import { Account, accountType, login, register, find as accountFind } from '../database/schemas/account.js';
+import { Account, accountType, login, register } from '../database/schemas/account.js';
 import { actionType, state as fightState, target } from '../game/fight/fight.js';
 import { send as mailSend} from '../util/mail.js';
 import Client, { state } from '../concepts/client/client.js';
