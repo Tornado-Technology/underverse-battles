@@ -24,7 +24,7 @@
   "name":"spr_bone_spining_papyrus",
   "nineSlice":{
     "$GMNineSliceData":"",
-    "bottom":5,
+    "bottom":6,
     "enabled":true,
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,

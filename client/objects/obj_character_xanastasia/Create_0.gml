@@ -51,7 +51,7 @@ passive_skill = PassiveSkill("Character.XAnastasia.PassiveSkill");
 actions = [
 
 	Action("Character.Dream.Attack0", call_attack_xanastasia_0),
-	Action("Character.Dream.Attack1", call_attack_xanastasia_0),
+	Action("Character.Dream.Attack1", call_attack_xanastasia_1),
 	Action("Character.Dream.Attack2", call_attack_xanastasia_2)
 
 ];

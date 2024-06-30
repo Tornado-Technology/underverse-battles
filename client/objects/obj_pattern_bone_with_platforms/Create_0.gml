@@ -29,6 +29,7 @@ callback = function () {
 }
 
 update_bone = function() {
+	var bone_instance;
 	position += fight_random_integer(1, max_position - 1);
 	if (position >= max_position) {
 		position -= max_position;
@@ -42,15 +43,18 @@ update_bone = function() {
 	
 	switch (position) {
 		case 0:
-			create_bone(direction_bone, sector_y - 5, obj_bone_spinning_papyrus, speed_bone,  1, angle_bone, angle_bone);
-			break;
+			bone_instance = create_bone(direction_bone, sector_y - 5, bone_spinning, speed_bone,  1, angle_bone, angle_bone);
+		break;
+		
 		case 1:
-			create_bone(direction_bone, sector_y + sector_y_step - 5, obj_bone_spinning_papyrus, speed_bone, 1, angle_bone, angle_bone);
-			break;
+			bone_instance =	create_bone(direction_bone, sector_y + sector_y_step - 5, bone_spinning, speed_bone, 1, angle_bone, angle_bone);
+		break;
+		
 		case 2:
-			create_bone(direction_bone, sector_y + sector_y_step * 2 - 5, obj_bone_spinning_papyrus, speed_bone,  1, angle_bone, angle_bone);
-			break;
+			bone_instance =	create_bone(direction_bone, sector_y + sector_y_step * 2 - 5, bone_spinning, speed_bone,  1, angle_bone, angle_bone);	
+		break;
 	}
+	bone_instance.speed_spinning = speed_bone;
 }
 	
 update_platforms = function() {
@@ -60,8 +64,8 @@ update_platforms = function() {
 	create_next_moving_platform(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, platforms_speed);
 }
 
-var period = 65 - _power * 6;
-var repeats = 5 + _power;
+var period = 40 - _power * 2;
+var repeats = 8 + _power * 2;
 time_source_update_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_bone();
 }, [], repeats - 1);

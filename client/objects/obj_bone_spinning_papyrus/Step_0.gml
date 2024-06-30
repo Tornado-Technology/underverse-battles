@@ -1,5 +1,5 @@
 
-image_angle += left ? -speed_spinning * dtime % 360 : (speed_spinning * dtime) % 360;
+image_angle += (speed_spinning * dtime) % 360;
 motion_set(direction, speed_const * dtime);
 
 

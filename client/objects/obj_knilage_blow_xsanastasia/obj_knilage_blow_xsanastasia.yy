@@ -3,7 +3,6 @@
   "%Name":"obj_knilage_blow_xsanastasia",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_knilage_blow_xsanastasia",
@@ -13,8 +12,8 @@
     "path":"folders/Characteres/X Anastasia/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_gb_blast_sans",
+    "path":"objects/obj_gb_blast_sans/obj_gb_blast_sans.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_knilage_blow_xsanastasia",
-    "path":"sprites/spr_knilage_blow_xsanastasia/spr_knilage_blow_xsanastasia.yy",
+    "name":"spr_gb_blast_xanastasia",
+    "path":"sprites/spr_gb_blast_xanastasia/spr_gb_blast_xanastasia.yy",
   },
   "spriteMaskId":null,
   "visible":true,

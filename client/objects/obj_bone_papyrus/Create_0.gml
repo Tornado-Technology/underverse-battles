@@ -7,14 +7,13 @@ change_scale = function(counst, step) {
 	scale_time = step;
 }
 
-
 is_target = false
 on_target = 0
 
 target = function (on_target) {
 	is_target = true;
 	self.on_target = on_target;
-}
+}	
 
 soul_invulnerability = 20;
 

@@ -1,6 +1,6 @@
 if (image_angle == 360)
 	image_angle = 0;
-image_angle += 4;
+image_angle += -dsin(4) * sprite_height;
 
 if (stage == 0) {
 	radius -= step_radius * dtime;

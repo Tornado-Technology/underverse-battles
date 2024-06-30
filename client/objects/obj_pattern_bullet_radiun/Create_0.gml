@@ -27,7 +27,7 @@ update = function() {
 		});
 		
 		bullet_instance.length_charge =  0.02 +_power * 0.01;
-		
+		bullet_instance.step = 0.1 * _power + 0.02
 		angle += moving;
 		i += point_in_circle_;
 		j += 5;

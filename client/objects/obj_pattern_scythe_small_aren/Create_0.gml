@@ -1,6 +1,6 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
-		var scythe_counst = _power div 4 + 4;
+		var scythe_counst = _power div 3 + 4;
 		var angle = 360 / scythe_counst;
 		var radius = 150
 		var i = angle;
@@ -15,7 +15,7 @@ callback = function () {
 				center_y: border_instance.y
 			});
 			
-			scythe_instance.step_radius = 2 + _power * 0.3;
+			scythe_instance.step_radius = 2 + _power * 0.1;
 			scythe_instance.step = 2 + _power * 0.3;
 			i += angle;
 		}

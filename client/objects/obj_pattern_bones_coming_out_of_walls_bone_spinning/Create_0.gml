@@ -6,14 +6,10 @@ num = 12;
 bone_instances = [];
 random_number = 0;
 
-time_source_start_moving = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, function () {
-		bone_spinning.speed_spinning = 2 + _power * 0.1;
-})
-
 callback = function () {
 	var angle =  choose(360, 45);
-	var offset
-	var soul_position 
+	var offset;
+	var soul_position;
 	var side_random = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 	var size_bone = 1.5;
 	
@@ -107,6 +103,11 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 	time_source_start(time_source_update_shot);
 }, [], -1);
+
+time_source_start_moving = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, function () {
+	bone_spinning.speed_spinning = irandom(1) ?  (2 + _power * 0.1) : -(2 + _power * 0.1);
+})
+
 time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_units_seconds, function (bone_old, bone_new) {
 	update_shot();
 });

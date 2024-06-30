@@ -9,40 +9,28 @@ callback = function () {
 };
 
 update = function () {
-	var distance_factor = 0;
+	var distance_factor = 5;
 	var speed_step = 0.1;
-	var star_instance;
+	var star_instance = [];
+
+	var i = 0;
+	var j = 1;
+	repeat (_power + 2) {
+		var x_ = choose(border_instance.x - border_instance.left - irandom_range(20, 90), border_instance.x + border_instance.right + irandom_range(20, 90));
+		var y_ = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	
-	repeat (_power div 1 + 2) {
-		var spawn_option_index = irandom_range(0, 3);
-		var distance = choose(-25, -20, -17, 17, 20, 25);
-		
-		switch (spawn_option_index) {
-			case 0:
-				star_instance = instance_create_depth(border_instance.x + border_instance.right + 8, soul_instance.y - distance * distance_factor, fight_depth.bullet_outside, star_spinning);
-				star_instance.speed_const = 3 + _power * speed_step;
-				star_instance.direction_const = 180;
-				break;
-			case 1:
-				star_instance = instance_create_depth(border_instance.x + border_instance.right + 8, soul_instance.y + distance * distance_factor, fight_depth.bullet_outside, star_spinning);
-				star_instance.speed_const = 3 + _power * speed_step;
-				star_instance.direction_const = 180;	
-				break;
-			case 2:		
-				star_instance = instance_create_depth(border_instance.x - border_instance.left - 8, soul_instance.y - distance * distance_factor, fight_depth.bullet_outside, star_spinning);
-				star_instance.speed_const = 3 + _power * speed_step;		
-				break;
-			case 3:
-				star_instance = instance_create_depth(border_instance.x - border_instance.left - 8, soul_instance.y + distance * distance_factor, fight_depth.bullet_outside, star_spinning);
-				star_instance.speed_const = 3 + _power * speed_step;			
-				break;
-		}
-		distance_factor += 1.6;
+		star_instance[i] = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, star);
+
+		star_instance[i].direction = point_direction(x_, y_, border_instance.x, y_);
+		star_instance[i].speed_const = 3 + _power * speed_step;
+		i++;
 	}
+
+	
 	audio_play_sound_plugging(snd_projectile);
 }
 
-var period = 30 - 2 * _power;
+var period = 40 - (_power * 2);
 var repeats = 10 + _power * 2;
 
 

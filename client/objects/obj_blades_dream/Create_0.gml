@@ -86,3 +86,10 @@ move_spinning = function (spd) {
 	is_spinning = true;	
 	speed_spinning = spd;
 };
+
+on_soul_touch = function () {
+	if(image_alpha >= 0.8) {
+		fight_soul_damage(damage, destructible, id);
+	};	
+	
+}

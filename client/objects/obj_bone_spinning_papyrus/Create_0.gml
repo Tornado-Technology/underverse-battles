@@ -6,9 +6,8 @@ soul_invulnerability = 20;
 scale_const = 0;
 scale_time = 0;
 
-speed_spinning = 0;
+speed_spinning = speed_const;
 
-left = irandom(1);
 
 
 

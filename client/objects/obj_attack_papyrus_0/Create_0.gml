@@ -7,9 +7,11 @@ on_border_created = function () {
 switch(type) {
 	
 	case 0:
-		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_pattern_platform_mover_through_changes_bone, {
-			bone: obj_bone_changes_papyrus
+		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);
+		pattern_instance = create_pattern(obj_pattern_bone_with_platforms, {
+			bone: obj_bone_papyrus,
+			bone_spinning: obj_bone_spinning_papyrus
+
 		});
 	break;
 		

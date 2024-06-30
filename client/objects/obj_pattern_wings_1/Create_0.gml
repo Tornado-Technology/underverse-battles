@@ -13,17 +13,21 @@ update = function() {
 		
 		var feathers_instnace = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, obj_aim_hit, 
 		{
-			angle: choose(360, 120), 
-			time_prejudice: 20
+			angle: point_direction(x_, y_, soul_instance.x, soul_instance.y), 
+			time_prejudice: 40
 		});		
 		
 		with(feathers_instnace) {
 			end_prejudice  = function () {
-				instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_knilage_blow_xsanastasia, {
-					image_angle: (angle / aim_count)	
-				});		
-			};
 			
+			var i = angle;
+				while(i <= angle * aim_count) {	
+				var blast_instace =	instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_knilage_blow_xsanastasia);		
+			
+					blast_instace._angle = i;
+					i+= angle;
+				};
+			}
 		}
 }
 

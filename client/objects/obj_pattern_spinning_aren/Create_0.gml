@@ -16,15 +16,18 @@ callback = function () {
 	var i = 0;
 	repeat (slime_count) {
 		slime_instance[i] = instance_create_depth(border.left + 20 * i, fram[0].y, fight_depth.bullet_outside, slime, {
-			image_xscale: 6.5
+			image_xscale: 6.5,
+			speed_const: 3 + _power * 0.1
 		});
 		
-		slime_instance[i].disable_surface = true;
 		
 		with(slime_instance[i]) {
 			sprite_set_offset(sprite_index, 0, 4);
 		};
 		
+		slime_instance[i].moving_circle(fram[i].x, fram[i].y, 10);
+		slime_instance[i].speed_spning = 2 + _power * 0.1
+		slime_instance[i].angle = -fram[i].image_angle;
 		i++;
 	}
 		
@@ -38,20 +41,21 @@ callback = function () {
 }
 
 update_start = function() {
-	var i = 0;
-	var fram = [border_instance._inst_frame_right, border_instance._inst_frame_down, border_instance._inst_frame_right,  border_instance._inst_frame_left];
-	var angle = [fram[i].image_angle + 180,fram[i].image_angle, fram[i].image_angle + 270,  fram[i].image_angle + 270];
-	repeat(slime_count) {
-		slime_instance[i].x = fram[i].x;
-		slime_instance[i].y = fram[i].y; 
+	//var i = 0;
+	//var fram = [border_instance._inst_frame_right, border_instance._inst_frame_down, border_instance._inst_frame_right,  border_instance._inst_frame_left];
+	//var angle = [fram[i].image_angle + 180,fram[i].image_angle, fram[i].image_angle + 270,  fram[i].image_angle + 270];
+	//repeat(slime_count) {
+	//	slime_instance[i].x = fram[i].x;
+	//	slime_instance[i].y = fram[i].y; 
 		
-		if (i == 2) {
-			slime_instance[i].image_yscale = -slime_instance[i].image_yscale;
-		};
+	//	if (i == 2) {
+	//		slime_instance[i].image_yscale = -slime_instance[i].image_yscale;
+	//	};
 		
-		slime_instance[i].image_angle = angle[i];
-		i++;
-	}	
+	//	slime_instance[i].image_angle = angle[i];
+	//	slime_instance[i].spwan_bullets(angle[i]);
+	//	i++;
+	//}	
 }
 
 update = function () { 

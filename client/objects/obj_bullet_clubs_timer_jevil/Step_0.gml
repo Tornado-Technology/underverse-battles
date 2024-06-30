@@ -17,7 +17,6 @@ else {
 };
 
 
-show_debug_message(length_charge)
 if time_source_get_state(time_source_start_attack) == time_source_state_stopped {
 	if(radius <= radius_max + 10 && !attack) {
 		radius = lerp(radius, radius_max + 20, length_charge * dtime);		

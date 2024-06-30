@@ -7,9 +7,8 @@ callback = function () {
 		
 		while(i <= 360) {
 			var _x = border_instance.x;
-			var _y = border_instance.y
-			
-			
+			var _y = border_instance.y;
+		
 			var scythe_instance = instance_create_depth(_x + dcos(i) * radius, _y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_scythe_jevil, {
 				center_x: border_instance.x,
 				center_y: border_instance.y
@@ -19,7 +18,6 @@ callback = function () {
 			scythe_instance.step = 2 + _power * 0.1;
 			i += angle;
 		}
-		
 	time_source_start(time_source_update_destroy);
 }
 

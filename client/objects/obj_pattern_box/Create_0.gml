@@ -10,20 +10,25 @@ callback = function () {
 };
 
 update = function () { 
-		var left = border_instance.x - border_instance.left - irandom_range(20, 50);
-		var right =  border_instance.x + border_instance.right + irandom_range(20, 50);
-		var x_ = fight_random_choose(left, right);
-		var y_ = fight_random_choose(border_instance.y - border_instance.up - 10, border_instance.y + border_instance.down + 10);
+		var border = border_instance;
+		var random_position = new Vector2(0, -10);
+	if (irandom(1)) {
+		var offset_x = 25;
+		var start_x = border.x - border.right - 10;
+		random_position.x = start_x - irandom_range(offset_x, offset_x * 2);
+	} else {
+		var offset_x = 25;
+		var start_x = border.x + border.left + 10;
+		random_position.x = start_x + irandom_range(offset_x, offset_x * 2);
+	}; 
 	
-		var new_y = y_ == border_instance.y - border_instance.up - 10 ? border_instance.y + border_instance.down + irandom_range(-125, 50): border_instance.y - border_instance.up - irandom_range(-125, 50);
-		
-		var	box_instance = instance_create_depth(x_,  y_, fight_depth.bullet_outside, obj_box_jevil, {
-			sprite_index: choose(spr_jevil_diamonds_box, spr_jevil_hearts_box, spr_jevil_clubs_box),
-		});
-			
-		box_instance.speed_count =  3 + _power * 0.1;
-		box_instance.step =  2.4 + _power * 0.2;
-		box_instance.target = new Vector2(x_,  new_y );
+	var box = instance_create_depth(random_position.x, random_position.y, 0, obj_box_jevil, {
+		sprite_index: choose(spr_jevil_diamonds_box, spr_jevil_hearts_box, spr_jevil_clubs_box)
+	});
+	
+	box.speed_count = 3 + _power * 0.1;
+	box.target = new Vector2(box.x, border.y + border.down + irandom_range(-125, 50));
+	box.step = random_range(2, 2.7);
 
 };
 

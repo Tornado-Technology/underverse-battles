@@ -1,0 +1,30 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bomb",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "bitRate":64,
+  "compression":1,
+  "ConfigValues":{
+    "Development":{
+      "audioGroupId":"{ \"name\":\"sound\", \"path\":\"audiogroups/sound\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":0.60805,
+  "name":"snd_bomb",
+  "parent":{
+    "name":"Jevil",
+    "path":"folders/Sounds/SFX/Jevil.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":32000,
+  "soundFile":"snd_bomb.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -3,7 +3,6 @@
   "%Name":"obj_scythe_small_jevil",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_scythe_small_jevil",
@@ -13,8 +12,8 @@
     "path":"folders/Characteres/Jevil/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_scythe_jevil",
+    "path":"objects/obj_scythe_jevil/obj_scythe_jevil.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
