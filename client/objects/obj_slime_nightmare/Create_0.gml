@@ -39,11 +39,11 @@ change_scale = function(scale, step) {
 	scale_time = step;
 }
 
-spwan_bullets = function (angle) {
-	keep_bullets = true;
-	angle_bullets = angle;
-	//time_source_start(time_source_spwan_bullets);
-}
+//spwan_bullets = function (angle) {
+//	keep_bullets = true;
+//	angle_bullets = angle;
+//	time_source_start(time_source_spwan_bullets);
+//}
 
 time_source_spwan_bullets = time_source_create(time_source_game, time_attack / 60, time_source_units_seconds, function () {
 	var bullets_instance = instance_create_depth(x + irandom(sprite_width), y, fight_depth.bullet_outside_hight, bullets, {

@@ -17,10 +17,10 @@ if (instance_exists(obj_battle_soul)) {
 	
 }
 
-if(move_circle) {
+//if(move_circle) {
 	
-	x = center_x + dcos(angle) * radius;
-	y = center_y + -dsin(angle) * radius;
+//	x = center_x + dcos(angle) * radius;
+//	y = center_y + -dsin(angle) * radius;
 	
-	angle += speed_spning * dtime;
-};
+//	angle += speed_spning * dtime;
+//};
