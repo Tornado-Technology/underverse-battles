@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"cutscene_dialog_set_side",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cutscene_dialog_set_side",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Local/System/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -94,7 +94,9 @@ cutscenes = [
 		[cutscene_wait, 1],
 		[cutscene_dialog, "Underverse_Episode3.Dialog24", dir.down],
 		[cutscene_execute, function() {
+			instance_create(obj_background_surface_evening);
 			obj_volleyball_minigame.on_round_start.invoke();
+			audio_play_soundtrack(snd_a_happy_gathering);
 		}]
 	]
 ];

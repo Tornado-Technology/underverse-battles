@@ -67,6 +67,7 @@ on_fall_ball.connect(function() {
 });
 
 set_new_round = function(team_index) {
+	
 	array_foreach(team_1_players, function(player) {
 		player.x = player.start_position_x;
 		player.y = player.start_position_y;
@@ -75,6 +76,11 @@ set_new_round = function(team_index) {
 		player.x = player.start_position_x;
 		player.y = player.start_position_y;
 	});
+	
+	if (score_team_1 == 9 || score_team_2 == 9) {
+		gameplay_underverse_episode_3_surface.create_final_volleyball_cutscene();
+		return;
+	}
 	
 	if (team_index == 1 && score_team_1 > 0) {
 		first_puncher_index_team_1++;

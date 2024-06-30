@@ -66,4 +66,4 @@ on_taking_soul_damage = function(soul, damage) {
 
 // Soundtrack
 soundtrack_name = "Valiant Heart"; 
-soundtrack = snd_megalovania;
+soundtrack = snd_valiant_heart_rock_remix;
