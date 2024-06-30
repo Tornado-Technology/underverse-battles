@@ -5,7 +5,7 @@ import Logger from '../../util/logging.js';
 import { addHandler } from '../handleStuff.js';
 import { Handler, IHandlerContext, handlerFlags } from '../handler.js';
 
-addHandler(new Handler('friendRequestSend', async function(this: IHandlerContext) {
+addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const profileSender = this.profile;
   const profileReceiver = await this.getProfileByAccountFinder(this.data.accountFinder);
 
