@@ -16,6 +16,8 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const data = await requestGetData(request._id);
   const client = App.clients.find(client => client.profile._id ?? undefined === profileReceiver._id);
 
+  this.sendCode(statusCode.success);
+
   if (!client) return;
   
   client.send('friendRequestInvite', {
