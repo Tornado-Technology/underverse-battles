@@ -2,6 +2,7 @@ import { Model, Document } from 'mongoose';
 import { createRequire } from 'module';
 import { hashPassword, verifyPassword } from '../../util/encrypting.js';
 import { statusCode } from '../../status.js';
+import { IProfile } from './profile.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
@@ -85,5 +86,16 @@ export const login = (username: string, password: string): Promise<IAccount> => 
   }).clone();
 });
 
+export const find = async (finder): Promise<IProfile> => {
+  let search;
+  
+  if (finder.id)
+    search = { _id: finder.accountId };
+
+  if (finder.username) 
+    search = { username: finder.username };
+
+  return await Account.findOne(search)
+};
 
 export const Account: Model<IAccount> = model(accountModelName, schema);

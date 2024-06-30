@@ -37,7 +37,7 @@ export default class SendStuff {
     this.uuid = uuid;
   }
 
-  protected send(index: string, data: any = {}): void {
+  public send(index: string, data: any = {}): void {
     data.index = index;
     this.socket.write(Packet.build(data));
   }

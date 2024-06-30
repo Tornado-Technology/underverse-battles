@@ -1,4 +1,4 @@
-import { Account, accountType, login, register } from '../database/schemas/account.js';
+import { Account, accountType, login, register, find as accountFind } from '../database/schemas/account.js';
 import { actionType, state as fightState, target } from '../game/fight/fight.js';
 import { send as mailSend} from '../util/mail.js';
 import Client, { state } from '../concepts/client/client.js';
@@ -9,9 +9,20 @@ import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
 import { infoValidate, validatePassword, validateUsername, validateNickname } from '../database/validation.js';
 import { Profile } from '../database/schemas/profile.js';
+import { Handler } from './handler.js';
 
-export const handlePacket = async (client: Client, data: any) => {
+const handlers: Map<string, Handler> = new Map();
+
+export const addHandler = (handler: Handler) => {
+  handlers.set(handler.index, handler);
+};
+
+export const handlePacket = async (client: Client, data: any): Promise<void> => {
   const index: string = data.index ?? '';
+  
+  if (handlers.has(index)) {
+    return await handlers.get(index).invoke(client, data);
+  }
 
   switch (index) {
     case 'information':
@@ -436,8 +447,8 @@ export const handlePacket = async (client: Client, data: any) => {
       {
         const map = new Map<string, object>();
 
-        for (const username of data.usernames) {
-          const account = await Account.findOne({ username }).clone();
+        for (const id of data.ids) {
+          const account = await Account.findOne({ _id: id }).clone();
           
           if (!account)
             continue;
@@ -447,7 +458,7 @@ export const handlePacket = async (client: Client, data: any) => {
           if (!profile)
             continue;
   
-          map.set(username, {
+          map.set(id, {
             accountId: account._id,
             username: account.username,
             nickname: account.nickname,
