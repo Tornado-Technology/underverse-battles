@@ -1,5 +1,5 @@
 import Client from '../concepts/client/client.js';
-import { Account, IAccount } from '../database/schemas/account.js';
+import { Account, IAccount, IAccountFinder, getAccountByFinder } from '../database/schemas/account.js';
 import { IProfile, Profile } from '../database/schemas/profile.js';
 import { statusCode } from '../status.js';
 
@@ -20,9 +20,11 @@ export interface IHandlerContext {
   sendCode: (code: statusCode) => void,
   sendTo: (client: Client, data: any) => void,
   getAccountById: (id: string) => Promise<IAccount>,
+  getAccountByFinder: (finder: IAccountFinder) => Promise<IAccount>,
   getAccountByProfileId: (id: string) => Promise<IAccount>,
   getProfileById: (id: string) => Promise<IProfile>,
   getProfileByAccountId: (id: string) => Promise<IProfile>,
+  getProfileByAccountFinder: (finder: IAccountFinder) => Promise<IProfile>,
   __stashAccounts: Map<string, IAccount>,
   __stashProfiles: Map<string, IProfile>,
 }
@@ -67,7 +69,7 @@ export class Handler {
         this.handler.send(this.client, data);
       },
       sendCode: function(code: statusCode) {
-        this.handler.sendCode(this.client, code);
+        this.handler.sendCode(client, code);
       },
       sendTo: function(client: Client, data: any) {
         this.handler.send(client, data);
@@ -80,6 +82,12 @@ export class Handler {
         if (!account) throw statusCode.databaseAccountNotExists;
 
         this.__stashAccounts.set(id, account);
+        return account;
+      },
+      getAccountByFinder: async function(finder: IAccountFinder) {
+        const account = await getAccountByFinder(finder);
+        if (!account) throw statusCode.databaseAccountNotExists;
+
         return account;
       },
       getAccountByProfileId: async function(id: string) {
@@ -104,8 +112,12 @@ export class Handler {
         
         return profile;
       },
-      __stashAccounts: new Map<string, IAccount | null>(),
-      __stashProfiles: new Map<string, IProfile | null>(),
+      getProfileByAccountFinder: async function(finder: IAccountFinder) {
+        const account = await this.getAccountByFinder(finder);
+        return await this.getProfileByAccountId(account._id);
+      },
+      __stashAccounts: new Map<string, IAccount>(),
+      __stashProfiles: new Map<string, IProfile>(),
     });
 
     try {
@@ -148,3 +160,88 @@ export class Handler {
     return (this.flags & flag) === flag;
   }
 }
+
+// I HATE TS
+/*
+export class HandlerContext implements IHandlerContext {
+  handler: Handler;
+  client: Client;
+  data: any;
+  account: IAccount | undefined;
+  profile: IProfile | undefined;
+  __stashAccounts: Map<string, IAccount>;
+  __stashProfiles: Map<string, IProfile>;
+
+  constructor(handler: Handler, client: Client, data: any) {
+    this.handler = handler;
+    this.client = client;
+    this.data = data;
+
+    this.account = client.account;
+    this.profile = client.profile;
+
+    this.__stashAccounts = new Map<string, IAccount>();
+    this.__stashProfiles = new Map<string, IProfile>();
+  }
+
+  public send(data: any) {
+    this.handler.send(this.client, data);
+  }
+
+  public sendCode(code: statusCode) {
+    this.handler.sendCode(this.client, code);
+  }
+
+  public sendTo(client: Client, data: any) {
+    this.handler.send(client, data);
+  }
+
+  public async getAccountById(id: string): Promise<IAccount> {
+    if (this.__stashAccounts.has(id))
+      return this.__stashAccounts.get(id);
+
+    const account = await Account.findById(id);
+    if (!account) throw statusCode.databaseAccountNotExists;
+
+    this.__stashAccounts.set(id, account);
+    return account;
+  }
+
+  public async getAccountByFinder(finder: IAccountFinder): Promise<IAccount> {
+    const account = await getAccountByFinder(finder);
+    if (!account) throw statusCode.databaseAccountNotExists;
+
+    return account;
+  }
+
+  public async getAccountByProfileId(id: string): Promise<IAccount> {
+    const profile = await this.getProfileById(id);
+    if (!profile) throw statusCode.databaseAccountNotExists;
+
+    return await this.getProfile(profile.accountId);
+  }
+
+  public async getProfileById(id: string): Promise<IProfile> {
+    if (this.__stashProfiles.has(id))
+      return this.__stashProfiles.get(id);
+
+    const profile = await Profile.findById(id);
+    if (!profile) throw statusCode.databaseProfileNotExists
+
+    this.__stashProfiles.set(id, profile);
+    return profile;
+  }
+
+  public async getProfileByAccountId(id: string): Promise<IProfile> {
+    const profile = await Profile.findOne({ accountId: id });
+    if (!profile) throw statusCode.databaseProfileNotExists;
+    
+    return profile;
+  }
+
+  public async getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile> {
+    const account = await this.getAccountByFinder(finder);
+    return await this.getProfileByAccountId(account._id);
+  }
+}
+*/
