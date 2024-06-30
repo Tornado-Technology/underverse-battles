@@ -19,6 +19,7 @@ addHandler(new Handler('friendRequestSend', async function(this: IHandlerContext
   if (!client) return;
   
   client.send('friendRequestInvite', {
+    code: statusCode.success,
     data,
   });
 }).setFlags(handlerFlags.requireLogging));
