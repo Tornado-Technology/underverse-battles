@@ -51,7 +51,7 @@ update_start = function() {
 		};
 		
 		slime_instance[i].image_angle = angle[i];
-		slime_instance[i].spwan_bullets(angle[i]);
+	
 		i++;
 	}	
 }
