@@ -35,7 +35,7 @@ addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerConte
       request[request._id] = await requestGetData(request._id);
     } catch (error) {
       result[request._id] = undefined;
-      Logger.debug(`friendRequestSend error: ${error}`);
+      Logger.debug(`friendRequestGetAll error: ${error}`);
     }
   }
 
