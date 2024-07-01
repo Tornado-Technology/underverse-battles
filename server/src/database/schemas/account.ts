@@ -26,6 +26,11 @@ export interface IAccount extends Document {
   type: accountType,
 }
 
+export interface IAccountFinder {
+  id: string | undefined,
+  username: string | undefined,
+}
+
 const schema = new Schema({
   username: { type: String, unique: true },
   email: { type: String, unique: true },
@@ -85,5 +90,16 @@ export const login = (username: string, password: string): Promise<IAccount> => 
   }).clone();
 });
 
+export const getAccountByFinder = async (finder: IAccountFinder): Promise<IAccount> => {
+  let search;
+  
+  if (finder.id)
+    search = { _id: finder.id };
+
+  if (finder.username) 
+    search = { username: finder.username };
+
+  return await Account.findOne(search)
+};
 
 export const Account: Model<IAccount> = model(accountModelName, schema);
