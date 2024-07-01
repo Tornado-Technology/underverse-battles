@@ -16,15 +16,15 @@ export interface IHandlerContext {
   data: any,
   account: IAccount | undefined,
   profile: IProfile | undefined,
-  send: (data: any) => void,
-  sendCode: (code: statusCode) => void,
-  sendTo: (client: Client, data: any) => void,
-  getAccountById: (id: string) => Promise<IAccount>,
-  getAccountByFinder: (finder: IAccountFinder) => Promise<IAccount>,
-  getAccountByProfileId: (id: string) => Promise<IAccount>,
-  getProfileById: (id: string) => Promise<IProfile>,
-  getProfileByAccountId: (id: string) => Promise<IProfile>,
-  getProfileByAccountFinder: (finder: IAccountFinder) => Promise<IProfile>,
+  send(data: any): void,
+  sendCode(code: statusCode): void,
+  sendTo(client: Client, data: any): void,
+  getAccountById(id: string): Promise<IAccount>,
+  getAccountByFinder(finder: IAccountFinder): Promise<IAccount>,
+  getAccountByProfileId(id: string): Promise<IAccount>,
+  getProfileById(id: string): Promise<IProfile>,
+  getProfileByAccountId(id: string): Promise<IProfile>,
+  getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile>,
   __stashAccounts: Map<string, IAccount>,
   __stashProfiles: Map<string, IProfile>,
 }
@@ -59,66 +59,7 @@ export class Handler {
       return;
     }
 
-    this.callback.bind({
-      handler: this,
-      client,
-      account: client.account,
-      profile: client.profile,
-      data,
-      send: function(data: any) {
-        this.handler.send(this.client, data);
-      },
-      sendCode: function(code: statusCode) {
-        this.handler.sendCode(client, code);
-      },
-      sendTo: function(client: Client, data: any) {
-        this.handler.send(client, data);
-      },
-      getAccountById: async function(id: string) {
-        if (this.__stashAccounts.has(id))
-          return this.__stashAccounts.get(id);
-
-        const account = await Account.findById(id);
-        if (!account) throw statusCode.databaseAccountNotExists;
-
-        this.__stashAccounts.set(id, account);
-        return account;
-      },
-      getAccountByFinder: async function(finder: IAccountFinder) {
-        const account = await getAccountByFinder(finder);
-        if (!account) throw statusCode.databaseAccountNotExists;
-
-        return account;
-      },
-      getAccountByProfileId: async function(id: string) {
-        const profile = await this.getProfileById(id);
-        if (!profile) throw statusCode.databaseAccountNotExists;
-
-        return await this.getProfile(profile.accountId);
-      },
-      getProfileById: async function(id: string) {
-        if (this.__stashProfiles.has(id))
-          return this.__stashProfiles.get(id);
-
-        const profile = await Profile.findById(id);
-        if (!profile) throw statusCode.databaseProfileNotExists
-
-        this.__stashProfiles.set(id, profile);
-        return profile;
-      },
-      getProfileByAccountId: async function(id: string) {
-        const profile = await Profile.findOne({ accountId: id });
-        if (!profile) throw statusCode.databaseProfileNotExists;
-        
-        return profile;
-      },
-      getProfileByAccountFinder: async function(finder: IAccountFinder) {
-        const account = await this.getAccountByFinder(finder);
-        return await this.getProfileByAccountId(account._id);
-      },
-      __stashAccounts: new Map<string, IAccount>(),
-      __stashProfiles: new Map<string, IProfile>(),
-    });
+    this.callback.bind(new HandlerContext(this, client, data));
 
     try {
       await this.callback();
@@ -161,16 +102,14 @@ export class Handler {
   }
 }
 
-// I HATE TS
-/*
 export class HandlerContext implements IHandlerContext {
-  handler: Handler;
-  client: Client;
-  data: any;
-  account: IAccount | undefined;
-  profile: IProfile | undefined;
-  __stashAccounts: Map<string, IAccount>;
-  __stashProfiles: Map<string, IProfile>;
+  public readonly handler: Handler;
+  public readonly client: Client;
+  public readonly data: any;
+  public readonly account: IAccount | undefined;
+  public readonly profile: IProfile | undefined;
+  public readonly __stashAccounts = new Map<string, IAccount>();;
+  public readonly __stashProfiles =  new Map<string, IProfile>();
 
   constructor(handler: Handler, client: Client, data: any) {
     this.handler = handler;
@@ -179,9 +118,6 @@ export class HandlerContext implements IHandlerContext {
 
     this.account = client.account;
     this.profile = client.profile;
-
-    this.__stashAccounts = new Map<string, IAccount>();
-    this.__stashProfiles = new Map<string, IProfile>();
   }
 
   public send(data: any) {
@@ -218,7 +154,7 @@ export class HandlerContext implements IHandlerContext {
     const profile = await this.getProfileById(id);
     if (!profile) throw statusCode.databaseAccountNotExists;
 
-    return await this.getProfile(profile.accountId);
+    return await this.getAccountById(profile.accountId.toString());
   }
 
   public async getProfileById(id: string): Promise<IProfile> {
@@ -244,4 +180,3 @@ export class HandlerContext implements IHandlerContext {
     return await this.getProfileByAccountId(account._id);
   }
 }
-*/
