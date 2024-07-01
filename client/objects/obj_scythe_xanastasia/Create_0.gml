@@ -16,7 +16,7 @@ come_back = false;
 
 move_come_back = false;
 
-moves_ends_aren = false;
+moves_ends_arena = false;
 
 moving_back = function () {
 	come_back  = true;
