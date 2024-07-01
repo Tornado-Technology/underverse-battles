@@ -17,6 +17,9 @@ enum menu_page {
 	
 	// Account
 	multiplayer_account,
+	account,
+	friends,
+	find_friend,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -71,7 +74,7 @@ background = opening == opening_theme.tangled ? spr_background_tangled : spr_bac
 background_height_ = opening == opening_theme.tangled ? sprite_get_height(background) * 2 : sprite_get_height(background);
 background_width_ = sprite_get_width(background);
 
-background_color_main = opening_theme.tangled ? c_white : background_color;
+background_color_main = c_white;
 
 background_alpha = 1;
 background_target_alpha = 1;
@@ -464,15 +467,38 @@ create_page([
 	Execute("SingleBattle.CustomSound", [], function() {
 		instance_create(obj_soundtrack_selection);
 	}),
-	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
-		instance_create(obj_profile_statistics);
-	}),
-	Transfer("Multiplayer.AccountOptions", menu_page.account_settings),
-	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
-		send_logout();
-	}),
+	Transfer("Multiplayer.Account", menu_page.account),
 	Transfer("StandardButtons.Back", menu_page.main),
 ], menu_page.multiplayer_account, "Multiplayer.Title", true);
+
+// Account
+create_page([
+	Execute("Account.Friends", [], function() {
+		instance_create(obj_profile_friends);
+		
+	}),
+	Transfer("Account.Statistics", menu_page.statistics, function() {
+		instance_create(obj_profile_statistics);
+	}),
+	Transfer("Account.AccountOptions", menu_page.account_settings),
+	Transfer("Account.LogOut", menu_page.multiplayer, function() {
+		send_logout();
+	}),
+	Transfer("StandardButtons.Back", menu_page.multiplayer_account),
+], menu_page.account, "Account.Title", true);
+
+friends_inputbox_login = InputBox("Friends.WriteLogin");
+
+// Find friend
+create_page([
+	friends_inputbox_login,
+	Execute("StandardButtons.Apply", [], function() {
+		send_friend_request(friends_inputbox_login.input_box.text);
+	}),
+	Execute("StandardButtons.Back", [], function() {
+		instance_create(obj_profile_friends);
+	}),
+], menu_page.find_friend, "Friends.FindFriend", true);
 
 // Statistics
 create_page([

@@ -52,6 +52,38 @@ function send_verification(code) {
 	});
 }
 
+// @param {Array} account_ids
+function send_get_accounts_info(account_ids) {
+	send("getAccountsInfo", {
+		accountIds: account_ids,
+	});
+}
+
+// @param {String} username
+function send_friend_request(username) {
+	send("friendRequest", {
+		accountFinder: username,
+	});
+}
+
+function send_friend_request_get_all() {
+	send("friendRequestGetAll");
+}
+
+// @param {Real} request_id
+function send_friend_request_accept(request_id) {
+	send("friendRequestAccept", {
+		requestId: request_id,
+	});
+}
+
+// @param {Real} request_id
+function send_friend_request_reject(request_id) {
+	send("friendRequestReject", {
+		requestId: request_id,
+	});
+}
+
 /// @param {String} email
 function send_eamil_change(email) {
 	send("changeEmail", {
