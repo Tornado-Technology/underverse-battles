@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sans_volleyball_standing_down",
-    "path":"sprites/spr_sans_volleyball_standing_down/spr_sans_volleyball_standing_down.yy",
+    "name":"spr_sans_volleybro_standing_down",
+    "path":"sprites/spr_sans_volleybro_standing_down/spr_sans_volleybro_standing_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

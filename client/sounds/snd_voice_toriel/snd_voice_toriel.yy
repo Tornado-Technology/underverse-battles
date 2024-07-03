@@ -9,7 +9,7 @@
   "bitRate":64,
   "compression":1,
   "conversionMode":0,
-  "duration":0.089546,
+  "duration":0.085624,
   "name":"snd_voice_toriel",
   "parent":{
     "name":"Voice",

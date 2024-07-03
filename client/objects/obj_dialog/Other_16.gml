@@ -16,7 +16,7 @@ set_voice("Dream", "", snd_voice_ink_sans);
 set_voice("Undyne", "", snd_voice_undyne);
 set_voice("UndynePicnic", "", snd_voice_undyne);
 set_voice("Toriel", "", snd_voice_toriel);
-set_voice("Toriel", "", snd_voice_toriel);
+set_voice("TorielPicnic", "", snd_voice_toriel);
 set_voice("Asgore", "", snd_voice_asgore);
 set_voice("AsgorePicnic", "", snd_voice_asgore);
 set_voice("Alphys", "", snd_voice_alphys);

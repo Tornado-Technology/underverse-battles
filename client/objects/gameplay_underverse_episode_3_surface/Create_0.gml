@@ -9,13 +9,15 @@ fight = obj_fight_underverse_episode2;
 frisk = obj_character_frisk;
 sans = obj_character_sans;
 papyrus = obj_npc_papyrus_episode_3;
-undyne = obj_npc_undyne;
+papyrus_character = obj_character_papyrus;
+undyne = obj_character_undyne;
 alphys = obj_npc_alphys;
 toriel = obj_npc_toriel;
 asgore = obj_npc_asgore;
 
 // Stuff
 steak = obj_steak;
+net = obj_volleyball_net;
 
 // Soul
 soul_sans_half = noone;
@@ -56,6 +58,7 @@ cutscenes = [
 		//}],
 		[cutscene_object_set_sprtie, frisk, spr_frisk_with_plate],
 		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
+		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_eating_closed_eyes],
 		[cutscene_wait, 3],
 		[cutscene_dialog, episode + "Dialog17", dir.down],
 		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilling_ketchup],
@@ -119,11 +122,15 @@ cutscenes = [
 	],
 	[
 		[cutscene_execute, function() {
-			var vollayball_undyne = obj_volleyball_character_undyne;
-			undyne = instance_create_depth(vollayball_undyne.x, vollayball_undyne.y, vollayball_undyne.depth, obj_npc_undyne, {
-				sprite_index: spr_undyne_picnic_with_ball
+			var volleyball_characters = [obj_volleyball_character_alphys, obj_volleyball_character_asgore, obj_volleyball_character_frisk, obj_volleyball_character_sans, obj_volleyball_character_papyrus, obj_volleyball_character_undyne];
+			array_foreach(volleyball_characters, function(character, index) {
+				var characters = [obj_npc_alphys, obj_npc_asgore, obj_character_frisk, obj_character_sans, obj_character_papyrus, obj_character_undyne];
+				var character_sprites = [spr_alphys_volleyball_standing, spr_asgore_picnic_standing_down, spr_frisk_standing_down, spr_sans_volleybro_standing_down, spr_papyrus_picnic_standing_down, spr_undyne_picnic_with_ball];
+				instance_create_depth(character.x, character.y, character.depth, characters[index], {
+					sprite_index: character_sprites[index]
+				});
+				instance_destroy(character);
 			});
-			instance_destroy(vollayball_undyne)
 		}],
 		[cutscene_execute, function() {
 			audio_sound_gain(snd_a_happy_gathering, 0, 2000);
@@ -143,7 +150,49 @@ cutscenes = [
 			audio_stop_sound(snd_a_happy_gathering);
 			audio_play_soundtrack(snd_round_justice, false);
 		}],
-		[cutscene_wait, 2],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_superpunch]
+		[cutscene_wait, 0.5],
+		[cutscene_object_set_sprtie, papyrus_character, spr_papyrus_volleyball_standing],
+		[cutscene_object_set_sprtie, frisk, spr_frisk_volleyball_standing],
+		[cutscene_wait, 1.5],
+		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_superpunch],
+		[cutscene_wait, 6/8],
+		[cutscene_execute, function() {
+			ball = instance_create_depth(undyne.x - 5, undyne.y, fight_depth.player, obj_volleyball_ball, {
+				is_holding: false,
+				is_for_minigame: false
+			});
+			ball.height = 103;
+			ball.punch_down(90, 5, 1);
+			camera_set_overwrite_position(obj_camera.camera_position.x, sans.y - display_get_gui_height() / 2 - object_get_sprite_max_size(sans));
+			camera_set_speed(5, 5);
+		}],
+		[cutscene_wait, 1/6],
+		[cutscene_object_set_sprtie, net, spr_volleyball_net_breaking],
+		[cutscene_wait, 1/6],
+		[cutscene_execute, function() {
+			sans.sprite_index = spr_sans_volleybro_flies_away_from_ball;
+			sans.move(0, -5, 0.02);
+			undyne.move(0, 5, 0.02);
+			ball.punch(200, 1, 1);
+			ball.step /= 10;
+			ball.step_force /= 10;
+			audio_sound_gain(snd_park, 0, 1000);
+		}],
+		[cutscene_wait, 0.5],
+		[effect_fade, 3, 1, 2, c_white],
+		[cutscene_wait, 3.5],
+		[cutscene_wait, 1.5],
+		[cutscene_execute, function() {
+			frisk.sprite_index = spr_frisk_standing_up;
+			papyrus_character.sprite_index = spr_papyrus_picnic_standing_up;
+			sans.sprite_index = spr_sans_volleybro_falls_from_ball;
+			sans.move(0, -24, 2);
+			undyne.move(0, 100, 2);
+			ball.step *= 10;
+			ball.step_force *= 10;
+			audio_sound_gain(snd_park, 1, 1000);
+		}],
+		[cutscene_dialog_async, episode + "Dialog26", dir.up],
+		[cutscene_wait, 1],
 	]
 ];

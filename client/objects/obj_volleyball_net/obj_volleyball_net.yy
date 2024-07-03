@@ -3,13 +3,14 @@
   "%Name":"obj_volleyball_net",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_volleyball_net",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Objects.yy",
+    "name":"Volleyball",
+    "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/Volleyball.yy",
   },
   "parentObjectId":{
     "name":"obj_prop",

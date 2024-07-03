@@ -78,7 +78,10 @@ set_new_round = function(team_index) {
 	});
 	
 	if (score_team_1 == 9 || score_team_2 == 9) {
+		instance_destroy(ball);
+		instance_destroy(obj_cutscene);
 		gameplay_underverse_episode_3_surface.create_final_volleyball_cutscene();
+		instance_destroy();
 		return;
 	}
 	

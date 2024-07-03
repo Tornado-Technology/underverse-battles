@@ -11,7 +11,7 @@ punch_inaccuracy = 6;
 punch_speed = random_range(1.6, 2.2);
 punch_force = random_range(4, 5);
 
-init_sprite = spr_asgore_volleyball_standing;
+init_sprite = spr_asgore_picnic_standing_down;
 standing_sprite = spr_asgore_volleyball_standing;
 walking_up_sprite = spr_asgore_volleyball_walking_up;
 walking_down_sprite = spr_asgore_volleyball_walking_down;
