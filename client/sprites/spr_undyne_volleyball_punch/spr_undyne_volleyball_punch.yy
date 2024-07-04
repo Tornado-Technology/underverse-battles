@@ -17,11 +17,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"872e6a49-2de1-43ef-8f35-fc32e651990a","name":"872e6a49-2de1-43ef-8f35-fc32e651990a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9dcf5e8a-b061-496f-b79f-53457b88de07","name":"9dcf5e8a-b061-496f-b79f-53457b88de07","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"2bf1a322-48e7-402d-89d6-e1568f1f3a28","name":"2bf1a322-48e7-402d-89d6-e1568f1f3a28","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"9dcf5e8a-b061-496f-b79f-53457b88de07","name":"9dcf5e8a-b061-496f-b79f-53457b88de07","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"872e6a49-2de1-43ef-8f35-fc32e651990a","name":"872e6a49-2de1-43ef-8f35-fc32e651990a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -68,7 +68,7 @@
     },
     "name":"spr_undyne_volleyball_punch",
     "playback":1,
-    "playbackSpeed":5.0,
+    "playbackSpeed":7.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -78,20 +78,20 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"59e5615d-6b15-4d19-9ecc-6f665da884c0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2bf1a322-48e7-402d-89d6-e1568f1f3a28","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"44954dcf-6be3-410e-9041-7ca922d9dd3b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"94d5a145-0528-4c48-b76a-114d5ae85b8d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9dcf5e8a-b061-496f-b79f-53457b88de07","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6cefd236-0d6f-4faf-921b-2be15fe98a62","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"872e6a49-2de1-43ef-8f35-fc32e651990a","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"34a50f09-c288-41d9-a31f-2366f758eba6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9dcf5e8a-b061-496f-b79f-53457b88de07","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6cefd236-0d6f-4faf-921b-2be15fe98a62","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0e392771-07e2-40b3-aeb3-6902d7fff1a4","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"94d5a145-0528-4c48-b76a-114d5ae85b8d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2bf1a322-48e7-402d-89d6-e1568f1f3a28","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"44954dcf-6be3-410e-9041-7ca922d9dd3b","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f6132a0-3915-4e1b-8f2a-00e5847f079a","path":"sprites/spr_undyne_volleyball_punch/spr_undyne_volleyball_punch.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"59e5615d-6b15-4d19-9ecc-6f665da884c0","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,6 +1,6 @@
 event_inherited();
 
-ball_collision_width = sprite_width - 4;
+ball_collision_width = sprite_width - 2;
 ball_collision_height = 10;
 ball_spawn_height = 16;
 

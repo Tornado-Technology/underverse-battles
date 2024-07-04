@@ -6,7 +6,7 @@ sans = obj_character_sans;
 effect_filler = noone;
 
 interact_callback = function() {
-	if (variable_instance_get(gameplay_underverse_episode_3_surface, "frisk_was_in_ketchup_shop")) {
+	//if (variable_instance_get(gameplay_underverse_episode_3_surface, "frisk_was_in_ketchup_shop")) {
 		
 		target_character.set_uncontrolled();
 	
@@ -15,7 +15,7 @@ interact_callback = function() {
 			return;
 		}
 		cutscene_create(cutscenes[1]);
-	}
+	//}
 }
 
 reset_characters_and_npc = function() {
@@ -97,6 +97,7 @@ cutscenes = [
 			instance_create(obj_background_surface_evening);
 			obj_volleyball_minigame.on_round_start.invoke();
 			audio_play_soundtrack(snd_a_happy_gathering);
+			instance_destroy();
 		}]
 	]
 ];

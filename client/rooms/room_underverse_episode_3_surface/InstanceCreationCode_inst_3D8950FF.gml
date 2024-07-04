@@ -19,10 +19,14 @@ interact_callback = function() {
 cutscenes = [
 	[
 		[cutscene_dialog, "Underverse_Episode3.MTT_Shop_1", dir.down],
-		[cutscene_execute, target_character.set_controlled]
+		[cutscene_execute, function() {
+			target_character.set_controlled();
+		}]
 	],
 	[
 		[cutscene_dialog, "Underverse_Episode3.MTT_Shop_2", dir.down],
-		[cutscene_execute, target_character.set_controlled]
+		[cutscene_execute, function() {
+			target_character.set_controlled();
+		}]
 	]
 ];

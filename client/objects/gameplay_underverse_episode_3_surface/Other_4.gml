@@ -96,6 +96,7 @@ room_start_callback(room_underverse_episode_3_ketchup_shop, room_underverse_epis
 		});
 		papyrus.sprite_index = spr_papyrus_picnic_sitting_right;
 		undyne.sprite_index = spr_undyne_picnic_sitting_down;
+		alphys.sprite_index = spr_alphys_picnic_standing_down;
 		toriel.sprite_index = spr_toriel_picnic_sitting_left;
 	}
 });

@@ -163,9 +163,9 @@ cutscenes = [
 		[effect_fade, 0.9, 0.1, 1, c_black],
 		[cutscene_wait, 1],
 		[cutscene_dialog_async, episode + "Dialog7_Line1"],
-		[cutscene_object_set_position, ink_sans, 10, 0],
+		[cutscene_object_shift_position, ink_sans, 10, 0],
 		[cutscene_object_set_sprtie, ink_sans, spr_ink_sans_sitting_looking_down],
-		[cutscene_object_set_position, cross, -140, 0],
+		[cutscene_object_shift_position, cross, -140, 0],
 		[cutscene_object_set_sprtie, cross, spr_cross_sitting_wipes_away_tears],
 		[cutscene_execute, function () { notebook = instance_create_depth(cross.x - 2, cross.y + 10, fight_depth.player, obj_prop, { sprite_index: spr_notebook_ink_sans }); }],
 		[cutscene_wait, 1],
@@ -416,15 +416,14 @@ cutscenes = [
 				cross = instance_create_depth(200, 167, fight_depth.player, obj_character_cross, { sprite_index: spr_cross_in_strings });
 			}
 		}],
-		[cutscene_object_set_position, cross, -30, -30],
+		[cutscene_object_shift_position, cross, -30, -30],
 		[cutscene_object_set_sprtie, cross, spr_cross_in_strings],
 		[cutscene_wait, 1],
 		[effect_blackout_end],
 		[cutscene_execute, function () {
 			var i = 0;
 			repeat(4) {
-				string_cross[i] = instance_create_depth(cross.x - 8 + i * 3, cross.y - 26, fight_depth.player, obj_string_error_sans_story_mode, {
-					depth: fight_depth.player,
+				string_cross[i] = instance_create_depth(cross.x - 8 + i * 3, cross.y - 26, fight_depth.bg, obj_string_error_sans_story_mode, {
 					scale_speed: 0,
 					image_xscale: 200,
 					max_scale: 200,

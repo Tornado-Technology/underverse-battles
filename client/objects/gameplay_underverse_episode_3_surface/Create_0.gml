@@ -18,6 +18,7 @@ asgore = obj_npc_asgore;
 // Stuff
 steak = obj_steak;
 net = obj_volleyball_net;
+jacket = obj_jacket_sans;
 
 // Soul
 soul_sans_half = noone;
@@ -52,73 +53,73 @@ create_final_volleyball_cutscene = function() {
 // Cutscenes
 cutscenes = [
 	[	// Picnic begins (Index: 0)
-		//[cutscene_execute, function() {
-		//	frisk.control(true);
-		//	sans.follow(frisk);
-		//}],
-		[cutscene_object_set_sprtie, frisk, spr_frisk_with_plate],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_eating_closed_eyes],
-		[cutscene_wait, 3],
-		[cutscene_dialog, episode + "Dialog17", dir.down],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilling_ketchup],
-		[cutscene_wait, 1],
-		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_shocked],
-		[cutscene_wait, 1],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_laughing],
-		[cutscene_dialog, episode + "Dialog18", dir.down],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_looking_left],
-		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_eating],
-		[cutscene_wait, 1],
-		[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_eating_looking_down],
-		[cutscene_dialog_async, episode + "Dialog19", dir.down],
-		[cutscene_wait_by_dialog, 1],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_looking_up],
-		[cutscene_wait_by_dialog, 2],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_steak_up],
-		[cutscene_wait_dialog_end],
-		[cutscene_camera_change_zoom, 2, 0.2, 543, 2892],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_joking],
-		[audio_play_sound_once, snd_ba_dum_tss],
-		[cutscene_wait, 1],
-		[cutscene_camera_change_zoom, 1, 0.2, 543, 2892],
-		[cutscene_wait, 1],
-		[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_laughing],
-		[cutscene_dialog_async, episode + "Dialog20", dir.down],
-		[cutscene_wait_by_dialog, 1],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
-		[cutscene_wait_by_dialog, 2],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_looking_left],
-		[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_eating],
-		[cutscene_wait_by_dialog, 3],
-		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_shocked],
-		[cutscene_wait_by_dialog, 6],
-		[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_eating],
-		[cutscene_wait_by_dialog, 11],
-		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilled_ketchup_glad],
-		[cutscene_wait_dialog_end],
-		[cutscene_object_set_sprtie, sans, spr_sans_sitting_putting_steak],
-		[cutscene_object_set_sprtie, frisk, spr_frisk_walking_right_with_plate],
-		[cutscene_object_move_to, frisk, 444, 2887, 2],
-		[cutscene_object_set_sprtie, frisk, spr_frisk_putting_plate],
-		[cutscene_wait, 1.2],
-		[cutscene_object_set_sprtie, frisk, spr_frisk_walking_down],
-		[cutscene_character_move, frisk, 0, 50, 2],
-		[cutscene_object_set_sprtie, frisk, spr_frisk_standing_down],
-		[cutscene_wait, 0.2],
 		[cutscene_execute, function() {
-			instance_create_depth(sans.x + 4, sans.y, fight_depth.player, obj_steak);
-		}],
-		[cutscene_object_set_sprtie, sans, spr_sans_walking_left],
-		[cutscene_object_move_to, sans, 480, 2936, 2],
-		[cutscene_object_set_sprtie, sans, spr_sans_standing_left],
-		[cutscene_wait, 0.5],
-		[cutscene_dialog, episode + "Dialog21", dir.down],
-		[cutscene_execute, function() {
-			frisk.direction = dir.down;
 			frisk.control(true);
 			sans.follow(frisk);
 		}],
+		//[cutscene_object_set_sprtie, frisk, spr_frisk_with_plate],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_eating_closed_eyes],
+		//[cutscene_wait, 3],
+		//[cutscene_dialog, episode + "Dialog17", dir.down],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilling_ketchup],
+		//[cutscene_wait, 1],
+		//[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_shocked],
+		//[cutscene_wait, 1],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_laughing],
+		//[cutscene_dialog, episode + "Dialog18", dir.down],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_looking_left],
+		//[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_eating],
+		//[cutscene_wait, 1],
+		//[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_eating_looking_down],
+		//[cutscene_dialog_async, episode + "Dialog19", dir.down],
+		//[cutscene_wait_by_dialog, 1],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_looking_up],
+		//[cutscene_wait_by_dialog, 2],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_steak_up],
+		//[cutscene_wait_dialog_end],
+		//[cutscene_camera_change_zoom, 2, 0.2, 543, 2892],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating_joking],
+		//[audio_play_sound_once, snd_ba_dum_tss],
+		//[cutscene_wait, 1],
+		//[cutscene_camera_change_zoom, 1, 0.2, 543, 2892],
+		//[cutscene_wait, 1],
+		//[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_laughing],
+		//[cutscene_dialog_async, episode + "Dialog20", dir.down],
+		//[cutscene_wait_by_dialog, 1],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_eating],
+		//[cutscene_wait_by_dialog, 2],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_sitting_looking_left],
+		//[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_eating],
+		//[cutscene_wait_by_dialog, 3],
+		//[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_shocked],
+		//[cutscene_wait_by_dialog, 6],
+		//[cutscene_object_set_sprtie, papyrus, spr_papyrus_picnic_sitting_eating],
+		//[cutscene_wait_by_dialog, 11],
+		//[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_spilled_ketchup_glad],
+		//[cutscene_wait_dialog_end],
+		//[cutscene_object_set_sprtie, sans, spr_sans_sitting_putting_steak],
+		//[cutscene_object_set_sprtie, frisk, spr_frisk_walking_right_with_plate],
+		//[cutscene_object_move_to, frisk, 444, 2887, 2],
+		//[cutscene_object_set_sprtie, frisk, spr_frisk_putting_plate],
+		//[cutscene_wait, 1.2],
+		//[cutscene_object_set_sprtie, frisk, spr_frisk_walking_down],
+		//[cutscene_character_move, frisk, 0, 50, 2],
+		//[cutscene_object_set_sprtie, frisk, spr_frisk_standing_down],
+		//[cutscene_wait, 0.2],
+		//[cutscene_execute, function() {
+		//	instance_create_depth(sans.x + 4, sans.y, fight_depth.player, obj_steak);
+		//}],
+		//[cutscene_object_set_sprtie, sans, spr_sans_walking_left],
+		//[cutscene_object_move_to, sans, 480, 2936, 2],
+		//[cutscene_object_set_sprtie, sans, spr_sans_standing_left],
+		//[cutscene_wait, 0.5],
+		//[cutscene_dialog, episode + "Dialog21", dir.down],
+		//[cutscene_execute, function() {
+		//	frisk.direction = dir.down;
+		//	frisk.control(true);
+		//	sans.follow(frisk);
+		//}],
 	],
 	[
 		[cutscene_execute, function() {
@@ -180,19 +181,71 @@ cutscenes = [
 		}],
 		[cutscene_wait, 0.5],
 		[effect_fade, 3, 1, 2, c_white],
-		[cutscene_wait, 3.5],
-		[cutscene_wait, 1.5],
+		[cutscene_wait, 2.5],
+		[cutscene_execute, function() {
+			instance_create(obj_gasters_apparition);
+		}],
+		[cutscene_wait, 2.5],
 		[cutscene_execute, function() {
 			frisk.sprite_index = spr_frisk_standing_up;
 			papyrus_character.sprite_index = spr_papyrus_picnic_standing_up;
 			sans.sprite_index = spr_sans_volleybro_falls_from_ball;
 			sans.move(0, -24, 2);
 			undyne.move(0, 100, 2);
-			ball.step *= 10;
-			ball.step_force *= 10;
+			instance_destroy(ball);
 			audio_sound_gain(snd_park, 1, 1000);
 		}],
-		[cutscene_dialog_async, episode + "Dialog26", dir.up],
+		[cutscene_dialog, episode + "Dialog26", dir.up],
+		[cutscene_character_move, frisk, 0, -80, 2],
+		[cutscene_object_set_sprtie, frisk, spr_frisk_walking_up],
+		[cutscene_character_move, papyrus_character, 0, -80, 2],
+		[cutscene_object_set_sprtie, papyrus_character, spr_papyrus_picnic_walking_up],
+		[cutscene_wait, 2/3],
+		[cutscene_object_set_sprtie, frisk, spr_frisk_standing_left],
+		[cutscene_object_set_sprtie, papyrus_character, spr_papyrus_picnic_on_knees_right],
+		[cutscene_dialog, episode + "Dialog27", dir.up],
 		[cutscene_wait, 1],
+		[cutscene_dialog_async, episode + "Dialog28", dir.up],
+		[cutscene_wait_by_dialog, 1],
+		[cutscene_object_set_sprtie, sans, spr_sans_volleybro_sitting_after_fall],
+		[cutscene_wait_by_dialog, 5],
+		[cutscene_object_set_sprtie, sans, spr_sans_volleybro_stands_up_after_fall],
+		[cutscene_object_set_sprtie, toriel, spr_toriel_picnic_sitting_looking_left_down],
+		[cutscene_wait_dialog_end],
+		[cutscene_execute, function() {
+			instance_create_depth(450, 2914, fight_depth.player, jacket);
+			camera_set_overwrite_position(438 - display_get_gui_width() / 2, 2918 - display_get_gui_height() / 2);
+			camera_set_speed(2, 2);
+		}],
+		[cutscene_object_set_sprtie, sans, spr_sans_volleybro_walking_right_without_bandana],
+		[cutscene_object_move_to, sans, 438, 2918, 2],
+		[cutscene_execute, function() {
+			instance_destroy(jacket);
+		}],
+		[cutscene_object_set_sprtie, sans, spr_sans_volleybro_taking_jacket],
+		[cutscene_dialog, episode + "Dialog29", dir.up],
+		[cutscene_object_set_sprtie, sans, spr_sans_volleybro_walking_right_with_jacket],
+		[cutscene_character_move, sans, 400, 20, 2],
+		[cutscene_wait, 2],
+		[cutscene_dialog, episode + "Dialog30", dir.up],
+		[cutscene_object_set_position, papyrus_character, 206, 2990],
+		[cutscene_object_set_sprtie, papyrus_character, spr_papyrus_picnic_standing_down_worry],
+		[cutscene_object_set_position, asgore, 163, 3013],
+		[cutscene_object_set_sprtie, asgore, spr_asgore_picnic_standing_right],
+		[cutscene_object_set_position, undyne, 206, 3039],
+		[cutscene_object_set_sprtie, undyne, spr_undyne_picnic_standing_up],
+		[cutscene_object_set_position, alphys, 241, 3010],
+		[cutscene_object_set_sprtie, alphys, spr_alphys_picnic_standing_right],
+		[cutscene_execute, function() {
+			frisk.sprite_index = spr_frisk_standing_right;
+			camera_set_overwrite_position(frisk.x - display_get_gui_width() / 2, frisk.y - display_get_gui_height() / 2);
+			camera_set_speed(2, 2);
+		}],
+		[cutscene_wait, 2],
+		[cutscene_object_set_position, sans, 2661, 2851],
+		[cutscene_object_set_sprtie, sans, spr_sans_standing_right],
+		[cutscene_execute, function() {
+			frisk.control(true);
+		}],
 	]
 ];

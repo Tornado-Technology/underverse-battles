@@ -2,6 +2,7 @@
 set_font("NPC", "", global._font_main_determination, c_white);
 set_font("Ink", "", global._font_main_comic_sans, c_white);
 set_font("Sans", "", global._font_main_comic_sans, c_sans);
+set_font("SansVolleybro", "", global._font_main_comic_sans, c_sans);
 set_font("C", "", global._font_main_determination, c_white);
 set_font("XChara", "", global._font_main_determination, c_white);
 set_font("XCharaSpirit", "", global._font_main_determination, c_white);

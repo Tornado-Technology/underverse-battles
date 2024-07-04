@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_asgore_volleyball_standing",
-    "path":"sprites/spr_asgore_volleyball_standing/spr_asgore_volleyball_standing.yy",
+    "name":"spr_asgore_picnic_standing_down",
+    "path":"sprites/spr_asgore_picnic_standing_down/spr_asgore_picnic_standing_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

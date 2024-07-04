@@ -9,7 +9,9 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 2],
 		[cutscene_execute, npc.stop_speaking],
 		[cutscene_wait_dialog_end],
-		[cutscene_execute, target_character.set_controlled]
+		[cutscene_execute, function() {
+			target_character.set_controlled();
+		}]
 	],
 	[
 		[cutscene_execute, npc.speak],
