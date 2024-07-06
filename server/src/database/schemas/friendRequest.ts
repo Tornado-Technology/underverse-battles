@@ -46,6 +46,7 @@ export const requestGetData = async (id: string): Promise<IFriendRequestData> =>
   const request = await FriendRequest.findById(id);
 
   return {
+    _id: request._id,
     senderId: request.senderId,
     receiverId: request.receiverId,
     date: request.date,
