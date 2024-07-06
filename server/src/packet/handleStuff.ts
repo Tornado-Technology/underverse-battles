@@ -11,11 +11,11 @@ import { infoValidate, validatePassword, validateUsername, validateNickname } fr
 import { Profile } from '../database/schemas/profile.js';
 import { Handler } from './handler.js';
 
-const handlers: Map<string, Handler> = new Map();
+const handlers = new Map<string, Handler>();
 
 export const addHandler = (handler: Handler) => {
   handlers.set(handler.index, handler);
-};
+}
 
 export const handlePacket = async (client: Client, data: any): Promise<void> => {
   const index: string = data.index ?? '';
@@ -445,20 +445,20 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
     
     case 'getAccountsInfo':
       {
-        const map = new Map<string, object>();
+        const map = {};
 
         for (const id of data.accountIds) {
+          map[id] = undefined;
+
           const account = await Account.findOne({ _id: id }).clone();
-          
           if (!account)
             continue;
   
           const profile = await Profile.findOne({ accountId: account._id }).clone();
-  
           if (!profile)
             continue;
   
-          map.set(id, {
+          map[id] = {
             accountId: account._id,
             username: account.username,
             nickname: account.nickname,
@@ -469,7 +469,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
             rating: profile.rating,
             gold: profile.gold,
             badge: profile.badge,
-          });
+          };
         }
   
         client.sendGetAccountsInfo(statusCode.success, map);
