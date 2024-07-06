@@ -445,7 +445,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
     
     case 'getAccountsInfo':
       {
-        const map = new Map<string, object>();
+        const map = {};
 
         for (const id of data.accountIds) {
           const account = await Account.findOne({ _id: id }).clone();
@@ -458,7 +458,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
           if (!profile)
             continue;
   
-          map.set(id, {
+          map[id] = {
             accountId: account._id,
             username: account.username,
             nickname: account.nickname,
@@ -469,7 +469,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
             rating: profile.rating,
             gold: profile.gold,
             badge: profile.badge,
-          });
+          };
         }
   
         client.sendGetAccountsInfo(statusCode.success, map);
