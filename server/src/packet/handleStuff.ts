@@ -11,11 +11,11 @@ import { infoValidate, validatePassword, validateUsername, validateNickname } fr
 import { Profile } from '../database/schemas/profile.js';
 import { Handler } from './handler.js';
 
-const handlers: Map<string, Handler> = new Map();
+const handlers = new Map<string, Handler>();
 
 export const addHandler = (handler: Handler) => {
   handlers.set(handler.index, handler);
-};
+}
 
 export const handlePacket = async (client: Client, data: any): Promise<void> => {
   const index: string = data.index ?? '';
