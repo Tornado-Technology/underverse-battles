@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"start_delay",
   "isCompatibility":false,
   "isDnD":false,

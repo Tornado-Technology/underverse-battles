@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"directory_get_hash",
   "isCompatibility":false,
   "isDnD":false,

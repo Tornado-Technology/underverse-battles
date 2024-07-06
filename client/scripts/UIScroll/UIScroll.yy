@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIScroll",
   "isCompatibility":false,
   "isDnD":false,

@@ -3,7 +3,7 @@ if (image_alpha < 1) {
 }
 if (is_rotating) {
 	accelerating_time += dtime;
-	image_angle = (sin(accelerating_time/30)*371)
+	image_angle = (sin(accelerating_time/30)*371);
 	_speed = ((sin(accelerating_time/30)*3) + 2);
 }
 else {

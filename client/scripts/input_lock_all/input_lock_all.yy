@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_lock_all",
   "isCompatibility":false,
   "isDnD":false,

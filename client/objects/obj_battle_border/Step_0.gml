@@ -6,12 +6,6 @@ if (spining) {
 	angle += speed_spining * dtime;	
 }
 
-if (wave_ane) {
-	y -= wave(-wave_y, wave_y, 0.2);	
-}
-
-
-
 // Position
 _point_x = x - left;
 _point_y = y - up;

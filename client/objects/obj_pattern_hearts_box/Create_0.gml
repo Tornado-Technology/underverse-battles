@@ -58,7 +58,7 @@ update = function () {
 	
 		var start_y = choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
 	
-		if (irandom(1)) {
+		if (fight_random_integer(0, 1)) {
 			start_x = fight_random_integer(border_instance.x - border_instance.left - 150,  border_instance.x - border_instance.left - 70);
 			finish_x = fight_random_integer(start_x + 30, start_x + 90);
 		
@@ -84,7 +84,6 @@ update = function () {
 					speed_count: speed_count + 0.4
 				});	
 				box_instance.radius = irandom_range(15, 30);
-				box_instance.angle_hearts = irandom(360);
 			}
 		}
 		box.speed_count = 3 + _power * 0.1;
@@ -92,17 +91,17 @@ update = function () {
 		box.step = random_range(2, 2.7);
 	}
 	
-	if(irandom(1)) {
+	if(fight_random_integer(0, 1)) {
 		spwan_clubs();	
 	}
 	else {
 		spwan_spades();	
-	}
+	};
 	
 };
 
-var period = 60 - (2 * _power);
-var repeats = 10 + _power * 3;
+var period = 60 - (_power) * 2;
+var repeats = 5 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
@@ -112,6 +111,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [],  -1);
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1.5, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

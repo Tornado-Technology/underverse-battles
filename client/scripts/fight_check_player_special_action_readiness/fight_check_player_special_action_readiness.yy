@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_check_player_special_action_readiness",
   "isCompatibility":false,
   "isDnD":false,

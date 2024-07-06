@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_random_set_seed",
   "isCompatibility":false,
   "isDnD":false,

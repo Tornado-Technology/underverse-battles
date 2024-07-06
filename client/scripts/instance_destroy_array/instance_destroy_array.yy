@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_destroy_array",
   "isCompatibility":false,
   "isDnD":false,

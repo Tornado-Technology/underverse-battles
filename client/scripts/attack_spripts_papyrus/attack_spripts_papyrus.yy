@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"attack_spripts_papyrus",
   "isCompatibility":false,
   "isDnD":false,

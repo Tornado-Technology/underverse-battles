@@ -1,2 +1,0 @@
-time_source_destroy(time_source_out_time_spwan);
-time_source_destroy(time_source_spwan_bullets);

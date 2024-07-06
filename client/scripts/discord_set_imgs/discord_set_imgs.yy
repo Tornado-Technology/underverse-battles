@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"discord_set_imgs",
   "isCompatibility":false,
   "isDnD":false,

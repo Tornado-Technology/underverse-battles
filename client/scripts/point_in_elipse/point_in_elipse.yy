@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"point_in_elipse",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"vector_to_angle",
   "isCompatibility":false,
   "isDnD":false,

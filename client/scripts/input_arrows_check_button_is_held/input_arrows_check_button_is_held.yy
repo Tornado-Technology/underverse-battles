@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_arrows_check_button_is_held",
   "isCompatibility":false,
   "isDnD":false,

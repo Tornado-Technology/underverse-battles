@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"HandlerPacket",
   "isCompatibility":false,
   "isDnD":false,

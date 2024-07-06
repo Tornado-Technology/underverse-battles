@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"sprintf",
   "isCompatibility":false,
   "isDnD":false,

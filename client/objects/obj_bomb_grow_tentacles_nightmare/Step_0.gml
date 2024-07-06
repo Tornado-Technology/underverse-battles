@@ -15,4 +15,5 @@ if (move_up_down) {
 	};
 	
 	image_angle++;
-}
+};
+

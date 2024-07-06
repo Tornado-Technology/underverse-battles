@@ -1,5 +1,5 @@
 event_inherited();
-image_alpha = 0
+image_alpha = 0;
 depth = fight_depth.bullet_outside_hight;
 damage = 6
 soul_invulnerability = 20;

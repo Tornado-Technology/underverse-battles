@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UISlider",
   "isCompatibility":false,
   "isDnD":false,

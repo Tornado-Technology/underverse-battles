@@ -8,11 +8,11 @@ universe	= "Deltarune";
 creator		= "Toby Fox";
 
 // HP
-max_hp = 150;
+max_hp = 100;
 hp = max_hp;
 
 // Damage
-damage = 7;
+damage = 5;
 invulnerability = true;
 
 // Stamina
@@ -55,16 +55,16 @@ actions = [
 	Action("Character.Jevil.Attack2", jevil_attack2)
 ];
 
-special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, jevil_special_attack);
+special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_attack_jevil, spr_special_attack_jevil_locked, jevil_special_attack);
 
 
 on_taking_soul_damage = function(soul, damage) {
-	var random_percent = irandom_range(1, 100);
-	if (random_percent <= 15) {
-		return 0;
+	if (hp < 30) {
+		self.damage = 7;	
 	};
 	
 	return damage;
+	
 }
 
 play_snd_being_attack = function () {

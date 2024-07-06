@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIShift",
   "isCompatibility":false,
   "isDnD":false,

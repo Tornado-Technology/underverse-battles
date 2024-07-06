@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"battle_set_damage",
   "isCompatibility":false,
   "isDnD":false,

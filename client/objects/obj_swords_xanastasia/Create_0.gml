@@ -47,6 +47,7 @@ gradually_appearing = function () {
 }
 
 
+
 center = function (center_x, center_y) {
 	circle_moving = true;
 	self.center_x = center_x;

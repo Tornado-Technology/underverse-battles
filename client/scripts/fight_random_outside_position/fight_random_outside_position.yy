@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_random_outside_position",
   "isCompatibility":false,
   "isDnD":false,

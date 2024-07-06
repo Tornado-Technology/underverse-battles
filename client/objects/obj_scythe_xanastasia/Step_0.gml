@@ -28,3 +28,6 @@ if(moves_ends_arena) {
 		angle += 2 + (speed_count * 0.01) * dtime;
 	};
 };
+
+
+

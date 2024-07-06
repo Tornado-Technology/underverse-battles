@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ai_select_dodge",
   "isCompatibility":false,
   "isDnD":false,

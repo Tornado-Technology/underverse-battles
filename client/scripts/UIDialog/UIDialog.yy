@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIDialog",
   "isCompatibility":false,
   "isDnD":false,

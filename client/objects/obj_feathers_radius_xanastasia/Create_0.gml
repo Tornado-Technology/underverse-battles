@@ -6,6 +6,7 @@ damage = 6;
 soul_invulnerability = 20;
 
 speed_count = 0;
+stage = 0;
 
 step = 0.5;
 

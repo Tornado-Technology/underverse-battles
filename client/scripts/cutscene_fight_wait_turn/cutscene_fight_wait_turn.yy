@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_fight_wait_turn",
   "isCompatibility":false,
   "isDnD":false,

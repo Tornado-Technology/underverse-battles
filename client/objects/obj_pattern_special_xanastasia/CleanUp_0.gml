@@ -1,0 +1,4 @@
+time_source_destroy(time_source_update_upward_movement);
+time_source_destroy(time_source_update_destroy);
+part_system_clear(partice);
+part_system_destroy(partice);

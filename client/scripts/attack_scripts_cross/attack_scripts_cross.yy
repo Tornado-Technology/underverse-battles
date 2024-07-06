@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"attack_scripts_cross",
   "isCompatibility":false,
   "isDnD":false,

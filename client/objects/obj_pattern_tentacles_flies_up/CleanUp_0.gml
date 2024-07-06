@@ -1,0 +1,3 @@
+time_source_destroy(time_source_update_radius_spike);
+time_source_destroy(time_source_update_destroy);
+

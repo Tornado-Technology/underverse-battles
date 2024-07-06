@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"struct_clone",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"convert_steps_to_seconds",
   "isCompatibility":false,
   "isDnD":false,

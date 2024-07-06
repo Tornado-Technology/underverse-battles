@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"netlog_fg_rgb",
   "isCompatibility":false,
   "isDnD":false,

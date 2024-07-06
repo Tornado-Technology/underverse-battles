@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"object_get_base_parent",
   "isCompatibility":false,
   "isDnD":false,

@@ -2,6 +2,14 @@ event_inherited();
 damage = get_char_damage(obj_character_jevil);
 disable_surface = true;
 
+
+gradually_appearing = function () {
+ image_alpha = 0;	
+ gradually_alpha = true;	
+}
+
+
+soul_invulnerability = 20;
 moving = true;
 attack = false;
 is_bonb = false;
@@ -30,7 +38,7 @@ sides_scythe = 1;
 
 be_spwan = false;
 
-spwan_scythe = function () {
+spwan_diamonds = function () {
 	if (be_spwan) return true;
 	var angle = irandom_range(300, 360) / 4;
 	var radius_scythe = 120;

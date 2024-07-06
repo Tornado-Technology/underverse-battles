@@ -21,3 +21,10 @@ function call_attack_papyrus_2(player, _power, type = fight_random_integer(0, 3)
 		type: type,
 	});
 };
+
+function char_papyrus_special_attack(player) {
+	instance_create(obj_attack_papyrus_special, {
+		character_instance: player,
+		use_gravity_attack: player.use_gravity_attack
+	});
+}

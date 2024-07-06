@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"discord_update_translate",
   "isCompatibility":false,
   "isDnD":false,

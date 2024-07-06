@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"attack_scripts_anastasiz",
   "isCompatibility":false,
   "isDnD":false,

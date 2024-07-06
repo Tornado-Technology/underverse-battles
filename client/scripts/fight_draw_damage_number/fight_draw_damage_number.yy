@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_draw_damage_number",
   "isCompatibility":false,
   "isDnD":false,

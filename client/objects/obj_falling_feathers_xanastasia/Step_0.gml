@@ -1,4 +1,5 @@
-time += dtime
+time += dtime;
+
 image_angle = (sin(time/25)*15);
 
 if (image_alpha < 1)

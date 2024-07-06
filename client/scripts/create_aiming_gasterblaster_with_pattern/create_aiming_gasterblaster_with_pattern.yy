@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_aiming_gasterblaster_with_pattern",
   "isCompatibility":false,
   "isDnD":false,

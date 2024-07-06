@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"statistics_set_selection_attack_network",
   "isCompatibility":false,
   "isDnD":false,

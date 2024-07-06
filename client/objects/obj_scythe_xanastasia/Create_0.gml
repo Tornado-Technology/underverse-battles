@@ -1,6 +1,5 @@
 event_inherited();
 
-
 depth = fight_depth.bullet_outside_hight;
 
 soul_invulnerability = 20;
@@ -15,7 +14,7 @@ start_x = 0;
 come_back = false;
 
 move_come_back = false;
-
+move_goldenratio = false;
 moves_ends_arena = false;
 
 moving_back = function () {

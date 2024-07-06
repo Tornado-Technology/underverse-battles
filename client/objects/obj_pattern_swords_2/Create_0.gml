@@ -37,13 +37,12 @@ update = function () {
 	scythe_instance.step = 0.03 + _power * 0.01;
 	scythe_instance.gradually_appearing();
 	scythe_instance.image_angle = angle;
-	scythe_instance.target_soul(position, true);
-		
+	scythe_instance.target_soul(position, true);	
 }
 
+var period = 50 - (_power);
 
-
-time_source_update = time_source_create(time_source_game, (50 - _power) / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
 

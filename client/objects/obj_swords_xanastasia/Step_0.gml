@@ -1,3 +1,14 @@
+if (gradually_alpha) {
+	if (image_alpha <= 1) {
+		image_alpha += step * dtime;	
+	};
+	
+	if(image_alpha >= 1) {
+		gradually_alpha = false;	
+	};
+};
+
+
 
 if (circle_moving) {
 	spinnig_speed = approach(spinnig_speed, speed_count, step * dtime);
@@ -23,16 +34,6 @@ if (circle_moving) {
 	x = center_x + dcos(angle) * radius;
 	y = center_y + -dsin(angle) * radius;	
 	angle += spinnig_speed * dtime; 
-};
-
-if (gradually_alpha) {
-	if (image_alpha <= 1) {
-		image_alpha += step * dtime;	
-	};
-	
-	if(image_alpha >= 1) {
-		gradually_alpha = false;	
-	};
 };
 
 
@@ -64,6 +65,7 @@ if(aim_soul) {
 
 	if(keep_destroy && x == position_x && y == position_y) {
 		time_source_start(time_source_self_destroy);	
+		keep_destroy = false;
 	};
 
 };

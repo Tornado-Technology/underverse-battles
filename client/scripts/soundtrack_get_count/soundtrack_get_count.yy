@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"soundtrack_get_count",
   "isCompatibility":false,
   "isDnD":false,

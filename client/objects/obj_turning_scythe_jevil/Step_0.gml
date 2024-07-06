@@ -1,9 +1,11 @@
-if (image_angle == 360) {
-	image_angle = 0;
+
+if(image_alpha < 1) {
+	image_alpha += 0.06 * dtime;
+	exit;
 };
+
 image_angle += -dsin(4) * sprite_height;
 	
-
 
 if (moving) {
 	time_before_attack -= 1 * dtime;
@@ -39,7 +41,7 @@ if(attack && !is_bonb) {
 if(backwards_count <= 0 && attack) {
 	attack = false;
 	is_bonb = true;
-	spwan_scythe();	
+	spwan_diamonds();	
 	vspeed = 0;
 };
 

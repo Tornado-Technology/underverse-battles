@@ -17,7 +17,7 @@ update = function () {
 	var scythe_instance;
 	var angle;
 
-	if(irandom(1)) {
+	if(fight_random_integer(0, 1)) {
 		position_x = fight_random_integer(border_instance.x - border_instance.left + 10, border_instance.x + border_instance.right - 10);
 		position_y = choose(border_instance.y - border_instance.up - 40, border_instance.y + border_instance.down + 40);
 		

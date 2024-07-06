@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_get_iniciative",
   "isCompatibility":false,
   "isDnD":false,

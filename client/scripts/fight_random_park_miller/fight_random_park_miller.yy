@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_random_park_miller",
   "isCompatibility":false,
   "isDnD":false,

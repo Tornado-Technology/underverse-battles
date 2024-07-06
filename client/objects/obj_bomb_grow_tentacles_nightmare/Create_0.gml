@@ -13,3 +13,4 @@ move_up_down = false;
 moving_up_down = function () {
 	move_up_down = true;	
 }
+

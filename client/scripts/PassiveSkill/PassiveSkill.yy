@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PassiveSkill",
   "isCompatibility":false,
   "isDnD":false,
