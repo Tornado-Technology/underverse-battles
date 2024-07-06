@@ -38,7 +38,7 @@ export default class Server {
       }
   
       // Start listening to the selected address 
-      this.instance.listen(this.address.port, this.address.ip, () => {
+      this.instance.listen(this.address.port, () => {
         Logger.info(`Server started on ${this.address}`);
         resolve();
       });
