@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_spike",
   "isCompatibility":false,
   "isDnD":false,

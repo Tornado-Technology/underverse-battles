@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_create_one",
   "isCompatibility":false,
   "isDnD":false,

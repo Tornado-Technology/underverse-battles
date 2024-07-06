@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"convert_dec_to_hex",
   "isCompatibility":false,
   "isDnD":false,

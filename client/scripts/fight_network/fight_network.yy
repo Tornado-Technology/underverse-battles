@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_network",
   "isCompatibility":false,
   "isDnD":false,

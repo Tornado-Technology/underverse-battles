@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_set_player_skip",
   "isCompatibility":false,
   "isDnD":false,

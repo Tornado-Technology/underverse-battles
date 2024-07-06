@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"packet_handler_get",
   "isCompatibility":false,
   "isDnD":false,

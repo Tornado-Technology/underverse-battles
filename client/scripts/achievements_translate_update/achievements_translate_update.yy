@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"achievements_translate_update",
   "isCompatibility":false,
   "isDnD":false,

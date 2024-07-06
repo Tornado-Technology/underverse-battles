@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"audio_group_load_all",
   "isCompatibility":false,
   "isDnD":false,

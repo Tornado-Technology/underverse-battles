@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_next_moving_platform",
   "isCompatibility":false,
   "isDnD":false,

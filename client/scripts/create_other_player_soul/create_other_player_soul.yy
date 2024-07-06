@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_other_player_soul",
   "isCompatibility":false,
   "isDnD":false,

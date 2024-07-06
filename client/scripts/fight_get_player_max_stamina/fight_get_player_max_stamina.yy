@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_get_player_max_stamina",
   "isCompatibility":false,
   "isDnD":false,

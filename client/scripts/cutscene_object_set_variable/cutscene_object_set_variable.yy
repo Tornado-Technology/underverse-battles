@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_object_set_variable",
   "isCompatibility":false,
   "isDnD":false,

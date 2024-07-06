@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"bg_disappearance",
   "isCompatibility":false,
   "isDnD":false,

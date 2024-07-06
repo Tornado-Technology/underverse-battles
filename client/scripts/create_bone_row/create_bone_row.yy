@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_bone_row",
   "isCompatibility":false,
   "isDnD":false,

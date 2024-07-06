@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_drop",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeviceVirtualJoystick",
   "isCompatibility":false,
   "isDnD":false,

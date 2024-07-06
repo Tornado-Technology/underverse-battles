@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CharactersTabSkinList",
   "isCompatibility":false,
   "isDnD":false,

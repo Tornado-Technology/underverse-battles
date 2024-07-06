@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"convert_dec_to_bin",
   "isCompatibility":false,
   "isDnD":false,

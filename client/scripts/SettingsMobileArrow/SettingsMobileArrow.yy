@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SettingsMobileArrow",
   "isCompatibility":false,
   "isDnD":false,

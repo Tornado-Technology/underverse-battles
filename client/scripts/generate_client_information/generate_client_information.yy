@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"generate_client_information",
   "isCompatibility":false,
   "isDnD":false,

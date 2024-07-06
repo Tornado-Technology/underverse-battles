@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"os_get_name",
   "isCompatibility":false,
   "isDnD":false,

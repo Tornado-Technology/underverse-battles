@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_draw_dodge",
   "isCompatibility":false,
   "isDnD":false,

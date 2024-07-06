@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MenuToggle",
   "isCompatibility":false,
   "isDnD":false,

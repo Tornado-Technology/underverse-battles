@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_character_skip_moving",
   "isCompatibility":false,
   "isDnD":false,

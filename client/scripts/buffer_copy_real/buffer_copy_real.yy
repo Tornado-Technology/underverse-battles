@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"buffer_copy_real",
   "isCompatibility":false,
   "isDnD":false,

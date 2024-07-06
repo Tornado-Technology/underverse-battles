@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_error_string",
   "isCompatibility":false,
   "isDnD":false,

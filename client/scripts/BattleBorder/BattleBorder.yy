@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BattleBorder",
   "isCompatibility":false,
   "isDnD":false,
