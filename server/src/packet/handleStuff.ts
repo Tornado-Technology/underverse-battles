@@ -447,7 +447,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
       {
         const map = new Map<string, object>();
 
-        for (const id of data.ids) {
+        for (const id of data.accountIds) {
           const account = await Account.findOne({ _id: id }).clone();
           
           if (!account)
