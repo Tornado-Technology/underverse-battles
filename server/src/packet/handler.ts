@@ -2,6 +2,7 @@ import Client from '../concepts/client/client.js';
 import { Account, IAccount, IAccountFinder, getAccountByFinder } from '../database/schemas/account.js';
 import { IProfile, Profile } from '../database/schemas/profile.js';
 import { statusCode } from '../status.js';
+import Logger from '../util/logging.js';
 
 type handlerCallback = () => Promise<void>;
 
@@ -59,10 +60,10 @@ export class Handler {
       return;
     }
 
-    this.callback.bind(new HandlerContext(this, client, data));
+    const callback = this.callback.bind(new HandlerContext(this, client, data));
 
     try {
-      await this.callback();
+      await callback();
     } catch (error) {
       this.handleError(client, error);
     }
@@ -89,6 +90,7 @@ export class Handler {
 
     if (typeof(error) === 'number') {
       this.sendCode(client, error);
+      Logger.error(error.toString());
       return;
     }
 

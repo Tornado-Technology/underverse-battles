@@ -56,10 +56,14 @@ export const requestGetData = async (id: string): Promise<IFriendRequestData> =>
 }
 
 export const requestCreate = async (senderId: string, receiverId: string): Promise<IFriendRequest> => {
-  return await new FriendRequest(
+  const request = new FriendRequest({
     senderId,
     receiverId,
-  ).save();
+  });
+  
+  await request.save();
+
+  return request;
 }
 
 export const findIncoming = async function(profileId: string): Promise<IProfile[]> {
