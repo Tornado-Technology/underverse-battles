@@ -79,7 +79,6 @@ buttons = [
 		delete_from_list(request_id);
 	}),
 	UITextButton(translate_get("Menu.StandardButtons.Back"), function() {
-		obj_menu.goto_page(menu_page.account);
 		instance_destroy();
 	}),
 ]
@@ -135,7 +134,7 @@ change_background_up = function() {
 }
 
 change_background_down = function() {
-	if (request_id < background_counts - 1)
+	if (request_id < request_count - 1)
 		request_id ++;
 	
 	audio_play_sound_plugging(snd_click);

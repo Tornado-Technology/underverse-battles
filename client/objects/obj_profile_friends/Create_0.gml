@@ -136,7 +136,7 @@ change_background_up = function() {
 }
 
 change_background_down = function() {
-	if (friend_id < background_counts - 1)
+	if (friend_id < friend_count - 1)
 		friend_id ++;
 	
 	audio_play_sound_plugging(snd_click);

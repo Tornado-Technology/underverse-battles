@@ -111,7 +111,7 @@ packet_handler_register("verification", function(data) {
 
 packet_handler_register("getAccountsInfo", function(data) {
 	if (data.status == status_code.success) {
-		global.friend_accounts = array_union(global.friend_accounts, data.profiles);
+		global.friend_accounts = array_union(global.friend_accounts, struct_get_names(data.profiles));
 		return;
 	}
 });
@@ -122,6 +122,14 @@ packet_handler_register("friendRequestGetAll", function(data) {
 	}
 	// accountId
 	// friendRequest
+});
+
+packet_handler_register("friendRequest", function(data) {
+	if (data.code == status_code.success) {
+		display_show_message_info(translate_get("Успешный запрос"), c_green);
+		return;
+	}
+	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
 });
 
 packet_handler_register("friendRequestInvite", function(data) {
