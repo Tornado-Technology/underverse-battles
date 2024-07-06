@@ -72,7 +72,7 @@ export class Handler {
   public send(client: Client, data: any, code: statusCode = statusCode.success) {
     client.send(this.index, {
       code,
-      data,
+      ...data,
     });
   }
 

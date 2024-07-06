@@ -30,13 +30,15 @@ addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerConte
   const result = {};
   const requests = await FriendRequest.find({ senderId: this.profile._id });
   
+  let data = undefined;
   for (const request of requests) {
     try {
-      request[request._id] = await requestGetData(request._id);
+      data = await requestGetData(request._id);
     } catch (error) {
-      result[request._id] = undefined;
       Logger.debug(`friendRequestGetAll error: ${error}`);
     }
+
+    result[request._id.toString()] = data;
   }
 
   this.send({

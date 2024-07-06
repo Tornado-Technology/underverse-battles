@@ -9,6 +9,7 @@ import Packet from './packet.js';
 import App from '../app.js';
 import { statusCode } from '../status.js';
 import config from '../config.js';
+import { isObject } from '../util/deepMerge.js';
 
 const generateNickname = (): string => {
   return `Player${Math.randomRange(0, 1000)}`;
@@ -39,7 +40,47 @@ export default class SendStuff {
 
   public send(index: string, data: any = {}): void {
     data.index = index;
+    this.cast(data);
     this.socket.write(Packet.build(data));
+  }
+
+  private cast(object: object) {
+    if (Array.isArray(object)) {
+      object.forEach((value, i) => {
+        if (value?.constructor.name === 'Date') {
+          object[i] = value.getTime();
+          return;
+        }
+  
+        if (value?.constructor.name === 'ObjectId') {
+          object[i] = value.toString();
+          return;
+        }
+  
+        if (value && typeof value === 'object') {
+          this.cast(value);
+        }
+      });
+    }
+
+
+    Object.keys(object).forEach(key => {
+      const value = object[key];
+
+      if (value?.constructor.name === 'Date') {
+        object[key] = value.getTime();
+        return;
+      }
+
+      if (value?.constructor.name === 'ObjectId') {
+        object[key] = value.toString();
+        return;
+      }
+
+      if (value && typeof value === 'object') {
+        this.cast(value);
+      }
+    });
   }
 
   public sendConnection(code: statusCode): void {

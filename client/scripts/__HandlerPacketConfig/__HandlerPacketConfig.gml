@@ -119,7 +119,6 @@ packet_handler_register("getAccountsInfo", function(data) {
 packet_handler_register("friendRequestGetAll", function(data) {
 	with(obj_profile_friend_requests) {
 		requests = data;
-		logger.info(data);
 	}
 	// accountId
 	// friendRequest

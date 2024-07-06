@@ -46,11 +46,17 @@ switch (type) {
 			
 		i += packet_size;
 			
+		var data = {};
 		try {
-			var data = snap_from_messagepack(pack);
-			handle_packet(data);
+			data = snap_from_messagepack(pack);
 		} catch(error) {
 			logger.error($"An error occured while parsing the packet: {error.message}.\nPacket data: {data}.");
+		}
+		
+		try {
+			handle_packet(data);
+		} catch(error) {
+			logger.error($"An error occured while handle the packet: {error.message}.\nPacket data: {data}.");
 		}
 			
 		pack_count++;
