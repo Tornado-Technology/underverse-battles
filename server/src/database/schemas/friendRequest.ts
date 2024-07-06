@@ -24,10 +24,20 @@ const schema = new Schema({
 
 export interface  IFriendRequestActorData {
   username: string,
-  profile: IProfile,
+  date: Date,
+  online: boolean,
+  lastOnline: Date,
+  friends: ObjectId[],
+  rating: number,
+  gold: number,
+  badge: number,
 }
 
-export interface IFriendRequestData extends IFriendRequest {
+export interface IFriendRequestData {
+  _id: ObjectId,
+  senderId: ObjectId;
+  receiverId: ObjectId;
+  date: Date,
   sender: IFriendRequestActorData,
   receiver: IFriendRequestActorData,
 }
@@ -38,28 +48,39 @@ const requestGetActorData = async (profileId: ObjectId): Promise<IFriendRequestA
 
   return {
     username: account.username,
-    profile: profile,
+    date: account.date,
+    online: profile.online,
+    lastOnline: profile.lastOnline,
+    friends: profile.friends,
+    rating: profile.rating,
+    gold: profile.gold,
+    badge: profile.badge,
   }
 }
 
 export const requestGetData = async (id: string): Promise<IFriendRequestData> => {
   const request = await FriendRequest.findById(id);
-
-  return {
+  const result = {
     _id: request._id,
     senderId: request.senderId,
     receiverId: request.receiverId,
     date: request.date,
     sender: await requestGetActorData(request.senderId),
     receiver: await requestGetActorData(request.receiverId),
-  } as IFriendRequestData;
+  };
+
+  return result;
 }
 
 export const requestCreate = async (senderId: string, receiverId: string): Promise<IFriendRequest> => {
-  return await new FriendRequest(
+  const request = new FriendRequest({
     senderId,
     receiverId,
-  ).save();
+  });
+  
+  await request.save();
+
+  return request;
 }
 
 export const findIncoming = async function(profileId: string): Promise<IProfile[]> {
