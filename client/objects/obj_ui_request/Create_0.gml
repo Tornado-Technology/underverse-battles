@@ -7,6 +7,8 @@ enum request_type {
 sprite_index = noone;
 width = display_get_gui_width();
 heigth = display_get_gui_height();
+shift_x = 10;
+shift_y = 19;
 
 alpha = 0;
 
@@ -17,10 +19,10 @@ if (!variable_instance_exists(id, "type")) type = request_type.undefined;
 // Type
 switch (type) {
 	case request_type.friend:
-		text = $"{translate_get("Request.Friend")} {username_sender}";
+		text = $"{username_sender} {translate_get("Request.Friend")}";
 		break;
 	case request_type.fight:
-		text = $"{translate_get("Request.Fight")} {username_sender}";
+		text = $"{username_sender} {translate_get("Request.Fight")}";
 		break;
 	default:
 		text = $"Unknown request from {username_sender}";
@@ -33,12 +35,12 @@ sprite_border = spr_ui_request;
 sprite_border_width = sprite_get_width(sprite_border);
 sprite_border_height = sprite_get_height(sprite_border);
 
-// Position
-x = -sprite_border_width;
-y = sprite_border_height / 2;
-
 // Scale
-scale = max(1, string_length($"{text} {username_sender}") * 8 / 110);
+scale = max(1, string_width(text) + shift_x * 2);
+
+// Position
+x = -sprite_border_width * scale;
+y = sprite_border_height / 2;
 
 // Buttons
 button_accept = UITextButton(translate_get("Menu.StandardButtons.Accept"), function() {
