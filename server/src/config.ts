@@ -38,7 +38,7 @@ const commonConfig = {
     },
   },
   main: {
-    ip: '127.0.0.1',
+    ip: 'localhost',
     port: 1337,
   },
   client: {

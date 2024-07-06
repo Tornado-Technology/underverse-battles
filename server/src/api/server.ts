@@ -25,7 +25,7 @@ export class ApiServer {
     } 
 
     this.instance = createServer(this.listener.bind(this));
-    this.instance.listen(this.port, this.ip);
+    this.instance.listen(this.port);
   }
 
   public registerCommand(command: ApiCommand) {
