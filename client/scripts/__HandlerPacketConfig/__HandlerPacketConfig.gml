@@ -111,14 +111,14 @@ packet_handler_register("verification", function(data) {
 
 packet_handler_register("getAccountsInfo", function(data) {
 	if (data.status == status_code.success) {
-		global.friend_accounts = array_union(global.friend_accounts, struct_get_names(data.profiles));
+		global.friend_accounts = array_union(global.friend_accounts, struct_get_values(data.profiles));
 		return;
 	}
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
-	with(obj_profile_friend_requests) {
-		requests = data;
+	with (obj_profile_friend_requests) {
+		requests = struct_get_values(data.requests);
 	}
 	// accountId
 	// friendRequest
