@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_call_attack",
   "isCompatibility":false,
   "isDnD":false,

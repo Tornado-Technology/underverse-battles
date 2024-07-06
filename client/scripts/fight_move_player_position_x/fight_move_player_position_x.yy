@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_move_player_position_x",
   "isCompatibility":false,
   "isDnD":false,

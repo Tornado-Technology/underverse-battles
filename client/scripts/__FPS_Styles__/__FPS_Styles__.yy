@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__FPS_Styles__",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"load_all_soundtracks",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"translate_get_lang_count",
   "isCompatibility":false,
   "isDnD":false,

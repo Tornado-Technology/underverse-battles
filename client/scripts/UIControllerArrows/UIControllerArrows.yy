@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIControllerArrows",
   "isCompatibility":false,
   "isDnD":false,

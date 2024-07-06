@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"assets_get_sound_elemets",
   "isCompatibility":false,
   "isDnD":false,

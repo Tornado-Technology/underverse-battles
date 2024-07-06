@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__DiscordConfig",
   "isCompatibility":false,
   "isDnD":false,

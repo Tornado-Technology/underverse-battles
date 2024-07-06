@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SettingsMobileCommonButton",
   "isCompatibility":false,
   "isDnD":false,

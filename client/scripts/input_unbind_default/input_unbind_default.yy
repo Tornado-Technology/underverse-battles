@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_unbind_default",
   "isCompatibility":false,
   "isDnD":false,

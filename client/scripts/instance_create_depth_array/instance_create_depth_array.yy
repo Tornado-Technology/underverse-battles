@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_create_depth_array",
   "isCompatibility":false,
   "isDnD":false,

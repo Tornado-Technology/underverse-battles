@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_object_shift_position",
   "isCompatibility":false,
   "isDnD":false,

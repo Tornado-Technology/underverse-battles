@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"input_reset_all_working_key",
   "isCompatibility":false,
   "isDnD":false,

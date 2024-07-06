@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Badge",
   "isCompatibility":false,
   "isDnD":false,

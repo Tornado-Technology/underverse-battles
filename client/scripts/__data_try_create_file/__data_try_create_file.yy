@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__data_try_create_file",
   "isCompatibility":false,
   "isDnD":false,

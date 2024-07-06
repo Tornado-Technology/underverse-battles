@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"soul_start_tremble",
   "isCompatibility":false,
   "isDnD":false,

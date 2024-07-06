@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_damage_wave",
   "isCompatibility":false,
   "isDnD":false,

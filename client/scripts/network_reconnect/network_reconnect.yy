@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"network_reconnect",
   "isCompatibility":false,
   "isDnD":false,

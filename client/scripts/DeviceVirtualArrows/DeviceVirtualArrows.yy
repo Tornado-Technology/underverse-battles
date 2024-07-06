@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeviceVirtualArrows",
   "isCompatibility":false,
   "isDnD":false,

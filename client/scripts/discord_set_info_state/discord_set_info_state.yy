@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"discord_set_info_state",
   "isCompatibility":false,
   "isDnD":false,

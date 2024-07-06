@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_set_showing_action_box_power",
   "isCompatibility":false,
   "isDnD":false,

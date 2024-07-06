@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"string_real_height",
   "isCompatibility":false,
   "isDnD":false,

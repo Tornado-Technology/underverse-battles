@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_flip_player",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_spinning_bone",
   "isCompatibility":false,
   "isDnD":false,

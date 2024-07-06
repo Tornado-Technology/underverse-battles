@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"data_reset_protected",
   "isCompatibility":false,
   "isDnD":false,

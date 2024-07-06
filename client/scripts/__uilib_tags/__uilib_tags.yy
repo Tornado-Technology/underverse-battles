@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__uilib_tags",
   "isCompatibility":false,
   "isDnD":false,

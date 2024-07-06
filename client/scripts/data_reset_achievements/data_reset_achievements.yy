@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"data_reset_achievements",
   "isCompatibility":false,
   "isDnD":false,

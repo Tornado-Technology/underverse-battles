@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_wait_dialog_end",
   "isCompatibility":false,
   "isDnD":false,

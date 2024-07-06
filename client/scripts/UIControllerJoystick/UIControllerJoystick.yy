@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIControllerJoystick",
   "isCompatibility":false,
   "isDnD":false,

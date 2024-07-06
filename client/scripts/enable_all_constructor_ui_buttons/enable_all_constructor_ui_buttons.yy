@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"enable_all_constructor_ui_buttons",
   "isCompatibility":false,
   "isDnD":false,
