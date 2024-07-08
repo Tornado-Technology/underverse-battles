@@ -26,10 +26,6 @@ request_id = 0;
 request_text_x = width / 2;
 request_text_y = height / 2;
 
-for (var i = 0; i < request_count; i++) {
-	requests[i].name_width = string_real_width(requests[i].username, global._font_main_determination);
-}
-
 // Strings
 title_text = translate_get("Menu.Friends.RequestList");
 
@@ -70,13 +66,13 @@ button_y = height / 2 - 50;
 
 buttons = [
 	UITextButton(translate_get("Menu.StandardButtons.Accept"), function() {
-		send_friend_request_accept(requests[request_id].friendRequest);
+		send_friend_request_accept(requests[request_id]._id);
 		send_get_accounts_info(accountId);
-		delete_from_list(request_id);
+		delete_by_index(request_id);
 	}),
 	UITextButton(translate_get("Menu.StandardButtons.Reject"), function() {
-		send_friend_request_reject(requests[request_id].friendRequest);
-		delete_from_list(request_id);
+		send_friend_request_reject(requests[request_id]._id);
+		delete_by_index(request_id);
 	}),
 	UITextButton(translate_get("Menu.StandardButtons.Back"), function() {
 		instance_destroy();
@@ -166,27 +162,27 @@ translate_update = on_translate_update.connect(function() {
 })
 
 draw_name_button = function(_x, _y, color, _id) {
+	logger.debug($"{request_count}");
 	if (request_count <= _id) return;
 	
 	var request = requests[_id];
 	color = request_id == _id ? text_color_selecting : color;
 	
 	draw_set_font(global._font_main_determination);
-	draw_text_outlined(_x, _y, color, c_black, request.username);
+	draw_text_outlined(_x, _y, color, c_black, request.sender.username);
 	draw_reset();
-	
-	var hover = point_in_rectangle_gui(_x, _y, _x + request.name_width, _y + char_height);
-	if (hover && input_mouse) {
-		if (request_id = _id) {
-			background_set(request_id);
-			audio_play_sound_plugging(snd_click);
-			return;
-		}
-		request_id = _id;
+}
+
+add_from_list = function(requests) {
+	self.requests = requests;
+	request_count = array_length(requests);
+
+	for (var i = 0; i < request_count; i++) {
+		requests[i].name_width = string_real_width(requests[i].sender.username, global._font_main_determination);
 	}
 }
 
-delete_from_list = function(index) {
+delete_by_index = function(index) {
 	array_delete(requests, index, 1);
 	request_count--;
 	if (request_id >= request_count) {

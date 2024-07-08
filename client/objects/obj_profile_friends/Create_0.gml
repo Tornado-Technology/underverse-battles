@@ -178,8 +178,8 @@ draw_name_button = function(_x, _y, color, _id) {
 	
 	var hover = point_in_rectangle_gui(_x, _y, _x + friend.name_width, _y + char_height);
 	if (hover && input_mouse) {
-		if (friend_id = _id) {
-			background_set(friend_id);
+		if (friend_id == _id) {
+			// Чё то сделать с другом
 			audio_play_sound_plugging(snd_click);
 			return;
 		}
