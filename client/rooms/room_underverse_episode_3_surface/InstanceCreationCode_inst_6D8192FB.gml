@@ -25,18 +25,22 @@ reset_characters_and_npc = function() {
 		obj_npc_bear, obj_npc_rabbit_mom, obj_npc_dog_smaller, obj_npc_dogs_family,
 		obj_npc_royal_guard_1, obj_npc_royal_guard_2, obj_garbage_bags_pile,
 		obj_npc_vulkin, obj_npc_jerry, obj_npc_mushroom_licker, obj_npc_ficus_licker,
-		obj_npc_nice_cream_seller, obj_nice_cream_truck
+		obj_npc_nice_cream_seller, obj_nice_cream_truck,
+		inst_interactive_nice_cream_seller, inst_interactive_ficus_licker, inst_interactive_dogs_family, inst_interactive_rabbit_mom, inst_interactive_bear,
+		inst_interactive_papyrus_picnic, inst_interactive_undyne_picnic, inst_interactive_alphys_picnic, inst_interactive_toriel_picnic,
+		inst_interactive_dog_smaller, inst_interactive_royal_guard_1, inst_interactive_royal_guard_2, inst_interactive_mushroom_licker, inst_interactive_vulkin, inst_interactive_jerry,
+		inst_interactive_ink_puddle
 	];
 	instance_destroy_array(destroying_objects);
 }
 
 cutscenes = [
 	[
-		[cutscene_dialog, "Underverse_Episode3.Dialog22_Line_1", dir.down],
+		[cutscene_dialog, "Underverse_Episode3.Dialog22_Line1", dir.down],
 		[cutscene_execute, function () { cutscene_create(cutscenes[2]); }]
 	],
 	[
-		[cutscene_dialog, "Underverse_Episode3.Dialog22_Line_2", dir.down],
+		[cutscene_dialog, "Underverse_Episode3.Dialog22_Line2", dir.down],
 		[cutscene_execute, function () { cutscene_create(cutscenes[2]); }]
 	],
 	[

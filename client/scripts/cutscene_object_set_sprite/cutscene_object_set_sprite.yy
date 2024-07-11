@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"cutscene_object_set_sprtie",
+  "%Name":"cutscene_object_set_sprite",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"cutscene_object_set_sprtie",
+  "name":"cutscene_object_set_sprite",
   "parent":{
     "name":"Cutscene",
     "path":"folders/Scripts/Local/System/Cutscene.yy",

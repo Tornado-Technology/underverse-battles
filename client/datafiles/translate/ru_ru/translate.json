@@ -870,6 +870,8 @@
   "MiniGame": {
     "Scores": "Очки",
     "Highscore": "Рекорд",
+    "PapyrussTeam": "Команда Папируса",
+    "UndynesTeam": "Команда Андайн",
     "BackToMenu": "Вернуться в меню"
   },
   "Dialog": {
@@ -1515,8 +1517,12 @@
       "KetchupShop_2": [
         "{Sans:normal}ух-ты! классный магазин."
       ],
-      "KetchupShop_3_Line_1": [
+      "KetchupShop_3_Line1": [
         "{Frisk:normal}Нам нужен кетчуп."
+      ],
+      "KetchupShop_3_Line2": [
+        "{Frisk:normal}Нам нужен кетчуп.",
+        "{Sans:normal}эй, малой, а тебе денег-то хватит?"
       ],
       "KetchupShop_4": [
         "{NPC:none}Хо, не проблема. Подходите, я вам покажу свой ассортимент."
@@ -1524,10 +1530,6 @@
       "KetchupShop_5": [
         "{Sans:normal}эй, малой, можешь купить мне этот лимитированный кетчуп за 20G?",
         "{Sans:joking}не волнуйся, я верну тебе. ты же знаешь, я в долгу не остаюсь."
-      ],
-      "KetchupShop_3_Line_2": [
-        "{Frisk:normal}Нам нужен кетчуп.",
-        "{Sans:normal}эй, малой, а тебе денег-то хватит?"
       ],
       "KetchupShop_6": [
         "{Sans:normal}спасибо. потом отдашь эту бутылку."
@@ -1546,13 +1548,13 @@
         "{Sans:normal}не ожидал от тебя такого, малой.",
         "{Sans:joking}от этого прикола ты прям всё ВЫЖАЛ."
       ],
-      "Dialog22_Line_1": [
+      "Dialog22_Line1": [
         "{PapyrusPicnic:glad}О, А ВОТ И ОНИ!",
         "{UndynePicnic:normal}Отлично! Принесли кетчуп! Даже спасать вас не пришлось.",
         "{AlphysPicnic:normal}С-С возвращением!",
         "{TorielPicnic:normal}Фриск, присаживайся. Твой стейк уже готов."
       ],
-      "Dialog22_Line_2": [
+      "Dialog22_Line2": [
         "{PapyrusPicnic:glad}О, А ВОТ И ОНИ!",
         "{AlphysPicnic:normal}С-С возвращением!",
         "{UndynePicnic:normal}А вы кетчуп принесли?",
@@ -1675,13 +1677,20 @@
       "Toriel_3": [
         "{Toriel:worry}Что же с ним происходит?"
       ],
+      "NiceCreamSeller_7": [
+        "Ой, прости, что преградил путь.",
+        "Я попробую ещё раз её поднять. Просто она тяжёлая."
+      ],
+      "NiceCreamSeller_8": [
+        "Я скоро уберу тележку."
+      ],
       "Dialog31": [
         "{Sans:tired}инк? ты там?"
       ],
-      "Dialog32_Line_1": [
+      "Dialog32_Line1": [
         "{Sans:tired}ну же, приятель! ответь мне!"
       ],
-      "Dialog32_Line_2": [
+      "Dialog32_Line2": [
         "{Sans:tired}мне... как бы странно это не звучало... нужна помощь."
       ],
       "Dialog33": [
