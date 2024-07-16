@@ -2,6 +2,7 @@ import { Model, Document } from 'mongoose';
 import { createRequire } from 'module';
 import { hashPassword, verifyPassword } from '../../util/encrypting.js';
 import { statusCode } from '../../status.js';
+import { Profile } from './profile.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
@@ -29,6 +30,7 @@ export interface IAccount extends Document {
 export interface IAccountFinder {
   id: string | undefined,
   username: string | undefined,
+  profileId: string | undefined
 }
 
 const schema = new Schema({
@@ -91,15 +93,18 @@ export const login = (username: string, password: string): Promise<IAccount> => 
 });
 
 export const getAccountByFinder = async (finder: IAccountFinder): Promise<IAccount> => {
-  let search;
-  
   if (finder.id)
-    search = { _id: finder.id };
+    return await Account.findOne({ _id: finder.id });
 
   if (finder.username) 
-    search = { username: finder.username };
+    return await Account.findOne({ username: finder.username });
 
-  return await Account.findOne(search)
+  if (finder.profileId) {
+    const profile = await Profile.findOne({ _id: finder.profileId });
+    return profile ? await Account.findOne({ _id: profile.accountId }) : undefined;
+  }
+
+  return undefined;
 };
 
 export const Account: Model<IAccount> = model(accountModelName, schema);
