@@ -32,15 +32,5 @@ switch (type) {
 			bomb: obj_bomb_bone_nightmare,
 			slime: obj_fog_nightmare
 		});
-	break;
-	
-	
-	//case 4:
-	//create_border(battle_border.up, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
-	//	pattern_instance = create_pattern(obj_pattern_stretched_tentacles_1, {
-	//		bomb: obj_bomb_bone_nightmare,
-	//		slime: obj_fog_nightmare
-	//	});
-	//break;
-	
+	break;	
 };

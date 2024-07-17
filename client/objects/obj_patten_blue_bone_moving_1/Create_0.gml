@@ -12,7 +12,7 @@ callback = function () {
 
 update_two_bone = function () {
 		var speed_bone = 3 + _power * 0.1;
-	if (irandom(1)) {
+	if (fight_random_integer(0, 1)) {
 		var size_bone_main = border_instance._frame_right_height;
 		var bone_main_y = border_instance.y - border_instance.up;
 		var bone_main_x = border_instance.x + border_instance.right + 20;	
@@ -24,8 +24,8 @@ update_two_bone = function () {
 		var size_bone = size_bone_main / random_range(4, 6);
 		
 		var direction_bone = point_direction(bone_main_x, bone_main_y, border_instance.x, bone_main_y);
-		create_bone(bone_main_x, bone_main_y, obj_bone_papyrus, speed_bone, size_bone_main, direction_bone, 180);
-		create_bone(bone_main_x, bone_y, obj_bone_papyrus, speed_bone, size_bone, direction_bone, 0);
+		create_bone(bone_main_x, bone_main_y, bone, speed_bone, size_bone_main, direction_bone, 180);
+		create_bone(bone_main_x, bone_y, bone, speed_bone, size_bone, direction_bone, 0);
 	
 	} else {
 		create_bone(border_instance.x + border_instance.right + 10, border_instance.y + border_instance.down, obj_bone_blue_papyrus, speed_bone, border_instance._frame_right_height / 18.5, 180, 0);

@@ -47,10 +47,10 @@ image_alpha -= step - 0.01* dtime;
 
 if (target_posititon) {
 	
-	x = approach(x, position_x, speed_count + 1.5 * dtime);
-	y = approach(y, position_y, speed_count + 1.5 * dtime);
+	x = approach(x, position_x, speed_count  * dtime);
+	y = approach(y, position_y, speed_count * dtime);
 	
-	if (x == position_x && position_y) {
+	if (x == position_x && y == position_y) {
 		time_source_start(time_source_attack);
 		target_posititon = false;
 	};

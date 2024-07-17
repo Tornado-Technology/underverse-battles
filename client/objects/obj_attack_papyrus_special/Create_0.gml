@@ -18,9 +18,12 @@ on_border_created = function() {
 
 create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 20, battle_border.right + 20);
 pattern_instances = [
-	create_pattern_custom_power(obj_pattern_aiming_gasterblasters_1, 4, {
+	create_pattern_custom_power(obj_pattern_changes_bone_yscale, 4, {
 		soul_type: battle_soul_type.blue,
-		bone: obj_bone_shaking_papyrus	
+		bone: obj_bone_papyrus,
+		bone_changes: obj_bone_changes_papyrus
+	}),
+	create_pattern_custom_power(obj_pattern_cool_bone_big_jump, 4, {
 	})
 	
 	

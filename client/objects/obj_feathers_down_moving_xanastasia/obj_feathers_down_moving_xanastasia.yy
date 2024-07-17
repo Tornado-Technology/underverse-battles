@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_falling_feathers_xanastasia",
-    "path":"sprites/spr_falling_feathers_xanastasia/spr_falling_feathers_xanastasia.yy",
+    "name":"spr_feathers_xanastasia",
+    "path":"sprites/spr_feathers_xanastasia/spr_feathers_xanastasia.yy",
   },
   "spriteMaskId":null,
   "visible":true,

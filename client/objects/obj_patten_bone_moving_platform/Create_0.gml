@@ -59,7 +59,7 @@ time_source_update = time_source_create(time_source_game,  1 / (6 + _power), tim
 	update();	
 	if (!shot) {
 		time_source_start(time_source_update_shot);
-	}	
+	};
 }, [], -1);
 
 time_source_update_shot = time_source_create(time_source_game, 1 / 3, time_source_units_seconds, function (bone_old, bone_new) {

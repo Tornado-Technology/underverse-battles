@@ -10,12 +10,18 @@ update = function() {
 	var	coord = rand_side_from(border_instance.x - border_instance.left - 40, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 40, border_instance.y + border_instance.down + 40);
 	var  wings_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, wings);
 	wings_instance.speed_const = 3 + _power * 0.1;
+	var offset = 50;
 	
 	repeat(2) {
 		var x0 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-	
-		var feathers_instnace = instance_create_depth(x0, border_instance.y - border_instance.up - 10, fight_depth.bullet_outside_hight, obj_feathers_down_moving_xanastasia)
-			feathers_instnace.speed_const = 2;
+		var position_y = fight_random_choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);	
+		var direction_feathers = position_y == border_instance.y - border_instance.up - offset ?  270 : 90;
+			
+		var feathers_instnace = instance_create_depth(x0, position_y, fight_depth.bullet_outside_hight, obj_feathers_down_moving_xanastasia, {
+			direction: direction_feathers,
+			image_angle: direction_feathers
+		});
+			feathers_instnace.speed_const = 2 + _power * 0.12;
 	}
 }
 

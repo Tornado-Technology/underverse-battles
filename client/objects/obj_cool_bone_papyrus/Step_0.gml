@@ -1,8 +1,12 @@
 x = skate.x;
-y = (ystart - 25) - (dsin(angle) * radius);
+var dir_soul = point_distance(obj_battle_soul.x, y, x, y);
 
-if (dsin(angle) >= dsin(5)) {
-	image_angle += dsin(angle) * 21; 
+if (dir_soul < 100 || close_soul) {
+	y =  (ystart - 20) - (dsin(angle) * radius)
+
+	if (dsin(angle) >= 0) {
+		image_angle += dsin(angle) * 11; 
+	};
+		angle += speed_const * dtime;
+	close_soul = true;
 };
-
-angle += speed_const * dtime;

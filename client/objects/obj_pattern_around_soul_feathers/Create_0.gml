@@ -12,7 +12,7 @@ update = function() {
 	var up = border_instance.y - border_instance.up;
 	var down = border_instance.y + border_instance.down;
 
-	var center_x = irandom(1) ? fight_random_integer(left - 40, left - 20) : fight_random_integer(right + 40, right + 20);
+	var center_x = fight_random_integer(0, 1) ? fight_random_integer(left - 40, left - 20) : fight_random_integer(right + 40, right + 20);
 	var center_y = fight_random_integer(up, down); 
 
 	var angle = 360 / 6;

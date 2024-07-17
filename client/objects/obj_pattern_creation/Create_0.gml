@@ -10,11 +10,13 @@ callback = function () {
 
 update = function () { 
  var cood = rand_side_from(border_instance.x - border_instance.left - 40, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 40, border_instance.y + border_instance.down + 40);
-		var tentacles_instance = instance_create_depth(cood[0], cood[1], fight_depth.bullet_outside_hight, tentacles, {
-		speed_coust: 2 + _power * 0.1	
-		});
-		var target = new Vector2(soul_instance.x, soul_instance.y);
-		tentacles_instance.target_position = target;
+ var target = new Vector2(soul_instance.x, soul_instance.y);
+ var tentacles_instance = instance_create_depth(cood[0], cood[1], fight_depth.bullet_outside_hight, tentacles, {
+	speed_coust: 2 + _power * 0.1	
+ });
+		
+		
+	tentacles_instance.target_position = target;
 }
 
 

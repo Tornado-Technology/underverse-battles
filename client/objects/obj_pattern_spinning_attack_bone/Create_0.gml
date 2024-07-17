@@ -45,7 +45,7 @@ update = function() {
 
 update_shot = function () {
 	bone_moving.speed_const = 4;
-	bone_instances[random_number] = create_bone(bone_moving.xstart, bone_moving.ystart, obj_bone_shaking_papyrus, 0, 0, bone_moving.direction, bone_moving.image_angle);
+	bone_instances[random_number] = create_bone(bone_moving.xstart, bone_moving.ystart, bone_shaking, 0, 0, bone_moving.direction, bone_moving.image_angle);
 	bone_instances[random_number].change_scale(1, 0.1);
 	audio_play_sound_plugging(snd_spare_up);
 }

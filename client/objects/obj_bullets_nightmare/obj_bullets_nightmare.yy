@@ -13,8 +13,8 @@
     "path":"folders/Characteres/Nightmare/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_spike_target_nightmare",
-    "path":"objects/obj_spike_target_nightmare/obj_spike_target_nightmare.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

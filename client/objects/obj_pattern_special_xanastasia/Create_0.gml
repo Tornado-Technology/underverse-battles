@@ -15,7 +15,7 @@ callback = function () {
 
 update_upward_movement = function () {
 	soul_instance.y += 1.4;
-	part_system_position(partice, border_instance.x, border_instance.y - 50);
+	part_system_position(partice, border_instance.x, border_instance.y - border_instance.up - 20);
 	part_system_depth(partice, fight_depth.bullet_outside);
 }
 

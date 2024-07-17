@@ -1,4 +1,0 @@
-time_source_destroy(time_source_update);
-time_source_destroy(time_source_out_time);
-time_source_destroy(time_source_update_shot);
-time_source_destroy(time_source_update_destroy);

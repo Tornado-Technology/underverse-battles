@@ -1,11 +1,14 @@
 event_inherited();
 
+soul_invulnerability = 20;
 damage = get_char_damage(obj_character_papyrus);
 
 change_scale = function(counst, step) {	
 	scale_const = counst;
 	scale_time = step;
 }
+
+outside_room_destroy = true;
 
 is_target = false
 on_target = 0
@@ -15,7 +18,6 @@ target = function (on_target) {
 	self.on_target = on_target;
 }	
 
-soul_invulnerability = 20;
 
 moving = false;
 

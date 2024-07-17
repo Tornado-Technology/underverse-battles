@@ -55,7 +55,7 @@ actions = [
 	Action("Character.XAnastasia.Attack2", call_attack_xanastasia_2)
 
 ];
-special_action = SpecialAction("Character.XAnastasia.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, call_attack_xanastasia_special);
+special_action = SpecialAction("Character.XAnastasia.SpecialAttack", spr_special_attack_x_anastasia, spr_special_attack_x_anastasia_locked, call_attack_xanastasia_special);
 
 on_taking_soul_damage = function(soul, damage) {
 	if (damage > dtime)
