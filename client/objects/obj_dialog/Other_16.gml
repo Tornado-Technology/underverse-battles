@@ -22,3 +22,4 @@ set_voice("Asgore", "", snd_voice_asgore);
 set_voice("AsgorePicnic", "", snd_voice_asgore);
 set_voice("Alphys", "", snd_voice_alphys);
 set_voice("AlphysPicnic", "", snd_voice_alphys);
+set_voice("Frisk", "", snd_voice_main);

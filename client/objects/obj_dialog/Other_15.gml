@@ -74,13 +74,17 @@ set_frame("UndynePicnic", "normal", spr_undyne_picnic_frame);
 set_frame("UndynePicnic", "glad", spr_undyne_picnic_frame_glad);
 set_frame("UndynePicnic", "laughing", spr_undyne_picnic_frame_laughing);
 set_frame("UndynePicnic", "dissatisfied", spr_undyne_picnic_frame_dissatisfied);
+set_frame("UndynePicnic", "worry", spr_undyne_picnic_frame_worry);
 // Toriel (picnic)
 set_frame("TorielPicnic", "normal", spr_toriel_picnic_frame);
 set_frame("TorielPicnic", "glad", spr_toriel_picnic_frame_glad);
 set_frame("TorielPicnic", "laughing", spr_toriel_picnic_frame_laughing);
+set_frame("TorielPicnic", "worry", spr_toriel_picnic_frame_worry);
 // Asgore (picnic)
 set_frame("AsgorePicnic", "normal", spr_asgore_picnic_frame);
+set_frame("AsgorePicnic", "worry", spr_asgore_picnic_frame_worry);
 // Alphys (picnic)
 set_frame("AlphysPicnic", "normal", spr_alphys_picnic_frame);
+set_frame("AlphysPicnic", "worry", spr_alphys_picnic_frame_worry);
 // Frisk
 set_frame("Frisk", "normal", spr_frisk_frame);

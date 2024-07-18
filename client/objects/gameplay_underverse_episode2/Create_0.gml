@@ -752,7 +752,7 @@ cutscenes = [
 		[cutscene_object_set_speed, papyrus, 2, 180],
 		[cutscene_wait, 1],
 		[effect_fade, 3, 0, 0, c_black],
-		[audio_sound_gain, snd_park, 0, 1000],
+		[audio_sound_gain, snd_park, 0, 2000],
 		[cutscene_wait, 3],
 		[room_goto, room_menu]
 	],

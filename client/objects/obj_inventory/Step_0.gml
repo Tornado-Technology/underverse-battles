@@ -1,10 +1,12 @@
 if (!instance_exists(character)) exit;
 
-if (character.is_controlled && input_check_pressed(input.special)) {
-	open();
-}
-else if (is_open && input_check_pressed(input.special)) {
-	close();
+if (can_closing) {
+	if (character.is_controlled && input_check_pressed(input.special)) {
+		open();
+	}
+	else if (is_open && input_check_pressed(input.special)) {
+		close();
+	}
 }
 
 if (is_open) {

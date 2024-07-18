@@ -2,6 +2,9 @@ score_team_1 = 0;
 score_team_2 = 0;
 last_puncher = noone;
 
+text_team_1 = translate_get("MiniGame.PapyrussTeam");
+text_team_2 = translate_get("MiniGame.UndynesTeam");
+
 on_round_start = new Event();
 on_fall_ball = new Event();
 stop_all_players = new Event();

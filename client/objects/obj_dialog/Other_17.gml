@@ -20,3 +20,4 @@ set_font("Asgore", "", global._font_main_determination, c_white);
 set_font("AsgorePicnic", "", global._font_main_determination, c_white);
 set_font("Alphys", "", global._font_main_determination, c_white);
 set_font("AlphysPicnic", "", global._font_main_determination, c_white);
+set_font("Frisk", "", global._font_main_determination, c_white);
