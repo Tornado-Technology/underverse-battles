@@ -26,7 +26,7 @@
   ],
   "name":"spr_swap_papyrus_robber_defeated",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Robber",
     "path":"folders/Characteres/Swap Papyrus/Sprites/Char/Robber.yy",
@@ -87,7 +87,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":14,
+    "xorigin":15,
     "yorigin":58,
   },
   "swatchColours":null,

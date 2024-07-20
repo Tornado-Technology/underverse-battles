@@ -28,7 +28,7 @@
   ],
   "name":"spr_sans_got_heart_locket_closing_eyes",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Episode 3",
     "path":"folders/Characteres/Sans/Sprites/Char/Story Mode/Episode 3.yy",
@@ -80,7 +80,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":9,
+    "xorigin":8,
     "yorigin":39,
   },
   "swatchColours":null,

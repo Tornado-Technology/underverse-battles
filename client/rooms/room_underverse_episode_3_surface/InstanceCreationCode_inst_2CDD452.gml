@@ -51,10 +51,10 @@ cutscenes = [
 		[cutscene_dialog, "Underverse_Episode3.Dialog35", dir.down],
 		[cutscene_execute, function() {
 			instance_create_depth(2697, 2851, fight_depth.player, ink_sans, {
-				sprite_index: spr_ink_sans_standing_left
+				sprite_index: spr_ink_sans_appearance_from_inks
 			});
 		}],
-		[cutscene_wait, 2],
+		[cutscene_wait, 3],
 		[cutscene_object_set_sprite, ink_sans, spr_ink_sans_standing_left_awkward],
 		[cutscene_dialog_async, "Underverse_Episode3.Dialog36", dir.down],
 		[cutscene_wait_by_dialog, 1],
@@ -122,7 +122,7 @@ cutscenes = [
 			cutscene_create(cutscenes[4]);
 		}],
 	],
-	[	// Chose limited edition ketchup (index: 4)
+	[	// Frisk and Sans say goodbye (index: 4)
 		[cutscene_wait, 2],
 		[cutscene_dialog, "Underverse_Episode3.Dialog42", dir.down],
 		[cutscene_object_set_sprite, target_character, spr_frisk_walking_right],

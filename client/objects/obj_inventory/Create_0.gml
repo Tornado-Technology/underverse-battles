@@ -64,13 +64,11 @@ check_used = function(name) {
 }
 
 set_cutscene_inventory = function(callback) {
-	if (value) {
-		can_closing = false;
-		ui.is_draw_back_button = false;
-		ui.is_selection_for_story = true;
-		ui.selection_callback = callback;
-		open();
-	}
+	can_closing = false;
+	ui.is_draw_back_button = false;
+	ui.is_selection_for_story = true;
+	ui.selection_callback = callback;
+	open();
 }
 
 set_default_inventory = function() {

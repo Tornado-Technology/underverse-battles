@@ -6,7 +6,7 @@ sans = obj_character_sans;
 effect_filler = noone;
 
 interact_callback = function() {
-	//if (variable_instance_get(gameplay_underverse_episode_3_surface, "frisk_was_in_ketchup_shop")) {
+	if (variable_instance_get(gameplay_underverse_episode_3_surface, "frisk_was_in_ketchup_shop")) {
 		
 		target_character.set_uncontrolled();
 	
@@ -15,7 +15,7 @@ interact_callback = function() {
 			return;
 		}
 		cutscene_create(cutscenes[1]);
-	//}
+	}
 }
 
 reset_characters_and_npc = function() {
@@ -45,34 +45,30 @@ cutscenes = [
 	],
 	[
 		[cutscene_execute, function() {
-			var current_characters = [frisk];
-			
-			array_foreach(current_characters, function (element) {
-				if (element.x > 468 && element.x < 525 && element.y < 2827) {
-					element.move_to(503, 2856, 1);
-					element.sprite_index = element.walking_down_animation;
-				}
-				else if (element.x <= 468 && element.y < 2906) {
-					element.move_to(456, 2933, 1);
-					element.sprite_index = element.walking_down_animation;
-				}
-				else if (element.x >= 525 && element.y < 2870) {
-					element.move_to(542, 2918, 1);
-					element.sprite_index = element.walking_down_animation;
-				}
-				else if (element.x < 405) {
-					element.move_to(502, 2918, 1);
-					element.sprite_index = element.walking_right_animation;
-				}
-				else if (element.x > 600) {
-					element.move_to(502, 2918, 1);
-					element.sprite_index = element.walking_left_animation;
-				}
-				else {
-					element.move_to(502, 2918, 1);
-					element.sprite_index = element.walking_up_animation;
-				}
-			});
+			if (frisk.x > 468 && frisk.x < 525 && frisk.y < 2827) {
+				frisk.move_to(503, 2856, 1);
+				frisk.sprite_index = frisk.walking_down_animation;
+			}
+			else if (frisk.x <= 468 && frisk.y < 2906) {
+				frisk.move_to(456, 2933, 1);
+				frisk.sprite_index = frisk.walking_down_animation;
+			}
+			else if (frisk.x >= 525 && frisk.y < 2870) {
+				frisk.move_to(542, 2918, 1);
+				frisk.sprite_index = frisk.walking_down_animation;
+			}
+			else if (frisk.x < 405) {
+				frisk.move_to(502, 2918, 1);
+				frisk.sprite_index = frisk.walking_right_animation;
+			}
+			else if (frisk.x > 600) {
+				frisk.move_to(502, 2918, 1);
+				frisk.sprite_index = frisk.walking_left_animation;
+			}
+			else {
+				frisk.move_to(502, 2918, 1);
+				frisk.sprite_index = frisk.walking_up_animation;
+			}
 		}],
 		[cutscene_execute, function() {
 			effect_fade(1, 1, 0, c_black);

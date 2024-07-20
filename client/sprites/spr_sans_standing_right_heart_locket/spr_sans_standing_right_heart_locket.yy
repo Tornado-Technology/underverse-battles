@@ -28,7 +28,7 @@
   ],
   "name":"spr_sans_standing_right_heart_locket",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Movement",
     "path":"folders/Characteres/Sans/Sprites/Char/Heart locket/Movement.yy",
@@ -80,7 +80,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":10,
+    "xorigin":11,
     "yorigin":40,
   },
   "swatchColours":null,
