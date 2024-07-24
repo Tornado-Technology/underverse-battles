@@ -3,7 +3,7 @@ event_inherited();
 damage = get_char_damage(obj_character_dream);
 
 stop_spawn = false;
-star_count = _power div 2 + 2;
+star_count = (_power div 2 + 2);
 time_spawn = 0.2 / star_count;
 
 spawn_star = function () {
@@ -22,7 +22,7 @@ spawn_star = function () {
 		star.direction = point_direction(star.x, star.y, target.x, target.y);
 	};
 		
-	star.speed_const = random_range(2.5 + _power * 0.1, 3.2) + _power * 0.2;	
+	star.speed_const = fight_random_float(2.5 + _power * 0.1, 3.2) + _power * 0.2;	
 }
 
 time_source_spawn_star = time_source_create(time_source_game, time_spawn, time_source_units_seconds, spawn_star, [], star_count);

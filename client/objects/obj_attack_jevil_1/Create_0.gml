@@ -36,8 +36,4 @@ switch(type) {
 		clubs: obj_bullet_clubs_jevil	
 	});
 	break;
-	
-	
-	
-
 }
