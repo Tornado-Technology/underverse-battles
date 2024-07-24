@@ -1,5 +1,7 @@
 on_soul_touch = function () {};
 
+depth = fight_depth.bullet;
+
 disable_surface = true;
 step = 2;
 
