@@ -1,4 +1,4 @@
-
+/// Arguments: clubs
 border_instance.y += 20;
 
 callback = function () {
@@ -14,7 +14,7 @@ update = function() {
 	var angle = fight_random_choose(135, 45, 225, 315);
 	var x_ = soul_instance.x + dcos(angle) * radius;
 	var y_ = soul_instance.y + -dsin(angle) * radius;
-	var bullet_instance = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, obj_bullet_clubs_jevil, {
+	var bullet_instance = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, clubs, {
 		speed_count: 3 + _power * 0.1,
 		step: 0.9 + _power * 0.01,
 		center_x: soul_instance.x,
@@ -22,7 +22,7 @@ update = function() {
 		angle: angle
 	});
 	
-	bullet_instance.count_repeat_spwan = _power div 2 + 3;
+	bullet_instance.count_repeat_spwan = (_power div 2 + 3);
 	
 }
 

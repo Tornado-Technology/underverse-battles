@@ -22,7 +22,7 @@ pattern_instances = [
 		soul_type: battle_soul_type.blue,
 		bone: obj_bone_papyrus,
 		bone_changes: obj_bone_changes_papyrus
-	}),
+	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_cool_bone_big_jump, 4, {
 	})
 	

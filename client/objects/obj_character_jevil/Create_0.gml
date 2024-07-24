@@ -31,7 +31,6 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 snd_beginning_attack = [snd_jevil_chaos, snd_jevil_anything];
 
 
-
 // Soul
 soul = spr_battle_soul;
 
@@ -42,7 +41,7 @@ frame = spr_jevil_frame;
 // Animations
 idle_animation = spr_jevil_idle;
 after_battle_animation = idle_animation;
-defeated_animation = irandom(1) ? spr_jevil_defeated_0 :  spr_jevil_defeated_1;
+defeated_animation =  spr_jevil_defeated;
 
 
 start_angle = image_angle;
@@ -60,7 +59,7 @@ special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_atta
 
 on_taking_soul_damage = function(soul, damage) {
 	if (hp < 30) {
-		self.damage = 7;	
+		self.damage = 6;	
 	};
 	
 	return damage;
@@ -76,5 +75,5 @@ play_snd_being_attack = function () {
 
 
 // Soundtrack
-soundtrack_name = "THE WORLD REVOLVING"; 
+soundtrack_name = "THE WORLD \n         REVOLVING"; 
 soundtrack =  snd_the_world_revolving;

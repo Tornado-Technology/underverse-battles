@@ -70,8 +70,8 @@ spwan_big_bone = function () {
 	time_source_start(time_source_update_collision);
 }
 
-var period = 150 - _power * 2;
-var repeats =  _power;
+var period = (150 - _power * 2);
+var repeats = 3;
 
 time_source_update_collision = time_source_create(time_source_game, 1 / 60, time_source_units_seconds, function () {
 	update_collision();	

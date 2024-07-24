@@ -24,23 +24,23 @@ update = function () {
 	});
 		
 	if (instance_exists(bow)) {
-		bow_instance.x +=  bow == bow_instance.x ?  dcos(20) : dcos(0);
-		bow_instance.y +=  bow == bow_instance.y ?  -dsin(20) : -dsin(0);
+		bow_instance.x +=  bow.x == bow_instance.x ?  dcos(20) : dcos(0);
+		bow_instance.y +=  bow.y == bow_instance.y ?  -dsin(20) : -dsin(0);
 	};
 }
-var period = 35 - 1 - _power * 2;
-var repeats = 20 + _power * 2;
 
-if (variable_instance_exists(id, "custom_repeats")) {
-	repeats = custom_repeats;
-}
+
+var period = 35 - (1 - _power * 2);
+var repeats = 15 + _power * 2;
+
+
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
 }, [], -1);
 
 
-time_source_update_destroy = time_source_create(time_source_game,  period * (repeats + 1) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  period * (repeats) / 60, time_source_units_seconds, function () {
 instance_destroy();	
 });	
 	

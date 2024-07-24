@@ -23,7 +23,7 @@ update_teleport = function () {
 	var y2 = border_instance.y + border_instance.down + 10;
 	var random_position = fight_random_integer(y1, y2);
 	var x_ = irandom(1) ? x1 : x2;
-	var teleport_instance = instance_create_depth(x_ , random_position, fight_depth.bullet_outside_hight, obj_teleport_jevil, {
+	instance_create_depth(x_ , random_position, fight_depth.bullet_outside_hight, teleport, {
 		speed_count: 3 + _power * 0.1	
 	});	
 	
@@ -32,7 +32,7 @@ update_teleport = function () {
 update = function () {
 	var x0 = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 
-	var scythe_instance = instance_create_depth(x0, border_instance.y - border_instance.up - 50, fight_depth.bullet_outside_hight, obj_scythe_falling_jevil, {
+	var scythe_instance = instance_create_depth(x0, border_instance.y - border_instance.up - 50, fight_depth.bullet_outside_hight, scythe, {
 		angle: 270,
 		angle_blast: 180
 	});

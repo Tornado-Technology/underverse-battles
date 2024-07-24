@@ -1,4 +1,4 @@
-	
+/// Arguments: 	
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 			
@@ -8,13 +8,14 @@ callback = function () {
 }
 
 update = function() {
-	var position_x;
-	var position_y;
-	var direction_bullet;
-	var speed_bullet = 3 + _power * 0.1;
-	var vertical = irandom(1);
-	var offset = 40;
-	var box_instance;
+var position_x;
+var position_y;
+var direction_bullet;
+var speed_bullet = 3 + _power * 0.1;
+var vertical = fight_random_integer(0, 1);
+var offset = 40;
+var box_instance;
+	
 var i = 0;
 repeat(3) {	
 	offset += 5 * i;
@@ -29,7 +30,7 @@ repeat(3) {
 			direction_bullet = 90;
 		};
 		
-		box_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_diamonds_bullet_jevill, {
+		box_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, diamonds, {
 			direction: direction_bullet,
 			angle: 0,
 			speed_count: speed_bullet
@@ -38,7 +39,7 @@ repeat(3) {
 	} else {
 		position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 		
-		if(irandom(1)) {
+		if(fight_random_integer(0,1)) {
 			position_x = border_instance.x - border_instance.left - offset;	
 			direction_bullet = 0;
 		} else {
@@ -46,7 +47,7 @@ repeat(3) {
 			direction_bullet = 180;
 		};
 		
-		box_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_diamonds_bullet_jevill, {
+		box_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, diamonds, {
 			direction: direction_bullet,
 			angle: 90,
 			speed_count: speed_bullet
@@ -58,12 +59,12 @@ repeat(3) {
 
 }
 
-var period = 40 - _power * 2;
+var period = 40 - (_power * 2);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 20) / 60, time_source_units_seconds, function () {
 
+time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 20) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

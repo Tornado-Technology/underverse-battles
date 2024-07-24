@@ -15,8 +15,8 @@
     "path":"folders/Characteres/Error Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_stun",
-    "path":"objects/obj_battle_stun/obj_battle_stun.yy",
+    "name":"obj_battle_slowing_bullet",
+    "path":"objects/obj_battle_slowing_bullet/obj_battle_slowing_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

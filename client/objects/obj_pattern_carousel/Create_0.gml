@@ -1,4 +1,4 @@
-/// Arguments: box
+/// Arguments: carousel, 
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -10,18 +10,17 @@ callback = function () {
 };
 
 update = function () { 
-	
 	var i = 0;
 	var offset = 60;
 	repeat(4) {
-		var box = instance_create_depth(border_instance.x - border_instance.left - 20 + offset * i, border_instance.y - border_instance.up + offset * i, 0, obj_carousel_jevil, {
+		var carousel_instance = instance_create_depth(border_instance.x - border_instance.left - 20 + offset * i, border_instance.y - border_instance.up + offset * i, 0, carousel, {
 			step: 0.07 + _power * 0.01,
 			speed_count: 3 + (_power * 0.1) - 0.01 * i
 		});
 		
-		box.sprite_frame = irandom(2);	
-		box.target_position_x = border_instance.x + border_instance.right;
-		box.backwards_x = border_instance.x - border_instance.left - 20;
+		carousel_instance.sprite_frame = fight_random_integer(0, 2);	
+		carousel_instance.target_position_x = border_instance.x + border_instance.right;
+		carousel_instance.backwards_x = border_instance.x - border_instance.left - 20;
 		i++;
 	}
 };

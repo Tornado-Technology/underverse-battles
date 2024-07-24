@@ -1,4 +1,4 @@
-	
+/// Arguments: teleport	
 	
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -16,8 +16,8 @@ update = function() {
 	var y1 = border_instance.y - border_instance.up - 10;
 	var y2 = border_instance.y + border_instance.down + 10;
 	var random_position = fight_random_integer(y1, y2);
-	var x_ = irandom(1) ? x1 : x2;
-	var teleport_instance = instance_create_depth(x_ , random_position, fight_depth.bullet_outside_hight, obj_teleport_jevil, {
+	var x_ = fight_random_integer(0, 1) ? x1 : x2;
+	var teleport_instance = instance_create_depth(x_ , random_position, fight_depth.bullet_outside_hight, teleport, {
 		speed_count: 3 + _power * 0.1	
 	});	
 

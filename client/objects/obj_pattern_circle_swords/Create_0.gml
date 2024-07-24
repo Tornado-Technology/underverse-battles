@@ -6,7 +6,6 @@ callback = function () {
 	while(i <= 360) {
 		var swords_instance = instance_create_depth(border_instance.x + dcos(i) * 10, border_instance.y + -dsin(i) * 10, fight_depth.bullet_outside_hight, obj_swords_xanastasia, {	
 			speed_count: 1.5 + _power * 0.1,
-			image_angle: i 
 		});
 		swords_instance.radius = 10;
 		swords_instance.radius_max = 70;

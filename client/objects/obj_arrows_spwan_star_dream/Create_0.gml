@@ -12,7 +12,7 @@ var i = angle;
 		var	star_y = -dsin(i); 
 
 		var star = instance_create_depth(x + star_x, y + star_y, fight_depth.bullet_outside, obj_little_star_dream, {
-			direction: irandom(360)	
+			direction: fight_random_integer(0, 360)	
 		});
 	
 		star.speed_const = speed_const;
@@ -21,4 +21,5 @@ var i = angle;
 		i += angle;
 	}
 	
+	destroy = true;
 }

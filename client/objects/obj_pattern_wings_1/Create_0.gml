@@ -8,7 +8,7 @@ callback = function () {
 }
 
 update = function() {
-		var x_ = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+		var x_ = fight_random_choose(room_width * 2, (room_width / room_width));
 		var y_ = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 		
 		var feathers_instnace = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, obj_aim_hit, 
@@ -19,14 +19,9 @@ update = function() {
 		
 		with(feathers_instnace) {
 			end_prejudice  = function () {
-			
-			var i = angle;
-				while(i <= angle * aim_count) {	
 				var blast_instace =	instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_knilage_blow_xsanastasia);		
 			
-					blast_instace._angle = i;
-					i+= angle;
-				};
+					blast_instace._angle = angle;
 			}
 		}
 }

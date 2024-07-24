@@ -14,11 +14,10 @@ half_width = sprite_width / 2;
 half_height = sprite_height / 2;
 
 
-result_ricochet = function () {	
+result_ricochet = function (angle) {	
 	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
-	var angle = new Vector2(x, y).math_dot(obj_battle_border);
-	
-	image_angle = lerp(image_angle, image_angle - (angle), speed_const * dtime);
+
+	image_angle += angle;
 	move_contact_solid(direction_center_arena, speed_const);
 }
 
@@ -27,8 +26,8 @@ ricochet = false;
 touching_walls = false;
 
 collision = function () {
-	var collision_border =  function () {
-		result_ricochet();
+	var collision_border = function (angle) {
+		result_ricochet(angle);
 		size_ricochet--;
 	};	
 	
@@ -36,20 +35,11 @@ collision = function () {
 		exit;
 	};
 	
-	if (collision_line(x - half_width, y, 0, y, obj_solid, false, false) == noone) {
-		collision_border();
+	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
+		collision_border(90);
 	};
-	
-	if (collision_line(x + half_width, y, room_width, y, obj_solid, false, false) == noone) {
-		collision_border();		
-	};
-	
-	if (collision_line(x, y - half_height, x, 0, obj_solid, false, false) == noone) {
-		collision_border();
-	};
-	
-	if (collision_line(x, y + half_height, x, room_height, obj_solid, false, false) == noone) {
-		collision_border();
+	if (place_meeting(x, y + lengthdir_y(speed_const, image_angle), obj_solid)) {
+		collision_border(irandom_range(85, 95));
 	};
 }
 

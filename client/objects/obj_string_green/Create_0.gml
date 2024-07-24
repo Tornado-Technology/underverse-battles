@@ -12,6 +12,8 @@ image_yskew = 0;
 target_x = 0;
 target_y = 0;
 
+move_y =  false;
+
 scale_speed = 4;
 
 audio_play_sound_plugging(snd_string);

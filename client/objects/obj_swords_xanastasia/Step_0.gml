@@ -34,6 +34,7 @@ if (circle_moving) {
 	x = center_x + dcos(angle) * radius;
 	y = center_y + -dsin(angle) * radius;	
 	angle += spinnig_speed * dtime; 
+	image_angle = angle + 180;
 };
 
 

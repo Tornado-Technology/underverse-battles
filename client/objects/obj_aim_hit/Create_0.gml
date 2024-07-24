@@ -3,29 +3,16 @@ event_inherited();
 disable_surface = true;
 end_prejudice = function () {}
 
-image_blend = c_red;
+max_xscale = room_width  * 6;
+image_xscale = max_xscale;
+stage = 0;
 
-radius = 10;
+max_xscale = 55;
+max_yscale = 5;
 
-point_in_circum = 1;
- aim_count = (point_in_circum * 2);
+image_yscale = 0.5;
 
-draw_directions = function () {	
-
-	var _xx;
-	var _yy;
-	var i = angle;
-	
-	while(i <= angle * aim_count) {
-		 _xx = x + dcos(i) * radius;
-		 _yy = y + -dsin(i) * radius;
-	 
-		draw_sprite_ext(spr_aim_hit_line, 0, _xx , _yy, 2, 2, i, c_white, 1);
-		i += angle;
-	}
-	
-}
-
+image_angle = angle;
 
 destroy = false;
 

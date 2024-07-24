@@ -1,3 +1,5 @@
+/// Arguments: scythe_small
+
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		var scythe_counst = _power div 3 + 4;
@@ -10,7 +12,7 @@ callback = function () {
 			var _y = border_instance.y
 			
 			
-			var scythe_instance = instance_create_depth(_x + dcos(i) * radius, _y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_scythe_small_jevil, {
+			var scythe_instance = instance_create_depth(_x + dcos(i) * radius, _y + -dsin(i) * radius, fight_depth.bullet_outside_hight, scythe_small, {
 				center_x: border_instance.x,
 				center_y: border_instance.y
 			});

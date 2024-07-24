@@ -16,7 +16,7 @@ callback = function () {
 
 	
 update = function() {
-	var type_attack = 1;
+	var type_attack = fight_random_integer(0, 3);
 	var bone_instance;
 	var speed_bone = 2 + _power * 0.01;
 	var speed_count = 0.03;
@@ -91,7 +91,7 @@ update = function() {
 	
 		create_bone(bone_big_x, bone_main_y, bone, speed_bone, size_bone_main, direction_bone, 180);
 		create_bone(bone_smail_x, bone_y,bone, speed_bone + 0.5, size_bone, 0, 0);		
-	}
+	};
 
 
 }

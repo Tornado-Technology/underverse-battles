@@ -19,6 +19,14 @@ switch (type) {
 			gasterblaster: obj_gasterblaster_fell_sans
 		});
 		break;
+	case 2:
+		create_border(battle_border.up, battle_border.down, battle_border.left + 20, battle_border.right + 20);
+		pattern_instance = create_pattern(obj_pattern_blue_attack_big_two_rows_of_bones, {
+			bone: obj_bone_fell_sans,
+			gasterblaster: obj_gasterblaster_fell_sans
+		});
+	break;
+	
 	default:
 		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left - 43, battle_border.right - 43);
 		pattern_instance = create_pattern(obj_pattern_gasterblasters_from_above, {

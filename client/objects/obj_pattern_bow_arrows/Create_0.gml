@@ -1,7 +1,44 @@
 // Arguments bow, arrow
 
+
+rot = fight_random_integer(0, 1);
+_side = fight_random_choose(0, 90, 180, 270);
+step = 20;
+
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+		var side_random = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
+		var offset = 20;
+	var  soul_position = new Vector2(border_instance.x - border_instance.left + offset, border_instance.y - border_instance.up + offset);
+		if (side_random == dir.down) {
+			soul_position = new Vector2(border_instance.x + border_instance.right - offset, border_instance.y - border_instance.up + offset);
+		};
+		if (side_random == dir.left) {
+			soul_position = new Vector2(border_instance.x - border_instance.left + offset, border_instance.y + border_instance.down - offset);
+		};
+		if (side_random == dir.right) {
+			soul_position = new Vector2(border_instance.x + border_instance.right - offset, border_instance.y + border_instance.down - offset);
+		};
+	
+	
+	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
+	
+	var radius =  100;
+	var angle = 360 / 4;
+	var i  = angle;
+	while(i <= 360) {
+		var blades = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_blades_radius_dream, {	
+			angle: i,
+			center_x: border_instance.x,
+			center_y: border_instance.y
+		});
+		
+		blades.speed_const = 1.5 + _power * 0.1;
+		
+
+		i += angle;	
+	}
+	
+	
 	
 	update();
 	time_source_start(time_source_update);	
@@ -31,12 +68,15 @@ update = function () {
 
 };
 
+
 var period = 40 - _power * 2;
 var repeats = 10 + _power;
+
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 update();	
 }, [], -1);
+
 
 
 time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60, time_source_units_seconds, function () {

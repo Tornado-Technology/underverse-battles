@@ -9,7 +9,12 @@ callback = function () {
 }
 
 update = function() {
-	var random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), border_instance.y);
+	var random_position; 
+	if(vertical) {
+		random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), fight_random_integer(border_instance.y - border_instance.up + 1, border_instance.y + border_instance.down - 1));
+	} else {
+		random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), border_instance.y);
+	};
 	instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 

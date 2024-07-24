@@ -3,7 +3,7 @@ event_inherited();
 damage = get_char_damage(obj_character_error_sans);
 
 hspd_inert = 0;
-
+disable_surface = true;
 is_falling = false;
 is_moving_back = false;
 acceleration = 0;

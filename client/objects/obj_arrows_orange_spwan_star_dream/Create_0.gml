@@ -7,7 +7,7 @@ result_ricochet = function () {
 		var	star_y = -dsin(angle); 
 
 		var star = instance_create_depth(x + star_x, y + star_y, fight_depth.bullet_outside, obj_star_orange_dream, {
-			 direction: irandom(360)	
+			 direction: fight_random_integer(0, 360)		
 		});
 		
 		star.draw_outside_arena = true;
