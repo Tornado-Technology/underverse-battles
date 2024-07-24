@@ -6,7 +6,7 @@ on_border_created = function () {
 
 switch (type) {
 	case 0:
-		create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 30, battle_border.right + 20);
+		create_border(battle_border.up - 35, battle_border.down + 20, battle_border.left + 40, battle_border.right + 40);
 		pattern_instance = create_pattern(obj_pattern_fist_tentacles, {
 			fist: obj_fist_nightmare,
 			platform: obj_spinning_platform,
@@ -30,22 +30,13 @@ switch (type) {
 		});
 	break;
 	
-	case 3:
+	default:
 	create_border(battle_border.up, battle_border.down, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_patterns_wave_slime_nightmare, {
 			bone:  obj_bone_nightmare,
 			bone_spinning: obj_bone_spinning_nightmare,
 			tentacles: obj_tentacles_destroy_back_nightmare,
 			slime: obj_slime_nightmare
-		});
-	break;
-
-	
-	default:
-		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_spinning_aren, {
-			slime: obj_slime_nightmare,
-			bullets: obj_bullets_nightmare
 		});
 	break;
 };

@@ -9,20 +9,20 @@ callback = function () {
 
 update = function () { 
 	var spwan_clubs = function () {	
-	var border = border_instance;
-	var random_position = new Vector2(0, -10);
-	var random_int = irandom_range(offset_x, offset_x * 2);
+		var border = border_instance;
+		var random_position = new Vector2(0, -10);
 		if (fight_random_integer(0, 1)) {
 			var offset_x = 25;
 			var start_x = border.x - border.right - 10;
-			random_position.x = start_x - random_int;
+			random_position.x = start_x - fight_random_integer(offset_x, offset_x * 2);
 		} else {
 			var offset_x = 25;
 			var start_x = border.x + border.left + 10;
-			random_position.x = start_x + random_int;
+			random_position.x = start_x + fight_random_integer(offset_x, offset_x * 2);
 		}; 
 	
-		var box_instance = instance_create_depth(random_position.x, random_position.y, 0, box_, {
+	
+		var box_instance = instance_create_depth(random_position.x, random_position.y, 0, box, {
 			sprite_index:  sprite_clubs_box 
 		});
 		box_instance.speed_count = 3 + _power * 0.1;
@@ -38,7 +38,7 @@ update = function () {
 	
 		var offset = fight_random_integer(15, 40);
 	
-		var start_y = choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
+		var start_y = fight_random_choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
 	
 		if (fight_random_integer(0, 1)) {
 			start_x = fight_random_integer(border_instance.x - border_instance.left - 150,  border_instance.x - border_instance.left - 70);
@@ -74,13 +74,13 @@ update = function () {
 update_scythe = function () {
 		var jevil_instance
 	if (fight_random_integer(0, 1)) {
-		jevil_instance = instance_create_depth(border_instance.x - border_instance.left - 30, border_instance.y - border_instance.up + 20, -8888, obj_turning_scythe_jevil, {
+		jevil_instance = instance_create_depth(border_instance.x - border_instance.left - 30, border_instance.y - border_instance.up + 20, fight_depth.bullet_outside_hight, scythe, {
 			speed_count: 3 + _power * 0.1	
 		});
 		
 		jevil_instance.position_x = border_instance.x + border_instance.right + 30;
 	} else {
-		jevil_instance = instance_create_depth(border_instance.x + border_instance.right +	30, border_instance.y + border_instance.down - 20, fight_depth.bullet_outside_hight, obj_turning_scythe_jevil, {
+		jevil_instance = instance_create_depth(border_instance.x + border_instance.right +	30, border_instance.y + border_instance.down - 20, fight_depth.bullet_outside_hight, scythe, {
 			speed_count: 3 + _power * 0.1	
 		});
 		

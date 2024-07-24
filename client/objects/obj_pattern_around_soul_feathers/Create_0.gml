@@ -1,3 +1,4 @@
+/// Arguments: feathers
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
@@ -19,17 +20,17 @@ update = function() {
 	var i = angle;
 	var r = 30;
 	repeat(6) {
-	var feathers = instance_create_depth(center_x + dcos(i) * r, center_y + -dsin(i) * r, fight_depth.bullet_outside, obj_feathers_radius_xanastasia, {
-		image_angle: i,
-		time_destroy : 10,
-		center_x: soul_instance.x,
-		center_y: soul_instance.y
-	});
+		var feathers_instance = instance_create_depth(center_x + dcos(i) * r, center_y + -dsin(i) * r, fight_depth.bullet_outside, feathers, {
+			image_angle: i,
+			time_destroy: 10,
+			center_x: soul_instance.x,
+			center_y: soul_instance.y
+		});
 	
-		feathers.radius =  90 - _power * 0.1;
-		feathers.speed_count = 4 + _power * 0.1;
-		feathers.step = 1 + _power * 0.1;
-		with(feathers) {
+		feathers_instance.radius =  90 - _power * 0.1;
+		feathers_instance.speed_count = 4 + _power * 0.1;
+		feathers_instance.step = 1 + _power * 0.1;
+		with(feathers_instance) {
 			impact_on_radius = function () {
 				radius -= step;
 				if (radius <= 0) {

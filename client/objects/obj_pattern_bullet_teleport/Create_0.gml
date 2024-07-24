@@ -11,8 +11,8 @@ callback = function () {
 }
 
 update = function() {
-	var x1 = border_instance.x + border_instance.right + irandom_range(15, 50);
-	var x2 = border_instance.x - border_instance.left - irandom_range(15, 50);
+	var x1 = border_instance.x + border_instance.right + fight_random_integer(15, 50);
+	var x2 = border_instance.x - border_instance.left - fight_random_integer(15, 50);
 	var y1 = border_instance.y - border_instance.up - 10;
 	var y2 = border_instance.y + border_instance.down + 10;
 	var random_position = fight_random_integer(y1, y2);

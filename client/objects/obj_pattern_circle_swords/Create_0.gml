@@ -1,10 +1,11 @@
+/// Arguments: swords, feathers
 callback = function () {
 	soul_instance = create_soul(border_instance.x - border_instance.left + 20, border_instance.y, battle_soul_type.red);
 		
 	var angle = 360 / 6;
 	var i = angle;
 	while(i <= 360) {
-		var swords_instance = instance_create_depth(border_instance.x + dcos(i) * 10, border_instance.y + -dsin(i) * 10, fight_depth.bullet_outside_hight, obj_swords_xanastasia, {	
+		var swords_instance = instance_create_depth(border_instance.x + dcos(i) * 10, border_instance.y + -dsin(i) * 10, fight_depth.bullet_outside_hight, swords, {	
 			speed_count: 1.5 + _power * 0.1,
 		});
 		swords_instance.radius = 10;
@@ -29,7 +30,7 @@ update_feathers = function () {
 	var va_y2_ = obj_camera.view_height + obj_camera.camera_position.y;
 	var random_position = rand_side_from(va_x1_,va_y1_, va_x2_, va_y2_);
 	
-	instance_create_depth(random_position[0], random_position[1], 0, obj_feathers_xanastasia, {
+	instance_create_depth(random_position[0], random_position[1], 0, feathers, {
 		_target_angle: point_direction(random_position[0], random_position[1], soul_instance.x, soul_instance.y),
 	});
 		

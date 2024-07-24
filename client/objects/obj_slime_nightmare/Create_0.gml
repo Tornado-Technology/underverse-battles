@@ -6,9 +6,6 @@ damage = get_char_damage(obj_character_nightmare);
 
 soul_invulnerability = 60;
 
-if (!variable_instance_exists(id, "time_attack")) {
-	time_attack = 60;
-};
 
 bullets = obj_bullets_nightmare;
 

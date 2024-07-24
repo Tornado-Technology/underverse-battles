@@ -4,7 +4,7 @@ callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 	
 	blades_instance = instance_create_depth(border_instance.x - border_instance.left - 50, border_instance.y, fight_depth.bullet_outside_hight, blades_swing);
-	blades_instance1 = instance_create_depth(border_instance.x - border_instance.left  + 10, border_instance.y - border_instance.down - 20, fight_depth.bullet_outside_hight, obj_blades_moving_y_dream, {
+	instance_create_depth(border_instance.x - border_instance.left  + 10, border_instance.y - border_instance.down - 20, fight_depth.bullet_outside_hight, blades_moving_y, {
 		center_x: border_instance.x,
 		center_y: border_instance.y + 30,
 		radius: 40,

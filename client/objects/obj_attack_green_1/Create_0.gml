@@ -19,8 +19,6 @@ switch (type) {
 			thread: obj_string_green,
 			bone: obj_bone_green
 		});
-		break;
-	
 	
 	break;
 	default:

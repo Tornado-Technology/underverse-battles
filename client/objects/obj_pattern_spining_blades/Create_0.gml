@@ -14,29 +14,24 @@ var blades_instance
 var offset = 20;
 var	coord = [soul_instance.x, border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset];
 var coord_2 = [border_instance.x - border_instance.left - offset, border_instance.x + border_instance.right + offset, soul_instance.y];
-var type = irandom(3);
+var type = fight_random_integer(0, 3);
 
 	if (type == 0){
 		 blades_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, blades_swing, {
 			angle_speed_const: -1,	
 			side: 1
 		});	
-	};
-	
-	if (type == 1) {
+	} else if (type == 1) {
 		 blades_instance = instance_create_depth(coord[0], coord[2], fight_depth.bullet_outside_hight, blades_swing, {
 			angle_speed_const: 1,	
 			side: 3
 		});	
-	};
-	
-	if (type == 2) {
+	} else	if (type == 2) {
 		 blades_instance = instance_create_depth(coord_2[0], coord_2[2], fight_depth.bullet_outside_hight, blades_swing, {
 			angle_speed_const: 1,	
 			side: 0
 		});	
-	}
-	if (type == 3) {
+	} else if (type == 3) {
 		 blades_instance = instance_create_depth(coord_2[1], coord_2[2], fight_depth.bullet_outside_hight, blades_swing, {
 			angle_speed_const: 1,	
 			side: 2

@@ -16,7 +16,7 @@ switch(type) {
 	case 1:
 	var border = 10;
 	create_border(battle_border.up - border, battle_border.down - border, battle_border.left - border, battle_border.right - border);
-	pattern_instance = create_pattern(obj_pattern_bullet_radiun_1, {
+	pattern_instance = create_pattern(obj_pattern_diamonds_bullet, {
 		diamonds: obj_diamonds_bullet_jevill	
 	});
 	break;

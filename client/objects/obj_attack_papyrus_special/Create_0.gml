@@ -24,6 +24,9 @@ pattern_instances = [
 		bone_changes: obj_bone_changes_papyrus
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_cool_bone_big_jump, 4, {
+		skate: obj_skate_papyrus,
+		bone: obj_bone_papyrus,
+		big_bone: obj_big_bone_papyrus
 	})
 	
 	

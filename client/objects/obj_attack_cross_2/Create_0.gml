@@ -22,10 +22,7 @@ switch (type) {
 			gasterblaster: obj_gasterblaster_cross,
 			gasterblaster_aiming: obj_gasterblaster_cross,
 			use_gravity_attack: use_gravity_attack
-		});
-		break;
-	
-	
+		});	
 	break;
 		
 	default:

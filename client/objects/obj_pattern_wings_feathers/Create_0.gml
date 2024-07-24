@@ -1,3 +1,4 @@
+/// Arguments: feathers, wings
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
@@ -17,7 +18,7 @@ update = function() {
 		var position_y = fight_random_choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);	
 		var direction_feathers = position_y == border_instance.y - border_instance.up - offset ?  270 : 90;
 			
-		var feathers_instnace = instance_create_depth(x0, position_y, fight_depth.bullet_outside_hight, obj_feathers_down_moving_xanastasia, {
+		var feathers_instnace = instance_create_depth(x0, position_y, fight_depth.bullet_outside_hight, feathers, {
 			direction: direction_feathers,
 			image_angle: direction_feathers
 		});

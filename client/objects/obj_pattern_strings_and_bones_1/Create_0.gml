@@ -1,4 +1,4 @@
-// Arguments: bone, thread
+/// Arguments: bone, thread
 
 callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
@@ -20,7 +20,6 @@ callback = function () {
 	
 	update_bone();
 	time_source_start(time_source_update_bone);
-	time_source_start(time_source_update_thread);
 	time_source_start(time_source_update_destroy);
 }
 

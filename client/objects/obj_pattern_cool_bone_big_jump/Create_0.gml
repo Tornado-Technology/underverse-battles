@@ -12,7 +12,7 @@ callback = function () {
 
 	
 spwan_cool_bone = function() {
-	instance_create_depth(border_instance.x + border_instance.right  + 50, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, obj_skate_papyrus, {
+	instance_create_depth(border_instance.x + border_instance.right  + 50, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, skate, {
 		direction: 180,
 		speed_const: 2 + _power * 0.1
 	});	
@@ -37,15 +37,16 @@ spwan_big_bone = function () {
 	var x_;
 	var y_;
 	var big_bone_x = (sprite_get_width(spr_big_bone_papyrus) / 2.6);
+	var bone_count = 20;
 	var offset = 10;
 	
 	var bone_instance;
 	var bone_end;
 	
 	var i = 0;
-	repeat(20) {
+	repeat(bone_count) {
 		x_ = (border_instance.x + border_instance.right + 10) + (offset * i); 
-		bone_instance =	instance_create_depth(x_, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, obj_bone_papyrus, {
+		bone_instance =	instance_create_depth(x_, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, bone, {
 			direction: 180
 		});
 		
@@ -56,7 +57,7 @@ spwan_big_bone = function () {
 	}
 	
 	
-	 big_bone_instance = instance_create_depth(x_ + big_bone_x, border_instance.y + border_instance.down + 5, fight_depth.bullet_outside_hight, obj_big_bone_papyrus, {
+	 big_bone_instance = instance_create_depth(x_ + big_bone_x, border_instance.y + border_instance.down + 5, fight_depth.bullet_outside_hight, big_bone, {
 		direction: 180,
 		image_xscale: 0.6,
 		image_yscale: 0.6

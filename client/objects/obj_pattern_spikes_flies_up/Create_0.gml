@@ -1,7 +1,7 @@
 // Arguments: spike,  spike_target
 
 callback = function () {
-	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
+	 create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	 border_up = border_instance.y - border_instance.up;
 	 border_down = border_instance.y + border_instance.down;
 	 
@@ -23,15 +23,14 @@ update_radius_spike = function () {
 	
 var speed_tentacles =  0.05; 
 var tentacles_instance = [];
-var border_left_right = choose(border.left, border.right);
-var border_up_down = choose(border.down, border.up);
+var border_left_right = fight_random_choose(border.left, border.right);
+var border_up_down = fight_random_choose(border.down, border.up);
 	
-var i = irandom(1);	
+var i = fight_random_integer(0, 1);	
 	
-var coord = 
-[
+var coord = [
 	fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right),
-	fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down)
+	fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10)
 ];
 
 	tentacles_instance = [
@@ -54,10 +53,9 @@ var coord =
 
 update_spike = function() {
 	var spd_spike = 2 + _power * 0.1;
-	var coord = 
-	[
+	var coord = [
 		fight_random_choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10),
-		fight_random_integer(border_instance.y - border_instance.up - 10, border_instance.y + border_instance.down + 10)
+		fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10)
 	];
 	
 	create_spike(coord[0], coord[1], spike, spd_spike, point_direction(coord[0], coord[1], border_instance.x, coord[1]));
@@ -65,15 +63,17 @@ update_spike = function() {
 }
 
 
-var period = 32 - (_power) * 3;
+var period = 35 - (_power * 2);
+var period_spike = 50;
+var repeats = 10 + (_power * 3);
 time_source_update_spike = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_spike();
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_radius_spike = time_source_create(time_source_game, 50 / 60, time_source_units_seconds, function () {
+time_source_update_radius_spike = time_source_create(time_source_game, period_spike / 60, time_source_units_seconds, function () {
 	update_radius_spike();	
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

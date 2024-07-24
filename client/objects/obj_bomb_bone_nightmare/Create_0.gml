@@ -2,7 +2,7 @@ event_inherited();
 spike_count = 8;
 disable_surface = true;
 damage = get_char_damage(obj_character_nightmare);
-
+image_alpha = 0;
 spwan = function () {
 if (_power > 1) {
 		var angle = 360 / spike_count;

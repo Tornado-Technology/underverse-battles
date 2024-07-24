@@ -1,8 +1,7 @@
 	
-		partice = part_system_create(partice_fall_effect);
+partice = part_system_create(partice_fall_effect);
 
-	
-		part_system_automatic_draw(partice, false);
+part_system_automatic_draw(partice, false);
 	
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);

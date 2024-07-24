@@ -19,20 +19,20 @@ update = function () {
 
 	if(fight_random_integer(0, 1)) {
 		position_x = fight_random_integer(border_instance.x - border_instance.left + 10, border_instance.x + border_instance.right - 10);
-		position_y = choose(border_instance.y - border_instance.up - 40, border_instance.y + border_instance.down + 40);
+		position_y =  fight_random_choose(border_instance.y - border_instance.up - 40, border_instance.y + border_instance.down + 40);
 		
 		finish_y =  position_y ==  border_instance.y - border_instance.up - 40 ?  border_instance.y + border_instance.down + 40 : border_instance.y - border_instance.up - 40;
 		angle = point_direction(position_x, position_y, position_x, border_instance.y) + 190;
 		center = new Vector2(position_x , finish_y) ;	
 	} else {
-		position_x = choose(border_instance.x - border_instance.left - 30, border_instance.x + border_instance.right + 30);
+		position_x =  fight_random_choose(border_instance.x - border_instance.left - 30, border_instance.x + border_instance.right + 30);
 		position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 		finish_x = position_x == border_instance.x - border_instance.left - 30 ?  border_instance.x + border_instance.right + 30  : border_instance.x - border_instance.left - 30;
 		angle = point_direction(position_x, position_y, border_instance.x, position_y) + 190;
 		center = new Vector2(finish_x, position_y);
 	};
 	
-	 scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_scythe_xanastasia, {
+	 scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
 		speed_count: 3 + _power * 0.1,
 		position_x: center.x,
 		position_y: center.y,

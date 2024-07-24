@@ -20,8 +20,8 @@ update_two_bone = function () {
 	
 		size_bone_main -= 8 - (_power + 1);	
 
-		size_bone_main /= random_range(28 - _power + 1, 29);
-		var size_bone = size_bone_main / random_range(4, 6);
+		size_bone_main /= fight_random_float(28 - _power + 1, 29);
+		var size_bone = size_bone_main /fight_random_float(4, 6);
 		
 		var direction_bone = point_direction(bone_main_x, bone_main_y, border_instance.x, bone_main_y);
 		create_bone(bone_main_x, bone_main_y, bone, speed_bone, size_bone_main, direction_bone, 180);

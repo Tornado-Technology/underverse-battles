@@ -55,9 +55,9 @@ update = function () {
 		var start_x;
 		var finish_x;
 		var box_hearts;
-		var offset = irandom_range(15, 40);
+		var offset = fight_random_integer(15, 40);
 	
-		var start_y = choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
+		var start_y = fight_random_choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
 	
 		if (fight_random_integer(0, 1)) {
 			start_x = fight_random_integer(border_instance.x - border_instance.left - 150,  border_instance.x - border_instance.left - 70);

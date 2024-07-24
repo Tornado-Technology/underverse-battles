@@ -28,6 +28,7 @@ pattern_instances = [
 	create_pattern_custom_power(obj_pattern_scythe_small_box, 3, {
 		box: obj_box_jevil,
 		sprite_spades_box: spr_jevil_spades_box,
-		sprite_clubs_box: spr_jevil_clubs_box
+		sprite_clubs_box: spr_jevil_clubs_box,
+		scythe: obj_turning_scythe_jevil
 	})
 ];

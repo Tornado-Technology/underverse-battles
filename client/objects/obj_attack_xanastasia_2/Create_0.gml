@@ -8,30 +8,25 @@ switch(type) {
 	case 0:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_scythe_come_back, {
-			wings: obj_wings_xanastasia
+			scythe: obj_scythe_xanastasia
 		});	
 	break;
 	
 	case 1:
 		create_border(battle_border.up - 40, battle_border.down - 40, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_scythe_aren_1, {
-			wings: obj_wings_xanastasia
+		pattern_instance = create_pattern(obj_pattern_moving_aren_scythe, {
+			scythe: obj_scythe_xanastasia,
+			feathers: obj_feathers_xanastasia
 		});	
 	break;
 	
-	case 2:
+	default:
 		create_border(battle_border.up - 40, battle_border.down - 40, battle_border.left - 40, battle_border.right - 40);
-		pattern_instance = create_pattern(obj_pattern_scythe_aren_2, {
-			wings: obj_wings_xanastasia
+		pattern_instance = create_pattern(obj_pattern_center_scythe_aren, {
+			scythe: obj_scythe_xanastasia,
+			feathers: obj_feathers_xanastasia
 		});	
 	break;
 
-	
-	default:
-		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_wings_1, {
-			wings: obj_wings_xanastasia
-		});	
-	break;
 	
 }

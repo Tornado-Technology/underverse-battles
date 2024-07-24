@@ -11,7 +11,7 @@ callback = function () {
 
 	
 update = function () {
-	var angle = irandom_range(30, 360);
+	var angle = fight_random_integer(30, 360);
 	var radius = 120;
 	
 	var bow_instance = instance_create_depth(border_instance.x + dcos(angle) * radius, border_instance.y + -dsin(angle) * radius, fight_depth.bullet_outside_hight, bow, {	

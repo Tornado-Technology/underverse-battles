@@ -21,6 +21,8 @@ pattern_instances = [
 	 create_pattern_custom_power(obj_pattern_special_xanastasia, 1, {
 	 }, start_next_pattern),
 	 create_pattern_custom_power(obj_pattern_swords_moving_down, 4, {
+		 scythe:  obj_scythe_xanastasia,
+		 swords: obj_swords_xanastasia
 	}, start_next_pattern),
 	 create_pattern_custom_power(obj_pattern_accelerating_left_right_moving_feathers, 3, {
 		feathers:  obj_feathers_xanastasia

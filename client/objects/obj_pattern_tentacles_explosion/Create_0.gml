@@ -19,8 +19,8 @@ update = function () {
 	tentacles_instance.target_position = target_place;
  };
  
-var period = 33 - 2 - _power * 2;
-var repeats = 5 + _power * 2;
+var period = 33 - (_power * 2);
+var repeats = 5 + (_power * 2);
 
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {

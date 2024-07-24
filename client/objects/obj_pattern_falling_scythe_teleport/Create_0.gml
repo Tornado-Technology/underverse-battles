@@ -2,10 +2,10 @@
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
-battle_border_add_size(0,0, 20, 20);
+	battle_border_add_size(0,0, 20, 20);
 	character_instance.visible = false;
 		
-	if (irandom(1)) {	
+	if (fight_random_integer(0, 1)) {	
 		update();
 	} else {
 		update_teleport();
@@ -17,12 +17,12 @@ battle_border_add_size(0,0, 20, 20);
 }
 
 update_teleport = function () {
-	var x1 = border_instance.x + border_instance.right + irandom_range(15, 50);
-	var x2 = border_instance.x - border_instance.left - irandom_range(15, 50);
+	var x1 = border_instance.x + border_instance.right + fight_random_integer(15, 50);
+	var x2 = border_instance.x - border_instance.left - fight_random_integer(15, 50);
 	var y1 = border_instance.y - border_instance.up - 10;
 	var y2 = border_instance.y + border_instance.down + 10;
 	var random_position = fight_random_integer(y1, y2);
-	var x_ = irandom(1) ? x1 : x2;
+	var x_ = fight_random_integer(0, 1) ? x1 : x2;
 	instance_create_depth(x_ , random_position, fight_depth.bullet_outside_hight, teleport, {
 		speed_count: 3 + _power * 0.1	
 	});	

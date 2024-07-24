@@ -1,4 +1,4 @@
-/// Arguments: 	
+/// Arguments: 	diamonds
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 			
@@ -22,7 +22,7 @@ repeat(3) {
 	if (vertical) {
 		position_x = fight_random_integer(border_instance.x - border_instance.left + 10, border_instance.x + border_instance.right + 5);
 		
-		if (irandom(1)) {
+		if (fight_random_integer(0, 1)) {
 			position_y = border_instance.y - border_instance.up - offset;
 			direction_bullet = 270;
 		} else {
@@ -36,6 +36,7 @@ repeat(3) {
 			speed_count: speed_bullet
 		});
 		box_instance.step = 0.01 + _power * 0.01;
+		
 	} else {
 		position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 		

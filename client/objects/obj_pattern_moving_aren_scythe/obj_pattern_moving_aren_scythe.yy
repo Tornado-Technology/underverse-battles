@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_wings_1",
+  "%Name":"obj_pattern_moving_aren_scythe",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_wings_1",
+  "name":"obj_pattern_moving_aren_scythe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Swords",
-    "path":"folders/Attack Patterns/Swords.yy",
+    "name":"Scythe",
+    "path":"folders/Attack Patterns/Scythe.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

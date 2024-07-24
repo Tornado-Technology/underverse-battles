@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_scythe_aren_2",
+  "%Name":"obj_pattern_random_spawns_swords",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_scythe_aren_2",
+  "name":"obj_pattern_random_spawns_swords",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scythe",
-    "path":"folders/Attack Patterns/Scythe.yy",
+    "name":"Swords",
+    "path":"folders/Attack Patterns/Swords.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

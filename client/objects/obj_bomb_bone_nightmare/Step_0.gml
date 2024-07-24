@@ -1,3 +1,5 @@
+image_alpha += 0.05 * dtime;
+
 y = approach(y, target_position.y, speed_const * dtime);
 x = approach(x, target_position.x, speed_const * dtime);
 

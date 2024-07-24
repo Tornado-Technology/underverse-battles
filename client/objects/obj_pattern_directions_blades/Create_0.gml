@@ -9,7 +9,7 @@ callback = function () {
 
 update = function() {
 var radius = 240;
-var point = choose(90, 180);
+var point = fight_random_choose(90, 180);
 var offset = 50;
 var _xx = 0;
 var _yy = 0;
@@ -23,11 +23,10 @@ repeat (count) {
 	if (point == 90) {	
 		_xx = soul_instance.x;
 		_yy = border_instance.y - border_instance.up - offset + blades_y * i;
-	}
-	else {
+	} else {
 		_xx = border_instance.x - border_instance.left - offset - blades_x * i;	
 		_yy = soul_instance.y;
-	}
+	};
 	
 	var  blades_instance = instance_create_depth(_xx, _yy, fight_depth.bullet_outside_hight, blades_swing, {
 		time_destroy : 32

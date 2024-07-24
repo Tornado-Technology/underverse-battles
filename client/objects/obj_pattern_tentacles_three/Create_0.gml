@@ -24,12 +24,12 @@ callback = function () {
 }
 
 update = function () { 
-	var i = irandom(1);
+	var i = fight_random_integer(0, 1);
 	var _x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	var _y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	var spike_instance = [];
-	var border_left_right = choose(border.left, border.right);
-	var border_up_down = choose(border.down, border.up);
+	var border_left_right = fight_random_choose(border.left, border.right);
+	var border_up_down = fight_random_choose(border.down, border.up);
 	
 	spike_instance = [
 		instance_create_depth(_x, border_up_down, fight_depth.bullet_outside_hight, spike, {
@@ -46,8 +46,8 @@ update = function () {
 }
 
 
-var period = 33 - 2 -  _power * 2;
-var repeats = 15 + _power * 3;
+var period = 33 - ( _power * 2);
+var repeats = 15 + (_power * 3);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	

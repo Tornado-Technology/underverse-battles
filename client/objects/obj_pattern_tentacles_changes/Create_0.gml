@@ -12,7 +12,7 @@ callback = function () {
 
 update = function () {
 	var speed_tentacles =  0.05; 
-	var tentacles_const = _power > 2 ? 2 : _power div 2 + 2;
+	var tentacles_const = (_power > 2 ? 2 : _power div 2 + 2);
 	
 	repeat(tentacles_const){	
 		var coord = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
@@ -32,8 +32,8 @@ update = function () {
 }
 
  
-var period = 33 - 2 * _power;
-var repeats = 15 + _power * 3;
+var period = 33 - (_power * 2);
+var repeats = 15 + (_power * 3);
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
@@ -43,6 +43,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();	
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

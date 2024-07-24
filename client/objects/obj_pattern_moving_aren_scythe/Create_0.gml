@@ -5,7 +5,7 @@ callback = function () {
 	var _x = border_instance.x - border_instance.left - 50;
 	var _y = border_instance.y;
 		
-	var scythe_instance = instance_create_depth(_x, _y, fight_depth.bullet_outside_hight, obj_scythe_xanastasia, {
+	var scythe_instance = instance_create_depth(_x, _y, fight_depth.bullet_outside_hight, scythe, {
 		speed_count: 3 + _power * 0.1	
 	});
 	
@@ -22,18 +22,18 @@ update = function () {
 	var angle;
 	
 	if(fight_random_integer(0, 1)) {
-		position_x = choose(border_instance.x - border_instance.left - 60, border_instance.x + border_instance.right + 60);	
+		position_x = fight_random_choose(border_instance.x - border_instance.left - 60, border_instance.x + border_instance.right + 60);	
 		position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 		position = new Vector2(position_x == border_instance.x - border_instance.left - 60 ? border_instance.x + border_instance.right - 40 : border_instance.x - border_instance.left + 40, position_y);
 		angle = point_direction(position_x, position_y, border_instance.x, position_y);
 	} else {
 		position_x = fight_random_integer(border_instance.x - border_instance.left + 10, border_instance.x + border_instance.right - 10);
-		position_y = choose(border_instance.y - border_instance.up - 60, border_instance.y + border_instance.down + 60);	
+		position_y = fight_random_choose(border_instance.y - border_instance.up - 60, border_instance.y + border_instance.down + 60);	
 		position = new Vector2(position_x, position_y == border_instance.y - border_instance.up - 40 ? border_instance.y + border_instance.down - 40 : border_instance.y - border_instance.up + 40);
 		angle = point_direction(position_x, position_y, position_x, border_instance.y);
 	};
 	
-	var feathers_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_feathers_xanastasia, {
+	var feathers_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, feathers, {
 		speed_count: 3 + _power * 0.1
 	});
 	

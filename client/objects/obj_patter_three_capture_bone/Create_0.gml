@@ -1,4 +1,4 @@
-
+/// Arguments: bone, thread
 callback = function () {
 	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
@@ -13,7 +13,7 @@ update = function () {
 		var position_end_x = border_instance.x + border_instance.right + 30;
 		var position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	
-		var thread_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_thread_capture_error_sans);	
+		var thread_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, thread);	
 		thread_instance.target_x = position_end_x;
 		thread_instance.target_y = position_y;
 		thread_instance.scale_speed = 5 + _power * 0.1;
