@@ -216,6 +216,8 @@
     {"name":"spr_undyne_picnic_standing_up","order":2,"path":"sprites/spr_undyne_picnic_standing_up/spr_undyne_picnic_standing_up.yy",},
     {"name":"spr_undyne_picnic_superpunch","order":1,"path":"sprites/spr_undyne_picnic_superpunch/spr_undyne_picnic_superpunch.yy",},
     {"name":"spr_volleyball_net_broken_mask","order":1,"path":"sprites/spr_volleyball_net_broken_mask/spr_volleyball_net_broken_mask.yy",},
+    {"name":"spr_xanastasia_defeated_last_image","order":1,"path":"sprites/spr_xanastasia_defeated_last_image/spr_xanastasia_defeated_last_image.yy",},
+    {"name":"spr_xanastasia_demon_defeated_last_image","order":1,"path":"sprites/spr_xanastasia_demon_defeated_last_image/spr_xanastasia_demon_defeated_last_image.yy",},
     {"name":"spr_xgaster_apparition","order":2,"path":"sprites/spr_xgaster_apparition/spr_xgaster_apparition.yy",},
   ],
 }

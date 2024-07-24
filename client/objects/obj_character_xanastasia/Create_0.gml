@@ -36,6 +36,7 @@ frame = spr_xanastasia_frame;
 idle_animation = spr_xanastasia_idle;
 after_battle_animation = spr_xanastasia_idle;
 defeated_animation =  spr_xanastasia_defeated;
+defeated_animation_last_image = spr_xanastasia_defeated_last_image;
 fight_0_start_animation = spr_xanastasia_idle;
 fight_0_idle_animation = spr_xanastasia_idle;
 fight_0_finish_animation = spr_xanastasia_idle;

@@ -6,6 +6,9 @@ frame = spr_xanastasia_demon_frame;
 idle_animation = spr_xanastasia_demon_idle;
 after_battle_animation = spr_xanastasia_demon_idle;
 defeated_animation =  spr_xanastasia_demon_defeated;
+defeated_animation_last_image = spr_xanastasia_demon_defeated_last_image;
+
+
 fight_0_start_animation = spr_xanastasia_demon_idle;
 fight_0_idle_animation = spr_xanastasia_demon_idle;
 fight_0_finish_animation = spr_xanastasia_demon_idle;
