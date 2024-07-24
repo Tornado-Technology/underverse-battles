@@ -10,7 +10,7 @@ function translate_set_font(lang_id) {
 		global._font_main_determination = font_determination_zn_ch;
 		global._font_main_mini = font_mini_zn_ch;
 		global._font_main_comic_sans = font_comic_sans_zn_ch;
-		global._font_main_papyrus = font_papyrus;
+		global._font_main_papyrus = font_papyrus_zn_ch;
 	}
 	else {
 		global._font_main_determination = font_determination;

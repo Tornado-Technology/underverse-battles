@@ -17,3 +17,7 @@ change_sprite_to_other_sprite(spr_ink_sans_attack_flying_hit, spr_ink_sans_attac
 change_sprite_to_other_sprite(spr_ink_sans_left_down_getting_broomie, spr_ink_sans_left_down_got_broomie);
 change_sprite_to_other_sprite(spr_ink_sans_left_down_drawing_on_ground, spr_ink_sans_left_down_drew_on_ground);
 change_sprite_to_other_sprite(spr_ink_sans_left_down_teleporting, spr_ink_sans_inks_after_teleporting);
+
+// Episode 3
+
+change_sprite_to_other_sprite(spr_ink_sans_appearance_from_inks, spr_ink_sans_standing_left);

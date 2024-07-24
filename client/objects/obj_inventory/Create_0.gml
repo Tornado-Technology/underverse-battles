@@ -11,6 +11,7 @@ max_item_count = 8;
 sprite_index = spr_empty;
 
 is_open = false;
+can_closing = true;
 
 searching_name = "";
 
@@ -55,6 +56,26 @@ has = function(name) {
 	return array_any(ui.items, function(item) {
 		return item.key == searching_name;
 	});
+}
+
+check_used = function(name) {
+	searching_name = name;
+	return ui.using_item.key == searching_name;
+}
+
+set_cutscene_inventory = function(callback) {
+	can_closing = false;
+	ui.is_draw_back_button = false;
+	ui.is_selection_for_story = true;
+	ui.selection_callback = callback;
+	open();
+}
+
+set_default_inventory = function() {
+	can_closing = true;
+	ui.is_draw_back_button = true;
+	ui.is_selection_for_story = false;
+	close();
 }
 
 ui.set_back_function(close);

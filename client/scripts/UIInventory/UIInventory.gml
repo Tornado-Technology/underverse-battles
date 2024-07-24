@@ -10,22 +10,36 @@ function UIInventory(character, items, max_item_count) constructor {
 	item_count = array_length(items);
 	button_shift_y = 20;
 	description_position_x = 118;
+	
+	is_draw_back_button = true;
+	is_selection_for_story = false;
+	
+	selection_callback = function() {}
+	using_item = noone;
 
 	on_press = function(_self) {
-		var item = items[_self.index];
-		switch (item.type) {
+		using_item = items[_self.index];
+		
+		if (is_selection_for_story) {
+			selection_callback();
+			back();
+			audio_play_sound_plugging(snd_selection);
+			return;
+		}
+		
+		switch (using_item.type) {
 			case ITEM_TYPE.UNDEFINED:
-				item.special_function();
+				using_item.special_function();
 				audio_play_sound_plugging(snd_cant_select);
 				break;
 			case ITEM_TYPE.HEAL:
-				character.heal(item.hp);
-				item.special_function();
+				character.heal(using_item.hp);
+				using_item.special_function();
 				back();
 				break;
 		}
 		
-		if (item.can_destroy_by_use) {
+		if (using_item.can_destroy_by_use) {
 			array_delete(items, buttons.current_option, 1);
 			item_count--;
 		}
@@ -103,6 +117,7 @@ function UIInventory(character, items, max_item_count) constructor {
 			draw_description(i, position_x + description_position_x, position_y + i * button_shift_y - 7);
 			i++;
 		}
+		if (!is_draw_back_button) exit;
 		buttons.draw(i, position_x, position_y + max_item_count * button_shift_y);
 	}
 }

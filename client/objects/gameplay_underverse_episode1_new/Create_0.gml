@@ -57,7 +57,7 @@ cutscenes = [
 			audio_play_sound_once(snd_swing);
 		}],
 		[cutscene_wait, 0.1],
-		[cutscene_object_set_sprtie, sans, spr_char_sans_controlled],
+		[cutscene_object_set_sprite, sans, spr_char_sans_controlled],
 		[cutscene_object_move_to, sans, 1000, room_height/2, 3],
 		[cutscene_object_move_to, soul_sans, 1000, room_height/2, 3],
 		[cutscene_wait, 0.3],
