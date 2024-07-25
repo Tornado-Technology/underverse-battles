@@ -10,7 +10,7 @@ function UIButton() constructor {
 	
 	hover = false;
 	is_focus = false;
-	needs_hover = false;
+	needs_focus = false;
 	is_multi_touch = false;
 	can_be_on_pause = true;
 	
@@ -116,7 +116,7 @@ function UIButton() constructor {
 				on_held(self);
 			}
 			
-			if (mouse_check_button_pressed(mb_left, device_index) || (is_desktop ? input_check_pressed(input.action) : false)) {
+			if (mouse_check_button_pressed(mb_left, device_index)) {
 				on_press(self);
 			}
 			
@@ -143,9 +143,16 @@ function UIButton() constructor {
 			pressed = holding;
 		}
 		
-		if (is_binded && (needs_hover && hover || !needs_hover)) {
+		if (is_binded && (needs_focus && is_focus || !needs_focus)) {
 			if (input_check_pressed(bind)) {
 				on_press(self);
+				keyboard_clear_lastkey();
+			}
+			if (input_check_held(bind)) {
+				on_held(self);
+			}
+			if (input_check_released(bind)) {
+				on_release(self);
 				keyboard_clear_lastkey();
 			}
 		}

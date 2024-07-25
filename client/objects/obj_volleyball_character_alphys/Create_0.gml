@@ -5,7 +5,7 @@ ball_collision_height = -10;
 ball_spawn_height = 16;
 
 punch_direction = 90;
-punch_inaccuracy = 24;
+punch_inaccuracy = 25;
 punch_speed = random_range(1.3, 2.2);
 punch_force = random_range(3, 5);
 

@@ -7,9 +7,10 @@ if (!is_controlled || global.pause_game) {
 if (is_punching && !is_punched) {
 	if (collision_rectangle(x - ball_collision_width / 2, y, x + ball_collision_width / 2, y + ball_collision_height, ball, false, false) &&
 	ball.height < sprite_height + 2) {
-		var result_punch_direction = punch_direction + irandom_range(-punch_inaccuracy, punch_inaccuracy);
-		ball.punch(result_punch_direction, punch_speed, punch_force);
+		ball.punch(calculate_punch_direction(), punch_speed, punch_force);
 		is_punched = true;
+		
+		audio_play_sound_plugging(snd_ball_punch);
 	}
 	exit;
 }

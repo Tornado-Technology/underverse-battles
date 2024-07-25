@@ -113,6 +113,8 @@ function UIDialog(dialog, font = global._font_main_determination) constructor {
 	}
 	
 	static skip_dialog = function() {
+		if (letter_position == 0) exit;
+		
 		letter_position = string_length(current_text);
 		
 		if (string_char_at(current_text, letter_position) == skip_char) {

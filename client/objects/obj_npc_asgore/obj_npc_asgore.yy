@@ -2,6 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_npc_asgore",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
@@ -12,8 +13,8 @@
     "path":"folders/Objects/Fight/Story Mode/Underverse Episode 3/NPC.yy",
   },
   "parentObjectId":{
-    "name":"obj_npc",
-    "path":"objects/obj_npc/obj_npc.yy",
+    "name":"obj_wall",
+    "path":"objects/obj_wall/obj_wall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

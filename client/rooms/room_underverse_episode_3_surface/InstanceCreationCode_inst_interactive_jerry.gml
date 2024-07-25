@@ -1,6 +1,6 @@
 npc = obj_npc_jerry;
 
-sides = [dir.down, dir.right];
+sides = [dir.up, dir.right];
 
 cutscenes = [
 	[

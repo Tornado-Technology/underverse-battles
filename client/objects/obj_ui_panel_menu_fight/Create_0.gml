@@ -45,6 +45,9 @@ if (!fight_network_mode) {
 		if (gameplay_exists) {
 			instance_destroy(global.gameplay_instance);
 		}
+		if (instance_exists(obj_inventory)) {
+			instance_destroy(obj_inventory);
+		}
 		camera_resize();
 		instance_destroy();
 		room_goto(room_menu);

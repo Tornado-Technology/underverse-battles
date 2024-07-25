@@ -63,17 +63,17 @@ function UITextButton(index, text, font = global._font_main_determination) : UIB
 	
 	static set_hover = function(position_x, position_y) {
 		var shift = 2;
-		var halign_shift_left = 2; var halign_shift_right = 2;
-		if (halign == fa_left) { halign_shift_left = 4; halign_shift_right = 1; }
-		if (halign == fa_right) { halign_shift_left = 1; halign_shift_right = 4; }
-		var valign_shift_top = 2; var valign_shift_bottom = 2;
-		if (valign == fa_top) { valign_shift_top = 4; valign_shift_bottom = 1; }
-		if (valign == fa_bottom) { valign_shift_top = 1; valign_shift_bottom = 4; }
+		var halign_shift_left = scale_x / 2; var halign_shift_right = scale_x / 2;
+		if (halign == fa_left) { halign_shift_left = 0; halign_shift_right = scale_x; }
+		if (halign == fa_right) { halign_shift_left = scale_x; halign_shift_right = 0; }
+		var valign_shift_top = scale_y / 2; var valign_shift_bottom = scale_y / 2;
+		if (valign == fa_top) { valign_shift_top = 0; valign_shift_bottom = scale_y; }
+		if (valign == fa_bottom) { valign_shift_top = scale_y; valign_shift_bottom = 0; }
 			
-		var point_x1 = position_x - padding - (is_separate ? (width > w ? w : width) : width) * scale_x / halign_shift_left;
-		var point_y1 = position_y - padding - (is_separate ? (height * (width div w + 1) + sep * (width div w + 1)) / 2 : height) * scale_y / valign_shift_top;
-		var point_x2 = position_x + padding + (is_separate ? (width > w ? w : width) : width) * scale_x / halign_shift_right;
-		var point_y2 = position_y + padding + (is_separate ? (height * (width div w + 1) + sep * (width div w + 1)) / 2 : height) * scale_y / valign_shift_bottom;
+		var point_x1 = position_x - padding - (is_separate ? (width > w ? w : width) : width) * halign_shift_left;
+		var point_y1 = position_y - padding - (is_separate ? (height * (width div w + 1) + sep * (width div w + 1)) / 2 : height) * valign_shift_top;
+		var point_x2 = position_x + padding + (is_separate ? (width > w ? w : width) : width) * halign_shift_right;
+		var point_y2 = position_y + padding + (is_separate ? (height * (width div w + 1) + sep * (width div w + 1)) / 2 : height) * valign_shift_bottom;
 		
 		hover = point_in_rectangle_gui(point_x1, point_y1, point_x2, point_y2);
 		if (development_mode) draw_rectangle_color(point_x1, point_y1, point_x2, point_y2, c_red, c_red, c_red, c_red, true);

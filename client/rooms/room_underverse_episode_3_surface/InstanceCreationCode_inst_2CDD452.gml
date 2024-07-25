@@ -53,6 +53,7 @@ cutscenes = [
 			instance_create_depth(2697, 2851, fight_depth.player, ink_sans, {
 				sprite_index: spr_ink_sans_appearance_from_inks
 			});
+			audio_play_sound_at(snd_slime, ink_sans.x, ink_sans.y, 0, 180, 600, 1, false, 2);
 		}],
 		[cutscene_wait, 3],
 		[cutscene_object_set_sprite, ink_sans, spr_ink_sans_standing_left_awkward],
@@ -126,13 +127,14 @@ cutscenes = [
 		[cutscene_wait, 2],
 		[cutscene_dialog, "Underverse_Episode3.Dialog42", dir.down],
 		[cutscene_object_set_sprite, target_character, spr_frisk_walking_right],
-		[cutscene_object_move_to, target_character, 2654, 2851, 1],
+		[cutscene_character_move_to, target_character, 2654, 2851, 1],
+		[cutscene_wait, 0.5],
 		[cutscene_object_set_sprite, target_character, spr_frisk_hugs_sans_start],
 		[cutscene_object_set_sprite, sans, spr_empty],
 		[cutscene_wait, 3],
 		[cutscene_dialog, "Underverse_Episode3.Dialog43", dir.down],
 		[cutscene_object_set_sprite, target_character, spr_frisk_hugs_sans_end],
-		[cutscene_wait, 0.4],
+		[cutscene_wait, 4/15],
 		[cutscene_object_set_sprite, sans, spr_sans_got_heart_locket],
 		[cutscene_object_set_sprite, target_character, spr_frisk_walking_right],
 		[cutscene_object_move_to, target_character, 2624, 2851, 1],

@@ -13,7 +13,7 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 				button[current_option].set_focus(false);
 				current_option = self_button.index;
 			});
-		button[i].needs_hover = true;
+		button[i].needs_focus = true;
 		i++;
 	}
 	
@@ -60,8 +60,7 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 	static set_bind_input = function(bind) {
 		var i = 0;
 		repeat (count) {
-			self.is_binded = true;
-			self.bind = bind;
+			button[i].set_bind_input(bind);
 			i++;
 		}
 		return self;

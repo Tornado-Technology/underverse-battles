@@ -42,3 +42,6 @@ camera_set_view_size(_camera, view_width, view_height);
 
 // Fullscreen
 event_user(15);
+
+// Audio listener
+audio_listener_position(new_position.x + view_width / 2, new_position.y + view_height / 2, 0);

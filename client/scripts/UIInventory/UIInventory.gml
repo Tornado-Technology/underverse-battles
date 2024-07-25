@@ -82,16 +82,16 @@ function UIInventory(character, items, max_item_count) constructor {
 		button_names[i] = translate_get("Menu.StandardButtons.Back");
 		
 		buttons = new UITextButtonSelector(button_names, input.up, input.down, item_count)
+			.set_bind_input(input.action)
 			.set_padding(0)
 			.set_color(c_white, c_yellow)
 			.set_align(fa_left)
-			.set_bind_input(input.action)
 		
 		i = 0;
 		repeat (item_count) {
 			buttons.button[i].set_on_press(on_press);
 			buttons.button[i].is_auto_focus = false;
-			buttons.button[i].needs_hover = true;
+			buttons.button[i].needs_focus = true;
 			i++;
 		}
 		
@@ -100,7 +100,7 @@ function UIInventory(character, items, max_item_count) constructor {
 				audio_play_sound_plugging(snd_selection);
 			})
 		buttons.button[i].is_auto_focus = false;
-		buttons.button[i].needs_hover = true;
+		buttons.button[i].needs_focus = true;
 	}
 	
 	static add_item = function(item) {

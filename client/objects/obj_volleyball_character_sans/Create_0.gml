@@ -19,3 +19,11 @@ walking_down_sprite = spr_sans_volleyball_walking_down;
 walking_left_sprite = spr_sans_volleyball_walking_left;
 walking_right_sprite = spr_sans_volleyball_walking_right;
 punch_sprite = spr_sans_volleyball_punch;
+
+calculate_punch_direction = function() {
+	return choose(
+		punch_direction + irandom_range(-punch_inaccuracy, punch_inaccuracy),
+		point_direction(ball.x, ball.y, obj_volleyball_character_asgore.x, obj_volleyball_character_asgore.y),
+		point_direction(ball.x, ball.y, obj_volleyball_character_alphys.x, obj_volleyball_character_alphys.y)
+	);
+}

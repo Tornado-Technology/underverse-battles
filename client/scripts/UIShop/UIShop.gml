@@ -40,7 +40,7 @@ function UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dia
 	
 	main_button = new UITextButtonSelector(main_button_texts)
 		.set_bind_input(input.action)
-		.set_padding(2)
+		.set_padding(1)
 		.set_color(c_white, c_yellow)
 		.set_align(fa_left)
 		.set_focus()
@@ -51,7 +51,7 @@ function UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dia
 	
 	item_button = new UITextButtonSelector(item_button_texts)
 		.set_bind_input(input.action)
-		.set_padding(2)
+		.set_padding(1)
 		.set_color(c_white, c_yellow)
 		.set_align(fa_left)
 		.set_focus();
@@ -77,7 +77,7 @@ function UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dia
 	
 	talk_button = new UITextButtonSelector(talk_button_texts)
 		.set_bind_input(input.action)
-		.set_padding(2)
+		.set_padding(1)
 		.set_color(c_white, c_yellow)
 		.set_align(fa_left)
 		.set_focus();

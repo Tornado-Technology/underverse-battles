@@ -22,12 +22,7 @@ menu_button_text = [
 menu_button_count = array_length(menu_button_text);
 
 // Items
-items = [
-	new Heal("Хавчик", "Восстановит 24 ХП", 24, 12),
-	new Heal("Хавчик круче", "Восстановит 30 ХП", 30, 12),
-	new Heal("Хавчик хуже", "Восстановит 12 ХП", 12, 12),
-	new Heal("Хавчик норм", "Восстановит 20 ХП", 20, 12)
-];
+items = [];
 item_button_count = array_length(items);
 
 // Talk

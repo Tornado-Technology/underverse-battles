@@ -16,11 +16,21 @@ can_closing = true;
 searching_name = "";
 
 items = [
-	new Item("HeartShaped")
+	new Item("HeartLocket")
 		.set_can_destroy_by_use(false),
 ];
 
 ui = new UIInventory(character, items, max_item_count);
+
+text = {
+	hp: translate_get("CharactersDescription.HP"),
+	sp: translate_get("CharactersDescription.SP"),
+	damage: translate_get("CharactersDescription.Damage"),
+	karma: translate_get("CharactersDescription.Karma"),
+	regeneration: translate_get("CharactersDescription.Regeneration"),
+	stamines: translate_get("CharactersDescription.Stamines"),
+	creator: translate_get("CharactersDescription.Creator"),
+}
 
 open = function() {
 	is_open = true;

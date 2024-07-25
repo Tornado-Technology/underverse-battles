@@ -8,6 +8,7 @@ set_frame("Sans","angry", spr_sans_frame_angry);
 set_frame("Sans","tired", spr_sans_frame_tired);
 set_frame("Sans","confused", spr_sans_frame_confused);
 set_frame("Sans","joking", spr_sans_frame_joking);
+set_frame("Sans","glad", spr_sans_frame_glad);
 // Sans (volleybro)
 set_frame("SansVolleybro","normal", spr_sans_volleybro_frame);
 set_frame("SansVolleybro","tired", spr_sans_volleybro_frame_tired);

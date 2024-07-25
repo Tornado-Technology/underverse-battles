@@ -19,7 +19,7 @@ cutscenes = [
 			npc.speak();
 			if (obj_inventory.remove_money(12)) {
 				gameplay_underverse_episode_3_surface.nice_cream_saled = true;
-				obj_inventory.add_item(new Heal(translate_get("Item.NiceCream.Name"), translate_get("Item.NiceCream.Description"), 20, 12));
+				obj_inventory.add_item(new Heal("NiceCream", 20, 12));
 				audio_play_sound_plugging(snd_purchase);
 				cutscene_create(cutscenes[2]);
 			} else {

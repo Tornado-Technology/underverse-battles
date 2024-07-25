@@ -35,12 +35,17 @@ stand = function() {
 }
 
 punch = function() {
-	var result_punch_direction = punch_direction + irandom_range(-punch_inaccuracy, punch_inaccuracy);
-	ball.punch(result_punch_direction, punch_speed, punch_force);
+	ball.punch(calculate_punch_direction(), punch_speed, punch_force);
 	obj_volleyball_minigame.last_puncher = id;
 	is_punching = true;
 	sprite_index = punch_sprite;
 	time_source_start(time_source_cooldown);
+	
+	audio_play_sound_at(snd_ball_punch, x, y, 0, 180, 600, 1, false, 2);
+}
+
+calculate_punch_direction = function() {
+	return punch_direction + irandom_range(-punch_inaccuracy, punch_inaccuracy);
 }
 
 change_sprite_by_condition = function(condition, new_sprite) {

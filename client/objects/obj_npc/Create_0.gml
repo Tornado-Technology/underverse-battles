@@ -1,5 +1,32 @@
 image_speed = 0;
 
+is_moving = false;
+
+x_new = 0;
+y_new = 0;
+speed_const = 2;
+
+move = function(_x, _y, _speed) {
+	is_moving = true;
+	x_new = x + _x;
+	y_new = y + _y;
+	speed_const = _speed;
+}
+
+move_to = function(_x, _y, _speed) {
+	is_moving = true;
+	x_new = _x;
+	y_new = _y;
+	speed_const = _speed;
+}
+
+skip_moving = function() {
+	is_moving = false;
+	x = x_new;
+	y = y_new;
+	speed_const = 0;
+}
+
 speak = function() {
 	image_speed = 1;
 }

@@ -10,7 +10,7 @@ frisk = obj_character_frisk;
 sans = obj_character_sans;
 papyrus = obj_npc_papyrus_episode_3;
 papyrus_character = obj_character_papyrus;
-undyne = obj_character_undyne;
+undyne = obj_npc_undyne;
 alphys = obj_npc_alphys;
 toriel = obj_npc_toriel;
 asgore = obj_npc_asgore;
@@ -53,11 +53,7 @@ create_final_volleyball_cutscene = function() {
 
 // Cutscenes
 cutscenes = [
-	[	// Picnic begins (Index: 0)
-		//[cutscene_execute, function() {
-		//	frisk.control(true);
-		//	sans.follow(frisk);
-		//}],
+	[
 		[cutscene_object_set_sprite, frisk, spr_frisk_with_plate],
 		[cutscene_object_set_sprite, sans, spr_sans_sitting_eating],
 		[cutscene_object_set_sprite, undyne, spr_undyne_picnic_eating_closed_eyes],
@@ -111,15 +107,17 @@ cutscenes = [
 			instance_create_depth(sans.x + 4, sans.y, fight_depth.player, obj_steak);
 		}],
 		[cutscene_object_set_sprite, sans, spr_sans_walking_left],
-		[cutscene_character_move_to, sans, 480, 2936, 2],
-		[cutscene_object_set_sprite, sans, spr_sans_standing_left],
+		[cutscene_character_move_to, sans, 474, 2936, 2],
 		[cutscene_wait, 1/4],
 		[cutscene_object_set_sprite, frisk, spr_frisk_standing_down],
-		[cutscene_wait, 2],
+		[cutscene_wait, 0.4],
+		[cutscene_object_set_sprite, sans, spr_sans_standing_left],
+		[cutscene_wait, 0.4],
 		[cutscene_dialog, episode + "Dialog21", dir.down],
 		[cutscene_execute, function() {
 			frisk.direction = dir.down;
 			frisk.control(true);
+			sans.direction = dir.left;
 			sans.follow(frisk);
 		}],
 	],
@@ -127,7 +125,7 @@ cutscenes = [
 		[cutscene_execute, function() {
 			var volleyball_characters = [obj_volleyball_character_alphys, obj_volleyball_character_asgore, obj_volleyball_character_frisk, obj_volleyball_character_sans, obj_volleyball_character_papyrus, obj_volleyball_character_undyne];
 			array_foreach(volleyball_characters, function(character, index) {
-				var characters = [obj_npc_alphys, obj_npc_asgore, obj_character_frisk, obj_character_sans, obj_character_papyrus, obj_character_undyne];
+				var characters = [obj_npc_alphys, obj_npc_asgore, obj_character_frisk, obj_character_sans, obj_character_papyrus, obj_npc_undyne];
 				var character_sprites = [spr_alphys_volleyball_standing, spr_asgore_picnic_standing_down, spr_frisk_standing_down, spr_sans_volleybro_standing_down, spr_papyrus_picnic_standing_down, spr_undyne_picnic_with_ball];
 				instance_create_depth(character.x, character.y, character.depth, characters[index], {
 					sprite_index: character_sprites[index]
@@ -168,6 +166,9 @@ cutscenes = [
 			ball.punch_down(90, 5, 1);
 			camera_set_overwrite_position(obj_camera.camera_position.x, sans.y - display_get_gui_height() / 2 - object_get_sprite_max_size(sans));
 			camera_set_speed(5, 5);
+			
+			audio_play_sound_once(snd_ball_punch);
+			audio_play_sound_once(snd_projectile);
 		}],
 		[cutscene_wait, 1/6],
 		[cutscene_object_set_sprite, net, spr_volleyball_net_breaking],
@@ -179,7 +180,12 @@ cutscenes = [
 			ball.punch(200, 1, 1);
 			ball.step /= 10;
 			ball.step_force /= 10;
+			
 			audio_sound_gain(snd_park, 0, 1000);
+			audio_play_sound_once(snd_ball_punch);
+			audio_play_sound_once(snd_damage);
+			audio_play_sound_once(snd_slowing_down_time);
+			audio_play_sound_once(snd_stun);
 		}],
 		[cutscene_wait, 0.5],
 		[effect_fade, 3, 1, 2, c_white],
@@ -187,7 +193,12 @@ cutscenes = [
 		[cutscene_execute, function() {
 			instance_create(obj_gasters_apparition);
 		}],
-		[cutscene_wait, 2.5],
+		[cutscene_wait, 2],
+		[cutscene_execute, function() {
+			audio_sound_gain(snd_stun, 0, 1000);
+			audio_play_sound_once(snd_speeding_up_time);
+		}],
+		[cutscene_wait, 0.5],
 		[cutscene_execute, function() {
 			frisk.sprite_index = spr_frisk_standing_up;
 			papyrus_character.sprite_index = spr_papyrus_picnic_standing_up;
@@ -230,8 +241,12 @@ cutscenes = [
 		[cutscene_character_move, sans, 400, 20, 2],
 		[cutscene_wait, 2],
 		[cutscene_dialog, episode + "Dialog30", dir.down],
-		[cutscene_object_set_position, papyrus_character, 206, 2990],
-		[cutscene_object_set_sprite, papyrus_character, spr_papyrus_picnic_standing_down_worry],
+		[cutscene_execute, function() {
+			instance_destroy(papyrus_character);
+			instance_create_depth(206, 2990, fight_depth.player, papyrus, {
+				sprite_index: spr_papyrus_picnic_standing_down_worry
+			})
+		}],
 		[cutscene_object_set_position, asgore, 163, 3013],
 		[cutscene_object_set_sprite, asgore, spr_asgore_picnic_standing_right],
 		[cutscene_object_set_position, undyne, 206, 3039],

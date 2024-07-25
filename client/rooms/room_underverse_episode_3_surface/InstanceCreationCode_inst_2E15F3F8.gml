@@ -1,5 +1,7 @@
 npc = obj_npc_vert;
 
+sides = [dir.up, dir.right];
+
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

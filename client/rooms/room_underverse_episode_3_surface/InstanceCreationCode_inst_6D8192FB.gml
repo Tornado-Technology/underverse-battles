@@ -21,7 +21,7 @@ interact_callback = function() {
 reset_characters_and_npc = function() {
 	destroying_objects = [
 		frisk, sans,
-		obj_npc_papyrus_episode_3, obj_character_undyne, obj_npc_alphys, obj_npc_asgore,
+		obj_npc_papyrus_episode_3, obj_npc_undyne, obj_npc_alphys, obj_npc_asgore,
 		obj_npc_bear, obj_npc_rabbit_mom, obj_npc_dog_smaller, obj_npc_dogs_family,
 		obj_npc_royal_guard_1, obj_npc_royal_guard_2, obj_garbage_bags_pile,
 		obj_npc_vulkin, obj_npc_jerry, obj_npc_mushroom_licker, obj_npc_ficus_licker,
