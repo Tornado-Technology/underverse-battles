@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_little_stars_orange_dream",
-    "path":"sprites/spr_little_stars_orange_dream/spr_little_stars_orange_dream.yy",
+    "name":"spr_little_star_orange_dream",
+    "path":"sprites/spr_little_star_orange_dream/spr_little_star_orange_dream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

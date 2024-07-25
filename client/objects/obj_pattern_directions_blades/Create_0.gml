@@ -42,12 +42,12 @@ repeat (count) {
 }
 
 var period = 43 - 3 * _power;
-var repeats = 14 + (_power div 2);
+var repeats = 8 + _power * 2;
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, repeats * period / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, repeats * period / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();	
 });

@@ -30,11 +30,6 @@ time_source_update = time_source_create(time_source_game, 0.1, time_source_units
 	blades_instance.move_spinning(5 + _power * 0.1);	
 });
 
-
-var period = 32 - 2 * _power;
-var repeats = 14 + _power * 3;
-
-
-time_source_update_destroy = time_source_create(time_source_game, 5 + _power * 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 5 + _power, time_source_units_seconds, function () {
 	instance_destroy();	
 });

@@ -14,11 +14,11 @@ image_yscale = 0.5;
 
 image_angle = angle;
 
-destroy = false;
+is_destroing = false;
 
 time_source_prejudice = time_source_create(time_source_game, time_prejudice / 60, time_source_units_seconds, function () {
 	end_prejudice();
-	destroy = true;
+	is_destroing = true;
 });
 
 time_source_start(time_source_prejudice);

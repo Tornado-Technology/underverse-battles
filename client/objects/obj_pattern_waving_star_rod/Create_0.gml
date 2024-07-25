@@ -11,7 +11,7 @@ callback = function () {
 update = function () {
 	var coord = [];
 	coord = rand_side_from(border_instance.x - border_instance.left - 69, border_instance.y - border_instance.up - 69, border_instance.x + border_instance.right + 69, border_instance.y + border_instance.down + 69);
-	 	var  staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_glands_star_dream, {
+	 	var  staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_star_rod_dream, {
 		image_angle: point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y) + 225,
 		side: -1,
 		angle_speed_const: -1,
@@ -32,6 +32,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

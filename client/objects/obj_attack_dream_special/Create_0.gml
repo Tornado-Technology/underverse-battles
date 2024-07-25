@@ -20,7 +20,7 @@ create_border(battle_border.up, battle_border.down, battle_border.left, battle_b
 pattern_instances = [
 	 create_pattern_custom_power(obj_pattern_special_dream, 1, {
 		bow: obj_bow_dream,
-		arrows: obj_arrows_acceleration_dream,
+		arrows: obj_super_arrow_dream,
 		star: obj_star_dream,
 		speed_const: 3
 	 }),

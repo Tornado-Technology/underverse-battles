@@ -26,7 +26,7 @@ callback = function () {
 	var angle = 360 / 4;
 	var i  = angle;
 	while(i <= 360) {
-		var blades = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_blades_radius_dream, {	
+		var blades = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_blade_radius_dream, {	
 			angle: i,
 			center_x: border_instance.x,
 			center_y: border_instance.y

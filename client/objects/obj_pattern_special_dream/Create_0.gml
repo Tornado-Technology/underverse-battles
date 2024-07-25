@@ -37,7 +37,7 @@ update_star_rod = function () {
 	var offset = 69;
 	
 	coord = rand_side_from(border_instance.x - border_instance.left - offset, border_instance.y - border_instance.up - offset, border_instance.x + border_instance.right + offset, border_instance.y + border_instance.down + offset);
-	staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_glands_star_dream, {
+	staff = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, obj_star_rod_dream, {
 		image_angle: point_direction(coord[0], coord[1], soul_instance.x, soul_instance.y) + 225,
 		side: -1,
 		angle_speed_const: -1,
