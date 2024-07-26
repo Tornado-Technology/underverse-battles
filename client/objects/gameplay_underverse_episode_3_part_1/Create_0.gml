@@ -150,6 +150,10 @@ cutscenes = [
 		[cutscene_object_set_sprite, nightmare, spr_nightmare_down_looking_right_angry_tentacles],
 		[cutscene_wait_dialog_end],
 		[cutscene_object_set_sprite, cross, spr_cross_xevent_getting_knife_looking_left],
+		[cutscene_execute, function() {
+			audio_play_sound_once(snd_grab);
+		}],
+		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog15"],
 		// Dream is coming
 		[cutscene_execute, function () {
@@ -178,6 +182,6 @@ cutscenes = [
 		[cutscene_execute, function() {
 			audio_stop_sound(snd_nightmare_appears);
 		}],
-		[room_goto, room_menu]
+		[room_goto, room_underverse_episode_3_surface]
 	]
 ];

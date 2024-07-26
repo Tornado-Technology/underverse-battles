@@ -80,7 +80,7 @@ set_new_round = function(team_index) {
 		player.y = player.start_position_y;
 	});
 	
-	if (score_team_1 == 1 || score_team_2 == 1) {
+	if (score_team_1 == 9 || score_team_2 == 9) {
 		instance_destroy(ball);
 		instance_destroy(obj_cutscene);
 		gameplay_underverse_episode_3_surface.create_final_volleyball_cutscene();
