@@ -26,6 +26,7 @@ set_frame("Ink", "enthusiastic", spr_ink_sans_frame_enthusiastic);
 set_frame("Ink", "emotionless", spr_ink_sans_frame_emotionless);
 set_frame("Ink", "angry", spr_ink_sans_frame_angry);
 set_frame("Ink", "injured", spr_ink_sans_frame_calm);
+set_frame("Ink", "shying", spr_ink_sans_frame_shying);
 // C (XChara/Cross)
 set_frame("C", "normal", spr_xchara_frame);
 set_frame("C", "secretive", spr_xchara_frame_secretive);

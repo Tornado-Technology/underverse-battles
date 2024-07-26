@@ -1,6 +1,8 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"snd_teleport_2","order":1,"path":"sounds/snd_teleport_2/snd_teleport_2.yy",},
+    {"name":"spr_ink_sans_frame_shying","order":1,"path":"sprites/spr_ink_sans_frame_shying/spr_ink_sans_frame_shying.yy",},
     {"name":"spr_super_arrow_dream","order":1,"path":"sprites/spr_super_arrow_dream/spr_super_arrow_dream.yy",},
   ],
 }
