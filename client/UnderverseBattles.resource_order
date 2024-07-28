@@ -223,6 +223,8 @@
     {"name":"spr_special_attack_x_anastasia_locked","order":1,"path":"sprites/spr_special_attack_x_anastasia_locked/spr_special_attack_x_anastasia_locked.yy",},
     {"name":"spr_special_attack_x_anastasia","order":2,"path":"sprites/spr_special_attack_x_anastasia/spr_special_attack_x_anastasia.yy",},
     {"name":"spr_steak","order":11,"path":"sprites/spr_steak/spr_steak.yy",},
+    {"name":"snd_teleport_2","order":1,"path":"sounds/snd_teleport_2/snd_teleport_2.yy",},
+    {"name":"spr_ink_sans_frame_shying","order":1,"path":"sprites/spr_ink_sans_frame_shying/spr_ink_sans_frame_shying.yy",},
     {"name":"spr_super_arrow_dream","order":1,"path":"sprites/spr_super_arrow_dream/spr_super_arrow_dream.yy",},
     {"name":"spr_thread_bone_error_sans_anti_piracy","order":1,"path":"sprites/spr_thread_bone_error_sans_anti_piracy/spr_thread_bone_error_sans_anti_piracy.yy",},
     {"name":"spr_thread_bone_error_sans","order":1,"path":"sprites/spr_thread_bone_error_sans/spr_thread_bone_error_sans.yy",},

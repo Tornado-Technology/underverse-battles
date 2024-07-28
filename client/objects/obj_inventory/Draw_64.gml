@@ -23,6 +23,8 @@ next_position_y += 10;
 draw_text(next_position_x, next_position_y, $"{text.sp}: {character.stamina}/{character.max_stamina}");
 next_position_y += 10;
 draw_text(next_position_x, next_position_y, $"{text.damage}: {character.damage}");
+next_position_y += 10;
+draw_text(next_position_x, next_position_y, $"{text.gold}: {money}");
 
 // Inventory
 draw_sprite_ext(spr_fight_ui_action_box, 0, position_x, position_y, 4, 6.2, 0, c_white, 1);

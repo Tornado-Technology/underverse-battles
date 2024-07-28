@@ -27,26 +27,26 @@ cutscenes = [
 		[cutscene_wait, 3],
 		[cutscene_dialog, episode + "Dialog1"],
 		[cutscene_object_set_sprite, xchara, spr_xchara_on_knees_transform_cross_2],
-		[audio_play_sound_once, snd_teleport],
+		[audio_play_sound_once, snd_teleport_2],
 		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog2"],
 		[cutscene_wait, 0.5],
 		[cutscene_object_set_sprite, xchara, spr_cross_on_knees_turning_to_xchara],
-		[audio_play_sound_once, snd_teleport],
+		[audio_play_sound_once, snd_teleport_2],
 		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog3"],
 		[cutscene_object_set_sprite, xchara, spr_xchara_on_knees_transform_cross_2],
-		[audio_play_sound_once, snd_teleport],
+		[audio_play_sound_once, snd_teleport_2],
 		[cutscene_wait, 1],
 		[cutscene_execute, function() { audio_play_soundtrack(snd_hope, false); }],
 		[cutscene_dialog, episode + "Dialog4"],
 		[cutscene_wait, 0.5],
 		[cutscene_object_set_sprite, xchara, spr_cross_on_knees_turning_to_xchara],
-		[audio_play_sound_once, snd_teleport],
+		[audio_play_sound_once, snd_teleport_2],
 		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog5"],
 		[cutscene_object_set_sprite, xchara, spr_xchara_on_knees_transform_cross_3],
-		[audio_play_sound_once, snd_teleport],
+		[audio_play_sound_once, snd_teleport_2],
 		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog6"],
 		[cutscene_wait, 1],
@@ -150,6 +150,10 @@ cutscenes = [
 		[cutscene_object_set_sprite, nightmare, spr_nightmare_down_looking_right_angry_tentacles],
 		[cutscene_wait_dialog_end],
 		[cutscene_object_set_sprite, cross, spr_cross_xevent_getting_knife_looking_left],
+		[cutscene_execute, function() {
+			audio_play_sound_once(snd_grab);
+		}],
+		[cutscene_wait, 1],
 		[cutscene_dialog, episode + "Dialog15"],
 		// Dream is coming
 		[cutscene_execute, function () {
@@ -178,6 +182,6 @@ cutscenes = [
 		[cutscene_execute, function() {
 			audio_stop_sound(snd_nightmare_appears);
 		}],
-		[room_goto, room_menu]
+		[room_goto, room_underverse_episode_3_surface]
 	]
 ];

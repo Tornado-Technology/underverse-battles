@@ -29,7 +29,7 @@ text = {
 	karma: translate_get("CharactersDescription.Karma"),
 	regeneration: translate_get("CharactersDescription.Regeneration"),
 	stamines: translate_get("CharactersDescription.Stamines"),
-	creator: translate_get("CharactersDescription.Creator"),
+	gold: translate_get("Gold"),
 }
 
 open = function() {
