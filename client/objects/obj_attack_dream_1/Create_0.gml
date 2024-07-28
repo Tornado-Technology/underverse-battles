@@ -9,7 +9,7 @@ switch (type) {
 	create_border(battle_border.up - 45, battle_border.down - 45, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_intersecting_blades, {
 			blades_swing: obj_blade_dream,
-			blades_moving_y: obj_blade_moving_y_dream
+			blades_moving_y: obj_blade_moving_parabolas_dream
 		});
 	break;
 	

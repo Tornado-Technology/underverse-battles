@@ -37,7 +37,7 @@ update = function () {
 	var swords_instance = instance_create_depth(start_position_x, start_position_y, fight_depth.bullet_outside, swords, {
 		speed_count: 3 + _power * 0.3
 	});
-	
+	swords_instance.step = 0.02 + _power * 0.01;
 	swords_instance.gradually_appearing();
 	swords_instance.disable_surface = true;
 	swords_instance.moving_target(position_x, position_y, angle);

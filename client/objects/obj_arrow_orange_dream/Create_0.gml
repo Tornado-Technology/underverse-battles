@@ -11,11 +11,6 @@ soul_invulnerability = 20;
 speed_const = 0;
 
 
-size_ricochet = _power;
-half_width = sprite_width / 2;
-half_height = sprite_height / 2;
-
-
 result_ricochet = function (angle) {	
 	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
 
@@ -30,12 +25,7 @@ touching_walls = false;
 collision = function () {
 	var collision_border = function (angle) {
 		result_ricochet(angle);
-		size_ricochet--;
 	};	
-	
-	if (size_ricochet == -1) {
-		exit;
-	};
 	
 	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
 		collision_border(90);
@@ -45,6 +35,6 @@ collision = function () {
 	};
 }
 
-if (irandom_range(1, 100) <= (15 + _power * 10)) {
+if (can_ricochet) {
 	ricochet = true;
 };

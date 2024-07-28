@@ -14,6 +14,7 @@ update = function () {
 		var position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	
 		var thread_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, thread);	
+		thread_instance.capture_obj = bone;
 		thread_instance.target_x = position_end_x;
 		thread_instance.target_y = position_y;
 		thread_instance.scale_speed = 5 + _power * 0.1;

@@ -8,43 +8,35 @@ disable_surface = true;
 
 soul_invulnerability = 20;
 speed_const = 0;
+start_timer = false;
 
 move = false;
 ricochet = false;
 touching_walls = false;
-
-
-size_ricochet = _power;
-half_width = sprite_width / 2;
-half_height = sprite_height / 2;
-
+be_ricochet = false;
 result_ricochet = function (angle) {	
-	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
-
-	image_angle += angle;
-	move_contact_solid(direction_center_arena, speed_const);
+	image_angle += angle; 
 }
 
 collision = function () {
 	var collision_border = function (angle) {
 		result_ricochet(angle);
-		size_ricochet--;
+		be_ricochet = true;
 	};	
-	
-	if (size_ricochet == -1) {
-		exit;
-	};
-	
 	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
 		collision_border(90);
 	};
 	if (place_meeting(x, y + lengthdir_y(speed_const, image_angle), obj_solid)) {
 		collision_border(irandom_range(85, 95));
 	};
-	
-
 }
 
-if (fight_random_integer(1, 100) <= (15 + _power * 10)) {
+time_source_touching = time_source_create(time_source_game, ((36 - speed_const) / 60), time_source_units_seconds, function (){
+	touching_walls = true;
+})
+
+
+if (can_ricochet) {
 	ricochet = true;
 };
+

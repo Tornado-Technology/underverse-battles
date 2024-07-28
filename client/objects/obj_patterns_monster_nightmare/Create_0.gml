@@ -9,7 +9,7 @@ callback = function () {
 		nightmare_side++;	
 	};
 
-	var position_x = !nightmare_side ? border_instance.x - border_instance.left - 130  : border_instance.x + border_instance.right + 130;
+	var position_x = !nightmare_side ? border_instance.x - border_instance.left - 200  : border_instance.x + border_instance.right + 200;
 	var position_x_end = !nightmare_side ? border_instance.x - border_instance.left - 30  : border_instance.x + border_instance.right + 30;
 	instance_create_depth(position_x, border_instance.y - 30, fight_depth.bullet_outside_hight, monster, {
 		speed_count: 3 + _power * 0.1,

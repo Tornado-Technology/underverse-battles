@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_bow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_bow",
+  "parent":{
+    "name":"Object",
+    "path":"folders/Scripts/Local/Fight/Battle/Object.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

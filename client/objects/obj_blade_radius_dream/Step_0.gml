@@ -6,7 +6,7 @@ if (gradually_alpha) {
 
 if(gradually_speed) {
 	if(speed_angle <= speed_const) {
-		speed_angle = approach(speed_angle, speed_const, 0.05 * dtime);
+		speed_angle = approach(speed_angle, speed_const, 0.01 * dtime);
 	} else {
 		gradually_speed = false;	
 	};
@@ -14,12 +14,10 @@ if(gradually_speed) {
 
 if (stage == 0) {
 	radius -= speed_angle * dtime;
-	if (radius <= 0) {
+	if (radius <= sprite_height) {
 		stage = 1;	
 	};
-	
 } else {
-	
 	radius += speed_angle * dtime;
 	
 	if(radius >= radius_max) {

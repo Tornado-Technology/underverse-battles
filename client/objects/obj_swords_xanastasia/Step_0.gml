@@ -11,17 +11,17 @@ if (gradually_alpha) {
 
 
 if (circle_moving) {
+	
 	spinnig_speed = approach(spinnig_speed, speed_count, step * dtime);
 
 	if (stage == 0) {
 	
 		radius -= spinnig_speed * dtime;
-	
-		if (radius <= 0) {
+		
+		if (radius <= 15) {
 			stage = 1;	
 		};
 	} else {
-	
 		radius += spinnig_speed * dtime;
 	
 		if(radius >= radius_max) {
@@ -29,8 +29,7 @@ if (circle_moving) {
 		};
 	
 	};
-	
-	
+
 	x = center_x + dcos(angle) * radius;
 	y = center_y + -dsin(angle) * radius;	
 	angle += spinnig_speed * dtime; 

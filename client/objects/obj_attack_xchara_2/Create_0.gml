@@ -20,6 +20,16 @@ switch (type) {
 		});
 	break;
 	
+	case 2:
+	create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
+		pattern_instance = create_pattern(obj_pattern_damage_zone_full_moving_aren, {
+			damage_zone: obj_damage_zone_warning_xchara
+		});
+		break;
+	
+	
+	break;
+	
 	default:
 	var vertical;
 		if(fight_random_integer(0, 1)) {

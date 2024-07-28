@@ -2,7 +2,7 @@ if (!move) exit;
 
 motion_set(image_angle, speed_const * dtime);
 
-if(place_meeting(x, y, obj_battle_border)) {
+if(place_meeting(x, y, obj_solid)) {
 	if(!touching_walls) {
 		touching_walls = true;
 		return;	

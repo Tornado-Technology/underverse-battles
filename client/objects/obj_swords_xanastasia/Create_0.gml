@@ -16,7 +16,7 @@ radius_max =  0;
 
 stage = 0;
 
-step = 0.03;
+step = 0.01;
 
 spinnig_speed = 0;
 
@@ -46,7 +46,7 @@ gradually_appearing = function () {
  gradually_alpha = true;	
 }
 
-
+phanton = false;
 
 center = function (center_x, center_y) {
 	circle_moving = true;
@@ -67,8 +67,6 @@ target_soul = function (position, keep_destroy = false) {
 	position_y = position.y;
 	self.keep_destroy  = keep_destroy;
 }
-
-
 
 time_source_self_destroy = time_source_create(time_source_game, 30 / 60,  time_source_units_seconds, function () {
 	destroy = true;

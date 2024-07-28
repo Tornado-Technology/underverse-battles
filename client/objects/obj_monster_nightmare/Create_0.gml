@@ -20,7 +20,7 @@ step = 0.09;
 
 var i = 0;
 repeat(2) {
-	fist[i] = instance_create_depth(x - (70 * i), y - (5 * i), fight_depth.bullet_outside_hight, obj_fist_nightmare, {
+	fist[i] = instance_create_depth(x - (sprite_width / 24 * i), y - (5 * i), fight_depth.bullet_outside_hight, obj_fist_nightmare, {
 		speed_count: speed_count,
 		image_xscale: image_xscale
 	});	

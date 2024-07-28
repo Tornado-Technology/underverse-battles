@@ -7,8 +7,7 @@ callback = function () {
 	instance_create_depth(border_instance.x - border_instance.left  + 10, border_instance.y - border_instance.down - 20, fight_depth.bullet_outside_hight, blades_moving_y, {
 		center_x: border_instance.x,
 		center_y: border_instance.y + 30,
-		radius: 40,
-		radius_y: 30,
+		radius: 30,
 		image_angle: 90,
 		direction: 0,
 		speed_count: 1 + _power * 0.1,

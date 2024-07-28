@@ -1,7 +1,5 @@
 event_inherited();
 
-is_destroying = false;
-
 result_ricochet = function () {
 	var angle = 360 / 5;
 	var i = angle;
@@ -15,10 +13,7 @@ result_ricochet = function () {
 		});
 	
 		star.speed_const = speed_const;
-		star.disable_surface = true;
 		time_source_start(star.time_source_self_destroy);
 		i += angle;
 	}
-	
-	is_destroying = true;
-}
+}	
