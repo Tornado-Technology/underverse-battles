@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_strings_and_bones_1",
+  "%Name":"obj_star_dream_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_strings_and_bones_1",
+  "name":"obj_star_dream_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Strings",
-    "path":"folders/Attack Patterns/Strings.yy",
+    "name":"Bullets",
+    "path":"folders/Characteres/Dream/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_pattern",
-    "path":"objects/obj_pattern/obj_pattern.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_star_dream",
+    "path":"sprites/spr_star_dream/spr_star_dream.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

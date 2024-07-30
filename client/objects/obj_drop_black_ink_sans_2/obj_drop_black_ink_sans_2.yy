@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wave_from_wings_x_anastasia",
+  "%Name":"obj_drop_black_ink_sans_2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_battle_soul","path":"objects/obj_battle_soul/obj_battle_soul.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_wave_from_wings_x_anastasia",
+  "name":"obj_drop_black_ink_sans_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/X Anastasia/Bullets.yy",
+    "path":"folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_battle_pusher",
+    "path":"objects/obj_battle_pusher/obj_battle_pusher.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ink_ball_ink_sans_1",
+    "path":"sprites/spr_ink_ball_ink_sans_1/spr_ink_ball_ink_sans_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

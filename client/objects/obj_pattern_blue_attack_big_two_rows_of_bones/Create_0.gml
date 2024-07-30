@@ -34,10 +34,6 @@ var period = 55 - _power * 2;
 var repeats = (5 + _power * 2);
 var period_gasterblaster =  55 - (_power * 3);
 
-if (variable_instance_exists(id, "custom_repeats")) {
-	repeats = custom_repeats;
-}
-
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);

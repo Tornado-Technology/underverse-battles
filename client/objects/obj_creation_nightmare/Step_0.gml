@@ -1,13 +1,22 @@
-x = approach(x, target_position.x, speed_coust * dtime);
-y = approach(y, target_position.y, speed_coust * dtime);
+x = approach(x, target_position.x, speed_const * dtime);
+y = approach(y, target_position.y, speed_const * dtime);
 
 if (image_alpha <= 1) {
-	image_alpha += 0.1	
+	image_alpha += 0.1;	
+	if(image_alpha >= 0.4) {
+		exit;	
+	};
 };
 
-if (x == target_position.x && y == target_position.y) {
-	bonb();
+if (x == target_position.x && y == target_position.y && !destroying) {
+	destroying = true;
 };
 
-
-image_xscale = x > obj_battle_soul.x ? -1 : 1;
+if(destroying) {
+	image_xscale = approach(image_xscale, 0, 0.03 * dtime);
+	image_yscale -= 0.03 * dtime;	
+	
+	if(image_yscale == 0) {
+		instance_destroy();	
+	};
+};

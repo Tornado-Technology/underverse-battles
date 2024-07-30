@@ -4,29 +4,25 @@ disable_surface = true;
 
 damage = get_char_damage(obj_character_nightmare);
 
+
 soul_invulnerability = 20;
+
+image_xscale =  x > obj_battle_soul.x ? -1 : 1;
 
 image_alpha = 0;
 target_position = new Vector2(x, y);
 
 damage = 2;
 
-bonb = function () {
-	var angle_offset = irandom_range(120, 480);
-	var angle = angle_offset / 4;
-	var i = angle;
-	
-	while(i <= angle_offset) {
-		create_spike(x + dcos(i), y + -dsin(i), obj_spike_nightmare, 3, i);
-		i+= angle;
-	}
-	
-	instance_destroy();
-}
+destroying = false;
 
-time_source_spwan = time_source_create(time_source_game,  20 / 60, time_source_units_seconds, function () {
+bullets = obj_bullets_nightmare;
+
+
+time_source_spwan = time_source_create(time_source_game,  30 / 60, time_source_units_seconds, function () {
 	var target = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y);
-	create_spike(x, y + -dsin(40) * sprite_height,  obj_bullets_nightmare, 3, target);
-}, [], -1);
+	var spike = create_spike(x, y + -dsin(40) * sprite_height,  bullets, speed_const + 1, target);
+	spike.disable_surface = true;
+}, [], 3);
 
 time_source_start(time_source_spwan);

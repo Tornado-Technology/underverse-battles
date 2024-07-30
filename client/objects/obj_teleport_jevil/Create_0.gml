@@ -40,7 +40,7 @@ spwan = function () {
 	bullet_instance[0].angle += 15;
 	bullet_instance[2].angle -= 15;
 	audio_play_sound_plugging(snd_teleport_jevil);
-}
+}		
 
 time_source_moving = time_source_create(time_source_game, 30 / 60, time_source_units_seconds, function () {
 	destroy = true;

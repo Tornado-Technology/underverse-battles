@@ -1,44 +1,31 @@
-if (stage == 0) {
-	if (image_alpha < 1) {
-		image_alpha += 0.05 * dtime;
+if (gradually_alpha) {
+	if (image_alpha <= 1) {
+		image_alpha += step * dtime;	
 	};
-};
+	
+	if(image_alpha >= 1) {
+		gradually_alpha = false;
+		ink =  instance_create_depth(x, y, fight_depth.bullet_outside_hight,  obj_drop_black_ink_sans_2, {
+			target_obj: id	
+		})
 
-if (stage == 1) {
-	if (max_acc > acc) { 
-		acc += dtime;
+		ink.speed_const = speed_const;
 	};
-	image_angle += acc * angle_speed_const * dtime;
-};
-
-if (stage == 2) {
-	if (acc > 0)  {
-		acc -= dtime;
-	};
-	image_angle += acc * angle_speed_const * dtime;
+	exit;	
 };
 
 
-if (stage == 1 || stage == 2) {
-	if (side == 0) {
-		x += speed_const * dtime;
-	}
-	else if (side == 1) {
-		y += speed_const * dtime;
-	}
-	else if (side == 2) {
-		x -= speed_const * dtime;
-	}
-	else if (side == 3) {
-		y -= speed_const * dtime;
-	};
+
+x = approach(x, position_x, speed_const * dtime);
+y = approach(y, position_y, speed_const * dtime);
+
+if (x == position_x && y == position_y) {	
+	destroying = true;
 };
 
-if (stage == 3) {
-	if (image_alpha > 0) {
-		image_alpha -= 0.05 * dtime;
-	} else {
-		instance_destroy();
+if(destroying) {
+	image_alpha -= 0.05 * dtime;
+	if(image_alpha <= 0) {
+		instance_destroy();	
 	};
 };
-

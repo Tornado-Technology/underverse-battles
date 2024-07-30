@@ -16,8 +16,6 @@ target_end = new Vector2(x, y);
 
 move_beginning = true;
 
-
-
 destroy = false;
 step = 0.5;
 

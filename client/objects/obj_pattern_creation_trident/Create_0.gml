@@ -23,38 +23,30 @@ update = function () {
 
 update_creation = function () {
 	var offset = 50;
-	var cood = rand_side_from(border_instance.x - border_instance.left - offset, border_instance.y - border_instance.up - offset, border_instance.x + border_instance.right + offset, border_instance.y + border_instance.down + offset);
-	var creation_instance = instance_create_depth(cood[0], cood[1], fight_depth.bullet_outside_hight, creation, {
-		speed_coust: 2 + _power * 0.1	
+	var position_x = fight_random_choose(border_instance.x - border_instance.left - offset, border_instance.x + border_instance.right + offset);
+	var position_y = border_instance.y - border_instance.up - 10;
+	var creation_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, creation, {
+		speed_const: 2 + _power * 0.1	
 	});
 		
-	var target = new Vector2(soul_instance.x, soul_instance.y);
+	var target = new Vector2(position_x, room_height);
 	creation_instance.target_position = target;	
 }
 
 
-var period = 44 - (2 - _power) * 2;
-var repeats = 10 + _power * 0.5;
-var cooldown = 32 - (2 - _power) * 2;
+var period = 45 -  (_power * 2);
+var period_creation = 60 - (_power);
+var repeats = 10 + _power * 2;
 
-time_source_cooldown = time_source_create(time_source_game, cooldown / 60, time_source_units_seconds, function () {
-	spwan_create = true;	
-	time_source_start(time_source_update_creation);
-})
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_creation = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	if (spwan_create) {
-		update_creation();	
-		spwan_create = false;
-		time_source_start(time_source_cooldown);	
-	};
+time_source_update_creation = time_source_create(time_source_game, period_creation / 60, time_source_units_seconds, function () {
+	update_creation();	
+}, [], repeats - 1);
 
-});
-
-time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();	
 });

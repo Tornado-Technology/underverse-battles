@@ -12,7 +12,7 @@ function fell_sans_attack0(player, _power, type = fight_random_integer(0, 5)) {
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function fell_sans_attack1(player, _power, type = fight_random_integer(0, 2)) {
+function fell_sans_attack1(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_fell_sans_1, {
 		character_instance: player,
 		_power: _power,

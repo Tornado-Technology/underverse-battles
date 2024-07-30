@@ -15,7 +15,7 @@ switch (type) {
 		
 	case 1:
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
-		pattern_instance = create_pattern(obj_pattern_strings_and_bones_1, {
+		pattern_instance = create_pattern(obj_pattern_strings_square_and_bones, {
 			thread: obj_string_green,
 			bone: obj_bone_green
 		});

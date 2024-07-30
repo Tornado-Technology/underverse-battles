@@ -25,6 +25,7 @@ touching_walls = false;
 collision = function () {
 	var collision_border = function (angle) {
 		result_ricochet(angle);
+		be_ricochet = true;
 	};	
 	
 	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {

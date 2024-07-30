@@ -15,14 +15,18 @@ ricochet = false;
 touching_walls = false;
 be_ricochet = false;
 result_ricochet = function (angle) {	
-	image_angle += angle; 
+	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
+
+	image_angle += angle;
+	move_contact_solid(direction_center_arena, speed_const);
 }
 
 collision = function () {
 	var collision_border = function (angle) {
 		result_ricochet(angle);
-		be_ricochet = true;
+		be_ricochet = true;	
 	};	
+	
 	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
 		collision_border(90);
 	};
@@ -31,9 +35,6 @@ collision = function () {
 	};
 }
 
-time_source_touching = time_source_create(time_source_game, ((36 - speed_const) / 60), time_source_units_seconds, function (){
-	touching_walls = true;
-})
 
 
 if (can_ricochet) {

@@ -2,7 +2,7 @@ if (!move) exit;
 
 motion_set(image_angle, speed_const * dtime);
 
-if(place_meeting(x, y, obj_solid)) {
+if(place_meeting(x - sprite_width + dcos(image_angle - 180), y, obj_solid)) {
 	if(!touching_walls) {
 		touching_walls = true;
 		return;	
@@ -11,6 +11,7 @@ if(place_meeting(x, y, obj_solid)) {
 
 if (ricochet && touching_walls && !is_destroying){
 	collision();
+	touching_walls = false;
 };
 
 if (is_destroying) {

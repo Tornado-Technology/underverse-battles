@@ -1,3 +1,4 @@
+	speed_bone = 2 + _power * 0.1;
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
@@ -19,7 +20,6 @@ callback = function () {
 		position_head_y: border_instance.y
 	});
 	
-	speed_bone = 2 + _power * 0.1;
 	update();
 	update_bone();
 	
@@ -78,7 +78,7 @@ var period = 45 - (2 * _power);
 var repeats = 15 + _power * 3;
 
 
-time_source_update = time_source_create(time_source_game,  1 / (12 + _power), time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game,  1 / (11.5), time_source_units_seconds, function () {
 	update();
 }, [], -1);
 

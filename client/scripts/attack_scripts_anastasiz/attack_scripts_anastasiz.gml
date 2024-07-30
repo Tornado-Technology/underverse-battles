@@ -1,4 +1,4 @@
-function call_attack_xanastasia_0(player, _power, type = fight_random_integer(0, 3)) {
+function call_attack_xanastasia_0(player, _power, type = fight_random_integer(0, 4)) {
 	instance_create(obj_attack_xanastasia_0, {
 		character_instance: player,
 		_power: _power,
