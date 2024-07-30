@@ -22,8 +22,5 @@ smooth_y = function (_y) {
 	position_y = _y;
 }
 
-direction_fist = !image_angle ?  pusher : -pusher;
 
-destroy = false;
-
-outside_force_speed =  direction_fist + speed_count * dtime;
+destroying = false;

@@ -14,7 +14,7 @@ time_destory = 40;
 radius = 10;
 impact_on_radius = function () {}
 
-destroy = false;
+destroying = false;
 
 audio_play_sound_plugging(snd_projectile);
 
@@ -24,5 +24,5 @@ time_source_shot = time_source_create(time_source_game, 10 / 60, time_source_uni
 });
 
 time_source_obj_destroy = time_source_create(time_source_game, time_destory / 60, time_source_units_seconds, function () {
-	destroy = true;
+	destroying = true;
 });

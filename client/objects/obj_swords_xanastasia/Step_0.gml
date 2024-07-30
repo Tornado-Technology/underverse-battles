@@ -37,7 +37,7 @@ if (circle_moving) {
 };
 
 
-if(destroy) {
+if(destroying) {
 image_alpha -= step - 0.01* dtime;
 	if(image_alpha <= 0) {
 		instance_destroy();	
@@ -65,7 +65,7 @@ if(aim_soul) {
 
 	if(keep_destroy && x == position_x && y == position_y) {
 		time_source_start(time_source_self_destroy);	
-		keep_destroy = false;
+		keep_destroying = false;
 	};
 
 };

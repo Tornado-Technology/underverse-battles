@@ -8,7 +8,7 @@ if(smooth_move) {
 
 motion_set(direction, speed_count * dtime);
 
-if (destroy) {
+if (destroying) {
 	index_sprite = 0;
 	image_alpha -= 0.05 * dtime;
 	if ((image_alpha &&  image_index) == 0) {
@@ -18,5 +18,5 @@ if (destroy) {
 };
 
 if (place_meeting(x, y, obj_spinning_platform)) {
-	destroy = true;	
+	destroying = true;	
 };

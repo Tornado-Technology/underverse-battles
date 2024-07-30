@@ -1,7 +1,5 @@
 depth = fight_depth.bullet;
 
-
-
 scale_const = 0;
 scale_time = 0;
 back_const = image_yscale;

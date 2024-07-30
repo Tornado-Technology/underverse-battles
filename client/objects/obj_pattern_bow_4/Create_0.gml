@@ -19,10 +19,10 @@ update = function () {
 	var offset = fight_random_integer(40, 90);
 	var i = 0;
 	repeat(4) {
-		var s = instance_create_depth(border_instance.x - border_instance.left - offset + 80 * i, border_instance.y + border_instance.down, fight_depth.bullet_outside, obj_star_dream_1, {
+		var star_instance = instance_create_depth(border_instance.x - border_instance.left - offset + 80 * i, border_instance.y + border_instance.down, fight_depth.bullet_outside, obj_star_dream_1, {
 			direction: 90	
 		});
-		s.speed_const = -1.5 + _power * 0.1;
+		star_instance.speed_const = -1.5 + _power * 0.1;
 		i++;
 	}
 }	

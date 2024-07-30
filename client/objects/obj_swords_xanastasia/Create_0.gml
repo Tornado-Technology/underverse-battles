@@ -21,9 +21,9 @@ step = 0.01;
 spinnig_speed = 0;
 
 
-destroy = false;
+destroying = false;
 
-keep_destroy = false;
+keep_destroying= false;
 
 target_posititon = false;
 position_x = 0;
@@ -46,7 +46,6 @@ gradually_appearing = function () {
  gradually_alpha = true;	
 }
 
-phanton = false;
 
 center = function (center_x, center_y) {
 	circle_moving = true;
@@ -68,8 +67,8 @@ target_soul = function (position, keep_destroy = false) {
 	self.keep_destroy  = keep_destroy;
 }
 
-time_source_self_destroy = time_source_create(time_source_game, 30 / 60,  time_source_units_seconds, function () {
-	destroy = true;
+time_source_self_destroying = time_source_create(time_source_game, 30 / 60,  time_source_units_seconds, function () {
+	destroying = true;
 });
 
 time_source_attack = time_source_create(time_source_game, 10 / 60, time_source_units_seconds, function() {
