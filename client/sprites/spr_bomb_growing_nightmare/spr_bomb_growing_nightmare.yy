@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_bomb_growten_tacles_nightmare",
+  "%Name":"spr_bomb_growing_nightmare",
   "bboxMode":0,
   "bbox_bottom":117,
   "bbox_left":0,
@@ -36,7 +36,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"113afbca-1e66-4c99-97b1-f8bbc5765c08","blendMode":0,"displayName":"default","isLocked":false,"name":"113afbca-1e66-4c99-97b1-f8bbc5765c08","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_bomb_growten_tacles_nightmare",
+  "name":"spr_bomb_growing_nightmare",
   "nineSlice":{
     "$GMNineSliceData":"",
     "bottom":0,
@@ -67,7 +67,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_bomb_growten_tacles_nightmare",
+    "%Name":"spr_bomb_growing_nightmare",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -91,7 +91,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_bomb_growten_tacles_nightmare",
+    "name":"spr_bomb_growing_nightmare",
     "playback":1,
     "playbackSpeed":10.0,
     "playbackSpeedType":0,
@@ -103,52 +103,52 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"49d35226-b95c-40f0-9b0b-7eba0310c8ba","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"49d35226-b95c-40f0-9b0b-7eba0310c8ba","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"120a1eed-a8ac-4c6f-a192-182172aa80da","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b1e85df1-3f16-4a67-888d-2f96eeab5c14","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b1e85df1-3f16-4a67-888d-2f96eeab5c14","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b9c943d8-2158-4ffb-90e7-36da0124210c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"37ea4df6-856a-4766-a1c8-7bc88045806b","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"37ea4df6-856a-4766-a1c8-7bc88045806b","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"288d0ee6-8a58-4624-92b5-bbe80f3f791f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"647dfc18-3058-4952-a18f-363ffd726cda","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"647dfc18-3058-4952-a18f-363ffd726cda","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"85902797-d747-44d0-aee4-e30f2ef17ddc","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a09d696-fafd-4dac-8843-4f518ca97029","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a09d696-fafd-4dac-8843-4f518ca97029","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4b42cf3d-5f0d-4fa8-8fd5-17d01e527e85","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25a907f3-dc92-4891-b9a6-0b322de6e1bf","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25a907f3-dc92-4891-b9a6-0b322de6e1bf","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"56526afc-eee9-463d-8579-dedea637f5c4","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7987d74e-7ab1-410f-b9dd-e675c5f6adf0","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7987d74e-7ab1-410f-b9dd-e675c5f6adf0","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f0520058-1131-4513-9f1e-3492bcc82916","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"147fb073-361b-4bed-83c4-7f97b97555b1","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"147fb073-361b-4bed-83c4-7f97b97555b1","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"794f81ab-fa3d-4955-93a5-646464581c00","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"583cfd47-0796-4f3d-93a7-ce0f6a431b1d","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"583cfd47-0796-4f3d-93a7-ce0f6a431b1d","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f3c8db71-c1fb-47de-a110-5d178e185c5d","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2c257e8-a58f-4d0f-a400-d399f84064f1","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2c257e8-a58f-4d0f-a400-d399f84064f1","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4ecc526b-be2e-4eab-8c6d-c93e50540f9d","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99d54c25-19a6-4bd6-bbc4-86a9bb8f1f7d","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99d54c25-19a6-4bd6-bbc4-86a9bb8f1f7d","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b786cfe5-d286-42eb-8622-425245b8b207","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23a2d286-da3a-4fd2-a447-81610087b7b3","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23a2d286-da3a-4fd2-a447-81610087b7b3","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"683ad6d9-b5f8-4f3f-927c-e393731b011c","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66066e2d-ef12-4c8a-80dc-c36983669dba","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66066e2d-ef12-4c8a-80dc-c36983669dba","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6431cd63-d90c-4170-ac1d-a687894e0db2","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"181c5b0b-d8a2-44dd-895a-2a7c83d341f8","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"181c5b0b-d8a2-44dd-895a-2a7c83d341f8","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e13218d1-8409-4322-89d6-6d4c7279530c","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7657632a-b2a8-4c44-a82f-4ebc68def978","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7657632a-b2a8-4c44-a82f-4ebc68def978","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"703dc460-9183-4b8c-b5b5-97eb50cf9e05","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c588e19-6f8c-4f87-9c6a-47e988ae05d8","path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c588e19-6f8c-4f87-9c6a-47e988ae05d8","path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b4235281-dbf2-42ad-9ee5-baa952e01f71","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

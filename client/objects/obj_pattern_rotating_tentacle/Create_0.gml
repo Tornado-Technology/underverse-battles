@@ -1,4 +1,4 @@
-// Arguments:  thread_tentacles, spike
+// Arguments:  rotating_tentacle, spike
 callback = function () {
 	var tentacles_instance;
 	var target;
@@ -12,11 +12,11 @@ callback = function () {
 		right: border_instance.x + border_instance.right		
 	};
 
-	tentacles_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, thread_tentacles);
-	target = new Vector2(border.right - 40 , border.up);
+	tentacles_instance = instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, rotating_tentacle);
+	target = new Vector2(border.right - 40, border.up);
 	
 	tentacles_instance.image_angle = point_direction(tentacles_instance.x, tentacles_instance.y, target.x, target.y);
-	tentacles_instance.scale_speed = 2 + _power * 0.2;
+	tentacles_instance.rotating_speed = 1.2 + _power * 0.1;
 	tentacles_instance.image_xscale = 2;
 
 	time_source_start(time_source_update);
@@ -42,18 +42,18 @@ update = function () {
 		})
 	];
 		
-	spike_instance[i].speed_const = 3 + _power * 0.2;
+	spike_instance[i].speed_const = 2 + _power * 0.2;
 }
 
 
-var period = 33 - ( _power * 2);
-var repeats = 15 + (_power * 3);
+var period = 35 - ( _power * 2);
+var repeats = 12 + (_power * 2);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
 },[], -1);
 
 
-time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  period * repeats / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();	
 });

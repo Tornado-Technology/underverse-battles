@@ -40,11 +40,11 @@ update = function () {
 			image_angle: 90
 		});
 	};
-	spike_instance.speed_const = 3 + _power * 0.2;
+	spike_instance.speed_const = 2 + _power * 0.2;
 }
 
  
-var period = 33 - (_power * 2) ;
+var period = 40 - (_power * 2) ;
 var repeats = 5 + (_power * 2) ;
 
 if (variable_instance_exists(id, "custom_repeats")) {
@@ -55,6 +55,6 @@ time_source_update = time_source_create(time_source_game, (period) / 60, time_so
 	update();	
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1.5, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

@@ -9,7 +9,7 @@
   "bitRate":64,
   "compression":1,
   "conversionMode":0,
-  "duration":0.709458,
+  "duration":0.262245,
   "name":"snd_ball_punch",
   "parent":{
     "name":"SFX",

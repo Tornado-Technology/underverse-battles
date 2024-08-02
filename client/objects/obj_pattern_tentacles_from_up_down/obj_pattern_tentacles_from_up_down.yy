@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_string_tentacles_nightmare",
+  "%Name":"obj_pattern_tentacles_from_up_down",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_string_tentacles_nightmare",
+  "name":"obj_pattern_tentacles_from_up_down",
   "overriddenProperties":[],
   "parent":{
     "name":"Tentacles",
-    "path":"folders/Characteres/Nightmare/Bullets/Tentacles.yy",
+    "path":"folders/Attack Patterns/Tentacles.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_scare_attack",
-    "path":"objects/obj_battle_scare_attack/obj_battle_scare_attack.yy",
+    "name":"obj_pattern",
+    "path":"objects/obj_pattern/obj_pattern.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_two_sides_tentacles",
-    "path":"sprites/spr_two_sides_tentacles/spr_two_sides_tentacles.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_tentacles",
+  "%Name":"obj_pattern_two_tentacle_bombs",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_tentacles",
+  "name":"obj_pattern_two_tentacle_bombs",
   "overriddenProperties":[],
   "parent":{
     "name":"Tentacles",

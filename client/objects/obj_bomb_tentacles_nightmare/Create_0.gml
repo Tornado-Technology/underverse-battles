@@ -1,21 +1,18 @@
 event_inherited();
-spike_count = 8;
+
+damage = get_char_damage(obj_character_nightmare);
+soul_invulnerability = 20;
+
+has_spawned = false;
+is_destroying = false;
+
+bomb_idle_sprite = sprite_index;
+bomb_growing_sprite = spr_bomb_growing_nightmare;
 
 spwan = function () {
-	var angle = 360 / 4;
-	var i = angle;
-	while(i <= 360) {
-		var speed_angle = irandom_range(-3, 3);
-		
-		var tentacle_instance = instance_create_depth(x + dcos(i), y + -dsin(i), fight_depth.bullet_outside_hight, obj_tentacles_destroy_nightmare, { 
-				image_angle: i,
-				speed_angle: speed_angle
-			});	
-			
-			tentacle_instance.time_destroy = 50;
-			tentacle_instance.changes_angle = true;
-			tentacle_instance.change_scale(0.4, 0.05);
-		i += angle;	
-	}
+	has_spawned = true;
+	sprite_index = bomb_growing_sprite;
+	audio_play_sound_plugging(snd_spare_up);
 }
 
+audio_play_sound_plugging(snd_emergence);

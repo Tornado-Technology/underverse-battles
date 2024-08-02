@@ -6,7 +6,7 @@
   "bbox_left":0,
   "bbox_right":99,
   "bbox_top":0,
-  "collisionKind":0,
+  "collisionKind":4,
   "collisionTolerance":0,
   "ConfigValues":{
     "Development":{
@@ -67,7 +67,7 @@
     },
     "name":"spr_two_sides_tentacles",
     "playback":1,
-    "playbackSpeed":10.0,
+    "playbackSpeed":6.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

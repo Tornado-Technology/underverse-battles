@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bomb_growten_tacles_nightmare",
-    "path":"sprites/spr_bomb_growten_tacles_nightmare/spr_bomb_growten_tacles_nightmare.yy",
+    "name":"spr_bomb_growing_nightmare",
+    "path":"sprites/spr_bomb_growing_nightmare/spr_bomb_growing_nightmare.yy",
   },
   "spriteMaskId":null,
   "visible":true,

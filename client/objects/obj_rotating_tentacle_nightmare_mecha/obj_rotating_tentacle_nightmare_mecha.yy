@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_string_tentacles_nightmare_mecha",
+  "%Name":"obj_rotating_tentacle_nightmare_mecha",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_string_tentacles_nightmare_mecha",
+  "name":"obj_rotating_tentacle_nightmare_mecha",
   "overriddenProperties":[],
   "parent":{
     "name":"Tentacles",
     "path":"folders/Characteres/Nightmare/Bullets/Mecha/Tentacles.yy",
   },
   "parentObjectId":{
-    "name":"obj_string_tentacles_nightmare",
-    "path":"objects/obj_string_tentacles_nightmare/obj_string_tentacles_nightmare.yy",
+    "name":"obj_rotating_tentacle_nightmare",
+    "path":"objects/obj_rotating_tentacle_nightmare/obj_rotating_tentacle_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
