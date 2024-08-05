@@ -44,6 +44,7 @@
     {"name":"obj_gasters_apparition","order":1,"path":"objects/obj_gasters_apparition/obj_gasters_apparition.yy",},
     {"name":"obj_gb_blast_ink_sans_ice_blood","order":4,"path":"objects/obj_gb_blast_ink_sans_ice_blood/obj_gb_blast_ink_sans_ice_blood.yy",},
     {"name":"obj_gb_charge_ink_sans_ice_blood","order":3,"path":"objects/obj_gb_charge_ink_sans_ice_blood/obj_gb_charge_ink_sans_ice_blood.yy",},
+    {"name":"obj_heavy_drop_black_ink_sans","order":6,"path":"objects/obj_heavy_drop_black_ink_sans/obj_heavy_drop_black_ink_sans.yy",},
     {"name":"obj_ink_bomb_ink_sans","order":2,"path":"objects/obj_ink_bomb_ink_sans/obj_ink_bomb_ink_sans.yy",},
     {"name":"obj_jacket_sans","order":2,"path":"objects/obj_jacket_sans/obj_jacket_sans.yy",},
     {"name":"obj_monster_nightmare","order":17,"path":"objects/obj_monster_nightmare/obj_monster_nightmare.yy",},

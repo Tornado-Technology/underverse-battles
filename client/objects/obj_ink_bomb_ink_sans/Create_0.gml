@@ -13,7 +13,7 @@ spwan = function () {
 	var i = 0;
 	var offset = fight_random_integer(5, 10);
 	repeat(4) {
-		var drop_instance =  create_drop(x - sprite_width + (offset * i), (y - 10) - (1 * i),  obj_drop_black_ink_sans_1, speed_const, i > 2 ? 270 : 170 + (80 * i), true);
+		var drop_instance =  create_drop(x - sprite_width + (offset * i), (y - 10) - (1 * i),  obj_heavy_drop_black_ink_sans, speed_const, i > 2 ? 270 : 170 + (80 * i), true);
 		drop_instance.disable_surface = true;
 		i++;
 	}

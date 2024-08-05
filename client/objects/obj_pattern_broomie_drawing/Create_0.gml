@@ -11,7 +11,7 @@ callback = function () {
 update = function () {
 	var offset = 100;
 	var postiton_x = fight_random_choose(border_instance.x - border_instance.left - offset, border_instance.x + border_instance.right + offset);
-	var postiton_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+	var postiton_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
 
 	
 	var angle = point_direction(postiton_x, postiton_y, soul_instance.x, soul_instance.y) + 225;

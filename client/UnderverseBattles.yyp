@@ -1068,6 +1068,7 @@
     {"id":{"name":"obj_go_gameover_network","path":"objects/obj_go_gameover_network/obj_go_gameover_network.yy",},},
     {"id":{"name":"obj_go_gameover","path":"objects/obj_go_gameover/obj_go_gameover.yy",},},
     {"id":{"name":"obj_grill","path":"objects/obj_grill/obj_grill.yy",},},
+    {"id":{"name":"obj_heavy_drop_black_ink_sans","path":"objects/obj_heavy_drop_black_ink_sans/obj_heavy_drop_black_ink_sans.yy",},},
     {"id":{"name":"obj_initilization","path":"objects/obj_initilization/obj_initilization.yy",},},
     {"id":{"name":"obj_ink_ball_ink_sans","path":"objects/obj_ink_ball_ink_sans/obj_ink_ball_ink_sans.yy",},},
     {"id":{"name":"obj_ink_bomb_ink_sans","path":"objects/obj_ink_bomb_ink_sans/obj_ink_bomb_ink_sans.yy",},},

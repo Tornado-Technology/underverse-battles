@@ -12,16 +12,17 @@ if (gradually_alpha) {
 
 
 if(changes_angle) {
-	image_angle = approach(image_angle,  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
+	image_angle =  approach(image_angle,angle +  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
+	direction = approach(direction,  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
 	if (!changes) {
-		if(image_angle == point_direction(x, y, position_x, position_y)) {
+		if(	direction  == point_direction(x, y, position_x, position_y)) {
 			spwan_ink();
-			changes = true;				
+			changes = true;	
 		};	
 	};
 };
 
-motion_set(image_angle, speed_const * dtime);
+motion_set(direction, speed_const * dtime);
 
 if(point_distance(x, y, position_x, position_y) <= 15) {
 	if(!changes) {

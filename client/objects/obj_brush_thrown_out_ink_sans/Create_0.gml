@@ -6,9 +6,11 @@ image_xscale = -1;
 
 destroying = false;
 
-step = 0.05; 
-image_angle  = point_direction(x, y, position_x, position_y);
+angle =  dsin(20) * 120;
 
+step = 0.05; 
+image_angle  = angle + point_direction(x, y, position_x, position_y);
+direction =  point_direction(x, y, position_x, position_y);
 changes_angle = false;
 
 
@@ -17,7 +19,6 @@ image_alpha = 0;
 changes  = false;
 
 spwan_ink = function (){
-	image_angle += dsin(20) * 8;
 	
 	ink_instance =  instance_create_depth(x, y, fight_depth.bullet_outside_hight,  obj_track_drop_white_ink_sans, {
 		target_obj: id
