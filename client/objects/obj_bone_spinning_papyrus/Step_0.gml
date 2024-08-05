@@ -1,4 +1,3 @@
-
 image_angle += (speed_spinning * dtime) % 360;
 motion_set(direction, speed_const * dtime);
 

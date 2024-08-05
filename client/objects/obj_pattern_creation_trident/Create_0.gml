@@ -26,15 +26,14 @@ update_creation = function () {
 	var position_x = fight_random_choose(border_instance.x - border_instance.left - offset, border_instance.x + border_instance.right + offset);
 	var position_y = border_instance.y - border_instance.up - 10;
 	var creation_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, creation, {
-		speed_const: 2 + _power * 0.1	
+		speed_const: 2 + _power * 0.1,
+		direction: 270
 	});
-		
-	var target = new Vector2(position_x, room_height);
-	creation_instance.target_position = target;	
+
 }
 
 
-var period = 45 -  (_power * 2);
+var period = 45 - (_power * 2);
 var period_creation = 60 - (_power);
 var repeats = 10 + _power * 2;
 

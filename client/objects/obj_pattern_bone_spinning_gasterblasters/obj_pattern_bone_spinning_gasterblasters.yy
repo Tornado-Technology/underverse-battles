@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_broomie_spining_and_moving_1",
+  "%Name":"obj_pattern_bone_spinning_gasterblasters",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_broomie_spining_and_moving_1",
+  "name":"obj_pattern_bone_spinning_gasterblasters",
   "overriddenProperties":[],
   "parent":{
-    "name":"Broomie",
-    "path":"folders/Attack Patterns/Broomie.yy",
+    "name":"Gasterblasters",
+    "path":"folders/Attack Patterns/Gasterblasters.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",

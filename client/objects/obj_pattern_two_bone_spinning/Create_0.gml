@@ -35,7 +35,6 @@ callback = function () {
 				sprite_set_offset(sprite_index, 5, 9);	
 			};	
 			
-		
 			angle_y_bone += 80;
 			bone_instance_1_count++;
 		}

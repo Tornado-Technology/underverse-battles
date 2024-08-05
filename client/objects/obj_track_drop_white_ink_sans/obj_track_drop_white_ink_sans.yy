@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_drop_black_ink_sans_1",
+  "%Name":"obj_track_drop_white_ink_sans",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_battle_soul","path":"objects/obj_battle_soul/obj_battle_soul.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_drop_black_ink_sans_1",
+  "name":"obj_track_drop_white_ink_sans",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_drop_black_ink_sans",
-    "path":"sprites/spr_drop_black_ink_sans/spr_drop_black_ink_sans.yy",
+    "name":"spr_ink_ball_ink_sans_1",
+    "path":"sprites/spr_ink_ball_ink_sans_1/spr_ink_ball_ink_sans_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

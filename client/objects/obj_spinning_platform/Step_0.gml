@@ -5,8 +5,7 @@ if (can_move_spinning) {
 		};
 
 		image_angle += 10;
-	}
-	else {
+	} else {
 		can_move_spinning = false;
 		image_angle = 0;
 	};

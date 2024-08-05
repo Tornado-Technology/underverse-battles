@@ -23,7 +23,7 @@ switch (type) {
 		
 	case 2:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
-		pattern_instance = create_pattern(obj_pattern_broomie_spining_and_moving_1, {
+		pattern_instance = create_pattern(obj_pattern_broomie_drawing_track_drop, {
 			brush: obj_brush_thrown_out_ink_sans,
 			max_acceleration: 18
 		});

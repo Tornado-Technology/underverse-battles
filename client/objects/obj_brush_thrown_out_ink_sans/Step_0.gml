@@ -4,23 +4,31 @@ if (gradually_alpha) {
 	};
 	
 	if(image_alpha >= 1) {
+		spwan_ink();
 		gradually_alpha = false;
-		ink =  instance_create_depth(x, y, fight_depth.bullet_outside_hight,  obj_drop_black_ink_sans_2, {
-			target_obj: id	
-		})
-
-		ink.speed_const = speed_const;
 	};
 	exit;	
 };
 
 
+if(changes_angle) {
+	image_angle = approach(image_angle,  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
+	if (!changes) {
+		if(image_angle == point_direction(x, y, position_x, position_y)) {
+			spwan_ink();
+			changes = true;				
+		};	
+	};
+};
 
-x = approach(x, position_x, speed_const * dtime);
-y = approach(y, position_y, speed_const * dtime);
+motion_set(image_angle, speed_const * dtime);
 
-if (x == position_x && y == position_y) {	
-	destroying = true;
+if(point_distance(x, y, position_x, position_y) <= 15) {
+	if(!changes) {
+		changes_direction();
+	} else {
+		destroying = true;
+	};
 };
 
 if(destroying) {

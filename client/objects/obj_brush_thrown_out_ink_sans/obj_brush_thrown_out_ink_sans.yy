@@ -13,8 +13,8 @@
     "path":"folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_element",
-    "path":"objects/obj_battle_element/obj_battle_element.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_brush_drawing_ink",
-    "path":"sprites/spr_brush_drawing_ink/spr_brush_drawing_ink.yy",
+    "name":"spr_brush_thrown_out_ink_sans",
+    "path":"sprites/spr_brush_thrown_out_ink_sans/spr_brush_thrown_out_ink_sans.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,10 +1,7 @@
 if(instance_exists(target_obj)) {
-	image_xscale += speed_const * dtime;
-	
-	var angle = point_direction(x, y, target_obj.x, target_obj.y);	
-	image_angle = angle;
+	image_xscale +=  speed_const * dtime;
 } else {
-	if(time_source_get_state(time_source_destroy_self) == time_source_state_initial)	{
+	if(time_source_get_state(time_source_destroy_self) == time_source_state_initial){
 		time_source_start(time_source_destroy_self);	
 	};
 };

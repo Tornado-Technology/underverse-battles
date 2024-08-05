@@ -1,6 +1,3 @@
-x = approach(x, target_position.x, speed_const * dtime);
-y = approach(y, target_position.y, speed_const * dtime);
-
 if (image_alpha <= 1) {
 	image_alpha += 0.1;	
 	if(image_alpha >= 0.4) {
@@ -8,9 +5,8 @@ if (image_alpha <= 1) {
 	};
 };
 
-if (x == target_position.x && y == target_position.y && !destroying) {
-	destroying = true;
-};
+
+motion_set(direction,  speed_const * dtime);
 
 if(destroying) {
 	image_xscale = approach(image_xscale, 0, 0.03 * dtime);

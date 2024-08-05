@@ -23,7 +23,7 @@ switch(type) {
 	break;
 		
 	default:
-	create_border(battle_border.up + 10, battle_border.down, battle_border.left, battle_border.right + 10);
+	create_border(battle_border.up - 35, battle_border.down - 35, battle_border.left + 50, battle_border.right + 50);
 		pattern_instance = create_pattern(obj_pattern_directing_bones_and_blue_form_right, {
 			bone: obj_bone_changes_papyrus,
 			bone_blue: obj_bone_blue_changes_papyrus

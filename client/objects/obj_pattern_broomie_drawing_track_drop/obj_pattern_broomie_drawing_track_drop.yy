@@ -1,24 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_creation_nightmare",
+  "%Name":"obj_pattern_broomie_drawing_track_drop",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_creation_nightmare",
+  "name":"obj_pattern_broomie_drawing_track_drop",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Nightmare/Bullets.yy",
+    "name":"Broomie",
+    "path":"folders/Attack Patterns/Broomie.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_pattern",
+    "path":"objects/obj_pattern/obj_pattern.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -35,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_creation_nightmare",
-    "path":"sprites/spr_creation_nightmare/spr_creation_nightmare.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
