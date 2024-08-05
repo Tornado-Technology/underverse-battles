@@ -42,8 +42,8 @@ update = function () {
 }
 
 
-var period = 85 - _power * 8;
-var repeats = 6 + _power;
+var period = 120 - _power * 8;
+var repeats = 5 + _power;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
