@@ -43,10 +43,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();	
 }, [], repeats -1);
 
-//time_source_star = time_source_create(time_source_game, period_star / 60, time_source_units_seconds, function () {
-//	update_star();
-//}, [], -1);
-
 time_source_update_destroy = time_source_create(time_source_game,  (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 instance_destroy();	
 });	

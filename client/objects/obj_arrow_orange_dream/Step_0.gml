@@ -2,12 +2,12 @@ if (!move) exit;
 
 motion_set(image_angle, speed_const * dtime);
 
-if(place_meeting(x - sprite_width + dcos(image_angle - 180), y, obj_solid)) {
+if(point_distance(x, y, obj_battle_border.x, y) <= 20) {
 	if(!touching_walls) {
 		touching_walls = true;
-		return;	
 	};
 };
+
 
 if (ricochet && touching_walls && !is_destroying){
 	collision();

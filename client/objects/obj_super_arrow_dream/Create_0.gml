@@ -1,5 +1,12 @@
 event_inherited();
 
+
+is_bonb = false;
+
+alpha = 1;
+radius = 10;
+ alpha_time = 0.05;
+
 spwan_stars = function () {
 var angle = 360 / 10;
 	var i = angle;
@@ -9,7 +16,7 @@ var angle = 360 / 10;
 		var	star_y = -dsin(i); 
 
 		var star = instance_create_depth(x + star_x, y + star_y, fight_depth.bullet_outside, obj_little_star_dream, {
-			direction: fight_random_integer(0, 360)	
+			direction: i
 		});
 	
 		star.speed_const = speed_const - fight_random_integer(0, 0.5);
@@ -22,7 +29,6 @@ var angle = 360 / 10;
 
 result_ricochet = function () {
 	spwan_stars();
-	time_source_start(time_source_spwan_stars);
 }
 
 
@@ -30,6 +36,7 @@ collision = function () {
 	var collision_border =  function () {
 		result_ricochet();	
 		be_ricochet = true;
+		is_bonb = true;
 	};
 	
 	if (place_meeting(x + lengthdir_x(speed_const + 1, image_angle), y, obj_solid)) {
@@ -40,4 +47,3 @@ collision = function () {
 	};	
 }
 
-time_source_spwan_stars = time_source_create(time_source_game, 30 / 60, time_source_units_seconds, spwan_stars, [], 2);

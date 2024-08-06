@@ -1,10 +1,10 @@
 if (!move) exit;
 
 motion_set(image_angle, speed_const * dtime);
-if(collision_circle(x, y, 30, obj_battle_border, false, false)) {
+
+if(point_distance(x, y, obj_battle_border.x, y) <= 20) {
 	if(!touching_walls) {
 		touching_walls = true;
-		return;	
 	};
 };
 
