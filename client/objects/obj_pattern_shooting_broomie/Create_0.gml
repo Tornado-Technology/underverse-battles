@@ -16,7 +16,7 @@ update = function () {
 	
 	var angle = point_direction(postiton_x, postiton_y, soul_instance.x, soul_instance.y) + 225;
 	instance_create_depth(postiton_x, postiton_y, fight_depth.bullet_outside, brush, {
-		 radius: 30,
+		radius: 30,
 		speed_const: 3 + _power * 0.3,
 		direction: angle,
 		angle_speed_const: 1,

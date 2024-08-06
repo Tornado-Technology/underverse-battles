@@ -10,8 +10,8 @@
     "path":"folders/Characteres/Ink Sans/Bullets/Ice blood.yy",
   },
   "parentObjectId":{
-    "name":"obj_brush_drawing_ink_sans",
-    "path":"objects/obj_brush_drawing_ink_sans/obj_brush_drawing_ink_sans.yy",
+    "name":"obj_shooting_brush_ink_sans",
+    "path":"objects/obj_shooting_brush_ink_sans/obj_shooting_brush_ink_sans.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

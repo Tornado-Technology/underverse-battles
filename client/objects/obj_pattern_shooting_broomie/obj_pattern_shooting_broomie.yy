@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_broomie_drawing",
+  "%Name":"obj_pattern_shooting_broomie",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_broomie_drawing",
+  "name":"obj_pattern_shooting_broomie",
   "overriddenProperties":[],
   "parent":{
     "name":"Broomie",

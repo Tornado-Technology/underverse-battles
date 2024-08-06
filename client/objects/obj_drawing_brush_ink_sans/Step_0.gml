@@ -10,7 +10,6 @@ if (gradually_alpha) {
 	exit;	
 };
 
-
 if(changes_angle) {
 	image_angle =  approach(image_angle,angle +  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
 	direction = approach(direction,  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
@@ -24,15 +23,15 @@ if(changes_angle) {
 
 motion_set(direction, speed_const * dtime);
 
-if(point_distance(x, y, position_x, position_y) <= 15) {
-	if(!changes) {
+if (point_distance(x, y, position_x, position_y) <= 15) {
+	if (!changes) {
 		changes_direction();
 	} else {
-		destroying = true;
+		is_destroying = true;
 	};
 };
 
-if(destroying) {
+if (is_destroying) {
 	image_alpha -= 0.05 * dtime;
 	if(image_alpha <= 0) {
 		instance_destroy();	

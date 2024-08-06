@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_brush_thrown_out_ink_sans",
+  "%Name":"obj_shooting_brush_ink_sans",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_brush_thrown_out_ink_sans",
+  "name":"obj_shooting_brush_ink_sans",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
     "path":"folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_battle_element",
+    "path":"objects/obj_battle_element/obj_battle_element.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_brush_thrown_out_ink_sans",
-    "path":"sprites/spr_brush_thrown_out_ink_sans/spr_brush_thrown_out_ink_sans.yy",
+    "name":"spr_brush_ink_sans",
+    "path":"sprites/spr_brush_ink_sans/spr_brush_ink_sans.yy",
   },
   "spriteMaskId":null,
   "visible":true,

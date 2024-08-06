@@ -14,8 +14,8 @@
     "path":"folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_pusher",
-    "path":"objects/obj_battle_pusher/obj_battle_pusher.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

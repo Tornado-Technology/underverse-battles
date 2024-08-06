@@ -1,22 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_broomie_drawing_track_drop",
+  "%Name":"obj_drawing_brush_ink_sans",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_broomie_drawing_track_drop",
+  "name":"obj_drawing_brush_ink_sans",
   "overriddenProperties":[],
   "parent":{
-    "name":"Broomie",
-    "path":"folders/Attack Patterns/Broomie.yy",
+    "name":"Bullets",
+    "path":"folders/Characteres/Ink Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_pattern",
-    "path":"objects/obj_pattern/obj_pattern.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_brush_thrown_out_ink_sans",
+    "path":"sprites/spr_brush_thrown_out_ink_sans/spr_brush_thrown_out_ink_sans.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

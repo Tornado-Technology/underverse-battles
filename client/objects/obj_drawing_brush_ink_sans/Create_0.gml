@@ -4,28 +4,27 @@ disable_surface = true;
 
 image_xscale = -1;
 
-destroying = false;
+is_destroying = false;
 
-angle =  dsin(20) * 120;
+angle = dsin(20) * 120;
 
 step = 0.05; 
-image_angle  = angle + point_direction(x, y, position_x, position_y);
-direction =  point_direction(x, y, position_x, position_y);
+image_angle = angle + point_direction(x, y, position_x, position_y);
+direction = point_direction(x, y, position_x, position_y);
 changes_angle = false;
 
 
-gradually_alpha  = true;
+gradually_alpha = true;
 image_alpha = 0;
 changes  = false;
 
-spwan_ink = function (){
-	
-	ink_instance =  instance_create_depth(x, y, fight_depth.bullet_outside_hight,  obj_track_drop_white_ink_sans, {
+ink_instance = noone;
+spwan_ink = function() {
+	ink_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_track_drop_white_ink_sans, {
 		target_obj: id
 	});
-
 	ink_instance.speed_const = speed_const;
-};	
+};
 
 changes_direction = function () {
 	var border_left = obj_battle_border.x - obj_battle_border.left;
@@ -33,12 +32,14 @@ changes_direction = function () {
 	var border_up = obj_battle_border.y - obj_battle_border.up;
 	var border_down = obj_battle_border.y + obj_battle_border.down;
 	var offset = 30;
-	if(random_type_position == 0) {
+	if (random_type_position == 0) {
 		position_x = x > obj_battle_border.x ? border_left : border_right;
 		position_y = y > obj_battle_border.y ? border_up - offset : border_down + offset;
 	} else {
 		position_x = x > obj_battle_border.x ? border_left - offset : border_right + offset;
 		position_y = y > obj_battle_border.y ? border_up : border_down;
-	};
+	}
 	changes_angle = true;
 }
+
+audio_play_sound_plugging(snd_emergence);

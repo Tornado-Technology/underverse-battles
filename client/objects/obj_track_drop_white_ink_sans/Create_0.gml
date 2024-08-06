@@ -6,7 +6,7 @@ speed_const = 2;
 
 start_position_x = target_obj.position_x;
 start_position_y = target_obj.position_y;
-destroying = false;
+is_destroying = false;
 image_yscale = 6;
 
 moving_ink = true;
@@ -24,7 +24,3 @@ part_type_alpha2(part_type_ui_ink, 1, 0);
 part_type_life(part_type_ui_ink, 580, 600);
 part_type_orientation(part_type_ui_ink, 0, 360, 0, 0, false);
 part_type_size(part_type_ui_ink, 1.4, 1.5, 0, 0);
-
-time_source_destroy_self = time_source_create(time_source_game, 50 / 60, time_source_units_seconds, function () {
-	destroying = true;	
-})

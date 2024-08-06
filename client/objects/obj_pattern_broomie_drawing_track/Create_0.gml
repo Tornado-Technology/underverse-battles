@@ -17,7 +17,8 @@ update = function () {
 	var position_end_y;
 	var offset = 12;
 	var random_type_position = fight_random_integer(0, 1);
-	var brush_speed = 2 + _power * 0.1;
+	var brush_speed = 2.3 + _power * 0.1;
+	
 	if(random_type_position == 0) {
 		position_x = fight_random_integer(border_instance._inst_frame_left.x, border_instance._inst_frame_right.x);
 		position_y = fight_random_choose(border_instance._inst_frame_up.y - offset, border_instance._inst_frame_down.y + offset);
@@ -37,12 +38,9 @@ update = function () {
 		random_type_position: random_type_position,
 		offset: offset
 	});	
-	
-		
 }
 
-
-var period = 120 - _power * 8;
+var period = 120 - _power * 6;
 var repeats = 5 + _power;
 
 if (variable_instance_exists(id, "custom_repeats")) {
@@ -54,6 +52,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 }, [], repeats - 1);
 
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 2, time_source_units_seconds, function () {
 	instance_destroy();
 });
