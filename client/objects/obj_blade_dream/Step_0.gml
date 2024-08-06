@@ -1,6 +1,7 @@
-if(!stop_alpha)
+if(!stop_alpha) {
 	if (alpha < 1) {
 		alpha += step_alpha * dtime;
+	}
 }
 
 image_alpha = alpha;
@@ -47,35 +48,36 @@ if (is_directions) {
 
 if (is_swung) {
 	if (stage == 1) {
-		if (max_acc > acc) acc += dtime;
-		 image_angle += acc * angle_speed_const * dtime;
+		if (max_rotate_acceleration > rotate_acceleration) rotate_acceleration += dtime;
+		if (max_acceleration > acceleration) acceleration += dtime;
+		image_angle += rotate_acceleration * angle_speed_const * dtime;
 	}
 
 	if (stage == 2) {
-		if (acc > 0) acc -= dtime;
-		 image_angle += acc * angle_speed_const * dtime;
+		if (rotate_acceleration > 0) rotate_acceleration -= dtime;
+		if (acceleration > 0) acceleration -= 0.1 * dtime;
+		image_angle += rotate_acceleration * angle_speed_const * dtime;
 	}
 
 	if (stage == 1 || stage == 2) {
 		if (side == 0) {
-			x += speed_const * dtime;
+			x += acceleration * dtime;
 		}
 		else if (side == 1) {
-			y += speed_const * dtime;
+			y += acceleration * dtime;
 		}
 		else if (side == 2) {
-			x -= speed_const * dtime;
+			x -= acceleration * dtime;
 		}
 		else if (side == 3) {
-			y -= speed_const * dtime;
+			y -= acceleration * dtime;
 		}
-	};
+	}
 };
 
 if (is_spinning) {
 	image_angle += speed_spinning * dtime;	
 };
-
 
 if (stop_alpha) {
 	alpha -= step_alpha * dtime;

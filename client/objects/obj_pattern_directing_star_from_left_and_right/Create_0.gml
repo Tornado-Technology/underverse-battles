@@ -16,13 +16,13 @@ update = function () {
 	var i = 0;
 	var j = 1;
 	repeat (_power div 2 + 3) {
-		var x_ = fight_random_choose(border_instance.x - border_instance.left - fight_random_integer(20, 90), border_instance.x + border_instance.right + fight_random_integer(20, 90));
-		var y_ = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
+		var x_ = fight_random_choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
+		var y_ = fight_random_integer(border_instance.y - border_instance.up + 4, border_instance.y + border_instance.down - 4);
 	
 		star_instance[i] = instance_create_depth(x_, y_, fight_depth.bullet_outside_hight, star);
 
 		star_instance[i].direction = point_direction(x_, y_, border_instance.x, y_);
-		star_instance[i].speed_const = 3 + _power * speed_step;
+		star_instance[i].speed_const = 2.3 + _power * speed_step;
 		i++;
 	}
 

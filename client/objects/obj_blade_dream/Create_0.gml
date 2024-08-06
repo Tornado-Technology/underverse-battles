@@ -4,17 +4,23 @@ is_directions = false;
 is_target = false;
 is_swung = false;
 is_spinning = false;
+is_accelerating = false;
 
 stop_alpha = false;
 
 step_alpha = 0.03;
 speed_spinning = 0;
 
+max_speed = 0;
+
 stage = 0;
+accelerating_stage = 0;
 alpha = 0;
 image_alpha = alpha;
-acc = 0;
-max_acc = 0;
+acceleration = 0;
+max_acceleration = 0;
+rotate_acceleration = 0;
+max_rotate_acceleration = 0;
 
 border = obj_battle_border;
 rotational = false;
@@ -47,18 +53,18 @@ move_back = function() {
 directions = function () {
 	is_directions = true;
 	time_source_destroy_blades = time_source_create(time_source_game, time_destroy / 60, time_source_units_seconds, function () {
-	 stop_alpha = true;
-	})
+		stop_alpha = true;
+	});
 };
 
 target = function (_target) {
 	is_target = true;
 	on_target = point_direction(x, y, _target.x, _target.y);	
-	
 };
 
-swing = function (_max_acc) {
-	max_acc = _max_acc;
+swing = function (max_rotate_acceleration, max_acceleration = 0) {
+	self.max_rotate_acceleration = max_rotate_acceleration;
+	self.max_acceleration = max_acceleration;
 	is_swung = true;
 	
 	time_source_move_start = time_source_create(time_source_game, 1 / 2, time_source_units_seconds, function () {
@@ -66,11 +72,11 @@ swing = function (_max_acc) {
 		stage = 1;
 	});
 
-	time_source_move_next = time_source_create(time_source_game, (30 + max_acc) / 60, time_source_units_seconds, function () {
+	time_source_move_next = time_source_create(time_source_game, (30 + max_rotate_acceleration) / 60, time_source_units_seconds, function () {
 		stage = 2;
 	});
 
-	time_source_move_finish = time_source_create(time_source_game, (31 + 2 * max_acc) / 60, time_source_units_seconds, function () {
+	time_source_move_finish = time_source_create(time_source_game, (31 + 2 * max_rotate_acceleration) / 60, time_source_units_seconds, function () {
 		stage = 3;
 		stop_alpha = true;
 	});
@@ -80,16 +86,13 @@ swing = function (_max_acc) {
 	time_source_start(time_source_move_finish);
 };
 
-
-
-move_spinning = function (spd) {
+move_spinning = function(spd) {
 	is_spinning = true;	
 	speed_spinning = spd;
 };
 
-on_soul_touch = function () {
-	if(image_alpha >= 0.8) {
+on_soul_touch = function() {
+	if (image_alpha >= 0.8) {
 		fight_soul_damage(damage, destructible, id);
-	};	
-	
+	}
 }

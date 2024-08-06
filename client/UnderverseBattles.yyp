@@ -634,6 +634,7 @@
     {"$GMIncludedFile":"","%Name":"font_mini.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts","name":"font_mini.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"font_mini.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts","name":"font_mini.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"PAP.ttf","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts","name":"PAP.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"README.txt","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch/fonts","name":"README.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"info.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch","name":"info.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"translate.json","CopyToMask":-1,"filePath":"datafiles/translate/zn_ch","name":"translate.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],

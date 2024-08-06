@@ -20,29 +20,28 @@ update = function() {
 
 	if (type == 0) {
 		 blades_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, blades_swing, {
-			angle_speed_const: -1,	
+			angle_speed_const: -0.6,	
 			side: 1
 		});	
 	} else if (type == 1) {
 		 blades_instance = instance_create_depth(coord[0], coord[2], fight_depth.bullet_outside_hight, blades_swing, {
-			angle_speed_const: 1,	
+			angle_speed_const: -0.6,	
 			side: 3
 		});	
 	} else if (type == 2) {
 		 blades_instance = instance_create_depth(coord_2[0], coord_2[2], fight_depth.bullet_outside_hight, blades_swing, {
-			angle_speed_const: 1,	
+			angle_speed_const: -0.6,	
 			side: 0
 		});	
 	} else if (type == 3) {
 		 blades_instance = instance_create_depth(coord_2[1], coord_2[2], fight_depth.bullet_outside_hight, blades_swing, {
-			angle_speed_const: 1,	
+			angle_speed_const: -0.6,	
 			side: 2
 		});	
 	};
 	
-	blades_instance.image_angle =  point_direction(blades_instance.y, blades_instance.y, soul_instance.x, soul_instance.y) + 225;
-	blades_instance.swing(12 + spd);	
-	blades_instance.speed_const = spd;
+	blades_instance.image_angle = point_direction(blades_instance.x, blades_instance.y, soul_instance.x, soul_instance.y) + 90;
+	blades_instance.swing(12 + spd, spd);	
 }
 
 var period = 35 - 2 * _power;

@@ -1,12 +1,12 @@
 {
   "$GMSprite":"",
   "%Name":"spr_little_star_dream",
-  "bboxMode":2,
-  "bbox_bottom":7,
+  "bboxMode":0,
+  "bbox_bottom":9,
   "bbox_left":0,
-  "bbox_right":7,
+  "bbox_right":9,
   "bbox_top":0,
-  "collisionKind":5,
+  "collisionKind":0,
   "collisionTolerance":0,
   "ConfigValues":{
     "Development":{
