@@ -13,7 +13,7 @@ update = function () {
 	repeat (_power div 2 + 2) {
 		var star_position = rand_side_from(border_instance.x - border_instance.left - 20, border_instance.y - border_instance.up - 20, border_instance.x + border_instance.right + 20, border_instance.y + border_instance.down + 20);	
 		var	star_instance = instance_create_depth(star_position[0],  star_position[1], fight_depth.bullet_outside, star);
-		star_instance.speed_const = 2.4 + _power * 0.2;
+		star_instance.speed_const = 2.3 + _power * 0.1;
 		star_instance.direction = point_direction(star_instance.x, star_instance.y, soul_instance.x, soul_instance.y);
 
 	};
