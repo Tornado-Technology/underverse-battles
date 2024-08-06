@@ -64,7 +64,7 @@ if(aim_soul) {
 	
 
 	if(keep_destroy && x == position_x && y == position_y) {
-		time_source_start(time_source_self_destroy);	
+		time_source_start(time_source_self_destroying);	
 		keep_destroying = false;
 	};
 
