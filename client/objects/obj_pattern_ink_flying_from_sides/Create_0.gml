@@ -20,6 +20,6 @@ var period = 10 - _power;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 30) / 60 + 0.5, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 30) / 60 + 1.5, time_source_units_seconds, function () {
 	instance_destroy();
 });
