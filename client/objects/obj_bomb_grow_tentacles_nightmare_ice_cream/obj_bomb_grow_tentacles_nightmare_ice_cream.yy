@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bomb_growten_tacles_nightmare_ice_cream",
-    "path":"sprites/spr_bomb_growten_tacles_nightmare_ice_cream/spr_bomb_growten_tacles_nightmare_ice_cream.yy",
+    "name":"spr_bomb_growing_nightmare_ice_cream",
+    "path":"sprites/spr_bomb_growing_nightmare_ice_cream/spr_bomb_growing_nightmare_ice_cream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

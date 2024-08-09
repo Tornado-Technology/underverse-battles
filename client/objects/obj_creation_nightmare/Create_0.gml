@@ -18,8 +18,9 @@ destroying = false;
 
 bullets = obj_bullets_nightmare;
 
+if (!variable_instance_exists(id, "bullets_spawn_period")) bullets_spawn_period = 0.5;
 
-time_source_spwan = time_source_create(time_source_game,  30 / 60, time_source_units_seconds, function () {
+time_source_spwan = time_source_create(time_source_game,  bullets_spawn_period, time_source_units_seconds, function () {
 	var target = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y);
 	var spike = create_spike(x, y + -dsin(40) * sprite_height,  bullets, speed_const + 1, target);
 	spike.disable_surface = true;

@@ -33,7 +33,7 @@ callback = function () {
 
 update_tentacles = function () {
 	var speed_tentacles =  0.05; 
-	var tentacles_instance = instance_create_depth(soul_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, obj_tentacles_destroy_back_nightmare, {
+	var tentacles_instance = instance_create_depth(soul_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, obj_tentacle_destroy_back_nightmare, {
 		image_xscale: 0,
 		image_angle: 90
 	});

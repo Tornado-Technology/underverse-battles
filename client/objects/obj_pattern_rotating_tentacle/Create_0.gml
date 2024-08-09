@@ -16,7 +16,7 @@ callback = function () {
 	target = new Vector2(border.right - 40, border.up);
 	
 	tentacles_instance.image_angle = point_direction(tentacles_instance.x, tentacles_instance.y, target.x, target.y);
-	tentacles_instance.rotating_speed = 1.2 + _power * 0.1;
+	tentacles_instance.rotating_speed = 1 + _power * 0.1;
 	tentacles_instance.image_xscale = 2;
 
 	time_source_start(time_source_update);
@@ -47,7 +47,7 @@ update = function () {
 
 
 var period = 35 - ( _power * 2);
-var repeats = 12 + (_power * 2);
+var repeats = 10 + (_power * 3);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	

@@ -12,7 +12,7 @@ update = function () {
 	var offset_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	var offset_y = border_instance.y - border_instance.up - 50;
 	var offset_new_y = fight_random_integer(offset_y + 50, border_instance.y + border_instance.down);
-	var bomb_speed = 2 + _power * 0.4;
+	var bomb_speed = 2 + _power * 0.2;
 	
 	var tentacles_instance = instance_create_depth(offset_x , offset_y, fight_depth.bullet_outside_hight, bomb, {
 		speed_const: bomb_speed
@@ -22,7 +22,7 @@ update = function () {
  };
  
 var period = 42 - (_power * 2);
-var repeats = 5 + (_power * 2);
+var repeats = 6 + (_power * 2);
 
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {

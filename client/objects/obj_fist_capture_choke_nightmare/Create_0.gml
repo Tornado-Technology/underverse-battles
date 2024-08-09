@@ -4,7 +4,6 @@ _angle = 20;
 soul_invulnerability = 20;
 damage = get_char_damage(obj_character_nightmare);
 
-
 pusher = 10;
 index_sprite = 0;
 outside_force_speed = 10;

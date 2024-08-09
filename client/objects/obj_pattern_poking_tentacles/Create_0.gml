@@ -18,7 +18,7 @@ update = function () {
 	 tentacles_instance.change_scale(1.6, 0.04);
  };
  
-var period = 33 - 2 * _power;
+var period = 32 - 2 * _power;
 var repeats = 10 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {

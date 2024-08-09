@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fist_nightmare_mecha",
-    "path":"sprites/spr_fist_nightmare_mecha/spr_fist_nightmare_mecha.yy",
+    "name":"spr_fist_emerging_nightmare_mecha",
+    "path":"sprites/spr_fist_emerging_nightmare_mecha/spr_fist_emerging_nightmare_mecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,

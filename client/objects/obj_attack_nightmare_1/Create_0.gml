@@ -21,11 +21,19 @@ switch (type) {
 		});
 	break;
 	
-	default:
+	case 2:
 	create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 15, battle_border.right - 15);
-		pattern_instance = create_pattern(obj_pattern_spikes_flies_up, {
+		pattern_instance = create_pattern(obj_pattern_spikes_and_tentacles, {
 			spike: obj_spike_nightmare,
-			tentacles: obj_tentacles_destroy_back_nightmare
+			tentacle: obj_tentacle_destroy_back_nightmare
+		});
+	break;
+	
+	default: 
+		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
+		pattern_instance = create_pattern(obj_pattern_tentacles_slime, {
+			bomb: obj_bomb_bone_nightmare,
+			slime: obj_slime_nightmare
 		});
 	break;
 };

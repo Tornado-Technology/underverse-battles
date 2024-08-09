@@ -1,15 +1,13 @@
 event_inherited();
 
 depth = fight_depth.bullet_outside_hight;
-
 image_alpha = 0;
-
 
 damage = get_char_damage(obj_character_nightmare);
 soul_invulnerability = 20;
 
 self.i = 0;
-disable_surface  = true;
+disable_surface = true;
 angle_fist = position_opponent ? 180 : 0; 
 
 start_attack_fist = false;
@@ -22,7 +20,8 @@ var i = 0;
 repeat(2) {
 	fist[i] = instance_create_depth(x - (sprite_width / 24 * i), y - (5 * i), fight_depth.bullet_outside_hight, obj_fist_nightmare, {
 		speed_count: speed_count,
-		image_xscale: image_xscale
+		image_xscale: image_xscale,
+		disable_surface: true
 	});	
 	
 	fist[i].depth =  fight_depth.bullet_outside_hight + -500;
