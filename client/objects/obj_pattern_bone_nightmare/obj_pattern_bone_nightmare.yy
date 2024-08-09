@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_patterns_wave_slime_nightmare",
+  "%Name":"obj_pattern_bone_nightmare",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_patterns_wave_slime_nightmare",
+  "name":"obj_pattern_bone_nightmare",
   "overriddenProperties":[],
   "parent":{
     "name":"Slime",

@@ -7,7 +7,7 @@ damage = get_char_damage(obj_character_nightmare);
 soul_invulnerability = 60;
 
 
-bullets = obj_bullets_nightmare;
+bullets = obj_drop_nightmare;
 
 keep_bullets = false;
 

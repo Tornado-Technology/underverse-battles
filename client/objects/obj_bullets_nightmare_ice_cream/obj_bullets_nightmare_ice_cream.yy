@@ -10,8 +10,8 @@
     "path":"folders/Characteres/Nightmare/Bullets/Ice cream.yy",
   },
   "parentObjectId":{
-    "name":"obj_bullets_nightmare",
-    "path":"objects/obj_bullets_nightmare/obj_bullets_nightmare.yy",
+    "name":"obj_drop_nightmare",
+    "path":"objects/obj_drop_nightmare/obj_drop_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
