@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fist_nightmare",
-    "path":"sprites/spr_fist_nightmare/spr_fist_nightmare.yy",
+    "name":"spr_fist_emerging_nightmare",
+    "path":"sprites/spr_fist_emerging_nightmare/spr_fist_emerging_nightmare.yy",
   },
   "spriteMaskId":null,
   "visible":true,

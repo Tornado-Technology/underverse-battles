@@ -4,8 +4,8 @@
   "bboxMode":0,
   "bbox_bottom":61,
   "bbox_left":0,
-  "bbox_right":71,
-  "bbox_top":0,
+  "bbox_right":68,
+  "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
   "ConfigValues":{
@@ -17,8 +17,6 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5692b29c-7477-4bdf-83cd-05c44952a0e2","name":"5692b29c-7477-4bdf-83cd-05c44952a0e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a66a5c26-b06f-44c3-8be2-50ee5eb9851a","name":"a66a5c26-b06f-44c3-8be2-50ee5eb9851a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"26f8ad65-86a5-4481-ad5f-c4ee92086273","name":"26f8ad65-86a5-4481-ad5f-c4ee92086273","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"cec361b7-6f2a-4dc6-85b3-678936ba386b","name":"cec361b7-6f2a-4dc6-85b3-678936ba386b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"43426594-7292-49b9-be63-b6c2c0f1e87f","name":"43426594-7292-49b9-be63-b6c2c0f1e87f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -78,7 +76,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":6.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -88,7 +86,7 @@
     },
     "name":"spr_fist_capture_nightmare_ice_cream",
     "playback":1,
-    "playbackSpeed":8.0,
+    "playbackSpeed":10.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -98,23 +96,17 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5692b29c-7477-4bdf-83cd-05c44952a0e2","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"873341ee-11d6-4d4b-ab86-693547d42809","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a66a5c26-b06f-44c3-8be2-50ee5eb9851a","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fe309483-4d08-461b-a305-e0bb0b3d7dc6","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"26f8ad65-86a5-4481-ad5f-c4ee92086273","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5b4bfa2e-0b0a-4fbd-b3fe-b642df1308f7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"5b4bfa2e-0b0a-4fbd-b3fe-b642df1308f7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cec361b7-6f2a-4dc6-85b3-678936ba386b","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"61d783fa-450f-4b7a-bb1c-53c8523f59c6","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"61d783fa-450f-4b7a-bb1c-53c8523f59c6","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43426594-7292-49b9-be63-b6c2c0f1e87f","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"738e0edc-2d4d-4911-92e0-0a47b41d8fd1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"738e0edc-2d4d-4911-92e0-0a47b41d8fd1","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43a4467c-e494-42cf-b43f-3cb094b95201","path":"sprites/spr_fist_capture_nightmare_ice_cream/spr_fist_capture_nightmare_ice_cream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"15d6774a-8012-4457-91f7-b34367da26b3","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"15d6774a-8012-4457-91f7-b34367da26b3","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fist_nightmare_ice_cream",
-    "path":"sprites/spr_fist_nightmare_ice_cream/spr_fist_nightmare_ice_cream.yy",
+    "name":"spr_fist_emerging_nightmare_ice_cream",
+    "path":"sprites/spr_fist_emerging_nightmare_ice_cream/spr_fist_emerging_nightmare_ice_cream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

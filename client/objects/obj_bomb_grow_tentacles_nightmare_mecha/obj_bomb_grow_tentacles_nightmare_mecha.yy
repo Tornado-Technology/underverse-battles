@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bomb_growten_tacles_nightmare_mecha",
-    "path":"sprites/spr_bomb_growten_tacles_nightmare_mecha/spr_bomb_growten_tacles_nightmare_mecha.yy",
+    "name":"spr_bomb_growing_nightmare_mecha",
+    "path":"sprites/spr_bomb_growing_nightmare_mecha/spr_bomb_growing_nightmare_mecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,

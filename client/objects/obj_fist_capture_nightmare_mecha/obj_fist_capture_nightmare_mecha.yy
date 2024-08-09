@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_fist_capture_nightmare_mecha",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_fist_capture_nightmare_mecha",
   "overriddenProperties":[],
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fist_capture_nightmare_mecha",
-    "path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",
+    "name":"spr_fist_unclenching_nightmare_mecha",
+    "path":"sprites/spr_fist_unclenching_nightmare_mecha/spr_fist_unclenching_nightmare_mecha.yy",
   },
   "spriteMaskId":null,
   "visible":true,

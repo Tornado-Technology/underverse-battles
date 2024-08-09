@@ -42,7 +42,8 @@ if (!hand_down) {
 	fist[num_fist_attack].smooth_y(fight_random_integer(left, right))
 	fist[num_fist_attack] =	instance_create_depth(bone_old.x, bone_old.y, bone_old.depth, obj_fist_nightmare, {
 		speed_count: speed_count,
-		image_xscale: image_xscale
+		image_xscale: image_xscale,
+		disable_surface: true
 	});
 	
 	fist[num_fist_attack].direction = angle_fist;

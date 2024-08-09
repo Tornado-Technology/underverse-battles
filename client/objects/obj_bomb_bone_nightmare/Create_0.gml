@@ -1,24 +1,26 @@
 event_inherited();
 spike_count = 8;
 disable_surface = true;
+is_exploding_in_circle = false;
 damage = get_char_damage(obj_character_nightmare);
 image_alpha = 0;
+
 spwan = function () {
-if (_power > 1) {
+	if (is_exploding_in_circle) {
 		var angle = 360 / spike_count;
 		var i = angle;
 		
-		while(i <= 360) {
+		while (i <= 360) {
 			var spike_instance = instance_create_depth(x + dcos(i), y + -dsin(i), fight_depth.bullet_outside_hight, obj_spike_target_nightmare, { 
-					image_angle: i
-				});	
+				image_angle: i
+			});
 				
 			spike_instance.speed_const = speed_const;
 			i += angle;	
 		}	
 	}
-else {
-		var angle = 90 / spike_count;
+	else {
+		var angle = 90 / (spike_count - 1);
 		var i = 0;
 		var j = 0;
 		
@@ -29,7 +31,8 @@ else {
 			i += angle;	
 			j += 10;
 		}
-	};
-};
+	}
+	audio_play_sound_plugging(snd_bomb);
+}
 
 audio_play_sound_plugging(snd_emergence);

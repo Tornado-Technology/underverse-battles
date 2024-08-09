@@ -14,3 +14,4 @@ moving_up_down = function () {
 	move_up_down = true;	
 }
 
+audio_play_sound_plugging(snd_emergence);

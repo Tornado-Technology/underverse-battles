@@ -23,9 +23,9 @@ switch (type) {
 	
 	default:
 	create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 15, battle_border.right - 15);
-		pattern_instance = create_pattern(obj_pattern_spikes_flies_up, {
+		pattern_instance = create_pattern(obj_pattern_spikes_and_tentacles, {
 			spike: obj_spike_nightmare_ice_cream,
-			tentacles: obj_tentacles_destroy_back_nightmare_ice_cream
+			tentacles: obj_tentacle_destroy_back_nightmare_ice_cream
 		});
 	break;
 };

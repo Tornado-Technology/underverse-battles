@@ -1,11 +1,11 @@
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y - 50, battle_soul_type.red);
 	
 	slime_instance = instance_create_depth(border_instance.x - border_instance.left, border_instance.y + border_instance.down + 10, fight_depth.bullet_outside_hight, slime, {
 		image_xscale: 20,
 		image_yscale: 10
 	});
-	slime_instance.change_scale(12, 0.1);
+	slime_instance.change_scale(10, 0.1);
 
 	update();
 	time_source_start(time_source_update);
@@ -19,20 +19,14 @@ update_tentacles = function () {
 		image_angle: 90,	
 		image_xscale: 0
 	});
-	tentacles_instance.change_scale(1.3, 0.05);
+	tentacles_instance.change_scale(1.5, 0.05);
 }
 
 	
 bone_update = function () {
-	var cood = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
+	var bone_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	
-	if (irandom(1)) {	
-		create_bone(cood, border_instance.y - border_instance.up, bone, 3 + _power * 0.1, 1, 270, 0);
-	}
-	else {	
-		create_bone(cood, border_instance.y + border_instance.down, bone, 3 + _power * 0.1, 1, 90, 0);
-	};
-	
+	create_bone(bone_x, border_instance.y + border_instance.down, bone, 3 + _power * 0.1, 1, 90, 0);
 }
 
 update = function() {
