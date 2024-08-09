@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"file_finde_all",
   "isCompatibility":false,
   "isDnD":false,

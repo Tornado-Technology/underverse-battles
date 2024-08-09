@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_poking_bone",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeviceKeyboard",
   "isCompatibility":false,
   "isDnD":false,

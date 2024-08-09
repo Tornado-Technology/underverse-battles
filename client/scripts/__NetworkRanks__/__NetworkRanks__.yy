@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__NetworkRanks__",
   "isCompatibility":false,
   "isDnD":false,

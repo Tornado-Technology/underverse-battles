@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_set_soul_data",
   "isCompatibility":false,
   "isDnD":false,

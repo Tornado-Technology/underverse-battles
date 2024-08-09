@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_big_knife_x",
   "isCompatibility":false,
   "isDnD":false,

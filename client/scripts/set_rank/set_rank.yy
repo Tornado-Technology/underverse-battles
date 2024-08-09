@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"set_rank",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_player_selecting",
   "isCompatibility":false,
   "isDnD":false,

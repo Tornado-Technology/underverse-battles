@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"destroy_battle_object_by_edit",
   "isCompatibility":false,
   "isDnD":false,

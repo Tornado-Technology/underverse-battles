@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_object_set_speed",
   "isCompatibility":false,
   "isDnD":false,

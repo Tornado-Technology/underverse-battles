@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_add_player_mana",
   "isCompatibility":false,
   "isDnD":false,

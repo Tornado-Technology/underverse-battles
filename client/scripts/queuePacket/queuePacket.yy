@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"queuePacket",
   "isCompatibility":false,
   "isDnD":false,

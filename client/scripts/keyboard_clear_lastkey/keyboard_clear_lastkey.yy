@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"keyboard_clear_lastkey",
   "isCompatibility":false,
   "isDnD":false,

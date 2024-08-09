@@ -1,6 +1,6 @@
-target_character = obj_character_frisk;
+target_character = obj_character_sans;
 
-new_room = undefined;
+new_room = room_underverse_episode_4_pt2 ;
 transition_time = 0.4;
 required_pressing = false;
 

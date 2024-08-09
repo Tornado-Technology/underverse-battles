@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"change_solo_gasterblaster_target",
   "isCompatibility":false,
   "isDnD":false,

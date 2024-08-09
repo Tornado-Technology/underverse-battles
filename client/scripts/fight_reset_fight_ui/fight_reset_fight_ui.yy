@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_reset_fight_ui",
   "isCompatibility":false,
   "isDnD":false,

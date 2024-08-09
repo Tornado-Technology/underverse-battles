@@ -599,7 +599,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"UnderverseBattles",
   "resources":[
@@ -1297,6 +1297,7 @@
     {"id":{"name":"obj_ui_text_button","path":"objects/obj_ui_text_button/obj_ui_text_button.yy",},},
     {"id":{"name":"obj_ui_virtual_buttons","path":"objects/obj_ui_virtual_buttons/obj_ui_virtual_buttons.yy",},},
     {"id":{"name":"obj_underverse_episode_4_pt1","path":"objects/obj_underverse_episode_4_pt1/obj_underverse_episode_4_pt1.yy",},},
+    {"id":{"name":"obj_underverse_episode_4_pt2","path":"objects/obj_underverse_episode_4_pt2/obj_underverse_episode_4_pt2.yy",},},
     {"id":{"name":"obj_verify_code_control","path":"objects/obj_verify_code_control/obj_verify_code_control.yy",},},
     {"id":{"name":"obj_virtual_keyboard","path":"objects/obj_virtual_keyboard/obj_virtual_keyboard.yy",},},
     {"id":{"name":"obj_volleyball_net","path":"objects/obj_volleyball_net/obj_volleyball_net.yy",},},
@@ -1327,6 +1328,7 @@
     {"id":{"name":"room_underverse_episode_3_part_1","path":"rooms/room_underverse_episode_3_part_1/room_underverse_episode_3_part_1.yy",},},
     {"id":{"name":"room_underverse_episode_3_surface","path":"rooms/room_underverse_episode_3_surface/room_underverse_episode_3_surface.yy",},},
     {"id":{"name":"room_underverse_episode_4_pt1","path":"rooms/room_underverse_episode_4_pt1/room_underverse_episode_4_pt1.yy",},},
+    {"id":{"name":"room_underverse_episode_4_pt2","path":"rooms/room_underverse_episode_4_pt2/room_underverse_episode_4_pt2.yy",},},
     {"id":{"name":"room_underverse_episode2","path":"rooms/room_underverse_episode2/room_underverse_episode2.yy",},},
     {"id":{"name":"__Achivements","path":"scripts/__Achivements/__Achivements.yy",},},
     {"id":{"name":"__CharacterId__","path":"scripts/__CharacterId__/__CharacterId__.yy",},},
@@ -3036,6 +3038,7 @@
     {"roomId":{"name":"room_shop_muffet_bakery","path":"rooms/room_shop_muffet_bakery/room_shop_muffet_bakery.yy",},},
     {"roomId":{"name":"room_underverse_episode_3_ketchup_shop","path":"rooms/room_underverse_episode_3_ketchup_shop/room_underverse_episode_3_ketchup_shop.yy",},},
     {"roomId":{"name":"room_underverse_episode_4_pt1","path":"rooms/room_underverse_episode_4_pt1/room_underverse_episode_4_pt1.yy",},},
+    {"roomId":{"name":"room_underverse_episode_4_pt2","path":"rooms/room_underverse_episode_4_pt2/room_underverse_episode_4_pt2.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

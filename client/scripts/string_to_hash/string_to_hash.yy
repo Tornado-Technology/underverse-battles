@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"string_to_hash",
   "isCompatibility":false,
   "isDnD":false,

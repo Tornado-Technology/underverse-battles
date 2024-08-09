@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"battle_use_extra_action",
   "isCompatibility":false,
   "isDnD":false,

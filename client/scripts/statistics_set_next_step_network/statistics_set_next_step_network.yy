@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"statistics_set_next_step_network",
   "isCompatibility":false,
   "isDnD":false,

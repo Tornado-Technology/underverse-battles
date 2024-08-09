@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_create_struct",
   "isCompatibility":false,
   "isDnD":false,

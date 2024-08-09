@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_set_player_stamina",
   "isCompatibility":false,
   "isDnD":false,

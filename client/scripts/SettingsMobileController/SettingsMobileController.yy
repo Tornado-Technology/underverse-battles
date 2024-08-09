@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SettingsMobileController",
   "isCompatibility":false,
   "isDnD":false,

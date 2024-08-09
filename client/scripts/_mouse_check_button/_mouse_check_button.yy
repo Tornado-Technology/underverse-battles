@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"_mouse_check_button",
   "isCompatibility":false,
   "isDnD":false,

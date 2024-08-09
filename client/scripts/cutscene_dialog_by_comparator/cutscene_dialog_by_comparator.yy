@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cutscene_dialog_by_comparator",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_knife_swing",
   "isCompatibility":false,
   "isDnD":false,

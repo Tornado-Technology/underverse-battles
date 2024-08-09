@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"fight_player_using_special_action",
   "isCompatibility":false,
   "isDnD":false,

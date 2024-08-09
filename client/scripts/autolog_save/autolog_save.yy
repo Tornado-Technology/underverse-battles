@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"autolog_save",
   "isCompatibility":false,
   "isDnD":false,

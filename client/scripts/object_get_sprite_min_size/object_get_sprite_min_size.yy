@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"object_get_sprite_min_size",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_moving_platforms",
   "isCompatibility":false,
   "isDnD":false,
