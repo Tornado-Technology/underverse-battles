@@ -24,7 +24,7 @@ update = function () {
 		position_y = fight_random_choose(border_instance._inst_frame_up.y - offset, border_instance._inst_frame_down.y + offset);
 		position_end_x = position_x > border_instance.x ? border_instance.x - border_instance.left : border_instance.x + border_instance.right;
 		position_end_y = position_y == border_instance._inst_frame_up.y - offset ?  border_instance.y + border_instance.down + offset : border_instance.y - border_instance.up - offset; 
-	} else if (random_type_position == 1) {	
+	} else {	
 		position_x = fight_random_choose(border_instance._inst_frame_left.x - offset, border_instance._inst_frame_right.x + offset);
 		position_y = fight_random_integer(border_instance._inst_frame_up.y + 10, border_instance._inst_frame_down.y - 10);
 		position_end_x =  position_x > border_instance.x ? border_instance.x - border_instance.left - offset : border_instance.x + border_instance.right + offset;

@@ -45,7 +45,7 @@ update = function () {
 		
 		
 		box_hearts.speed_count = 3 + _power * 0.1;
-		box_hearts.target = new Vector2(box.x, border.y + border.down + fight_random_integer(-125, 50));	
+		box_hearts.target = new Vector2(box_hearts.x, border.y + border.down + fight_random_integer(-125, 50));	
 		box_hearts.step = fight_random_float(2, 2.7);
 	}
 	

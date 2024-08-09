@@ -26,7 +26,7 @@ switch(type) {
 		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_box, {
 			box: obj_box_jevil,
-			sprite_box: fight_random_choose(spr_jevil_diamonds_box, spr_jevil_hearts_box, spr_jevil_clubs_box)
+			sprite_box: [spr_jevil_diamonds_box, spr_jevil_hearts_box, spr_jevil_clubs_box, spr_jevil_spades_box]
 		});
 	break;
 	

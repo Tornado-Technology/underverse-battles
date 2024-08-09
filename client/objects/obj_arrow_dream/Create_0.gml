@@ -14,25 +14,27 @@ move = false;
 ricochet = false;
 touching_walls = false;
 be_ricochet = false;
-result_ricochet = function (angle) {	
+result_ricochet = function () {	
 	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
 
-	image_angle += angle;
-	move_contact_solid(direction_center_arena, speed_const);
+	image_angle += fight_random_integer(10, 80);
+
 }
 
 collision = function () {
-	var collision_border = function (angle) {
-		result_ricochet(angle);
+	var collision_border = function () {
+		result_ricochet();
 		be_ricochet = true;	
 	};	
 	
-	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
-		collision_border(90);
-	};
-	if (place_meeting(x, y + lengthdir_y(speed_const, image_angle), obj_solid)) {
-		collision_border(irandom_range(85, 95));
-	};
+	var offset = 35;
+	var border_left = obj_battle_border.x - obj_battle_border.left;
+	var border_up = obj_battle_border.y - obj_battle_border.up;
+	var border_right = obj_battle_border.x + obj_battle_border.right;
+	var border_down = obj_battle_border.y + obj_battle_border.down;
+	if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, false, false) == noone) {
+		collision_border();
+	}
 }
 
 

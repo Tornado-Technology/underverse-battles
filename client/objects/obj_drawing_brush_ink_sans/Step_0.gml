@@ -10,26 +10,30 @@ if (gradually_alpha) {
 	exit;	
 };
 
-if(changes_angle) {
-	image_angle =  approach(image_angle,angle +  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
-	direction = approach(direction,  point_direction(x, y, position_x, position_y), 2 + speed_const  * dtime);
-	if (!changes) {
-		if(	direction  == point_direction(x, y, position_x, position_y)) {
-			spwan_ink();
-			changes = true;	
-		};	
-	};
+	
+if(changes_angle && !changes) {
+	var spd = (9 + (speed_const * 0.01));
+	
+	image_angle = approach(image_angle, angle +  point_direction(x, y, position_x, position_y), spd * dtime);
+	direction = approach(direction,  point_direction(x, y, position_x, position_y),  spd  * dtime);
+	if(direction == point_direction(x, y, position_x, position_y)) {
+		spwan_ink();
+		changes = true;	
+		changes_angle = false;
+	};	
 };
 
-motion_set(direction, speed_const * dtime);
+var offset = 20;
 
-if (point_distance(x, y, position_x, position_y) <= 15) {
-	if (!changes) {
+if (point_in_rectangle(x, y, position_x - offset, position_y - offset, position_x + offset, position_y + offset)) {
+	if(!changes) {
 		changes_direction();
 	} else {
-		is_destroying = true;
+		is_destroying = true;		
 	};
-};
+}; 
+
+motion_set(direction, speed_const * dtime);
 
 if (is_destroying) {
 	image_alpha -= 0.05 * dtime;

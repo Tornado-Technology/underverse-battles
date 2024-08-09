@@ -4,7 +4,8 @@ if (gradually_alpha) {
 	};	
 };
 
-image_angle += speed_const * dtime;
+angle += 1 + speed_const * dtime;
+image_angle = angle;
+motion_set(direction, speed_const * dtime);
 
-x = xstart + -dcos(y) * 80;
-y += speed_const * dtime; 
+x = xstart + (dcos(angle) + dcos(angle + 30)) * 10;

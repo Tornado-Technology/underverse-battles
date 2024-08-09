@@ -1,3 +1,15 @@
+if (gradually_alpha) {
+	if (image_alpha <= 1) {
+		image_alpha += step * dtime;	
+	} else {
+		gradually_alpha = false;
+		time_source_start(time_source_move_start);
+		time_source_start(time_source_move_next);
+		time_source_start(time_source_move_finish);
+	};
+	exit;	
+};
+
 x = xstart + dcos(angle) * radius;
 y = ystart + -dsin(angle) * radius;
 	

@@ -22,12 +22,14 @@ update = function () {
 		random_position.x = start_x + fight_random_integer(offset_x, offset_x * 2);
 	}; 
 	
+	var i = fight_random_integer(0, array_length(sprite_box) - 1);
+	
 	var box_instance = instance_create_depth(random_position.x, random_position.y, 0, box, {
-		sprite_index: sprite_box
+		sprite_index: sprite_box[i]
 	});
 	
 	box_instance.speed_count = 3 + _power * 0.1;
-	box_instance.target = new Vector2(box.x, border.y + border.down + fight_random_integer(-125, 50));
+	box_instance.target = new Vector2(box_instance.x, border.y + border.down + fight_random_integer(-125, 50));
 	box_instance.step = fight_random_float(2, 2.7);
 
 };

@@ -5,7 +5,7 @@ is_bonb = false;
 
 alpha = 1;
 radius = 10;
- alpha_time = 0.05;
+alpha_time = 0.05;
 
 spwan_stars = function () {
 var angle = 360 / 10;
@@ -38,12 +38,14 @@ collision = function () {
 		be_ricochet = true;
 		is_bonb = true;
 	};
-	
-	if (place_meeting(x + lengthdir_x(speed_const + 1, image_angle), y, obj_solid)) {
+	var offset = 33;
+	var border_left = obj_battle_border.x - obj_battle_border.left;
+	var border_up = obj_battle_border.y - obj_battle_border.up;
+	var border_right = obj_battle_border.x + obj_battle_border.right;
+	var border_down = obj_battle_border.y + obj_battle_border.down;
+	if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, true, false) == noone) {
 		collision_border();
-	};
-	if (place_meeting(x, y + lengthdir_y(speed_const + 1, image_angle), obj_solid)) {
-		collision_border();
-	};	
+	}
+
 }
 

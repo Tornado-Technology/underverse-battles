@@ -1,5 +1,10 @@
 event_inherited();
 
+
+alpha = 1;
+radius = 10;
+alpha_time = 0.05;
+
 disable_surface =  true;
 
 damage = get_char_damage(obj_character_ink_sans);
@@ -7,7 +12,7 @@ damage = get_char_damage(obj_character_ink_sans);
 
 position_target_x = fight_random_integer(obj_battle_border.x - obj_battle_border.left + 10, obj_battle_border.x + obj_battle_border.right - 10); 
 
-destroy = false;
+destroying = false;
 
 spwan = function () {
 	var i = 0;
@@ -17,5 +22,5 @@ spwan = function () {
 		drop_instance.disable_surface = true;
 		i++;
 	}
-	destroy = true;
+	destroying = true;
 }

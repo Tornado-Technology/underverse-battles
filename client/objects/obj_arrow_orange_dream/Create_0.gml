@@ -28,11 +28,13 @@ collision = function () {
 		be_ricochet = true;
 	};	
 	
-	if (place_meeting(x + lengthdir_x(speed_const, image_angle), y, obj_solid)) {
-		collision_border(90);
-	};
-	if (place_meeting(x, y + lengthdir_y(speed_const, image_angle), obj_solid)) {
-		collision_border(irandom_range(85, 95));
+	var offset = 35;
+	var border_left = obj_battle_border.x - obj_battle_border.left;
+	var border_up = obj_battle_border.y - obj_battle_border.up;
+	var border_right = obj_battle_border.x + obj_battle_border.right;
+	var border_down = obj_battle_border.y + obj_battle_border.down;
+	if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, false, false) == noone) {
+		collision_border(fight_random_integer(70, 90));
 	};
 }
 
