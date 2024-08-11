@@ -20,14 +20,6 @@ switch (type) {
 		});
 		break;
 	
-	//case 2:
-	//create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 30, battle_border.right + 30);
-	//	pattern_instance = create_pattern(obj_pattern_aiming_gasterblasters_1, {
-	//		soul_type: battle_soul_type.red,
-	//		gasterblaster_aiming: obj_gasterblaster_sans,
-	//		count: fight_random_integer(1, 2)
-	//	});
-	//break;
 		
 	default:
 		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);

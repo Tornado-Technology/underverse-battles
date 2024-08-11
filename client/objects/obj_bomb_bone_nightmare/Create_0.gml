@@ -18,8 +18,7 @@ spwan = function () {
 			spike_instance.speed_const = speed_const;
 			i += angle;	
 		}	
-	}
-	else {
+	} else {
 		var angle = 90 / (spike_count - 1);
 		var i = 0;
 		var j = 0;
@@ -31,7 +30,7 @@ spwan = function () {
 			i += angle;	
 			j += 10;
 		}
-	}
+	};
 	audio_play_sound_plugging(snd_bomb);
 }
 

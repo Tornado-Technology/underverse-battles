@@ -24,7 +24,7 @@ switch(type) {
 	
 	default:
 	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 10, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_pattern_bow_4, {
+		pattern_instance = create_pattern(obj_pattern_bow_orange_star, {
 			bow: obj_bow_dream,
 			arrows: obj_arrow_dream,
 			arrows_orange: obj_arrow_orange_dream

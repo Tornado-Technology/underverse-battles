@@ -1,14 +1,12 @@
 // Arguments: soul_type, gasterblaster_aiming, count, custom_repeats (optional)
 
 callback = function () {
-	
-
 	var scale = 5;
 	var bone_position_x = border_instance.x - 45;
 	var bone_right_position_x = border_instance.x + 45;
 	
 	platforms0 = create_moving_platforms(border_instance.x - 40, border_instance.y + border_instance.down - 30, 1, scale, 0, 1, obj_platform_1);
-	 platforms1 =  create_moving_platforms(border_instance.x + 20, border_instance.y + border_instance.down - 30, 1, scale, 0, 1, obj_platform_1);
+	platforms1 = create_moving_platforms(border_instance.x + 20, border_instance.y + border_instance.down - 30, 1, scale, 0, 1, obj_platform_1);
 	platforms1[0].the_blow_angle = 0;
 	
 	var position_soul = fight_random_choose(platforms0[0], platforms1[0]);
@@ -35,18 +33,12 @@ callback = function () {
 		var position_y = border_instance.y + border_instance.down - 10;
 	
 
-			var bone_instance =	create_bone(position_x, position_y, obj_bone_sans_1, 0, scale_bone, 0, angle);
-			var bone_instance_1 = create_bone(border_instance.x, border_instance.y - border_instance.up + 10, obj_bone_sans_1, 0, scale_bone, 0, angle);
-			with(bone_instance) {
-				sprite_set_offset(sprite_index, 5, 9);	
-			};	
-
-			with(bone_instance_1) {
-				sprite_set_offset(sprite_index, 5, 9);	
-			};	
-			bone_instance.speed_max = 3 + _power * 0.1;
-			bone_instance_1.speed_max = 3 + _power * 0.1;	
-			angle *= 3;	
+		var bone_instance =	create_bone(position_x, position_y, obj_bone_fell_papyus, 0, scale_bone, 0, angle);
+		var bone_instance_1 = create_bone(border_instance.x, border_instance.y - border_instance.up + 10, obj_bone_fell_papyus, 0, scale_bone, 0, angle);
+			
+		bone_instance.speed_max = 3 + _power * 0.1;
+		bone_instance_1.speed_max = 3 + _power * 0.1;	
+		angle *= 3;	
 		
 		i++;
 	}

@@ -35,10 +35,10 @@ update_orange = function () {
 	create_bow(bow, arrows_orange, speed_bow, can_ricochet, position_x, position_y,  target, 1 / 6,  0.6 - _power * 0.1,  0.5 - _power * 0.1);
 }
 
-var period = 40 - (_power * 2);
-var period_orange = 30 - (_power * 2);
+var period = 40 - (3 + (_power));
+var period_orange = 45 - (_power * 2);
 var repeats = 15 + (_power * 2);
-var repeats_start = 10 + (_power * 2);
+var repeats_start = 13 + (_power * 2);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
@@ -48,7 +48,7 @@ time_source_update_orange = time_source_create(time_source_game, period_orange /
 	update_orange();	
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game,  (period * repeats) / 60 + 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game,  (period_orange * repeats) / 60 + 1, time_source_units_seconds, function () {
 instance_destroy();	
 });	
 	

@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_bone_spinning_gasterblasters",
+  "%Name":"obj_bone_fell_papyus",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_bone_spinning_gasterblasters",
+  "name":"obj_bone_fell_papyus",
   "overriddenProperties":[],
   "parent":{
-    "name":"Gasterblasters",
-    "path":"folders/Attack Patterns/Gasterblasters.yy",
+    "name":"Bullets",
+    "path":"folders/Characteres/Sans/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_pattern",
-    "path":"objects/obj_pattern/obj_pattern.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_bone_spinning_fell_papyrus",
+    "path":"sprites/spr_bone_spinning_fell_papyrus/spr_bone_spinning_fell_papyrus.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

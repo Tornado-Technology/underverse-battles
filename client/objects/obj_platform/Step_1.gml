@@ -1,6 +1,6 @@
 if (can_move) {
 	motion_set(_angle, const_speed * dtime);
-}
+};
 
 if (has_fixed_movement) {
 	if	(x > x_station_right && speed > 0) ||
