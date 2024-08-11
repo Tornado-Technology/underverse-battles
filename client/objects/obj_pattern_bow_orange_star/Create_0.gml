@@ -37,12 +37,12 @@ update_orange = function () {
 
 var period = 40 - (3 + (_power));
 var period_orange = 45 - (_power * 2);
-var repeats = 15 + (_power * 2);
-var repeats_start = 13 + (_power * 2);
+var repeats = 17 + (_power * 2);
+
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
-}, [], repeats_start - 1);
+}, [], repeats - 2);
 
 time_source_update_orange = time_source_create(time_source_game, period_orange / 60, time_source_units_seconds, function () {
 	update_orange();	

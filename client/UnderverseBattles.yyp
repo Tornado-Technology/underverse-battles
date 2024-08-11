@@ -945,8 +945,6 @@
     {"id":{"name":"obj_cutscene_test","path":"objects/obj_cutscene_test/obj_cutscene_test.yy",},},
     {"id":{"name":"obj_cutscene","path":"objects/obj_cutscene/obj_cutscene.yy",},},
     {"id":{"name":"obj_damage_wave_xchara","path":"objects/obj_damage_wave_xchara/obj_damage_wave_xchara.yy",},},
-    {"id":{"name":"obj_damage_zone_nightmare","path":"objects/obj_damage_zone_nightmare/obj_damage_zone_nightmare.yy",},},
-    {"id":{"name":"obj_damage_zone_warning_nightmare","path":"objects/obj_damage_zone_warning_nightmare/obj_damage_zone_warning_nightmare.yy",},},
     {"id":{"name":"obj_damage_zone_warning_xchara","path":"objects/obj_damage_zone_warning_xchara/obj_damage_zone_warning_xchara.yy",},},
     {"id":{"name":"obj_damage_zone_xchara","path":"objects/obj_damage_zone_xchara/obj_damage_zone_xchara.yy",},},
     {"id":{"name":"obj_dialog","path":"objects/obj_dialog/obj_dialog.yy",},},

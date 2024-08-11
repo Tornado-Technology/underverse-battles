@@ -6,8 +6,7 @@ platform_speed = 1 + _power * 0.1;
 callback = function () {
 	if (use_gravity_attack) {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
-	}
-	else {
+	} else {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	}
 	
