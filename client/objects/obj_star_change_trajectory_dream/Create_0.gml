@@ -7,10 +7,7 @@ speed_const = 3;
 
 angle = 0;
 
-gradually_alpha = false;
+image_alpha = 0;
 
-gradually_appearing = function () {
- image_alpha = 0;	
- gradually_alpha = true;	
-}
+radius = 10;
 

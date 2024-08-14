@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_super_arrow_dream",
+  "%Name":"obj_super_shards_arrow_dream",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_super_arrow_dream",
+  "name":"obj_super_shards_arrow_dream",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
     "path":"folders/Characteres/Dream/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_arrow_dream",
-    "path":"objects/obj_arrow_dream/obj_arrow_dream.yy",
+    "name":"obj_battle_bullet",
+    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_super_arrow_dream",
-    "path":"sprites/spr_super_arrow_dream/spr_super_arrow_dream.yy",
+    "name":"spr_super_shards_arrow_dream",
+    "path":"sprites/spr_super_shards_arrow_dream/spr_super_shards_arrow_dream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

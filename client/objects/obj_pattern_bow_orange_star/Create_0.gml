@@ -17,7 +17,7 @@ update = function () {
 	var offset = fight_random_integer(40, 80);
 	var i = 0;
 	repeat(4) {
-		var star_instance = instance_create_depth(position_x + 20 + offset * i, position_y, fight_depth.bullet_outside, obj_star_dream_1, {
+		var star_instance = instance_create_depth(position_x + 20 + offset * i, position_y, fight_depth.bullet_outside, obj_star_change_trajectory_dream, {
 			direction: direction_start	
 		});
 		

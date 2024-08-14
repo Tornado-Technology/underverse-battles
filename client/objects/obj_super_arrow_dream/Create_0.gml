@@ -3,11 +3,13 @@ event_inherited();
 
 is_bonb = false;
 
+
+
 alpha = 1;
 radius = 10;
 alpha_time = 0.05;
 
-spwan_stars = function () {
+spwan_stars_shards = function () {
 var angle = 360 / 10;
 	var i = angle;
 	
@@ -23,29 +25,30 @@ var angle = 360 / 10;
 		i += angle;
 	}	
 	
+	var i = 0;
+	repeat(4) {
+		instance_create_depth((x + dcos(image_angle) * sprite_width / 1.9 - (i * 9)), y, fight_depth.bullet_outside_hight,  obj_super_shards_arrow_dream, {
+			sprite_fram: i,
+			direction: image_angle + 180 + fight_random_integer(10, 55),
+			image_angle: image_angle
+		});
+		
+		i++;
+	}
 	
 }
 
 
 result_ricochet = function () {
-	spwan_stars();
+	spwan_stars_shards();
 }
 
 
 collision = function () {
-	var collision_border =  function () {
+	if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) == noone) {
 		result_ricochet();	
 		be_ricochet = true;
 		is_bonb = true;
-	};
-	var offset = 33;
-	var border_left = obj_battle_border.x - obj_battle_border.left;
-	var border_up = obj_battle_border.y - obj_battle_border.up;
-	var border_right = obj_battle_border.x + obj_battle_border.right;
-	var border_down = obj_battle_border.y + obj_battle_border.down;
-	if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, true, false) == noone) {
-		collision_border();
-	}
-
+	};	
 }
 

@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star_dream_1",
+  "%Name":"obj_star_change_trajectory_dream",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_star_dream_1",
+  "name":"obj_star_change_trajectory_dream",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",

@@ -1,16 +1,16 @@
 if (!move) exit;
 
 motion_set(image_angle, speed_const * dtime);
-
-var offset = 50;
-var border_left = obj_battle_border.x - obj_battle_border.left;
-var border_up = obj_battle_border.y - obj_battle_border.up;
-var border_right = obj_battle_border.x + obj_battle_border.right;
-var border_down = obj_battle_border.y + obj_battle_border.down;
-
-if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, false, false) != noone) {
-	touching_walls = true
+if(position_left) {
+	if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) != noone) {
+			touching_walls = true;
+	};
+} else {
+	if (collision_line(x + (half_width), y , room_width / 20, y, obj_solid, false, false) != noone) {
+		touching_walls = true;
+	};	
 };
+
 
 
 if (ricochet && touching_walls && !be_ricochet) {

@@ -10,12 +10,15 @@ disable_surface = true;
 soul_invulnerability = 20;
 speed_const = 0;
 
+half_width = sprite_width / 27;
 
-result_ricochet = function (angle) {	
+position_left = x < obj_battle_border ? false : true;	
+
+
+result_ricochet = function () {	
 	var direction_center_arena = point_direction(x, y, obj_battle_border.x,  obj_battle_border.y);
 
-	image_angle += angle;
-	move_contact_solid(direction_center_arena, speed_const);
+	image_angle += fight_random_integer(10, 80);
 }
 
 move = false;
@@ -23,18 +26,9 @@ ricochet = false;
 touching_walls = false;
 
 collision = function () {
-	var collision_border = function (angle) {
-		result_ricochet(angle);
-		be_ricochet = true;
-	};	
-	
-	var offset = 35;
-	var border_left = obj_battle_border.x - obj_battle_border.left;
-	var border_up = obj_battle_border.y - obj_battle_border.up;
-	var border_right = obj_battle_border.x + obj_battle_border.right;
-	var border_down = obj_battle_border.y + obj_battle_border.down;
-	if(collision_rectangle(border_left + offset, border_up + offset, border_right - offset, border_down - offset, id, false, false) == noone) {
-		collision_border(fight_random_integer(70, 90));
+	if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) == noone) {
+		result_ricochet();
+		be_ricochet = true;	
 	};
 }
 

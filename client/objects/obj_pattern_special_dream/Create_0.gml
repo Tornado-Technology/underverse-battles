@@ -16,7 +16,7 @@ callback = function () {
 };
 
 update = function () {
-		var offet = fight_random_integer(30, 80);
+	var offet = fight_random_integer(30, 80);
 	var _xx = fight_random_choose(border_instance.x - border_instance.left - offet, border_instance.x + border_instance.right + offet);
 	var _yy = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 		

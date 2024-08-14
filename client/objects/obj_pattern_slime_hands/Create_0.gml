@@ -1,5 +1,6 @@
 //Arguments: slime, drop, fist_capture, fist
-
+border_instance.spining = true;
+border_instance.speed_spining = 1;
 callback = function() {
 	var time = 0.02;
 	soul_instance = create_soul(border_instance.x, border_instance.y - border_instance.up + 15, battle_soul_type.red);
@@ -7,7 +8,7 @@ callback = function() {
 	slime_yscale = 20;
 	
 	slime_instnace = instance_create_depth(border_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside, slime, {
-		image_xscale: 15,
+		image_xscale: 15
 	});
 	
 	slime_instnace.back_const = 15;
@@ -32,7 +33,7 @@ update = function() {
 	
 	if (random_hand == fist) {
 		fist_instance.step = 0.2;
-	}
+	};
 	
 	audio_play_sound_plugging(snd_wing);
 };
