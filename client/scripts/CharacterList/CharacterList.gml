@@ -113,13 +113,16 @@ function CharacterList() {
 			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_xanastasia_frame),
 			new Character(obj_character_xanastasia_demon, "XAnastasia", "Demon", spr_xanastasia_demon_frame)
 		],
+		[
+			new Character(obj_character_jevil, "Jevil", "Standard", spr_jevil_frame),
+		]
 	];
 	// Unfinished characters
 	if (development_mode) {
-		array_push(global.characters, 
-		[
-			new Character(obj_character_jevil, "Jevil", "Standard", spr_jevil_frame),
-		]);
+		//array_push(global.characters, 
+		//[
+			
+		//]);
 	};
 }
 
