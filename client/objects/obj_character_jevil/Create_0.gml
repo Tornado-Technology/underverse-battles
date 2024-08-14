@@ -40,8 +40,13 @@ frame = spr_jevil_frame;
 
 // Animations
 idle_animation = spr_jevil_idle;
-after_battle_animation = idle_animation;
+after_battle_animation = spr_jevil_after_battle;
 defeated_animation =  spr_jevil_defeated;
+
+
+fight_2_start_animation = spr_jevil_scythe_start;
+fight_2_idle_animation = spr_jevil_scythe_idle;
+fight_2_finish_animation = spr_jevil_scythe_finish;
 
 
 start_angle = image_angle;

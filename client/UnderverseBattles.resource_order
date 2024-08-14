@@ -2,6 +2,7 @@
   "FolderOrderSettings":[
     {"name":"Fell Paprus","order":3,"path":"folders/Attack Patterns/Gasterblasters/Fell Paprus.yy",},
     {"name":"Ice Blood","order":16,"path":"folders/Characteres/Ink Sans/Sprites/Bullets/Ice Blood.yy",},
+    {"name":"Scythe","order":1,"path":"folders/Characteres/Jevil/Sprites/Character/Scythe.yy",},
     {"name":"Char","order":1,"path":"folders/Characteres/X Anastasia/Sprites/Char.yy",},
     {"name":"Frames","order":2,"path":"folders/Characteres/X Anastasia/Sprites/Frames.yy",},
     {"name":"Bone","order":5,"path":"folders/Scripts/Local/Fight/Battle/Object/Bone.yy",},
@@ -194,6 +195,9 @@
     {"name":"spr_ink_sans_walking_right","order":3,"path":"sprites/spr_ink_sans_walking_right/spr_ink_sans_walking_right.yy",},
     {"name":"spr_ink_ui_ink_sans","order":6,"path":"sprites/spr_ink_ui_ink_sans/spr_ink_ui_ink_sans.yy",},
     {"name":"spr_jacket_sans","order":47,"path":"sprites/spr_jacket_sans/spr_jacket_sans.yy",},
+    {"name":"spr_jevil_after_battle","order":1,"path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},
+    {"name":"spr_jevil_scythe_finish","order":2,"path":"sprites/spr_jevil_scythe_finish/spr_jevil_scythe_finish.yy",},
+    {"name":"spr_jevil_scythe_idle","order":1,"path":"sprites/spr_jevil_scythe_idle/spr_jevil_scythe_idle.yy",},
     {"name":"spr_lamp_down","order":30,"path":"sprites/spr_lamp_down/spr_lamp_down.yy",},
     {"name":"spr_lamp_left","order":17,"path":"sprites/spr_lamp_left/spr_lamp_left.yy",},
     {"name":"spr_lamp_right","order":22,"path":"sprites/spr_lamp_right/spr_lamp_right.yy",},
