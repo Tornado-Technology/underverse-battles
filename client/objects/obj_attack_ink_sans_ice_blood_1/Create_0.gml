@@ -13,7 +13,7 @@ switch (type) {
 		});
 		break;
 	case 1:
-		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
+		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_shooting_broomie, {
 			brush: obj_brush_shooting_ink_sans_ice_blood,
 			max_acceleration: 7
