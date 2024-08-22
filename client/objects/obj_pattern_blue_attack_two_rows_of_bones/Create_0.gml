@@ -8,22 +8,14 @@ callback = function () {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
 		update();
 		time_source_start(time_source_update);
-	} else { 
-		var position_x = border_instance.x - border_instance.left + 5;
-		var position_x_right = border_instance.x + border_instance.right - 5;
-		while(position_x <= border_instance.x + border_instance.right) {	
-			create_bone(position_x, border_instance.y - border_instance.up - 20, bone, 0, 2, 180, 180);
-			create_bone(position_x_right, border_instance.y + border_instance.down + 20, bone, 0, 2, 180, 0);
-			position_x += 10;	
-			position_x_right -= 10;
-		}
-		
+	} else { 	
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		if(_power > 2) {
 			update_bone();
 			time_source_start(time_source_update_bone);
 		};
 		
+		update_1();
 		time_source_start(time_source_update_1);
 	};
 
@@ -86,8 +78,6 @@ update_bone = function () {
 	create_bone(border_instance.x, border_instance.y - border_instance.up - 10, bone, speed_bone, 1, 270, 0);
 	create_bone(border_instance.x - border_instance.left  + 20, border_instance.y + border_instance.down + 10, bone, speed_bone, 1, 90, 0);
 	create_bone(border_instance.x + border_instance.right - 20, border_instance.y - border_instance.up - 10, bone, speed_bone, 1, 270, 0);
-	
-	
 }
 
 var period = 55 - _power * 2;

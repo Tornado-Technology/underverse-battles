@@ -22,8 +22,8 @@ callback = function () {
 		create_moving_platforms(border_instance.x - border_instance.left - 40,  border_instance.y - border_instance.up + offset_platform, 5, xscale_platform, 60, platform_speed);
 		time_source_start(time_source_update_platforms);
 	} else {
-			speed_bone = 2 + _power * 0.1;	
-	}
+		speed_bone = 2 + _power * 0.1;	
+	};
 	
 	update();
 	time_source_start(time_source_update);		
