@@ -8,7 +8,7 @@ position = fight_random_integer(0, max_position - 1);
 sector_y_step = 35;
 
 callback = function () {
-	speed_bone = 2 + _power * 0.1;
+	speed_bone = 1 + _power * 0.1;
 	soul_instance = use_gravity_attack ? create_soul(border_instance.x, border_instance.y, battle_soul_type.blue) :  create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	var position_x = border_instance.x - border_instance.left;
@@ -21,7 +21,9 @@ callback = function () {
 		create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y + border_instance.down - (offset_platform + 5), 5, xscale_platform, 60, platform_speed);
 		create_moving_platforms(border_instance.x - border_instance.left - 40,  border_instance.y - border_instance.up + offset_platform, 5, xscale_platform, 60, platform_speed);
 		time_source_start(time_source_update_platforms);
-	};
+	} else {
+			speed_bone = 2 + _power * 0.1;	
+	}
 	
 	update();
 	time_source_start(time_source_update);		

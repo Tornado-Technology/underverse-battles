@@ -1,5 +1,4 @@
-// Arguments: brush, max_acceleration
-
+// Arguments: brush
 border_instance.y += 5;
 
 callback = function () {

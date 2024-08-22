@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_brush_drawing_ink_sans_ice_blood",
+  "%Name":"obj_brush_shooting_ink_sans_ice_blood",
   "eventList":[],
   "managed":true,
-  "name":"obj_brush_drawing_ink_sans_ice_blood",
+  "name":"obj_brush_shooting_ink_sans_ice_blood",
   "overriddenProperties":[],
   "parent":{
     "name":"Ice blood",

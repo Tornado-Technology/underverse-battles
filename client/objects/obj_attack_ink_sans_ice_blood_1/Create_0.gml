@@ -15,11 +15,18 @@ switch (type) {
 	case 1:
 		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_shooting_broomie, {
-			brush: obj_brush_drawing_ink_sans_ice_blood,
+			brush: obj_brush_shooting_ink_sans_ice_blood,
 			max_acceleration: 7
 		});
 	break;
-		
+	
+	case 2:
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
+		pattern_instance = create_pattern(obj_pattern_broomie_drawing_track, {
+			brush: obj_drawing_brush_ink_sans_ice_blood
+		});
+	break;
+	
 	default:
 		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);
 		pattern_instance = create_pattern(obj_pattern_broomie_spining_and_moving, {

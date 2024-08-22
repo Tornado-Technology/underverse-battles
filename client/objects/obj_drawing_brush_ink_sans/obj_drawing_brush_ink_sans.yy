@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_brush_thrown_out_ink_sans",
-    "path":"sprites/spr_brush_thrown_out_ink_sans/spr_brush_thrown_out_ink_sans.yy",
+    "name":"spr_brush_thrown_ink_sans",
+    "path":"sprites/spr_brush_thrown_ink_sans/spr_brush_thrown_ink_sans.yy",
   },
   "spriteMaskId":null,
   "visible":true,
