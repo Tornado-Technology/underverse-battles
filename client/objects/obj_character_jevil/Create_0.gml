@@ -49,8 +49,6 @@ fight_2_idle_animation = spr_jevil_scythe_idle;
 fight_2_finish_animation = spr_jevil_scythe_finish;
 
 
-start_angle = image_angle;
-
 // Actions
 passive_skill = PassiveSkill("Character.Jevil.PassiveSkill");
 actions = [
@@ -62,13 +60,15 @@ actions = [
 special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_attack_jevil, spr_special_attack_jevil_locked, jevil_special_attack);
 
 
-on_taking_soul_damage = function(soul, damage) {
-	if (hp < 30) {
-		self.damage = 6;	
+on_battle_end = function(damage) {
+	if (hp <= 40) {
+		var _player_id = fight_get_initiative();
+		var added_mana = irandom_range(1, 8);
+			fight_add_player_mana(_player_id, added_mana);
+		if (fight_network_mode) send_fight_mana(added_mana);
 	};
-	
+
 	return damage;
-	
 }
 
 play_snd_being_attack = function () {
