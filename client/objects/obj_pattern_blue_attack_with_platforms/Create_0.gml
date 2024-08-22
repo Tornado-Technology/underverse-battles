@@ -36,8 +36,8 @@ update = function() {
 	draw_warning(side, warning_scale);
 	
 	var i = 0;
-	var x_position = border_instance.x - border_instance.left;
-	while (x_position < border_instance.x + border_instance.right) {
+	var x_position = border_instance.x - border_instance.left + 5;
+	while (x_position <= border_instance.x + border_instance.right) {
 		if (side == dir.up) {
 			bone_instances[i] = create_bone(x_position, border_instance.y - border_instance.up - 25, bone, 0, 0, 0, 180);
 		}

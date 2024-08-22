@@ -8,7 +8,7 @@ sector_y_step = 35;
 
 callback = function () {
 	var sector_y = border_instance.y - border_instance.up + 25;
-	
+	var  position_x = border_instance.x - border_instance.left + 5;
 	create_moving_platforms(border_instance.x - border_instance.left - 40, sector_y, 4, 6, 60, platforms_speed);
 	create_moving_platforms(border_instance.x + border_instance.right + 40, sector_y + sector_y_step, 4, 6, 60, -platforms_speed);
 	create_moving_platforms(border_instance.x - border_instance.left - 40,  sector_y + sector_y_step * 2, 4, 6, 60, platforms_speed);
@@ -17,9 +17,9 @@ callback = function () {
 	var soul_position = fight_random_choose(new Vector2(border_instance.x - 38, sector_y - soul_offset), new Vector2(border_instance.x + 12, sector_y + sector_y_step - soul_offset), new Vector2(border_instance.x - 38, sector_y + sector_y_step * 2 - soul_offset));
 	soul_instance = create_soul(soul_position.x, soul_position.y, battle_soul_type.blue);
 	
-	var i = 0; repeat(20) {
-		create_bone(border_instance.x - border_instance.left + i * 8, border_instance.y + border_instance.down + 3, bone, 0, 1, 0, 0);
-		i++;
+	while(position_x <= border_instance.x + border_instance.right + 10) {
+		create_bone(position_x, border_instance.y + border_instance.down + 3, bone, 0, 1, 0, 0);
+		position_x += 10;
 	}
 		
 	update_gasterblasters();
