@@ -23,12 +23,13 @@ update = function () {
 		coord_x = border_instance.x;
 	};
 	
-	instance_create_depth(coord_x, coord_y, fight_depth.bullet_outside_hight, waterfall[i]);
+	var waterfall_instance =  instance_create_depth(coord_x, coord_y, fight_depth.bullet_outside_hight, waterfall[i]);
+	waterfall_instance.speed_const = 1 + _power * 0.1;
 }
 
 
-var period = 80;
-var repeats = 5;
+var period = 75 - _power * 2;
+var repeats = 5 + _power * 2;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);

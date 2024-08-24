@@ -1,5 +1,5 @@
 if(is_growing) {
-	image_yscale += (speed_const * 0.2) * dtime;
+	image_yscale += (speed_const) * dtime;
 	
 	if(point_distance(x, y + sprite_height, x, border_down) <= 5) {
 		is_growing = false;	
