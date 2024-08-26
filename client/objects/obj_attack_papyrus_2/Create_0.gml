@@ -15,7 +15,7 @@ switch(type) {
 	case 1:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_two_bone_spinning, {
-			bone: obj_bone_shaking_papyrus
+			bone:  obj_bone_spinning_papyrus
 		});	
 	break;
 	

@@ -19,10 +19,6 @@ update = function () {
 		bone_instance =	create_bone(position_x, position_y, obj_bone_spinning_papyrus, speed_bone, 2, direction_bone, i);
 		
 		bone_instance.speed_spinning = speed_bone;
-	
-		with(bone_instance) {
-			sprite_set_offset(sprite_index, 5, 9);	
-		};
 		
 		i += 80;	
 	}
@@ -30,13 +26,14 @@ update = function () {
 
 
 }
-var period = 40 - _power * 4;
+var period = 40 - _power;
+var repeats = 10 + _power; 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], -1);
+}, [], repeats -1);
 
 
 
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

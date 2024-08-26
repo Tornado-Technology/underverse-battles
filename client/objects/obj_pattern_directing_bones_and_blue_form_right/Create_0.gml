@@ -25,11 +25,11 @@ update = function () {
 		bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bones, bone_speed, bone_size, 0, 0);	
 	};
 		
-		bone_instance.change_scale(speed_change, random_size);
+	bone_instance.change_scale(speed_change, random_size);
 }
 
-var period = 40 - (_power * 2);
-var repeats = 10 + (_power * 3);
+var period = 55 - (_power);
+var repeats = 10 + (_power);
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;

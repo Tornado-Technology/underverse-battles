@@ -7,13 +7,12 @@ bone_instances = [];
 random_number = 0;
 
 callback = function () {
-	var angle =  choose(360, 45);
+	var angle =  fight_random_choose(360, 45);
 	var offset;
 	var soul_position;
 	var side_random = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 	var size_bone = 1.5;
-	
-	if (angle == 360) {
+
 		offset = 50;
 		 soul_position = new Vector2(border_instance.x - border_instance.left + offset, border_instance.y - border_instance.up + offset);
 		if (side_random == dir.down) {
@@ -25,20 +24,6 @@ callback = function () {
 		if (side_random == dir.right) {
 			soul_position = new Vector2(border_instance.x + border_instance.right - offset, border_instance.y + border_instance.down - offset);
 		};
-	}
-	else {
-		offset = 45;
-		 soul_position = new Vector2(border_instance.x, border_instance.y - border_instance.up + offset);
-		if (side_random == dir.down) {
-			soul_position = new Vector2(border_instance.x, border_instance.y + border_instance.down - offset);
-		}
-		if (side_random == dir.left) {
-			soul_position = new Vector2(border_instance.x - border_instance.left + offset, border_instance.y);
-		}
-		if (side_random == dir.right) {
-			soul_position = new Vector2(border_instance.x + border_instance.right - offset, border_instance.y);
-		}
-	}
 	
 	create_soul(soul_position.x, soul_position.y, battle_soul_type.red);
 	
@@ -67,27 +52,23 @@ callback = function () {
 	
 	
 	bone_spinning =  instance_create_depth(border_instance.x + 2, border_instance.y, fight_depth.bullet_outside_hight, obj_bone_spinning_papyrus, {
-		image_angle: angle == 360 ? (angle / choose(2, 4)) : (45 + choose(0, 90, 90 * 2, 90 * 3))	
+		image_yscale: 0,
+		image_angle: angle	
 	});
-	
-	with(bone_spinning) {
-		sprite_set_offset(sprite_index, 5, 9);	
-	};
-	
-	bone_spinning.change_scale(20, 0.2);
 
-	
+	bone_spinning.change_scale(20, 0.1);
 	
 	audio_play_sound_plugging(snd_emergence);
 	
 	update();
 	time_source_start(time_source_update);
+	time_source_start(time_source_update_shot);
 	time_source_start(time_source_start_moving);
 	time_source_start(time_source_update_destroy);
 }
 
 update = function () {
-	random_number = fight_random_choose(2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39);
+	random_number = fight_random_integer(2, 39);
 	bone_moving = bone_instances[random_number];
 	bone_moving.shake();
 }
@@ -99,18 +80,19 @@ update_shot = function () {
 }
 
 var period = 40 - _power * 4;
+var repeats = 5 + _power * 2;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-	time_source_start(time_source_update_shot);
 }, [], -1);
 
 time_source_start_moving = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, function () {
-	bone_spinning.speed_spinning = irandom(1) ?  (2 + _power * 0.1) : -(2 + _power * 0.1);
+	bone_spinning.speed_spinning = fight_random_integer(0, 1) ?  (2 + _power * 0.1) : -(2 + _power * 0.1);
 })
 
-time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_units_seconds, function (bone_old, bone_new) {
+time_source_update_shot = time_source_create(time_source_game, (period )  / 60, time_source_units_seconds, function (bone_old, bone_new) {
 	update_shot();
-});
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
+}, [], -1 );
+
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

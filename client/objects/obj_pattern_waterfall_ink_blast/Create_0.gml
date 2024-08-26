@@ -24,7 +24,7 @@ update = function () {
 	};
 	
 	var waterfall_instance =  instance_create_depth(coord_x, coord_y, fight_depth.bullet_outside_hight, waterfall[i]);
-	waterfall_instance.speed_const = 1 + _power * 0.1;
+	waterfall_instance.speed_const = _power > 2 ?  0.3 + _power * 0.1 : 1 + _power * 0.1;
 }
 
 

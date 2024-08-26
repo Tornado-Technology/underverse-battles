@@ -1,10 +1,9 @@
 // Arguments: bone
 
 
-
 callback = function () {
 	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
-	speed_max = irandom(1) ? (1.8 + _power * 0.1) : -(1.8 + _power * 0.1);
+	speed_max = fight_random_integer(0, 1) ? (1.8 + _power * 0.1) : -(1.8 + _power * 0.1);
 	bone_instance = [];
 	bone_instance_1 = [];
 	var i = 0;
@@ -17,26 +16,13 @@ callback = function () {
 		var position_x = [border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10];
 		var position_y = border_instance.y;
 	
-	
 		repeat(2) {
-			bone_instance[j] =	create_bone(position_x[i], position_y, obj_bone_spinning_papyrus, 0, 7.1, 0, angle);
-		
-			with(bone_instance[j]) {
-				sprite_set_offset(sprite_index, 5, 9);	
-			};	
-			
-			angle+= 80;	
-			j++;
-		}
-		
-		repeat(2) {
-			bone_instance_1[bone_instance_1_count] = create_bone(border_instance.x, border_instance.y - border_instance.up - 10 + (130 * i), obj_bone_spinning_papyrus, 0, 3.4, 0, angle_y_bone);
-			with(bone_instance_1[bone_instance_1_count]) {
-				sprite_set_offset(sprite_index, 5, 9);	
-			};	
-			
+			bone_instance[j] =	create_bone(position_x[i], position_y, bone, 0, 7.1, 0, angle);
+			bone_instance_1[bone_instance_1_count] = create_bone(border_instance.x, border_instance.y - border_instance.up - 10 + (130 * i), bone, 0, 3.4, 0, angle_y_bone);
 			angle_y_bone += 80;
 			bone_instance_1_count++;
+			angle += 80;	
+			j++;
 		}
 		
 		
@@ -48,9 +34,20 @@ callback = function () {
 	
 	time_source_start(time_source_start_moving);
 	time_source_start(time_source_update_destroy);
+	
+	if(_power >= 2) {
+		time_source_start(time_source_changes_movement);
+	};
+	
 }
 
-var period  = 30;
+var period = 45;
+var repeats = 5 + _power * 2;
+
+
+time_source_changes_movement = time_source_create(time_source_game, ((period * repeats) / 2 / 60), time_source_units_seconds, function () {
+	speed_max = - speed_max;
+});
 
 time_source_start_moving = time_source_create(time_source_game, 1 / 60, time_source_units_seconds, function () {
 
@@ -62,10 +59,9 @@ time_source_start_moving = time_source_create(time_source_game, 1 / 60, time_sou
 		i++;
 	}
 		
-	
-	
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
+
+time_source_update_destroy = time_source_create(time_source_game, ( period * repeats) / 60 , time_source_units_seconds, function () {
 	instance_destroy();
 });

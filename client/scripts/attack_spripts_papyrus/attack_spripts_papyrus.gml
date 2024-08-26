@@ -1,4 +1,4 @@
-function call_attack_papyrus_0 (player, _power, type = fight_random_integer(0, 3)) {
+function call_attack_papyrus_0 (player, _power, type = fight_random_integer(0, 2)) {
 	instance_create(obj_attack_papyrus_0, {
 		character_instance: player,
 		_power: _power,

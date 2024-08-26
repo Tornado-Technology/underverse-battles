@@ -33,8 +33,8 @@ update_two_bone = function () {
 
 }
 
-var period = 35 - _power;
-var repeats = 10 + _power * 2;
+var period = 45 - _power;
+var repeats = 10 + _power;
 
 time_source_update_two_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_two_bone();

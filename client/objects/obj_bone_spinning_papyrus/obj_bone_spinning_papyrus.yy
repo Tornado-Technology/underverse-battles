@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bone_spining_papyrus",
-    "path":"sprites/spr_bone_spining_papyrus/spr_bone_spining_papyrus.yy",
+    "name":"spr_bone_papyrus",
+    "path":"sprites/spr_bone_papyrus/spr_bone_papyrus.yy",
   },
   "spriteMaskId":null,
   "visible":true,
