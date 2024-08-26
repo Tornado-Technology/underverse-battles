@@ -1,6 +1,6 @@
 // Arguments: soul_type, gasterblaster_aiming, count, custom_repeats (optional)
 random_side = fight_random_integer(dir.left, dir.right);
-border_instance.y += 20;
+
 size_border_up = border_instance.up;
 callback = function () {
 	soul_instance =	create_soul(border_instance.x, border_instance.y + border_instance.down - 10, battle_soul_type.blue);
@@ -25,17 +25,19 @@ update_collision = function () {
 	if(border_up < size_border_up + 30) {
 		if(point_distance(soul_instance.x, soul_instance.y, soul_instance.x, border_instance._inst_frame_up.y) < 10) {
 			border_instance.up += 2;
-		};
-		
-		soul_instance.fly_time = 0;
-		soul_instance.is_jumping = true;
+		};		
+	}; 
+	if (soul_instance.x > big_bone_instance.x + 10){
+		soul_instance.grav = 0.05;	
+	} else {
+		soul_instance.grav = -0.05;	
 	};
 	
 }
 
 spwan_big_bone = function () {
-	var x_;
-	var y_;
+	var position_x;
+	var position_y =  border_instance.y + border_instance.down;
 	var big_bone_x = (sprite_get_width(spr_big_bone_papyrus) / 2.6);
 	var bone_count = 20;
 	var offset = 10;
@@ -45,8 +47,8 @@ spwan_big_bone = function () {
 	
 	var i = 0;
 	repeat(bone_count) {
-		x_ = (border_instance.x + border_instance.right + 10) + (offset * i); 
-		bone_instance =	instance_create_depth(x_, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, bone, {
+		position_x = (border_instance.x + border_instance.right + 10) + (offset * i); 
+		bone_instance =	instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, bone, {
 			direction: 180
 		});
 		
@@ -57,7 +59,7 @@ spwan_big_bone = function () {
 	}
 	
 	
-	 big_bone_instance = instance_create_depth(x_ + big_bone_x, border_instance.y + border_instance.down + 5, fight_depth.bullet_outside_hight, big_bone, {
+	 big_bone_instance = instance_create_depth(position_x + big_bone_x, position_y + 5, fight_depth.bullet_outside_hight, big_bone, {
 		direction: 180,
 		image_xscale: 0.6,
 		image_yscale: 0.6
@@ -65,7 +67,7 @@ spwan_big_bone = function () {
 	
 	big_bone_instance.speed_const =  2 + _power * 0.1;
 	
-	bone_end = create_bone(x_ + big_bone_x + 800, border_instance.y + border_instance.down, obj_bone_papyrus, 4 + _power * 0.2, 1, 180, 0);
+	bone_end = create_bone(position_x + big_bone_x + 800, position_y, obj_bone_papyrus, 4 + _power * 0.2, 1, 180, 0);
 	bone_end.outside_room_destroy = false;
 
 	time_source_start(time_source_update_collision);
