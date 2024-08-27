@@ -8,49 +8,47 @@ callback = function () {
 }
 
 update = function() {
-	var left = border_instance.x - border_instance.left;
-	var right = border_instance.x + border_instance.right;
-	var up = border_instance.y - border_instance.up;
-	var down = border_instance.y + border_instance.down;
-
-	var center_x = fight_random_integer(0, 1) ? fight_random_integer(left - 40, left - 20) : fight_random_integer(right + 40, right + 20);
-	var center_y = fight_random_integer(up, down); 
-
+	var feathers_instance;
 	var angle = 360 / 6;
 	var i = angle;
-	var r = 30;
+	var speed_feathers = 3 + _power * 0.1;
+	var is_versa = fight_random_integer(0, 1);
+	var step = 0.7 + _power * 0.1;
+	var radius = 90;
 	repeat(6) {
-		var feathers_instance = instance_create_depth(center_x + dcos(i) * r, center_y + -dsin(i) * r, fight_depth.bullet_outside, feathers, {
+		feathers_instance = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside, feathers, {
 			image_angle: i,
 			time_destroy: 10,
-			center_x: soul_instance.x,
-			center_y: soul_instance.y
+			center_x: border_instance.x,
+			center_y: border_instance.y
 		});
-	
-		feathers_instance.radius =  90 - _power * 0.1;
-		feathers_instance.speed_count = 4 + _power * 0.1;
-		feathers_instance.step = 1 + _power * 0.1;
+
+		feathers_instance.radius = radius + 20;
+		feathers_instance.is_versa = is_versa;
+		feathers_instance.speed_count = speed_feathers;
+		feathers_instance.step = step;
 		with(feathers_instance) {
 			impact_on_radius = function () {
 				radius -= step;
-				if (radius <= 0) {
-					time_source_start(time_source_obj_destroy);
+				if (radius <= -10) {
+					moving_radius = false;
+					motion_set(image_angle, speed_count * dtime);
 				};
-			}
-			
-		};
-		i+= angle;
+			}		
+		}
+		i+= angle;			
 	}
 }
 
-var period = 130 - (_power * 2);
 
+var period = 70 - (_power);
+var repeats = 5 + _power;
 
 time_source_update = time_source_create(time_source_game,  period / 60, time_source_units_seconds, function () {
 	update();	
-},[], -1)
+},[],  repeats - 1);
 
 
-time_source_update_destroy = time_source_create(time_source_game, (200   / 60) + _power * 2, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

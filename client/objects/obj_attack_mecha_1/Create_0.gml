@@ -8,7 +8,7 @@ switch (type) {
 	case 0:
 		create_border(battle_border.up , battle_border.down, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_rotating_tentacle, {
-			thread_tentacles: obj_rotating_tentacle_nightmare_mecha,
+			rotating_tentacle: obj_rotating_tentacle_nightmare_mecha,
 			spike:  obj_spike_nightmare_mecha
 		});	
 	break; 
@@ -21,11 +21,19 @@ switch (type) {
 		});
 	break;
 	
-	default:
+	case 2:
 	create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 15, battle_border.right - 15);
 		pattern_instance = create_pattern(obj_pattern_spikes_and_tentacles, {
 			spike: obj_spike_nightmare_mecha,
 				tentacles: obj_tentacle_destroy_back_nightmare_mecha
+		});
+	break;
+	
+	default: 
+		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
+		pattern_instance = create_pattern(obj_pattern_tentacles_slime, {
+			bomb: obj_bomb_bone_nightmare_mecha,
+			slime: obj_slime_nightmare_mecha
 		});
 	break;
 };

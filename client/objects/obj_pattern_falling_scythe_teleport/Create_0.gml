@@ -42,16 +42,17 @@ update = function () {
 
 var period = 50 - (_power * 2);
 var period_teleport = 45 - (_power * 2);
+var repeats = 5 + _power * 2; 
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], -1);
+}, [], repeats - 1);
 
 time_source_update_teleport = time_source_create(time_source_game, period_teleport / 60, time_source_units_seconds, function () {
 	update_teleport();	
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 30) / 60 + 0.5, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	character_instance.visible = true;
 	instance_destroy();
 });

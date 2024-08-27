@@ -6,7 +6,7 @@ callback = function () {
 	var i = angle;
 	while(i <= 360) {
 		var swords_instance = instance_create_depth(border_instance.x + dcos(i) * 10, border_instance.y + -dsin(i) * 10, fight_depth.bullet_outside_hight, swords, {	
-			speed_count: 1.5 + _power * 0.1,
+			speed_count: 1 + _power * 0.1,
 		});
 		swords_instance.radius = 10;
 		swords_instance.radius_max = 70;
@@ -37,11 +37,13 @@ update_feathers = function () {
 		
 }
 
+var period = 50 - _power;
+var repeats = 10 + _power * 2;
 
-time_source_update_feathers = time_source_create(time_source_game, (50 - _power) / 60, time_source_units_seconds, function () {
+time_source_update_feathers = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function () {
 	update_feathers();
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (280 + _power * 30) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

@@ -4,10 +4,10 @@ image_alpha = alpha;
 angle++;
 
 
-y = ystart + -dsin(angle) * 20;
+y = ystart + dsin(angle) + -dsin(angle) * 20;
 x = approach(x, !backwards ? target_position_x : backwards_x, speed_count * dtime);
 
-image_xscale = lerp(image_xscale, !backwards ? -1 : 1, step * dtime);
+
 
 if (!destroy) {
 	alpha = lerp(alpha, !backwards ? 1 : 0.5, step * dtime);
@@ -18,6 +18,13 @@ if (!destroy) {
 	};
 };
 
+if(point_distance(x, y, target_position_x, y) <= 40) {
+	image_xscale = lerp(image_xscale, 1, step * dtime);
+};
+
+if(point_distance(x, y, backwards_x, y) <= 40) {
+	image_xscale = lerp(image_xscale, -1, step * dtime);
+};
 
 if(x == target_position_x) {
 	depth = fight_depth.border;

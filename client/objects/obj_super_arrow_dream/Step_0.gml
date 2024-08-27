@@ -1,6 +1,5 @@
 if (!move) exit;
 
-
 	if(position_left) {
 		if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) != noone) {
 				touching_walls = true;

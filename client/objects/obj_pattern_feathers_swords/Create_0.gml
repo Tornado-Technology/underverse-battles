@@ -15,7 +15,7 @@ update_swords = function () {
 	var position; 
 	var scale = 3;
 	var angle;
-	var offset = 25;
+	var offset = -5;
 	if(fight_random_integer(0, 1)) {
 		position_x =  fight_random_choose(border_instance.x - border_instance.left - 60, border_instance.x + border_instance.right + 60);	
 		position_y = fight_random_integer(border_instance.y - border_instance.left + 10, border_instance.y + border_instance.down - 10);
@@ -36,7 +36,7 @@ update_swords = function () {
 	scythe_instance.step = 0.05 + _power * 0.01;
 	scythe_instance.gradually_appearing();
 	scythe_instance.image_angle = angle + 180;
-	scythe_instance.target_soul(position);	
+	scythe_instance.target_soul(position, true);	
 }
 
 update = function () {
@@ -53,9 +53,10 @@ update = function () {
 		
 }
 
-var period_swords = 60 - (_power * 2);
+var period_swords = 52 - (_power * 2);
 var period = (50 - _power); 
 var repeats = 5 + (_power * 2);
+
 time_source_update_swords = time_source_create(time_source_game, period_swords  / 60, time_source_units_seconds, function () {
 	update_swords();
 }, [], repeats - 1);

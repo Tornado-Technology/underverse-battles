@@ -19,21 +19,13 @@ switch (type) {
 		});
 	break;
 	
-	case 2:
+	
+default:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_tentacles_explosion, {
-			bomb: obj_bomb_tentacles_nightmare_mecha
+			bomb: obj_bomb_tentacles_nightmare
 		});
 	break;
-	
-	default: 
-		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
-		pattern_instance = create_pattern(obj_pattern_tentacles_slime, {
-			bomb: obj_bomb_bone_nightmare_mecha,
-			slime: obj_fog_nightmare_mecha
-		});
-	break;
-	
 	
 
 };

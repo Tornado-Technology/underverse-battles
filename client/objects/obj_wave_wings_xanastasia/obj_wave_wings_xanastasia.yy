@@ -14,8 +14,8 @@
     "path":"folders/Characteres/X Anastasia/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_battle_element",
+    "path":"objects/obj_battle_element/obj_battle_element.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

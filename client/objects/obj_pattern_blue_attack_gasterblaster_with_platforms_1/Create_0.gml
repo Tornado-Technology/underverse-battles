@@ -21,6 +21,7 @@ callback = function () {
 		time_source_start(time_source_update_bone);
 		time_source_start(time_source_update_platforms);
 	} else {
+		update_bones_1();
 		time_source_start(time_source_update_bone_1);
 	};
 	time_source_start(time_source_update_destroy);

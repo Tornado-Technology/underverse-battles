@@ -14,10 +14,13 @@ time_destory = 40;
 radius = 10;
 impact_on_radius = function () {}
 
+is_versa = false;
+
 destroying = false;
 
 audio_play_sound_plugging(snd_projectile);
 
+moving_radius =  true;
 
 time_source_shot = time_source_create(time_source_game, 10 / 60, time_source_units_seconds, function () {
 	move = stages_move.target_place;

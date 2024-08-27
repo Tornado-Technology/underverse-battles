@@ -9,14 +9,13 @@ callback = function () {
 
 update = function () { 
 	var spwan_clubs = function () {	
+		var offset_x = 25;
 		var border = border_instance;
 		var random_position = new Vector2(0, -10);
 		if (fight_random_integer(0, 1)) {
-			var offset_x = 25;
 			var start_x = border.x - border.right - 10;
 			random_position.x = start_x - fight_random_integer(offset_x, offset_x * 2);
 		} else {
-			var offset_x = 25;
 			var start_x = border.x + border.left + 10;
 			random_position.x = start_x + fight_random_integer(offset_x, offset_x * 2);
 		}; 
@@ -26,8 +25,8 @@ update = function () {
 			sprite_index:  sprite_clubs_box 
 		});
 		box_instance.speed_count = 3 + _power * 0.1;
-		box_instance.target = new Vector2(box.x, border.y + border.down + fight_random_integer(-125, 50));
-		box_instance.step = random_range(2, 2.7);
+		box_instance.target = new Vector2(box_instance.x, border.y + border.down + fight_random_integer(-125, 50));
+		box_instance.step = fight_random_float(2, 2.7);
 	}
 	
 	var spwan_spades = function () {
@@ -93,17 +92,18 @@ update_scythe = function () {
 	
 }
 
-var period = 90 - (_power * 2);
+var period = 50 - (_power);
+var repeats = 5 + (_power * 2);
 
-time_source_update_scythe = time_source_create(time_source_game, (period + 10) / 60, time_source_units_seconds, function () {
+time_source_update_scythe = time_source_create(time_source_game, (period * 2) / 60, time_source_units_seconds, function () {
 	update_scythe();	
-}, [], -1);
+}, [], 3);
 
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();	
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (270 / 60) + _power * 2, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

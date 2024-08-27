@@ -32,7 +32,7 @@ update_scythe = function () {
 
 	
 	 scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
-		speed_count: 3 + _power * 0.1,
+		speed_count: 2 + _power * 0.1,
 		speed: 3 + _power * 0.1,
 		direction: 280,
 		image_angle: angle
@@ -60,7 +60,7 @@ update = function () {
 	});
 	
 	swords_instance.disable_surface = true;
-	swords_instance.step = 0.03 + _power * 0.01;
+	swords_instance.step = 0.1 + _power * 0.01;
 	swords_instance.gradually_appearing();
 	swords_instance.image_angle = angle;
 	swords_instance.target_soul(position, true);	

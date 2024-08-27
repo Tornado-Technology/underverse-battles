@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star_orange_dream",
+  "%Name":"obj_patten_two_bone_holes_two_type",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_star_orange_dream",
+  "name":"obj_patten_two_bone_holes_two_type",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Dream/Bullets.yy",
+    "name":"Blue soul",
+    "path":"folders/Attack Patterns/Bones/Blue soul.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_orange_attack",
-    "path":"objects/obj_battle_orange_attack/obj_battle_orange_attack.yy",
+    "name":"obj_pattern",
+    "path":"objects/obj_pattern/obj_pattern.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_star_orange_dream",
-    "path":"sprites/spr_star_orange_dream/spr_star_orange_dream.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

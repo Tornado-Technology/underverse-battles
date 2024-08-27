@@ -2,14 +2,14 @@ callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 
-	var _x = border_instance.x - border_instance.left - 50;
-	var _y = border_instance.y;
+	var position_x = border_instance.x - border_instance.left - 50;
+	var position_y = border_instance.y;
 		
-	var scythe_instance = instance_create_depth(_x, _y, fight_depth.bullet_outside_hight, scythe, {
+	var scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
 		speed_count: 3 + _power * 0.1	
 	});
 	
-	scythe_instance.moving_arena(border_instance.x, border_instance._inst_frame_up.sprite_width );
+	scythe_instance.moving_arena(border_instance.x, border_instance._inst_frame_up.sprite_width);
 	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
@@ -41,11 +41,14 @@ update = function () {
 	feathers_instance._target_angle = angle;
 }
 
-time_source_update = time_source_create(time_source_game, (60 - _power) / 60, time_source_units_seconds, function () {
+var period = (60 - _power);
+var repeats = 5 + _power; 
+
+time_source_update = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function () {
 	update();	
-}, [], -1)
+}, [], repeats - 1);
 
 
-time_source_update_destroy = time_source_create(time_source_game, (300 / 60) + _power * 2, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 , time_source_units_seconds, function () {
 	instance_destroy();
 });

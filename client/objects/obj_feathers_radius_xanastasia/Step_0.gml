@@ -11,13 +11,18 @@ if (destroying) {
 };
 
 
-
-x = center_x + dcos(angle) * radius;
-y = center_y + -dsin(angle) * radius;
-
-angle += (step * 2);
+if (moving_radius) {
+	if(!is_versa) {
+		x = center_x + dcos(angle) * radius;
+		y = center_y + -dsin(angle) * radius;
+	} else {
+		x = center_x - dcos(angle) * radius;
+		y = center_y - dsin(angle) * radius;
+	}
+	angle += (step * 2);
 	
-image_angle = point_direction(x, y, center_x, center_y);
+	image_angle = point_direction(x, y, center_x, center_y);
+};
 
 impact_on_radius();
 

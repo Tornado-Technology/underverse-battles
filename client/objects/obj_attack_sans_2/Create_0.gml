@@ -16,7 +16,7 @@ switch (type) {
 		
 	case 1:
 		create_border(battle_border.up - 30, battle_border.down, battle_border.left + 20, battle_border.right + 10);
-		pattern_instance = create_pattern(obj_patten_two_bone_holes_1, {
+		pattern_instance = create_pattern(obj_patten_two_bone_holes_two_type, {
 			bone: obj_bone_sans,
 			use_gravity_attack: use_gravity_attack
 		});

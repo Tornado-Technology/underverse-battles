@@ -1,6 +1,5 @@
 //Arguments: slime, drop, fist_capture, fist
-border_instance.spining = true;
-border_instance.speed_spining = 1;
+
 callback = function() {
 	var time = 0.02;
 	soul_instance = create_soul(border_instance.x, border_instance.y - border_instance.up + 15, battle_soul_type.red);

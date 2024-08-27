@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Blue Attack",
-    "path":"folders/Attack Patterns/Blue Attack.yy",
+    "path":"folders/Attack Patterns/Bones/Blue Attack.yy",
   },
   "parentObjectId":{
     "name":"obj_pattern",
