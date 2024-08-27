@@ -1,0 +1,30 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_spit",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "bitRate":64,
+  "compression":0,
+  "ConfigValues":{
+    "Development":{
+      "audioGroupId":"{ \"name\":\"sound\", \"path\":\"audiogroups/sound\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":0.254807,
+  "name":"snd_spit",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":32000,
+  "soundFile":"snd_spit.ogg",
+  "type":0,
+  "volume":1.0,
+}

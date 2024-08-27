@@ -2,7 +2,7 @@ event_inherited();
 
 on_border_created = function () {
 	pattern_instance.callback();
-};
+}
 
 switch (type) {	
 	case 0:
@@ -36,4 +36,4 @@ switch (type) {
 			slime: obj_slime_nightmare
 		});
 	break;
-};
+}

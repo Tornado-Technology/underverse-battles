@@ -6,7 +6,7 @@ num = 10;
 bone_instances = [];
 random_number = 0;
 
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
 	
 	var i = 0;
@@ -37,12 +37,13 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-update = function () {
+update = function() {
 	random_number = fight_random_choose(2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39);
 	bone_moving = bone_instances[random_number];
 	bone_moving.shake();
 }
-update_shot = function () {
+
+update_shot = function() {
 	bone_moving.speed_const = 4;
 	bone_instances[random_number] = create_bone(bone_moving.x, bone_moving.y, bone, 0, 1, bone_moving.direction, bone_moving.image_angle);
 	bone_instances[random_number].change_scale(2, 0.1);
@@ -50,13 +51,16 @@ update_shot = function () {
 }
 
 var period = 40 - _power * 4;
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 	time_source_start(time_source_update_shot);
 }, [], -1);
-time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_units_seconds, function (bone_old, bone_new) {
+
+time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_units_seconds, function() {
 	update_shot();
 });
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function () {
+
+time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function() {
 	instance_destroy();
 });

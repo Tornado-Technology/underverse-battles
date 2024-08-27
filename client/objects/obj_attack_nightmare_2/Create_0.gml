@@ -2,7 +2,7 @@ event_inherited();
 
 on_border_created = function () {
 	pattern_instance.callback();
-};
+}
 
 switch (type) {
 	case 0:
@@ -18,6 +18,7 @@ switch (type) {
 	case 1:
 		create_border(battle_border.up, battle_border.down, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_bats, {
+			tentacle: obj_tentacle_destroy_back_nightmare,
 			creation: obj_creation_nightmare
 		});
 	break;
@@ -39,4 +40,4 @@ switch (type) {
 			slime: obj_slime_nightmare
 		});
 	break;
-};
+}

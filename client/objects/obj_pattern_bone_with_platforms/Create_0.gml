@@ -21,8 +21,7 @@ callback = function () {
 		create_bone(border_instance.x - border_instance.left + i * 8, border_instance.y + border_instance.down + 3, bone, 0, 1, 0, 0);
 		i++;
 	}
-		
-	update_bone();
+	
 	time_source_start(time_source_update_bone);
 	time_source_start(time_source_update_platforms);
 	time_source_start(time_source_update_destroy);
@@ -37,24 +36,26 @@ update_bone = function() {
 	
 	var sector_y = border_instance.y - border_instance.up + 25;
 	
-	var speed_bone = 2 + _power * 0.1
-	var direction_bone = choose(border_instance.x + border_instance.right, border_instance.x - border_instance.left) == border_instance.x + border_instance.right  ? border_instance.x + border_instance.right : border_instance.x - border_instance.left;
-	var angle_bone = direction_bone == border_instance.x + border_instance.right  ? 180 : 0;
+	var speed_bone = 2 + _power * 0.1;
+	var bone_direction = choose(dir.left, dir.right);
+	var bone_x = bone_direction == dir.left ? border_instance.x + border_instance.right + 8 : border_instance.x - border_instance.left - 8;
 	
 	switch (position) {
 		case 0:
-			bone_instance = create_bone(direction_bone, sector_y - 5, bone_spinning, speed_bone,  1, angle_bone, angle_bone);
+			bone_instance = create_bone(bone_x, sector_y - 5, bone_spinning, speed_bone, 1, bone_direction, bone_direction);
 		break;
 		
 		case 1:
-			bone_instance =	create_bone(direction_bone, sector_y + sector_y_step - 5, bone_spinning, speed_bone, 1, angle_bone, angle_bone);
+			bone_instance =	create_bone(bone_x, sector_y + sector_y_step - 5, bone_spinning, speed_bone, 1, bone_direction, bone_direction);
 		break;
 		
 		case 2:
-			bone_instance =	create_bone(direction_bone, sector_y + sector_y_step * 2 - 5, bone_spinning, speed_bone,  1, angle_bone, angle_bone);	
+			bone_instance =	create_bone(bone_x, sector_y + sector_y_step * 2 - 5, bone_spinning, speed_bone,  1, bone_direction, bone_direction);	
 		break;
 	}
 	bone_instance.speed_spinning = speed_bone;
+	
+	audio_play_sound_plugging(snd_projectile);
 }
 	
 update_platforms = function() {
@@ -65,7 +66,7 @@ update_platforms = function() {
 }
 
 var period = 40 - _power * 2;
-var repeats = 8 + _power * 2;
+var repeats = 10 + _power * 2;
 time_source_update_bone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_bone();
 }, [], repeats - 1);

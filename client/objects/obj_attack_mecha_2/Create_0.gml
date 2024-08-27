@@ -18,6 +18,7 @@ switch (type) {
 	case 1:
 		create_border(battle_border.up, battle_border.down, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_bats, {
+			tentacle: obj_tentacle_destroy_back_nightmare_mecha,
 			creation: obj_creation_nightmare_mecha,
 		});
 	break;

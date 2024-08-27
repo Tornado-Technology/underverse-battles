@@ -27,17 +27,17 @@ update = function () {
 	} else {
 		var start_x = border_instance.x + border_instance.left + 10;
 		random_position = start_x + fight_random_integer(offset_x, offset_x * 2);
-	};
+	}
 
-	var bomb_instnace =  create_bone(random_position,  border_up, bomb, 4, 1, 270, 1);
+	var bomb_instnace = create_bone(random_position,  border_up, bomb, 4, 1, 270, 1);
 	
 	bomb_instnace.draw_no_arena = true;
 	bomb_instnace.spike_count = 3;
 	bomb_instnace.speed_const = 2.4 + _power * 0.1;
 	bomb_instnace.target_position = new Vector2(bomb_instnace.x, border_instance.y + border_instance.down + fight_random_integer(-100, 50));
- }
+}
  
-var period =  34 - (_power * 2);
+var period = 34 - (_power * 2);
 var repeats = 12 + (_power * 2);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {

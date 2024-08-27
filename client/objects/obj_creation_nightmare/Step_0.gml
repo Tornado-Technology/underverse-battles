@@ -8,7 +8,7 @@ if (image_alpha <= 1) {
 
 motion_set(direction,  speed_const * dtime);
 
-if(destroying) {
+if (destroying) {
 	image_xscale = approach(image_xscale, 0, 0.03 * dtime);
 	image_yscale -= 0.03 * dtime;	
 	

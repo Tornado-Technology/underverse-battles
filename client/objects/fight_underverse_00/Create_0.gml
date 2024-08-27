@@ -11,7 +11,7 @@ required_components = {
 	bgm: obj_fight_soundtrack, 
 	timer: obj_fight_timer, 
 	uv: obj_ai_uv00
-};
+}
 
 // CHARActer
 player_object[0] = obj_character_ink_sans;

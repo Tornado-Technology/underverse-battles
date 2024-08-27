@@ -2,7 +2,7 @@ event_inherited();
 
 on_border_created = function () {
 	pattern_instance.callback();
-};	
+}
 
 switch (type) {	
 	case 0:
@@ -25,4 +25,4 @@ switch (type) {
 			bomb: obj_bomb_tentacles_nightmare
 		});
 	break;
-};
+}

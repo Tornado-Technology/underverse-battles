@@ -95,12 +95,10 @@ function ClassUIControllerArrows() constructor {
 		right.draw(position_x[3], position_y[3]);	
 			
 		var i = 0;
-		  repeat(array_length(strunct)) {
-			  strunct[i].scale_x =  data_get(key_scale + scale[i]);
-			  strunct[i].scale_y =  data_get(key_scale + scale[i]);
-			i++;	
-		  };
-	
-		
+		repeat(array_length(strunct)) {
+			strunct[i].scale_x =  data_get(key_scale + scale[i]);
+			strunct[i].scale_y =  data_get(key_scale + scale[i]);
+		i++;	
+		}
 	}
 }

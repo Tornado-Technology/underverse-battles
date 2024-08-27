@@ -1,7 +1,7 @@
-// Arguments: bomb,  spike
+// Arguments: bomb, spike, custom_repeats (optional)
 
-callback = function () {
-	 create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+callback = function() {
+	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	speed_const = 1 + _power * 0.1;
 	var _dir = 90;
 	var multiplication = 1;
@@ -24,8 +24,9 @@ callback = function () {
 	
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
-};
-update = function () {
+}
+
+update = function() {
 	var offset = fight_random_integer(-20, 20);
 	var spike_instance;
 	
@@ -34,26 +35,28 @@ update = function () {
 			direction: 270, 
 			image_angle: 270
 		});
-	}else {
+	} else {
 		 spike_instance = instance_create_depth(border_instance.x - offset, border_instance.y + border_instance.down + 20, fight_depth.bullet_outside_hight, spike, {
 			direction: 90, 
 			image_angle: 90
 		});
-	};
-	spike_instance.speed_const = 2 + _power * 0.2;
+	}
+	spike_instance.speed_const = 2 + _power * 0.1;
+	
+	audio_play_sound_plugging(snd_projectile);
 }
 
  
-var period = 40 - (_power * 2) ;
-var repeats = 5 + (_power * 2) ;
+var period = 40 - (_power * 2);
+var repeats = 6 + (_power * 2);
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
-};
+}
 
-time_source_update = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function() {
 	update();	
-}, [], -1);
+}, [], repeats);
 
 time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();

@@ -128,6 +128,7 @@
     {"name":"cutscene_character_move_to","order":1,"path":"scripts/cutscene_character_move_to/cutscene_character_move_to.yy",},
     {"name":"cutscene_object_shift_position","order":2,"path":"scripts/cutscene_object_shift_position/cutscene_object_shift_position.yy",},
     {"name":"destroy_battle_object_by_edit","order":4,"path":"scripts/destroy_battle_object_by_edit/destroy_battle_object_by_edit.yy",},
+    {"name":"snd_spit","order":2,"path":"sounds/snd_spit/snd_spit.yy",},
     {"name":"snd_teleport_2","order":1,"path":"sounds/snd_teleport_2/snd_teleport_2.yy",},
     {"name":"spr_alphys_picnic_frame_worry","order":1,"path":"sprites/spr_alphys_picnic_frame_worry/spr_alphys_picnic_frame_worry.yy",},
     {"name":"spr_alphys_picnic_standing_down","order":2,"path":"sprites/spr_alphys_picnic_standing_down/spr_alphys_picnic_standing_down.yy",},

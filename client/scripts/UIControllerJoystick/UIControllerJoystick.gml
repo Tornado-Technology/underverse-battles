@@ -20,7 +20,7 @@ function ClassUIControllerJoystick() constructor {
 	handle_image = spr_ui_controls_joystick_handle;
 	border_image = spr_ui_controls_joystick_border;
 	
-	self.input = {};
+	self.input = {}
 	self.input[$ vk_up] = new __input(false);
 	self.input[$ vk_down] = new __input(false);
 	self.input[$ vk_right] = new __input(false);

@@ -29,9 +29,9 @@ collision = function () {
 	if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) == noone) {
 		result_ricochet();
 		be_ricochet = true;	
-	};
+	}
 }
 
 if (can_ricochet) {
 	ricochet = true;
-};
+}

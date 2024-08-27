@@ -47,7 +47,7 @@ update = function () {
  };
  
 update_shot = function () {
-	var i = irandom(1);
+	var i = fight_random_integer(0, 1);
 	time_source_start(tentacles_instance[i].time_source_state);
 	shot = false;
 };

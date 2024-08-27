@@ -38,10 +38,10 @@ update = function () {
 };
 
 update_shot = function () {
-	var i = irandom(instance_number(bone));
-		bone_counst_0[i] = instance_find(bone, i);
-		if (variable_instance_exists(bone_counst_0[i], "direction")) {
-			bone_counst_0[i].direction = 90;
+	var i = fight_random_integer(0, instance_number(bone));
+		bone_instances_0[i] = instance_find(bone, i);
+		if (variable_instance_exists(bone_instances_0[i], "direction")) {
+			bone_instances_0[i].direction = 90;
 		}
 	shot = true;
 	audio_play_sound_plugging(snd_spare_up);

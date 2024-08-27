@@ -1,4 +1,4 @@
-// Arguments:  thread_tentacles, spike
+// Arguments: thread_tentacles, creation
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y - border_instance.up + 15, battle_soul_type.red);
 	
@@ -12,7 +12,7 @@ callback = function () {
 update = function () { 
 	var cood = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 	
-	var spike_instance = instance_create_depth(cood, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, obj_tentacle_destroy_back_nightmare, {
+	var spike_instance = instance_create_depth(cood, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, tentacle, {
 		image_angle: 90,
 		image_xscale: 0
 	});

@@ -18,10 +18,10 @@ function UIButton() constructor {
 	
 	// I don't work with memory leaks with Events
 	// Because use functions
-	on_hover = function(_self) { };
-	on_held = function(_self) { };
-	on_press = function(_self) { };
-	on_release = function(_self) { };
+	on_hover = function(_self) { }
+	on_held = function(_self) { }
+	on_press = function(_self) { }
+	on_release = function(_self) { }
 	
 	/// @param {Real} width
 	/// @param {Real} height

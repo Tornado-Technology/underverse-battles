@@ -5,4 +5,4 @@ if(is_bonb) {
 	draw_reset();
 } else {
 	event_inherited();	
-};
+}

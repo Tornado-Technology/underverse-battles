@@ -10,7 +10,7 @@ start_scale = image_xscale;
 change_scale = function(scale_new = scale_const, step) {
 	scale_time = step;
 	new_counst = scale_new;
-};
+}
 
 
 attack = false;

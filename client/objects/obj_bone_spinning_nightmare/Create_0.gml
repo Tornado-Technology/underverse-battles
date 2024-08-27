@@ -8,7 +8,6 @@ stage = 0;
 
 speed_const = 0;
 
-
 step = 0.01;
 
 radius_max = point_distance(x, y, center_x, center_y);

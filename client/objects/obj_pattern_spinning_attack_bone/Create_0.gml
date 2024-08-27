@@ -1,8 +1,7 @@
 bone_scale = 2;
 bone_scale_step = 0.1;
 
-
-callback = function () {
+callback = function() {
 	bone_instances_counst = 14;
 	soul_instance = create_soul(border_instance.x - 10, border_instance.y - 40 + 20 , battle_soul_type.blue);
 	var size_bone = 0;
@@ -27,39 +26,36 @@ callback = function () {
 }
 
 update = function() {
-	var position_x = fight_random_choose(border_instance.x - border_instance.left - fight_random_integer(15, 30),  border_instance.x + border_instance.right + fight_random_integer(15, 30));
-	var position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
-	var bone_instance_0;
+	var cood = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
+	var bone_x = choose(border_instance.x - border_instance.left - fight_random_integer(10, 30),  border_instance.x + border_instance.right + fight_random_integer(10, 30));
 	
-	
-	bone_instance_0 = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, bone);
-	bone_instance_0.speed_const = (4 + _power * 0.1);
-	bone_instance_0.speed_spinning = (5 + _power * 0.1);
+	var bone_instance_0 = instance_create_depth(bone_x, cood, fight_depth.bullet_outside_hight, bone);
+	bone_instance_0.speed_const = 3.5 + _power * 0.1;
 	
 	random_number = fight_random_integer(2, 13);
-
 	
 	bone_moving = bone_instances[random_number];
 	bone_moving.shake();
 }
 
-
-update_shot = function () {
-	bone_moving.speed_const = 4;
+update_shot = function() {
+	bone_moving.speed_const = 3.4 + _power * 0.1;
 	bone_instances[random_number] = create_bone(bone_moving.xstart, bone_moving.ystart, bone_shaking, 0, 0, bone_moving.direction, bone_moving.image_angle);
 	bone_instances[random_number].change_scale(1, 0.1);
 	audio_play_sound_plugging(snd_spare_up);
 }
 
+var period = 58 - (_power) * 2;
+var repeats = 6 + _power * 3;
 
-var period = 50 - (_power);
-var repeats = 10 + _power;
-
+time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_units_seconds, function (bone_old, bone_new) {
+	update_shot();
+});
 
 time_source_update_start = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-	update_shot();
-}, [], repeats - 1);
+	time_source_start(time_source_update_shot);
+}, [], -1);
 
 time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
 	instance_destroy();

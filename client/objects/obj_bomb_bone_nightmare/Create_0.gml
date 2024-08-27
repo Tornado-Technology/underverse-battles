@@ -27,6 +27,7 @@ spwan = function () {
 			var spike_instance = instance_create_depth(x + dcos(i), y + -dsin(i), fight_depth.bullet_outside_hight, spike);
 			spike_instance.image_angle = point_direction(spike_instance.x, spike_instance.y, obj_battle_soul.x, obj_battle_soul.y) + j; 	
 			spike_instance.speed_const = speed_const;
+			spike_instance.disable_surface = true;
 			i += angle;	
 			j += 10;
 		}

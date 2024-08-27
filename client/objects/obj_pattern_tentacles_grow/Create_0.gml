@@ -22,7 +22,7 @@ update = function () {
 			speed_const: speed_const,
 			scale_const: scale_const
 		});
-		bomb_instnace.moving(moving_y, irandom_range(10, 60));
+		bomb_instnace.moving(moving_y, fight_random_integer(10, 60));
 		multiplication ++;
 	}
 	

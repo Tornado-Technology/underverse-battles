@@ -1,6 +1,6 @@
 // Arguments: spike, tentacle
 
-callback = function () {
+callback = function() {
 	create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	border_up = border_instance.y - border_instance.up;
 	border_down = border_instance.y + border_instance.down;
@@ -14,11 +14,11 @@ callback = function () {
 	
 	update_spike();
 	time_source_start(time_source_update_spike);
-	time_source_start(time_source_update_radius_spike);
+	time_source_start(time_source_update_tentacle);
 	time_source_start(time_source_update_destroy);
 }
 
-update_radius_spike = function () {
+update_tentacle = function() {
 	
 	var speed_tentacles =  0.04; 
 	var tentacles_instance = [];
@@ -59,17 +59,17 @@ update_spike = function() {
 }
 
 var period = 35 - (_power * 2);
-var period_spike = 50;
+var period_tentacle = 50 - (_power * 2);
 var repeats = 10 + (_power * 3);
 
-time_source_update_spike = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update_spike = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update_spike();
 }, [], repeats - 1);
 
-time_source_update_radius_spike = time_source_create(time_source_game, period_spike / 60, time_source_units_seconds, function () {
-	update_radius_spike();	
-}, [], repeats - 1);
+time_source_update_tentacle = time_source_create(time_source_game, period_tentacle / 60, time_source_units_seconds, function() {
+	update_tentacle();	
+}, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function() {
 	instance_destroy();
 });

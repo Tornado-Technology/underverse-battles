@@ -25,6 +25,7 @@ time_source_spwan = time_source_create(time_source_game,  bullets_spawn_period, 
 	create_spike(x, y + -dsin(40) * sprite_height,  drop, speed_const + 1, target, {
 		disable_surface: true
 	});
+	audio_play_sound_plugging(snd_spit);
 }, [], 3);
 
 time_source_start(time_source_spwan);

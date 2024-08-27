@@ -21,10 +21,10 @@ function UIImageButton(index, sprite) : UIButton() constructor {
 	
 	// I don't work with memory leaks with Events
 	// Because use functions
-	on_hover = function(_self) { };
-	on_held = function(_self) { };
-	on_press = function(_self) { };
-	on_release = function(_self) { };
+	on_hover = function(_self) { }
+	on_held = function(_self) { }
+	on_press = function(_self) { }
+	on_release = function(_self) { }
 	
 	/// @param {Asset.GMSprite} sprite
 	static set_image = function(sprite) {
