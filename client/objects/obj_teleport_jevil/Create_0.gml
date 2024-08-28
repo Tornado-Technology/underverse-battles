@@ -15,7 +15,8 @@ angle_shadow = image_angle;
 step = 0.05;
 
 direction = x > obj_battle_border.x ? 0 :  180;
-image_xscale = x > obj_battle_border.x ? -1 : 1;
+start_xscalse = x > obj_battle_border.x ? -1 : 1;
+image_xscale = 0;
 particle = part_system_create(!sign(image_xscale) ? partice_shadow_right_jevil : partice_shadow_left_jevil);
 
 offset = x > obj_battle_border.x ? -10 : 10;

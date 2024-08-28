@@ -43,11 +43,14 @@ idle_animation = spr_jevil_idle;
 after_battle_animation = spr_jevil_after_battle;
 defeated_animation =  spr_jevil_defeated;
 
-
 fight_2_start_animation = spr_jevil_scythe_start;
 fight_2_idle_animation = spr_jevil_scythe_idle;
 fight_2_finish_animation = spr_jevil_scythe_finish;
 
+// Teleportation
+is_teleportation = false;
+step_teleportion = 0.1;
+start_xsacle = image_xscale;
 
 // Actions
 passive_skill = PassiveSkill("Character.Jevil.PassiveSkill");
@@ -70,7 +73,7 @@ on_battle_end = function(damage) {
 
 	return damage;
 }
-
+	
 play_snd_being_attack = function () {
 	var i = irandom(array_length(snd_beginning_attack) - 1);
 	

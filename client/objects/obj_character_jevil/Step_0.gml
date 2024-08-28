@@ -1,5 +1,6 @@
 event_inherited();
 
+image_xscale = approach(image_xscale, is_teleportation ? 0 : start_xsacle, step_teleportion * dtime);
 
 if (global.fight_instance == noone || player_num == -1) {
 	exit;
@@ -13,3 +14,6 @@ if (sprite_index == idle_animation && fight_get_initiative() == player_num &&
 } else if (sprite_index == fight_2_idle_animation && fight_get_initiative() != player_num) {
 	sprite_index = fight_2_finish_animation;
 }
+
+
+

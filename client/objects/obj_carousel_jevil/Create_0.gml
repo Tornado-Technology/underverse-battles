@@ -9,22 +9,17 @@ backwards = false;
 
 sprite_frame = 0;
 
+radius = 40;
+
 angle = 0;
 
-target_position_x = 0;
-backwards_x = xstart;
 alpha = 0;
-
-if (image_index > 0) {
-	step += 0.03;	
-};
-
 image_xscale = -1;
 	
 destroy = false;	
 	
 on_soul_touch = function(soul) {
-	if (!backwards) {
+	if (image_xscale < 0) {
 		fight_soul_damage(damage, destructible, id);
-	};
+	} 
 }
