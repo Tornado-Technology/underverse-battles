@@ -78,11 +78,15 @@ update_shot = function() {
 	var i = fight_random_integer(0, array_length(bone_instances_0) - 1);
 
 	if (fight_random_integer(0, 1)) {
-		bone_instances_0[i].speed_const = 1.6;
-		bone_instances_0[i].direction = dir.down;
+		with (bone_instances_0[i]) {
+			speed_const = 1.6;
+			direction = dir.down;
+		}
 	} else  {
-		bone_instances_1[i].speed_const = 1.6;
-		bone_instances_1[i].direction = dir.up;
+		with (bone_instances_1[i]) {
+			speed_const = 1.6;
+			direction = dir.up;
+		}
 	}
 	
 	audio_play_sound_plugging(snd_spare_up);
