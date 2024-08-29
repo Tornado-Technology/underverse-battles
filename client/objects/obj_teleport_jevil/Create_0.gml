@@ -11,7 +11,7 @@ sprite_frame = 0;
 
 draw_shadow = false;
 angle_shadow = image_angle;
-
+image_alpha = 0;
 step = 0.05;
 
 direction = x > obj_battle_border.x ? 0 :  180;

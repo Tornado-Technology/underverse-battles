@@ -31,7 +31,7 @@ update = function () {
 };
 
 transition_attack = function () {
-	var step = 0.3;
+	var step = 0.8;
 	var side_left = approach(border_instance.left, side_next_attack.left, step * dtime);
 	var side_right =  approach(border_instance.right, side_next_attack.right, step * dtime);
 	
@@ -53,11 +53,11 @@ time_source_transition_attack = time_source_create(time_source_game, 1 / 60, tim
 	transition_attack();
 }, [], -1);
 
-time_source_start_transition_attack = time_source_create(time_source_game, (period * 7 / 60), time_source_units_seconds, function () {
+time_source_start_transition_attack = time_source_create(time_source_game, (period * repeats / 65), time_source_units_seconds, function () {
+	obj_carousel_jevil.destroy = true;
 	time_source_start(time_source_transition_attack);
 });
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 - 1, time_source_units_seconds, function () {
-	obj_carousel_jevil.destroy = true;
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

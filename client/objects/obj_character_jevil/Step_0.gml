@@ -1,6 +1,12 @@
 event_inherited();
 
-image_xscale = approach(image_xscale, is_teleportation ? 0 : start_xsacle, step_teleportion * dtime);
+if (is_teleportation) {
+	image_xscale = approach(image_xscale, 0, step_teleportion * dtime);
+	image_alpha = approach(image_alpha, 0, step_teleportion * dtime);
+} else {	
+	image_xscale = approach(image_xscale, start_xsacle, step_teleportion * dtime);
+	image_alpha = approach(image_alpha, 1, step_teleportion * dtime);
+}
 
 if (global.fight_instance == noone || player_num == -1) {
 	exit;
