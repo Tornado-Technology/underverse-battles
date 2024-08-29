@@ -16,7 +16,7 @@ on_border_created = function() {
 	start_next_pattern();
 }
 
-create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
 pattern_instances = [
 	create_pattern_custom_power(obj_pattern_carousel, 3, {
 		carousel: obj_carousel_jevil

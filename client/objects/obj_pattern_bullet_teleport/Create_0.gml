@@ -3,7 +3,7 @@
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
-	character_instance.visible = false;
+	character_instance.is_teleportation = true;
 		
 	update();
 	time_source_start(time_source_update);
@@ -24,12 +24,13 @@ update = function() {
 }
 
 var period = 40 - (_power * 2);
+var repeats = 5 + _power * 2; 
 
 time_source_update = time_source_create(time_source_game, period/ 60, time_source_units_seconds, function () {
 	update();
-}, [], -1);
+}, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (300 + _power * 20) / 60, time_source_units_seconds, function () {
-	character_instance.visible = true;
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+	character_instance.is_teleportation = false;
 	instance_destroy();
 });
