@@ -27,7 +27,6 @@ repeat(2) {
 	fist[i].depth =  fight_depth.bullet_outside_hight + -500;
 	fist[i].step = step;
 	fist[i].direction = angle_fist;
-	fist[i].index_sprite = sprite_get_number(fist[i].sprite_index) - 1;
 	
 	i++;
 }
@@ -46,7 +45,7 @@ time_source_attack = time_source_create(time_source_game, 30 / 60, time_source_u
 }, [], -1);
 
 time_source_hand_donw = time_source_create(time_source_game, 80 / 60, time_source_units_seconds, function () {
-	i = fight_random_integer(0, 1);
+	i = 0;
 	
 	hand_down = true;
 	fist_attack = true;

@@ -1,12 +1,12 @@
 image_index = sprite_fram;
 sprite_fram = approach(sprite_fram, index_sprite, step * dtime);
 
+motion_set(direction, speed_count * dtime);
 
 if(smooth_move) {
 	y = approach(y, position_y, 2);		
 };
 
-motion_set(direction, speed_count * dtime);
 
 if (destroying) {
 	index_sprite = 0;
