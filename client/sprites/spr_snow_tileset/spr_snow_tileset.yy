@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_snow_tileset",
   "bboxMode":0,
-  "bbox_bottom":111,
+  "bbox_bottom":143,
   "bbox_left":0,
   "bbox_right":367,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a381f440-290e-462f-862d-7db3d2b28ec9","name":"a381f440-290e-462f-862d-7db3d2b28ec9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"028a44c8-a8f6-4714-af2f-e9e06d72ca8a","name":"028a44c8-a8f6-4714-af2f-e9e06d72ca8a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":112,
+  "height":144,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"229cc803-2eb6-4645-be4c-4ff4ac97f887","blendMode":0,"displayName":"default","isLocked":false,"name":"229cc803-2eb6-4645-be4c-4ff4ac97f887","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"52752e1e-ec3e-486c-951f-a6ee55a1e6ca","blendMode":0,"displayName":"default","isLocked":false,"name":"52752e1e-ec3e-486c-951f-a6ee55a1e6ca","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_snow_tileset",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a381f440-290e-462f-862d-7db3d2b28ec9","path":"sprites/spr_snow_tileset/spr_snow_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"51eb3307-1bd8-4958-9d5a-7bab920a1f0d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"028a44c8-a8f6-4714-af2f-e9e06d72ca8a","path":"sprites/spr_snow_tileset/spr_snow_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"022334db-4fbd-4d65-907b-6724ffcf4443","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
