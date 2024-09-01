@@ -35,10 +35,10 @@ switch(type) {
 	break;
 
 	default:
-		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left, battle_border.right);
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 10, battle_border.right - 10);
 		pattern_instance = create_pattern(obj_pattern_wings_feathers, {
 			wings: obj_wings_xanastasia,
-			feathers:  obj_feathers_down_moving_xanastasia
+			feathers:  obj_feathers_xanastasia
 		});	
 	break;
 }

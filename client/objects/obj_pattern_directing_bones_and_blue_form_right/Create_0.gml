@@ -16,8 +16,8 @@ update = function () {
 	var speed_change = 0.09;
 	
 	var bones = fight_random_integer(1, 100) <= 25  ? bone_blue : bone; 
-	var bone_size = fight_random_float(3, 4.9);
-	var random_size = fight_random_float(2.9, 5.5);	
+	var bone_size = 5.4	;
+	var random_size = 5.5;
 	
 	if (rand_side == dir.right) {
 		 bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bones, bone_speed, bone_size, 180, 0);

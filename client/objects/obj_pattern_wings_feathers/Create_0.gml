@@ -12,23 +12,23 @@ callback = function () {
 update = function() {
 	var	coord = rand_side_from(border_instance.x - border_instance.left - 40, border_instance.y - border_instance.up - 40, border_instance.x + border_instance.right + 40, border_instance.y + border_instance.down + 40);
 	var  wings_instance = instance_create_depth(coord[0], coord[1], fight_depth.bullet_outside_hight, wings);
-	wings_instance.speed_const = 3 + _power * 0.1;
+
+	wings_instance.speed_const = 3.7 + _power * 0.1;
 }
 
 update_feathers = function () {
-	var offset = 50;
+	var offset = 10;
 	
 	repeat(2) {
-		var position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-		var position_y = fight_random_choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);	
-		var direction_feathers = position_y == border_instance.y - border_instance.up - offset ?  270 : 90;
+		var position_x = border_instance.x - border_instance.left - 10;
+		var position_y = fight_random_integer(border_instance.y - border_instance.up + offset, border_instance.y + border_instance.down - offset);	
+		var direction_feathers = 0;
 			
 		var feathers_instnace = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, feathers, {
-			direction: direction_feathers,
-			image_angle: direction_feathers
+			_target_angle: direction_feathers
 		});
-		
-		feathers_instnace.speed_const = 2 + _power * 0.1;
+	
+		feathers_instnace._speed = 3.7 + _power * 0.1;
 	}
 	
 }

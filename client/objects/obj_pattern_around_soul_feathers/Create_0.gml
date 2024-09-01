@@ -11,32 +11,33 @@ update = function() {
 	var feathers_instance;
 	var angle = 360 / 6;
 	var i = angle;
-	var speed_feathers = 3 + _power * 0.1;
+	var speed_feathers = 1.6 + _power * 0.1;
 	var is_versa = fight_random_integer(0, 1);
 	var step = 0.7 + _power * 0.1;
 	var radius = 90;
-	repeat(6) {
+
+	while(i <= 360){
 		feathers_instance = instance_create_depth(border_instance.x + dcos(i) * radius, border_instance.y + -dsin(i) * radius, fight_depth.bullet_outside, feathers, {
 			image_angle: i,
-			time_destroy: 10,
 			center_x: border_instance.x,
-			center_y: border_instance.y
+			center_y: border_instance.y,
 		});
 
 		feathers_instance.radius = radius + 20;
 		feathers_instance.is_versa = is_versa;
 		feathers_instance.speed_count = speed_feathers;
 		feathers_instance.step = step;
-		with(feathers_instance) {
+		with (feathers_instance) {
 			impact_on_radius = function () {
 				radius -= step;
 				if (radius <= -10) {
 					moving_radius = false;
 					motion_set(image_angle, speed_count * dtime);
-				};
+				}
 			}		
 		}
-		i+= angle;			
+
+		i += angle;			
 	}
 }
 

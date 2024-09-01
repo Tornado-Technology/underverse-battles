@@ -1,5 +1,6 @@
 event_inherited();
 
+wave_obj = obj_wave_wings_xanastasia;
 
 image_alpha = 0;
 depth = fight_depth.bullet_outside_hight;
