@@ -46,8 +46,8 @@ update_platforms = function() {
 	create_next_moving_platform(border_instance.x + border_instance.right + 10, border_instance.y + 10, down_bone_count, 6, 60, -platforms_speed);
 }
 
-var period = 50 - (_power * 3);
-var repeats = 7 + _power * 3;
+var period = 43 - (_power * 3);
+var repeats = 8 + _power * 3;
 
 time_source_update = time_source_create(time_source_game,  1 / (6 + _power), time_source_units_seconds, function () {
 	update();

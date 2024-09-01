@@ -1,4 +1,4 @@
-// Arguments: bone
+// Arguments: bone, rotating_bone
 
 callback = function () {
 	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -16,23 +16,19 @@ update = function () {
 	var speed_bone = 3 + _power * 0.1;
 	var i = 45;
 	repeat(2) {
-		bone_instance =	create_bone(position_x, position_y, obj_bone_spinning_papyrus, speed_bone, 2, direction_bone, i);
-		
+		bone_instance =	create_bone(position_x, position_y, rotating_bone, speed_bone, 2, direction_bone, i);
 		bone_instance.speed_spinning = speed_bone;
 		
 		i += 80;	
 	}
-	
-
-
 }
-var period = 40 - _power;
-var repeats = 10 + _power; 
+
+var period = 45 - _power * 2;
+var repeats = 8 + _power * 2;
+
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], repeats -1);
-
-
+}, [], repeats - 1);
 
 time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();

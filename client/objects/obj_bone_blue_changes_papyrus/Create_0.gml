@@ -1,16 +1,17 @@
 event_inherited();
+
 can_move = true;
-scale_start = image_yscale;
 damage = get_char_damage(obj_character_papyrus);
 
 soul_invulnerability = 20;
 
-scale_const = 0;
-const = 0;
+min_scale = image_yscale;
+max_scale = image_yscale;
+current_scale = image_yscale;
+scale_time = 0;
 
-change_scale = function(step, new_counst) {	
-	scale_const = new_counst;
-	scale_time = step;
-	const = new_counst;
+set_pulsating_scale = function(min_scale, max_scale, scale_time) {	
+	self.min_scale = min_scale;
+	self.max_scale = max_scale;
+	self.scale_time = scale_time;
 }
-

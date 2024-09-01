@@ -1,12 +1,12 @@
 {
   "$GMSprite":"",
   "%Name":"spr_big_bone_papyrus",
-  "bboxMode":0,
+  "bboxMode":1,
   "bbox_bottom":186,
   "bbox_left":0,
   "bbox_right":84,
   "bbox_top":0,
-  "collisionKind":1,
+  "collisionKind":0,
   "collisionTolerance":0,
   "ConfigValues":{
     "Development":{

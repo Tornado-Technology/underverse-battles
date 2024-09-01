@@ -1,8 +1,9 @@
 event_inherited();
-disable_surface = true;
+
 damage = get_char_damage(obj_character_papyrus);
 
+speed_spinning = 0;
+
 step = 0.07;
-image_alpha = 0;
-rotating = 2;
+rotating = -1;
 soul_invulnerability = 20;
