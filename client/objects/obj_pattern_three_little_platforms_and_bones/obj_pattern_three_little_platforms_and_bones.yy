@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bone_spinning_papyrus",
+  "%Name":"obj_pattern_three_little_platforms_and_bones",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bone_spinning_papyrus",
+  "name":"obj_pattern_three_little_platforms_and_bones",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Papyrus/Bullets.yy",
+    "name":"Papyrus",
+    "path":"folders/Attack Patterns/Bones/Papyrus.yy",
   },
   "parentObjectId":{
-    "name":"obj_bone_papyrus",
-    "path":"objects/obj_bone_papyrus/obj_bone_papyrus.yy",
+    "name":"obj_pattern",
+    "path":"objects/obj_pattern/obj_pattern.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_bone_papyrus",
-    "path":"sprites/spr_bone_papyrus/spr_bone_papyrus.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

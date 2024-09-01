@@ -1,6 +1,5 @@
 //Arguments: bone, bone_blue
 
-
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y + border_instance.down - 10, battle_soul_type.blue);
 
@@ -13,19 +12,26 @@ update = function () {
 	var bone_instance;
 	var rand_side = fight_random_choose(dir.left, dir.right);
 	var bone_speed = 2 + _power * 0.2;
-	var speed_change = 0.09;
+
+	var bone_object = fight_random_integer(1, 100) <= 25 ? bone_blue : bone; 
 	
-	var bones = fight_random_integer(1, 100) <= 25  ? bone_blue : bone; 
-	var bone_size = 5.4	;
-	var random_size = 5.5;
+	var min_scale = 1;
+	var max_scale = bone_object == bone ? 3 : 4;
+	var bone_size = fight_random_float(min_scale, max_scale);
+	var scale_time = _power == 0 ? fight_random_float(0.05, 0.08) :
+		(_power == 1 ? fight_random_float(0.05, 0.09) :
+		(_power == 2 ? fight_random_float(0.06, 0.09) :
+		(_power == 3 ? fight_random_float(0.06, 0.1) :
+		fight_random_float(0.07, 0.1))));
+
 	
 	if (rand_side == dir.right) {
-		 bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bones, bone_speed, bone_size, 180, 0);
+		bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down + 5, bone_object, bone_speed, bone_size, 180, 0);
 	} else {
-		bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bones, bone_speed, bone_size, 0, 0);	
-	};
-		
-	bone_instance.change_scale(speed_change, random_size);
+		bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down + 5, bone_object, bone_speed, bone_size, 0, 0);
+	}
+	
+	bone_instance.set_pulsating_scale(min_scale, max_scale, scale_time);
 }
 
 var period = 55 - (_power);

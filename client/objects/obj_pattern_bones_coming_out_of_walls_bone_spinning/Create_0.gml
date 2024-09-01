@@ -1,4 +1,4 @@
-// Arguments: bone
+// Arguments: bone, rotating_bone
 
 bone_scale = 2;
 bone_scale_step = 0.1;
@@ -51,12 +51,12 @@ callback = function () {
 	}
 	
 	
-	bone_spinning =  instance_create_depth(border_instance.x + 2, border_instance.y, fight_depth.bullet_outside_hight, obj_bone_spinning_papyrus, {
+	rotating_bone =  instance_create_depth(border_instance.x + 2, border_instance.y, fight_depth.bullet_outside_hight, rotating_bone, {
 		image_yscale: 0,
 		image_angle: angle	
 	});
 
-	bone_spinning.change_scale(20, 0.1);
+	rotating_bone.change_scale(20, 0.1);
 	
 	audio_play_sound_plugging(snd_emergence);
 	
@@ -86,7 +86,7 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 }, [], -1);
 
 time_source_start_moving = time_source_create(time_source_game, 20 / 60, time_source_units_seconds, function () {
-	bone_spinning.speed_spinning = fight_random_integer(0, 1) ?  (2 + _power * 0.1) : -(2 + _power * 0.1);
+	rotating_bone.speed_spinning = fight_random_integer(0, 1) ?  (2 + _power * 0.1) : -(2 + _power * 0.1);
 })
 
 time_source_update_shot = time_source_create(time_source_game, (period )  / 60, time_source_units_seconds, function (bone_old, bone_new) {

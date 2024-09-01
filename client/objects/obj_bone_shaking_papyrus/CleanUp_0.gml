@@ -1,1 +1,0 @@
-if (time_source_shake_exists) time_source_destroy(time_source_shake);
