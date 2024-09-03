@@ -2,15 +2,14 @@ image_index = sprite_frame;
 image_angle =  angle  + 900;
 
 if (image_alpha <= 1) {
-	image_alpha += 0.3;	
+	image_alpha += 0.05;	
 };
 
 
 if (attack) {
 	motion_set(angle + 900, speed_count * dtime);
 	image_blend = c_white;
-}
-else {
+} else {
 	image_blend = c_gray;
 	x = center_x + dcos(angle) * radius;
 	y = center_y + -dsin(angle) * radius;

@@ -644,7 +644,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"UnderverseBattles",
   "resources":[
@@ -839,7 +839,6 @@
     {"id":{"name":"obj_bone_rotating_papyrus","path":"objects/obj_bone_rotating_papyrus/obj_bone_rotating_papyrus.yy",},},
     {"id":{"name":"obj_bone_rotating_swap_sans","path":"objects/obj_bone_rotating_swap_sans/obj_bone_rotating_swap_sans.yy",},},
     {"id":{"name":"obj_bone_sans","path":"objects/obj_bone_sans/obj_bone_sans.yy",},},
-    {"id":{"name":"obj_bone_shaking_papyrus","path":"objects/obj_bone_shaking_papyrus/obj_bone_shaking_papyrus.yy",},},
     {"id":{"name":"obj_bone_sharp_error_sans_anti_piracy","path":"objects/obj_bone_sharp_error_sans_anti_piracy/obj_bone_sharp_error_sans_anti_piracy.yy",},},
     {"id":{"name":"obj_bone_sharp_error_sans","path":"objects/obj_bone_sharp_error_sans/obj_bone_sharp_error_sans.yy",},},
     {"id":{"name":"obj_bone_sharp_swap_sans","path":"objects/obj_bone_sharp_swap_sans/obj_bone_sharp_swap_sans.yy",},},
@@ -859,7 +858,6 @@
     {"id":{"name":"obj_brush_ink_sans","path":"objects/obj_brush_ink_sans/obj_brush_ink_sans.yy",},},
     {"id":{"name":"obj_brush_shooting_ink_sans_ice_blood","path":"objects/obj_brush_shooting_ink_sans_ice_blood/obj_brush_shooting_ink_sans_ice_blood.yy",},},
     {"id":{"name":"obj_bullet_clubs_jevil","path":"objects/obj_bullet_clubs_jevil/obj_bullet_clubs_jevil.yy",},},
-    {"id":{"name":"obj_bullet_clubs_radius_jevil","path":"objects/obj_bullet_clubs_radius_jevil/obj_bullet_clubs_radius_jevil.yy",},},
     {"id":{"name":"obj_bullet_clubs_timer_jevil","path":"objects/obj_bullet_clubs_timer_jevil/obj_bullet_clubs_timer_jevil.yy",},},
     {"id":{"name":"obj_bullet_jevil","path":"objects/obj_bullet_jevil/obj_bullet_jevil.yy",},},
     {"id":{"name":"obj_bullets_nightmare_ice_cream","path":"objects/obj_bullets_nightmare_ice_cream/obj_bullets_nightmare_ice_cream.yy",},},
