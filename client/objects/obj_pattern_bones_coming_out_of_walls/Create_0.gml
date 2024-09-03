@@ -32,7 +32,6 @@ callback = function() {
 	}
 	audio_play_sound_plugging(snd_emergence);
 	
-	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
 }
@@ -45,7 +44,7 @@ update = function() {
 
 update_shot = function() {
 	bone_moving.speed_const = 4;
-	bone_instances[random_number] = create_bone(bone_moving.x, bone_moving.y, bone, 0, 1, bone_moving.direction, bone_moving.image_angle);
+	bone_instances[random_number] = create_bone(bone_moving.xstart, bone_moving.ystart, bone, 0, 1, bone_moving.direction, bone_moving.image_angle);
 	bone_instances[random_number].change_scale(2, 0.1);
 	audio_play_sound_plugging(snd_spare_up);
 }
@@ -61,6 +60,6 @@ time_source_update_shot = time_source_create(time_source_game, 1/3, time_source_
 	update_shot();
 });
 
-time_source_update_destroy = time_source_create(time_source_game, (320 + 20 * _power) / 60, time_source_units_seconds, function() {
+time_source_update_destroy = time_source_create(time_source_game, (320 + 30 * _power) / 60, time_source_units_seconds, function() {
 	instance_destroy();
 });

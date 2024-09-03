@@ -1,6 +1,6 @@
 // Arguments: bone, rotating_bone
 
-callback = function () {
+callback = function() {
 	create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
 	update();
@@ -8,12 +8,12 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-update = function () {
+update = function() {
 	var position_x = choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
 	var position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	var direction_bone = point_direction(position_x, position_y, border_instance.x, position_y);
 	var bone_instance;
-	var speed_bone = 3 + _power * 0.1;
+	var speed_bone = 2.7 + _power * 0.2;
 	var i = 45;
 	repeat(2) {
 		bone_instance =	create_bone(position_x, position_y, rotating_bone, speed_bone, 2, direction_bone, i);

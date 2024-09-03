@@ -1,3 +1,5 @@
+event_inherited();
+
 image_angle += (speed_spinning * dtime) % 360;
 
 if(image_alpha <= 1) {

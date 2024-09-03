@@ -26,8 +26,7 @@ callback = function () {
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_platforms);
 	time_source_start(time_source_destroy_update);
-}	
-
+}
 
 update = function () {
 	var speed_bone = 1 + _power * 0.1;
@@ -35,7 +34,7 @@ update = function () {
 	var bone_counst = create_bone(border_instance.x + border_instance.right + 1, border_instance.y + border_instance.down, bone, speed_bone, 1, 180, 0);	
 	
 	bone_counst.destroy_left = true;
-};
+}
 
 update_shot = function () {
 	var i = fight_random_integer(0, instance_number(bone));
