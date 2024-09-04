@@ -9,7 +9,6 @@ if (destroying) {
 	}
 }
 
-
 if (moving_radius) {
 	if(!is_versa) {
 		x = center_x + dcos(angle) * radius;
@@ -19,7 +18,7 @@ if (moving_radius) {
 		y = center_y - dsin(angle) * radius;
 	}
 	
-	angle += speed_count * dtime;
+	angle += rotating_speed_count * dtime;
 	image_angle = point_direction(x, y, center_x, center_y);	
 }
 

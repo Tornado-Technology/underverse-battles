@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"attack_scripts_anastasiz",
+  "%Name":"attack_scripts_xanastasia",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"attack_scripts_anastasiz",
+  "name":"attack_scripts_xanastasia",
   "parent":{
     "name":"Attacks",
     "path":"folders/Characteres/X Anastasia/Attacks.yy",
