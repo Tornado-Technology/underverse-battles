@@ -16,7 +16,7 @@ on_border_created = function() {
 	start_next_pattern();
 }
 
-create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 20, battle_border.right + 20);
+create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left + 20, battle_border.right + 20);
 pattern_instances = [
 	create_pattern_custom_power(obj_pattern_changes_bone_yscale, 4, {
 		soul_type: battle_soul_type.blue,
@@ -28,6 +28,4 @@ pattern_instances = [
 		bone: obj_bone_papyrus,
 		big_bone: obj_big_bone_papyrus
 	})
-	
-	
 ];

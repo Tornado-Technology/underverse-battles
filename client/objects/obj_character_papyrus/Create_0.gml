@@ -48,7 +48,7 @@ actions = [
 	Action("Character.Papyrus.Attack1", call_attack_papyrus_1),
 	Action("Character.Papyrus.Attack2", call_attack_papyrus_2)
 ];
-special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_attack_sans, spr_special_attack_sans_locked, char_papyrus_special_attack);
+special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_attack_papyrus, spr_special_attack_papyrus_locked, char_papyrus_special_attack);
 
 // Soundtrack
 soundtrack_name = "Bonetrousle"; 
