@@ -9,8 +9,7 @@ if (!destroy) {
 else {	
 	if (image_alpha >= 0) {
 		image_alpha -= 0.03 * dtime;	
-	}
-	else {
+	} else {
 		instance_destroy();	
 	}
 };

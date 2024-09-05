@@ -1,5 +1,5 @@
 if (image_alpha <= 1) {
-	image_alpha += 0.06 * dtime	
+	image_alpha += 0.05 * dtime;	
 }
 
 image_angle = angle;

@@ -11,7 +11,7 @@ update = function() {
 var position_x;
 var position_y;
 var direction_bullet;
-var speed_bullet = 3 + _power * 0.1;
+var speed_bullet = _power > 4 ? 3.5 :  3 + _power * 0.1;
 var vertical = fight_random_integer(0, 1);
 var offset = 40;
 var box_instance;
@@ -28,14 +28,13 @@ repeat(3) {
 		} else {
 			position_y = border_instance.y + border_instance.down + offset;
 			direction_bullet = 90;
-		};
+		}
 		
 		box_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, diamonds, {
 			direction: direction_bullet,
 			angle: 0,
 			speed_count: speed_bullet
 		});
-		box_instance.step = 0.01 + _power * 0.01;
 		
 	} else {
 		position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
@@ -53,8 +52,9 @@ repeat(3) {
 			angle: 90,
 			speed_count: speed_bullet
 		});
-		box_instance.step = 0.01 + _power * 0.01;
 	}
+	
+		box_instance.step = 0.01 + _power * 0.01;
 	i++;
 }
 

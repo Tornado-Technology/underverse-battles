@@ -18,7 +18,7 @@ function jevil_attack1(player, _power, type = fight_random_integer(0, 1)) {
 	});
 }
 
-function jevil_attack2(player, _power, type = fight_random_integer(0, 0)) {
+function jevil_attack2(player, _power, type = fight_random_integer(0, 1)) {
 	player.play_snd_being_attack();
 	instance_create(obj_attack_jevil_2, {
 		character_instance: player,
