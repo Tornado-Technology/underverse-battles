@@ -1,9 +1,11 @@
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
+	
+	audio_play_sound_plugging(snd_emergence);
 }
 
 update = function () {
@@ -32,12 +34,14 @@ update = function () {
 		center = new Vector2(finish_x, position_y);
 	};
 	
-	 scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
-		speed_count: 3 + _power * 0.1,
+	var sctyhe_speed = 3 + _power * 0.1;
+	scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
+		speed_count: sctyhe_speed,
+		rotation_speed_count: sctyhe_speed,
 		position_x: center.x,
 		position_y: center.y,
 		image_angle: angle
-	 });
+	});
 	 
 	scythe_instance.moving_back();
 }

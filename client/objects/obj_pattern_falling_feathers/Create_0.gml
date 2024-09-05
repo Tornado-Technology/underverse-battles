@@ -10,10 +10,10 @@ callback = function () {
 update = function() {
 	var min_random_x = border_instance.x - border_instance.left - 30;
 	var max_random_x = border_instance.x + border_instance.right + 30;
-	var feathers_y =  border_instance.y - border_instance.up;
+	var feathers_y =  border_instance.y - border_instance.up - 15;
 	var feathers_x = fight_random_integer(min_random_x, max_random_x);
 	
-	instance_create_depth(feathers_x,feathers_y, fight_depth.bullet_outside, feathers);
+	instance_create_depth(feathers_x, feathers_y, fight_depth.bullet_outside, feathers);
 }
 
 time_source_update = time_source_create(time_source_game, (18 - _power * 2) / 60, time_source_units_seconds, function () {

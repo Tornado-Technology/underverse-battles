@@ -42,6 +42,7 @@ if (!fight_network_mode) {
 	add_button(text_exit, function() {
 		if (to_close) exit;
 		
+		instance_destroy(obj_statistics);
 		if (gameplay_exists) {
 			instance_destroy(global.gameplay_instance);
 		}

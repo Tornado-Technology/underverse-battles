@@ -17,10 +17,10 @@ update = function() {
 }
 
 update_feathers = function () {
-	var offset = 10;
+	var offset = 24;
 	
 	repeat(2) {
-		var position_x = border_instance.x - border_instance.left - 10;
+		var position_x = border_instance.x - border_instance.left - offset;
 		var position_y = fight_random_integer(border_instance.y - border_instance.up + offset, border_instance.y + border_instance.down - offset);	
 		var direction_feathers = 0;
 			
@@ -28,14 +28,14 @@ update_feathers = function () {
 			_target_angle: direction_feathers
 		});
 	
-		feathers_instnace._speed = 3.7 + _power * 0.1;
+		feathers_instnace._speed = 3 + _power * 0.2;
 	}
 	
 }
 
 var period = 40 - _power * 2;
 var period_feathers = 35 - _power;
-var repeats = 10 + _power * 2;
+var repeats = 8 + _power * 2;
 
 time_source_update = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function () {
 	update();

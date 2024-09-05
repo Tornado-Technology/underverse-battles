@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pattern_random_spawns_swords",
+  "%Name":"obj_pattern_swords_and_scythes_moving_down",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pattern_random_spawns_swords",
+  "name":"obj_pattern_swords_and_scythes_moving_down",
   "overriddenProperties":[],
   "parent":{
     "name":"Swords",
@@ -23,11 +23,16 @@
   "physicsGroup":1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
-  "physicsObject":false,
+  "physicsObject":true,
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
-  "physicsShapePoints":[],
+  "physicsShapePoints":[
+    {"x":0.0,"y":0.0,},
+    {"x":32.0,"y":0.0,},
+    {"x":32.0,"y":32.0,},
+    {"x":0.0,"y":32.0,},
+  ],
   "physicsStartAwake":true,
   "properties":[],
   "resourceType":"GMObject",

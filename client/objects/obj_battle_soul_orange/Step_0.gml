@@ -12,46 +12,14 @@ var input_up = input_check_held(input.up);
 var input_down = input_check_held(input.down);
 var input_left = input_check_held(input.left);
 var input_right = input_check_held(input.right);
+var input_only_one = input_up xor input_down xor input_left xor input_right;
 
-if(input_up) {
-	side_controller = input.up;
-}
-if(input_down) {
-	side_controller = input.down;
-}
-if(input_left) {
-	side_controller = input.left;
-}
-if(input_right) {
-	side_controller = input.right;
-}
-
-/* control */
-if (controlled) {
-	if(input_up) {
-		if(!input_down && !input_left && !input_left) {
-			movement_speed_y = -main_speed;
-			movement_speed_x = 0;
-		}
-	}
-	if(input_down) {
-		if(!input_up && !input_left && !input_left) {
-			movement_speed_y = main_speed;
-			movement_speed_x = 0;
-		}
-	}
-	if(input_left) {
-		if(!input_up && !input_down && !input_right) {
-			movement_speed_x = -main_speed;
-			movement_speed_y = 0;
-		}
-	}
-		if(input_right) {
-		if(!input_up && !input_down && !input_left) {
-			movement_speed_x = main_speed;
-			movement_speed_y = 0;
-		}
-	}
+// Control
+if (controlled && input_only_one) {
+	set_move(input_up, 0, -main_speed);
+	set_move(input_down, 0, main_speed);
+	set_move(input_left, -main_speed, 0);
+	set_move(input_right, main_speed, 0);
 }
 
 // Image angle

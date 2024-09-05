@@ -1,20 +1,21 @@
-callback = function () {
+callback = function() {
 	 create_soul(border_instance.x + 20, border_instance.y, battle_soul_type.red);
 	
 	var scythe_count = 20;
 
-
 	instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, scythe, {
-		speed_count: 2 + _power * 0.1,
+		rotating_speed_count: 2 + _power * 0.1
 	});
 		
 	
 	update();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_destroy);
+	
+	audio_play_sound_plugging(snd_emergence);
 }
 
-update = function () {
+update = function() {
 	var position_x;
 	var position_y;
 	var position; 
