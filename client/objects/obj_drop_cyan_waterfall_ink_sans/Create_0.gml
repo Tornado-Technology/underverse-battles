@@ -1,7 +1,5 @@
 event_inherited();
-
 damage = get_char_damage(obj_character_ink_sans);
-
 
 border_down = obj_battle_border.y + obj_battle_border.down + 5;
 is_growing = true;
@@ -31,17 +29,17 @@ spwan_ink = function () {
 	var ink_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_drop_cyan_ink_sans, {
 		use_gravity_force: true,
 		direction: fight_random_choose(180, 270) + fight_random_integer(10, 80),
-		speed_const: speed_const	
+		speed_const: 2
 	});
 	
 	ink_instance.depth += 200;
 }
 
-time_source_spwan = time_source_create(time_source_game,  (15 - 2 + speed_const)  / 60, time_source_units_seconds, function () {
+time_source_spwan = time_source_create(time_source_game, 0.3, time_source_units_seconds, function () {
 	spwan_ink();
 }, [], -1);
 
-time_source_destroying = time_source_create(time_source_game, (20 - speed_const )  / 60, time_source_units_seconds, function () {
+time_source_destroying = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
 	destroying = true;
 });
 

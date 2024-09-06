@@ -1,7 +1,7 @@
 // Arguments: brush
 border_instance.y += 5;
 
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
@@ -9,7 +9,7 @@ callback = function () {
 	time_source_start(time_source_update_destroy);
 }
 
-update = function () {
+update = function() {
 	var position_x;
 	var position_y;
 	var position_end_x;
@@ -28,7 +28,7 @@ update = function () {
 		position_y = fight_random_integer(border_instance._inst_frame_up.y + 10, border_instance._inst_frame_down.y - 10);
 		position_end_x =  position_x > border_instance.x ? border_instance.x - border_instance.left - offset : border_instance.x + border_instance.right + offset;
 		position_end_y = position_y;
-	}; 
+	}
 	
  	instance_create_depth(position_x, position_y, fight_depth.bullet_outside, brush, {
 		position_x: position_end_x,
@@ -46,11 +46,11 @@ if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
 }
 
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], repeats - 1);
 
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 2, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1.5, time_source_units_seconds, function() {
 	instance_destroy();
 });

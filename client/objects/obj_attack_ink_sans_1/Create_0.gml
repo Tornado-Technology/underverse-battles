@@ -18,14 +18,14 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_shooting_broomie, {
 			brush: obj_shooting_brush_ink_sans
 		});
-	break;
+		break;
 		
 	case 2:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_broomie_drawing_track, {
 			brush: obj_drawing_brush_ink_sans
 		});
-	break;
+		break;
 		
 	default:
 		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left - 30, battle_border.right - 30);

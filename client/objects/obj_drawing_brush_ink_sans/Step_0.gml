@@ -23,7 +23,7 @@ if(changes_angle && !changes) {
 	};	
 };
 
-var offset = 20;
+var offset = 10;
 
 if (point_in_rectangle(x, y, position_x - offset, position_y - offset, position_x + offset, position_y + offset)) {
 	if(!changes) {

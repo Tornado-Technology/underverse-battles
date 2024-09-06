@@ -13,7 +13,6 @@ image_angle = angle + point_direction(x, y, position_x, position_y);
 direction = point_direction(x, y, position_x, position_y);
 changes_angle = false;
 
-
 gradually_alpha = true;
 image_alpha = 0;
 changes  = false;
@@ -24,24 +23,22 @@ spwan_ink = function() {
 		target_obj: id
 	});
 	ink_instance.speed_const = speed_const;
-};
+}
 
-
-changes_direction = function () {
+changes_direction = function() {
 	var border_left = obj_battle_border.x - obj_battle_border.left;
 	var border_right = obj_battle_border.x + obj_battle_border.right;
 	var border_up = obj_battle_border.y - obj_battle_border.up;
 	var border_down = obj_battle_border.y + obj_battle_border.down;
-	var  offset = 30; 
+	var offset = 30; 
 	if (random_type_position == 0) {
 		position_x = x > obj_battle_border.x ? border_left : border_right;
-		position_y = y > obj_battle_border.y ? border_up - offset : border_down + offset;
+		position_y = y > obj_battle_border.y ? border_up : border_down;
 	} else {
-		position_x = x > obj_battle_border.x ? border_left - offset : border_right + offset;
+		position_x = x > obj_battle_border.x ? border_left : border_right;
 		position_y = y > obj_battle_border.y ? border_up : border_down;
 	}
 	changes_angle = true;
 }
-
 
 audio_play_sound_plugging(snd_emergence);

@@ -1,5 +1,4 @@
- event_inherited();
-
+event_inherited();
 
 damage = get_char_damage(obj_character_ink_sans);
 
@@ -24,29 +23,25 @@ part_type_life(part_type_ui_ink, 580, 600);
 part_type_orientation(part_type_ui_ink, 0, 360, 0, 0, false);
 part_type_size(part_type_ui_ink, 1.4, 1.5, 0, 0);
 
-
-
-spwan_ink = function () {
+spwan_ink = function() {
 	var position_x = x;
 	var position_y = y + fight_random_float(2, sprite_height);
-		
 	
 	var ink_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, obj_drop_black_ink_sans, {
 		use_gravity_force: true,
 		direction: fight_random_choose(180, 270) + fight_random_integer(10, 80),
-		speed_const: speed_const
+		speed_const: 2
 	});
 	ink_instance.depth += 200;
 }
 
-time_source_spwan = time_source_create(time_source_game, (15 - 2 + speed_const) / 60, time_source_units_seconds, function () {
+time_source_spwan = time_source_create(time_source_game, 0.3, time_source_units_seconds, function() {
 	spwan_ink();
 }, [], -1);
 
-time_source_destroying = time_source_create(time_source_game, (20 - speed_const )  / 60, time_source_units_seconds, function () {
+time_source_destroying = time_source_create(time_source_game, 1, time_source_units_seconds, function() {
 	destroying = true;
 });
-
 
 time_source_start(time_source_spwan);
 
