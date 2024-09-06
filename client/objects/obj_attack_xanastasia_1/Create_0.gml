@@ -27,6 +27,14 @@ switch(type) {
 		});	
 	break;
 	
+	case 3:
+		create_border(battle_border.up - 30 , battle_border.down - 30, battle_border.left - 60, battle_border.right - 60);
+		pattern_instance = create_pattern(obj_pattern_swords_trajectory_move, {
+			swords: obj_swords_xanastasia
+		});
+	
+	break;
+	
 	default:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_feathers_swords, {

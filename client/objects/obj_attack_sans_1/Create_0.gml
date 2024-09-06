@@ -20,6 +20,15 @@ switch (type) {
 		});
 		break;
 	
+	// Fell Papyrus attack	
+	//case 2:
+	//	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 20, battle_border.right);
+	//	pattern_instance = create_pattern(obj_pattern_bone_up_platforms, {
+	//		bone: obj_bone_sans,
+	//		gasterblaster: obj_gasterblaster_sans
+	//	});
+	//	break;
+	
 		
 	default:
 		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left, battle_border.right);

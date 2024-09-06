@@ -39,7 +39,7 @@ if (destroying) {
 }
 
 if (target_posititon) {
-	x = approach(x, position_x, speed_count  * dtime);
+	x = approach(x, position_x, speed_count * dtime);
 	y = approach(y, position_y, speed_count * dtime);
 	
 	if (x == position_x && y == position_y) {
@@ -48,7 +48,16 @@ if (target_posititon) {
 	}
 }
 
-if (aim_soul) {
+
+if (trajectory_moving) {
+	angle += speed_const * dtime;
+	
+	motion_set(direction, speed_const * dtime);
+	x = xstart + dcos(angle * 4)  * radius;
+}
+
+
+if (is_target_places) {
 	if (image_alpha >= 1) {
 		x = approach(x, position_x, speed_count * dtime);
 		y = approach(y, position_y, speed_count * dtime);
