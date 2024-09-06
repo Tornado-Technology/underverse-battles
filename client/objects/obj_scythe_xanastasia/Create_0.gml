@@ -10,7 +10,7 @@ damage = get_char_damage(obj_character_xanastasia);
 
 if (!variable_instance_exists(id, "speed_count")) speed_count = 0;
 if (!variable_instance_exists(id, "rotation_speed_count")) rotation_speed_count = 0;
-
+	
 angle = 0;
 
 start_x = 0;

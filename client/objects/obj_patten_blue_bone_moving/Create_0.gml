@@ -15,18 +15,11 @@ callback = function() {
 
 update = function() {
 	var speed_bone = 2 + _power * 0.1;
-	//var can_spwan_left = soul_instance.x > border_instance.x - border_instance.left + 70;
-	//var can_spwan_right = soul_instance.x < border_instance.x + border_instance.right - 70;
+
 	var size_bone = fight_random_float(2, 2.5) - _power * 0.1;
 	var size_blue_bone = 6 - size_bone;
 	
-	//if (!can_spwan_left) {
-	//	bone_x = border_right;
-	//}
-	
-	//if (!can_spwan_right) {			
-	//	bone_x = border_left;
-	//}
+
 	
 	var angle = point_direction(bone_x, bone_y, border_instance.x, bone_y);
 	var distance_between_bones = bone_x == border_instance.x + border_instance.right + offset ? 70 : -70;

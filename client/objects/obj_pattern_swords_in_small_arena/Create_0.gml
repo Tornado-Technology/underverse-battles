@@ -36,7 +36,7 @@ update = function() {
 	scythe_instance.step = 0.03 + _power * 0.01;
 	scythe_instance.gradually_appearing();
 	scythe_instance.image_angle = angle;
-	scythe_instance.target_soul(position, true);
+	scythe_instance.target_places(position, true);
 }
 
 var period = 50 - _power;

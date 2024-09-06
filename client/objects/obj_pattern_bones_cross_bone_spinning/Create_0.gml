@@ -9,7 +9,7 @@ callback = function() {
 }
 
 update = function() {
-	var position_x = choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
+	var position_x = fight_random_choose(border_instance.x - border_instance.left - 10, border_instance.x + border_instance.right + 10);
 	var position_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 10);
 	var direction_bone = point_direction(position_x, position_y, border_instance.x, position_y);
 	var bone_instance;
