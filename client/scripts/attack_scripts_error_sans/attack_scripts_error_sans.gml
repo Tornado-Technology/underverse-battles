@@ -1,7 +1,7 @@
 /// @param {Id.Instance} player
 /// @param {Real} _power
 /// @param {Real} type
-function error_sans_attack0(player, _power, type = fight_random_integer(0, 4)) {
+function error_sans_attack0(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_error_sans_0, {
 		character_instance: player,
 		_power: _power,

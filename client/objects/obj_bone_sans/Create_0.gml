@@ -10,6 +10,14 @@ change_scale = function(scale, step) {
 	scale_time = step;
 }
 
+is_accelerating = false;
+accelerate = 0;
+set_accelerate = function(accelerate, initial_velocity = 0) {
+	is_accelerating = true;
+	self.accelerate = accelerate;
+	speed = initial_velocity;
+}
+
 is_shaking = false;
 shake_power = 1;
 shake_position_x = 0;

@@ -27,7 +27,7 @@ pattern_instances = [
 	create_pattern_custom_power(obj_pattern_two_bones, 4, {
 		soul_type: battle_soul_type.orange,
 		bone: obj_bone_swap_papyrus,
-		bone_size: 4.2,
+		bone_size: 3,
 		side_is_changing: false,
 		custom_repeats: 5
 	}, start_next_pattern),

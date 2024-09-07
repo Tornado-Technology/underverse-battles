@@ -2,10 +2,20 @@ if (!can_move) exit;
 
 // Movement
 
-speed = speed_const * dtime;
+if (!is_accelerating) {
+	speed = speed_const * dtime;
+}
 
 if (scale_time > 0) {
 	image_yscale = lerp(image_yscale, scale_const, scale_time * dtime);
+}
+
+// Accelerate
+
+if (is_accelerating) {
+	if (speed < speed_const) {
+		speed += accelerate * dtime;
+	}
 }
 
 // Shake

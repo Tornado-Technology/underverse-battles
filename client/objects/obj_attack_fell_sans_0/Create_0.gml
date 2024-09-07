@@ -22,7 +22,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_two_bones, {
 			soul_type: battle_soul_type.red,
 			bone: obj_bone_fell_sans,
-			bone_size: 5.4,
+			bone_size: 4.2,
 			side_is_changing: false
 		});
 		break;

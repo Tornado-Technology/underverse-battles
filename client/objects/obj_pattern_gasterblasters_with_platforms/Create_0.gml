@@ -38,13 +38,13 @@ update_gasterblasters = function() {
 	var sector_y = border_instance.y - border_instance.up + 25;
 	switch (position) {
 		case 0:
-			create_gasterblaster(gasterblaster, border_distance, sector_y - 5, final_position_x, sector_y - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y - 5, final_position_x, sector_y - 5,  270, 1/8, 1 - _power * 0.05, 15/60, 1/6);
 			break;
 		case 1:
-			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step - 5, final_position_x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step - 5, final_position_x, sector_y + sector_y_step - 5,  270, 1/8, 1 - _power * 0.05, 15/60, 1/6);
 			break;
 		case 2:
-			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step * 2 - 5, final_position_x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.1, 15/60, 1/6);
+			create_gasterblaster(gasterblaster, border_distance, sector_y + sector_y_step * 2 - 5, final_position_x, sector_y + sector_y_step * 2 - 5,  270, 1/8, 1 - _power * 0.05, 15/60, 1/6);
 			break;
 	}
 }
