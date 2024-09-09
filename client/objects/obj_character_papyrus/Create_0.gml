@@ -50,6 +50,27 @@ actions = [
 ];
 special_action = SpecialAction("Character.Papyrus.SpecialAttack", spr_special_attack_papyrus, spr_special_attack_papyrus_locked, char_papyrus_special_attack);
 
+// Special
+damage_per_hit = 0;
+max_damage_per_hit = 10;
+enabled_damage_delay = false;
+
+// Methods
+on_taking_soul_damage = function(soul, damage) {
+	if (damage_per_hit < max_damage_per_hit)
+		damage_per_hit += damage;
+	else {
+		soul.invincibility = 20;
+		damage = 0;
+	}
+	if (!enabled_damage_delay) {
+		alarm[0] = 20 * dtime;
+		enabled_damage_delay = true;
+	}
+		
+	return damage;
+}
+
 // Soundtrack
 soundtrack_name = "Bonetrousle"; 
 soundtrack = snd_bonetrousle;
