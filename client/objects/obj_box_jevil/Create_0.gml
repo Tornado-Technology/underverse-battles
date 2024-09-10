@@ -1,4 +1,8 @@
+event_inherited();
+
 on_soul_touch = function () {};
+
+is_destroying_outside = false;
 
 depth = fight_depth.bullet;
 image_alpha = 0;
@@ -9,7 +13,6 @@ speed_count = 0;
 bullet_count = 3;
 
 is_bonb = false;
-
 
 alpha = 1;
 radius = 10;
@@ -40,7 +43,7 @@ var	angle = point_direction(x, y, target.x, target.y);
 	repeat(bullet_count) {
 			bullet = instance_create_depth(x, y, fight_depth.bullet_outside_hight, obj_bullet_jevil, {
 			sprite_index: spr_jevil_diamonds,
-			speed_count: speed_count - 0.1 * i,
+			speed_count: speed_count - 0.2 * i,
 			angle: angle
 		})
 		

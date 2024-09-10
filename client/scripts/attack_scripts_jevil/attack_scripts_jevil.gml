@@ -1,7 +1,5 @@
 function jevil_attack0(player, _power, type = fight_random_integer(0, 2)) {
 	player.play_snd_being_attack();
-	
-	
 	instance_create(obj_attack_jevil_0, {
 		character_instance: player,
 		_power: _power,

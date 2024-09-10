@@ -1,12 +1,10 @@
-
-if(image_alpha < 1) {
+if (image_alpha < 1) {
 	image_alpha += 0.06 * dtime;
 	exit;
 }
 
 image_angle += -dsin(4) * sprite_height;
 	
-
 if (moving) {
 	time_before_attack -= 1 * dtime;
 	
@@ -14,7 +12,6 @@ if (moving) {
 		attack = true;
 		moving = false;
 	}
-
 }
 
 if(attack && !is_bonb) {
@@ -27,7 +24,7 @@ if(attack && !is_bonb) {
 			vspeed += moving_y;	
 			backwards = true;
 			backwards_count--;
-		};
+		}
 	} else { 
 		x = approach(x, xstart, speed_count * dtime);	
 		
@@ -37,15 +34,14 @@ if(attack && !is_bonb) {
 	}
 }
 
-
-if(backwards_count <= 0 && attack) {
+if (backwards_count <= 0 && attack) {
 	attack = false;
 	is_bonb = true;
 	spwan_diamonds();	
 	vspeed = 0;
 }
 
-if(is_bonb) {
+if (is_bonb) {
 	alpha = approach(alpha, 0, alpha_time * dtime);
 	radius += 2;
 	

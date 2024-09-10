@@ -1,4 +1,4 @@
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	var position_x = border_instance.x - border_instance.left - 50;
@@ -16,7 +16,7 @@ callback = function () {
 	audio_play_sound_plugging(snd_emergence);
 }
 
-update = function () {
+update = function() {
 	var position_x;
 	var position_y;
 	var position; 

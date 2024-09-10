@@ -77,7 +77,9 @@ on_battle_end = function(damage) {
 play_snd_being_attack = function () {
 	var i = irandom(array_length(snd_beginning_attack) - 1);
 	
-	return audio_play_sound_plugging(snd_beginning_attack[i]);
+	if (irandom(9) < 2) {
+		audio_play_sound_plugging(snd_beginning_attack[i]);
+	}
 }
 
 

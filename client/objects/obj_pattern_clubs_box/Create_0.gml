@@ -69,7 +69,7 @@ update = function () {
 	
 };
 
-var period = 55 - ( _power);
+var period = 55 - _power * 2;
 var repeats = 10 + _power * 2;
 	
 if (variable_instance_exists(id, "custom_repeats")) {

@@ -37,7 +37,7 @@ update = function () {
 	var sctyhe_speed = 3 + _power * 0.1;
 	scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
 		speed_count: sctyhe_speed,
-		rotation_speed_count: sctyhe_speed,
+		rotation_speed_const: sctyhe_speed,
 		position_x: center.x,
 		position_y: center.y,
 		image_angle: angle

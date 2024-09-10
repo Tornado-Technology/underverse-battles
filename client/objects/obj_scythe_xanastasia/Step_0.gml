@@ -2,7 +2,7 @@ if(image_alpha <= 1) {
 	image_alpha += 0.03 * dtime;	
 }
 
-image_angle += rotation_speed_count * dtime;
+image_angle += rotation_speed_const * dtime;
 
 if (come_back) {
 	var moving_come_back = point_direction(x, y, xstart, ystart);

@@ -4,7 +4,7 @@ callback = function() {
 	var scythe_count = 20;
 
 	instance_create_depth(border_instance.x, border_instance.y, fight_depth.bullet_outside_hight, scythe, {
-		rotation_speed_count: 2 + _power * 0.1
+		rotation_speed_const: 2 + _power * 0.1
 	});
 		
 	

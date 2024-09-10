@@ -1,12 +1,12 @@
 {
   "$GMSprite":"",
   "%Name":"spr_jevil_diamonds",
-  "bboxMode":2,
-  "bbox_bottom":7,
-  "bbox_left":3,
-  "bbox_right":13,
-  "bbox_top":1,
-  "collisionKind":5,
+  "bboxMode":0,
+  "bbox_bottom":8,
+  "bbox_left":0,
+  "bbox_right":16,
+  "bbox_top":0,
+  "collisionKind":0,
   "collisionTolerance":0,
   "ConfigValues":{
     "Development":{

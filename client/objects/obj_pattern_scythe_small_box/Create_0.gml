@@ -1,13 +1,13 @@
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
-		
+	update_scythe();
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_scythe);
 	time_source_start(time_source_update_destroy);
 }
 
-update = function () { 
+update = function() { 
 	var spwan_clubs = function () {	
 		var offset_x = 25;
 		var border = border_instance;
@@ -29,7 +29,7 @@ update = function () {
 		box_instance.step = fight_random_float(2, 2.7);
 	}
 	
-	var spwan_spades = function () {
+	var spwan_spades = function() {
 		var position_finish;
 		var random_position;
 		var start_x;
@@ -45,7 +45,7 @@ update = function () {
 		} else {
 			start_x = fight_random_integer(border_instance.x + border_instance.right + 150,  border_instance.x + border_instance.right + 50);
 			finish_x = fight_random_integer(start_x - 120, start_x - 200);
-		};
+		}
 
 		random_position = new Vector2(start_x, start_y);	
 		position_finish = new Vector2(finish_x, start_y);
@@ -59,19 +59,15 @@ update = function () {
 		box_instance.step = fight_random_float(2, 2.7);
 	}
 	
-	if(fight_random_integer(0, 1)) {
+	if (fight_random_integer(0, 1)) {
 		spwan_clubs();	
 	} else {
 		spwan_spades();	
-	};
-	
+	}
+}
 
-
-};
-
-
-update_scythe = function () {
-		var jevil_instance
+update_scythe = function() {
+	var jevil_instance;
 	if (fight_random_integer(0, 1)) {
 		jevil_instance = instance_create_depth(border_instance.x - border_instance.left - 30, border_instance.y - border_instance.up + 20, fight_depth.bullet_outside_hight, scythe, {
 			speed_count: 3 + _power * 0.1	
@@ -85,25 +81,27 @@ update_scythe = function () {
 		
 		jevil_instance.moving_y = -1;
 		jevil_instance.position_x = border_instance.x - border_instance.left - 30;
-	};
+	}
 	
 	jevil_instance.gradually_appearing();
 	jevil_instance.step = 0.09 + _power * 0.01;
-	
 }
 
-var period = 50 - (_power);
-var repeats = 5 + (_power * 2);
+var period = 55 - _power * 2;
+var repeats = 8 + _power * 2;
 
-time_source_update_scythe = time_source_create(time_source_game, (period * 2) / 60, time_source_units_seconds, function () {
-	update_scythe();	
-}, [], 3);
+if (variable_instance_exists(id, "custom_repeats")) {
+	repeats = custom_repeats;
+}
 
-
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();	
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60, time_source_units_seconds, function () {
+time_source_update_scythe = time_source_create(time_source_game, period * 3 / 60, time_source_units_seconds, function() {
+	update_scythe();	
+}, [], repeats - 1);
+
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function() {
 	instance_destroy();
 });

@@ -1,5 +1,7 @@
 event_inherited();
 
+if (!variable_instance_exists(id, "rotation_speed_const")) rotation_speed_const = 0;
+
 disable_surface = true;
 
 soul_invulnerability = 30;
@@ -16,7 +18,7 @@ radius_max = point_distance(x, y, center_x, center_y);
 radius = radius_max;
 angle = point_direction(x, y, center_x, center_y);
 
-small_scythe = function () {
+small_scythe = function() {
 	image_xscale = image_xscale / 2;
 	image_yscale = image_yscale / 2;	
 	
