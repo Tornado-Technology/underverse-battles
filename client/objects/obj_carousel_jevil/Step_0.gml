@@ -5,11 +5,11 @@ angle += speed_count * dtime;
 
 var xs = dcos(angle) - dcos(angle) * 120;
 
-y = ystart + dsin(angle) - dsin(angle * 2) * radius;
+y = ystart + dsin(angle) - dsin(angle * 1.8) * radius;
 x = xstart + xs;
 
 if (!destroy) {
-	alpha = lerp(alpha, !backwards ? 1 : 0.5,  step * dtime);
+	alpha = lerp(alpha, !backwards ? 1 : 0.5, step * dtime);
 } else {
 	alpha -= 0.05 * dtime;
 	if (alpha <= 0) {	

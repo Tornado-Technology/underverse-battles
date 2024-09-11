@@ -1,16 +1,15 @@
 // Arguments bow, arrow
 
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 	
 	update();
 	time_source_start(time_source_update);	
 	time_source_start(time_source_update_orange);
 	time_source_start(time_source_update_destroy);
-};
+}
 
-	
-update = function () {
+update = function() {
 	var position_x = (border_instance.x - border_instance.left);
 	var position_y = fight_random_choose(border_instance.y - border_instance.up - 20,  border_instance.y + border_instance.down + 20);
 	var direction_start = (position_y > border_instance.y ? 90 : 270);
@@ -26,7 +25,7 @@ update = function () {
 	}
 }	
 
-update_orange = function () {
+update_orange = function() {
 	var position_x = fight_random_choose(border_instance.x - border_instance.left - 30, border_instance.x + border_instance.right + 30);
 	var position_y = soul_instance.y;
 	var target = point_direction(position_x, position_y, border_instance.x, position_y);	
@@ -39,16 +38,15 @@ var period = 40 - (3 + (_power));
 var period_orange = 45 - (_power * 2);
 var repeats = 17 + (_power * 2);
 
-
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();	
 }, [], repeats - 2);
 
-time_source_update_orange = time_source_create(time_source_game, period_orange / 60, time_source_units_seconds, function () {
+time_source_update_orange = time_source_create(time_source_game, period_orange / 60, time_source_units_seconds, function() {
 	update_orange();	
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game,  (period_orange * repeats) / 60 + 1, time_source_units_seconds, function () {
-instance_destroy();	
+time_source_update_destroy = time_source_create(time_source_game,  (period_orange * repeats) / 60 + 1, time_source_units_seconds, function() {
+	instance_destroy();	
 });	
 	

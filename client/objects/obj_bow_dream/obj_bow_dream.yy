@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bow_dream",
-    "path":"sprites/spr_bow_dream/spr_bow_dream.yy",
+    "name":"spr_bow_charging_dream",
+    "path":"sprites/spr_bow_charging_dream/spr_bow_charging_dream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

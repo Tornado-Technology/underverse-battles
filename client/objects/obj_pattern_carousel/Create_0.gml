@@ -45,13 +45,13 @@ if (variable_instance_exists(id, "custom_repeats")) {
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
-}, [], 4);
+}, [], 5);
 
 time_source_transition_attack = time_source_create(time_source_game, 1 / 60, time_source_units_seconds, function() {
 	transition_attack();
 }, [], -1);
 
-time_source_start_transition_attack = time_source_create(time_source_game, (period * repeats / 65), time_source_units_seconds, function() {
+time_source_start_transition_attack = time_source_create(time_source_game, period * repeats / 65, time_source_units_seconds, function() {
 	obj_carousel_jevil.destroy = true;
 	time_source_start(time_source_transition_attack);
 });

@@ -22,7 +22,6 @@ switch(type) {
 		});
 	break;
 	
-	
 	default:
 	create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_bow_orange_star, {

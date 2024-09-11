@@ -1,4 +1,4 @@
-event_inherited()
+event_inherited();
 sprite_fram = 0;
 damage = 1;
 started = false;
@@ -17,8 +17,8 @@ arrow_instance = instance_create_depth(x, y, fight_depth.bullet_outside_hight, a
 
 arrow_instance.image_angle = image_angle;
 arrow_instance.speed_const = speed_const;
-	
-charge_sprite = spr_bow_charging_dream;
+
+idle_sprite = spr_bow_dream;
 shot_sprite = spr_bow_shooting_dream;
 
 //Time source	
