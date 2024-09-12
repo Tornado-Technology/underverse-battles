@@ -35,7 +35,7 @@ update_swords = function() {
 	scythe_instance.step = 0.05 + _power * 0.01;
 	scythe_instance.gradually_appearing();
 	scythe_instance.image_angle = angle + 180;
-	scythe_instance.target_soul(position, true);
+	scythe_instance.target_places(position, true);
 }
 
 update = function() {
