@@ -9,4 +9,6 @@ if (!destroying) {
 	}
 }
 
-image_index =  lerp(image_index, sprite_fram, step * dtime);	
+sprite_fram =  approach(sprite_fram, sprite_get_number(sprite_index) - 1, step * dtime);	
+
+image_index = sprite_fram;

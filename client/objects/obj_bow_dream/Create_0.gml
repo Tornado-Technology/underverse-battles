@@ -1,5 +1,8 @@
 event_inherited();
+
 sprite_fram = 0;
+
+
 damage = 1;
 started = false;
 step = 0.1;
