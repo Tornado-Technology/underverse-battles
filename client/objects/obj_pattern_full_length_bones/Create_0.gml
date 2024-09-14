@@ -1,22 +1,6 @@
 // Arguments: bone
 
-switch (_power) {
-	case 0:
-		bone_size = 8.3;
-		break;
-	case 1:
-		bone_size = 7.75;
-		break;
-	case 2:
-		bone_size = 7.2;
-		break;
-	case 3:
-		bone_size = 6.65;
-		break;
-	default:
-		bone_size = 6.1;
-		break;
-}
+bone_size = 8.3;
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);

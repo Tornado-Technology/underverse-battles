@@ -1,4 +1,5 @@
 // Arguments: soul_type, gasterblaster_aiming, count, custom_repeats (optional)
+
 random_side = fight_random_integer(dir.left, dir.right);
 size_border_up = border_instance.up;
 

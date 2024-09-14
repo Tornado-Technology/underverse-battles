@@ -29,11 +29,13 @@ callback = function() {
 }
 
 update = function() {
-	var bone_x = choose(border_instance.x - border_instance.left - 50, border_instance.x + border_instance.right + 50);
+	var bone_direction = fight_random_choose(dir.left, dir.right);
+	var bone_x = bone_direction == dir.right ? border_instance.x - border_instance.left - 50 : border_instance.x + border_instance.right + 50;
 	var bone_y = fight_random_integer(border_instance.y - border_instance.up + 10, border_instance.y + border_instance.down - 20);
 	
 	var bone_instance = instance_create_depth(bone_x, bone_y, fight_depth.bullet_outside_hight, rotating_bone);
-	bone_instance.speed_const = (3.4 + _power * 0.1);
+	bone_instance.speed_const = 3.4 + _power * 0.1;
+	bone_instance.direction = bone_direction;
 	bone_instance.speed_spinning = 3.4 + _power * 0.1;
 	bone_instance.rotating = 1;
 	bone_instance.image_alpha = 0;

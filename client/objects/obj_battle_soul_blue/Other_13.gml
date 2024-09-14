@@ -32,6 +32,15 @@ if (left) {
     movement_speed_y = -HSPD;
 }
 
+// Collision
+
+if (has_collision_right) {
+	is_jumping = false;
+	fly_time = 0;
+	movement_speed_x = 0;
+	blue_attack_force_speed_x = 0;
+}
+
 // Jump
 if (up && !is_jumping && fly_time == 0) {
 	is_jumping = true;
@@ -52,13 +61,6 @@ if (!up && movement_speed_x < 0 || has_collision_left && !has_infinity_jump) {
 
 if (!left && !right) {
     movement_speed_y = 0;
-}
-
-if (has_collision_right) {
-	is_jumping = false;
-	fly_time = 0;
-	movement_speed_x = 0;
-	blue_attack_force_speed_x = 0;
 }
 
 // Platform

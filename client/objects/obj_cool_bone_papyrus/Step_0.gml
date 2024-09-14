@@ -1,4 +1,7 @@
-x = skate.x;
+if (instance_exists(skate)) {
+	x = skate.x;
+}
+
 var dir_soul = point_distance(obj_battle_soul.x, y, x, y);
 
 if (dir_soul < 100 || close_soul) {

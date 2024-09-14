@@ -21,10 +21,10 @@ if (has_collision_with_platform && movement_speed_y >= 0) {
 	movement_speed_y = 0;
 	blue_attack_force_speed_y = 0;
 	
-	if(obj_platform._angle == 90) {
+	if (obj_platform._angle == 90) {
 		blue_attack_force_speed_y = -obj_platform.const_speed;
 	}
-	if(obj_platform._angle == 270) {
+	if (obj_platform._angle == 270) {
 		outside_force_y = obj_platform.const_speed * 2;
 	}
 } else {
@@ -37,6 +37,15 @@ if (right) {
 
 if (left) {
 	movement_speed_x = -HSPD;
+}
+
+// Collision
+
+if (has_collision_down) {
+	is_jumping = false;
+	fly_time = 0;
+	movement_speed_y = 0;
+	blue_attack_force_speed_y = 0;
 }
 
 // Jump
@@ -57,16 +66,10 @@ if (!up && movement_speed_y < 0 || has_collision_up && !has_infinity_jump) {
 	is_jumping = false;
 }
 
-if (has_collision_down) {
-	is_jumping = false;
-	fly_time = 0;
-	movement_speed_y = 0;
-	blue_attack_force_speed_y = 0;
-}
-
 if (!left && !right) {
     movement_speed_x = 0;
 }
+
 
 // Platform
 var full_movement_y = movement_speed_y + outside_force_y + tremble_force_y + border_force_y + blue_attack_force_speed_y;

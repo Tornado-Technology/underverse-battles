@@ -18,11 +18,12 @@ on_border_created = function() {
 
 create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 pattern_instances = [
-	 create_pattern_custom_power(obj_pattern_special_dream, 3, {
+	 create_pattern_custom_power(obj_pattern_special_dream, 4, {
 		bow: obj_bow_dream,
 		arrows: obj_super_arrow_dream,
 		star: obj_star_dream,
-		speed_const: 3
+		speed_const: 3,
+		custom_repeats: 22,
 	 }),
 ];
 

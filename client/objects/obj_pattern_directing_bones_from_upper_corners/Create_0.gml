@@ -27,7 +27,7 @@ update_lower_bone = function() {
 	create_bone(bone_x, bone_y, bone, 1 + _power * 0.1, 1, lower_bone_direction, 0);
 }
 
-var period = 33 - 3 * _power;
+var period = 34 - 2 * _power;
 var repeats = 10 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {

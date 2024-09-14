@@ -20,7 +20,7 @@ create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left
 pattern_instances = [
 	create_pattern_custom_power(obj_pattern_spinning_bone_cross_ultimate, 4, {
 		bone: obj_bone_topref_cross,
-		rotating_bone: obj_bone_rotating_cross,
+		bone_spinning: obj_bone_rotating_cross,
 		gasterblaster_aiming: obj_gasterblaster_aiming_cross
 	}, start_next_pattern),
 	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 3, {
