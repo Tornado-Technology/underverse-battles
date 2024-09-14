@@ -43,6 +43,6 @@ spwan = function () {
 	audio_play_sound_plugging(snd_teleport_jevil);
 }		
 
-time_source_moving = time_source_create(time_source_game, 30 / 60, time_source_units_seconds, function () {
+time_source_moving = time_source_create(time_source_game, 30  / 60, time_source_units_seconds, function () {
 	destroy = true;
 });	

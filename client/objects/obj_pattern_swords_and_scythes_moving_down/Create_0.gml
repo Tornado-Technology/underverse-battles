@@ -40,7 +40,7 @@ update = function() {
 	swords_instance.step = 0.1 + _power * 0.01;
 	swords_instance.gradually_appearing();
 	swords_instance.image_angle = angle;
-	swords_instance.moving_target(position_x, position_y, true);	
+	swords_instance.target_places(position, true);	
 }
 
 var period = 50;

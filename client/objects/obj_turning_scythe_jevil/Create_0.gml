@@ -38,12 +38,11 @@ be_spwan = false;
 spwan_diamonds = function () {
 	if (be_spwan) return true;
 	var angle = irandom_range(300, 360) / 4;
-	var radius_scythe = 120;
-	var scythe_instance;
+	var radius = 12;
 	
 	var i = angle;
 	while (i <= 360) {
-		var bullet_instance = instance_create_depth(x + dcos(i) * 10, y + -dsin(i) * 10, fight_depth.bullet_outside_hight, obj_bullet_jevil, {
+		var bullet_instance = instance_create_depth(x + dcos(i) * radius, y + -dsin(i) * radius, fight_depth.bullet_outside_hight, obj_bullet_jevil, {
 			 sprite_index: spr_jevil_diamonds,
 			 angle: i
 		 });	

@@ -3,9 +3,7 @@ image_alpha = alpha;
 
 image_xscale = approach(image_xscale, start_xscalse, step * dtime);
 
-if (sprite_frame <= 1) {
-	sprite_frame += step;	
-}
+sprite_frame = approach(sprite_frame, 1, step * dtime);	
 
 if(sprite_frame == 1 && !be_spwan) {
 	spwan();

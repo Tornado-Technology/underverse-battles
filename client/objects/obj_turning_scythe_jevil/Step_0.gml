@@ -3,7 +3,7 @@ if (image_alpha < 1) {
 	exit;
 }
 
-image_angle += -dsin(4) * sprite_height;
+image_angle += -dsin(4) * (sprite_height * dtime);
 	
 if (moving) {
 	time_before_attack -= 1 * dtime;
@@ -20,8 +20,8 @@ if(attack && !is_bonb) {
 	if (!backwards) {
 		x = approach(x, position_x, speed_count * dtime);
 		
-		if (x == position_x) {		
-			vspeed += moving_y;	
+		if (point_distance(x, y, position_x, y) <= 10) {		
+			vspeed = moving_y * dtime;	
 			backwards = true;
 			backwards_count--;
 		}
@@ -43,7 +43,7 @@ if (backwards_count <= 0 && attack) {
 
 if (is_bonb) {
 	alpha = approach(alpha, 0, alpha_time * dtime);
-	radius += 2;
+	radius += 2 * dtime;
 	
 	if (alpha == 0) {
 		instance_destroy();
