@@ -33,7 +33,7 @@ update_platforms = function() {
 	create_next_moving_platform(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 }
 
-time_source_update_bones = time_source_create(time_source_game, (60 - 5 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_bones = time_source_create(time_source_game, (40 - 5 * _power) / 60, time_source_units_seconds, function () {
 	update_bones();
 }, [], -1);
 	

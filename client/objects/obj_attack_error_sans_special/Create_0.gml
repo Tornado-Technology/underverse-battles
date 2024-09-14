@@ -16,19 +16,19 @@ on_border_created = function() {
 	start_next_pattern();
 }
 
-create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+create_border(battle_border.up + 10, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
 pattern_instances = [
-	create_pattern_custom_power(obj_pattern_flying_bones, 6, {
+	create_pattern_custom_power(obj_pattern_flying_bones, 4, {
 		bone: obj_bone_sharp_error_sans,
-		sides: [dir.left, dir.right],
+		sides: [dir.left, dir.right, dir.down, dir.up],
 		is_aiming: false,
 		custom_period: 5,
-		custom_repeats: 75
-	}, start_next_pattern),
-	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 3, {
+		custom_repeats: 100
+	}, start_next_pattern), 
+	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 6, {
 		soul_type: battle_soul_type.red,
 		gasterblaster_aiming: obj_gasterblaster_aiming_error_sans,
-		count: 3,
+		count: 6,
 		custom_repeats: 6
 	})
 ];
