@@ -1,7 +1,5 @@
 npc = obj_npc_turtle;
 
-sides = [dir.right];
-
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

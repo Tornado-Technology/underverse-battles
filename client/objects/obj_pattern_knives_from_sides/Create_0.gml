@@ -19,21 +19,21 @@ update = function() {
 	switch (sides[index]) {
 		case dir.up:
 			position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-			position_y = border_instance.y - border_instance.up - 30;
+			position_y = border_instance.y - border_instance.up - 50;
 			target_angle = dir.up;
 			break;
 		case dir.down:
 			position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
-			position_y = border_instance.y + border_instance.down + 30;
+			position_y = border_instance.y + border_instance.down + 50;
 			target_angle = dir.down;
 			break;
 		case dir.left:
-			position_x = border_instance.x - border_instance.left - 30;
+			position_x = border_instance.x - border_instance.left - 50;
 			position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 			target_angle = dir.right;
 			break;
 		case dir.right:
-			position_x = border_instance.x + border_instance.right + 30;
+			position_x = border_instance.x + border_instance.right + 50;
 			position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down);
 			target_angle = dir.left;
 			break;

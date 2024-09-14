@@ -87,7 +87,7 @@ room_start_callback(room_underverse_episode_3_ketchup_shop, room_underverse_epis
 	sans.direction = dir.down;
 	audio_play_soundtrack(snd_park);
 	
-	if (frisk_was_in_ketchup_shop) {
+	if (frisk_was_in_ketchup_shop && !frisk_came_out_from_ketchup_shop) {
 		instance_create_depth(asgore.x, asgore.y + 16, fight_depth.player, obj_grill);
 		instance_destroy(inst_interactive_episode3_asgore);
 		instance_destroy(asgore);
@@ -98,5 +98,7 @@ room_start_callback(room_underverse_episode_3_ketchup_shop, room_underverse_epis
 		undyne.sprite_index = spr_undyne_picnic_sitting_down;
 		alphys.sprite_index = spr_alphys_picnic_standing_down;
 		toriel.sprite_index = spr_toriel_picnic_sitting_left;
+		
+		frisk_came_out_from_ketchup_shop = true;
 	}
 });

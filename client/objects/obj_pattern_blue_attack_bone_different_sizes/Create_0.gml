@@ -15,7 +15,7 @@ callback = function() {
 	var position_down_x = border_instance.x + border_instance.right; 
 	
 	create_bone(position_x, border_instance.y - border_instance.up, bone, speed_bone, 1, 0, 180);
-	create_bone(position_down_x, border_instance.y + border_instance.down, bone, speed_bone, 1, 0, 180);
+	create_bone(position_down_x, border_instance.y + border_instance.down, bone, speed_bone, 1, 0, 0);
 
 	if (use_gravity_attack) {
 		create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y + border_instance.down - (offset_platform + 5), 5, xscale_platform, 60, platform_speed);

@@ -1,7 +1,5 @@
 npc = obj_npc_doggo;
 
-sides = [dir.up, dir.right];
-
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

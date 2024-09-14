@@ -1,6 +1,5 @@
 npc = obj_npc_ficus_licker;
 index = gameplay_underverse_episode_3_surface.search_event_is_started ? 1 : 0;
-sides = [dir.up];
 
 founded_lickers_count = 0;
 

@@ -1,7 +1,5 @@
 npc = obj_npc_rabbit_mom;
 
-sides = [dir.up];
-
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

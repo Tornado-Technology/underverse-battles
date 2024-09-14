@@ -9,6 +9,7 @@ callback = function () {
 		
 	update();
 	time_source_start(time_source_update);
+	time_source_start(time_source_update_direction);
 	time_source_start(time_source_update_stop);
 }
 
@@ -27,19 +28,20 @@ update = function() {
 }
 
 var period = 15 - _power * 2;
-var amount = 18 + _power*6;
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+var amount = 18 + _power * 12;
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], -1);
-time_source_update_direction = time_source_create(time_source_game, (80 - _power * 5) / 60, time_source_units_seconds, function () {
+
+time_source_update_direction = time_source_create(time_source_game, (80 - _power * 5) / 60, time_source_units_seconds, function() {
 	var rand_num = fight_random_integer(0, 1);
 	if (rand_num == 0)
 		rot = rot ? 0 : 1;
 }, [], -1);
-time_source_update_stop = time_source_create(time_source_game, period * amount / 60, time_source_units_seconds, function () {
-	instance_destroy();
+
+time_source_update_stop = time_source_create(time_source_game, period * amount / 60, time_source_units_seconds, function() {
 	time_source_start(time_source_update_destroy);
 });
-time_source_update_destroy = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 1, time_source_units_seconds, function() {
 	instance_destroy();
 });

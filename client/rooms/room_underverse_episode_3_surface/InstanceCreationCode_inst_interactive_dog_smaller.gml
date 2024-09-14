@@ -1,7 +1,5 @@
 npc = obj_npc_dog_smaller;
 
-sides = [dir.up];
-
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

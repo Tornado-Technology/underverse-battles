@@ -31,6 +31,7 @@ search_event_is_started = false;
 lickers_found = [false, false, false];
 mtt_is_late_became_known = false;
 frisk_was_in_ketchup_shop = false;
+frisk_came_out_from_ketchup_shop = false;
 ketchup_joke_was_told = false;
 frisk_played_volleyball = false;
 

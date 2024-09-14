@@ -1,6 +1,6 @@
-// Arguments: damage_wave
+// Arguments: damage_wavedamage_wave
 		
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
@@ -27,9 +27,9 @@ update = function() {
 
 var period = 62 - _power * 8;
 var repeats = 6 + _power;
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], repeats - 1);
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1.5, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1.5, time_source_units_seconds, function() {
 	instance_destroy();
 });

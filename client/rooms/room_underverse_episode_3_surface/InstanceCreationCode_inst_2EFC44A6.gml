@@ -1,6 +1,6 @@
 npc = obj_npc_burgerpants;
 
-sides = [dir.left];
+sides = [dir.down, dir.left];
 
 cutscenes = [
 	[

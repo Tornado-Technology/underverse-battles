@@ -23,7 +23,7 @@ update = function() {
 	
 	var gasterblaster_height = 54;
 	var fly_time = 1/8;
-	var charge_time = 0.4 - _power * 0.05;
+	var charge_time = 0.5 - _power * 0.05;
 	var flyout_time = 15/60;
 	var destroy_time = 1/8;
 	repeat (is_double ? 2 : 1) {
@@ -32,29 +32,31 @@ update = function() {
 			break;
 		}
 		
+		var offset = 10;
+		
 		if (side == dir.up) {
 			var gasterblaster_x = obj_camera.camera_position.x - gasterblaster_height;
 			var gasterblaster_y = border_instance.y - border_instance.up + 15;
 			create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-				border_instance.x - border_instance.left + 60, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
+				border_instance.x - border_instance.left - offset, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
 		}
 		if (side == dir.down) {
 			var gasterblaster_x = obj_camera.camera_position.x + obj_camera.view_width + gasterblaster_height;
 			var gasterblaster_y = border_instance.y + border_instance.down - 15;
 			create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-				border_instance.x + border_instance.right - 60, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
+				border_instance.x + border_instance.right + offset, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
 		}
 		if (side == dir.left) {
 			var gasterblaster_x = border_instance.x - border_instance.left + 15;
 			var gasterblaster_y = obj_camera.camera_position.y + obj_camera.view_height + gasterblaster_height;
 			create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-				gasterblaster_x, border_instance.y + border_instance.down - 60, 180, fly_time, charge_time, flyout_time, destroy_time);
+				gasterblaster_x, border_instance.y + border_instance.down + offset, 180, fly_time, charge_time, flyout_time, destroy_time);
 		}
 		if (side == dir.right) {
 			var gasterblaster_x = border_instance.x + border_instance.right - 15;
 			var gasterblaster_y = obj_camera.camera_position.y - gasterblaster_height;
 			create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-				gasterblaster_x, border_instance.y - border_instance.up + 60, 0, fly_time, charge_time, flyout_time, destroy_time);
+				gasterblaster_x, border_instance.y - border_instance.up - offset, 0, fly_time, charge_time, flyout_time, destroy_time);
 		}
 		
 		if (is_double) {

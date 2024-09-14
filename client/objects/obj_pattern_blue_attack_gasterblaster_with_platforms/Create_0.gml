@@ -2,7 +2,7 @@
 
 platform_speed = 1 + _power * 0.1;
 
-callback = function () {
+callback = function() {
 	if (use_gravity_attack) {
 		soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.blue);
 	}
@@ -28,7 +28,7 @@ update = function() {
 	
 	var gasterblaster_height = 54;
 	var fly_time = 1/8;
-	var charge_time = 0.4 - _power * 0.05;
+	var charge_time = 0.5 - _power * 0.05;
 	var flyout_time = 15/60;
 	var destroy_time = 1/8;
 	
@@ -41,13 +41,13 @@ update = function() {
 		var gasterblaster_x = obj_camera.camera_position.x - gasterblaster_height;
 		var gasterblaster_y = border_instance.y - border_instance.up + 15;
 		create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-		border_instance.x - border_instance.left + 60, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
+		border_instance.x - border_instance.left - 10, gasterblaster_y, 90, fly_time, charge_time, flyout_time, destroy_time);
 	}
 	if (side == dir.down) {
 		var gasterblaster_x = obj_camera.camera_position.x + obj_camera.view_width + gasterblaster_height;
 		var gasterblaster_y = border_instance.y + border_instance.down - 15;
 		create_gasterblaster(gasterblaster, gasterblaster_x, gasterblaster_y,
-		border_instance.x + border_instance.right - 60, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
+		border_instance.x + border_instance.right + 10, gasterblaster_y, 270, fly_time, charge_time, flyout_time, destroy_time);
 	}
 }
 
@@ -82,15 +82,15 @@ if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
 }
 	
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], repeats - 1);
 
-time_source_update_platforms = time_source_create(time_source_game, 1 / platform_speed, time_source_units_seconds, function () {
+time_source_update_platforms = time_source_create(time_source_game, 1 / platform_speed, time_source_units_seconds, function() {
 	update_platforms();
 }, [], -1);
 	
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function() {
 	character_instance.stop_hand_wave();
 	instance_destroy();
 });

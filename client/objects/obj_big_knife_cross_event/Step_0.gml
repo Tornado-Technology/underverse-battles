@@ -14,7 +14,7 @@ if (is_spining) {
 			direction = 0;
 		}
 		step = 0;
-		audio_play_sound_once(snd_projectile);
+		//audio_play_sound_once(snd_projectile);
 	}
 }
 	

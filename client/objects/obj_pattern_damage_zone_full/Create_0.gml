@@ -14,7 +14,7 @@ update = function() {
 }
 
 var period = 16 - _power * 2;
-var amount = 15 + _power * 5;
+var amount = 20 + _power * 5;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], amount - 1);

@@ -1,7 +1,5 @@
 npc = obj_npc_napstablook;
 
-sides = [dir.up];
-
 cutscenes = [
 	[
 		[cutscene_execute, npc.speak],

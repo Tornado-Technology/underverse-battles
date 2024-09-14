@@ -1,6 +1,6 @@
 npc = obj_npc_harper;
 
-sides = [dir.left];
+sides = [dir.up, dir.left];
 
 cutscenes = [
 	[

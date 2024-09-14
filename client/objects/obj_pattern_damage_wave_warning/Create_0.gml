@@ -39,8 +39,8 @@ update = function() {
 	}
 }
 
-var period = 140 - _power * 10;
-var repeats = 3 + _power;
+var period = 100 - _power * 10;
+var repeats = 4 + _power;
 time_source_update_zone = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update_zone();
 	time_source_start(time_source_update);

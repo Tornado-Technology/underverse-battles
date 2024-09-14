@@ -10,16 +10,18 @@ callback = function () {
 
 update = function() {
 	var random_position; 
-	if(vertical) {
+	if (vertical) {
 		random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), fight_random_integer(border_instance.y - border_instance.up + 1, border_instance.y + border_instance.down - 1));
 	} else {
-		random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 2, border_instance.x + border_instance.right - 2), border_instance.y);
-	};
+		random_position = new Vector2(fight_random_integer(border_instance.x - border_instance.left + 5, border_instance.x + border_instance.right - 5), fight_random_integer(border_instance.y - border_instance.up + 2, border_instance.y + border_instance.down - 2));
+	}
+	
 	instance_create_depth(random_position.x, random_position.y, fight_depth.bullet_outside, damage_zone, {});
 }
 
 var period = 26 - _power * 2;
-var amount = 12 + _power * 2;
+var amount = 15 + _power * 4;
+
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], amount - 1);

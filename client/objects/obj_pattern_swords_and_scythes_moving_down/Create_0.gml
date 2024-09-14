@@ -40,19 +40,19 @@ update = function() {
 	swords_instance.step = 0.1 + _power * 0.01;
 	swords_instance.gradually_appearing();
 	swords_instance.image_angle = angle;
-	swords_instance.target_soul(position, true);	
+	swords_instance.moving_target(position_x, position_y, true);	
 }
 
 var period = 50;
 
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
-	if(fight_random_integer(0, 1)) {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
+	if (fight_random_integer(0, 1)) {
 		update();
 	} else {
 		update_scythe();
 	}
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (280 + _power * 30) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (280 + _power * 30) / 60, time_source_units_seconds, function() {
 	instance_destroy();
 });
