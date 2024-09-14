@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_broken_stick",
   "bboxMode":0,
-  "bbox_bottom":66,
+  "bbox_bottom":54,
   "bbox_left":0,
-  "bbox_right":17,
+  "bbox_right":14,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":67,
+  "height":55,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"5bbfea8b-4f14-424e-8ef6-8b15c17f8cfd","blendMode":0,"displayName":"default","isLocked":false,"name":"5bbfea8b-4f14-424e-8ef6-8b15c17f8cfd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":18,
+  "width":15,
 }
