@@ -6,7 +6,6 @@ i = 0;
 callback = function() {
 	var offset_x = 200;
 	var offset_end_x = 30;
-	var radius = 20;
 	var player = fight_get_player(nightmare_side);
 	
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -19,10 +18,10 @@ callback = function() {
 	var position_x_end = !nightmare_side ? border_instance.x - border_instance.left - offset_end_x : border_instance.x + border_instance.right + offset_end_x;
 	instance_create_depth(position_x, border_instance.y - 30, fight_depth.bullet_outside_hight, monster, {
 		speed_count: 3,
-		radius: radius,
 		position_opponent: nightmare_side,
 		position_head_x: position_x_end,
-		position_head_y: border_instance.y
+		position_head_y: border_instance.y,
+		fist: fist
 	});
 	
 	update();

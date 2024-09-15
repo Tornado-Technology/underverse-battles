@@ -1,5 +1,5 @@
 event_inherited();
-
+is_destroying_outside = false;
 damage = get_char_damage(obj_character_nightmare);
 pusher = 10;
 

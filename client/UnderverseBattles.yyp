@@ -644,7 +644,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"UnderverseBattles",
   "resources":[
@@ -726,6 +726,7 @@
     {"id":{"name":"obj_attack_nightmare_0","path":"objects/obj_attack_nightmare_0/obj_attack_nightmare_0.yy",},},
     {"id":{"name":"obj_attack_nightmare_1","path":"objects/obj_attack_nightmare_1/obj_attack_nightmare_1.yy",},},
     {"id":{"name":"obj_attack_nightmare_2","path":"objects/obj_attack_nightmare_2/obj_attack_nightmare_2.yy",},},
+    {"id":{"name":"obj_attack_nightmare_ice_cream_special","path":"objects/obj_attack_nightmare_ice_cream_special/obj_attack_nightmare_ice_cream_special.yy",},},
     {"id":{"name":"obj_attack_nightmare_special","path":"objects/obj_attack_nightmare_special/obj_attack_nightmare_special.yy",},},
     {"id":{"name":"obj_attack_papyrus_0","path":"objects/obj_attack_papyrus_0/obj_attack_papyrus_0.yy",},},
     {"id":{"name":"obj_attack_papyrus_1","path":"objects/obj_attack_papyrus_1/obj_attack_papyrus_1.yy",},},
@@ -1099,6 +1100,7 @@
     {"id":{"name":"obj_menu_sign_up","path":"objects/obj_menu_sign_up/obj_menu_sign_up.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_mesh_fence","path":"objects/obj_mesh_fence/obj_mesh_fence.yy",},},
+    {"id":{"name":"obj_monster_nightmare_ice_cream","path":"objects/obj_monster_nightmare_ice_cream/obj_monster_nightmare_ice_cream.yy",},},
     {"id":{"name":"obj_monster_nightmare","path":"objects/obj_monster_nightmare/obj_monster_nightmare.yy",},},
     {"id":{"name":"obj_muffet_seller","path":"objects/obj_muffet_seller/obj_muffet_seller.yy",},},
     {"id":{"name":"obj_netlog","path":"objects/obj_netlog/obj_netlog.yy",},},
@@ -2832,6 +2834,7 @@
     {"id":{"name":"spr_location_muffet_bakery","path":"sprites/spr_location_muffet_bakery/spr_location_muffet_bakery.yy",},},
     {"id":{"name":"spr_mesh_fence","path":"sprites/spr_mesh_fence/spr_mesh_fence.yy",},},
     {"id":{"name":"spr_mint_licker","path":"sprites/spr_mint_licker/spr_mint_licker.yy",},},
+    {"id":{"name":"spr_monster_nightmare_ice_cream","path":"sprites/spr_monster_nightmare_ice_cream/spr_monster_nightmare_ice_cream.yy",},},
     {"id":{"name":"spr_monster_nightmare","path":"sprites/spr_monster_nightmare/spr_monster_nightmare.yy",},},
     {"id":{"name":"spr_monster_soul_blue","path":"sprites/spr_monster_soul_blue/spr_monster_soul_blue.yy",},},
     {"id":{"name":"spr_monster_soul_half1","path":"sprites/spr_monster_soul_half1/spr_monster_soul_half1.yy",},},

@@ -53,6 +53,12 @@ function call_attack_nightmare_ice_cream_2(player, _power, type = fight_random_i
 	});	
 }
 
+function call_attack_nightmare_ice_cream_special(player) {
+	instance_create(obj_attack_nightmare_ice_cream_special, {
+		character_instance: player
+	});
+}
+
 
 function call_attack_nightmare_mecha_0 (player, _power, type = fight_random_integer(0, 5)) {
 	instance_create(obj_attack_mecha_0, {

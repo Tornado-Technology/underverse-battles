@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bone_nightmare_ice_cream",
-  "eventList":[],
+  "%Name":"obj_monster_nightmare_ice_cream",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_bone_nightmare_ice_cream",
+  "name":"obj_monster_nightmare_ice_cream",
   "overriddenProperties":[],
   "parent":{
     "name":"Ice cream",
     "path":"folders/Characteres/Nightmare/Bullets/Ice cream.yy",
   },
   "parentObjectId":{
-    "name":"obj_bone_nightmare",
-    "path":"objects/obj_bone_nightmare/obj_bone_nightmare.yy",
+    "name":"obj_monster_nightmare",
+    "path":"objects/obj_monster_nightmare/obj_monster_nightmare.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bone_nightmare_ice_cream",
-    "path":"sprites/spr_bone_nightmare_ice_cream/spr_bone_nightmare_ice_cream.yy",
+    "name":"spr_monster_nightmare_ice_cream",
+    "path":"sprites/spr_monster_nightmare_ice_cream/spr_monster_nightmare_ice_cream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

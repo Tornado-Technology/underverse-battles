@@ -19,9 +19,9 @@ on_border_created = function() {
 create_border(battle_border.up - 10, battle_border.down, battle_border.left + 60, battle_border.right + 60);
 pattern_instances = [
 	create_pattern_custom_power(obj_patterns_monster_nightmare, 4, {
-		monster: obj_monster_nightmare,
-		fist: obj_fist_nightmare,
-		bone: obj_bone_nightmare,
+		monster: obj_monster_nightmare_ice_cream,
+		fist: obj_fist_nightmare_ice_cream,
+		bone: obj_bone_nightmare_ice_cream,
 		nightmare_side: fight_get_initiative()
 	})
 ];

@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tentacle_nightmare_ice_cream",
-  "eventList":[],
+  "%Name":"obj_attack_nightmare_ice_cream_special",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_tentacle_nightmare_ice_cream",
+  "name":"obj_attack_nightmare_ice_cream_special",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tentacles",
-    "path":"folders/Characteres/Nightmare/Bullets/Ice cream/Tentacles.yy",
+    "name":"Ice cream",
+    "path":"folders/Characteres/Nightmare/Attacks/Ice cream.yy",
   },
   "parentObjectId":{
-    "name":"obj_tentacle_nightmare",
-    "path":"objects/obj_tentacle_nightmare/obj_tentacle_nightmare.yy",
+    "name":"obj_attack",
+    "path":"objects/obj_attack/obj_attack.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_tentacles_ice_cream",
-    "path":"sprites/spr_tentacles_ice_cream/spr_tentacles_ice_cream.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

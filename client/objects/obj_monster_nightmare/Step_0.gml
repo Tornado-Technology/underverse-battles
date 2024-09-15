@@ -17,7 +17,6 @@ if(!start_attack_fist) {
 
 x = approach(x, position, 1 * dtime);
 
-
 fist_instance[0].x = x + dcos(angle) * radius;
 fist_instance[0].y = y + dsin(angle) * radius;	
 fist_instance[0].image_xscale = image_xscale;
