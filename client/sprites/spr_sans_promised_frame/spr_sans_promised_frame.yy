@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Frames",
-    "path":"folders/Characteres/Sans/Sprites/Frames.yy",
+    "name":"Skins",
+    "path":"folders/Characteres/Sans/Sprites/Frames/Skins.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

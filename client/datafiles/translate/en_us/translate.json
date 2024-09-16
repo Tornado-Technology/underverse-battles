@@ -215,7 +215,8 @@
       "Tutoriel": "Tutoriel",
       "StartTutorial": "Start the tutorial",
       "Episode1": "Episode 1 - Invasion",
-      "Episode2": "Episode 2 - Cross"
+      "Episode2": "Episode 2 - Cross",
+      "Episode3": "Episode 3 - The beginning of the adventure"
     },
     "Control": {
       "Title": "Control",
@@ -540,7 +541,7 @@
         "Description": "Bones targeting the soul and dealing damage on impact" },
       "Attack1": {
         "Name": "Spinning bones",
-        "Description": "Spinning bones targeting the SOUL and dealing damage on impact" },
+        "Description": "Spinning bones targeting the soul and dealing damage on impact" },
       "Attack2": {
         "Name": "Gasterblasters",
         "Description": "Firing damaging gasterblasters" },
@@ -648,6 +649,86 @@
         "Name": "Edit",
         "Description": "An attack which the attacking objects change by pressing a button" }
     },
+    "Dream": {
+      "Name": "Dream",
+      "Description": "The Guardian of Positive feelings",
+      "Bio": "Dream was born out of light by Nim, The Guardian of The Tree of Feelings, to guard The Tree after her death. Dream embodies an essense of positive energy in a skeleton shell of Swap!Sans. Once his brother, Nightmare, accidently plagued The Tree's fruits with negative energy, Dream had to seal the last remaining fruit inside himself, thus making it his soul. Dream is very kind, polite, and always ready to help those who's in need. He's Ink's friend and partner in protecting the Multiverse. ",
+      "PassiveSkill": {
+        "Name": "Good Spirits",
+        "Description": "Every time Dream is undamaged in a turn, he charges his Special Attack by 10%" },
+      "Attack0": {
+        "Name": "Star Staff",
+        "Description": "Attack with stars, that fly towards the enemy and deal damage" },
+      "Attack1": {
+        "Name": "Daggers",
+        "Description": "Two daggers, that swing and deal damage" },
+      "Attack2": {
+        "Name": "Dream's Bow",
+        "Description": "Arrows that aim the enemy and may ricochet" },
+      "SpecialAttack": {
+        "Name": "Positive Commitment",
+        "Description": "Attack with ricocheting arrows. Dealing damage slightly prolongs the attack" }
+    },
+    "Nightmare": {
+      "Name": "Nightmare",
+      "Description": "Your worst nightmare",
+      "Bio": "Nightmare was born out of dark by The Guardian of The Tree of Feelings to protect the negative half of The Tree. In his world of Dreamtale Nightmare was believed to be the harbinger of calamities and bullied for it by humans and monsters. In his attempts to prove them wrong, that he's still capable of good actions, Nightmare grabbed a golden apple, thus turning it in total black, as well as all the other fruits on The Tree. Negative feelings then flooded all over the people of Dreamtale. Appaled, Nightmare started eating the dark fruits, turning himself into essense of the dark matter. Nightmare is a cunning and violent evil. He's able to manipulate beings using his negative emotional control. You shouldn't deal with him.",
+      "PassiveSkill": {
+        "Name": "Negative Commitment",
+        "Description": "When taking damage, Nightmare charges the same amount of Special Attack" },
+      "Attack0": {
+        "Name": "Tenticles",
+        "Description": "Tenticles that wander over arena and deal damage of negative feelings" },
+      "Attack1": {
+        "Name": "Spikes of Negativity",
+        "Description": "Spikes emerging from arena's borders and dealing damage of negative feelings" },
+      "Attack2": {
+        "Name": "Slime",
+        "Description": "Dark substance that creates various forms to attack soul" },
+      "SpecialAttack": {
+        "Name": "Negativity Leech",
+        "Description": "Negativity areas spawn on the arena, healing Nightmare on catching the enemy soul" }
+    },
+    "Papyrus": {
+      "Name": "Papyrus",
+      "Description": "Nyeh-heh-heh",
+      "Bio": "Sans's little brother from the Undertale universe. Wants to be cool and popular, and he's putting his entire backbone into it. Loves cooking, especially with Undyne. Has got his own red car. Papyrus is an open-minded monster, albeit a bit of a dork, but he's always ready to stand up for his friends and family. He believes that there is always something good in every human and monster.",
+      "PassiveSkill": {
+        "Name": "Damage Resistance",
+        "Description": "Papyrus takes maximum of up to 8 damage from every hit" },
+      "Attack0": {
+        "Name": "Bones",
+        "Description": "Bones aiming the enemy soul and dealing damage" },
+      "Attack1": {
+        "Name": "Bones and Blue bones",
+        "Description": "Attack with common bones and blue bones, that damage the soul only when it's moving" },
+      "Attack2": {
+        "Name": "Spinning Bones",
+        "Description": "Spinning bones targeting the soul" },
+      "SpecialAttack": {
+        "Name": "Cool Dude",
+        "Description": "Huge amount of complex bone attacks with a wide leap over bones in the end" }
+    },
+    "XAnastasia": {
+      "Name": "X Anastasia",
+      "Description": "A fluttering miracle",
+      "Bio": "She is a trial original creation of XGaster, but he did not like her and left her data in his notes.",
+      "PassiveSkill": {
+        "Name": "Maneuverability",
+        "Description": "X Anastasia's soul moves faster and jumps higher when the soul turns blue" },
+      "Attack0": {
+        "Name": "Feathers",
+        "Description": "Pointed feathers flying towards the soul" },
+      "Attack1": {
+        "Name": "Swords",
+        "Description": "Attack using swords that deal damage" },
+      "Attack2": {
+        "Name": "Scythe",
+        "Description": "A scythe that swings in different directions, causing damage" },
+      "SpecialAttack": {
+        "Name": "Fast flight",
+        "Description": "The soul rushes upward, is attacked by feathers, swords and scythes" }
+    },
     "Tornado": {
       "Name": "Tornado",
       "Description": "Wet developer",
@@ -724,7 +805,19 @@
 	  "Garland": "Garland",
     "AntiPiracy": "Anti piracy",
     "NoTextures": "No textures",
-    "Samurai": "Samurai"
+    "Samurai": "Samurai",
+    "IceCream": "Ice cream",
+    "Mecha": "Mecha",
+    "Demon": "Demon",
+    "Echo": "Echo",
+    "TON618": "TON 618",
+    "Blob": "Blob",
+    "Robber": "Robber",
+    "Basketbro": "Basketbro",
+    "Magma": "Magma",
+    "OldOutfit": "Old outfit",
+    "Magician": "Magician",
+    "IceBlood": "Ice blood"
   },
   "Battle": {
     "Target": "Target",
@@ -762,10 +855,10 @@
   "Dialog": {
     "Underverse_Episode1": {
       "Dialog1": [
-        "{Sans:normal}Emm... hi.",
-        "{Sans:normal}Who are you?",
+        "{Sans:normal}emm... hi.",
+        "{Sans:normal}who are you?",
         "{C:secretive}You will not need for this information soon.",
-        "{Sans:normal}What are you meaning, dude?"
+        "{Sans:normal}what are you meaning, dude?"
       ],
       "Dialog2": [
         "{C:satisfied}Never let your guard down. You should listen to Undyne when she gives you advice.",
@@ -848,10 +941,10 @@
         "{Ink:glad}Well, let's play with time!"
       ],
       "Dialog12": [
-        "{Sans:tired}Look, bud. I dunno what's happening but you don't belong here.",
-        "{Sans:tired}You gotta stop this. Now.",
-        "{Sans:tired}Please, give me back my soul.",
-        "{Sans:tired}I'm sure this artist me will help ya.",
+        "{Sans:tired}look, bud. i dunno what's happening but you don't belong here.",
+        "{Sans:tired}you gotta stop this. now.",
+        "{Sans:tired}please, give me back my soul.",
+        "{Sans:tired}i'm sure this artist me will help ya.",
         "{Ink:calm}Chara, Cross, let's go home. We'll find a better way to...",
         "{C:secretive}I just don't want to die... I just... I need...",
         "{C:satisfied}WE NEED OUR OWN UNIVERSE!",
@@ -862,14 +955,14 @@
     },
     "Underverse_Episode2": {
       "Dialog1": [
-        "{Sans:tired}So... your name's Ink, huh?",
+        "{Sans:tired}so... your name's INK, huh?",
         "{Ink:combat}...Yup. Nice to meet ya."
       ],
       "Dialog2": [
         "{Ink:calm}I-I'm sorry Sans, I never thought this could happen...",
-        "{Sans:tired}Ot's ok bud. I'm not dead... At least not yet.",
-        "{Sans:tired}I shouldn't have slept here.",
-        "{Sans:tired}Looks like that guy loves to cause trouble.",
+        "{Sans:tired}it's ok bud. i'm not dead... at least not yet.",
+        "{Sans:tired}i shouldn't have slept here.",
+        "{Sans:tired}looks like that guy loves to cause trouble.",
         "{Ink:calm}Actually, this is the first time he's done something like this.",
         "{Ink:calm}He's scared since... Well... It's a long story..."
       ],
@@ -879,7 +972,7 @@
         "Nope. Get outta here"
       ],
       "Dialog3_Line1": [
-        "{Sans:normal}Umm... My bro and the others will arrive in 20 minutes, so I guess we can talk for a"
+        "{Sans:normal}umm... my bro and the others will arrive in 20 minutes, so i guess we can talk for a"
       ],
       "Dialog4_Line1": [
         "{Ink:glad}DO YOU WANNA KNOW MORE ABOUT C!? GREAT!!",
@@ -904,7 +997,7 @@
         "{Ink:none}He called himself Cross, the only survivor of a Genocide Run without RESET possibilities."
       ],
       "Dialog8_Line1": [
-        "{Sans:confused}Wait a sec... If he was in a Genocide timeline, where's the human that caused it?",
+        "{Sans:confused}wait a sec... if he was in a Genocide timeline, where's the human that caused it?",
         "{Ink:calm}Chara is sealed inside his body. How did it happen? He never told me...",
         "{Ink:calm}At first they acted as two separate beings.",
         "{Ink:calm}However, as I visited Cross to keep him company, he won full control of both souls."
@@ -923,16 +1016,16 @@
         "{Ink:emotionless}His face..."
       ],
       "Dialog12_Line1": [
-        "{Sans:confused}Yeah?"
+        "{Sans:confused}yeah?"
       ],
       "Dialog13_Line1": [
         "{Ink:emotionless}What were we talking about?",
-        "{Sans:none}Pfff, what's up with this guy?"
+        "{Sans:none}pfff, what's up with this guy?"
       ],
       "Dialog3_Line2": [
-        "{Sans:tired}Look, you better go. I'm not interested in your clowning.",
+        "{Sans:tired}look, you better go. i'm not interested in your clowning.",
         "{Ink:surprised}But Sans... Half of your soul was stolen from you.",
-        "{Sans:tired}I will survive. And you do your own shit.",
+        "{Sans:tired}i will survive. and you do your own shit.",
         "{Ink:calm}OK, I get it. After all, it was my fault.",
         "{Ink:combat}Don't worry Sans. I will do anything to get your half of your soul back."
       ],
@@ -940,8 +1033,8 @@
         "{Ink:combat}Emm... Good luck."
       ],
       "Dialog5_Line2": [
-        "{Sans:tired}Hmm ... What's a day.",
-        "{Sans:tired}Well, time to go."
+        "{Sans:tired}hmm... what's a day.",
+        "{Sans:tired}well, time to go."
       ],
       "Dialog14": [
         "{Ink:calm}C, please! You know I can't create a new world... are you OK?",
@@ -998,6 +1091,103 @@
       ],
       "Dialog22": [
         "{Ink:injured}This is bad."
+      ],
+      "Dialog23": [
+        "{Ink:calm}Someone capable of manipulating a monster's body with that twisted mind... It could be really difficult trying to stop them.",
+        "{Ink:calm}I have to admit that I can't stop them by myself...",
+        "{Ink:calm}I know this isn't the right thing to do, but... Sans...",
+        "{Ink:calm}I need your help to find Cross... Would you like to come with me?"
+      ],
+      "Choise2": [
+        "Ink Sans suggests that you join him in his searches for Cross.",
+        "Join",
+        "Stay"
+      ],
+      "Dialog24_Line1": [
+        "{Sans:normal}i might help, i guess. besides ►",
+        "{Ink:enthusiastic}Awesome! Off we go then!",
+        "{Sans:confused}woah, wait a sec, artist... right now?",
+        "{Ink:normal}But why wait?",
+        "{Sans:normal}my friends are picnicking right now, i can't just abandon them. papyrus won't ever get off my backbone if i don't show up.",
+        "{Ink:calm}Yeah... I see.",
+        "{Ink:glad}Then I'll come get you later.",
+        "{Papyrus:none}SANS!",
+        "{Ink:surprised}Oh, boy!"
+      ],
+      "Dialog24_Line2": [
+        "{Sans:normal}...heh. sorry bud, but no. actually, i think i can live with this.",
+        "{Sans:normal}...it doesn't worry me at all.",
+        "{Ink:glad}Oh... That's ok! I get it. I was the one who let this happen...",
+        "{Ink:glad}So, I'll do my best to fix this and bring back your soul.",
+        "{Ink:glad}Welp. I have to go now."
+      ],
+      "Dialog25_Line2": [
+        "{Ink:normal}Have a nice day with all your friends!"
+      ],
+      "Dialog26_Line2": [
+        "{Sans:confused}huh... this is too weird...",
+        "{Papyrus:none}SANS!!"
+      ],
+      "Dialog27": [
+        "{Papyrus:normal_picnic}THERE YOU ARE, BROTHER! ARE YOU READY FOR OUR MAGNIFICENT PICNIC?"
+      ],
+      "Dialog28": [
+        "{Sans:normal}...sure! let's go, bro."
+      ]
+    },
+    "Underverse_Episode3": {
+      "Dialog17": [
+        "{UndynePicnic:glad}Dang, it's been a while since we last gathered like that!",
+        "{PapyrusPicnic:glad}THAT'S RIGHT! AND IN SUCH A BIG GROUP!",
+        "{UndynePicnic:glad}Asgore, wrap up cooking those royal steaks, would ya?",
+        "{UndynePicnic:glad}Our ambassador must be starving their guts out!"
+      ],
+      "Dialog18": [
+        "{UndynePicnic:laughing}Hahahaha! I spilled the ketchup!"
+      ],
+      "Dialog19": [
+        "{TorielPicnic:glad}What a beautiful day! Everybody is having fun. What do you think, Sans?",
+        "{Sans:normal}well, staying at home would be a...",
+        "{Sans:joking}...MISSED-STEAK."
+      ],
+      "Dialog20": [
+        "{TorielPicnic:laughing}Ha-ha-ha!",
+        "{PapyrusPicnic:tired}UGH...",
+        "{UndynePicnic:normal}Hey, Papyrus, go get us some more ketchup.",
+        "{PapyrusPicnic:shocked}WHAT? I DON'T EVEN KNOW WHERE IT'S SOLD!",
+        "{Sans:normal}yeah, about that. you shouldn't send him shopping all alone.",
+        "{Sans:joking}he once ended up looking for clothes in a soup store.",
+        "{PapyrusPicnic:angry}I ACTUALLY MENT TO BUY THE SOUP! I JUST DIDN'T WANT TO TELL YOU!",
+        "{Sans:normal}alright, i'll go myself.",
+        "{PapyrusPicnic:angry}NO YOU WON'T! WE'RE NOT IN FOR ANOTHER SEARCH IF YOU FALL ASLEEP SOMEWHERE ON YOUR WAY AGAIN.",
+        "{UndynePicnic:normal}Then why not send Frisk with him? Our ambassador would keep him up for sure.",
+        "{PapyrusPicnic:tired}THAT WOULD DO IT, I GUESS.",
+        "{UndynePicnic:normal}Frisk, could you and Sans go get some ketchup from the store?"
+      ],
+      "Dialog21": [
+        "{Sans:normal}right behind you."
+      ],
+      "Undyne": [
+        "{UndynePicnic:normal}Hurry up, punk."
+      ],
+      "Papyrus": [
+        "{PapyrusPicnic:normal}HUMAN, KEEP AN EYE ON SANS."
+      ],
+      "Alphys": [
+        "{AlphysPicnic:normal}Get back soon, guys."
+      ],
+      "Toriel": [
+        "{TorielPicnic:normal}Be careful on the roads."
+      ],
+      "Asgore": [
+        "{AsgorePicnic:normal}Don't worry, Frisk. You will get your steak. I'll make sure of it."
+      ],
+      "Bear_1": [
+        "Ah, nothing beats the kick from moving to the warm woods after the cold ones.",
+        "I just feel like I've found my niche in this world."
+      ],
+      "Bear_2": [
+        "Cool!"
       ]
     }
   }

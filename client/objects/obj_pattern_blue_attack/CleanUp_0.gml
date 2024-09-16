@@ -4,4 +4,3 @@ time_source_destroy(time_source_update_down);
 time_source_destroy(time_source_update_destroy);
 
 instance_destroy_array(bone_instances);
-final_function();

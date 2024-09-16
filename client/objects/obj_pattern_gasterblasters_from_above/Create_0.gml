@@ -15,13 +15,13 @@ update_gasterblasters = function() {
 		var border_dist = 100;
 		switch (_gb_pos) {
 			case 0:
-				create_gasterblaster(gasterblaster, border_instance.x + 20, border_instance.y - border_instance.up - border_dist, border_instance.x + 20, border_instance.y, 0, 1/6, 1, 15/60, 1/6);
+				create_gasterblaster(gasterblaster, border_instance.x + 20, border_instance.y - border_instance.up - border_dist, border_instance.x + 20, border_instance.y - border_instance.up - 10, 0, 1/6, 1, 15/60, 1/6);
 				break;
 			case 1:
-				create_gasterblaster(gasterblaster, border_instance.x, border_instance.y - border_instance.up - border_dist, border_instance.x, border_instance.y, 0, 1/6, 1, 15/60, 1/6);
+				create_gasterblaster(gasterblaster, border_instance.x, border_instance.y - border_instance.up - border_dist, border_instance.x, border_instance.y - border_instance.up - 10, 0, 1/6, 1, 15/60, 1/6);
 				break;
 			case 2:
-				create_gasterblaster(gasterblaster, border_instance.x - 20, border_instance.y - border_instance.up - border_dist, border_instance.x - 20, border_instance.y, 0, 1/6, 1, 15/60, 1/6);
+				create_gasterblaster(gasterblaster, border_instance.x - 20, border_instance.y - border_instance.up - border_dist, border_instance.x - 20, border_instance.y - border_instance.up - 10, 0, 1/6, 1, 15/60, 1/6);
 				break;
 		}
 	}

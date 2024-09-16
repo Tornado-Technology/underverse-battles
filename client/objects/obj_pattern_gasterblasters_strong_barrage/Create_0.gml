@@ -14,10 +14,13 @@ callback = function () {
 }
 
 update = function() {
-	var radius = border_instance.up * 2;
-	var x_gb = border_instance.x + radius * cos(degtorad(_angle));
-	var y_gb = border_instance.y + radius * sin(degtorad(_angle));
-	create_gasterblaster(gasterblaster, x_gb, y_gb, border_instance.x, border_instance.y, point_direction(x_gb, y_gb, border_instance.x, border_instance.y) + 90, 1/10, 1, 15/60, 1/6);
+	var radius = obj_camera.view_width + object_get_sprite_max_size(gasterblaster);
+	var min_radius = border_instance.up + 20;
+	var position_x = border_instance.x + radius * dcos(_angle);
+	var position_y = border_instance.y + radius * dsin(_angle);
+	var final_position_x = border_instance.x + min_radius * dcos(_angle);
+	var final_position_y = border_instance.y + min_radius * dsin(_angle);
+	create_gasterblaster(gasterblaster, position_x , position_y, final_position_x, final_position_y, point_direction(position_x, position_y, border_instance.x, border_instance.y) + 90, 1/10, 1, 15/60, 1/6);
 	_angle += angle_step * (reversed ? -1 : 1);
 }
 	

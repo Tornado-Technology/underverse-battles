@@ -4,10 +4,11 @@ is_can_input = true;
 
 edited_objects_number = 0;
 
-edit_button = UIImageButton(spr_edit_button_green, function() {
-	if (!is_can_input || fight_get_initiative() != 0) return;
-	network_check_press(get_random_attack_type());
-});
+edit_button = new UIImageButton(0, spr_edit_button_green)
+	.set_on_press(function() {
+		if (!is_can_input || fight_get_initiative() != 0) return;
+		network_check_press(get_random_attack_type());
+	});
 
 edit_objects = function() {
 	var pattern_instance = obj_pattern_edit;

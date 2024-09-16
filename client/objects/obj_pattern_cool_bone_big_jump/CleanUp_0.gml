@@ -1,0 +1,6 @@
+time_source_destroy(time_source_update);
+time_source_destroy(time_source_cool_bone);
+time_source_destroy(time_source_update_collision);
+time_source_destroy(time_source_update_last_bone);
+time_source_destroy(time_source_update_destroy);
+

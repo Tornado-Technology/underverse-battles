@@ -1,4 +1,4 @@
-// Arguments: max_acceleration
+// Arguments: brush, max_acceleration
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -28,12 +28,12 @@ update = function () {
 		coord_y = border_instance.y + border_instance.down + 12;
 	}
 	
-	create_broomie(coord_x, coord_y, obj_brush_ink_sans,
+	create_broomie(coord_x, coord_y, brush,
 		point_direction(coord_x, coord_y, soul_instance.x, soul_instance.y) + 225, brush_side, 1, max_acceleration);
 }
 
-var period = 85 - _power * 10;
-var repeats = 6 + _power;
+var period = 70 - _power * 8;
+var repeats = 6 + _power * 2;
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
@@ -42,6 +42,6 @@ if (variable_instance_exists(id, "custom_repeats")) {
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * (repeats + 1) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });

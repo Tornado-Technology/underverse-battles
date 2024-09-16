@@ -37,7 +37,8 @@ tabSkin.on_click_on_character = function() {
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, selected_characters[1]);
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.SOUNDTRACK, selected_character.statistics.soundtrack);
 	
-	effect_fade(0.5, 0, c_black, c_black, true, -1, function() {
+	var transition_time = 0.4;
+	effect_fade(transition_time, 0, transition_time, c_black, true, true, function() {
 		room_goto(room_fight);
 		instance_destroy();
 	});

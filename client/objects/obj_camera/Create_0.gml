@@ -2,22 +2,23 @@
 global.camera_instance = id;
 sprite_index = noone;
 
-// Resolution 
-zoom = 4;
-view_width = 1920 / zoom;
-view_height = 1080 / zoom;
+// Postion 
+camera_position = new Vector2(0, 0);
+target_position = new Vector2(0, 0);
+is_using_speed = true;
 
-zoom_required = 4;
+// Resolution 
+zoom = 1;
+zoom_target = new Vector2(0, 0);
+view_width = 480;
+view_height = 270;
+
+zoom_required = 1;
 zoom_speed = 1;
 // Going beyond the edges of the room?
 is_room_border = true;
 
-// Postion 
-position = new Vector2(0, 0);
-target_position = new Vector2(0, 0);
-is_using_speed = true;
-
-//
+// Angle
 _angle = 0;
 angle = 0;
 scale = new Vector2(3, 3);

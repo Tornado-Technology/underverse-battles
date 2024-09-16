@@ -29,18 +29,16 @@ lang_miss  = translate_get("Battle.Miss");
 string_rp = translate_get("Gameover.RatingPoint");
 
 arrows = {
-	up: UIImageButton(spr_stat_arrow, function() {
-		scroll_up();
-	}),
-	down: UIImageButton(spr_stat_arrow, function() {
-		scroll_down();
-	})
-}
-
-var elements = variable_struct_get_names(arrows);
-for (var i = 0; i < array_length(elements); i++) {
-	var arrow = arrows[$ elements[i]];
-	arrow.on_held = arrow.callback;
+	up: new UIImageButton(0, spr_ui_arrow)
+		.set_padding(5)
+		.set_on_press(function() {
+			scroll_up();
+		}),
+	down: new UIImageButton(1, spr_ui_arrow)
+		.set_padding(5)
+		.set_on_press(function() {
+			scroll_down();
+		})
 }
 
 scroll_up = function(coef = 1) {

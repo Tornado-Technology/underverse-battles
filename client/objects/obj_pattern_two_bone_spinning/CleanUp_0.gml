@@ -1,0 +1,3 @@
+time_source_destroy(time_source_start_moving);
+time_source_destroy(time_source_changes_movement);
+time_source_destroy(time_source_update_destroy);

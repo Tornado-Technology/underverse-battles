@@ -57,7 +57,7 @@ cutscenes = [
 			audio_play_sound_once(snd_swing);
 		}],
 		[cutscene_wait, 0.1],
-		[cutscene_object_set_sprtie, sans, spr_char_sans_controlled],
+		[cutscene_object_set_sprite, sans, spr_char_sans_controlled],
 		[cutscene_object_move_to, sans, 1000, room_height/2, 3],
 		[cutscene_object_move_to, soul_sans, 1000, room_height/2, 3],
 		[cutscene_wait, 0.3],
@@ -67,9 +67,9 @@ cutscenes = [
 			audio_stop_sound(snd_dark_dream);
 		}],
 		[cutscene_wait, 1],
-		[layer_background_sprite, background_id, spr_background_underverse_forest],
+		[layer_background_sprite, background_id, spr_background_underverse_forest_park],
 		[cutscene_execute, function () {
-			audio_play_sound(snd_fallen_child, 1, true, 0.5);
+			audio_play_soundtrack(snd_fallen_child, true, 0.5);
 		}],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () {

@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Story Mode",
-    "path":"folders/Characteres/Cross/Sprites/Char/Story Mode.yy",
+    "name":"Episode 2",
+    "path":"folders/Characteres/Cross/Sprites/Char/Story Mode/Episode 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
-    "path":"folders/Characteres/Swap Papyrus/Attacks/Bullets.yy",
+    "path":"folders/Characteres/Swap Papyrus/Bullets.yy",
   },
   "parentObjectId":null,
   "persistent":false,

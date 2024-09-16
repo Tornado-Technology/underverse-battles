@@ -1,6 +1,23 @@
 /// @desc Set font
+set_font("NPC", "", global._font_main_determination, c_white);
 set_font("Ink", "", global._font_main_comic_sans, c_white);
-set_font("Sans", "", global._font_main_comic_sans, make_color_rgb(70, 140, 255));
+set_font("Sans", "", global._font_main_comic_sans, c_sans);
+set_font("SansVolleybro", "", global._font_main_comic_sans, c_sans);
 set_font("C", "", global._font_main_determination, c_white);
+set_font("XChara", "", global._font_main_determination, c_white);
+set_font("XCharaSpirit", "", global._font_main_determination, c_white);
 set_font("CrossXEvent", "", global._font_main_comic_sans, c_white);
-set_font("Error", "", global._font_main_comic_sans, make_color_rgb(220, 20, 20));
+set_font("Error", "", global._font_main_comic_sans, c_error);
+set_font("Papyrus", "", global._font_main_papyrus, c_white);
+set_font("PapyrusPicnic", "", global._font_main_papyrus, c_white);
+set_font("Nightmare", "", global._font_main_comic_sans, c_nightmare);
+set_font("Dream", "", global._font_main_comic_sans, c_orange);
+set_font("Undyne", "", global._font_main_determination, c_white);
+set_font("UndynePicnic", "", global._font_main_determination, c_white);
+set_font("Toriel", "", global._font_main_determination, c_white);
+set_font("TorielPicnic", "", global._font_main_determination, c_white);
+set_font("Asgore", "", global._font_main_determination, c_white);
+set_font("AsgorePicnic", "", global._font_main_determination, c_white);
+set_font("Alphys", "", global._font_main_determination, c_white);
+set_font("AlphysPicnic", "", global._font_main_determination, c_white);
+set_font("Frisk", "", global._font_main_determination, c_white);

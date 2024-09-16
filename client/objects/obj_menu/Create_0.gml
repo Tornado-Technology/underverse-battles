@@ -17,9 +17,6 @@ enum menu_page {
 	
 	// Account
 	multiplayer_account,
-	account,
-	friends,
-	find_friend,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -45,7 +42,7 @@ height = display_get_gui_height();
 game_hash = client_info.hash;
 
 // Effect fade
-effect_fade(0, 2, c_white, c_white, true, 0);
+effect_fade(0, 0.5, 2, c_white, true);
 
 // Logo
 logo = spr_underverse_battles_logo;
@@ -74,7 +71,7 @@ background = opening == opening_theme.tangled ? spr_background_tangled : spr_bac
 background_height_ = opening == opening_theme.tangled ? sprite_get_height(background) * 2 : sprite_get_height(background);
 background_width_ = sprite_get_width(background);
 
-background_color_main = c_white;
+background_color_main = opening_theme.tangled ? c_white : c_black;
 
 background_alpha = 1;
 background_target_alpha = 1;
@@ -333,9 +330,7 @@ create_page([
 		instance_create(obj_menu_achivements);
 	}),
 	Transfer("Main.Settings", menu_page.settings),
-	Execute("Main.DebugRooms", [], function() {
-		room_goto(room_cutscene_test);
-	}),
+	Transfer("Main.DebugRooms", menu_page.debug_rooms),
 	Transfer("Main.Credits", menu_page.credits, function() {
 		instance_create_one(obj_credits);
 	}),
@@ -346,10 +341,13 @@ create_page([
 }
 // Debug rooms
 create_page([
-	Execute("CutsceneTest", [], function() {
-		room_goto(room_underverse_episode2);
+	Execute("Fight Test", [], function() {
+		room_goto(room_fight_test);
 	}),
-	Execute("UITest", [], function() {
+	Execute("Cutscene Test", [], function() {
+		room_goto(room_cutscene_test);
+	}),
+	Execute("UI Test", [], function() {
 		room_goto(room_ui_test);
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),
@@ -380,6 +378,9 @@ create_page([
 	}),
 	Execute("StoryMode.Episode2", [], function() {
 		room_goto(room_underverse_episode2);
+	}),
+	Execute("StoryMode.Episode3", [], function() {
+		room_goto(room_underverse_episode_3_part_1);
 	}),
 	Transfer("StandardButtons.Back", menu_page.singleplayer),
 ], menu_page.storymode, "StoryMode.Title", true);
@@ -467,38 +468,15 @@ create_page([
 	Execute("SingleBattle.CustomSound", [], function() {
 		instance_create(obj_soundtrack_selection);
 	}),
-	Transfer("Multiplayer.Account", menu_page.account),
-	Transfer("StandardButtons.Back", menu_page.main),
-], menu_page.multiplayer_account, "Multiplayer.Title", true);
-
-// Account
-create_page([
-	Execute("Account.Friends", [], function() {
-		instance_create(obj_profile_friends);
-		
-	}),
-	Transfer("Account.Statistics", menu_page.statistics, function() {
+	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
 		instance_create(obj_profile_statistics);
 	}),
-	Transfer("Account.AccountOptions", menu_page.account_settings),
-	Transfer("Account.LogOut", menu_page.multiplayer, function() {
+	Transfer("Multiplayer.AccountOptions", menu_page.account_settings),
+	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
 		send_logout();
 	}),
-	Transfer("StandardButtons.Back", menu_page.multiplayer_account),
-], menu_page.account, "Account.Title", true);
-
-friends_inputbox_login = InputBox("Friends.WriteLogin");
-
-// Find friend
-create_page([
-	friends_inputbox_login,
-	Execute("StandardButtons.Apply", [], function() {
-		send_friend_request(friends_inputbox_login.input_box.text);
-	}),
-	Execute("StandardButtons.Back", [], function() {
-		instance_create(obj_profile_friends);
-	}),
-], menu_page.find_friend, "Friends.FindFriend", true);
+	Transfer("StandardButtons.Back", menu_page.main),
+], menu_page.multiplayer_account, "Multiplayer.Title", true);
 
 // Statistics
 create_page([

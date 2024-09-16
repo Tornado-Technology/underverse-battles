@@ -2,11 +2,11 @@ event_inherited();
 
 damage = get_char_damage(obj_character_ink_sans);
 
-speed_const = 2;
-
 time_create_ink = 100;
 time_create_ink_step = 0.2;
 time_create_ink_max = 100;
+
+if (!variable_instance_exists(id, "speed_const")) speed_const = 2;
 
 color_num = fight_random_integer(0, 1);
 if (color_num == 1)

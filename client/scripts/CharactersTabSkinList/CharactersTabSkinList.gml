@@ -18,9 +18,11 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 	static base_on_draw_cell = on_draw_cell;
 	static base_on_click_on_character = on_click_on_character;
 	
-	button_close = UITextButton(menu_instance.text.back, function() {
-		close();
-	});
+	button_close = new UITextButton(0, menu_instance.text.back)
+		.set_padding(5)
+		.set_on_press(function() {
+			close();
+		});
 	
 	// Overwrited in object
 	static on_click_on_character = function(_id) {
@@ -98,22 +100,21 @@ function ClassCharactersTabSkinList(menu_instance, max_cell_in_horizontal) : Cla
 		}
 		
 		if (menu_instance.input_enter && button_close.is_focus) {
-			button_close.press();
+			button_close.on_press();
 		}
 	}
 	
 	static draw = function() {
 		base_draw();
 		
-		var rectangle_x = menu_instance.rec_x1;
-		var rectangle_y = menu_instance.rec_y1;
 		var offset_x = menu_instance.dist_x;
 		var offset_y = menu_instance.dist_y;
 		var frame_height = menu_instance.frame_height;
 		var top_shift = menu_instance.top_shift;
 		
-		var position_y = rectangle_y + frame_height * count_cell_vertical + offset_y * count_cell_vertical + top_shift + button_offset_y;
+		var position_x = (menu_instance.rec_x1 + menu_instance.rec_x2) / 2;
+		var position_y = menu_instance.rec_y1 + frame_height * count_cell_vertical + offset_y * count_cell_vertical + top_shift + button_offset_y;
 		
-		button_close.draw(rectangle_x + offset_x + button_offset_x, position_y);
+		button_close.draw(position_x, position_y);
 	}
 }

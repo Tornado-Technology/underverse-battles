@@ -1,0 +1,1 @@
+audio_play_sound_at(audio, x, y, 0, 200, 600, 1, is_looping, 3);

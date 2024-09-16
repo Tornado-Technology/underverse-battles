@@ -1,7 +1,7 @@
 /// @param {Real} lang_id
 function translate_set_lang(lang_id) {
 	if (!translate_lang_exists(lang_id)) { 
-		logger.warning("current \"lang_id\" not exists, id: {0}.", lang_id);
+		logger.warning($"current \"lang_id\" not exists, id: {lang_id}.");
 		return;
 	}
 	

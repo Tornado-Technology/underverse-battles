@@ -1,0 +1,4 @@
+time_source_destroy(time_source_flying);
+time_source_destroy(time_source_charging);
+time_source_destroy(time_source_flying_out);
+time_source_destroy(time_source_destroying);

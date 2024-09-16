@@ -1,0 +1,30 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_jevil_anything",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "bitRate":64,
+  "compression":1,
+  "ConfigValues":{
+    "Development":{
+      "audioGroupId":"{ \"name\":\"sound\", \"path\":\"audiogroups/sound\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":1.709546,
+  "name":"snd_jevil_anything",
+  "parent":{
+    "name":"Jevil",
+    "path":"folders/Sounds/SFX/Jevil.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":32000,
+  "soundFile":"snd_jevil_anything.ogg",
+  "type":0,
+  "volume":1.0,
+}

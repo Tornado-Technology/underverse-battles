@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cutscene_object_shift_position",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cutscene_object_shift_position",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Local/System/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

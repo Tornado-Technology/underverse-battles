@@ -19,6 +19,6 @@ function input_bind_default(target, keys, rebinding = true) {
 	
 	for (var i = 0; i <	array_length(keys); i++) {
 		var key = keys[i];
-		input_key.add_key(key);
+		input_key.add_default_key(key);
 	}
 }

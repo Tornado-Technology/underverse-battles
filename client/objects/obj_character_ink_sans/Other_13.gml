@@ -2,28 +2,22 @@
 
 // Epidode 1
 
-if (sprite_index == spr_char_ink_sans_flip)
-	sprite_index = spr_char_ink_sans_attack_fight;
-	
-if (sprite_index == spr_char_ink_sans_attack_finish)
-	sprite_index = spr_char_ink_sans_calm;
-	
+change_sprite_to_other_sprite(spr_char_ink_sans_flip, spr_char_ink_sans_attack_fight);
+change_sprite_to_other_sprite(spr_char_ink_sans_attack_finish, spr_char_ink_sans_calm);
+
 // Episode 2
 
-if (sprite_index == spr_ink_sans_pukes)
-	sprite_index = spr_ink_sans_puked;
-	
-if (sprite_index == spr_ink_sans_flying_distracting)
-	sprite_index = spr_ink_sans_flying_distracted;
-	
-if (sprite_index == spr_ink_sans_flying_throwing_stuff)
-	sprite_index = spr_ink_sans_flying_threw;
-	
-if (sprite_index == spr_ink_sans_sits_down)
-	sprite_index = spr_ink_sans_sitting_takes_notebook;
-	
-if (sprite_index == spr_ink_sans_sitting_takes_notebook)
-	sprite_index = spr_ink_sans_sitting_with_notebook;
+change_sprite_to_other_sprite(spr_ink_sans_pukes, spr_ink_sans_puked);
+change_sprite_to_other_sprite(spr_ink_sans_flying_distracting, spr_ink_sans_flying_distracted);
+change_sprite_to_other_sprite(spr_ink_sans_pukes, spr_ink_sans_puked);
+change_sprite_to_other_sprite(spr_ink_sans_flying_throwing_stuff, spr_ink_sans_flying_threw);
+change_sprite_to_other_sprite(spr_ink_sans_sits_down, spr_ink_sans_sitting_takes_notebook);
+change_sprite_to_other_sprite(spr_ink_sans_sitting_takes_notebook, spr_ink_sans_sitting_with_notebook);
+change_sprite_to_other_sprite(spr_ink_sans_attack_flying_hit, spr_ink_sans_attack_episide2);
+change_sprite_to_other_sprite(spr_ink_sans_left_down_getting_broomie, spr_ink_sans_left_down_got_broomie);
+change_sprite_to_other_sprite(spr_ink_sans_left_down_drawing_on_ground, spr_ink_sans_left_down_drew_on_ground);
+change_sprite_to_other_sprite(spr_ink_sans_left_down_teleporting, spr_ink_sans_inks_after_teleporting);
 
-if (sprite_index == spr_ink_sans_attack_flying_hit)
-	sprite_index = spr_ink_sans_attack_episide2;
+// Episode 3
+
+change_sprite_to_other_sprite(spr_ink_sans_appearance_from_inks, spr_ink_sans_standing_left);

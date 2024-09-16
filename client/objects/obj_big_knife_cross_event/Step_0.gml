@@ -14,15 +14,15 @@ if (is_spining) {
 			direction = 0;
 		}
 		step = 0;
-		audio_play_sound_once(snd_projectile);
+		//audio_play_sound_once(snd_projectile);
 	}
 }
 	
 if (is_moving) {
-	if (step == 0 && speed < speed_max) { // Набирание скорости
+	if (step == 0 && speed < speed_max) { // Speed up
 		speed += speed_const / 2 * dtime;
 	}
-	else if (step == 0) { // Движение
+	else if (step == 0) { // Movement
 		step = 1;
 		speed = speed_max;
 	}

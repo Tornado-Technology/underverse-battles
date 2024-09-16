@@ -125,7 +125,7 @@ switch (edit_button.edit_attack_number) {
 		change_solo_gasterblaster_target(gasterblaster_instance, 0, soul_instance);
 		break;
 	case 7:
-		gasterblaster_instance = create_aiming_gasterblaster(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
+		gasterblaster_instance = create_aiming_gasterblaster_with_pattern(gasterblaster_aiming, soul_instance, 1/6, 1, 15/60, 1/6);
 		array_push(editing_object, gasterblaster_instance);
 		break;
 	}

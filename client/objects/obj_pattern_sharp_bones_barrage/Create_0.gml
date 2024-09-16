@@ -23,11 +23,11 @@ update = function() {
 	audio_play_sound_plugging(snd_projectile);
 }
 
-var period = 16 - 3 * _power;
+var period = 16 - 2 * _power;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function (pow) {
 	update();
 }, [], -1);
-var final_time = 240 + 60 * _power;
+var final_time = 260 + 80 * _power;
 time_source_update_stop = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
 	time_source_stop(time_source_update);
 });

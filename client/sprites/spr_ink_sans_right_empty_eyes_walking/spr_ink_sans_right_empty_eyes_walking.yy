@@ -13,24 +13,24 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1e365612-c612-4380-94c1-6208ac5fc5e1","name":"1e365612-c612-4380-94c1-6208ac5fc5e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0cb3036c-2a0e-4df0-969c-9bf8b5bb45e2","name":"0cb3036c-2a0e-4df0-969c-9bf8b5bb45e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a78036fc-03db-4ddd-9e04-7764c01a4dc9","name":"a78036fc-03db-4ddd-9e04-7764c01a4dc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ece02f2f-a970-4bfe-8bac-fc626b5db7ea","name":"ece02f2f-a970-4bfe-8bac-fc626b5db7ea","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e17a6ba8-cb4d-48a7-bed2-215712ff7839","name":"e17a6ba8-cb4d-48a7-bed2-215712ff7839","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"21697e5a-8ce4-4ed2-80a5-c2d57803676d","name":"21697e5a-8ce4-4ed2-80a5-c2d57803676d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"91929baa-b9b3-4dc7-989b-29f041ae20d5","name":"91929baa-b9b3-4dc7-989b-29f041ae20d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3ed4c0ac-7b21-48bd-990e-6a236ed1d9df","name":"3ed4c0ac-7b21-48bd-990e-6a236ed1d9df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":42,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"948ac3ff-3ac5-4d6b-808f-8302c541dce1","blendMode":0,"displayName":"default","isLocked":false,"name":"948ac3ff-3ac5-4d6b-808f-8302c541dce1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"fcb51409-b5b6-4535-a6ef-ea0d6cb5e891","blendMode":0,"displayName":"default","isLocked":false,"name":"fcb51409-b5b6-4535-a6ef-ea0d6cb5e891","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_ink_sans_right_empty_eyes_walking",
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Stoty Mode",
-    "path":"folders/Characteres/Ink Sans/Sprites/Char/Stoty Mode.yy",
+    "name":"Episode 2",
+    "path":"folders/Characteres/Ink Sans/Sprites/Char/Stoty Mode/Episode 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -73,17 +73,17 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e365612-c612-4380-94c1-6208ac5fc5e1","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"48625aee-7414-4a2d-8a2f-daa6028fdc18","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e17a6ba8-cb4d-48a7-bed2-215712ff7839","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2a29f9b1-1ca9-4b08-b258-6ca510c578e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cb3036c-2a0e-4df0-969c-9bf8b5bb45e2","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e0c325a5-78c0-4228-946f-e199006b640b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"21697e5a-8ce4-4ed2-80a5-c2d57803676d","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b02e6fc0-2f88-451b-b970-77c0be9d43d3","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a78036fc-03db-4ddd-9e04-7764c01a4dc9","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"416fa48b-916b-48b4-8832-ba16778a9f31","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"91929baa-b9b3-4dc7-989b-29f041ae20d5","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6cb86103-2d91-4ef5-8a3d-c9c3fe55f804","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ece02f2f-a970-4bfe-8bac-fc626b5db7ea","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1d66b49a-f8e9-4a1c-8e45-7a436e71cfb9","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3ed4c0ac-7b21-48bd-990e-6a236ed1d9df","path":"sprites/spr_ink_sans_right_empty_eyes_walking/spr_ink_sans_right_empty_eyes_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"79d271d1-bcd8-492c-ba05-541d4b4da7cc","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

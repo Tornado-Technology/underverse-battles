@@ -2,7 +2,7 @@
 
 main_speed = 1 + _power * 0.1;
 		
-callback = function () {
+callback = function() {
 	create_moving_platforms(border_instance.x - border_instance.left - 40, border_instance.y - 15, 4, 6, 60, main_speed);
 	create_moving_platforms(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 		
@@ -33,14 +33,14 @@ update_platforms = function() {
 	create_next_moving_platform(border_instance.x + border_instance.right + 40, border_instance.y + 15, 4, 6, 60, -main_speed);
 }
 
-time_source_update_bones = time_source_create(time_source_game, (60 - 5 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_bones = time_source_create(time_source_game, (50 - 5 * _power) / 60, time_source_units_seconds, function() {
 	update_bones();
 }, [], -1);
 	
-time_source_update_platforms = time_source_create(time_source_game, 1 / main_speed, time_source_units_seconds, function () {
+time_source_update_platforms = time_source_create(time_source_game, 1 / main_speed, time_source_units_seconds, function() {
 	update_platforms();
 }, [], -1);
 
-time_source_update_destroy = time_source_create(time_source_game, (360 + 50 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (360 + 50 * _power) / 60, time_source_units_seconds, function() {
 	instance_destroy();
 });

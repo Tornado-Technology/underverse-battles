@@ -1,16 +1,14 @@
 /// @description Story mode animations end
 
-if (sprite_index == spr_cross_sitting_crying_turns_around)
-	sprite_index = spr_cross_sitting_crying_looking_back;
-	
-if (sprite_index == spr_cross_sitting_crying_turns_back)
-	sprite_index = spr_cross_sitting_crying_looks_at_ink_sans;
 
-if (sprite_index == spr_cross_sitting_wipes_away_tears)
-	sprite_index = spr_cross_sitting_down_crying1;
-	
-if (sprite_index == spr_cross_left_gets_up)
-	sprite_index = spr_cross_left_getting_up;
-	
-if (sprite_index == spr_cross_left_turns_around)
-	sprite_index = spr_cross_left_turned_around;
+// Episode 2
+
+change_sprite_to_other_sprite(spr_cross_sitting_crying_turns_around, spr_cross_sitting_crying_looking_back);
+change_sprite_to_other_sprite(spr_cross_sitting_crying_turns_back, spr_cross_sitting_crying_looks_at_ink_sans);
+change_sprite_to_other_sprite(spr_cross_sitting_wipes_away_tears, spr_cross_sitting_down_crying1);
+change_sprite_to_other_sprite(spr_cross_left_gets_up, spr_cross_left_getting_up);
+change_sprite_to_other_sprite(spr_cross_left_turns_around, spr_cross_left_turned_around);
+
+// Episode 3
+
+change_sprite_to_other_sprite(spr_cross_xevent_getting_knife_looking_left, spr_cross_xevent_got_knife_looking_left);

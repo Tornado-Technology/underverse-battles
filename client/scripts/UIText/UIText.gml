@@ -77,7 +77,7 @@ function UITextClass(text) constructor {
 			starting: 0,
 			ending: 0,
 			difference: 0
-		};
+		}
  
 		index.starting = string_pos(UILIB_CHAR_TAG_OPEN, str);
 		index.ending = string_pos_ext(UILIB_CHAR_TAG_CLOUSE, str, index.starting);
@@ -140,8 +140,6 @@ function UITextClass(text) constructor {
 		// Finde command
 		for (var i = 0; i < array_length(tags); i++) {
 			var tag = tags[i];
-		
-			logger.debug(tag);
 		
 			// Check all names
 			if (tag.has_name(name)) {

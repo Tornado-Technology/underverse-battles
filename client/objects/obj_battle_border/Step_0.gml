@@ -1,6 +1,10 @@
 speed = speed_const * dtime;
 
 _angle = angle;
+image_angle = angle;
+if (spining) {
+	angle += speed_spining * dtime;	
+};
 
 // Position
 _point_x = x - left;
@@ -85,6 +89,7 @@ if (enable_frame) {
 	_inst_frame_down.image_yscale=0;
 	_inst_frame_right.image_xscale=0;
 	_inst_frame_right.image_yscale=0;
+	
 }
 
 

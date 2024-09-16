@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"attack_scripts_dream",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attack_scripts_dream",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Characteres/Dream/Attacks.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

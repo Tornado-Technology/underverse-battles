@@ -18,6 +18,7 @@ enum _background {
     last_coridor,
 	forest_park,
 	winter_forest_park,
+	underfell_snowdin,
 	deltarune_battle,
 	queens_hall,
 	doodle_sphere,
@@ -28,8 +29,9 @@ enum _background {
 
 // Custom backgrounds
 Background(spr_background_last_coridor, _background.last_coridor, "Backgrounds.LastCoridor", "Tornado", universe.undertale);
-Background(spr_background_underverse_forest, _background.forest_park, "Backgrounds.UnderverseForest", "Tornado", universe.underverse);
+Background(spr_background_underverse_forest_park, _background.forest_park, "Backgrounds.UnderverseForest", "Tornado", universe.underverse);
 Background(spr_background_underverse_forest_winter, _background.winter_forest_park, "Backgrounds.WinterForestPark", "Tornado", universe.underverse, obj_background_underverse_forest_winter);
+Background(spr_background_underfell_snowdin, _background.underfell_snowdin, "Backgrounds.WinterForestPark", "Sayki", universe.underfell, obj_background_underfell_snowdin);
 Background(spr_background_deltarune_battle,	_background.deltarune_battle, "Backgrounds.DeltaruneBattle", "Marsilies", universe.deltarune, obj_background_deltarune);
 Background(spr_background_queen_s_hall_background, _background.queens_hall, "Backgrounds.QueensHall", "Tornado", universe.deltarune, obj_background_queen_s_hall);
 Background(spr_background_doodle_sphere, _background.doodle_sphere, "Backgrounds.DoodleSphere", "Tornado", universe.underverse, obj_background_doodle_sphere);

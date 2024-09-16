@@ -1,4 +1,7 @@
 event_inherited();
+
+is_destroying_outside = false;
+
 depth = fight_depth.bullet_outside_hight;
 damage = get_char_damage(obj_character_xchara);
 soul_invulnerability = 20;

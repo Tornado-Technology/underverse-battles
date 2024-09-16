@@ -1,0 +1,3 @@
+time_source_destroy(time_source_update);
+time_source_destroy(time_source_update_scythe);
+time_source_destroy(time_source_update_destroy);

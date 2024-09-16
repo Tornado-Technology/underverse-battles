@@ -1,5 +1,2 @@
-player_.moveable = true;
-
-if (is_mobile || mobile_mode) {
-	global.__ui_controls_instance.enable = true;
-}
+player_.control(true);
+alarm[4] = 30;

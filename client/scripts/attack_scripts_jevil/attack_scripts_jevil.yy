@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"attack_scripts_jevil",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attack_scripts_jevil",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Characteres/Jevil/Attacks.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

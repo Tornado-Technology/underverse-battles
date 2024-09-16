@@ -1,6 +1,6 @@
 initiative = fight_get_initiative();
 
-time_source_heal = time_source_create(time_source_game, 0.4, time_source_units_seconds, function () {
+time_source_heal = time_source_create(time_source_game, 0.4, time_source_units_seconds, function() {
 	if (initiative == 0) {
 		var lost_hp = character_instance.max_hp - character_instance.hp;
 		var heal_value = character_instance.mana > lost_hp ? lost_hp : character_instance.mana;

@@ -20,15 +20,15 @@ function ClassUIControllerJoystick() constructor {
 	handle_image = spr_ui_controls_joystick_handle;
 	border_image = spr_ui_controls_joystick_border;
 	
-	self.input = {};
+	self.input = {}
 	self.input[$ vk_up] = new __input(false);
 	self.input[$ vk_down] = new __input(false);
 	self.input[$ vk_right] = new __input(false);
 	self.input[$ vk_left] = new __input(false);
 	
 	input_vector = new Vector2(0, 0);
-	handle = UIImageButton(handle_image);
-	border = UIImageButton(border_image);
+	handle = new UIImageButton(0, handle_image);
+	border = new UIImageButton(1, border_image);
 	
 	death_color = c_black;
 	is_show_death_radius = true;

@@ -145,13 +145,13 @@ else if (scenario == 21) {
 	}
 }
 else if (scenario == 22) {
-	if (dlg.cur_num == 6) {
+	if (dlg.ui.current_index == 6) {
 		audio_play_sound_plugging(snd_healing);
 		scenario = 23;
 	}
 }
 else if (scenario == 23) {
-	if (dlg.cur_num == 7) {
+	if (dlg.ui.current_index == 7) {
 		xchara_.sprite_index = spr_xchara_teleported;
 		audio_play_sound_plugging(snd_swing);
 		alarm[2] = 20;
@@ -162,7 +162,7 @@ else if (scenario == 24) {
 	if (instance_exists(dlg))
 		exit;
 		
-	effect_fade(2, 0, c_black, c_black, true, 0);
+	effect_fade(2, 0, 0, c_black, true, 0);
 	
 	alarm[1] = 120;
 	

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_surface",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":90.408,
+  "name":"snd_surface",
+  "parent":{
+    "name":"Episode 3",
+    "path":"folders/Sounds/Soundtracks/Story Mode/Episode 3.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_surface.ogg",
+  "type":1,
+  "volume":1.0,
+}

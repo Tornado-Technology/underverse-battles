@@ -4,7 +4,7 @@ index = 0;
 bone_instances = [];
 
 callback = function () {
-	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
+	soul_instance = create_soul(border_instance.x, border_instance.y + 20, battle_soul_type.red);
 		
 	update();
 	time_source_start(time_source_update);
@@ -41,6 +41,6 @@ time_source_update = time_source_create(time_source_game, period / 60, time_sour
 	update();
 }, [], -1);
 	
-time_source_update_destroy = time_source_create(time_source_game, (250 + 20 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 6 + _power * 0.5, time_source_units_seconds, function () {
 	instance_destroy();
 });

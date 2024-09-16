@@ -52,7 +52,7 @@ special_action = SpecialAction("Character.SwapSans.SpecialAttack", spr_special_a
 
 // Special
 damage_per_hit = 0;
-max_damage_per_hit = 8;
+max_damage_per_hit = 10;
 enabled_damage_delay = false;
 
 // Methods
@@ -69,7 +69,7 @@ on_taking_soul_damage = function(soul, damage) {
 	}
 		
 	return damage;
-};
+}
 
 // Soundtrack
 soundtrack_name = "Bones Shake"; 

@@ -6,4 +6,3 @@ if (!use_gravity_attack) {
 }
 
 instance_destroy_array(bone_instances);
-final_function();

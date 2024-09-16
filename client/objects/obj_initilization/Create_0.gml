@@ -17,6 +17,15 @@ input_init_bind_default();
 data_load();
 data_apply();
 
+// Audio
+audio_listener_orientation(0, 0, 1, 0, -1, 0);
+audio_falloff_set_model(audio_falloff_linear_distance);
+
+// Discord rich
+if (is_desktop) {
+	instance_create(obj_discord_rich);
+}
+
 // After data loads
 achivements_load();
 background_load();
@@ -37,10 +46,6 @@ instance_create_array([
 	obj_camera,
 	obj_ui_resource_usage
 ]);
-
-if (is_desktop) {
-	instance_create(obj_discord_rich);
-}
 
 // Character list load
 CharacterList();

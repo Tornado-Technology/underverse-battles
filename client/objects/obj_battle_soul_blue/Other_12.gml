@@ -7,12 +7,14 @@ left = input_check_held(input.up);
 up = input_check_held(input.right) && !input_check_held(input.left);
 
 var HSPD = speed_const * dtime;
-var VSPD = 2.5 * dtime;
+var VSPD = vertical_speed_const * dtime;
 var FALL_SPD = 3 * dtime;
+
+var has_collision_with_platform = place_meeting(x - 1, y, obj_platform) && !place_meeting(x, y, obj_platform);
 
 if (blue_attack) blue_attack_force_speed_x = -5 * dtime;
 
-if (place_meeting(x - 1, y, obj_platform) && !place_meeting(x, y, obj_platform) && movement_speed_x <= 0) {
+if (has_collision_with_platform && movement_speed_x <= 0) {
 	platform_inertion = instance_place(x - 1, y, obj_platform).speed;
 	is_jumping = false;
 	fly_time = 0;
@@ -30,6 +32,15 @@ if (left) {
     movement_speed_y = -HSPD;
 }
 
+// Collision
+
+if (has_collision_left) {
+	is_jumping = false;
+	fly_time = 0;
+	movement_speed_x = 0;
+	blue_attack_force_speed_x = 0;
+}
+
 // Jump
 if (up && !is_jumping && fly_time == 0) {
 	is_jumping = true;
@@ -41,17 +52,11 @@ if (up && is_jumping && fly_time < max_fly_time) {
 }
 else {
 	movement_speed_x -= grav * dtime * dtime;
+	fly_time += dtime;
 }
-if (!up && movement_speed_x > 0 || has_collision_right) {
+if (!up && movement_speed_x > 0 || has_collision_right && !has_infinity_jump) {
 	movement_speed_x = 0;
 	is_jumping = false;
-}
-
-if (has_collision_left) {
-	is_jumping = false;
-	fly_time = 0;
-	movement_speed_x = 0;
-	blue_attack_force_speed_x = 0;
 }
 
 if (!left && !right) {
@@ -61,7 +66,7 @@ if (!left && !right) {
 // Platform
 var full_movement_x = movement_speed_x + outside_force_x + tremble_force_x + border_force_x + blue_attack_force_speed_x;
 if (place_meeting(x + full_movement_x, y, obj_platform) && !place_meeting(x, y, obj_platform) && full_movement_x <= 0) {
-    while(!place_meeting(x + sign(full_movement_x) * movement_delta_min, y, obj_platform)) {
+    while (!place_meeting(x + sign(full_movement_x) * movement_delta_min, y, obj_platform)) {
 		x += sign(full_movement_x) * movement_delta_min;
 	}
 	

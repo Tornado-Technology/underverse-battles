@@ -52,13 +52,17 @@ arrow_y_down = height / 2 + 30;
 arrow_x = width - 20;
 
 arrow_vertical = {
-	up: UIImageButton(spr_stat_arrow, function() {
-		change_soundtrack_up();
-	}),
-	down: UIImageButton(spr_stat_arrow, function() {
-		change_soundtrack_down();
-	}),
+	up: new UIImageButton(0, spr_ui_arrow)
+		.set_on_press(function() {
+			change_soundtrack_up();
+		}),
+	down: new UIImageButton(1, spr_ui_arrow)
+		.set_on_press(function() {
+			change_soundtrack_down();
+		}),
 }
+arrow_vertical.up.padding = 5;
+arrow_vertical.down.padding = 5;
 
 arrow_y = height / 2 + 75;
 arrow_x_left = width / 2 - 15;
@@ -71,18 +75,22 @@ button_id = 0;
 button_standart = c_white;
 button_selected = c_purple;
 
-button_step_y = 20;
+button_step_y = 25;
 
 button_x = line_x - 20;
 button_y = height / 2 - 10;
 
 buttons = [
-	UITextButton(translate_get().Menu.CustomSound.Default, function() {
-		soundtrack_set(undefined);
-	}),
-	UITextButton(translate_get().Menu.CustomSound.Cancel, function() {
-		instance_destroy();
-	}),
+	new UITextButton(0, translate_get().Menu.CustomSound.Default)
+		.set_padding(5)
+		.set_on_press(function() {
+			soundtrack_set(undefined);
+		}),
+	new UITextButton(1, translate_get().Menu.CustomSound.Cancel)
+		.set_padding(5)
+		.set_on_press(function() {
+			instance_destroy();
+		}),
 ]
 
 button_count = array_length(buttons);
@@ -176,8 +184,8 @@ change_button_down = function() {
 }
 
 translate_update = on_translate_update.connect(function() {
-	buttons[0].change_text(translate_get().Menu.CustomSound.Default);
-	buttons[1].change_text(translate_get().Menu.CustomSound.Cancel);
+	buttons[0].set_text(translate_get().Menu.CustomSound.Default);
+	buttons[1].set_text(translate_get().Menu.CustomSound.Cancel);
 })
 
 draw_name_button = function(_x, _y, color, _id) {

@@ -47,7 +47,7 @@
   "origin":0,
   "parent":{
     "name":"Xmas",
-    "path":"folders/Characteres/XChara/Frames/Xmas.yy",
+    "path":"folders/Characteres/XChara/Sprites/Frames/Xmas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,6 @@
+time_source_destroy(time_source_update);
+time_source_destroy(time_source_update_zone);
+time_source_destroy(time_source_update_radius_spike);
+time_source_destroy(time_source_update_shot);
+time_source_destroy(time_source_update_destroy);
+

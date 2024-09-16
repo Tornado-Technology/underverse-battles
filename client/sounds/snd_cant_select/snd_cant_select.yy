@@ -13,8 +13,8 @@
   "duration":0.241927,
   "name":"snd_cant_select",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Menu",
+    "path":"folders/Sounds/SFX/Menu.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

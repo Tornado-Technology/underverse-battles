@@ -9,8 +9,8 @@
   "name":"obj_ui_virtual_buttons",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Virtual",
+    "path":"folders/Objects/System/Virtual.yy",
   },
   "parentObjectId":null,
   "persistent":true,

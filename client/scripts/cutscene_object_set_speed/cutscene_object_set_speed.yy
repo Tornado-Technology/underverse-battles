@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cutscene_object_set_speed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cutscene_object_set_speed",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Local/System/Cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

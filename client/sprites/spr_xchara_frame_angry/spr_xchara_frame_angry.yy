@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Frames",
-    "path":"folders/Characteres/XChara/Frames.yy",
+    "name":"Story Mode",
+    "path":"folders/Characteres/XChara/Sprites/Frames/Story Mode.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

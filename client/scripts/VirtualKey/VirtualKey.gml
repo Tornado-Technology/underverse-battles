@@ -1,29 +1,18 @@
-function VirtualKey(sprite, key) {
-	var instance = new ClassVirtualKey(sprite, key);
-	instance.init();
-	
-	return instance;
-}
-
-function ClassVirtualKey(sprite, key) constructor {
+function VirtualKey(index, sprite, key) constructor {
 	self.key = key;
 	
-	UI = UIImageButton(sprite);
+	keyboard_key_release(key);
 	
-	static init = function() {
-		keyboard_key_release(key)
-		UI.is_multi_touch = true;
-		
-		UI.on_press = function() {
+	ui = new UIImageButton(index, sprite)
+		.set_on_press(function() {
 			keyboard_key_press(key);
-		}
-		
-		UI.on_release = function() {
+		})
+		.set_on_release(function() {
 			keyboard_key_release(key);
-		}
-	}
+		})
+	ui.is_multi_touch = true;
 	
 	static draw = function(position_x, position_y) {
-		UI.draw(position_x, position_y);
+		ui.draw(position_x, position_y);
 	}
 }

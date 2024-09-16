@@ -94,6 +94,11 @@ tabs[characters_tab.description] = CharactersTabDescription(id);
 
 change_tab = function(_id) {
 	tab_id = _id;
+	
+	if (tab_id == characters_tab.description) {
+		tabs[tab_id].buttons[0].focus();
+		tabs[tab_id].button_id = 0;
+	}
 }
 
 get_tab = function(_id) {

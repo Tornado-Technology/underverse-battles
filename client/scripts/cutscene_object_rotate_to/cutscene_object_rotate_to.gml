@@ -7,5 +7,5 @@ function cutscene_object_rotate_to(inst, angle, spd) {
 		return inst.image_angle == angle;
 	}
 
-	return undefined;
+	return true;
 }

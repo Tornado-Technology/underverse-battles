@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"UIImageButton",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIImageButton",
+  "parent":{
+    "name":"UI",
+    "path":"folders/Scripts/Local/UI.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

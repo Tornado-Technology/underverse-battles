@@ -53,13 +53,13 @@ enum fight_depth {
 	bg = -100,
 	enemy = -200,
 	player = -200,
-	ui = -300,
-	bullet = -500,
-	border = -600,
-	ui_hight = -700,
-	bullet_outside = -800,
-	soul = -900,
-	bullet_outside_hight = -1000
+	bullet = -300,
+	border = -400,
+	bullet_outside = -600,
+	soul = -800,
+	bullet_outside_hight = -900,
+	ui = -1000,
+	ui_hight = -1100,
 }
 
 enum fight_action_type {

@@ -6,7 +6,7 @@ on_border_created = function() {
 
 switch (type) {
 	case 0:
-		create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
+		create_border(battle_border.up - _power * 5, battle_border.down - _power * 5, battle_border.left - _power * 5, battle_border.right - _power * 5);
 		pattern_instance = create_pattern(obj_pattern_full_length_bones, {
 			bone: obj_bone_swap_papyrus
 		});
@@ -29,7 +29,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_two_bones, {
 			soul_type: battle_soul_type.orange,
 			bone: obj_bone_swap_papyrus,
-			bone_size: 5.4,
+			bone_size: 4.2,
 			side_is_changing: true
 		});
 		break;

@@ -8,8 +8,8 @@
   "name":"obj_character_xchara_xmas",
   "overriddenProperties":[],
   "parent":{
-    "name":"XChara",
-    "path":"folders/Characteres/XChara.yy",
+    "name":"Skins",
+    "path":"folders/Characteres/XChara/Skins.yy",
   },
   "parentObjectId":{
     "name":"obj_character_xchara",

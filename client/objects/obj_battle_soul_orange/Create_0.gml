@@ -15,10 +15,16 @@ controlled = true;
 new_image_angle = 0;
 
 is_changing_side = false;
-side_controller = undefined;
-side_controller_previous = undefined;
 
-// Change direction
+// Functions
+
+set_move = function(condition, movement_speed_x, movement_speed_y) {
+	if (condition) {
+		self.movement_speed_x = movement_speed_x;
+		self.movement_speed_y = movement_speed_y;
+	}
+}
+
 change_direction = function(side) {
 	switch (side) {
 		case dir.up:

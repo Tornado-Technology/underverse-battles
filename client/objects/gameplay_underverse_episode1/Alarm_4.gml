@@ -1,0 +1,1 @@
+player_.sprite_index = spr_sans_idle_looking_up;

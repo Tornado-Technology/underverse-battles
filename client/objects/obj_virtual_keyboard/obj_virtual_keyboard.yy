@@ -9,8 +9,8 @@
   "name":"obj_virtual_keyboard",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Virtual",
+    "path":"folders/Objects/System/Virtual.yy",
   },
   "parentObjectId":null,
   "persistent":true,

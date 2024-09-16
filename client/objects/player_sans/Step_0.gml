@@ -1,7 +1,7 @@
 if (global.pause_game) exit;
 
 if (!moveable) {
-	if (sprite_index == spr_char_sans_walk_right || sprite_index == spr_char_sans_walk_left)
+	if (sprite_index == spr_sans_walking_right || sprite_index == spr_sans_walking_left)
 	sprite_index = spr_char_sans_idle;
 	image_speed = 1;
 	exit;
@@ -12,7 +12,7 @@ if (movement_speed_x == 0) {
 	//image_speed = 0;
 	//image_index = 4;
 } else {
-	sprite_index = spr_char_sans_walk_right;
+	sprite_index = spr_sans_walking_right;
 	//image_speed = 1;
 }
 

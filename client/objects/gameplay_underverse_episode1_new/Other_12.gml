@@ -15,7 +15,7 @@ if (_delay > 150 and _delay < 225) {
 }
 
 if (_delay == 180) {
-	flying_inks_ = instance_create_depth(ink_sans_.x, ink_sans_.y - 15, fight_depth.player - 1, obj_npc);
+	flying_inks_ = instance_create_depth(ink_sans_.x, ink_sans_.y - 15, fight_depth.player - 1, obj_prop);
 	flying_inks_.sprite_index = spr_flying_inks;
 	audio_play_sound_plugging(snd_stab);
 }

@@ -1,0 +1,2 @@
+time_source_destroy(time_source_rotate)
+time_source_destroy(time_source_fly)

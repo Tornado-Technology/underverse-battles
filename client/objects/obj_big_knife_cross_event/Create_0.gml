@@ -20,7 +20,7 @@ speed_const = 0.2;
 point_stop_x = 0;
 point_stop_y = 0;
 
-audio_play_sound_once(snd_emergence);
+audio_play_sound_plugging(snd_emergence);
 
 // Methods
 spin = function(spd) {

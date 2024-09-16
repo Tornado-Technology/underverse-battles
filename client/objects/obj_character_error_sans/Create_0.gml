@@ -30,7 +30,7 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 soul = spr_soul_error;
 
 // Skin
-skin_name = translate_get("CharactersStyles.Classic");
+skin_name = translate_get("CharactersStyles.Standard");
 frame = spr_error_sans_frame;
 
 // Animations

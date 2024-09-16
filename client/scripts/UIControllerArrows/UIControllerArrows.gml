@@ -6,7 +6,7 @@ function UIControllerArrows() {
 
 function ClassUIControllerArrowsUp () constructor {
 	
-	controls_arrow =  UIImageButton(spr_ui_controls_arrow_up);	
+	controls_arrow =  new UIImageButton(0, spr_ui_controls_arrow_up);	
 		static draw = function (position_x, position_y) {
 		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
 		controls_arrow.scale_x =  data_get(key_scale + "Up");
@@ -22,7 +22,7 @@ function ClassUIControllerArrowsUp () constructor {
 
 function ClassUIControllerArrowsDown () constructor {
 	
-	controls_arrow = UIImageButton(spr_ui_controls_arrow_down);
+	controls_arrow = new UIImageButton(1, spr_ui_controls_arrow_down);
 	static draw = function (position_x, position_y) {
 		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
 		controls_arrow.scale_x =  data_get(key_scale + "Down");
@@ -39,7 +39,7 @@ function ClassUIControllerArrowsDown () constructor {
 
 function ClassUIControllerArrowsLeft () constructor {
 	
-	controls_arrow =  UIImageButton(spr_ui_controls_arrow_left);	
+	controls_arrow =  new UIImageButton(2, spr_ui_controls_arrow_left);	
 	static draw = function (position_x, position_y) {
 		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
 		controls_arrow.scale_x =  data_get(key_scale + "Left");
@@ -56,7 +56,7 @@ function ClassUIControllerArrowsLeft () constructor {
 
 function ClassUIControllerArrowsRight () constructor {
 	
-	controls_arrow =  UIImageButton(spr_ui_controls_arrow_right);
+	controls_arrow =  new UIImageButton(3, spr_ui_controls_arrow_right);
 	static draw = function (position_x, position_y) {		
 		var key_scale = "Settings.MobileControls.Controller.Arrows.Scale.";
 		controls_arrow.scale_x =  data_get(key_scale + "Right");
@@ -95,12 +95,10 @@ function ClassUIControllerArrows() constructor {
 		right.draw(position_x[3], position_y[3]);	
 			
 		var i = 0;
-		  repeat(array_length(strunct)) {
-			  strunct[i].scale_x =  data_get(key_scale + scale[i]);
-			  strunct[i].scale_y =  data_get(key_scale + scale[i]);
-			i++;	
-		  };
-	
-		
+		repeat(array_length(strunct)) {
+			strunct[i].scale_x =  data_get(key_scale + scale[i]);
+			strunct[i].scale_y =  data_get(key_scale + scale[i]);
+		i++;	
+		}
 	}
 }

@@ -10,7 +10,14 @@ down  = battle_border.down;
 left  = battle_border.left;
 right = battle_border.right;
 
+wave_ane = false;
+
+wave_y = 2;
+
 speed_const = 0;
+speed_spining = 0;
+
+spining = false;
 
 angle = 0;
 

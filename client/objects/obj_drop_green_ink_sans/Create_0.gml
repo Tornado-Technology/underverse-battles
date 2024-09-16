@@ -2,11 +2,11 @@ event_inherited();
 
 heal = get_char_damage(obj_character_ink_sans);
 
-speed_const = 2;
-
 time_create_ink = 100;
 time_create_ink_step = 0.2;
 time_create_ink_max = 100;
+
+if (!variable_instance_exists(id, "speed_const")) speed_const = 2;
 
 // Particle
 part_type_ui_ink = part_type_create();

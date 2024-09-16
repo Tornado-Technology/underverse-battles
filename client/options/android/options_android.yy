@@ -15,19 +15,6 @@
     "Localserver":{
       "option_android_version":"2.1.8",
     },
-    "Tournament":{
-      "option_android_version":"2.1.9",
-      "option_android_icon_xxxhdpi":"icons/xxxhdpi.png",
-      "option_android_icon_xxhdpi":"icons/xxhdpi.png",
-      "option_android_icon_xhdpi":"icons/xhdpi.png",
-      "option_android_icon_hdpi":"icons/hdpi.png",
-      "option_android_icon_adaptive_xxxhdpi":"icons_adaptive/xxxhdpi.png",
-      "option_android_icon_adaptive_xxhdpi":"icons_adaptive/xxhdpi.png",
-      "option_android_icon_adaptive_xhdpi":"icons_adaptive/xhdpi.png",
-      "option_android_icon_adaptive_hdpi":"icons_adaptive/hdpi.png",
-      "option_android_icon_adaptive_mdpi":"icons_adaptive/mdpi.png",
-      "option_android_icon_adaptive_ldpi":"icons_adaptive/ldpi.png",
-    },
   },
   "name":"Android",
   "option_android_application_tag_inject":"",
@@ -103,7 +90,7 @@
   "option_android_tv_isgame":true,
   "option_android_tv_supports_leanback":true,
   "option_android_use_facebook":false,
-  "option_android_version":"2.1.13",
+  "option_android_version":"2.1.8",
   "resourceType":"GMAndroidOptions",
   "resourceVersion":"2.0",
 }

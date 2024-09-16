@@ -39,16 +39,16 @@ update = function() {
 	repeat (is_double ? 2 : 1) {
 		repeat(bone_count) {
 			if (side == dir.up) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 0, 0, 180);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + 5 + (i - loop_count * bone_count) * 10, border_instance.y - border_instance.up - 25, bone, 0, 0, 0, 180);
 			}
 			if (side == dir.down) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 0, 0, 0);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left + 5 + (i - loop_count * bone_count) * 10, border_instance.y + border_instance.down + 25, bone, 0, 0, 0, 0);
 			}
 			if (side == dir.left) {
-				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 0, 0, 270);
+				bone_instances[i] = create_bone(border_instance.x - border_instance.left - 25, border_instance.y - border_instance.up + 5 + (i - loop_count * bone_count) * 10, bone, 0, 0, 0, 270);
 			}
 			if (side == dir.right) {
-				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + (i - loop_count * bone_count) * 10, bone, 0, 0, 0, 90);
+				bone_instances[i] = create_bone(border_instance.x + border_instance.right + 25, border_instance.y - border_instance.up + 5 + (i - loop_count * bone_count) * 10, bone, 0, 0, 0, 90);
 			}
 			++i;
 		}

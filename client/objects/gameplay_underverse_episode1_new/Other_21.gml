@@ -1,7 +1,7 @@
 ///@desc Усилить атаку
 
 if (instance_exists(dlg)) {
-	if (dlg.cur_num == 6) {
+	if (dlg.ui.current_index == 6) {
 		if (!instance_exists(obj_bar_power))
 			instance_create_depth(room_width - 320, room_height / 2, 0, obj_bar_power);
 	}

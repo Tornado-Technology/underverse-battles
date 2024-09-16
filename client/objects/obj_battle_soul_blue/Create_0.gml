@@ -5,6 +5,7 @@ color_type = battle_soul_type.blue;
 
 // Movement
 speed_const = 1.8;
+vertical_speed_const = 2.5;
 
 platform_inertion = 0;
 gravity_sum = 0;
@@ -25,6 +26,7 @@ blue_attack_force_speed_x = 0;
 blue_attack_force_speed_y = 0;
 
 blue_attack = false;
+has_infinity_jump = false;
 
 /// @param {Real} angle
 set_angle = function(angle) {

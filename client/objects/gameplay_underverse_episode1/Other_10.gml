@@ -2,7 +2,7 @@
 
 if (player_.x >= room_width - 480) {
 	/* Player */
-	player_.moveable = false;
+	player_.set_uncontrolled();
 	player_.sprite_index = spr_char_sans_idle;
 	
 	/* Camera */

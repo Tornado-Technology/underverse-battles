@@ -22,13 +22,14 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_two_bones, {
 			soul_type: battle_soul_type.red,
 			bone: obj_bone_fell_sans,
-			bone_size: 5.4,
+			bone_size: 4.2,
 			side_is_changing: false
 		});
 		break;
 	case 3:
 		create_border(battle_border.up - 30, battle_border.down - 30, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_directing_bones_from_upper_corners, {
+			bone: obj_bone_fell_sans,
 			spining_bone: obj_bone_spinning_fell_sans
 		});
 		break;

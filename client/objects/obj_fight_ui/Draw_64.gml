@@ -23,7 +23,7 @@ var selected_power = fight_get_player_input_power();
 // Controller (Mobile)
 if (is_mobile || mobile_mode) {
 	global.__ui_controls_instance.enable = show_mobile_ui;
-	global.__ui_virtual_buttons_instance.is_enable = show_mobile_ui;
+	global.__ui_fight_virtual_buttons_instance.is_enable = show_mobile_ui;
 }
 
 // Draw

@@ -12,8 +12,8 @@
   "duration":350.72546,
   "name":"snd_into_clear_void",
   "parent":{
-    "name":"Underverse",
-    "path":"folders/Sounds/Soundtracks/Underverse.yy",
+    "name":"Episode 2",
+    "path":"folders/Sounds/Soundtracks/Story Mode/Episode 2.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -17,12 +17,12 @@ if (state == fight_state.dodge) {
 	statistics_set_selection_attack_network(you, player_action[you]);
 	statistics_set_selection_attack_network(_opponent, player_action[_opponent]);
 	statistics_set_damage(0);
-	statistics_set_next_step_network();
 	timer_stop();
 	state = fight_state.reset;
 }
 
 if (state == fight_state.reset) {
+	statistics_set_next_step_network();
 	timer_start();
 	set_next_turn();
 	

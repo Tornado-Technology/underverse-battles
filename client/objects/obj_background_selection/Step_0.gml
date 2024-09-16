@@ -15,7 +15,7 @@ if (mouse_wheel_down()) {
 if (input_check_pressed(input.action)) {
 	switch(tab) {
 		case 1:
-			buttons[button_id].press();
+			buttons[button_id].on_press();
 			break;
 		case 0:
 			background_set(background_id);

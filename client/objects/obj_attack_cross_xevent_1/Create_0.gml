@@ -14,7 +14,8 @@ switch (type) {
 	case 1:
 		create_border(battle_border.up - 45, battle_border.down - 45, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_rotating_big_knife, {
-			big_knife: obj_big_knife_cross_event
+			big_knife: obj_big_knife_cross_event,
+			knife: obj_knife_directed_cross_xevent
 		});
 		break;
 	default:

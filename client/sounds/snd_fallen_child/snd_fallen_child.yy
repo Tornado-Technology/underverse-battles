@@ -12,8 +12,8 @@
   "duration":8.071837,
   "name":"snd_fallen_child",
   "parent":{
-    "name":"Embient",
-    "path":"folders/Sounds/Soundtracks/Embient.yy",
+    "name":"Episode 1",
+    "path":"folders/Sounds/Soundtracks/Story Mode/Episode 1.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

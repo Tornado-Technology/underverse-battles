@@ -23,23 +23,14 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_two_bones, {
 			soul_type: battle_soul_type.red,
 			bone: obj_bone_error_sans,
-			bone_size: 5.4,
+			bone_size: 4.2,
 			side_is_changing: false
 		});
 		break;
-	case 3:
+	default:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_platforms_and_falling_bones, {
 			bone: obj_bone_sharp_error_sans
-		});
-		break;
-	default:
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
-		pattern_instance = create_pattern(obj_pattern_flying_bones, {
-			bone: obj_bone_topref_error_sans,
-			sides: [dir.left, dir.right],
-			is_aiming: false,
-			custom_bone_size: 1.4
 		});
 		break;
 }

@@ -1,0 +1,30 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bonetrousle",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "ConfigValues":{
+    "Development":{
+      "audioGroupId":"{ \"name\":\"music\", \"path\":\"audiogroups/music\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":115.26331,
+  "name":"snd_bonetrousle",
+  "parent":{
+    "name":"Undertale",
+    "path":"folders/Sounds/Soundtracks/Undertale.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bonetrousle.ogg",
+  "type":1,
+  "volume":1.0,
+}

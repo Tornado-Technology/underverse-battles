@@ -238,7 +238,7 @@ function Vector2(x, y) constructor {
 	/// @param {Vector2} amountVector2
 	/// @desc Sets self with the lerped value of the Vector2s
 	static math_lerpv = function(targetVector2, amountVector2) {
-		var value = math_lerpv(targetVector2, amountVector2);
+		var value = math_lerp(targetVector2, amountVector2);
 		set(value);
 		delete value;
 		return self;
