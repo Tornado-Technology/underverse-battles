@@ -28,7 +28,7 @@ switch (type) {
 	break;
 	
 	default:
-		create_border(battle_border.up - 70 - 5 * _power, battle_border.down - 25, battle_border.left - 43, battle_border.right - 43);
+		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left - 43, battle_border.right - 43);
 		pattern_instance = create_pattern(obj_pattern_gasterblasters_from_above, {
 			bone: obj_bone_fell_sans,
 			gasterblaster: obj_gasterblaster_fell_sans

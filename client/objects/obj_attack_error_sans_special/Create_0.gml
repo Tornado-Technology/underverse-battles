@@ -18,7 +18,7 @@ on_border_created = function() {
 
 create_border(battle_border.up + 10, battle_border.down + 10, battle_border.left + 10, battle_border.right + 10);
 pattern_instances = [
-	create_pattern_custom_power(obj_pattern_flying_bones, 4, {
+	create_pattern_custom_power(obj_pattern_flying_bones, 3, {
 		bone: obj_bone_sharp_error_sans,
 		sides: [dir.left, dir.right, dir.down, dir.up],
 		is_aiming: false,
