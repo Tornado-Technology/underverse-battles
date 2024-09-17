@@ -3,6 +3,7 @@ import { Account, IAccount, IAccountFinder, getAccountByFinder } from '../databa
 import { IProfile, Profile } from '../database/schemas/profile.js';
 import { statusCode } from '../status.js';
 import Logger from '../util/logging.js';
+import App from '../app.js';
 
 type handlerCallback = () => Promise<void>;
 
@@ -26,6 +27,7 @@ export interface IHandlerContext {
   getProfileById(id: string): Promise<IProfile>,
   getProfileByAccountId(id: string): Promise<IProfile>,
   getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile>,
+  getClientByAccountFinder(finder: IAccountFinder): Promise<Client | undefined>,
   __stashAccounts: Map<string, IAccount>,
   __stashProfiles: Map<string, IProfile>,
 }
@@ -180,5 +182,10 @@ export class HandlerContext implements IHandlerContext {
   public async getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile> {
     const account = await this.getAccountByFinder(finder);
     return await this.getProfileByAccountId(account._id);
+  }
+
+  public async getClientByAccountFinder(finder: IAccountFinder): Promise<Client | undefined> {
+    const account = await this.getAccountByFinder(finder);
+    return App.clients.find(client => client.account._id === account._id);
   }
 }
