@@ -1883,6 +1883,7 @@
     {"id":{"name":"string_to_hash","path":"scripts/string_to_hash/string_to_hash.yy",},},
     {"id":{"name":"struct_clone","path":"scripts/struct_clone/struct_clone.yy",},},
     {"id":{"name":"struct_get_key_value","path":"scripts/struct_get_key_value/struct_get_key_value.yy",},},
+    {"id":{"name":"struct_get_values","path":"scripts/struct_get_values/struct_get_values.yy",},},
     {"id":{"name":"struct_set_key_value","path":"scripts/struct_set_key_value/struct_set_key_value.yy",},},
     {"id":{"name":"Tag","path":"scripts/Tag/Tag.yy",},},
     {"id":{"name":"Text","path":"scripts/Text/Text.yy",},},
