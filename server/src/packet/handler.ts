@@ -26,6 +26,7 @@ export interface IHandlerContext {
   getAccountByProfileId(id: string): Promise<IAccount>,
   getProfileById(id: string): Promise<IProfile>,
   getProfileByAccountId(id: string): Promise<IProfile>,
+  getProfileByUsername(username: string): Promise<IProfile>,
   getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile>,
   getClientByAccountFinder(finder: IAccountFinder): Promise<Client | undefined>,
   __stashAccounts: Map<string, IAccount>,
@@ -177,6 +178,11 @@ export class HandlerContext implements IHandlerContext {
     if (!profile) throw statusCode.databaseProfileNotExists;
     
     return profile;
+  }
+
+  public async getProfileByUsername(username: string): Promise<IProfile> {
+    const account = await Account.findOne({ username: username });
+    return await this.getProfileByAccountId(account._id);
   }
 
   public async getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile> {
