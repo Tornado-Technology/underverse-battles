@@ -200,6 +200,12 @@ packet_handler_register("information", function(data) {
 	// TODO: Add TODO)))
 });
 
+packet_handler_register("matchmakerPlayerCount", function(data) {
+	with (obj_menu_matchmaking) {
+		player_count = data.count;
+	}
+});
+
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
 	

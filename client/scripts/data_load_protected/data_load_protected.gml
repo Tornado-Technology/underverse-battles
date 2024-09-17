@@ -13,7 +13,7 @@ function data_load_protected() {
 		logger.info("Protected-data loaded successful!");
 	} catch(error) {
 		// A little bit of output to the console to track errors
-		logger.error("Protected-data load fail, reasone: {0}.", error.message);
+		logger.error($"Protected-data load fail, reasone: {error.message}.");
 		logger.warning("Protected-data restoring...");
 		
 		// Trying to rebuild what was broken
@@ -33,7 +33,7 @@ function data_load_protected() {
 			json = json_parse(decoded);
 			logger.info("Protected-data restored successful.");
 		} catch (error) {
-			logger.fatal("Protectedd-data file can't be retrieved, reasone: {0}.", error.message);
+			logger.fatal($"Protectedd-data file can't be retrieved, reasone: {error.message}.");
 		}
 	}
 	

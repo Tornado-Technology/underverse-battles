@@ -40,7 +40,7 @@ export default class Client extends SendStuff {
   public verificationCodeCallback: Function;
 
   public removedRating: number;
-  public resultingRating: number;
+  public resultingRating: number = 0;
 
   protected _state: state;
 

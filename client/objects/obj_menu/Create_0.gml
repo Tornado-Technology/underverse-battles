@@ -464,6 +464,9 @@ create_page([
 	Execute("Multiplayer.Battle1v1", [], function() {
 		instance_create(obj_menu_multiplayer_characters);
 	}),
+	Toggle("Multiplayer.RatingMode", data_get("Game.RatingMode"), function(value) {
+		data_set("Game.RatingMode", value);
+	}),
 	Execute("SingleBattle.SelectBackground", [], function() {
 		instance_create(obj_background_selection);
 	}),

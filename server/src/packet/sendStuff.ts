@@ -189,6 +189,12 @@ export default class SendStuff {
     });
   }
 
+  public sendMatchmakerPlayerCount(count: number): void {
+    this.send('matchmakerPlayerCount', {
+      count,
+    });
+  }
+
   // Fight stuff
   public sendFightJoin(status: statusCode, data: any = undefined): void {
     this.send('fightJoin', {
