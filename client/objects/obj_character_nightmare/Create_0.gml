@@ -1,11 +1,10 @@
 event_inherited();
-index = character_id.nightmare;
+index = character_id.jevil;
 name	    = translate_get("Character.Nightmare.Name");
 description = translate_get("Character.Nightmare.Description");
 bio			= translate_get("Character.Nightmare.Bio");
 universe	= "Dreamtale";
 creator		= "Joku";
-
 
 max_hp = 120;
 hp = max_hp;
@@ -52,12 +51,9 @@ actions = [
 
 special_action = SpecialAction("Character.Nightmare.SpecialAttack", spr_special_attack_nightmare, spr_special_attack_nightmare_locked, call_attack_nightmare_special);
 
-on_taking_soul_damage = function(soul, damage) {
-	if (damage > dtime)
-		return damage;
-	
-	special_action.percent += damage;
-	special_action.percent = clamp(special_action.percent, 0, 100);
+on_taking_damage = function(damage) {
+	var _player_id = fight_get_initiative();
+	fight_player_add_special_action_percent_custom(_player_id, damage);
 	return damage;
 }
 

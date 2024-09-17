@@ -28,6 +28,14 @@ blue_attack_force_speed_y = 0;
 blue_attack = false;
 has_infinity_jump = false;
 
+if (global.fight_instance != noone) {
+	var player = fight_get_player(1 - fight_get_initiative());
+	if (player.has_soul_changeable_parameters) {
+		speed_const = player.soul_custom_speed;
+		max_fly_time = player.soul_custom_fly_time;
+	}
+}
+
 /// @param {Real} angle
 set_angle = function(angle) {
 	image_angle = angle;

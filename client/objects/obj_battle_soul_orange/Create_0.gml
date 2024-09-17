@@ -16,6 +16,13 @@ new_image_angle = 0;
 
 is_changing_side = false;
 
+if (global.fight_instance != noone) {
+	var player = fight_get_player(1 - fight_get_initiative());
+	if (player.has_soul_changeable_parameters) {
+		speed_const = player.soul_custom_speed;
+	}
+}
+
 // Functions
 
 set_move = function(condition, movement_speed_x, movement_speed_y) {
@@ -58,22 +65,22 @@ change_direction = function(side) {
 }
 
 // Time sources
-time_source_slowdown = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {
+time_source_slowdown = time_source_create(time_source_game, 0.5, time_source_units_seconds, function() {
 	speed_const = 1.8;
 });
 
-time_source_dash = time_source_create(time_source_game, 1/6, time_source_units_seconds, function () {
+time_source_dash = time_source_create(time_source_game, 1/6, time_source_units_seconds, function() {
 	invulnerability = false;
 	is_dashing = false;
 	movement_speed_x /= 2;
 	movement_speed_y /= 2;
 });
 
-time_source_cooldown = time_source_create(time_source_game, 2/6, time_source_units_seconds, function () {
+time_source_cooldown = time_source_create(time_source_game, 2/6, time_source_units_seconds, function() {
 	can_dash = true;
 });
 time_source_start(time_source_cooldown);
 
-time_source_delay = time_source_create(time_source_game, 0.1, time_source_units_seconds, function () {
+time_source_delay = time_source_create(time_source_game, 0.1, time_source_units_seconds, function() {
 	controlled = true;
 });

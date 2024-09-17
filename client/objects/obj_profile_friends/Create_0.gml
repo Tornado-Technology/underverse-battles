@@ -45,13 +45,17 @@ arrow_y_down = height / 2 + 30;
 arrow_x = width - 20;
 
 arrow_vertical = {
-	up: UIImageButton(spr_stat_arrow, function() {
-		change_background_up();
-	}),
-	down: UIImageButton(spr_stat_arrow, function() {
-		change_background_down();
-	}),
+	up: new UIImageButton(0, spr_ui_arrow)
+		.set_on_press(function() {
+			change_button_up();
+		}),
+	down: new UIImageButton(1, spr_ui_arrow)
+		.set_on_press(function() {
+			change_button_down();
+		}),
 }
+arrow_vertical.up.padding = 5;
+arrow_vertical.down.padding = 5;
 
 arrow_y = height / 2 + 75;
 arrow_x_left = width / 2 - 15;
@@ -69,30 +73,30 @@ button_x = line_x - 20;
 button_y = height / 2 - 10;
 
 buttons = [
-	UITextButton(translate_get("Menu.Friends.FindFriend"), function() {
+	new UITextButton(0, translate_get("Menu.Friends.FindFriend")).set_on_press(function() {
 		obj_menu.goto_page(menu_page.find_friend);
 		instance_destroy();
 	}),
-	UITextButton(translate_get("Menu.Friends.RequestList"), function() {
+	new UITextButton(1, translate_get("Menu.Friends.RequestList")).set_on_press(function() {
 		instance_create(obj_profile_friend_requests);
 		send_friend_request_get_all();
 		is_return_to_menu = false;
 		instance_destroy();
 	}),
-	UITextButton(translate_get("Menu.StandardButtons.Back"), function() {
+	new UITextButton(2, translate_get("Menu.StandardButtons.Back")).set_on_press(function() {
 		obj_menu.goto_page(menu_page.account);
 		instance_destroy();
-	}),
-]
+	})
+];
 
 button_count = array_length(buttons);
 
 init_buttons = function() {
 	for (var i = 0; i < array_length(buttons); i++) {
-		buttons[i]._id = i;
+		buttons[i].index = i;
 		buttons[i].on_hover = function() {
 			buttons[button_id].unfocus();
-			button_id = buttons[button_id]._id;
+			button_id = buttons[button_id].index;
 		}
 	}
 }

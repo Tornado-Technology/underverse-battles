@@ -6,7 +6,6 @@ bio			= translate_get("Character.Dream.Bio");
 universe	= "Dreamtale";
 creator		= "Joku";
 
-
 max_hp = 120;
 hp = max_hp;
 
@@ -55,13 +54,21 @@ actions = [
 ];
 special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_dream, spr_special_attack_dream_locked, call_attack_dream_special);
 
-on_taking_soul_damage = function(soul, damage) {
+on_taking_damage = function(damage) {
 	if (damage > dtime)
 		return damage;
 	
 	special_action.percent += damage;
 	special_action.percent = clamp(special_action.percent, 0, 100);
 	return damage;
+}
+
+on_battle_end = function(damage) {
+	if (damage > 0)
+		return;
+		
+	var _player_id = fight_get_initiative();
+	fight_player_add_special_action_percent_custom(_player_id, 10);
 }
 
 // Soundtrack

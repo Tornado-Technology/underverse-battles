@@ -25,7 +25,7 @@ switch (type) {
 	create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left - 15, battle_border.right - 15);
 		pattern_instance = create_pattern(obj_pattern_spikes_and_tentacles, {
 			spike: obj_spike_nightmare_mecha,
-				tentacles: obj_tentacle_destroy_back_nightmare_mecha
+			tentacle: obj_tentacle_destroy_back_nightmare_mecha
 		});
 	break;
 	

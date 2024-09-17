@@ -6,7 +6,7 @@ bio			= translate_get("Character.XAnastasia.Bio");
 universe	= "XTale";
 creator		= "Anastasia_Color";
 
-max_hp = 120;
+max_hp = 90;
 hp = max_hp;
 
 // Damage
@@ -14,9 +14,9 @@ damage = 6;
 invulnerability = true;
 
 // Stamina
-max_stamina = 120;
+max_stamina = 150;
 stamina = max_stamina;
-stamina_regen = 25;
+stamina_regen = 20;
 action_stamina_cost = [10, 15, 20];
 
 // Mana
@@ -26,6 +26,9 @@ action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
 soul = spr_battle_soul;
+has_soul_changeable_parameters = true;
+soul_custom_speed = 2;
+soul_custom_jump_time = 7;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Standard");

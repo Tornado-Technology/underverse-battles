@@ -74,6 +74,8 @@ switch(state) {
 			fight_regen_player_stamina(fight_get_next_initiative());
 		}
 		
+		fight_get_player(initiative).on_attack_turn_end();
+		
 		// Some reset actions
 		fight_reset_fight_ui();
 		set_next_initiative();
@@ -87,6 +89,6 @@ switch(state) {
 		break;
 
 	default:
-		logger.warning("Fight update failed, resone: undefined state: \"{0}\".", state);
+		logger.warning($"Fight update failed, resone: undefined state: \"{state}\".");
 		break;
 }

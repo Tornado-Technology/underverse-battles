@@ -17,6 +17,8 @@ enum menu_page {
 	
 	// Account
 	multiplayer_account,
+	account,
+	find_friend,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -468,19 +470,42 @@ create_page([
 	Execute("SingleBattle.CustomSound", [], function() {
 		instance_create(obj_soundtrack_selection);
 	}),
-	Transfer("Multiplayer.Statistics", menu_page.statistics, function() {
-		instance_create(obj_profile_statistics);
-	}),
-	Transfer("Multiplayer.AccountOptions", menu_page.account_settings),
-	Transfer("Multiplayer.LogOut", menu_page.multiplayer, function() {
-		send_logout();
-	}),
+	Transfer("Multiplayer.Account", menu_page.account),
 	Transfer("StandardButtons.Back", menu_page.main),
 ], menu_page.multiplayer_account, "Multiplayer.Title", true);
 
+// Account
+create_page([
+	Execute("Account.Friends", [], function() {
+		instance_create(obj_profile_friends);
+		
+	}),
+	Transfer("Account.Statistics", menu_page.statistics, function() {
+		instance_create(obj_profile_statistics);
+	}),
+	Transfer("Account.AccountOptions", menu_page.account_settings),
+	Transfer("Account.LogOut", menu_page.multiplayer, function() {
+		send_logout();
+	}),
+	Transfer("StandardButtons.Back", menu_page.multiplayer_account),
+], menu_page.account, "Account.Title", true);
+
+friends_inputbox_login = InputBox("Friends.WriteLogin");
+
+// Find friend
+create_page([
+	friends_inputbox_login,
+	Execute("StandardButtons.Apply", [], function() {
+		send_friend_request(friends_inputbox_login.input_box.text);
+	}),
+	Execute("StandardButtons.Back", [], function() {
+		instance_create(obj_profile_friends);
+	}),
+], menu_page.find_friend, "Friends.FindFriend", true);
+
 // Statistics
 create_page([
-	Transfer("StandardButtons.Back", menu_page.multiplayer_account, function() {
+	Transfer("StandardButtons.Back", menu_page.account, function() {
 		instance_destroy(obj_profile_statistics);
 	}),
 ], menu_page.statistics, "Statistics.Title", true);
@@ -497,7 +522,7 @@ create_page([
     Execute("AccountOptions.DeleteAccount", menu_page.account_settings, function() {
 		send_delete_account();
 	}),
-    Transfer("StandardButtons.Back", menu_page.multiplayer_account),
+    Transfer("StandardButtons.Back", menu_page.account),
 ], menu_page.account_settings, "AccountOptions.Title", true);
 
 // Account change nickname

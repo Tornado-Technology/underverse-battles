@@ -8,7 +8,7 @@ universe	= "Deltarune";
 creator		= "Toby Fox";
 
 // HP
-max_hp = 100;
+max_hp = 120;
 hp = max_hp;
 
 // Damage
@@ -26,10 +26,8 @@ mana = 50;
 max_mana = 100;
 action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
-
 // Snd
 snd_beginning_attack = [snd_jevil_chaos, snd_jevil_anything];
-
 
 // Soul
 soul = spr_battle_soul;
@@ -62,16 +60,13 @@ actions = [
 
 special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_attack_jevil, spr_special_attack_jevil_locked, jevil_special_attack);
 
-
-on_battle_end = function(damage) {
+on_attack_turn_end = function() {
 	if (hp <= 40) {
 		var _player_id = fight_get_initiative();
 		var added_mana = irandom_range(1, 8);
-			fight_add_player_mana(_player_id, added_mana);
+		fight_add_player_mana(_player_id, added_mana);
 		if (fight_network_mode) send_fight_mana(added_mana);
-	};
-
-	return damage;
+	}
 }
 	
 play_snd_being_attack = function () {
@@ -81,8 +76,6 @@ play_snd_being_attack = function () {
 		audio_play_sound_plugging(snd_beginning_attack[i]);
 	}
 }
-
-
 
 // Soundtrack
 soundtrack_name = "THE WORLD \n         REVOLVING"; 

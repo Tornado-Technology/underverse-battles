@@ -38,6 +38,9 @@ mana_cooldown = 13;
 
 // Soul
 soul = spr_battle_soul;
+has_soul_changeable_parameters = false;
+soul_custom_speed = 0;
+soul_custom_jump_time = 0;
 
 // Skin
 skin_name = "The Char!";
@@ -181,6 +184,7 @@ unfollow = function() {
 	is_following = false;
 };
 
+on_attack_turn_end = function() {};
 on_dodged = function(player_id) {};
 on_battle_end = function(damage) {};
 on_taking_damage = function(damage) { return damage };

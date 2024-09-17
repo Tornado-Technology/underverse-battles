@@ -78,11 +78,11 @@ players_are_selecting = function() {
 	return false;
 }
 
-set_next_initiative = function(){
+set_next_initiative = function() {
 	initiative = 1 - initiative;
 }
 
-set_next_turn = function(){
+set_next_turn = function() {
 	turn++;
 }
 
