@@ -191,8 +191,4 @@ delete_by_index = function(index) {
 	if (request_id >= request_count) {
 		request_id = request_count - 1;
 	}
-	
-	for (var i = 0; i < request_count; i++) {
-		requests[i].name_width = string_real_width(requests[i].username, global._font_main_determination);
-	}
 }
