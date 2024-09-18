@@ -7,7 +7,7 @@ import { Handler, IHandlerContext, handlerFlags } from '../handler.js';
 
 addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const profileSender = this.profile;
-  const profileReceiver = await this.getProfileByUsername(this.data.username);
+  const profileReceiver = await this.getProfileByAccountFinder(this.data.accountFinder);
 
   if (await requestExists(profileSender._id, profileReceiver._id))
     throw statusCode.databaseError; // TODO: Add custom code
