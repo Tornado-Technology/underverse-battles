@@ -18,7 +18,6 @@ is_return_to_menu = true;
 /* Show */
 show = true;
 menu_switch_pause(true);
-
 friends = global.friend_accounts;
 friend_count = array_length(friends);
 friend_id = 0;

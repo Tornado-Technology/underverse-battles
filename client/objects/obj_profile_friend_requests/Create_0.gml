@@ -166,7 +166,7 @@ translate_update = on_translate_update.connect(function() {
 })
 
 draw_name_button = function(_x, _y, color, _id) {
-	if (request_count <= _id) return;
+	if (request_count <= _id || _id < 0) return;
 	
 	var request = requests[_id];
 	color = request_id == _id ? text_color_selecting : color;
@@ -190,9 +190,5 @@ delete_by_index = function(index) {
 	request_count--;
 	if (request_id >= request_count) {
 		request_id = request_count - 1;
-	}
-	
-	for (var i = 0; i < request_count; i++) {
-		requests[i].name_width = string_real_width(requests[i].username, global._font_main_determination);
 	}
 }

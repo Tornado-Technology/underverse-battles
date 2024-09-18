@@ -111,7 +111,6 @@ packet_handler_register("verification", function(data) {
 
 packet_handler_register("getAccountsInfo", function(data) {
 	if (data.status == status_code.success) {
-		logger.debug($"{data.profiles}");
 		global.friend_accounts = array_union(global.friend_accounts, struct_get_values(data.profiles));
 		return;
 	}
