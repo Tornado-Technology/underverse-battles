@@ -166,7 +166,7 @@ translate_update = on_translate_update.connect(function() {
 })
 
 draw_name_button = function(_x, _y, color, _id) {
-	if (request_count <= _id) return;
+	if (request_count <= _id || _id < 0) return;
 	
 	var request = requests[_id];
 	color = request_id == _id ? text_color_selecting : color;

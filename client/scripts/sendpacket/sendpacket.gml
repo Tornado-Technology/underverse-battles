@@ -60,9 +60,9 @@ function send_get_accounts_info(account_ids) {
 }
 
 // @param {String} username
-function send_friend_request(username) {
+function send_friend_request(_username) {
 	send("friendRequest", {
-		accountFinder: {username: username},
+		accountFinder: {username: _username},
 	});
 }
 

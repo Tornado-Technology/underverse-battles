@@ -36,21 +36,25 @@ sprite_border_width = sprite_get_width(sprite_border);
 sprite_border_height = sprite_get_height(sprite_border);
 
 // Scale
-scale = max(1, string_width(text) + shift_x * 2);
+scale = max(1, (string_real_width(text, global._font_main_determination) + shift_x * 2) / sprite_get_width(sprite_border));
 
 // Position
 x = -sprite_border_width * scale;
 y = sprite_border_height / 2;
 
 // Buttons
-button_accept = UITextButton(translate_get("Menu.StandardButtons.Accept"), function() {
-	send_friend_request_accept(request_id);
-	text_progress = 1;
-});
-button_reject = UITextButton(translate_get("Menu.StandardButtons.Reject"), function() {
-	send_friend_request_reject(request_id);
-	text_progress = 1;
-});
+selector = new UITextButtonSelector([translate_get("Menu.StandardButtons.Accept"), translate_get("Menu.StandardButtons.Reject")], input.left, input.right) 
+	.set_padding(2)
+	.set_color(c_white, c_yellow)
+	.set_align(fa_center, fa_bottom)
+	.set_on_press( function(self_button) {
+		if (self_button.index == 0) {
+			send_friend_request_accept(request_id);
+		} else {
+			send_friend_request_reject(request_id);
+		}
+		text_progress = 1;
+	});
 
 // Time Source
 time_source_delay = time_source_create(time_source_game, 10, time_source_units_seconds, function() {
