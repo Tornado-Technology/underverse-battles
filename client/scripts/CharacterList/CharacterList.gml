@@ -91,7 +91,8 @@ function CharacterList() {
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
 			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
 			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame),
-			new Character(obj_character_cross_magenta, "Cross", "Magenta", spr_cross_magenta_frame)
+			new Character(obj_character_cross_magenta, "Cross", "Magenta", spr_cross_magenta_frame),
+			new Character(obj_character_cross_detective, "Cross", "Detective", spr_cross_detective_frame)
 		],
 		[
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
@@ -107,7 +108,8 @@ function CharacterList() {
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
 			new Character(obj_character_green_code_hacker, "Green", "CodeHacker", spr_green_code_hacker_frame),
-			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame)
+			new Character(obj_character_green_christmas_tree, "Green", "ChristmasTree", spr_green_christmas_tree_frame),
+			new Character(obj_character_green_dj, "Green", "DJ", spr_green_dj_frame),
 		],
 		[
 			new Character(obj_character_xanastasia, "XAnastasia", "Standard", spr_xanastasia_frame),
