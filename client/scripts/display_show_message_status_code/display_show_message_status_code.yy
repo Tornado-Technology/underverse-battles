@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_show_message_status_code",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_show_message_status_code",
+  "parent":{
+    "name":"UI",
+    "path":"folders/Scripts/Local/UI.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

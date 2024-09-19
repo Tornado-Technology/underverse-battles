@@ -24,12 +24,7 @@ packet_handler_register("connection", function(data) {
 	logger.error($"Client connectin rejected, code: {code}.");
 	global.network_blocking = true;
 	network_disconnect(false);
-	if (code == status_code.updateRequired) {
-		display_show_message_info(translate_get("Menu.Notifications.UpdateRequired"), c_red, 380);
-	}
-	else {
-		display_show_message_info($"Connection rejected. Status code {code}", c_red, 380);
-	}
+	display_show_message_status_code(code, status_code.updateRequired, "UpdateRequired", c_red, 380);
 });
 
 packet_handler_register("ping", function(data) {
@@ -124,7 +119,7 @@ packet_handler_register("friendRequestGetAll", function(data) {
 
 packet_handler_register("friendRequest", function(data) {
 	if (data.code == status_code.success) {
-		display_show_message_info(translate_get("Успешный запрос"), c_green);
+		display_show_message_info(translate_get("Menu.Notifications.RequestSuccessful"), c_lime);
 		return;
 	}
 	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
@@ -174,7 +169,7 @@ packet_handler_register("restorePassword", callback_change_password);
 
 packet_handler_register("changeEmail", function(data) {
 	if (data.status != status_code.success) {
-		display_show_message_info(string(data.status), c_red);
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 		return;
 	}
 			
@@ -185,13 +180,13 @@ packet_handler_register("changeEmail", function(data) {
 
 packet_handler_register("deleteAccount", function(data) {
 	if (data.status != status_code.success) {
-		display_show_message_info(string(data.status), c_red);
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);
 		return;
 	}
 			
 	network_account = undefined;
 	network_profile = undefined;
-	display_show_message_info("Delete account successful", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.DeleteSuccessful"), c_lime);
 });
 
 packet_handler_register("information", function(data) {
@@ -208,25 +203,24 @@ packet_handler_register("matchmakerPlayerCount", function(data) {
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
 	
-	if (status == status_code.error) {
-		logger.info("Matchmaking error");
-		display_show_message_info("Matchmaking error", c_red);
+	if (status != status_code.success) {
+		logger.info($"Matchmaking error. Status code {status}");
+		display_show_message_info(translate_get("Menu.Notifications.Error." + string(status)), c_red);
+		return;
 	}
-	if (status == status_code.success) {
-		logger.info("Successful join to fight");
-		var opponent_data = json_parse(data.data);
-		var inst_opponent = instance_create(obj_opponent);
-		opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.characterSkinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
-		var character_object = global.characters[opponent_data.characterId, opponent_data.characterSkinId].object;
-		memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, character_object);
-		room_goto(room_fight_1v1);
-	} 
+	
+	logger.info("Successful join to fight");
+	var opponent_data = json_parse(data.data);
+	var inst_opponent = instance_create(obj_opponent);
+	opponent_set_values(inst_opponent, 1, opponent_data.name, opponent_data.characterId, opponent_data.characterSkinId, opponent_data.rating, opponent_data.type, opponent_data.badge);
+	var character_object = global.characters[opponent_data.characterId, opponent_data.characterSkinId].object;
+	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, character_object);
+	room_goto(room_fight_1v1);
 });
 
 packet_handler_register("fightCharacter", function(data) {
 	var character = data.characterId;
 	var skin = data.skinId;
-	logger.debug($"Get new characterInfo: {character}.");
 			
 	var character_object = global.characters[character, skin].object;
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, character_object);

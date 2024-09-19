@@ -1,42 +1,61 @@
 export enum statusCode {
-  error = 0,
-  success = 1,
-  serverSocketClosed = 2,
+  error,
+  success,
+  serverSocketClosed,
   
-  // 300 - Database operations
-  databaseError = 300,
-  databaseNotConnected = 301,
-  databaseDisable = 302,
+  // Database operations
+  databaseError,
+  databaseNotConnected,
+  databaseDisable,
   
   // Account
-  databaseAccountNotExists = 303,
-  databaseAccountExists = 304,
+  userNotLoggedIn,
+  databaseAccountNotExists,
+  databaseAccountExists,
+  accountWasBanned,
   
   // Profile
-  databaseProfileNotExists = 305,
-  databaseProfileExists = 306,
+  databaseProfileNotExists,
+  databaseProfileExists,
   
   // Username
-  databaseUsernameBusy = 307,
-  databaseUsernameWrong = 308,
+  databaseUsernameBusy,
+  databaseUsernameWrong,
+  usernameDoesNotComplyWithRules,
+
+  // Nickname
+  databaseNicknameBusy,
+  databaseNicknameWrong,
+  nicknameDoesNotComplyWithRules,
   
   // Password
-  databasePasswordWrong = 309,
+  databasePasswordWrong,
+  passwordDoesNotComplyWithRules,
   
   // E-mail
-  databaseEmailBusy = 310,
-  databaseEmailWrong = 311,
+  databaseEmailBusy,
+  databaseEmailWrong,
+  emailDoesNotComplyWithRules,
   
   // Verification
-  databaseVerificationWrongCode = 312,
-  databaseVerificationTimeout = 313,
+  databaseVerificationWrongCode,
+  databaseVerificationTimeout,
   
   // Ban
-  databaseBanExists = 314,
-  
+  databaseBanExists,
+
+  // Request
+  requestAlreadySent,
+
   // Friends
-  databaseFriendNotExists = 315,
+  databaseFriendNotExists,
+  canNotAddYourselfAsFriend,
+  userIsFriendAlready,
+
+  // Fight
+  canNotFightYourself,
+  userInFightAlready,
   
-  // 400 - ???
-  updateRequired = 426
+  // Update
+  updateRequired
 }

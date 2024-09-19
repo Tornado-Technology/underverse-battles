@@ -13,11 +13,14 @@ const usernameBlacklist = [
 const nicknameBlacklist = [];
 
 export const validatePassword = (password: string): statusCode => {
-  return passwordRegex.test(password) ? statusCode.success : statusCode.databasePasswordWrong;
+  return passwordRegex.test(password) ? statusCode.success : statusCode.passwordDoesNotComplyWithRules;
 }
 
 export const validateUsername = async (username: string): Promise<statusCode> => {
-  if (!usernameRegex.test(username) || usernameBlacklist.find((item) => item === username) !== undefined) {
+  if (!usernameRegex.test(username)) {
+    return statusCode.usernameDoesNotComplyWithRules;
+  }
+  if (usernameBlacklist.find((item) => item === username) !== undefined) {
     return statusCode.databaseUsernameWrong;
   }
 
@@ -25,8 +28,11 @@ export const validateUsername = async (username: string): Promise<statusCode> =>
 }
 
 export const validateNickname = async (nickname: string): Promise<statusCode> => {
-  if (!nicknameRegex.test(nickname) || nicknameBlacklist.find((item) => item === nickname) !== undefined) {
-    return statusCode.databaseUsernameWrong;
+  if (!nicknameRegex.test(nickname)) {
+    return statusCode.nicknameDoesNotComplyWithRules;
+  }
+  if (nicknameBlacklist.find((item) => item === nickname) !== undefined) {
+    return statusCode.databaseNicknameWrong;
   }
 
   return statusCode.success;

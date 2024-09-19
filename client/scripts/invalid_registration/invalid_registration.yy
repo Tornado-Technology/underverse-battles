@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"invalid_registration",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"invalid_registration",
+  "parent":{
+    "name":"Regestration",
+    "path":"folders/Scripts/Network/Regestration.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
