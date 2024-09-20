@@ -1,16 +1,17 @@
-enum character_id {
-	ink_sans = 0,
-	error_sans = 1,
-	sans = 2,
-	fell_sans = 3,
-	swap_sans = 4,
-	swap_papyrus = 5,
-	x_chara = 6,
-	cross = 7,
-	green = 8,
-	dream = 9,
-	nightmare = 10,
-	papyrus = 11,
-	xanastasia = 12,
-	jevil = 13
+enum CHARACTER_ID {
+	INK_SANS = 0,
+	ERROR_SANS = 1,
+	SANS = 2,
+	FELL_SANS = 3,
+	SWAP_SANS = 4,
+	SWAP_PAPYRUS = 5,
+	XCHARA = 6,
+	CROSS = 7,
+	CROSS_XEVENT = 7.1,
+	GREEN = 8,
+	DREAM = 9,
+	NIGHTMARE = 10,
+	PAPYRUS = 11,
+	XANASTASIA = 12,
+	JEVIL = 13
 }

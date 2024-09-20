@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 0;
+index = CHARACTER_ID.INK_SANS;
 name	    = translate_get("Character.InkSans.Name");
 description = translate_get("Character.InkSans.Description");
 bio			= translate_get("Character.InkSans.Bio");
@@ -19,12 +19,11 @@ invulnerability = false;
 max_stamina = 100;
 stamina		= 100;
 stamina_regen = 20;
-action_stamina_cost = Cost(10, 15, 20);
+action_stamina_cost = [10, 15, 20];
 
 // Mana
 mana	 = 50;
 max_mana = 100;
-action_mana_upgrade_cost =  Cost(0, 10, 25, 40, 60);
 
 // Soul
 soul = spr_soul_empty;

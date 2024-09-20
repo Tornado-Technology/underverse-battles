@@ -1561,7 +1561,6 @@
     {"id":{"name":"convert_dec_to_hex","path":"scripts/convert_dec_to_hex/convert_dec_to_hex.yy",},},
     {"id":{"name":"convert_seconds_to_steps","path":"scripts/convert_seconds_to_steps/convert_seconds_to_steps.yy",},},
     {"id":{"name":"convert_steps_to_seconds","path":"scripts/convert_steps_to_seconds/convert_steps_to_seconds.yy",},},
-    {"id":{"name":"Cost","path":"scripts/Cost/Cost.yy",},},
     {"id":{"name":"create_aiming_gasterblaster_with_pattern","path":"scripts/create_aiming_gasterblaster_with_pattern/create_aiming_gasterblaster_with_pattern.yy",},},
     {"id":{"name":"create_aiming_gasterblaster","path":"scripts/create_aiming_gasterblaster/create_aiming_gasterblaster.yy",},},
     {"id":{"name":"create_big_knife_x","path":"scripts/create_big_knife_x/create_big_knife_x.yy",},},

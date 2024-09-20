@@ -55,18 +55,18 @@ export const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  xtaleChara: new CharacterInfo(
+  xChara: new CharacterInfo(
     6,
     60,
     100,
     100,
     15,
-    [5, 10, 50],
+    [5, 10, 15],
     [0, 10, 25, 40, 60]
   ),
   cross: new CharacterInfo(
     7,
-    120,
+    100,
     100,
     100,
     20,
@@ -74,19 +74,17 @@ export const characterInfoList = {
     [0, 10, 25, 40, 60],
     10,
     1,
-    [
-      new CharacterInfo(
-        7,
-        100,
-        100,
-        100,
-        20,
-        [10, 15, 20],
-        [0, 10, 25, 40, 60],
-        10,
-        1,
-      )
-    ]
+  ),
+  crossXEvent: new CharacterInfo(
+    7.1,
+    120,
+    100,
+    100,
+    25,
+    [10, 15, 20],
+    [0, 10, 25, 40, 60],
+    10,
+    1,
   ),
   green: new CharacterInfo(
     8,
@@ -97,12 +95,48 @@ export const characterInfoList = {
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),
-  jevil: new CharacterInfo(
-    -1,
+  dream: new CharacterInfo(
+    9,
+    120,
+    120,
     100,
+    25,
+    [10, 15, 20],
+    [0, 10, 25, 40, 60]
+  ),
+  nightmare: new CharacterInfo(
+    10,
+    120,
+    120,
     100,
+    25,
+    [10, 15, 20],
+    [0, 10, 25, 40, 60]
+  ),
+  papyrus: new CharacterInfo(
+    11,
+    120,
+    120,
+    100,
+    25,
+    [10, 15, 15],
+    [0, 10, 25, 40, 60]
+  ),
+  xAnastasia: new CharacterInfo(
+    12,
+    90,
+    150,
     100,
     20,
+    [10, 15, 20],
+    [0, 10, 25, 40, 60]
+  ),
+  jevil: new CharacterInfo(
+    13,
+    120,
+    100,
+    100,
+    30,
     [10, 15, 20],
     [0, 10, 25, 40, 60]
   ),

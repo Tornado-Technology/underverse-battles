@@ -8,9 +8,8 @@ export default class CharacterInfo {
   public readonly manaCost: number[];
   public readonly specialActionChargePerTurn: number;
   public readonly specialActionChargePerDamage: number;
-  public readonly skins: CharacterInfo[];
 
-  constructor(id: number, hpMax: number, staminaMax: number, manaMax: number, staminaRegen: number, staminaCost: number[], manaCost: number[], specialActionChargePerTurn: number = 5, specialActionChargePerDamage: number = 1,  skins: CharacterInfo[] = []) {
+  constructor(id: number, hpMax: number, staminaMax: number, manaMax: number, staminaRegen: number, staminaCost: number[], manaCost: number[], specialActionChargePerTurn: number = 5, specialActionChargePerDamage: number = 1) {
     this.id = id;
     this.hpMax = hpMax;
     this.staminaMax = staminaMax;
@@ -20,6 +19,5 @@ export default class CharacterInfo {
     this.manaCost = manaCost;
     this.specialActionChargePerTurn = specialActionChargePerTurn;
     this.specialActionChargePerDamage = specialActionChargePerDamage;
-    this.skins = skins;
   }
 }
