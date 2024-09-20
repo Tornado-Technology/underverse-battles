@@ -78,7 +78,6 @@ buttons = [
 	}),
 	new UITextButton(1, translate_get("Menu.Friends.RequestList")).set_on_press(function() {
 		instance_create(obj_profile_friend_requests);
-		send_friend_request_get_all();
 		is_return_to_menu = false;
 		instance_destroy();
 	}),

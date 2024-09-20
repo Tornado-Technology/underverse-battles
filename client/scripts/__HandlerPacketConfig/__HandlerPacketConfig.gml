@@ -1,6 +1,7 @@
 global.verify_code_connection = undefined;
 global.ping_instance = noone;
 global.packet_handler = {};
+global.friend_requests = [];
 global.friend_accounts = [];
 
 var callback_change_password = function(data) {
@@ -46,6 +47,7 @@ packet_handler_register("login", function(data) {
 		network_account = data.account;
 		on_network_login.invoke(data.status);
 		send_get_accounts_info(network_profile.friends);
+		send_friend_request_get_all();
 		achievement_give(achievement_id.a_cybers_world);
 		logger.info("Login success");
 		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
@@ -112,7 +114,7 @@ packet_handler_register("getAccountsInfo", function(data) {
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
-	obj_profile_friend_requests.add_from_list(struct_get_values(data.requests));
+	global.friend_requests = struct_get_values(data.result);
 	// accountId
 	// friendRequest
 });
@@ -126,6 +128,8 @@ packet_handler_register("friendRequest", function(data) {
 });
 
 packet_handler_register("friendRequestInvite", function(data) {
+	array_push(global.friend_requests, struct_get_values(data.data));
+	
 	if (data.code == status_code.success && global.fight_instance == noone) {
 		instance_create(obj_ui_request, {
 			request_id: data.data._id,
@@ -136,7 +140,7 @@ packet_handler_register("friendRequestInvite", function(data) {
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
-	//requestId
+	send_get_accounts_info(requests[requestId].receiverId);
 });
 
 packet_handler_register("friendRequestReject", function(data) {

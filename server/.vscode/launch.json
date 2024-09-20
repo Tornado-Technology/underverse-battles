@@ -12,12 +12,14 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\build\\index.js --env=development",
+      "program": "${workspaceFolder}\\build\\index.js",
       "preLaunchTask": "tsc: build - tsconfig.json",
       "outFiles": [
         "${workspaceFolder}/build/**/*.js"
       ],
       "port": 5858,
+      "args": ["--env=development"]
     }
+    
   ]
 }

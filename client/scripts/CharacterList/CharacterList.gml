@@ -89,10 +89,10 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
-			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
-			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame),
 			new Character(obj_character_cross_magenta, "Cross", "Magenta", spr_cross_magenta_frame),
-			new Character(obj_character_cross_detective, "Cross", "Detective", spr_cross_detective_frame)
+			new Character(obj_character_cross_detective, "Cross", "Detective", spr_cross_detective_frame),
+			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
+			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame)
 		],
 		[
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
