@@ -109,8 +109,6 @@ export default class ClientFight {
     if (!this.characterInfo) {
       Logger.warn(`Character loading failed, reason: client ${this.client.username} set wrong CharacterId (${this.characterId}); Set defaultCharacterId: ${defaultCharacterId}`);
       this.characterInfo = characterInfoGetById(defaultCharacterId);
-    } else if (this.characterInfo.skins && this.characterInfo.skins[skinId]) {
-      this.characterInfo = this.characterInfo.skins[skinId];
     }
 
     this.hpMax = this.characterInfo.hpMax;
