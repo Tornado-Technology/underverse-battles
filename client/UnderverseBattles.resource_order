@@ -1,6 +1,12 @@
 {
-  "FolderOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"Regestration","order":1,"path":"folders/Scripts/Network/Regestration.yy",},
+  ],
   "ResourceOrderSettings":[
+    {"name":"display_show_message_status_code","order":1,"path":"scripts/display_show_message_status_code/display_show_message_status_code.yy",},
+    {"name":"failed_registration_reason_second_password","order":1,"path":"scripts/failed_registration_reason_second_password/failed_registration_reason_second_password.yy",},
+    {"name":"failed_registration","order":2,"path":"scripts/failed_registration/failed_registration.yy",},
+    {"name":"invalid_registration","order":3,"path":"scripts/invalid_registration/invalid_registration.yy",},
     {"name":"struct_get_values","order":1,"path":"scripts/struct_get_values/struct_get_values.yy",},
     {"name":"spr_special_attack_ink_sans_locked","order":1,"path":"sprites/spr_special_attack_ink_sans_locked/spr_special_attack_ink_sans_locked.yy",},
     {"name":"spr_ui_request","order":1,"path":"sprites/spr_ui_request/spr_ui_request.yy",},

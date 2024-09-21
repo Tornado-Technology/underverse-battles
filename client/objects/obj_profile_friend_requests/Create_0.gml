@@ -19,8 +19,7 @@ is_loading = true;
 show = true;
 menu_switch_pause(true);
 
-requests = [];
-request_count = array_length(requests);
+request_count = array_length(global.friend_requests);
 request_id = 0;
 
 request_text_x = width / 2;
@@ -70,12 +69,11 @@ button_y = height / 2 - 50;
 
 buttons = [
 	new UITextButton(0, translate_get("Menu.StandardButtons.Accept")).set_on_press(function() {
-		send_friend_request_accept(requests[request_id]._id);
-		send_get_accounts_info(accountId);
+		send_friend_request_accept(global.friend_requests[request_id]._id);
 		delete_by_index(request_id);
 	}),
 	new UITextButton(1, translate_get("Menu.StandardButtons.Reject")).set_on_press(function() {
-		send_friend_request_reject(requests[request_id]._id);
+		send_friend_request_reject(global.friend_requests[request_id]._id);
 		delete_by_index(request_id);
 	}),
 	new UITextButton(2, translate_get("Menu.StandardButtons.Back")).set_on_press(function() {
@@ -168,7 +166,7 @@ translate_update = on_translate_update.connect(function() {
 draw_name_button = function(_x, _y, color, _id) {
 	if (request_count <= _id || _id < 0) return;
 	
-	var request = requests[_id];
+	var request = global.friend_requests[_id];
 	color = request_id == _id ? text_color_selecting : color;
 	
 	draw_set_font(global._font_main_determination);
@@ -177,16 +175,16 @@ draw_name_button = function(_x, _y, color, _id) {
 }
 
 add_from_list = function(requests) {
-	self.requests = requests;
+	global.friend_requests = requests;
 	request_count = array_length(requests);
 
 	for (var i = 0; i < request_count; i++) {
-		requests[i].name_width = string_real_width(requests[i].sender.username, global._font_main_determination);
+		global.friend_requests[i].name_width = string_real_width(global.friend_requests[i].sender.username, global._font_main_determination);
 	}
 }
 
 delete_by_index = function(index) {
-	array_delete(requests, index, 1);
+	array_delete(global.friend_requests, index, 1);
 	request_count--;
 	if (request_id >= request_count) {
 		request_id = request_count - 1;

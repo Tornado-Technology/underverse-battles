@@ -54,6 +54,7 @@ function send_verification(code) {
 
 // @param {Array} account_ids
 function send_get_accounts_info(account_ids) {
+	show_message(account_ids);
 	send("getAccountsInfo", {
 		accountIds: account_ids,
 	});
@@ -75,6 +76,7 @@ function send_friend_request_accept(request_id) {
 	send("friendRequestAccept", {
 		requestId: request_id,
 	});
+	send_get_accounts_info(requests[request_id].senderId);
 }
 
 // @param {Real} request_id

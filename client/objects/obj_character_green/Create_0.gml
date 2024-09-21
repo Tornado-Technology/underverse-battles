@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 8;
+index = CHARACTER_ID.DREAM;
 name	    = translate_get("Character.Green.Name");
 description = translate_get("Character.Green.Description");
 bio			= translate_get("Character.Green.Bio");
@@ -24,7 +24,6 @@ action_stamina_cost = [10, 15, 25];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
 soul = spr_soul_green_corrupted;

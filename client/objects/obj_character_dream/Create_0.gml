@@ -1,5 +1,5 @@
 event_inherited();
-index = 9;
+index = CHARACTER_ID.DREAM;
 name	    = translate_get("Character.Dream.Name");
 description = translate_get("Character.Dream.Description");
 bio			= translate_get("Character.Dream.Bio");
@@ -10,7 +10,7 @@ max_hp = 120;
 hp = max_hp;
 
 // Damage
-damage = 6;
+damage = 5;
 invulnerability = true;
 
 // Stamina
@@ -22,7 +22,6 @@ action_stamina_cost = [10, 15, 20];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
 soul = spr_battle_soul;

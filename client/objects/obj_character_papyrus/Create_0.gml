@@ -1,5 +1,5 @@
 event_inherited();
-index = 11;
+index = CHARACTER_ID.PAPYRUS;
 
 name	    = translate_get("Character.Papyrus.Name");
 description = translate_get("Character.Papyrus.Description");
@@ -12,7 +12,7 @@ max_hp = 120;
 hp = max_hp;
 
 //Damage
-damage = 5;
+damage = 6;
 invulnerability = true;
 
 //Stamina 
@@ -24,7 +24,6 @@ action_stamina_cost = [10, 15, 15];
 //Mana
 max_mana = 100;
 mana = 50;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 //Soul
 soul = spr_battle_soul;

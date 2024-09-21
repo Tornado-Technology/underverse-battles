@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 3;
+index = CHARACTER_ID.FELL_SANS;
 name	    = translate_get("Character.FellSans.Name");
 description = translate_get("Character.FellSans.Description");
 bio			= translate_get("Character.FellSans.Bio");
@@ -22,7 +22,6 @@ action_stamina_cost = [10, 15, 20];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 mana_given = 3;
 
 // Soul

@@ -27,12 +27,12 @@ max_getting_damage = 100;
 stamina = 100;
 max_stamina = 100;
 stamina_regen = 25;
-action_stamina_cost = Cost(10, 15, 20);
+action_stamina_cost = [10, 15, 20];
 
 // Mana
 mana = 100;
 max_mana = 100;
-action_mana_cost = Cost(0, 10, 25, 40, 60);
+action_mana_cost = [0, 10, 25, 40, 60];
 mana_given = 2;
 mana_cooldown = 13;
 

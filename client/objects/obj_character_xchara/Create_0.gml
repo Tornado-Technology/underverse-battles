@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 6;
+index = CHARACTER_ID.XCHARA;
 name	    = translate_get("Character.XtaleChara.Name");
 description = translate_get("Character.XtaleChara.Description");
 bio			= translate_get("Character.XtaleChara.Bio");
@@ -17,12 +17,11 @@ invulnerability = true;
 max_stamina = 100;
 stamina = 100;
 stamina_regen = 15;
-action_stamina_cost = Cost(5, 10, 20);
+action_stamina_cost = [5, 10, 15];
 
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = Cost(0, 10, 25, 40, 60);
 
 // Soul
 soul = spr_battle_soul_red;

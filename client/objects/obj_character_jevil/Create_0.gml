@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = character_id.jevil;
+index = CHARACTER_ID.JEVIL;
 name	    = translate_get("Character.Jevil.Name");
 description = translate_get("Character.Jevil.Description");
 bio			= translate_get("Character.Jevil.Bio");
@@ -24,7 +24,6 @@ action_stamina_cost = [10, 15, 20];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Snd
 snd_beginning_attack = [snd_jevil_chaos, snd_jevil_anything];

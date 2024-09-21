@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 2;
+index = CHARACTER_ID.SANS;
 name	    = translate_get("Character.ClassicSans.Name");
 description = translate_get("Character.ClassicSans.Description");
 bio			= translate_get("Character.ClassicSans.Bio");
@@ -24,7 +24,6 @@ action_stamina_cost = [10, 15, 20];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
 soul = spr_battle_soul;

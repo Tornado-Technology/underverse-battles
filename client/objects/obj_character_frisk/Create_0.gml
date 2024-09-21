@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 2;
+index = 20;
 name	    = translate_get("Character.Frisk.Name");
 description = translate_get("Character.Frisk.Description");
 bio			= translate_get("Character.Frisk.Bio");
@@ -24,7 +24,6 @@ action_stamina_cost = [10, 15, 20];
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = [0, 10, 25, 40, 60];
 
 // Soul
 soul = spr_battle_soul_red;

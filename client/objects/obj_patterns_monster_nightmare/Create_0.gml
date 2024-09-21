@@ -10,7 +10,7 @@ callback = function() {
 	
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 
-	if (player.index != character_id.nightmare) {
+	if (player.index != CHARACTER_ID.NIGHTMARE) {
 		nightmare_side++;	
 	}
 	

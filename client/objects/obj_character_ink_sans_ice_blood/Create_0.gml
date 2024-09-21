@@ -1,7 +1,7 @@
 event_inherited();
 
 // Skin
-skin_name = translate_get("CharactersStyles.IcyBlood");
+skin_name = translate_get("CharactersStyles.IceBlood");
 frame = spr_ink_sans_ice_blood_frame;
 
 // Animations

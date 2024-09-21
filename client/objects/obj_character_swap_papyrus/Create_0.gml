@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 5;
+index = CHARACTER_ID.SWAP_PAPYRUS;
 name	    = translate_get("Character.SwapPapyrus.Name");
 description = translate_get("Character.SwapPapyrus.Description");
 bio			= translate_get("Character.SwapPapyrus.Bio");
@@ -19,12 +19,11 @@ invulnerability = false;
 max_stamina = 100;
 stamina = 100;
 stamina_regen = 20;
-action_stamina_cost = Cost(10, 15, 20);
+action_stamina_cost = [10, 15, 20];
 
 // Mana
 mana = 50;
 max_mana = 100;
-action_mana_upgrade_cost = Cost(0, 10, 25, 40, 60);
 
 //Soul
 soul = spr_battle_soul;

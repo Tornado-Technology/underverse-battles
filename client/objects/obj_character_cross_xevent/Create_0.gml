@@ -1,5 +1,6 @@
 event_inherited();
 // Base
+index = CHARACTER_ID.CROSS_XEVENT;
 name	    = translate_get("Character.CrossXEvent.Name");
 description = translate_get("Character.CrossXEvent.Description");
 bio			= translate_get("Character.CrossXEvent.Bio");
@@ -11,6 +12,9 @@ hp = 120;
 // Damage
 damage = 5;
 invulnerability = true;
+
+// Stamina
+stamina_regen = 25;
 
 // Soul
 soul = spr_battle_soul;

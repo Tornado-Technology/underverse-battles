@@ -43,7 +43,7 @@ function CharacterList() {
 			new Character(obj_character_ink_sans_christmas, "InkSans", "Christmas", spr_ink_sans_christmas_frame),
 			new Character(obj_character_ink_sans_blob, "InkSans", "Blob", spr_ink_sans_blob_frame),
 			new Character(obj_character_ink_sans_galactic, "InkSans", "TON618", spr_ink_sans_galactic_frame),
-			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IcyBlood", spr_ink_sans_ice_blood_frame)
+			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IceBlood", spr_ink_sans_ice_blood_frame)
 		],
 		[
 			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
@@ -54,7 +54,7 @@ function CharacterList() {
 			new Character(obj_character_error_sans_puppet, "ErrorSans", "Puppet", spr_error_sans_puppet_frame),
 		],
 		[
-			new Character(obj_character_sans, "ClassicSans",	"Standard", spr_sans_frame),
+			new Character(obj_character_sans, "ClassicSans", "Standard", spr_sans_frame),
 			new Character(obj_character_sansa_claus, "ClassicSans", "SansaClaus", spr_sansa_claus_frame),
 			new Character(obj_character_sans_on_bike, "ClassicSans", "OnBike", spr_sans_on_bike_frame),
 			new Character(obj_character_sans_promised, "ClassicSans", "Promised", spr_sans_promised_frame),
@@ -89,10 +89,10 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
-			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
-			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame),
 			new Character(obj_character_cross_magenta, "Cross", "Magenta", spr_cross_magenta_frame),
-			new Character(obj_character_cross_detective, "Cross", "Detective", spr_cross_detective_frame)
+			new Character(obj_character_cross_detective, "Cross", "Detective", spr_cross_detective_frame),
+			new Character(obj_character_cross_xevent, "Cross", "XEvent", spr_cross_xevent_frame),
+			new Character(obj_character_cross_samurai, "Cross", "Samurai", spr_cross_samurai_frame)
 		],
 		[
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),

@@ -134,7 +134,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
     case 'changeEmail':
       if (!client.isLogin) {
-        client.sendChangeEmail(statusCode.error);
+        client.sendChangeEmail(statusCode.userNotLoggedIn);
         break;
       }
 
@@ -175,7 +175,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
     case 'changePassword':
       if (!client.isLogin) {
-        client.sendChangePassword(statusCode.error);
+        client.sendChangePassword(statusCode.userNotLoggedIn);
         break;
       }
 
@@ -191,7 +191,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
     case 'changeUsername':
       if (!client.isLogin) {
-        client.sendChangeUsername(statusCode.error);
+        client.sendChangeUsername(statusCode.userNotLoggedIn);
         break;
       }
 
@@ -207,7 +207,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
     case 'changeNickname':
       if (!client.isLogin) {
-        client.sendChangeNickname(statusCode.error);
+        client.sendChangeNickname(statusCode.userNotLoggedIn);
         break;
       }
 
@@ -310,12 +310,12 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
         const matchType = data.matchType;
 
         if (!client.account || !client.verified) {
-          client.sendFightJoin(statusCode.error, undefined);
-          Logger.info('Fight join failed, client not logged');
+          client.sendFightJoin(statusCode.userNotLoggedIn, undefined);
+          Logger.info('Fight join failed, client not logged in');
           break;
         }
         if (!Matchmaker.tryAddWaiting(client, matchType)) {
-          client.sendFightJoin(statusCode.error, undefined);
+          client.sendFightJoin(statusCode.userInFightAlready, undefined);
           break;
         }
 
@@ -430,13 +430,13 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
       {
         const map = {};
 
-        for (const id of data.accountIds) {
-          const account = await Account.findOne({ _id: id }).clone();
-          if (!account)
-            continue;
-  
-          const profile = await Profile.findOne({ accountId: account._id }).clone();
+        for (const id of data.accountIds) {  
+          const profile = await Profile.findOne({ _id: id }).clone();
           if (!profile)
+            continue;
+
+          const account = await Account.findOne({ _id: profile.accountId }).clone();
+          if (!account)
             continue;
   
           map[id] = {

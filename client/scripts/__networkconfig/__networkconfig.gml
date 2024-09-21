@@ -21,24 +21,65 @@ enum network_client_state {
 }
 
 enum status_code {
-	error = 0,
-	success = 1,
-	serverSocketClosed = 2,
-	databaseError = 300,
-	databaseNotConnected = 301,
-	databaseDisable = 302,
-	databaseAccountNotExists = 303,
-	databaseAccountExists = 304,
-	databaseProfileNotExists = 305,
-	databaseProfileExists = 306,
-	databaseUsernameBusy = 307,
-	databaseUsernameWrong = 308,
-	databasePasswordWrong = 309,
-	databaseEmailBusy = 310,
-	databaseEmailWrong = 311,
-	databaseVerificationWrongCode = 312,
-	databaseVerificationTimeout = 313,
-	updateRequired = 426
+	error,
+	success,
+	serverSocketClosed,
+  
+	// Database operations
+	databaseError,
+	databaseNotConnected,
+	databaseDisable,
+  
+	// Account
+	userNotLoggedIn,
+	databaseAccountNotExists,
+	databaseAccountExists,
+	accountWasBanned,
+  
+	// Profile
+	databaseProfileNotExists,
+	databaseProfileExists,
+  
+	// Username
+	databaseUsernameBusy,
+	databaseUsernameWrong,
+	usernameDoesNotComplyWithRules,
+
+	// Nickname
+	databaseNicknameBusy,
+	databaseNicknameWrong,
+	nicknameDoesNotComplyWithRules,
+  
+	// Password
+	databasePasswordWrong,
+	passwordDoesNotComplyWithRules,
+  
+	// E-mail
+	databaseEmailBusy,
+	databaseEmailWrong,
+	emailDoesNotComplyWithRules,
+  
+	// Verification
+	databaseVerificationWrongCode,
+	databaseVerificationTimeout,
+  
+	// Ban
+	databaseBanExists,
+	
+	// Request
+	requestAlreadySent,
+  
+	// Friends
+	databaseFriendNotExists,
+	canNotAddYourselfAsFriend,
+	userIsFriendAlready,
+
+	// Fight
+	canNotFightYourself,
+	userInFightAlready,
+  
+	// Update
+	updateRequired
 }
 
 // Globals
