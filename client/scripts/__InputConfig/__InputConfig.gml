@@ -10,5 +10,7 @@ enum input {
 	anykey,
 	back,
 	fullscreen,
-	debug
+	debug,
+	joytek_horizontal_movements,
+	joytek_vertical_movements
 };

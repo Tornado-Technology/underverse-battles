@@ -5,7 +5,7 @@ function DeviceGamepad() {
 
 function ClassDeviceGamepad() constructor {
 	type = device.gamepad;
-	self.device = 0
+	self.device = 0;
 	
 	static check_pressed = function(button) {
 		return gamepad_button_check_pressed(device, button)
@@ -18,4 +18,10 @@ function ClassDeviceGamepad() constructor {
 	static check_released = function(button) {
 		return gamepad_button_check_released(device, button)
 	}
+	
+	static moving_joystick = function (button) {
+		
+		return gamepad_axis_value(device, button)
+	}
+	
 }
