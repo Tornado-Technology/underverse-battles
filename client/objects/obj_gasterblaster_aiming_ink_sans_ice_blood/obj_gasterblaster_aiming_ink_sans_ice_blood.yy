@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gasterblaster_aiming_ink_ice_blood",
+  "%Name":"obj_gasterblaster_aiming_ink_sans_ice_blood",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gasterblaster_aiming_ink_ice_blood",
+  "name":"obj_gasterblaster_aiming_ink_sans_ice_blood",
   "overriddenProperties":[],
   "parent":{
     "name":"Ice blood",
