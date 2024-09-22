@@ -147,6 +147,15 @@ packet_handler_register("friendRequestReject", function(data) {
 	//requestId
 });
 
+packet_handler_register("friendFightRequestInvite", function(data) {
+	if (data.code == status_code.success && global.fight_instance == noone) {
+		instance_create(obj_ui_request, {
+			username_sender: data.username,
+			type: request_type.fight
+		});
+	}
+});
+
 packet_handler_register("changeNickname", function(data) {
 	if (data.status != status_code.success) {
 		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);

@@ -388,7 +388,9 @@
       "RequestList": "Список запросов",
       "WriteLogin": "Введите логин",
       "SendRequest": "Отправить запрос",
-      "CallFight": "Позвать сразиться"
+      "CallFight": "Позвать сразиться",
+      "InviteToFight": "Пригласить сразиться",
+      "DeleteFromFriends": "Удалить из друзей"
     },
     "AccountOptions": {
       "Title": "Настройки аккаунта",

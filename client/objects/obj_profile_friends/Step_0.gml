@@ -18,7 +18,10 @@ if (input_check_pressed(input.action)) {
 			buttons[button_id].press();
 			break;
 		case 0:
-			// Friend action
+			instance_create(obj_friend_profile, {
+				friend: global.friend_accounts[button_id],
+				index: button_id
+			});
 			break;
 	}
 	

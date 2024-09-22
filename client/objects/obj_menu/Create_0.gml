@@ -19,6 +19,7 @@ enum menu_page {
 	multiplayer_account,
 	account,
 	find_friend,
+	friend_profile,
 	statistics,
 	account_settings,
     account_change_nickname,
@@ -505,6 +506,22 @@ create_page([
 		instance_create(obj_profile_friends);
 	}),
 ], menu_page.find_friend, "Friends.FindFriend", true);
+
+// Friend profile
+create_page([
+	Execute("Friends.InviteToFight", [], function() {
+		send_fight_request();
+	}),
+	Execute("Friends.DeleteFromFriends", [], function() {
+		with (obj_friend_profile) delete_friend();
+		instance_destroy(obj_friend_profile);
+		instance_create(obj_profile_friends);
+	}),
+	Execute("StandardButtons.Back", [], function() {
+		instance_destroy(obj_friend_profile);
+		instance_create(obj_profile_friends);
+	}),
+], menu_page.friend_profile);
 
 // Statistics
 create_page([

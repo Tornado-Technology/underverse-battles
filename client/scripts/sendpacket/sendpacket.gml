@@ -54,7 +54,6 @@ function send_verification(code) {
 
 // @param {Array} account_ids
 function send_get_accounts_info(account_ids) {
-	show_message(account_ids);
 	send("getAccountsInfo", {
 		accountIds: account_ids,
 	});
@@ -83,6 +82,20 @@ function send_friend_request_accept(request_id) {
 function send_friend_request_reject(request_id) {
 	send("friendRequestReject", {
 		requestId: request_id,
+	});
+}
+
+// @param {Real} profile_id
+function send_remove_friend(profile_id) {
+	send("friendListRemove", {
+		targetFinder: { profileId: profile_id }
+	});
+}
+
+// @param {Real} profile_id
+function send_fight_request(profile_id) {
+	send("friendFightRequest", {
+		targetFinder: { profileId: profile_id }
 	});
 }
 
