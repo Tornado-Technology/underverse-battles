@@ -156,6 +156,14 @@ packet_handler_register("friendFightRequestInvite", function(data) {
 	}
 });
 
+packet_handler_register("friendListRemove", function() {
+	if (data.code == status_code.success) {
+		display_show_message_info(translate_get("Menu.Notifications.FriendDeletedSuccessful"), c_lime);
+		return;
+	}
+	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
+});
+
 packet_handler_register("changeNickname", function(data) {
 	if (data.status != status_code.success) {
 		display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.status)), c_red);

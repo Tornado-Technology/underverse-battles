@@ -29,7 +29,7 @@ for (var i = 1; i <= list_size - list_middle; i++) {
 // Buttons
 for (var i = 0; i < button_count; i++) {
 	var button = buttons[i];
-	var new_button_y = button_y + button_step_y * 2 + button_step_y * i;
+	var new_button_y = button_y + button_step_y * i;
 	
 	button.draw(button_x - button.width / 2, new_button_y + button.height / 2);
 }

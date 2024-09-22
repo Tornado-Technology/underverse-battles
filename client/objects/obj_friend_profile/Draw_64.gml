@@ -12,11 +12,11 @@ draw_set_halign(fa_left);
 
 var username_offset = 0;
 if (friend.badge != undefined) {
-	draw_sprite(spr_badges, profile.badge, width_center, 108);
+	draw_sprite(spr_badges, friend.badge, width_center, 108);
 	username_offset += 10;
 }
 
-draw_text_outlined(width_center + username_offset, 100, c_white, c_black, string(account.username));
+draw_text_outlined(width_center + username_offset, 100, c_white, c_black, string(friend.username));
 var rp = friend.rating;
 draw_text_outlined(width_center, 120, c_white, c_black, translate_get("Menu.Statistics.Rating") + ": " + string(rp));
 

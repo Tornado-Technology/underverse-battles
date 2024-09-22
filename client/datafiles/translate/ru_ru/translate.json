@@ -335,6 +335,7 @@
       "EmailSuccessful": "Email изменён успешно",
       "DeleteSuccessful": "Аккаунт удалён успешно",
       "RequestSuccessful": "Запрос отправлен успешно",
+      "FriendDeletedSuccessful": "Вы потеряли друга",
       "RegistrationInvalid": "Регистрация была прервана (ошибка связи)",
       "LoginInvalid": "Вход в аккаунт был прерван (ошибка связи)",
       "ErrorSecondPassword": "Второй пароль не соответствует первому",

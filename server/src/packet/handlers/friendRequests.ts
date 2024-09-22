@@ -9,7 +9,7 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const profileSender = this.profile;
   const profileReceiver = await this.getProfileByAccountFinder(this.data.accountFinder);
 
-  if (String(profileSender._id) === String(profileReceiver._id)) {
+  if (profileSender._id.toString() === profileReceiver._id.toString()) {
     throw statusCode.canNotAddYourselfAsFriend;
   }
 

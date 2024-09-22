@@ -1,4 +1,4 @@
-sprite_index = noone;
+sprite_index = spr_empty;
 
 /* GUI */
 var width = display_get_gui_width();
@@ -166,7 +166,16 @@ change_button_down = function() {
 translate_update = on_translate_update.connect(function() {
 	buttons[0].change_text(translate_get("Menu.Friends.FindFriend"));
 	buttons[1].change_text(translate_get("Menu.StandardButtons.Back"));
-})
+});
+
+open_friend_profile = function() {
+	instance_create(obj_friend_profile, {
+		friend: friends[button_id],
+		index: button_id
+	});
+	obj_menu.goto_page(menu_page.friend_profile);
+	instance_destroy();
+}
 
 draw_name_button = function(_x, _y, color, _id) {
 	if (friend_count <= _id) return;
@@ -181,8 +190,8 @@ draw_name_button = function(_x, _y, color, _id) {
 	var hover = point_in_rectangle_gui(_x, _y, _x + friend.name_width, _y + char_height);
 	if (hover && input_mouse) {
 		if (friend_id == _id) {
-			// Чё то сделать с другом
-			audio_play_sound_plugging(snd_click);
+			open_friend_profile();
+			audio_play_sound_plugging(snd_selection);
 			return;
 		}
 		friend_id = _id;

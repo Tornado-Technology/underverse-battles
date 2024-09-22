@@ -85,17 +85,17 @@ function send_friend_request_reject(request_id) {
 	});
 }
 
-// @param {Real} profile_id
-function send_remove_friend(profile_id) {
+// @param {Real} account_id
+function send_remove_friend(account_id) {
 	send("friendListRemove", {
-		targetFinder: { profileId: profile_id }
+		targetFinder: { id: account_id }
 	});
 }
 
-// @param {Real} profile_id
-function send_fight_request(profile_id) {
+// @param {Real} account_id
+function send_fight_request(account_id) {
 	send("friendFightRequest", {
-		targetFinder: { profileId: profile_id }
+		targetFinder: { id: account_id }
 	});
 }
 

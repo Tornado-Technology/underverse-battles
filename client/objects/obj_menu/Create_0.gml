@@ -481,7 +481,7 @@ create_page([
 // Account
 create_page([
 	Execute("Account.Friends", [], function() {
-		instance_create(obj_profile_friends);
+		instance_create(obj_friends_selection);
 		
 	}),
 	Transfer("Account.Statistics", menu_page.statistics, function() {
@@ -503,23 +503,26 @@ create_page([
 		send_friend_request(friends_inputbox_login.input_box.text);
 	}),
 	Execute("StandardButtons.Back", [], function() {
-		instance_create(obj_profile_friends);
+		instance_create(obj_friends_selection);
 	}),
 ], menu_page.find_friend, "Friends.FindFriend", true);
 
 // Friend profile
 create_page([
 	Execute("Friends.InviteToFight", [], function() {
-		send_fight_request();
+		with (obj_friend_profile) create_fight_request();
+		audio_play_sound_plugging(snd_selection);
 	}),
 	Execute("Friends.DeleteFromFriends", [], function() {
 		with (obj_friend_profile) delete_friend();
 		instance_destroy(obj_friend_profile);
-		instance_create(obj_profile_friends);
+		instance_create(obj_friends_selection);
+		audio_play_sound_plugging(snd_selection);
 	}),
 	Execute("StandardButtons.Back", [], function() {
 		instance_destroy(obj_friend_profile);
-		instance_create(obj_profile_friends);
+		instance_create(obj_friends_selection);
+		audio_play_sound_plugging(snd_selection);
 	}),
 ], menu_page.friend_profile);
 
