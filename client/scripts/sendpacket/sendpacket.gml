@@ -75,7 +75,6 @@ function send_friend_request_accept(request_id) {
 	send("friendRequestAccept", {
 		requestId: request_id,
 	});
-	send_get_accounts_info(requests[request_id].senderId);
 }
 
 // @param {Real} request_id

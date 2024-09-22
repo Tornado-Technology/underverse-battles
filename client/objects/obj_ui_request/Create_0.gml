@@ -12,7 +12,7 @@ shift_y = 19;
 
 alpha = 0;
 
-if (!variable_instance_exists(id, "request_id")) instance_destroy();
+if (!variable_instance_exists(id, "request_id")) request_id = 0;
 if (!variable_instance_exists(id, "username_sender")) username_sender = "*User";
 if (!variable_instance_exists(id, "type")) type = request_type.undefined;
 

@@ -10,11 +10,11 @@ addHandler(new Handler('friendFightRequest', async function(this: IHandlerContex
     throw statusCode.databaseProfileNotExists;
 
   const client = await this.getClientByAccountFinder(finder);
-  if (!client)
-    throw statusCode.error; // not in online
 
   if (client.state !== state.inMenu || this.client.state !== state.inMenu)
     throw statusCode.userInFightAlready;
+
+  this.sendCode(statusCode.success);
 
   client.send('friendFightRequestInvite', {
     code: statusCode.success,
@@ -28,8 +28,6 @@ addHandler(new Handler('friendFightJoin', async function(this: IHandlerContext) 
     throw statusCode.databaseProfileNotExists;
 
   const client = await this.getClientByAccountFinder(finder);
-  if (!client)
-    throw statusCode.error; // not in online
 
   if (client.state !== state.inMenu || this.client.state !== state.inMenu)
     throw statusCode.userInFightAlready;

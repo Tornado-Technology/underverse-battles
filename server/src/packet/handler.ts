@@ -192,6 +192,9 @@ export class HandlerContext implements IHandlerContext {
 
   public async getClientByAccountFinder(finder: IAccountFinder): Promise<Client | undefined> {
     const account = await this.getAccountByFinder(finder);
-    return App.clients.find(client => client.account._id === account._id);
+    const client = App.clients.find(client => client.account._id.toString() === account._id.toString());
+    if (!client) throw statusCode.error;
+
+    return client;
   }
 }

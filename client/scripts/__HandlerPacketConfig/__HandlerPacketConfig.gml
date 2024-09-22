@@ -114,9 +114,8 @@ packet_handler_register("getAccountsInfo", function(data) {
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
-	global.friend_requests = struct_get_values(data.result);
-	// accountId
-	// friendRequest
+	show_message(data.requests);
+	global.friend_requests = struct_get_values(data.requests);
 });
 
 packet_handler_register("friendRequest", function(data) {
@@ -127,24 +126,24 @@ packet_handler_register("friendRequest", function(data) {
 	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
 });
 
+packet_handler_register("friendFightRequest", function(data) {
+	if (data.code == status_code.success) {
+		display_show_message_info(translate_get("Menu.Notifications.RequestSuccessful"), c_lime);
+		return;
+	}
+	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
+});
+
 packet_handler_register("friendRequestInvite", function(data) {
-	array_push(global.friend_requests, struct_get_values(data.data));
+	array_push(global.friend_requests, data.request);
 	
 	if (data.code == status_code.success && global.fight_instance == noone) {
 		instance_create(obj_ui_request, {
-			request_id: data.data._id,
-			username_sender: data.data.sender.username,
+			request_id: data.request._id,
+			username_sender: data.request.sender.username,
 			type: request_type.friend
 		});
 	}
-});
-
-packet_handler_register("friendRequestAccept", function(data) {
-	send_get_accounts_info(requests[requestId].receiverId);
-});
-
-packet_handler_register("friendRequestReject", function(data) {
-	//requestId
 });
 
 packet_handler_register("friendFightRequestInvite", function(data) {
@@ -156,7 +155,15 @@ packet_handler_register("friendFightRequestInvite", function(data) {
 	}
 });
 
-packet_handler_register("friendListRemove", function() {
+packet_handler_register("friendRequestAccept", function(data) {
+	send_get_accounts_info([data.accountId]);
+});
+
+packet_handler_register("friendRequestReject", function(data) {
+	//requestId
+});
+
+packet_handler_register("friendListRemove", function(data) {
 	if (data.code == status_code.success) {
 		display_show_message_info(translate_get("Menu.Notifications.FriendDeletedSuccessful"), c_lime);
 		return;

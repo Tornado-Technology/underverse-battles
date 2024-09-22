@@ -16,26 +16,29 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   if (profileSender.friends.includes(profileReceiver._id))
     throw statusCode.userIsFriendAlready;
 
-  if (await requestExists(profileSender._id, profileReceiver._id))
+  if (await requestExists(profileSender._id, profileReceiver._id) || await requestExists(profileReceiver._id, profileSender._id))
     throw statusCode.requestAlreadySent;
 
   const request = await requestCreate(profileSender._id, profileReceiver._id);
   const data = await requestGetData(request._id);
-  const client = App.clients.find(client => client.profile._id ?? undefined === profileReceiver._id);
 
   this.sendCode(statusCode.success);
 
-  if (!client) return;
+  const client = App.clients.find(client => client.profile?._id.toString() === profileReceiver._id.toString());
+  if (!client) {
+    return;
+  }
   
   client.send('friendRequestInvite', {
     code: statusCode.success,
-    data,
+    request: data,
   });
 }).setFlags(handlerFlags.requireLogging));
 
 addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerContext) {
   const result = {};
-  const requests = await FriendRequest.find({ senderId: this.profile._id });
+  const requests = [];
+  (await FriendRequest.find({ receiverId: this.profile._id })).forEach(element => requests.push(element));
   
   let data = undefined;
   for (const request of requests) {
@@ -54,8 +57,23 @@ addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerConte
 }).setFlags(handlerFlags.requireLogging));
 
 addHandler(new Handler('friendRequestAccept', async function(this: IHandlerContext) {
+  const requestData = await requestGetData(this.data.requestId)
   await requestAccept(this.data.requestId);
-  this.sendCode(statusCode.success);
+  this.send({
+    code: statusCode.success,
+    accountId: requestData.senderId
+  });
+
+  const client = App.clients.find(client => client.profile?._id.toString() === this.data.senderId.toString());
+  if (!client) {
+    return;
+  }
+  
+  client.send('friendRequestAccept', {
+    code: statusCode.success,
+    accountId: requestData.receiverId
+  });
+  
 }).setFlags(handlerFlags.requireLogging).setFallbackCode(statusCode.databaseError));
 
 addHandler(new Handler('friendRequestReject', async function(this: IHandlerContext) {
