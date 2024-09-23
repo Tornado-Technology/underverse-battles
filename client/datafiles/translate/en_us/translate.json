@@ -801,6 +801,7 @@
     "Infected": "Infected",
     "Magenta": "Magenta",
     "Hallowtide": "Hallowtide",
+    "Witch": "Witch",
     "Steampunk": "Steampunk",
 	  "Garland": "Garland",
     "AntiPiracy": "Anti piracy",
@@ -817,7 +818,13 @@
     "Magma": "Magma",
     "OldOutfit": "Old outfit",
     "Magician": "Magician",
-    "IceBlood": "Ice blood"
+    "IceBlood": "Ice blood",
+    "DJ": "DJ",
+    "Detective": "Detective",
+    "Harlequin": "Harlequin",
+    "DreamKeeper": "Dream keeper",
+    "Candy": "Candy",
+    "Scorpion": "Scorpion"
   },
   "Battle": {
     "Target": "Target",

@@ -912,6 +912,7 @@
     "Infected": "Заражённый",
     "Magenta": "Пурпурный",
     "Hallowtide": "Хэллоутайд",
+    "Witch": "Колдун",
     "Steampunk": "Стимпанк",
 	  "Garland": "Гирлянда",
     "AntiPiracy": "Анти пиратство",
@@ -929,7 +930,12 @@
     "OldOutfit": "Старый образ",
     "Magician": "Фокусник",
     "IceBlood": "Ледяная кровь",
-    "DJ": "Диджей"
+    "DJ": "Диджей",
+    "Detective": "Детектив",
+    "Harlequin": "Арлекин",
+    "DreamKeeper": "Хранитель снов",
+    "Candy": "Конфета",
+    "Scorpion": "Скорпион"
   },
   "Battle": {
     "Target": "Цель",
