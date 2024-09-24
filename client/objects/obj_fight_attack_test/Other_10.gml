@@ -27,6 +27,6 @@ switch(state) {
 		break;
 
 	default:
-		logger.warning("Fight update failed, resone: undefined state: \"{0}\".", state);
+		logger.warning($"Fight update failed, resone: undefined state: \"{state}\".");
 		break;
 }

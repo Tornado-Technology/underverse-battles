@@ -6,7 +6,7 @@ on_border_created = function () {
 
 switch (type) {
 	case 0:
-		create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left + 10, battle_border.right + 10);
+		create_border(battle_border.up, battle_border.down, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_slime_hands, {
 			fist: obj_fist_nightmare,
 			drop: obj_drop_nightmare,
