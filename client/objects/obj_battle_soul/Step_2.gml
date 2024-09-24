@@ -1,8 +1,10 @@
 /// @desc Collision & Collider soul
 
-collider_soul.x = x;
-collider_soul.y = y;
-collider_soul.image_angle = image_angle;
+if (instance_exists(collider_soul)) {
+	collider_soul.x = x;
+	collider_soul.y = y;
+	collider_soul.image_angle = image_angle;
+}
 
 var border = obj_battle_border;
 
