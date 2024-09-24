@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_asgore_picnic_standing_right",
+  "%Name":"spr_asgore_picnic_standing_right_sad",
   "bboxMode":2,
   "bbox_bottom":81,
   "bbox_left":0,
@@ -8,6 +8,11 @@
   "bbox_top":67,
   "collisionKind":1,
   "collisionTolerance":0,
+  "ConfigValues":{
+    "Localserver":{
+      "textureGroupId":"{ \"name\":\"Default\", \"path\":\"texturegroups/Default\" }",
+    },
+  },
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
@@ -21,7 +26,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"83e2c4a8-df60-48ee-ab33-d988e3db71bc","blendMode":0,"displayName":"default","isLocked":false,"name":"83e2c4a8-df60-48ee-ab33-d988e3db71bc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_asgore_picnic_standing_right",
+  "name":"spr_asgore_picnic_standing_right_sad",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -33,7 +38,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_asgore_picnic_standing_right",
+    "%Name":"spr_asgore_picnic_standing_right_sad",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +62,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_asgore_picnic_standing_right",
+    "name":"spr_asgore_picnic_standing_right_sad",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +74,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d1982b8-d221-4d9d-b8f7-d8ce8844f1b5","path":"sprites/spr_asgore_picnic_standing_right/spr_asgore_picnic_standing_right.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d1982b8-d221-4d9d-b8f7-d8ce8844f1b5","path":"sprites/spr_asgore_picnic_standing_right_sad/spr_asgore_picnic_standing_right_sad.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"16ad5d1d-4504-4904-bd73-caa1c0394038","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
