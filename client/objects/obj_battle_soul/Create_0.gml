@@ -26,6 +26,9 @@ border_force_y = 0;
 
 movement_delta_min = 0.01;
 
+has_reverse_x = false;
+has_reverse_y = false;
+
 // Actions
 follow_board = false;
 ability = false;

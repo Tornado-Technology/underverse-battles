@@ -249,7 +249,7 @@ cutscenes = [
 			})
 		}],
 		[cutscene_object_set_position, asgore, 163, 3013],
-		[cutscene_object_set_sprite, asgore, spr_asgore_picnic_standing_right],
+		[cutscene_object_set_sprite, asgore, spr_asgore_picnic_standing_right_sad],
 		[cutscene_object_set_position, undyne, 206, 3039],
 		[cutscene_object_set_sprite, undyne, spr_undyne_picnic_standing_up],
 		[cutscene_object_set_position, alphys, 241, 3010],

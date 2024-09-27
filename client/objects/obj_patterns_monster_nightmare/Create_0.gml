@@ -6,13 +6,9 @@ i = 0;
 callback = function() {
 	var offset_x = 200;
 	var offset_end_x = 30;
-	var player = fight_get_player(nightmare_side);
 	
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
-
-	if (player.index != CHARACTER_ID.NIGHTMARE) {
-		nightmare_side++;	
-	}
+	soul_instance.has_reverse_x = !nightmare_side;
 	
 	var position_x = !nightmare_side ? border_instance.x - border_instance.left - offset_x  : border_instance.x + border_instance.right + offset_x;
 	var position_x_end = !nightmare_side ? border_instance.x - border_instance.left - offset_end_x : border_instance.x + border_instance.right + offset_end_x;
@@ -41,8 +37,8 @@ update = function() {
 		i = 0;	
 	}
 	
-	last_bone_top = create_bone(border_instance.x + border_instance.right + 10, border_instance.y - border_instance.up, bone, speed_bone, 1, 180, 180);
-	last_bone_bottom = create_bone(border_instance.x + border_instance.right + 10, border_instance.y + border_instance.down, bone, speed_bone, 1, 180, 0);
+	last_bone_top = create_bone(position_x, border_instance.y - border_instance.up, bone, speed_bone, 1, direction_bone, 180);
+	last_bone_bottom = create_bone(position_x, border_instance.y + border_instance.down, bone, speed_bone, 1, direction_bone, 0);
 	last_bone_top.spinning = false;
 	last_bone_bottom.spinning = false;
 	

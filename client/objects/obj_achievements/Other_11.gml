@@ -1,4 +1,4 @@
-/// @desc Checker
+/// @desc  Fight checker
 
 if (global.fight_instance == noone) exit;
 if (global.fight_instance.story_mode) exit;
@@ -44,6 +44,26 @@ if (hp <= 0) {
 		
 		case obj_character_green:
 			achievement_give(achievement_id.defeat_green);
+			break;
+		
+		case obj_character_dream:
+			achievement_give(achievement_id.defeat_dream);
+			break;
+		
+		case obj_character_nightmare:
+			achievement_give(achievement_id.defeat_nightmare);
+			break;
+		
+		case obj_character_papyrus:
+			achievement_give(achievement_id.defeat_papyrus);
+			break;
+		
+		case obj_character_xanastasia:
+			achievement_give(achievement_id.defeat_xanastasia);
+			break;
+		
+		case obj_character_jevil:
+			achievement_give(achievement_id.defeat_jevil);
 			break;
 	}
 	
