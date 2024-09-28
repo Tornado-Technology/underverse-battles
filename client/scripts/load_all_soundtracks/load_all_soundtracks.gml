@@ -21,8 +21,10 @@ function load_all_soundtracks() {
 	
 	// Deltarune
 	Soundtrack(snd_attack_of_the_killer_queen, "Attack of The Killer Queen", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.deltarune);
+	Soundtrack(snd_jevils_circus, "Jevil Circus", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.deltarune);
 	Soundtrack(snd_rude_buster, "Rude Buster", "Marsilies", "Underverse Battles OST", universe.deltarune);
 	Soundtrack(snd_the_biggest_shot, "THE BIGGEST SHOT", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.deltarune);
+	Soundtrack(snd_the_world_revolving, "The World Revolving", "NyxTheShield OFFICIAL", "Remix by NyxTheShield", universe.deltarune);
 	
 	// Misc
 	Soundtrack(snd_burning_in_hell, "Burning in Hell", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.no);
