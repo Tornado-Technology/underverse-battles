@@ -36,7 +36,7 @@ switch (type) {
 		pattern_instance = create_pattern(obj_pattern_bones_and_drops, {
 			bone:  obj_bone_nightmare_ice_cream,
 			drop: obj_bullets_nightmare_ice_cream,
-			tentacles: obj_tentacle_destroy_back_nightmare_ice_cream,
+			tentacle: obj_tentacle_destroy_back_nightmare_ice_cream,
 			slime: obj_slime_nightmare_ice_cream
 		});
 	break;

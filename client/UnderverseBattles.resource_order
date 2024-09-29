@@ -20,5 +20,10 @@
     {"name":"spr_living_stone","order":1,"path":"sprites/spr_living_stone/spr_living_stone.yy",},
     {"name":"spr_special_attack_ink_sans_locked","order":1,"path":"sprites/spr_special_attack_ink_sans_locked/spr_special_attack_ink_sans_locked.yy",},
     {"name":"spr_ui_request","order":1,"path":"sprites/spr_ui_request/spr_ui_request.yy",},
+    {"name":"spr_voodoo_head_dream","order":1,"path":"sprites/spr_voodoo_head_dream/spr_voodoo_head_dream.yy",},
+    {"name":"spr_voodoo_head_jevel","order":5,"path":"sprites/spr_voodoo_head_jevel/spr_voodoo_head_jevel.yy",},
+    {"name":"spr_voodoo_head_nightmare","order":2,"path":"sprites/spr_voodoo_head_nightmare/spr_voodoo_head_nightmare.yy",},
+    {"name":"spr_voodoo_head_papyrus","order":3,"path":"sprites/spr_voodoo_head_papyrus/spr_voodoo_head_papyrus.yy",},
+    {"name":"spr_voodoo_head_xanastasia","order":4,"path":"sprites/spr_voodoo_head_xanastasia/spr_voodoo_head_xanastasia.yy",},
   ],
 }
