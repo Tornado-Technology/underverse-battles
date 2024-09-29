@@ -7,7 +7,7 @@ speed_const = 2;
 start_position_x = target_obj.position_x;
 start_position_y = target_obj.position_y;
 is_destroying = false;
-image_yscale = 6;
+image_yscale = 4;
 
 moving_ink = true;
 time_create_ink = 100;
