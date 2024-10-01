@@ -1,12 +1,9 @@
 event_inherited();
 
-if (is_teleportation) {
-	image_xscale = approach(image_xscale, 0, step_teleportion * dtime);
-	image_alpha = approach(image_alpha, 0, step_teleportion * dtime);
-} else {	
-	image_xscale = approach(image_xscale, start_xsacle, step_teleportion * dtime);
-	image_alpha = approach(image_alpha, 1, step_teleportion * dtime);
-}
+var alpha = is_teleportation ? 0 : 1;
+
+image_alpha = approach(image_alpha, alpha, step_teleportion * dtime);
+
 
 if (global.fight_instance == noone || player_num == -1) {
 	exit;
