@@ -5,7 +5,7 @@ bscore = 0;
 
 bspeed = 2.5;
 btime = 0;
-btime_max = 200;
+btime_max = 180;
 
 cspeed = 4;
 ctime = 0;
