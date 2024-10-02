@@ -344,13 +344,13 @@ create_page([
 }
 // Debug rooms
 create_page([
-	Execute("Fight Test", [], function() {
+	Execute("DebugRooms.FightTest", [], function() {
 		room_goto(room_fight_test);
 	}),
-	Execute("Cutscene Test", [], function() {
+	Execute("DebugRooms.CutsceneTest", [], function() {
 		room_goto(room_cutscene_test);
 	}),
-	Execute("UI Test", [], function() {
+	Execute("DebugRooms.GUITest", [], function() {
 		room_goto(room_ui_test);
 	}),
 	Transfer("StandardButtons.Back", menu_page.main),

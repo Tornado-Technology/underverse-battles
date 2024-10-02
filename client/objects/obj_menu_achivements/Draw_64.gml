@@ -18,7 +18,7 @@ var arror_sprite_height = sprite_get_height(spr_ui_arrow) / 2;
 var arror_position_x = width - 60;
 
 if (shift > -25) {
-	var arror_position_y = surface_cord.y + 22;
+	var arror_position_y = surface_cord.y + 25;
 	
 	draw_sprite(spr_ui_arrow, 0, arror_position_x, arror_position_y);
 	
@@ -29,8 +29,8 @@ if (shift > -25) {
 	}
 }
 
-if (shift < size * 60 - 200) {
-	var arror_position_y = surface_cord.y + surface_size.y - 22;
+if (shift < size * offset - 200) {
+	var arror_position_y = surface_cord.y + surface_size.y - 25;
 	
 	draw_sprite_ext(spr_ui_arrow, 0, arror_position_x, arror_position_y, 1, 1, 180, c_white, 1);
 	
@@ -48,7 +48,7 @@ draw_clear_alpha(c_white, 0);
 #region Surface
 for (var ach = 0; ach < size; ach++) {
 	var achievement = global.__achievement_list[ach];
-	var text_y = 60 * ach - shift;
+	var text_y = offset * ach - shift;
 	
 	if (text_y - 20 > surface_size.y) continue;
 	

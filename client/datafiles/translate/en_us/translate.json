@@ -481,6 +481,11 @@
           }
         }
       }
+    },
+    "DebugRooms": {
+      "FightTest": "Fight Test",
+      "CutsceneTest": "Cutscene Test",
+      "GUITest": "GUI Test"
     }
   },
   "Credits": {
@@ -498,11 +503,6 @@
     "YouTubers": "YOUTUBERS AND STREAMERS",
     "SpecialThanks": "SPECIAL THANKS",
     "AndYou": "And YOU, player"
-  },
-  "DebugRooms": {
-    "FightTest": "Fight Test",
-    "CutsceneTest": "Cutscene Test",
-    "GUITest": "GUI Test"
   },
   "Character": {
     "Empty": {

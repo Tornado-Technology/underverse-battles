@@ -481,6 +481,11 @@
           }
         }
       }
+    },
+    "DebugRooms": {
+      "FightTest": "Тестирование Битв",
+      "CutsceneTest": "Тестирование Катсцен",
+      "GUITest": "Тестирование GUI"
     }
   },
   "Credits": {
@@ -498,11 +503,6 @@
     "YouTubers": "ЮТЮБЕРЫ И СТРИМЕРЫ",
     "SpecialThanks": "ОСОБАЯ БЛАГОДАРНОСТЬ",
     "AndYou": "и ТЕБЕ, игрок"
-  },
-  "DebugRooms": {
-    "FightTest": "Тестирование Битв",
-    "CutsceneTest": "Тестирование Катсцен",
-    "GUITest": "Тестирование GUI"
   },
   "Character": {
     "Empty": {
