@@ -8,21 +8,28 @@ const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
+export enum RequestType {
+  friend,
+  fight
+}
+
 export interface IFriendRequest extends Document {
-  senderId: ObjectId;
-  receiverId: ObjectId;
+  senderId: ObjectId,
+  receiverId: ObjectId,
+  type: RequestType,
   date: Date,
 }
 
 const schema = new Schema({
   senderId: { type: Schema.Types.ObjectId, ref: profileModelName },
   receiverId: { type: Schema.Types.ObjectId, ref: profileModelName },
+  type: { type: Schema.number, ref: 0},
   date: { type: Date, default: Date.now },
 }, {
   collection: 'friendRequests',
 });
 
-export interface  IFriendRequestActorData {
+export interface IFriendRequestActorData {
   username: string,
   date: Date,
   online: boolean,
@@ -35,6 +42,7 @@ export interface  IFriendRequestActorData {
 
 export interface IFriendRequestData {
   _id: ObjectId,
+  type: RequestType,
   senderId: ObjectId;
   receiverId: ObjectId;
   date: Date,
@@ -62,6 +70,7 @@ export const requestGetData = async (id: string): Promise<IFriendRequestData> =>
   const request = await FriendRequest.findById(id);
   const result = {
     _id: request._id,
+    type: request.type,
     senderId: request.senderId,
     receiverId: request.receiverId,
     date: request.date,
@@ -72,10 +81,11 @@ export const requestGetData = async (id: string): Promise<IFriendRequestData> =>
   return result;
 }
 
-export const requestCreate = async (senderId: string, receiverId: string): Promise<IFriendRequest> => {
+export const requestCreate = async (senderId: string, receiverId: string, type: RequestType): Promise<IFriendRequest> => {
   const request = new FriendRequest({
     senderId,
     receiverId,
+    type
   });
   
   await request.save();

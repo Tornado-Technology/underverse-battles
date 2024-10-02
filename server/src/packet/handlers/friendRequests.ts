@@ -1,5 +1,5 @@
 import App from '../../app.js';
-import { FriendRequest, requestAccept, requestGetData, requestReject, requestCreate, requestExists } from '../../database/schemas/friendRequest.js';
+import { RequestType, FriendRequest, requestAccept, requestGetData, requestReject, requestCreate, requestExists } from '../../database/schemas/friendRequest.js';
 import { statusCode } from '../../status.js';
 import Logger from '../../util/logging.js';
 import { addHandler } from '../handleStuff.js';
@@ -19,8 +19,14 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   if (await requestExists(profileSender._id, profileReceiver._id) || await requestExists(profileReceiver._id, profileSender._id))
     throw statusCode.requestAlreadySent;
 
-  const request = await requestCreate(profileSender._id, profileReceiver._id);
+  const request = await requestCreate(profileSender._id, profileReceiver._id, this.data.type);
   const data = await requestGetData(request._id);
+
+  if (this.data.type === RequestType.fight) {
+    setTimeout(() => {
+      requestReject(request._id);
+    }, 10_000);
+  }
 
   this.sendCode(statusCode.success);
 
@@ -59,15 +65,16 @@ addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerConte
 addHandler(new Handler('friendRequestAccept', async function(this: IHandlerContext) {
   const requestData = await requestGetData(this.data.requestId)
   await requestAccept(this.data.requestId);
-  this.send({
-    code: statusCode.success,
-    accountId: requestData.senderId
-  });
 
   const client = App.clients.find(client => client.profile?._id.toString() === this.data.senderId.toString());
   if (!client) {
     return;
   }
+
+  this.send({
+    code: statusCode.success,
+    accountId: requestData.senderId
+  });
   
   client.send('friendRequestAccept', {
     code: statusCode.success,

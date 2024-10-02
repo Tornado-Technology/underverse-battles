@@ -114,7 +114,6 @@ packet_handler_register("getAccountsInfo", function(data) {
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
-	show_message(data.requests);
 	global.friend_requests = struct_get_values(data.requests);
 });
 
@@ -156,11 +155,20 @@ packet_handler_register("friendFightRequestInvite", function(data) {
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
-	send_get_accounts_info([data.accountId]);
+	if (data.type == request_type.friend) {
+		send_get_accounts_info([data.accountId]);
+	}
+	if (data.type == request_type.fight) {
+		global.fight_key = data._id;
+		instance_create(obj_menu_multiplayer_characters, {
+			is_private_fight: true
+		});
+	}
+	display_show_message_info("Request accepted", c_lime);
 });
 
 packet_handler_register("friendRequestReject", function(data) {
-	//requestId
+	display_show_message_info("Request rejected", c_red);
 });
 
 packet_handler_register("friendListRemove", function(data) {

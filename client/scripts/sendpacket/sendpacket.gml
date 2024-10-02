@@ -60,9 +60,10 @@ function send_get_accounts_info(account_ids) {
 }
 
 // @param {String} username
-function send_friend_request(_username) {
+function send_friend_request(username, type) {
 	send("friendRequest", {
-		accountFinder: {username: _username},
+		accountFinder: {username: username},
+		type: type
 	});
 }
 
@@ -87,13 +88,6 @@ function send_friend_request_reject(request_id) {
 // @param {Real} account_id
 function send_remove_friend(account_id) {
 	send("friendListRemove", {
-		targetFinder: { id: account_id }
-	});
-}
-
-// @param {Real} account_id
-function send_fight_request(account_id) {
-	send("friendFightRequest", {
 		targetFinder: { id: account_id }
 	});
 }
@@ -135,11 +129,22 @@ function send_password_retrieval(identifier, password) {
 	});
 }
 
+/// @param {Real} type
 /// @param {Real} character_id
 /// @param {Real} skin_id
 function send_fight_join(type, character_id, skin_id) { 
     send("fightJoin", {
 		matchType: type,
+		characterId: character_id,
+		skinId: skin_id,
+	});
+}
+
+/// @param {Real} character_id
+/// @param {Real} skin_id
+function send_private_fight_join(character_id, skin_id) { 
+    send("fightPrivateJoin", {
+		privateKey: global.fight_key,
 		characterId: character_id,
 		skinId: skin_id,
 	});
@@ -151,6 +156,10 @@ function send_fight_joined() {
 
 function send_fight_join_reject() {
     send("fightJoinReject");
+}
+
+function send_private_fight_join_reject() {
+    send("fightPrivateJoinReject");
 }
 
 /// @param {Real} action

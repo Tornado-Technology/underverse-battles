@@ -5,6 +5,7 @@ import Client, { state } from '../concepts/client/client.js';
 import { statusCode } from '../status.js';
 import { versions } from '../config.js';
 import Matchmaker from '../util/matchmaker.js';
+import MatchmakerPrivate from '../util/matchmakerPrivate.js';
 import Logger from '../util/logging.js';
 import { hashPassword } from '../util/encrypting.js';
 import { infoValidate, validatePassword, validateUsername, validateNickname } from '../database/validation.js';
@@ -334,6 +335,37 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
     case 'fightJoinReject':
       Matchmaker.removeWaiting(client);
+      client.setState(state.inMenu);
+      break;
+
+    case 'fightPrivateJoin':
+      try {
+
+        if (!client.account || !client.verified) {
+          client.sendFightJoin(statusCode.userNotLoggedIn, undefined);
+          Logger.info('Fight join failed, client not logged in');
+          break;
+        }
+        if (!MatchmakerPrivate.tryAddWaiting(client, data.privateKey)) {
+          client.sendFightJoin(statusCode.userInFightAlready, undefined);
+          break;
+        }
+
+        client.fight.setCharacter(data.characterId, data.skinId);
+        
+        await MatchmakerPrivate.makeMatch(data.privateKey);
+      } catch (error) {
+        client.setState(state.inMenu);
+        client.sendFightJoin(statusCode.error, undefined);
+
+        MatchmakerPrivate.removeWaiting(client);
+
+        Logger.info(`Fight join failed, reason: ${error.stack}`);
+      }
+      break;
+    
+    case 'fightPrivateJoinReject':
+      MatchmakerPrivate.removeWaiting(client);
       client.setState(state.inMenu);
       break;
 

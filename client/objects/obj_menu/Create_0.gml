@@ -500,7 +500,7 @@ friends_inputbox_login = InputBox("Friends.WriteLogin");
 create_page([
 	friends_inputbox_login,
 	Execute("StandardButtons.Apply", [], function() {
-		send_friend_request(friends_inputbox_login.input_box.text);
+		send_friend_request(friends_inputbox_login.input_box.text, request_type.friend);
 	}),
 	Execute("StandardButtons.Back", [], function() {
 		instance_create(obj_friends_selection);

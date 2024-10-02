@@ -19,6 +19,7 @@
     {"name":"spr_achivement_defeat_xanastasia","order":5,"path":"sprites/spr_achivement_defeat_xanastasia/spr_achivement_defeat_xanastasia.yy",},
     {"name":"spr_achivement_potassium_overdose","order":6,"path":"sprites/spr_achivement_potassium_overdose/spr_achivement_potassium_overdose.yy",},
     {"name":"spr_asgore_picnic_standing_right_sad","order":1,"path":"sprites/spr_asgore_picnic_standing_right_sad/spr_asgore_picnic_standing_right_sad.yy",},
+    {"name":"spr_bone_spinning_fell_sans","order":1,"path":"sprites/spr_bone_spinning_fell_sans/spr_bone_spinning_fell_sans.yy",},
     {"name":"spr_living_stone","order":1,"path":"sprites/spr_living_stone/spr_living_stone.yy",},
     {"name":"spr_special_attack_ink_sans_locked","order":1,"path":"sprites/spr_special_attack_ink_sans_locked/spr_special_attack_ink_sans_locked.yy",},
     {"name":"spr_ui_request","order":1,"path":"sprites/spr_ui_request/spr_ui_request.yy",},

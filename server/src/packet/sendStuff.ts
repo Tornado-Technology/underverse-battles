@@ -9,7 +9,6 @@ import Packet from './packet.js';
 import App from '../app.js';
 import { statusCode } from '../status.js';
 import config from '../config.js';
-import { isObject } from '../util/deepMerge.js';
 
 const generateNickname = (): string => {
   return `Player${Math.randomRange(0, 1000)}`;

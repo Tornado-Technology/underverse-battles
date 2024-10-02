@@ -13,6 +13,7 @@ import Logger from '../../util/logging.js';
 import App from '../../app.js';
 import Rank from '../../data/rank.js';
 import Matchmaker from '../../util/matchmaker.js';
+import MatchmakerPrivate from '../../util/matchmakerPrivate.js';
 
 export enum socketType {
   tcp = 'tcp',
@@ -110,6 +111,7 @@ export default class Client extends SendStuff {
   public async onDisconnect(status: statusCode): Promise<void> {
     Logger.info(`${this} disconnected: ${status}`);
     Matchmaker.removeWaiting(this);
+    MatchmakerPrivate.removeWaiting(this);
 
     await this.fight.leave();
     await this.save();

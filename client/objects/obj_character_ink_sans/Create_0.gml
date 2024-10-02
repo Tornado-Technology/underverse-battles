@@ -5,7 +5,7 @@ name	    = translate_get("Character.InkSans.Name");
 description = translate_get("Character.InkSans.Description");
 bio			= translate_get("Character.InkSans.Bio");
 universe	= "Outer code";
-creator		= "Myebi";
+creator		= "Comyet";
 
 // HP
 max_hp = 100;

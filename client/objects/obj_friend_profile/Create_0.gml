@@ -4,7 +4,7 @@ if (!variable_instance_exists(id, "friend")) friend = noone;
 if (!variable_instance_exists(id, "index")) index = 0;
 
 create_fight_request = function() {
-	send_fight_request(friend.accountId);
+	send_friend_request(friend.accountId, request_type.fight);
 }
 
 delete_friend = function() {
