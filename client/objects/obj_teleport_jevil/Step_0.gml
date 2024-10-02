@@ -2,7 +2,6 @@ image_index = sprite_frame;
 image_alpha = alpha;
 
 image_xscale = approach(image_xscale, start_xscalse, step * dtime);
-
 sprite_frame = approach(sprite_frame, 1, step * dtime);	
 
 if(sprite_frame == 1 && !be_spwan) {
@@ -16,6 +15,7 @@ if(sprite_frame == 1 && !be_spwan) {
 if (draw_shadow) { 
 	part_system_position(particle, x + offset, y);
 	part_system_color(particle, c_white, alpha_shadow);
+	part_system_depth(particle, depth + 10);
 }
 
 if (destroy) {

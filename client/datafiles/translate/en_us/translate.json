@@ -209,10 +209,6 @@
       "Description": ""
     }
   },
-  "Request": {
-    "Friend": "wants to add you as a friend",
-    "Fight": "challenges you to a fight"
-  },
   "Menu": {
     "Main": {
       "SingleBattle": "Single Battle",
@@ -278,7 +274,6 @@
       "No": "No",
       "Cancel": "Cancel",
       "Accept": "Accept",
-      "Reject": "Reject",
       "Apply": "Apply",
       "Back": "Back"
     },
@@ -294,7 +289,9 @@
       "Battle1v1": "Start a battle",
       "RatingMode": "Rating mode",
       "PlayOpenWorld": "Go to Omega Timeline",
-      "Account": "Account",
+      "Statistics": "Statistics",
+      "AccountOptions": "Account options",
+      "LogOut": "Log out",
       "SuccessfulLogOut": "You have successfully logged out",
       "Matchmaking": "Matchmaking",
       "NoPlayers": "There are no players looking for a match. You can wait or cancel the search."
@@ -375,23 +372,6 @@
         "31": "You can't fight with yourself",
         "32": "The user is already in battle"
       }
-    },
-    "Account": {
-      "Title": "Account",
-      "Friends": "Friends",
-      "Statistics": "Statistics",
-      "AccountOptions": "Account options",
-      "LogOut": "Log out"
-    },
-    "Friends": {
-      "Title": "Friends",
-      "NoFriends": "You have no friends",
-      "FindFriend": "Find a friend",
-      "RequestList": "List of requests",
-      "WriteLogin": "Write username",
-      "SendRequest": "Send request",
-      "InviteToFight": "Invite to fight",
-      "DeleteFromFriends": "Remove from friends"
     },
     "AccountOptions": {
       "Title": "Account options",
@@ -727,23 +707,28 @@
     },
     "Dream": {
       "Name": "Dream",
-      "Description": "Guardian of positive feelings",
+      "Description": "The guardian of positive feelings",
       "Bio": "Dream was born out of light by Nim, The Guardian of The Tree of Feelings, to guard The Tree after her death. Dream embodies an essense of positive energy in a skeleton shell of Swap!Sans. Once his brother, Nightmare, accidently plagued The Tree's fruits with negative energy, Dream had to seal the last remaining fruit inside himself, thus making it his soul. Dream is very kind, polite, and always ready to help those who's in need. He's Ink's friend and partner in protecting the Multiverse.",
       "PassiveSkill": {
         "Name": "Good spirits",
-        "Description": "Each time Dream is undamaged in a turn, he gets +10% Special Attack charge" },
+        "Description": "Each time Dream is undamaged in a turn, he gets +10% Special Attack charge"
+      },
       "Attack0": {
         "Name": "Star staff",
-        "Description": "Attack with stars, that fly towards the enemy and deal damage" },
+        "Description": "Attack with stars, that fly towards the enemy and deal damage"
+      },
       "Attack1": {
         "Name": "Daggers",
-        "Description": "Two daggers swinging and dealing damage" },
+        "Description": "Two daggers swinging and dealing damage"
+      },
       "Attack2": {
         "Name": "Dream's bow",
-        "Description": "Arrows that aim the enemy and may ricochet" },
+        "Description": "Arrows that aim the enemy and may ricochet"
+      },
       "SpecialAttack": {
         "Name": "Positive commitment",
-        "Description": "Arrows that break on impact with arena into stars flying in all directions" }
+        "Description": "Arrows that break on impact with arena into stars flying in all directions"
+      }
     },
     "Nightmare": {
       "Name": "Nightmare",
@@ -751,19 +736,24 @@
       "Bio": "Nightmare was born out of dark by The Guardian of The Tree of Feelings to protect the negative half of The Tree. In his world of Dreamtale Nightmare was believed to be the harbinger of calamities and bullied for it by humans and monsters. In his attempts to prove them wrong, that he's still capable of good actions, Nightmare grabbed a golden apple, thus turning it in total black, as well as all the other fruits on The Tree. Negative feelings then flooded all over the people of Dreamtale. Appaled, Nightmare started eating the dark fruits, turning himself into essense of the dark matter. Nightmare is a cunning and violent evil. He's able to manipulate beings using his negative emotional control. You shouldn't deal with him.",
       "PassiveSkill": {
         "Name": "Negative commitment",
-        "Description": "Taking damage grants Nightmare the same amount of special attack charge" },
+        "Description": "Taking damage grants Nightmare the same amount of special attack charge"
+      },
       "Attack0": {
         "Name": "Tenticles",
-        "Description": "Tenticles that move across arena and deal damage" },
+        "Description": "Tenticles that move across arena and deal damage"
+      },
       "Attack1": {
         "Name": "Negativity spikes",
-        "Description": "Spikes emerging from arena's borders and dealing damage" },
+        "Description": "Spikes emerging from arena's borders and dealing damage"
+      },
       "Attack2": {
         "Name": "Slime",
-        "Description": "Dark substance that takes various forms to attack soul" },
+        "Description": "Dark substance that takes various forms to attack soul"
+      },
       "SpecialAttack": {
         "Name": "Rage",
-        "Description": "Nightmare grows huge, pursuing soul and reaching it with slimy hands. Also a ravine of bones spawns on arena" }
+        "Description": "Nightmare grows huge, pursuing soul and reaching it with slimy hands. Also a ravine of bones spawns on arena"
+      }
     },
     "Papyrus": {
       "Name": "Papyrus",
@@ -771,19 +761,24 @@
       "Bio": "Sans's little brother from Undertale universe. Wants to be cool and popular, and he's putting his entire backbone into it. Loves cooking, especially with Undyne. Has got his own red car. Papyrus is an open-minded monster, albeit a bit of a dork, but he's always ready to stand up for his friends and family. He believes that there is always something good in every human and monster.",
       "PassiveSkill": {
         "Name": "Damage resistance",
-        "Description": "Papyrus only takes up to 10 damage from each hit" },
+        "Description": "Papyrus only takes up to 10 damage from each hit"
+      },
       "Attack0": {
         "Name": "Bones",
-        "Description": "Bones aiming soul and dealing damage" },
+        "Description": "Bones aiming soul and dealing damage"
+      },
       "Attack1": {
         "Name": "Bones and blue bones",
-        "Description": "Attack with common bones и blue bones, that damage soul only when it's moving" },
+        "Description": "Attack with common bones и blue bones, that damage soul only when it's moving"
+      },
       "Attack2": {
         "Name": "Spinning bones",
-        "Description": "Spinning bones aiming soul" },
+        "Description": "Spinning bones aiming soul"
+      },
       "SpecialAttack": {
         "Name": "Cool Dude",
-        "Description": "Huge amount of complex bone attacks with a wide leap over bones at the end" }
+        "Description": "Huge amount of complex bone attacks with a wide leap over bones at the end"
+      }
     },
     "Frisk": {
       "Name": "Frisk",
@@ -791,19 +786,24 @@
       "Bio": "",
       "PassiveSkill": {
         "Name": "",
-        "Description": "" },
+        "Description": ""
+      },
       "Attack0": {
         "Name": "",
-        "Description": "" },
+        "Description": ""
+      },
       "Attack1": {
         "Name": "",
-        "Description": "" },
+        "Description": ""
+      },
       "Attack2": {
         "Name": "",
-        "Description": "" },
+        "Description": ""
+      },
       "SpecialAttack": {
         "Name": "",
-        "Description": "" }
+        "Description": ""
+      }
     },
     "XAnastasia": {
       "Name": "XAnastasia",
@@ -811,19 +811,24 @@
       "Bio": "She was XGaster's own test creation, but didn't satisfy him, and thus was left in his data compilation.",
       "PassiveSkill": {
         "Name": "Manueverability",
-        "Description": "XAnastasia's soul moves faster and jumps higher when in blue mode." },
+        "Description": "XAnastasia's soul moves faster and jumps higher when in blue mode."
+      },
       "Attack0": {
         "Name": "Feathers",
-        "Description": "Sharpened feathers that aim for soul" },
+        "Description": "Sharpened feathers that aim for soul"
+      },
       "Attack1": {
         "Name": "Swords",
-        "Description": "Attack using swords that deal damage" },
+        "Description": "Attack using swords that deal damage"
+      },
       "Attack2": {
         "Name": "Scythe",
-        "Description": "A scythe that swing and deal damage" },
+        "Description": "A scythe that swing and deal damage"
+      },
       "SpecialAttack": {
         "Name": "Fleet-winged",
-        "Description": "Soul leaps upwards, getting attacked by feathers, swords and scythe" }
+        "Description": "Soul leaps upwards, getting attacked by feathers, swords and scythe"
+      }
     },
     "Jevil": {
       "Name": "Jevil",
@@ -831,19 +836,24 @@
       "Bio": "Dark being from Deltarune universe. Jevil is interested in spreading chaos to the maximum extent. Before going insane, he was The King of Spades' court jester. But after meeting a strange man, his views were changed. He started treating life as a game, and all around as being caged in it. Jevil is a crazed evil not to be dealt with.",
       "PassiveSkill": {
         "Name": "Power of CHAOS",
-        "Description": "When under 40 HP, Jevil get a random (up to 8) amount of Magic after each turn" },
+        "Description": "When under 40 HP, Jevil get a random (up to 8) amount of Magic after each turn"
+      },
       "Attack0": {
         "Name": "Bombs of CHAOS",
-        "Description": "Bombs that scatter card suits on exploding" },
+        "Description": "Bombs that scatter card suits on exploding"
+      },
       "Attack1": {
         "Name": "Suits",
-        "Description": "Card suits flying and dealing damage" },
+        "Description": "Card suits flying and dealing damage"
+      },
       "Attack2": {
         "Name": "Scythe of CHAOS",
-        "Description": "Scythe of Chaos that spins and deals damage" },
+        "Description": "Scythe of Chaos that spins and deals damage"
+      },
       "SpecialAttack": {
         "Name": "Three-staged CHAOS",
-        "Description": "A three-staged attack. First stage — carousel, second — scythes and card suits, third — scythes and bombs" }
+        "Description": "A three-staged attack. First stage — carousel, second — scythes and card suits, third — scythes and bombs"
+      }
     },
     "Tornado": {
       "Name": "Tornado",
@@ -1610,12 +1620,6 @@
       ],
       "MTT_Shop_2": [
         "Closed."
-      ],
-      "LivingStone_1": [
-        "This stone is deliberately preventing you from passing."
-      ],
-      "LivingStone_2": [
-        "You can't move this stone."
       ],
       "Muffin": [
         "Beautiful muffins with purple frosting are on display."

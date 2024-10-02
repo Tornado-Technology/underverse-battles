@@ -29,5 +29,5 @@ hand_down_right_animation = spr_sansa_claus_attack_2_down_right;
 hand_left_right_animation = spr_sansa_claus_attack_2_left_right;
 
 // Soundtrack
-soundtrack_name = "Megalovania \n         Christmas"; 
+soundtrack_name = "Megalovania Christmas"; 
 soundtrack = snd_megalovania_christmas;

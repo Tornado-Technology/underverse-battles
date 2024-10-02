@@ -1,6 +1,6 @@
 event_inherited();
 // Base
-index = 7.1;
+index = CHARACTER_ID.CROSS_XEVENT;
 name	    = translate_get("Character.CrossXEvent.Name");
 description = translate_get("Character.CrossXEvent.Description");
 bio			= translate_get("Character.CrossXEvent.Bio");

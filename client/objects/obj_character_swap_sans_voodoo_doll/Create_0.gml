@@ -30,17 +30,8 @@ head_swap_papyrus_sprite = spr_voodoo_head_swap_papyrus;
 head_cross_sprite = spr_voodoo_head_cross;
 head_xchara_sprite = spr_voodoo_head_xchara;
 head_green_sprite = spr_voodoo_head_green;
-head_dream_sprite = spr_voodoo_head_dream;
-head_nightmare_sprite = spr_voodoo_head_nightmare;
-head_papyrus_sprite = spr_voodoo_head_papyrus;
-head_xanastasia_sprite = spr_voodoo_head_xanastasia;
-head_jevel_sprite = spr_voodoo_head_jevel;
 
-head_sprites = [
-	head_ink_sprite, head_error_sprite, head_sans_sprite, head_fell_sans_sprite, head_swap_sans_sprite,
-	head_swap_papyrus_sprite, head_xchara_sprite, head_cross_sprite, head_green_sprite, head_dream_sprite,
-	head_nightmare_sprite, head_papyrus_sprite, head_xanastasia_sprite, head_jevel_sprite
-];
+head_sprites = [head_ink_sprite, head_error_sprite, head_sans_sprite, head_fell_sans_sprite, head_swap_sans_sprite, head_swap_papyrus_sprite, head_xchara_sprite, head_cross_sprite, head_green_sprite];
 current_head_sprite = spr_empty;
 
 // Method
@@ -48,8 +39,8 @@ current_head_sprite = spr_empty;
 add_head = function() {
 	if (global.fight_instance == noone || player_num == -1) exit;
 	var character_index = global.fight_instance.player[1 - player_num].index;
-	if (character_index < 0 || character_index >= array_length(head_sprites)) exit;
-	current_head_sprite = head_sprites[floor(character_index)];
+	if (character_index < 0 && character_index >= array_length(head_sprites)) exit;
+	current_head_sprite = head_sprites[character_index];
 	head_x_offset = player_num == 0 ? head_x_offset_max : -head_x_offset_max;
 	image_xscale = player_num == 0 ? 1 : -1;
 }

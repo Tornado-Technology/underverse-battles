@@ -8,5 +8,4 @@ draw_set_color(make_color_rgb(75, 0, 0));
 draw_rectangle(camera_x, camera_y, camera_x + obj_camera.view_width, camera_y + obj_camera.view_height, false);
 
 gpu_set_blendmode(bm_normal);
-
 draw_reset();

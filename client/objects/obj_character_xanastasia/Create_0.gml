@@ -1,5 +1,5 @@
 event_inherited();
-index = 12;
+index = CHARACTER_ID.XANASTASIA;
 name	    = translate_get("Character.XAnastasia.Name");
 description = translate_get("Character.XAnastasia.Description");
 bio			= translate_get("Character.XAnastasia.Bio");
@@ -27,7 +27,7 @@ max_mana = 100;
 soul = spr_battle_soul;
 has_soul_changeable_parameters = true;
 soul_custom_speed = 2;
-soul_custom_fly_time = 7;
+soul_custom_jump_time = 7;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Standard");

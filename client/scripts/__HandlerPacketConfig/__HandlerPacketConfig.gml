@@ -114,6 +114,7 @@ packet_handler_register("getAccountsInfo", function(data) {
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
+	show_message(data.requests);
 	global.friend_requests = struct_get_values(data.requests);
 });
 

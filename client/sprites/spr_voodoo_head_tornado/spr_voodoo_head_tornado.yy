@@ -23,7 +23,7 @@
   ],
   "name":"spr_voodoo_head_tornado",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Heads",
     "path":"folders/Characteres/Swap Sans/Sprites/Char/Voodoo Doll/Heads.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":7,
+    "xorigin":6,
     "yorigin":15,
   },
   "swatchColours":null,
