@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2ad43259-16d7-42e7-a29b-6088dfe04c98","name":"2ad43259-16d7-42e7-a29b-6088dfe04c98","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"23e22bd6-e32e-49b7-a8ca-bb8169584ebb","name":"23e22bd6-e32e-49b7-a8ca-bb8169584ebb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"606f2cb6-0b7f-48ca-b2b0-8bf0874dfe77","blendMode":0,"displayName":"default","isLocked":false,"name":"606f2cb6-0b7f-48ca-b2b0-8bf0874dfe77","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"4850b06b-da6e-4556-9c10-c7266486a62c","blendMode":0,"displayName":"default","isLocked":false,"name":"4850b06b-da6e-4556-9c10-c7266486a62c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_special_attack_x_anastasia_locked",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2ad43259-16d7-42e7-a29b-6088dfe04c98","path":"sprites/spr_special_attack_x_anastasia_locked/spr_special_attack_x_anastasia_locked.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"aa291f2f-8b29-4bf1-856c-c295088d2d3c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23e22bd6-e32e-49b7-a8ca-bb8169584ebb","path":"sprites/spr_special_attack_x_anastasia_locked/spr_special_attack_x_anastasia_locked.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7efb1b62-e8d0-49b3-bfbc-2d81dffdc6cb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

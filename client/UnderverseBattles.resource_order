@@ -10,6 +10,8 @@
     {"name":"failed_registration","order":2,"path":"scripts/failed_registration/failed_registration.yy",},
     {"name":"invalid_registration","order":3,"path":"scripts/invalid_registration/invalid_registration.yy",},
     {"name":"struct_get_values","order":1,"path":"scripts/struct_get_values/struct_get_values.yy",},
+    {"name":"snd_bow_shot","order":2,"path":"sounds/snd_bow_shot/snd_bow_shot.yy",},
+    {"name":"snd_magic","order":3,"path":"sounds/snd_magic/snd_magic.yy",},
     {"name":"spr_achivement_defeat_dream","order":1,"path":"sprites/spr_achivement_defeat_dream/spr_achivement_defeat_dream.yy",},
     {"name":"spr_achivement_defeat_jevil","order":4,"path":"sprites/spr_achivement_defeat_jevil/spr_achivement_defeat_jevil.yy",},
     {"name":"spr_achivement_defeat_nightmare","order":2,"path":"sprites/spr_achivement_defeat_nightmare/spr_achivement_defeat_nightmare.yy",},

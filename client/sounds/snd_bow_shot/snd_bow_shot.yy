@@ -1,0 +1,30 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bow_shot",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":64,
+  "compression":1,
+  "ConfigValues":{
+    "Development":{
+      "audioGroupId":"{ \"name\":\"sound\", \"path\":\"audiogroups/sound\" }",
+    },
+  },
+  "conversionMode":0,
+  "duration":0.262245,
+  "name":"snd_bow_shot",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":32000,
+  "soundFile":"snd_bow_shot.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -8,6 +8,8 @@ time_source_shot = time_source_create(time_source_game, shot_time, time_source_u
 	if (!instance_exists(arrow_instance)) exit;
 	arrow_instance.move = true;	
 	time_source_start(time_source_bow_destroy);
+	
+	audio_play_sound_plugging(snd_bow_shot);
 });
 
 time_source_bow_destroy = time_source_create(time_source_game, destroy_time, time_source_units_seconds, function() {	

@@ -38,6 +38,9 @@ spwan_shards = function () {
 		
 		i++;
 	}
+	
+	audio_play_sound_plugging(snd_wing);
+	audio_play_sound(snd_magic, 2, false, 1, 0, 2);
 }
 
 
