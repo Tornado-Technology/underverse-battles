@@ -9,11 +9,11 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const profileSender = this.profile;
   const profileReceiver = await this.getProfileByAccountFinder(this.data.accountFinder);
 
-  if (profileSender._id.toString() === profileReceiver._id.toString()) {
+  if (this.data.type === RequestType.friend && profileSender._id.toString() === profileReceiver._id.toString()) {
     throw statusCode.canNotAddYourselfAsFriend;
   }
 
-  if (profileSender.friends.includes(profileReceiver._id))
+  if (this.data.type === RequestType.friend && profileSender.friends.includes(profileReceiver._id))
     throw statusCode.userIsFriendAlready;
 
   if (await requestExists(profileSender._id, profileReceiver._id) || await requestExists(profileReceiver._id, profileSender._id))
