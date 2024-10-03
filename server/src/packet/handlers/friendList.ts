@@ -15,8 +15,10 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     throw statusCode.databaseFriendNotExists;
 
   this.profile.friends.splice(index, 1);
+  profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
   
   await this.profile.save();
+  await profile.save();
 
   this.sendCode(statusCode.success);
 }).setFlags(handlerFlags.requireLogging));

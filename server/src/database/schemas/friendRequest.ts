@@ -109,15 +109,15 @@ export const requestExists = async function(senderId: string, receiverId: string
   return Boolean(await FriendRequest.exists({ senderId, receiverId }));
 }
 
-export const requestAccept = async function(_id: ObjectId | string): Promise<void> {
+export const friendRequestAccept = async function(_id: ObjectId | string): Promise<void> {
   const
     req: IFriendRequest = await FriendRequest.findById(_id);
-  await Profile.findByIdAndUpdate(req.senderId, { $push: { friends: req.senderId } });
-  await Profile.findByIdAndUpdate(req.receiverId, { $push: { friends: req.receiverId  } });
+  await Profile.findByIdAndUpdate(req.senderId, { $push: { friends: req.receiverId } });
+  await Profile.findByIdAndUpdate(req.receiverId, { $push: { friends: req.senderId  } });
   await req.deleteOne();
 }
 
-export const requestReject = async function(requestId: ObjectId | string): Promise<void> {
+export const removeRequest = async function(requestId: ObjectId | string): Promise<void> {
   await FriendRequest.findByIdAndDelete(requestId);
 }
 

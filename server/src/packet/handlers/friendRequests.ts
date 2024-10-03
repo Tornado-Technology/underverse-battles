@@ -1,5 +1,5 @@
 import App from '../../app.js';
-import { RequestType, FriendRequest, requestAccept, requestGetData, requestReject, requestCreate, requestExists } from '../../database/schemas/friendRequest.js';
+import { RequestType, FriendRequest, friendRequestAccept, requestGetData, removeRequest, requestCreate, requestExists } from '../../database/schemas/friendRequest.js';
 import { statusCode } from '../../status.js';
 import Logger from '../../util/logging.js';
 import { addHandler } from '../handleStuff.js';
@@ -24,7 +24,7 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
 
   if (this.data.type === RequestType.fight) {
     setTimeout(() => {
-      requestReject(request._id);
+      removeRequest(request._id);
     }, 10_000);
   }
 
@@ -63,8 +63,13 @@ addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerConte
 }).setFlags(handlerFlags.requireLogging));
 
 addHandler(new Handler('friendRequestAccept', async function(this: IHandlerContext) {
-  const requestData = await requestGetData(this.data.requestId)
-  await requestAccept(this.data.requestId);
+  const requestData = await requestGetData(this.data.requestId);
+
+  if (requestData.type === RequestType.friend) {
+    await friendRequestAccept(this.data.requestId);
+  } else {
+    await removeRequest(this.data.requestId);
+  }
 
   const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
@@ -86,6 +91,6 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
 }).setFlags(handlerFlags.requireLogging).setFallbackCode(statusCode.databaseError));
 
 addHandler(new Handler('friendRequestReject', async function(this: IHandlerContext) {
-  await requestReject(this.data.requestId);
+  await removeRequest(this.data.requestId);
   this.sendCode(statusCode.success);
 }).setFlags(handlerFlags.requireLogging).setFallbackCode(statusCode.databaseError));
