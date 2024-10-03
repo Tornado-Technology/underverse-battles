@@ -78,6 +78,7 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
   
   client.send('friendRequestAccept', {
     code: statusCode.success,
+    type: requestData.type,
     accountId: requestData.receiverId
   });
   
