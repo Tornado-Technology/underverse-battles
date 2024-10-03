@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 export enum RequestType {
+  undefined,
   friend,
   fight
 }

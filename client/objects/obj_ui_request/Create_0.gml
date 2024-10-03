@@ -1,7 +1,7 @@
 enum request_type {
-	undefined = 0,
-	friend = 1,
-	fight = 2,
+	undefined,
+	friend,
+	fight,
 }
 
 sprite_index = noone;
