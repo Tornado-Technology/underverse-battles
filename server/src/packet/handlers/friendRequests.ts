@@ -66,13 +66,14 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
   const requestData = await requestGetData(this.data.requestId)
   await requestAccept(this.data.requestId);
 
-  const client = App.clients.find(client => client.profile?._id.toString() === this.data.senderId.toString());
+  const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
     return;
   }
 
   this.send({
     code: statusCode.success,
+    type: requestData.type,
     accountId: requestData.senderId
   });
   
