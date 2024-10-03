@@ -47,8 +47,14 @@ export default class MatchmakerPrivate {
   }
 
   public static async makeMatch(key: string): Promise<void> {
+    const type = matchType.common_1vs1;
     const array = this.matches.get(key);
-    Matchmaker.makeMatch(matchType.common_1vs1, array[0], array[1]);
+
+    if (array.length < 2) {
+      return;
+    }
+
+    Matchmaker.makeMatch(type, array[0], array[1]);
 
     this.matches.delete(key);
     this.keys.delete(array[0]);

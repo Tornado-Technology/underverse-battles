@@ -5,6 +5,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_friend_profile","order":1,"path":"objects/obj_friend_profile/obj_friend_profile.yy",},
     {"name":"obj_npc_living_stone","order":1,"path":"objects/obj_npc_living_stone/obj_npc_living_stone.yy",},
+    {"name":"delete_all_auxiliary_menu_objects","order":1,"path":"scripts/delete_all_auxiliary_menu_objects/delete_all_auxiliary_menu_objects.yy",},
     {"name":"display_show_message_status_code","order":1,"path":"scripts/display_show_message_status_code/display_show_message_status_code.yy",},
     {"name":"failed_registration_reason_second_password","order":1,"path":"scripts/failed_registration_reason_second_password/failed_registration_reason_second_password.yy",},
     {"name":"failed_registration","order":2,"path":"scripts/failed_registration/failed_registration.yy",},

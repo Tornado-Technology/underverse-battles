@@ -16,8 +16,8 @@ export default class Matchmaker {
   private static matches = new Map<matchType, Array<Client>>();
   private static types = new Map<Client, matchType>();
 
-  private static waitingTime = 3_000;
-  private static requiredPlayerCount = {
+  protected static waitingTime = 3_000;
+  protected static requiredPlayerCount = {
     common_1vs1: 2,
     rating_1vs1: 4,
     tournament_1vs1: 2,
@@ -25,7 +25,7 @@ export default class Matchmaker {
     rating_2vs2: 8,
     tournament_2vs2: 4
   };
-  private static fightPlayerCount = {
+  protected static fightPlayerCount = {
     common_1vs1: 2,
     rating_1vs1: 2,
     tournament_1vs1: 2,

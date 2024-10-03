@@ -1628,6 +1628,7 @@
     {"id":{"name":"data_save_protected","path":"scripts/data_save_protected/data_save_protected.yy",},},
     {"id":{"name":"data_save","path":"scripts/data_save/data_save.yy",},},
     {"id":{"name":"data_set","path":"scripts/data_set/data_set.yy",},},
+    {"id":{"name":"delete_all_auxiliary_menu_objects","path":"scripts/delete_all_auxiliary_menu_objects/delete_all_auxiliary_menu_objects.yy",},},
     {"id":{"name":"destroy_battle_object_by_edit","path":"scripts/destroy_battle_object_by_edit/destroy_battle_object_by_edit.yy",},},
     {"id":{"name":"DeviceGamepad","path":"scripts/DeviceGamepad/DeviceGamepad.yy",},},
     {"id":{"name":"DeviceKeyboard","path":"scripts/DeviceKeyboard/DeviceKeyboard.yy",},},

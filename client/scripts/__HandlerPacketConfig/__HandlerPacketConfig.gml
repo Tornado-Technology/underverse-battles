@@ -151,6 +151,7 @@ packet_handler_register("friendRequestAccept", function(data) {
 	}
 	if (data.request.type == request_type.fight) {
 		global.fight_key = data.request._id;
+		delete_all_auxiliary_menu_objects();
 		instance_create(obj_menu_multiplayer_characters, {
 			is_private_fight: true
 		});
