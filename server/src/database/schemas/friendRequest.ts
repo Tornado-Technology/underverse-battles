@@ -23,7 +23,7 @@ export interface IFriendRequest extends Document {
 const schema = new Schema({
   senderId: { type: Schema.Types.ObjectId, ref: profileModelName },
   receiverId: { type: Schema.Types.ObjectId, ref: profileModelName },
-  type: { type: Schema.number, ref: 0},
+  type: { type: Number, default: 0 },
   date: { type: Date, default: Date.now },
 }, {
   collection: 'friendRequests',
