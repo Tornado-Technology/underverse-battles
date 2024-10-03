@@ -140,26 +140,17 @@ packet_handler_register("friendRequestInvite", function(data) {
 		instance_create(obj_ui_request, {
 			request_id: data.request._id,
 			username_sender: data.request.sender.username,
-			type: request_type.friend
-		});
-	}
-});
-
-packet_handler_register("friendFightRequestInvite", function(data) {
-	if (data.code == status_code.success && global.fight_instance == noone) {
-		instance_create(obj_ui_request, {
-			username_sender: data.username,
-			type: request_type.fight
+			type: data.request.type
 		});
 	}
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
-	if (data.type == request_type.friend) {
+	if (data.request.type == request_type.friend) {
 		send_get_accounts_info([data.accountId]);
 	}
-	if (data.type == request_type.fight) {
-		global.fight_key = data._id;
+	if (data.request.type == request_type.fight) {
+		global.fight_key = data.request._id;
 		instance_create(obj_menu_multiplayer_characters, {
 			is_private_fight: true
 		});

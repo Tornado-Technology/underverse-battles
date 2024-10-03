@@ -80,13 +80,13 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
 
   this.send({
     code: statusCode.success,
-    type: requestData.type,
+    request: requestData,
     accountId: requestData.senderId
   });
   
   client.send('friendRequestAccept', {
     code: statusCode.success,
-    type: requestData.type,
+    request: requestData,
     accountId: requestData.receiverId
   });
   
