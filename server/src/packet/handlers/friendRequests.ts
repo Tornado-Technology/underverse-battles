@@ -44,7 +44,9 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
 addHandler(new Handler('friendRequestGetAll', async function(this: IHandlerContext) {
   const result = {};
   const requests = [];
-  (await FriendRequest.find({ receiverId: this.profile._id })).forEach(element => requests.push(element));
+  (await FriendRequest.find({ receiverId: this.profile._id })).forEach(element => {
+    if (element.type === RequestType.friend) requests.push(element);
+  });
   
   let data = undefined;
   for (const request of requests) {
