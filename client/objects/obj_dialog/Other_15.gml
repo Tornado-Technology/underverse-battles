@@ -69,7 +69,7 @@ set_frame("Nightmare", "normal", spr_nightmare_frame);
 set_frame("Nightmare", "glad", spr_nightmare_frame_glad);
 // Dream
 set_frame("Dream", "none", spr_empty);
-set_frame("Dream", "normal", spr_dream_frame);
+set_frame("Dream", "normal", spr_dream_sight_dreams_frame);
 set_frame("Dream", "afraid", spr_dream_frame_afraid);
 // Undyne (picnic)
 set_frame("UndynePicnic", "normal", spr_undyne_picnic_frame);

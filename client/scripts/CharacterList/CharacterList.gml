@@ -80,7 +80,8 @@ function CharacterList() {
 			new Character(obj_character_swap_papyrus, "SwapPapyrus", "Standard", spr_swap_papyrus_frame),
 			new Character(obj_character_swap_papyrus_christmas, "SwapPapyrus", "Christmas", spr_swap_papyrus_frame_christmas),
 			new Character(obj_character_swap_papyrus_changed_reality, "SwapPapyrus", "ChangedReality", spr_swap_papyrus_frame_changed_reality),
-			new Character(obj_character_swap_papyrus_robber, "SwapPapyrus", "Robber", spr_swap_papyrus_robber_frame)
+			new Character(obj_character_swap_papyrus_robber, "SwapPapyrus", "Robber", spr_swap_papyrus_robber_frame),
+			new Character(obj_character_swap_papyrus_candy, "SwapPapyrus", "Candy", spr_swap_papyrus_candy_frame)
 		],
 		[
 			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
@@ -96,6 +97,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_dream, "Dream", "Standard", spr_dream_frame),
+			new Character(obj_character_dream_sight_dreams, "Dream", "DreamKeeper", spr_dream_sight_dreams_frame),
 		],
 		[
 			new Character(obj_character_nightmare, "Nightmare", "Standard", spr_nightmare_frame),
@@ -117,6 +119,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_jevil, "Jevil", "Standard", spr_jevil_frame),
+			new Character(obj_character_jevil_harlequin, "Jevil", "Harlequin", spr_jevil_harlequin_frame),
 		]
 	];
 	// Unfinished characters
