@@ -25,6 +25,15 @@ function jevil_attack2(player, _power, type = fight_random_integer(0, 2)) {
 	});
 }
 
+function jevil_harlequin_attack1(player, _power, type = fight_random_integer(0, 3)) {
+	player.play_snd_being_attack();
+	instance_create(obj_attack_jevil_harlequin_1, {
+		character_instance: player,
+		_power: _power,
+		type: type,
+	});
+}
+
 function jevil_special_attack(player) {
 	instance_create(obj_attack_jevil_special, {
 		character_instance: player

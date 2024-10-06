@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teleport_jevil_1",
+  "%Name":"obj_attack_jevil_harlequin_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_teleport_jevil_1",
+  "name":"obj_attack_jevil_harlequin_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bullets",
-    "path":"folders/Characteres/Jevil/Bullets.yy",
+    "name":"harlequin",
+    "path":"folders/Characteres/Jevil/Attacks/harlequin.yy",
   },
   "parentObjectId":{
-    "name":"obj_battle_bullet",
-    "path":"objects/obj_battle_bullet/obj_battle_bullet.yy",
+    "name":"obj_attack",
+    "path":"objects/obj_attack/obj_attack.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_jevil_teleport",
-    "path":"sprites/spr_jevil_teleport/spr_jevil_teleport.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
