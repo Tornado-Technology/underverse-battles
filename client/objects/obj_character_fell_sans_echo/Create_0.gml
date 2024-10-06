@@ -8,6 +8,7 @@ frame = spr_fell_sans_echo_frame;
 idle_animation = spr_fell_sans_echo_idle;
 after_battle_animation =  spr_fell_sans_echo_idle;
 defeated_animation =  spr_fell_sans_echo_defeated;
+defeated_animation_last_image = spr_fell_sans_echo_defeated_last_image;
 
 hand_up_animation = spr_fell_sans_echo_attack_2_up;
 hand_down_up_animation = spr_fell_sans_echo_attack_2_down_up;

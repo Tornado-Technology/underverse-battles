@@ -1,5 +1,4 @@
 event_inherited();
 
-if (sprite_index == spr_fell_sans_murderer_defeated) {
-	sprite_index = spr_fell_sans_murderer_defeated_last_image;
-}
+if (sprite_index == defeated_animation)
+	sprite_index = defeated_animation_last_image;

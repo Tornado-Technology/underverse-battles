@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_character_xchara_magma",
+  "%Name":"obj_character_xchara_scorpion",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_character_xchara_magma",
+  "name":"obj_character_xchara_scorpion",
   "overriddenProperties":[],
   "parent":{
     "name":"Skins",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_xchara_magma_idle",
-    "path":"sprites/spr_xchara_magma_idle/spr_xchara_magma_idle.yy",
+    "name":"spr_xchara_scorpion_idle",
+    "path":"sprites/spr_xchara_scorpion_idle/spr_xchara_scorpion_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

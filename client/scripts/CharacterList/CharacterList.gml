@@ -87,6 +87,7 @@ function CharacterList() {
 			new Character(obj_character_xchara, "XtaleChara", "Standard", spr_xchara_frame),
 			new Character(obj_character_xchara_xmas, "XtaleChara", "Xmas", spr_xchara_frame_xmas),
 			new Character(obj_character_xchara_magma, "XtaleChara", "Magma", spr_xchara_magma_frame),
+			new Character(obj_character_xchara_scorpion, "XtaleChara", "Scorpion", spr_xchara_scorpion_frame),
 		],
 		[
 			new Character(obj_character_cross, "Cross", "Standard", spr_cross_frame),
