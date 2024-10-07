@@ -13,7 +13,7 @@ acc = 0;
 spwan_obj = obj_ink_bomb_ink_sans;
 
 spwan = function() {
-	var angle_offset = fight_random_integer(0, 360);
+	var angle_offset = image_angle - 180;
 	var radius = sprite_width;
 	var	spwan_x = dcos(angle_offset) * radius;
 	var	spwan_y = -dsin(angle_offset) * radius;

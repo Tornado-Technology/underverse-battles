@@ -1,7 +1,6 @@
 event_inherited();
 
-universe	= "Undertale: Promised";
-creator		= "AleAtorio3Dw";
+universe = "Undertale: Promised";
 
 // Skins
 skin_name = translate_get("CharactersStyles.Promised");

@@ -9,12 +9,9 @@ draw_set_font(global._font_main_determination);
 draw_set_halign(fa_center);
 draw_text_outlined(width / 2, 10, c_white, c_black, title);
 
-button_cancel.draw(width / 2, 220);
-
-draw_set_font(global._font_main_determination);
+// Ready players count
 draw_set_halign(fa_center);
-draw_set_color(c_white);
-draw_text(width / 2, 100, $"Ready players: {player_count}");
+draw_text_outlined(width / 2, 100, c_white, c_black, translate_get("Menu.Multiplayer.ReadyPlayers") + $": {player_count}");
 
 button_cancel.draw(width / 2, 220);
 

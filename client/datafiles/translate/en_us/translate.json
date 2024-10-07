@@ -297,6 +297,7 @@
       "Account": "Account",
       "SuccessfulLogOut": "You have successfully logged out",
       "Matchmaking": "Matchmaking",
+      "ReadyPlayers": "Ready players",
       "NoPlayers": "There are no players looking for a match. You can wait or cancel the search."
     },
     "SignUp": {
