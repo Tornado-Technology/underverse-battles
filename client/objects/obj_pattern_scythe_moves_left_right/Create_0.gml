@@ -3,9 +3,12 @@ callback = function() {
 	
 	var position_x = border_instance.x - border_instance.left - 50;
 	var position_y = border_instance.y;
+	
+	var sctyhe_speed = 3 + _power * 0.1;
 		
 	var scythe_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, scythe, {
-		speed_count: 3 + _power * 0.1	
+		speed_count: sctyhe_speed,
+		rotation_speed_const: sctyhe_speed
 	});
 	
 	scythe_instance.moving_arena(border_instance.x, border_instance._inst_frame_up.sprite_width);
@@ -33,12 +36,7 @@ update = function() {
 		position = new Vector2(position_x, position_y == border_instance.y - border_instance.up - 40 ? border_instance.y + border_instance.down - 40 : border_instance.y - border_instance.up + 40);
 		angle = point_direction(position_x, position_y, position_x, border_instance.y);
 	};
-	
-	var sctyhe_speed = 3 + _power * 0.1;
-	var feathers_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, feathers, {
-		speed_count: sctyhe_speed,
-		rotating_speed_count: sctyhe_speed,
-	});
+	var feathers_instance = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, feathers);
 	
 	feathers_instance._target_angle = angle;
 }

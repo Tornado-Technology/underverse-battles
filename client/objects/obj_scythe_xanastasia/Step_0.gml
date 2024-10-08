@@ -11,9 +11,10 @@ if (come_back) {
 			x = approach(x, position_x, speed_count * dtime);
 			y = approach(y, position_y, speed_count * dtime);
 		
-			if(x == position_x && y == position_y) {
-				move_come_back = true;		
-			}
+				if(x == position_x && y == position_y) {
+					move_come_back = true;		
+				}
+			
 			} else {
 			motion_set(moving_come_back, speed_count * dtime);
 			come_back = false;
