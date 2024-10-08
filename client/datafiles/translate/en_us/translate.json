@@ -337,6 +337,8 @@
       "EmailSuccessful": "E-mail changed successfully",
       "DeleteSuccessful": "Account deleted successfully",
       "RequestSuccessful": "Request sent successfully",
+      "RequestAccepted": "Request accepted",
+      "RequestRejected": "Request rejected",
       "FriendDeletedSuccessful": "You have lost a friend",
       "RegistrationInvalid": "Registration invalid (connect error)",
       "LoginInvalid": "Account login invalid (connect error)",
@@ -374,7 +376,8 @@
         "29": "This user is already your friend",
         "30": "This user does not exist",
         "31": "You can't fight with yourself",
-        "32": "The user is already in battle"
+        "32": "The user is already in battle",
+        "33": "This user is offline"
       }
     },
     "Account": {
@@ -459,16 +462,16 @@
       "MobileControls": {
         "Description": "Here you can set a position and size of controlers. Click on the controler to change",
         "Position": "Position",
-        "TypeController": "Type controller",
+        "TypeController": "Сontroller type",
         "Size": "Size",
         "Ready": "Ready",
         "Elements": {
           "Joystick": {
             "Name": "Joystick"
           },
-		   "Arrow" : {
-			 "Name": "Arrow"
-		  },
+          "Arrow": {
+            "Name": "Arrow"
+          },
           "Buttons": {
             "X": {
               "Name": "Button X"

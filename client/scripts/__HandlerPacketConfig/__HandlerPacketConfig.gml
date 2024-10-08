@@ -157,11 +157,11 @@ packet_handler_register("friendRequestAccept", function(data) {
 			is_private_fight: true
 		});
 	}
-	display_show_message_info("Request accepted", c_lime);
+	display_show_message_info("Menu.Notifications.RequestAccepted", c_lime);
 });
 
 packet_handler_register("friendRequestReject", function(data) {
-	display_show_message_info("Request rejected", c_red);
+	display_show_message_info("Menu.Notifications.RequestRejected", c_red);
 });
 
 packet_handler_register("friendListRemove", function(data) {

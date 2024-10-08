@@ -137,6 +137,34 @@
     "Immortality": {
       "Name": "不朽",
       "Description": "击败恢复的HP总量超过最大HP的任一敌人"
+    },
+    "DefeatDream": {
+    "Name": "暗终笼罩一切",
+    "Description": "击败Dream"
+    },
+    "DefeatNightmare": {
+      "Name": "与光明同在！",
+      "Description": "击败Nightmare"
+    },
+    "DefeatPapyrus": {
+      "Name": "出发",
+      "Description": "击败Papyrus"
+    },
+    "DefeatXAnastasia": {
+      "Name": "折断翅膀",
+      "Description": "击败XAnastasia"
+    },
+    "DefeatJevil": {
+      "Name": "命令！命令！",
+      "Description": "击败Jevil"
+    },
+    "PotassiumOverdose": {
+      "Name": "补钾过量",
+      "Description": "在“拿 香 蕉”小游戏中得到500分"
+    },
+    "OurTeamIsInvincible": {
+      "Name": "吾队战无不胜",
+      "Description": "在故事中的排球比赛里，为Papyrus队赢得9分"
     }
   },
   "Backgrounds": {
@@ -152,6 +180,10 @@
       "Name": "森林公园（冬）",
       "Description": ""
     },
+    "UnderfellSnowdin": {
+      "Name": "Underfell Snowdin",
+      "Description": ""
+    },
     "DeltaruneBattle": {
       "Name": "Deltarune战斗场景",
       "Description": ""
@@ -161,7 +193,7 @@
       "Description": ""
     },
     "Jevil": {
-      "Name": "   ",
+      "Name": "     ",
       "Description": ""
     },
     "DoodleSphere": {
@@ -176,6 +208,10 @@
       "Name": "决心提取机",
       "Description": ""
     }
+  },
+  "Request": {
+    "Friend": "想添加你为好友",
+    "Fight": "向你发起了战斗"
   },
   "Menu": {
     "Main": {
@@ -242,6 +278,7 @@
       "No": "否",
       "Cancel": "取消",
       "Accept": "接受",
+      "Reject": "拒绝",
       "Apply": "应用",
       "Back": "返回"
     },
@@ -255,12 +292,12 @@
       "SuccessfulReconnection": "已成功重连",
       "FailedReconnection": "无法与服务器连接",
       "Battle1v1": "开始一场战斗",
+      "RatingMode": "排位赛",
       "PlayOpenWorld": "转到Omega时间线",
-      "Statistics": "统计数据",
-      "AccountOptions": "账号设置",
-      "LogOut": "登出",
+      "Account": "账户",
       "SuccessfulLogOut": "您已成功登出",
       "Matchmaking": "Chara祈祷中...",
+      "ReadyPlayers": "准备就绪的球员",
       "NoPlayers": "没有玩家在寻找比赛。你可以等待或取消搜索。"
     },
     "SignUp": {
@@ -291,36 +328,74 @@
       "WritePassword": "输入新的密码"
     },
     "Notifications": {
-      "UpdateRequired": "您需要下载最新版本才能多人游戏",
-      "RegistrationSuccessful": "注册成功! 现在你可以登录了。",
-      "LoginSuccessful": "账号登录成功!",
-      "UsernameSuccessful": "用户名 已成功修改",
-      "NicknameSuccessful": "昵称 已成功修改",
-      "PasswordSuccessful": "密码 已成功修改",
-      "EmailSuccessful": "E-mail地址 已成功修改",
-      "DeleteSuccessful": "账号 已成功删除",
-      "RegistrationInvalid": "注册无效(连接错误)",
-      "LoginInvalid": "帐号登录无效(连接错误)",
-      "ErrorSecondPassword": "第二个密码与第一个密码不一致",
+      "UpdateRequired": "您需要更新为最新版本才能游玩多人模式",
+      "RegistrationSuccessful": "注册成功！现在您可以登录了",
+      "LoginSuccessful": "账户登录成功！",
+      "UsernameSuccessful": "已成功更改用户名",
+      "NicknameSuccessful": "已成功更改昵称",
+      "PasswordSuccessful": "已成功更改密码",
+      "EmailSuccessful": "已成功更改E-mail地址",
+      "DeleteSuccessful": "已成功删除账户",
+      "RequestSuccessful": "已成功发送请求",
+      "RequestAccepted": "注册已接受",
+      "RequestRejected": "请求被拒绝",
+      "FriendDeletedSuccessful": "删除好友成功",
+      "RegistrationInvalid": "注册无效（连接错误）",
+      "LoginInvalid": "账户登录无效（连接错误）",
+      "ErrorSecondPassword": "第二次输入的密码与第一次的不符",
       "Error": {
-        "0": "0. 未知错误",
-        "1": "1. 成功",
-        "2": "2. 连接接口已关闭",
-        "300": "300. 未知错误",
-        "301": "301. 未连接到数据库",
-        "302": "302. 数据库未在运行",
-        "303": "303. 账号不存在",
-        "304": "304. 账号已存在",
-        "305": "305. 资料不存在",
-        "306": "306. 资料已存在",
-        "307": "307. 用户名繁忙",
-        "308": "308. 用户名不符合规则",
-        "309": "309. 密码错误",
-        "310": "310. E-mail地址不存在",
-        "311": "311. E-mail地址不符合规则",
-        "312": "312. 验证码错误",
-        "313": "313. 验证超时"
+        "0": "未知错误",
+        "1": "成功",
+        "2": "连接已关闭",
+        "3": "来自数据库的未知错误",
+        "4": "无法连接数据库",
+        "5": "数据库未运行",
+        "6": "您未登录",
+        "7": "该账户不存在",
+        "8": "该账户已存在",
+        "9": "该账户已被封禁",
+        "10": "账户信息不存在",
+        "11": "账户信息已存在",
+        "12": "该用户名已被使用",
+        "13": "该用户名已被禁止使用",
+        "14": "该用户名书写不符合规则",
+        "15": "该昵称已存在",
+        "16": "该昵称已被禁止使用",
+        "17": "该昵称书写不符合规则",
+        "18": "密码错误",
+        "19": "密码不符合规则",
+        "20": "该E-mail地址已存在",
+        "21": "该E-mail地址已被禁止使用",
+        "22": "E-mail地址不符合规则",
+        "23": "验证码错误",
+        "24": "验证超时",
+        "25": "该账户已被封禁",
+        "26": "请求已发送",
+        "27": "该用户不存在",
+        "28": "你不能添加自己为好友",
+        "29": "该用户已经是你的好友",
+        "30": "该用户不存在",
+        "31": "你不能与自己战斗",
+        "32": "该用户在战斗中",
+        "33": "该用户离线中"
       }
+    },
+    "Account": {
+      "Title": "账户",
+      "Friends": "好友",
+      "Statistics": "统计数据",
+      "AccountOptions": "账户设置",
+      "LogOut": "登出"
+    },
+    "Friends": {
+      "Title": "好友",
+      "NoFriends": "您尚未拥有好友",
+      "FindFriend": "搜寻好友",
+      "RequestList": "请求列表",
+      "WriteLogin": "键入用户名",
+      "SendRequest": "发送请求",
+      "InviteToFight": "邀请进入战斗",
+      "DeleteFromFriends": "从好友列表中删除"
     },
     "AccountOptions": {
       "Title": "账号设置",
@@ -387,15 +462,15 @@
       "MobileControls": {
         "Description": "在这里你可以设置按键位置和大小。点击按键来自定义",
         "Position": "位置",
-        "TypeController": "Тип контроллера",
+        "TypeController": "控制器类型",
         "Size": "大小",
         "Ready": "就绪",
         "Elements": {
           "Joystick": {
             "Name": "虚拟摇杆"
           },
-          "Arrows": {
-            "Name": "Arrows"
+          "Arrow": {
+            "Name": "箭"
           },
           "Buttons": {
             "X": {
@@ -410,6 +485,11 @@
           }
         }
       }
+    },
+    "DebugRooms": {
+      "FightTest": "战斗测试",
+      "CutsceneTest": "场景测试",
+      "GUITest": "GUI测试"
     }
   },
   "Credits": {
@@ -420,7 +500,7 @@
     "StyleAuthors": "样式概念设计",
     "PreviewArtist": "预览图",
     "Localizers": "翻译",
-    "Tester": "测试员",
+    "Tester": "测试者",
     "StoryCreator": "故事构建",
     "Composers": "作曲",
     "Sponsors": "赞助",
@@ -534,8 +614,8 @@
       "Description": "你可以叫我Blue",
       "Bio": "SwapSans,生活在Underswap宇宙中，\n每个角色都与一个类似的角色产生互换。\n所以Sans的行为举止就像\n原宇宙中的Papyrus一样。\n因此，他很有趣、活泼，而且很开朗。\n他想成为皇家守卫队的一员，所以他给自己\n做了套战斗服，即使是在清洗的时候，\n他也从不脱下这些衣服。\nInk Sans称他为蓝莓，简称为Blue。\n当Blue不小心打翻油漆时，Ink在他家\n突然遇到了他。\nSwap Sans喜欢墨西哥的食物，\n尤其是玉米饼。\n他也为自己做饭来吃。",
       "PassiveSkill": {
-        "Name": "闪避大师",
-        "Description": "Swap Sans每次受击只受8点伤害" },
+        "Name": "抗伤",
+        "Description": "Swap!Sans每次受击最多受到10点伤害" },
       "Attack0": {
         "Name": "骨头攻击",
         "Description": "以灵魂为目标的骨头攻击，\n在撞击时造成伤害" },
@@ -614,8 +694,8 @@
       "Description": "不稳定的小孩(各种意义上)",
       "Bio": "一个来自XTale宇宙的孩子，在屠杀线\n他的宇宙被摧毁后，他成功地在一个\n怪物的身体里存活了下来。\n由于他的灵魂已经被Error Sans带走，\n他不得不寻找它的替代品，所以在寻找的过程中，\n他来到了主宇宙，作为他唯一能到达的地方。\nX!Chara意志坚强，自信，尽管偶尔会\n出现愤怒情绪崩溃的情况，喜欢巧克力。",
       "PassiveSkill": {
-        "Name": "魔力激增",
-        "Description": "X Chara gains 10 magic for each dodge if the amount of HP is less than 20" },
+        "Name": "暴增魔法",
+        "Description": "低于20 HP时，躲避一次攻击使XChara\n魔力值 +10 和 +10% 特殊攻击充能" },
       "Attack0": {
         "Name": "刀子",
         "Description": "以灵魂为目标的\n具有破坏性的刀子" },
@@ -634,8 +714,8 @@
       "Description": "代码编辑者",
       "Bio": "外码和非多元宇宙的编辑者，时常漫游于世界中，\n这是为了寻找灵感。\n他是错误404的创造者。\n他创造错误404以拥有编辑代码的能力，\n然后消除一些错误异常。\n他自己创造了最安全的时间线，其历史\n一直延续至今。\n由于创造过程中的一次意外，他的灵魂被扭曲成\n了一种奇怪的模样，而随着时间的推移，\nGreen获得了一种独一无二的“编辑能力”。\n他对游戏中的内容运筹帷幄，能看见操控着\n一个个角色的所有玩家，与其他人不同，\n他经常直接挑战玩家，这也使得他\n不再是“她”的囚犯。",
       "PassiveSkill": {
-        "Name": "双类型伤害",
-        "Description": "Green可造成1点业报伤害\n和5点真实伤害" },
+        "Name": "真伤",
+        "Description": "Green 要么获得 1 帧伤，要么 5 真伤，\n二者在命中时随机分配" },
       "Attack0": {
         "Name": "骨刺",
         "Description": "以灵魂为目标发射骨刺，\n受击时造成伤害" },
@@ -648,6 +728,126 @@
       "SpecialAttack": {
         "Name": "编辑",
         "Description": "飞向灵魂的弹幕会\n在按下按钮时发生变化" }
+    },
+    "Dream": {
+      "Name": "Dream",
+      "Description": "主观感知的监护者",
+      "Bio": "Dream降生于感知树的看护者Nim的光，\n看守着她死后的树。\nSwap!Sans心里感觉到，Dream蕴含着\n一种正能量。\nNightmare，曾是它兄弟，不小心\n让树的果实受到了负能量的侵袭，\nDream不得不把最后剩下的果实封存在\n自己体内，从而成为他的灵魂。\nDream非常和蔼善良，总是准备好\n帮助那些有需要的人。\n在保护多元宇宙中，它是Ink的朋友和搭档。",
+      "PassiveSkill": {
+        "Name": "正能量",
+        "Description": "在一回合中，Dream每次不受伤\n就获得 +10% 特殊攻击充能" },
+      "Attack0": {
+        "Name": "众星围击",
+        "Description": "使用星星攻击，飞向敌人并造成伤害" },
+      "Attack1": {
+        "Name": "匕首",
+        "Description": "两把匕首挥动以造成伤害" },
+      "Attack2": {
+        "Name": "Dream的弓",
+        "Description": "发射瞄准敌人并可能反弹的箭" },
+      "SpecialAttack": {
+        "Name": "积极围功",
+        "Description": "场上撞击后折断的箭变成四散飞舞的星星" }
+    },
+    "Nightmare": {
+      "Name": "Nightmare",
+      "Description": "你最坏的噩梦",
+      "Bio": "Nightmare降生于感知树的看护者的\n黑暗中，保护树消极的一半。\n在他的Dreamtale世界中，Nightmare\n被认为是灾难的预兆，并因此\n受到人类和怪物的欺负。\n他试图证明他们是错的，证明仍然有能力做出好事，\nNightmare拿到了颗金苹果，因此它\n变成了全黑，连树上的果实也是如此。\n消极情绪之后充斥着Dreamtale的人们。\nNightmare感到震惊，并开始吃下\n那黑色果实，把自己变成黑暗物质的精华。\nNightmare是个狡诈又残暴的恶魔。\n他能利用自己的负面情绪控制能力来操纵人类。\n你不该和他打交道。",
+      "PassiveSkill": {
+        "Name": "负能量",
+        "Description": "受击使Nightmare获得同等量的\n特殊攻击充能" },
+      "Attack0": {
+        "Name": "触手",
+        "Description": "使出在场上移动并造成伤害的触手" },
+      "Attack1": {
+        "Name": "负能骨刺",
+        "Description": "从场上边界冒出尖刺并造成伤害" },
+      "Attack2": {
+        "Name": "黏液",
+        "Description": "释放以各种形式攻击灵魂的黑暗物质" },
+      "SpecialAttack": {
+        "Name": "狂暴",
+        "Description": "Nightmare变得巨大，追着灵魂，\n并用粘糊糊的手去触摸它。场上还会出现骨刺谷" }
+    },
+    "Papyrus": {
+      "Name": "Papyrus",
+      "Description": "捏嘿嘿！",
+      "Bio": "Sans的来自UNDERTALE宇宙的小兄弟。\n因为想变酷以变得有人缘，因此把\n自己的全部精力都投入其中。\n喜欢烹饪，尤其是和Undyne一起。\n已得到属于自己的红车。\nPapyrus是个开朗的怪物，尽管有点呆，\n但他总是随时准备为朋友和家人挺身而出。\n他相信，每个人和怪物身上都有善良的一面。",
+      "PassiveSkill": {
+        "Name": "抗伤",
+        "Description": "Papyrus每次受击最多受到10伤害" },
+      "Attack0": {
+        "Name": "骨头攻击",
+        "Description": "骨头朝向灵魂并造成伤害" },
+      "Attack1": {
+        "Name": "骨头和蓝骨攻击",
+        "Description": "使用骨头和只在灵魂移动才造成伤害的\n蓝色骨头攻击" },
+      "Attack2": {
+        "Name": "旋转骨攻击",
+        "Description": "指向灵魂的旋转骨" },
+      "SpecialAttack": {
+        "Name": "酷仔",
+        "Description": "大量复杂的骨头攻击，最后在骨头上大跳" }
+    },
+    "Frisk": {
+      "Name": "Frisk",
+      "Description": "充满了【决心】",
+      "Bio": "",
+      "PassiveSkill": {
+        "Name": "",
+        "Description": "" },
+      "Attack0": {
+        "Name": "",
+        "Description": "" },
+      "Attack1": {
+        "Name": "",
+        "Description": "" },
+      "Attack2": {
+        "Name": "",
+        "Description": "" },
+      "SpecialAttack": {
+        "Name": "",
+        "Description": "" }
+    },
+    "XAnastasia": {
+      "Name": "X!Anastasia",
+      "Description": "行走的奇迹",
+      "Bio": "她是XGaster自己的造物，\n但其并不能让他满足，\n因此被留在了他的数据汇编中。",
+      "PassiveSkill": {
+        "Name": "立体机动",
+        "Description": "X!Anastasia的灵魂在变蓝色时，移动更快，跳得更高" },
+      "Attack0": {
+        "Name": "羽毛",
+        "Description": "瞄准灵魂的锋利羽毛" },
+      "Attack1": {
+        "Name": "剑击",
+        "Description": "用剑攻击以造成伤害" },
+      "Attack2": {
+        "Name": "镰刀",
+        "Description": "一把通过摆动来造成伤害的刀" },
+      "SpecialAttack": {
+        "Name": "快速之翼",
+        "Description": "灵魂向上跳，受到羽毛、剑和镰刀的攻击" }
+    },
+    "Jevil": {
+      "Name": "Jevil",
+      "Description": "混沌，混沌",
+      "Bio": "来自Deltarune宇宙的黑暗生物。\nJevil的兴趣在于最大限度地传播混沌。\n在发疯之前，他是黑桃国王的马戏团小丑。\n但在遇见一位陌生人后，他的观点发生了变化。\n他开始游戏人生，和周围的一切关在牢笼里。\nJevil是一个疯狂的恶魔，不值得打。",
+      "PassiveSkill": {
+        "Name": "混沌の力",
+        "Description": "低于40 HP时，Jevil每回合后得到随机的（多达8）魔力值" },
+      "Attack0": {
+        "Name": "混沌爆弹",
+        "Description": "炸弹爆炸时会散落各色纸牌" },
+      "Attack1": {
+        "Name": "纸牌",
+        "Description": "散落各色纸牌以造成伤害" },
+      "Attack2": {
+        "Name": "混沌镰刀",
+        "Description": "混沌镰刀旋转以造成伤害" },
+      "SpecialAttack": {
+        "Name": "混沌の终结技 ~三重混沌~",
+        "Description": "三重攻击。 一重 — 旋转木马，二重 — 镰刀和各色纸牌，三重 — 镰刀和炸弹" }
     },
     "Tornado": {
       "Name": "Tornado",
@@ -715,17 +915,36 @@
     "Saness": "Saness",
     "Puppet": "无形傀儡",
     "ChangedReality": "已变的现实",
-    "VoodooDoll": "巫毒娃娃",
+    "VoodooDoll": "Voodoo doll",
     "Fiery": "烫红馒头",
     "Powerful": "主宰者",
     "Infected": "被感染",
     "Magenta": "品红",
-    "Hallowtide": "万圣节",
+    "Hallowtide": "Hallowtide",
+    "Witch": "Witch",
     "Steampunk": "蒸汽朋克",
     "Garland": "圣诞花环",
     "AntiPiracy": "反盗版",
     "NoTextures": "无纹理",
-    "Samurai": "武士"
+    "Samurai": "武士",
+    "IceCream": "Ice Cream",
+    "Mecha": "Mecha",
+    "Demon": "Demon",
+    "Echo": "Echo",
+    "TON618": "TON618",
+    "Blob": "Blob",
+    "Robber": "Robber",
+    "Basketbro": "Basketbro",
+    "Magma": "Magma",
+    "OldOutfit": "Old Outfit",
+    "Magician": "Magician",
+    "IceBlood": "Ice Blood",
+    "DJ": "DJ",
+    "Detective": "Detective",
+    "Harlequin": "Harlequin",
+    "DreamKeeper": "Dream keeper",
+    "Candy": "Candy",
+    "Scorpion": "Scorpion"
   },
   "Battle": {
     "Target": "目标",
@@ -757,7 +976,9 @@
   },
   "MiniGame": {
     "Scores": "得分",
-    "Highscore": "高分",
+    "Highscore": "最高分",
+    "PapyrussTeam": "Papyrus队",
+    "UndynesTeam": "Undyne队",
     "BackToMenu": "返回菜单"
   },
   "Dialog": {
@@ -863,7 +1084,7 @@
     },
     "Underverse_Episode2": {
       "Dialog1": [
-        "{Sans:tired}所以...你叫Ink，对吧？",
+        "{Sans:tired}所以... 你叫ink，对吧？",
         "{Ink:combat}...是的。\n认识你是我的荣幸。"
       ],
       "Dialog2": [
@@ -880,12 +1101,12 @@
         "没门。快离开这里"
       ],
       "Dialog3_Line1": [
-        "{Sans:normal}嗯...我兄弟和其他人20分钟后就到了，\n所以我想我们可以谈上那么--"
+        "{Sans:tired}嗯...我兄弟和其他人20分钟后就到了，\n所以我想我们可以谈上那么 ►"
       ],
       "Dialog4_Line1": [
-				"{Ink:glad}你想知道更多关于C的事吗！？\n太棒辣！！",
-				"{Ink:normal}噢！抱歉失礼了，呵呵...",
-				"{Ink:normal}好吧...\n这一切都始于遥远宇宙中的一个小水滴..."
+        "{Ink:enthusiastic}你想知道更多关于C的事吗！？\n太棒辣！！",
+        "{Ink:normal}噢！抱歉失礼了，呵呵...",
+        "{Ink:normal}好吧...\n这一切都始于遥远宇宙中的一个小水滴..."
       ],
       "Dialog5_Line1": [
         "{Ink:none}一切似乎都是一如往常。\n你的宇宙和现存的数千种变体\n仍然和平地持续着。",
@@ -894,12 +1115,12 @@
         "{Ink:none}我抑制不住自己的兴奋，\n于是我决定去那里。"
       ],
       "Dialog6_Line1": [
-				"{Ink:none}我渴望见到这个新世界及其居民...",
-				"{Ink:none}...但除了一个人，什么都没有。",
-				"{Ink:none}没想到的是...\n那几滴其实是他的眼泪。",
-				"{Ink:none}他非常害怕。\n脑子里充满了恐惧。",
-				"{Ink:none}他注意到还有其他人...\n也就是我。",
-				"{Ink:none}不过，很快我们就打破了僵局，\n他告诉了我他的名字。"
+        "{Ink:none}我渴望见到这个新世界及其居民...",
+        "{Ink:none}...但除了一个人，什么都没有。",
+        "{Ink:none}没想到的是...\n那几滴其实是他的眼泪。",
+        "{Ink:none}他非常害怕。\n脑子里充满了恐惧。",
+        "{Ink:none}他注意到还有其他人...\n也就是我。",
+        "{Ink:none}不过，很快我们就打破了僵局，\n他告诉了我他的名字。"
       ],
       "Dialog7_Line1": [
         "{Ink:none}他自称Cross，唯一一个没有\n重置可能性的灭族路线幸存者。"
@@ -915,9 +1136,9 @@
         "{Ink:none}他看起来很沮丧。"
       ],
       "Dialog10_Line1": [
-        "{Ink:none}他告诉我，他的世界里出现了一个\n陌生的孩子，并试图说服他和其他像他一样的\n幸存者一起去一个地方。"
+        "{Ink:none}他告诉我，他的世界里出现了一个\n陌生的孩子，并试图说服他和其他像他一样\n的幸存者一起去一个地方。"
       ],
-      "Dialog11_Line2": [
+      "Dialog11_Line1": [
         "{Ink:calm}他拒绝了，因为他确信自己的世界还活着。",
         "{Ink:calm}Cross认为他可以在我的帮助下\n可以完好如初。",
         "{Ink:calm}但当我告诉他死者不能复生时...",
@@ -927,49 +1148,49 @@
         "{Sans:confused}然后？"
       ],
       "Dialog13_Line1": [
-        "{Ink:emotionless}我们刚刚讲了什么啊？",
-        "{Sans:none}呼，所以那家伙怎么了？"
+        "{Ink:emotionless}...我们刚刚讲了什么啊？",
+        "{Sans:none}(呼，所以那家伙怎么了)"
       ],
       "Dialog3_Line2": [
-				"{Sans:tired}听着，你最好得走了。\n我对你的小丑表演不感兴趣。",
-				"{Ink:surprised}但是Sans...\n你一半灵魂都被偷走了。",
-				"{Sans:tired}我会活下来的。\n自己做好该做的事。",
-				"{Ink:calm}好我懂了。\n毕竟这是我的弱点嘛。",
-				"{Ink:combat}别担心，Sans。\n我会尽我所能找回你的一半灵魂的。"
+        "{Sans:tired}听着，你最好得走了。\n我不喜欢你这出恶作剧。",
+        "{Ink:surprised}但是Sans...\n你一半灵魂都被偷走了。",
+        "{Sans:tired}我会活下来的。\n你最好自己去收拾残局。",
+        "{Ink:calm}好我懂了。\n毕竟这是我的弱点嘛。",
+        "{Ink:combat}别担心，Sans。\n我会找回你的一半灵魂的，不管付出什么代价。"
       ],
       "Dialog4_Line2": [
         "{Ink:combat}呃...祝好运。"
       ],
       "Dialog5_Line2": [
         "{Sans:tired}唉...糟糕的一天。",
-        "{Sans:tired}好了，是时候走了。"
+        "{Sans:normal}好了，该走了。"
       ],
       "Dialog14": [
-        "{Ink:calm}C，拜托！\n你知道我不能创造一个新的世界...\n你还好吗？",
+        "{Ink:calm}Cross，拜托！\n你知道我不能创造一个新的世界...\n你还好吗？",
         "{CrossXEvent:angry}离我远点！"
       ],
       "Dialog15": [
-        "{Ink:combat}好吧...我会离开，\nC...不要伤心...因为...",
+        "{Ink:combat}好吧...我会离开，\nCross...不要伤心...因为...",
         "{Ink:combat}你就像我兄弟...\n我不想让我兄弟伤心。"
       ],
       "Dialog16": [
-        "{CrossXEvent:normal}Ink? 是你吗？"
+        "{CrossXEvent:normal}...Ink？是你吗？"
       ],
       "Dialog17": [
         "{Error:normal}唔...这地方对一个人来说非常大。",
         "{Error:normal}这有点自私，知道吗？"
       ],
       "Dialog18": [
-				"{Error:normal}Ink... Ink...\n你为什么要保护这个古怪东西？",
-				"{Error:normal}你知道你不能再帮助他们了。",
-				"{Error:normal}这次让我给他一个快乐的结局吧。",
-				"{Ink:angry}不！这不是你的工作！",
-				"{Error:normal}好吧...",
-				"{Error:normal}我会试着友好一点。"
+        "{Error:normal}Ink...Ink...\n你为什么要保护这个古怪东西？",
+        "{Error:normal}你知道你不能再帮助他们了。",
+        "{Error:normal}这次让我给他一个快乐的结局吧。",
+        "{Ink:angry}不！这不是你的工作！",
+        "{Error:normal}好吧。",
+        "{Error:normal}我会试着友好一点。"
       ],
       "Dialog19": [
-        "{Error:normal}Ink，不要反抗。我不会杀了他。",
-        "{Ink:combat}我不会让你为所欲为的！"
+        "{Error:normal}别这么死心眼，Ink。\n对他来说，一切都完了。",
+        "{Ink:angry}我不会让你为所欲为的！"
       ],
       "TakeDamage": [
         "{Error:angry}嘿，你，玩家！\n不要再用你的心去抓墨水了!",
@@ -981,24 +1202,820 @@
       ],
       "DontTakeDamage": [
         "{Error:normal}躲的好，玩家。",
-        "{Error:normal}如果你需要慢点移动，\n那就按住[Shift]键。"
+        "{Error:normal}如果你需要慢点移动，\n那就移动时按住[Shift]键。"
       ],
       "DontTakeDamageMobile": [
         "{Error:normal}躲的好，玩家。",
-        "{Error:normal}如果你需要慢点移动，\n那就按住主动能力按钮。"
+        "{Error:normal}如果你需要慢点移动，\n那就移动时按住主动能力按钮。"
       ],
       "Dialog20": [
         "{Error:normal}可恶，Ink擅长躲开我的攻击。",
         "{Error:normal}我要用到我的特殊攻击。",
-        "{Error:angry}这游戏我感到厌烦了！"
+        "{Error:angry}我不玩啦！"
       ],
       "Dialog21": [
-        "{C:satisfied}我自由辣！",
-        "{CrossXEvent:angry}不！等等！",
-        "{Ink:injured}C-Cross? 你还好吗？"
+        "{C:satisfied}我...自由辣！",
+        "{CrossXEvent:angry}不！！停下！",
+        "{Ink:injured}C-Cross...? 你还好吗？"
       ],
       "Dialog22": [
         "{Ink:injured}糟透了。"
+      ],
+      "Dialog23": [
+        "{Ink:calm}一个有能力用扭曲的思想操纵怪物身体的人...\n想要阻止他们恐怕极为困难。",
+        "{Ink:calm}不得不承认我单枪匹马完全做不到...",
+        "{Ink:calm}我知道这样做不对，但是... \nSans...",
+        "{Ink:calm}我需要你帮忙找到Cross... \n你愿意和我一起去吗？"
+      ],
+      "Choise2": [
+        "Ink Sans提议你和他一同寻找Cross。",
+        "加入",
+        "待着"
+      ],
+      "Dialog24_Line1": [
+        "{Sans:normal}我能吧，大概。只不过 ►",
+        "{Ink:enthusiastic}太酷啦！那我们走吧！",
+        "{Sans:confused}喂，等下，小画家... 现在？",
+        "{Ink:normal}不然嘞，为嘛等着？",
+        "{Sans:normal}我朋友在野餐，我不能就这样弃他们不顾。\n如果我不见的话，papyrus不会\n弃我于不顾。",
+        "{Ink:calm}好像也是... 我能理解。",
+        "{Ink:glad}那我之后再来找你。",
+        "{Papyrus:none}SANS!!",
+        "{Ink:surprised}噢，老弟！"
+      ],
+      "Dialog24_Line2": [
+        "{Sans:normal}...额。抱歉老兄, 但是不行。\n其实我觉得我就这样挺好的。",
+        "{Sans:normal}...这一点也不让我担心。",
+        "{Ink:glad}噢...那好吧！我懂了。\n我才是引起这一切的骨...",
+        "{Ink:glad}因此，我会尽全力弥补，\n然后带回你的灵魂吧。",
+        "{Ink:glad}好了。我现在得走了。"
+      ],
+      "Dialog25_Line2": [
+        "{Ink:normal}祝你和你的朋友过得愉快！"
+      ],
+      "Dialog26_Line2": [
+        "{Sans:confused}呵... 这也太奇怪了吧...",
+        "{Papyrus:none}SANS!!"
+      ],
+      "Dialog27": [
+        "{PapyrusPicnic:normal}原来你在这啊，哥哥！\n准备好参加我们的盛大野餐了吗？"
+      ],
+      "Dialog28": [
+        "{Sans:normal}...当然！我们走吧，兄弟。"
+      ]
+    },
+    "Underverse_Episode3": {
+      "Dialog1": [
+        "{XChara:glad}我们做到辣！哈哈哈哈！\n这就是原宇宙Sans灵魂的另一半！",
+        "{XChara:glad}我有一计...\n来造我们自己的宇宙吧！",
+        "{XChara:glad}我们不需要活在一个陈旧、\n乏味的时间线上...",
+        "{XChara:glad}我们能让这变得更有趣...\n但首先，快吸收这灵魂吧。\n准备好了吗？"
+      ],
+      "Dialog2": [
+        "{CrossXEvent:tired}...好了..."
+      ],
+      "Dialog3": [
+        "{XChara:tired}...怎么了？你..."
+      ],
+      "Dialog4": [
+        "{CrossXEvent:tired}我不确定，Chara...",
+        "{CrossXEvent:tired}Ink想帮我们...\nSans拒绝战斗...\n为什么我就一定要做这个不可？"
+      ],
+      "Dialog5": [
+        "{XChara:tired}你害怕把我放出来吗？"
+      ],
+      "Dialog6": [
+        "{CrossXEvent:tired}..."
+      ],
+      "Dialog7": [
+        "{XChara:none}我向你保证，“Sans”。\n我保证会成为你朋友...\n那些黑暗的日子已经过去了。",
+        "{XChara:none}你很久以前就放弃了，但我不是。",
+        "{XChara:none}我会帮你重建我们抛弃过的世界。",
+        "{XChara:none}我们理应拥有新的希望。",
+        "{XChara:none}那就是我们想要的..."
+      ],
+      "Dialog8": [
+        "{CrossXEvent:tired}...那就来做吧。"
+      ],
+      "Dialog9": [
+        "{XCharaSpirit:normal}你记得Ink对你说过的东西，对吧？",
+        "{CrossXEvent:normal}所以...\n别的平行宇宙是存在的？",
+        "{XCharaSpirit:normal}不是很棒吗？",
+        "{XCharaSpirit:normal}在你和你朋友Ink交谈的过程中，\n我决定研究一下平行宇宙的事情。",
+        "{XCharaSpirit:normal}有很多我们可以“拜访”的世界...\n但我只对其中几个感兴趣。",
+        "{CrossXEvent:normal}呵呵。你是一个非常聪明的人，\n尽管你只有一片要死了的决心。",
+        "{XCharaSpirit:dissatisfied}别再显摆你的新灵魂了！",
+        "{CrossXEvent:normal}现在告诉我，如果我们不知道任何路线的话\n怎么去另一个世界？"
+      ],
+      "Dialog10": [
+        "{XCharaSpirit:confused}..."
+      ],
+      "Dialog11": [
+        "{CrossXEvent:none}我不想就这么傻站着！！",
+        "{CrossXEvent:none}我想要回我的世界！\n我也想像他们一样生活在和平之中！！！"
+      ],
+      "Dialog12": [
+        "{Nightmare:normal}看起来你因为某些原因而不开心呢，\n我能感觉到。",
+        "{Nightmare:normal}对此我能帮上什么忙吗？"
+      ],
+      "Dialog13": [
+        "{CrossXEvent:normal}...你跟Ink和Error有什么\n关系吗？",
+        "{Nightmare:normal}真粗鲁！\n我是来帮忙的，而你却用蠢问题\n来伤我的心。",
+        "{Nightmare:normal不，我和他们无关。\n多亏了你的负面情绪才能找到你。",
+        "{CrossXEvent:normal}你也能应付正面情绪吗？",
+        "{Nightmare:normal}哈！我干嘛要这么做？开心是别人的事！\n而你需要的是我的帮助。"
+      ],
+      "Dialog14": [
+        "{CrossXEvent:normal}和平世界也不值得拥有快乐...",
+        "{Nightmare:glad}啊！我喜欢你的意向...\n我想我可以让你拥有随心所欲去往任何AU的能力...\n但我想要一个东西作为交换。",
+        "{Nightmare:glad}无论你去哪里，我都想让你伤害一些人，\n但不是身体上的。 你懂我意思吧。"
+      ],
+      "Dialog15": [
+        "{CrossXEvent:glad}嘿，成交。",
+        "{CrossXEvent:glad}我会尽量小心点的。"
+      ],
+      "Dialog16": [
+        "{Dream:afraid}(Nightmare? 这不可能-!)",
+        "{Dream:afraid}(我得马上告诉Ink才行！)"
+      ],
+      "Dialog17": [
+        "{UndynePicnic:glad}天哪，我们好久没这样聚一起了！",
+        "{PapyrusPicnic:glad}也是呢！还是在这么大的集体里！",
+        "{UndynePicnic:glad}Asgore，把皇家牛排烤好,好吗？",
+        "{UndynePicnic:glad}我们的大使已经饿昏了！"
+      ],
+      "Dialog18": [
+        "{UndynePicnic:laughing}哈哈哈哈！我把番茄酱洒了！"
+      ],
+      "Dialog19": [
+        "{TorielPicnic:glad}多美好的一天啊！\n大家都玩得很开心，你觉得呢，Sans?",
+        "{Sans:normal}好吧，待在家这选项被我...",
+        "{Sans:joking}...“排”除了。"
+      ],
+      "Dialog20": [
+        "{TorielPicnic:laughing}哈-哈-哈！",
+        "{PapyrusPicnic:tired}啊...",
+        "{UndynePicnic:normal}嘿，Papyrus，去帮我们拿点番茄酱。",
+        "{PapyrusPicnic:shocked}什么？我甚至不知道哪里有卖！",
+        "{Sans:normal}呃，那个嘛。\n你不该让他一个人去逛。",
+        "{Sans:joking}有一次，他还在一家汤品店找衣服呢。",
+        "{PapyrusPicnic:angry}其实我是去买点汤！\n我只是不跟你说而已！",
+        "{Sans:normal}那好吧，我会自己去",
+        "{PapyrusPicnic:angry}不行！如果你又在路上睡着了，\n我们不会再去找你了。",
+        "{UndynePicnic:normal}那为什么不叫Frisk和他一起？\n我们的大使肯定会让他睡不着觉。",
+        "{PapyrusPicnic:tired}那还可以我觉得。",
+        "{UndynePicnic:normal}Frisk，你能和Sans去商店\n买些番茄酱吗？"
+      ],
+      "Dialog21": [
+        "{Sans:normal}在你身后。"
+      ],
+      "Undyne": [
+        "{UndynePicnic:normal}快点，混球。"
+      ],
+      "Papyrus": [
+        "{PapyrusPicnic:normal}人类，把SANS看紧了。"
+      ],
+      "Alphys": [
+        "{AlphysPicnic:normal}快去快回呀，你们。"
+      ],
+      "Toriel": [
+        "{TorielPicnic:normal}路上小心。"
+      ],
+      "Asgore": [
+        "{AsgorePicnic:normal} 别担心，Frisk。\n 你会得到牛排的。 我保证。"
+      ],
+      "Bear_1": [
+        "啊，没有什么比在酷寒之后\n搬到暖林里更让人兴奋了。",
+        "我只是觉得我找到了自己\n在这个世界上的定位。"
+      ],
+      "Bear_2": [
+        "嗡嗡！"
+      ],
+      "Rabbit_1": [
+        "这是我们第一次在公园，有点兴奋。",
+        "尤其是我的小妹妹。",
+        "自然是这么的... 精美。",
+        "尽管碰那些树有些害怕，\n因为珍贵的树皮可能会折断。"
+      ],
+      "Rabbit_2": [
+        "我们不会匆忙行事。"
+      ],
+      "DogsFamily_1": [
+        "你好，人类。",
+        "这种气味让人想起了什么。\n我赌我知道。",
+        "哦，你就是那个人类。\n又见面了。",
+        "这地方真不错。",
+        "很高兴我们从蜜月中抽出一天时间\n去公园散步。"
+      ],
+      "DogsFamily_2": [
+        "我们很享受。"
+      ],
+      "DogSmaller_1": [
+        "{NPC:none}嗷呜！",
+        "{Sans:joking}看起来是很高兴看到你。"
+      ],
+      "DogSmaller_2": [
+        "{NPC:none}嗷呜！",
+        "{Sans:joking}同上。"
+      ],
+      "RoyalGuard1_1": [
+        "你好，大使。",
+        "让Asgore知晓我们已经清理了公园。\n每寸土地都精心打理过。"
+      ],
+      "RoyalGuard1_2": [
+        "我相信我们完成了这工作。"
+      ],
+      "RoyalGuard2_1": [
+        "你好，大使。",
+        "今天真热啊，不是吗？",
+        "我越来越想脱衣服了。"
+      ],
+      "RoyalGuard2_2": [
+        "我们很快就离开。"
+      ],
+      "Jerry_1": [
+        "{NPC:none}我以前从未见过这些粉色斑点。",
+        "{NPC:none}你呢？",
+        "{Sans:joking}呃... 没见过。"
+      ],
+      "Jerry_2": [
+        "你找到印迹制造机了吗？"
+      ],
+      "FicusLicker_1": [
+        "嗨，人类，记得我吗？",
+        "我在那旅馆旁的榕树附近。",
+        "我在这附近找我兄弟。\n介意帮个手吗？",
+        "我们在玩捉迷藏，但我还是\n找不到他们在哪。",
+        "作为回报，你帮我，我就给你奖励。\n听起来很公平吧？"
+      ],
+      "FicusLicker_2": [
+        "{NPC:none}你还好吗？"
+      ],
+      "FicusLicker_Found_0": [
+        "{Frisk:normal}什么都没找到。",
+        "{NPC:none}他们肯定藏在这附近的某处。\n至少这公园里有一个。"
+      ],
+      "FicusLicker_Found_1": [
+        "{Frisk:normal}找到了一个。",
+        "{NPC:none}很好！但这还不够。\n他们有三个人。继续。"
+      ],
+      "FicusLicker_Found_2": [
+        "{Frisk:normal}第二个找到了。",
+        "{NPC:none}赞！剩一个了！"
+      ],
+      "FicusLicker_Found_3": [
+        "{Frisk:normal}第三个找到了。",
+        "{NPC:none}帅！感谢帮助！这就是奖励 - 12G。"
+      ],
+      "MushroomLicker_1": [
+        "快走，不然我会被看到的。\n我在玩捉迷藏。"
+      ],
+      "MushroomLicker_2": [
+        "安静！"
+      ],
+      "Inks_1": [
+        "{Chara:none}在公园里看到个油漆坑真奇怪。",
+        "{Sans:normal}啊... 也许我们不该在这里逗留。"
+      ],
+      "Inks_2": [
+        "{Sans:normal}嗯... 继续走吧。"
+      ],
+      "Doggo_1": [
+        "嘿，人类小孩， 今天不能摸。",
+        "下次再来吧。"
+      ],
+      "Doggo_2": [
+        "去吧，人类小孩。"
+      ],
+      "NiceCreamSeller_1": [
+        "噢，嘿。自从在地下世界过后...\n好久不见了。",
+        "我的生意看上去还不错。",
+        "之后我才懂，在热闹的地方卖冰\n效果最好。",
+        "要买个吗？"
+      ],
+      "NiceCreamSeller_Choise": [
+        "你想花12G买下好棒冰吗？",
+        "是",
+        "否"
+      ],
+      "NiceCreamSeller_2": [
+        "感谢购买！之后见！"
+      ],
+      "NiceCreamSeller_3": [
+        "抱歉，你钱不够。要不你先去找找？"
+      ],
+      "NiceCreamSeller_4": [
+        "噢，可以了。之后见！"
+      ],
+      "NiceCreamSeller_5": [
+        "所以你想买点好棒冰吗？"
+      ],
+      "NiceCreamSeller_6": [
+        "享受你的好棒冰吧！"
+      ],
+      "Vulkin": [
+        "别打扰我。我在热身。"
+      ],
+      "Napstablook_1": [
+        "嗨。又见到你真高兴。",
+        "我在这边找些好地方，好让我躺下来，\n像个垃圾一样。",
+        "我了解到人类会分类垃圾，然后让它\n经过循环变成新材料。",
+        "你知道吗，通过那个，我做冥想变得\n更加有深度了。",
+        "像垃圾一样，想想你会在某天变成\n有用的东西...\n这很振奋人心。"
+      ],
+      "Napstablook_2": [
+        "{NPC:none}看来你并不着急。",
+        "{Sans:normal}其实你是在找卖番茄酱的店没错吧。",
+        "{NPC:none}噢... 对不起。\n那我就不耽误你了。"
+      ],
+      "Napstablook_3": [
+        "你得去买到番茄酱。\n请走吧。"
+      ],
+      "DJ_1": [
+        "{NPC:none}哟，你好呀，人类。\n认识我吗？",
+        "{NPC:none}你明天要不要来看我的演出？",
+        "{Sans:normal}我们已有计划",
+        "{NPC:none}哎呀，真可惜。那就时常看看公告吧。\n说不定哪天你就能看到我的绝活了。"
+      ],
+      "DJ_2": [
+        "再见了，小南瓜们。"
+      ],
+      "Burgerpants": [
+        "天啊...\n那Mettaton小可爱到底在哪？",
+        "他又要迟到了。"
+      ],
+      "Harper_1": [
+        "Mettaton还没来，这我一点也不惊讶。",
+        "他每次都会晚来两分钟甚至更久。",
+        "他的手表一定多走了一秒钟。"
+      ],
+      "Harper_2": [
+        "我们还在等..."
+      ],
+      "Turtle": [
+        "周末上班... 这太可怕了。",
+        "你不会明白的，孩子。"
+      ],
+      "Vert_1": [
+        "拜托别打扰我。",
+        "我在看世界上最有趣的视频。",
+        "至少他们是这么说的。"
+      ],
+      "Vert_2": [
+        "拜托别打扰我。"
+      ],
+      "Grandpa_1": [
+        "{NPC:none}多美好的一天啊。",
+        "{NPC:none}小鸟在歌唱，鲜花在绽放。",
+        "{Sans:joking}确实是。"
+      ],
+      "Grandpa_2": [
+        "真美好。"
+      ],
+      "RaspberriesLicker_1": [
+        "我不在这... 我是隐形人。"
+      ],
+      "RaspberriesLicker_2": [
+        "我不在这。"
+      ],
+      "MintLicker_1": [
+        "我不想再躲躲藏藏了。",
+        "我想要我兄弟找到我，所以我不想藏了。",
+        "但我知道他不会来找我。",
+        "我也不去了",
+        "所以... 现在是怎样？"
+      ],
+      "MintLicker_2": [
+        "变革可能即将来临。"
+      ],
+      "PapyrusCar": [
+        "{Chara:none}Papyrus的车，是它把我们带来这的。",
+        "{Sans:joking}嫉妒吗？"
+      ],
+      "Schoolchild_1": [
+        "{NPC:none}噢，你回学校了？你得去上早八，对吧？",
+        "{Sans:normal}呃... 我很确定今天是周末。",
+        "{NPC:none}好像是哦... 我想是我忘了。",
+        "{NPC:none}好蠢。"
+      ],
+      "Schoolchild_2": [
+        "我打算现在回家，大概吧。"
+      ],
+      "Sportsman_1": [
+        "{NPC:none}你好，孩子们。",
+        "{Sans:normal}们？",
+        "{NPC:none}呃... 好吧，你...\n没事。"
+      ],
+      "Sportsman_2": [
+        "祝好运... 孩子...\n和个不是孩子的人。"
+      ],
+      "MTT_Shop_1": [
+        "打烊了。这也难怪。"
+      ],
+      "MTT_Shop_2": [
+        "打烊了。"
+      ],
+      "LivingStone_1": [
+        "这块石头故意不让你通过。"
+      ],
+      "LivingStone_2": [
+        "你不能移动这块石头。"
+      ],
+      "Muffin": [
+        "表覆紫色糖霜的漂亮玛芬正在展出。"
+      ],
+      "KetchupShop_1": [
+        "{NPC:none}欢迎来到番茄酱店！\n有什么我能帮你的吗，先生？"
+      ],
+      "KetchupShop_2": [
+        "{Sans:normal}哇！店不错。"
+      ],
+      "KetchupShop_3_Line1": [
+        "{Frisk:normal}我们需要番茄酱。"
+      ],
+      "KetchupShop_3_Line2": [
+        "{Frisk:normal}我们需要番茄酱。",
+        "{Sans:normal}嘿，孩子。\n你确定你的钱够吗？"
+      ],
+      "KetchupShop_4": [
+        "{NPC:none}噢，没问题，在这。我会给你看看样式。"
+      ],
+      "KetchupShop_5": [
+        "{Sans:normal}嘿，孩子，你要花20G买给我\n这个限量版的吗？",
+        "{Sans:joking}别担心，我会还你的。\n你知道我不会一直欠钱的。"
+      ],
+      "KetchupShop_6": [
+        "{Sans:normal}谢了。之后借我个瓶子装，行吗？"
+      ],
+      "KetchupShop_7": [
+        "{Sans:normal}好了，现在快回去吧。"
+      ],
+      "Ketchup": [
+        "限量装番茄酱和芥末酱在架子上。"
+      ],
+      "KetchupSellerStand": [
+        "卖番茄酱的纸板人"
+      ],
+      "FriskDrankKetchup": [
+        "{Sans:normal}哈啊...",
+        "{Sans:normal}你这一招让我措手不及，孩子。",
+        "{Sans:joking}你刚刚“吱”的一声，把这个恶作剧\n全搞砸了。"
+      ],
+      "Dialog22_Line1": [
+        "{PapyrusPicnic:glad}噢，他们回来了！",
+        "{UndynePicnic:normal}太好了！你拿到番茄酱了！\n我甚至都不用去救你们。",
+        "{AlphysPicnic:normal}欢-欢迎回来！",
+        "{TorielPicnic:normal}Frisk，找位子坐吧。\n你的牛排准备好了。"
+      ],
+      "Dialog22_Line2": [
+        "{PapyrusPicnic:glad}噢，他们回来了！",
+        "{AlphysPicnic:normal}欢-欢迎回来！",
+        "{UndynePicnic:normal}你拿到番茄酱了对吧？",
+        "{Sans:normal}呃... 我们忘了。",
+        "{TorielPicnic:normal}没事，不要紧。",
+        "{UndynePicnic:dissatisfied}淦。",
+        "{TorielPicnic:normal}Frisk，找位子坐吧。\n你的牛排准备好了。"
+      ],
+      "Dialog23": [
+        "{PapyrusPicnic:angry}是时候打排球啦！！捏嘿嘿！",
+        "{UndynePicnic:normal}预备，开始！"
+      ],
+      "Dialog24": [
+        "{PapyrusPicnic:normal}在发球。"
+      ],
+      "PapyrusGoal_1": [
+        "{PapyrusPicnic:glad}捏嘿嘿！棒！"
+      ],
+      "PapyrusGoal_2": [
+        "{PapyrusPicnic:glad}得分！"
+      ],
+      "PapyrusOut": [
+        "{PapyrusPicnic:glad}出界！"
+      ],
+      "FriskGoal": [
+        "{PapyrusPicnic:glad}做得好，FRISK!"
+      ],
+      "SansGoal": [
+        "{PapyrusPicnic:glad}得分啦！不错嘛，SANS!",
+        "{SansVolleybro:normal}啊，是吗？ 逗挺酷的。"
+      ],
+      "AsgoreGoal": [
+        "{UndynePicnic:glad}做得好，Asgore!",
+        "{AsgorePicnic:normal}谢谢，我会尽我所能。"
+      ],
+      "AlphysGoal": [
+        "{UndynePicnic:glad}Alphys，你得分了耶！",
+        "{AlphysPicnic:normal}是-是吗？",
+        "{UndynePicnic:normal}做得很好！",
+        "{AlphysPicnic:normal}谢谢。"
+      ],
+      "AlphysLose": [
+        "{PapyrusPicnic:normal}出界！",
+        "{UndynePicnic:normal}快，Alphys，振作起来!",
+        "{AlphysPicnic:normal}抱-抱歉！"
+      ],
+      "UndyneGoal_1": [
+        "{UndynePicnic:normal}得分啦！就是这样！"
+      ],
+      "UndyneGoal_2": [
+        "{UndynePicnic:normal}奈斯！得分！"
+      ],
+      "UndyneOut_1": [
+        "{UndynePicnic:normal}哎呀！我们打出界了！"
+      ],
+      "UndyneOut_2": [
+        "{UndynePicnic:normal}出界！"
+      ],
+      "Dialog25": [
+        "{UndynePicnic:glad}你想赌我的球队能得到这分吗？",
+        "{PapyrusPicnic:normal}哈哈！\nUNDYNE，你太自信了，不是吗？",
+        "{UndynePicnic:normal}知道吗，我们每天都刻苦训练，\n就是为了打败你们，小混球！",
+        "{PapyrusPicnic:angry}我们队可是战无不胜的！",
+        "{UndynePicnic:normal}那好吧，Papyrus，你自找的！"
+      ],
+      "Dialog26": [
+        "{PapyrusPicnic:worry}SANS!"
+      ],
+      "Dialog27": [
+        "{PapyrusPicnic:worry}你没事吧？"
+      ],
+      "Dialog28": [
+        "{SansVolleybro:shocked}呃...",
+        "{SansVolleybro:tired}抱歉，我走神了。",
+        "{SansVolleybro:tired}也许我需要休息一下，\n可以吗，兄弟？",
+        "{PapyrusPicnic:worry}当然了兄弟，但别睡着啊！",
+        "{PapyrusPicnic:worry}我们还需要你赢得这场比赛呢！",
+        "{SansVolleybro:tired}好的兄弟。"
+      ],
+      "Dialog29": [
+        "{TorielPicnic:worry}你还好吗，Sans?"
+      ],
+      "Dialog30": [
+        "{Sans:none}马上回来，tori。"
+      ],
+      "Papyrus_2": [
+        "{PapyrusPicnic:worry}我好担心SANS。\n我没见过他状态这么不好。",
+        "{PapyrusPicnic:worry}能请你去看看他怎么了吗？"
+      ],
+      "Papyrus_3": [
+        "{PapyrusPicnic:worry}拜托，去照顾下SANS。"
+      ],
+      "Undyne_2": [
+        "{UndynePicnic:worry}不可能是我的一击把他打垮了。",
+        "{UndynePicnic:worry}他会没事的。"
+      ],
+      "Undyne_3": [
+        "{UndynePicnic:normal}我很确定他会没事的。"
+      ],
+      "Asgore_2": [
+        "{AsgorePicnic:worry}如果你想知道的话，我注意到Sans今天\n表现很奇怪。",
+        "{AsgorePicnic:worry}我每次见到这个骷髅，他的脸上\n总是洋溢着积极的笑容。",
+        "{AsgorePicnic:worry}但现在...\nPapyrus的担心可能是有原因的。"
+      ],
+      "Asgore_3": [
+        "{AsgorePicnic:worry}我认为你应去看看你的朋友。"
+      ],
+      "Alphys_2": [
+        "{AlphysPicnic:worry}Sans绝对不是没事...",
+        "{AlphysPicnic:worry}我感觉得到。\n这种语气，简直不像他自己。"
+      ],
+      "Alphys_3": [
+        "{AlphysPicnic:worry}好吧...",
+        "{AlphysPicnic:worry}谁去把球捡回来？"
+      ],
+      "Toriel_2": [
+        "{TorielPicnic:worry}可怜的Sans。\n他一定被打得很重。",
+        "{TorielPicnic:worry}我不知道他为什么离开。\n为什么不躺下来休息会儿？"
+      ],
+      "Toriel_3": [
+        "{TorielPicnic:worry}他到底发生了什么事？"
+      ],
+      "NiceCreamSeller_7": [
+        "噢，抱歉，挡你路了。",
+        "我再试着把它举起来。\n它太重了。"
+      ],
+      "NiceCreamSeller_8": [
+        "我马上就把推车放好。"
+      ],
+      "Dialog31": [
+        "{Sans:tired}ink？你在那吗？"
+      ],
+      "Dialog32_Line1": [
+        "{Sans:tired}快点啊，朋友！请回答我！"
+      ],
+      "Dialog32_Line2": [
+        "{Sans:tired}听起来可能很怪...\n但我需要帮助。"
+      ],
+      "Dialog33": [
+        "{Frisk:normal}...Sans?"
+      ],
+      "Dialog34": [
+        "{Frisk:normal}...Ink是谁？",
+        "{Sans:tired}...",
+        "{Sans:normal}我可以用个烂双关来解释...",
+        "{Sans:normal}但是... 呃... 没那个必要...\n没什么要紧的，孩子。"
+      ],
+      "Dialog35": [
+        "{Frisk:normal}我能看到，你状态并不好",
+        "{Sans:angry}孩子，我没事，好吗？\n这场意外都是因为Cr ►"
+      ],
+      "Dialog36": [
+        "{Ink:shying}呃，好尴尬啊...",
+        "{Sans:normal}你来了，ink。\n我决定跟你走了",
+        "{Ink:surprised}什-什么？\n你认真的？"
+      ],
+      "Dialog37": [
+        "{Ink:shying}...呃...",
+        "{Ink:glad}嘿-嘿，朋友...",
+        "{Frisk:normal}Ink...?\n为什么Sans一定要离开...?",
+        "{Sans:joking}...我想我要告诉你一切了，哈哈。",
+        "{Sans:normal}不过，有人可能不愿意听，\n因为他们什么都看到了。"
+      ],
+      "Dialog38": [
+        "{Ink:shying}你是说我吗？",
+        "{Sans:normal}哈啊...",
+        "{Ink:calm}好的。我会保持沉默。"
+      ],
+      "Dialog39": [
+        "{Frisk:normal}Sans，我要和你一起走。",
+        "{Sans:normal}抱歉孩子。\n你得在我离开的时候帮我瞒着大家。",
+        "{Sans:normal}别人会觉得奇怪的...",
+        "{Sans:normal}如果我在这一切之后\n不再那么懒了的话。",
+        "{Sans:normal}你这样也是可以帮我的，好吗？",
+        "{Frisk:normal}...答应我你会回来。",
+        "{Sans:normal}呵，我知道你很讨厌承诺的，但是...\n我尽量。"
+      ],
+      "Dialog40": [
+        "{Frisk:normal}也许我该给你点什么？"
+      ],
+      "Dialog41_Line1": [
+        "{Sans:normal}谢了，frisk。"
+      ],
+      "Dialog41_Line2": [
+        "{Sans:normal}可以。谢了，frisk。"
+      ],
+      "Dialog42": [
+        "{Sans:normal}好了...\n是时候离开了..."
+      ],
+      "Dialog43": [
+        "{Frisk:normal}拜托，照顾好自己..."
+      ],
+      "Dialog44": [
+        "{Frisk:normal}...因为...",
+        "{Sans:glad}...因为有人真的很关心你...\n是啊..."
+      ]
+    }
+  },
+  "Item": {
+    "HeartLocket": {
+      "Name": "心形挂坠盒",
+      "ShortName": "挂坠盒",
+      "Description": "一个金色的心形挂坠盒"
+    },
+    "NiceCream": {
+      "Name": "好棒冰",
+      "ShortName": "好棒冰",
+      "Description": "棒棒冰让你有好心情。回复 12 HP。"
+    },
+    "SpiderDonut": {
+      "Name": "蜘蛛甜甜圈",
+      "ShortName": "蜘蛛甜甜圈",
+      "Description": "蛛制点心。回复 18 HP。"
+    },
+    "SpiderCider": {
+      "Name": "蜘蛛果汁",
+      "ShortName": "蜘蛛果汁",
+      "Description": "蛛制点心。回复 24 HP。"
+    },
+    "MuffetMuffin": {
+      "Name": "Muffet杯子蛋糕",
+      "ShortName": "玛芬",
+      "Description": "Muffet的独家秘方。回复 30 HP。"
+    },
+    "Ketchup": {
+      "Name": "番茄酱",
+      "ShortName": "番茄酱",
+      "Description": "一瓶普通的番茄酱。回复 10 HP。",
+      "DescriptionSans": "挺好喝的。回复 30 HP。"
+    },
+    "Mustard": {
+      "Name": "芥末酱",
+      "ShortName": "芥末酱",
+      "Description": "一瓶普通的芥末酱。回复 10 HP。",
+      "DescriptionFellSans": "不错的选择。回复 30 HP。"
+    },
+    "CheeseSauce": {
+      "Name": "芝士酱",
+      "ShortName": "芝士酱",
+      "Description": "适合多种餐种的酱料。回复 10 HP。",
+      "DescriptionOuterSans": "香味极佳。 回复 30 HP。"
+    },
+    "KetchupLimited": {
+      "Name": "限量版番茄酱",
+      "ShortName": "限量番茄酱",
+      "Description": "豪华限量版番茄酱。回复 12 HP。",
+      "DescriptionSans": "完美。回复 50 HP。"
+    }
+  },
+  "Shop": {
+    "Button": {
+      "Buy": "购买",
+      "Sell": "出售",
+      "Talk": "交谈",
+      "Exit": "退出"
+    },
+    "Muffet": {
+      "Main": [
+        "要点什么？"
+      ],
+      "Greeting": [
+        "噢，你好呀，亲爱的！欢迎来到我的面包店！\n这次我们在做促销，像人类做的那样。"
+      ],
+      "Buy": [
+        "来看看吧。"
+      ],
+      "Sell": [
+        "噢，亲爱的，不是钱的话...\n我真的什么都不要。",
+        "我很高兴你能买些好吃的\n来支持我们面包店哟，呋呼呼。"
+      ],
+      "Talk": [
+        "想谈点什么呢，亲爱的？"
+      ],
+      "Farewell": [
+        "之后见啦。"
+      ],
+      "Gratitude": [
+        "谢谢你！蜘蛛们不会忘记你的恩情。"
+      ],
+      "TalkButton": {
+        "AboutBakery": "关于这面包店",
+        "AboutMuffin": "你有玛芬吗？",
+        "AboutPet": "你的宠物在哪里？"
+      },
+      "AboutBakery": [
+        "噢，对我们面包店有兴趣，真的吗？",
+        "我在地下世界做的生意做得相当成功。",
+        "于是，我有足够的钱买下了这家简陋的小店。",
+        "但我们不缺空间。\n我的宝贝们正在另一个房间里做糕点呢。",
+        "有些人有些怕蜘蛛，\n所以我们不得不让他们掩人耳目。",
+        "否则他们可能会...呃...被踩扁。",
+        "我就很怕那种人。\n若是他们对我这么做的话，\n我会把他们全绑起来拿去喂我的宠物。呋呼呼！"
+      ],
+      "AboutMuffin": [
+        "你说的对。噢，那是我纯粹的自豪。",
+        "我调配出了连人类都难以想象的美味。",
+        "这就是我们最常订的订单。\n客户对这样的糕点非常满意。",
+        "你也该试试。\n别害羞，买下它，亲爱的。"
+      ],
+      "AboutPet": [
+        "它在后院散步呢。",
+        "我试着不让它接近人类，\n他们只会变成它的开胃菜，呋呼呼。"
+      ]
+    },
+    "Dino": {
+      "Main": [
+        "做点什么？"
+      ],
+      "Greeting": [
+        "我能帮你什么？"
+      ],
+      "Buy": [
+        "这是我的选择。"
+      ],
+      "Sell": [
+        "吼-吼！ Mi dispiace, 我现在不需要任何东西。",
+        "我只从我的生意中获利。"
+      ],
+      "Talk": [
+        "问问吧，年轻人。"
+      ],
+      "Farewell": [
+        "载见！有缘再会！"
+      ],
+      "Gratitude": [
+        "感谢你的购买！"
+      ],
+      "TalkButton": {
+        "AboutName": "你叫什么？",
+        "AboutShop": "关于你的商店",
+        "AboutMonsters": "你是怎么看待怪物的？"
+      },
+      "AboutName": [
+        "我名叫Dino！遇见你是我的荣幸！"
+      ],
+      "AboutShop": [
+        "吼，年轻人，我不常被问到这个问题。",
+        "好吧，就像你说的那样，现在听好了。",
+        "这家店是我的财富。\n我的祖先曾在这里烹制出最美味的招牌酱汁。",
+        "我们番茄酱在这小镇堪称一绝，我们经常为客户提供。",
+        "所有东西都是在这店里进行。\n今天，我在柜台工作，弟弟在厨房，\n我们每天都轮班工作。",
+        "现在，我希望你们能完全相信，\n我们这就是你们买番茄酱的地方。"
+      ],
+      "AboutMonsters": [
+        "这个嘛，他们还算挺...有趣的。",
+        "怪物也是我的访客，但这比人类还少。",
+        "事实上，我觉得它们很不错。\n问题是，我发现街上的蜘蛛越来越多了。",
+        "我完全可以肯定是谁把他们带到这里来的。"
       ]
     }
   }
