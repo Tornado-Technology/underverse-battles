@@ -39,6 +39,7 @@ packet_handler_register("pong", function(data) {
 packet_handler_register("logout", function(data) {
 	network_profile = undefined;
 	network_account = undefined;
+	global.friend_accounts = [];
 });
 
 packet_handler_register("login", function(data) {

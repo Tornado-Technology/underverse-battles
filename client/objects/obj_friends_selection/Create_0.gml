@@ -170,8 +170,8 @@ translate_update = on_translate_update.connect(function() {
 
 open_friend_profile = function() {
 	instance_create(obj_friend_profile, {
-		friend: friends[button_id],
-		index: button_id
+		friend: friends[friend_id],
+		index: friend_id
 	});
 	obj_menu.goto_page(menu_page.friend_profile);
 	instance_destroy();
