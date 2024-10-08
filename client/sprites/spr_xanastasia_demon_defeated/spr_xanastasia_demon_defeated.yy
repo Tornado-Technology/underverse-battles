@@ -34,7 +34,7 @@
   ],
   "name":"spr_xanastasia_demon_defeated",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Demon",
     "path":"folders/Characteres/X Anastasia/Sprites/Char/Demon.yy",
@@ -119,7 +119,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":35,
+    "xorigin":34,
     "yorigin":58,
   },
   "swatchColours":null,

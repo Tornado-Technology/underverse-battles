@@ -33,7 +33,7 @@
   ],
   "name":"spr_xanastasia_demon_swords_start",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"swords",
     "path":"folders/Characteres/X Anastasia/Sprites/Char/Demon/swords.yy",
@@ -115,7 +115,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":36,
+    "xorigin":35,
     "yorigin":52,
   },
   "swatchColours":null,
