@@ -40,7 +40,7 @@ update = function() {
 	}
 }
 
-var period = 90 - _power * 4;
+var period = 100 - _power * 4;
 var repeats = 5 + _power;
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {

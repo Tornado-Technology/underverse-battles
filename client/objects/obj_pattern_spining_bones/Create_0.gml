@@ -22,7 +22,7 @@ update = function() {
 		create_spinning_bone(border_instance.x + border_instance.right * 2, border_instance.y + random_y, rotating_bone, bone_speed, bone_size, 180, random_angle, angle_speed);
 }
 
-var period = 50 - _power * 5;
+var period = 50 - _power * 4;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
