@@ -12,6 +12,7 @@
 #macro localserver_mode (os_get_config() == "Localserver")
 #macro cinematic_mode (os_get_config() == "Cinematic")
 #macro mobile_mode (os_get_config() == "Mobile")
+#macro beta_test_mode (os_get_config() == "Beta")
 #macro tournament_mode (os_get_config() == "Tournament")
 
 // Logger
