@@ -775,7 +775,7 @@
       "Bio": "Sans的来自UNDERTALE宇宙的小兄弟。\n因为想变酷以变得有人缘，因此把\n自己的全部精力都投入其中。\n喜欢烹饪，尤其是和Undyne一起。\n已得到属于自己的红车。\nPapyrus是个开朗的怪物，尽管有点呆，\n但他总是随时准备为朋友和家人挺身而出。\n他相信，每个人和怪物身上都有善良的一面。",
       "PassiveSkill": {
         "Name": "抗伤",
-        "Description": "Papyrus每次受击最多受到10伤害" },
+        "Description": "Papyrus每次受击最多受到10点伤害" },
       "Attack0": {
         "Name": "骨头攻击",
         "Description": "骨头朝向灵魂并造成伤害" },
