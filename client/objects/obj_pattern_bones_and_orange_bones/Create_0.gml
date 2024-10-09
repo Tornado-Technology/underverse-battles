@@ -52,7 +52,7 @@ update = function(selected_bone) {
 
 var period_bone = 60 - _power * 5;
 var period_orange_bone = 90 - _power * 5;
-var repeats = 6 + _power * 3;
+var repeats = 6 + _power * 2;
 
 time_source_update = time_source_create(time_source_game, period_bone / 60, time_source_units_seconds, function() {
 	update(bone);

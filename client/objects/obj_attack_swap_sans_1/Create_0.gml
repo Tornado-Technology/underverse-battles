@@ -6,7 +6,7 @@ on_border_created = function() {
 
 switch (type) {
 	case 0:
-		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left - 5, battle_border.right - 5);
+		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_spining_crossed_bones, {
 			rotating_bone: obj_bone_rotating_swap_sans
 		});
@@ -18,7 +18,7 @@ switch (type) {
 		});
 		break;
 	default:
-		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 10, battle_border.right - 10);
+		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left, battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_spining_bones, {
 			rotating_bone: obj_bone_rotating_swap_sans
 		});

@@ -63,14 +63,14 @@ export default class Fight {
   }
 
   public async initializeClients(): Promise<void> {
+    const rating = Matchmaker.ratingCalculation(this.clients[0].rating, this.clients[1].rating);
+    
     this.clients.forEach((client, index) => {
       client.fight.init(this, index);
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
+      client.setResultingRating(rating);
       client.fight.startResponceTimeout();
     });
-    if (this.isRating) {
-      await Matchmaker.removeRating(this.clients);
-    }
 
     this.setState(state.choose);
     this.setInitiative(this.initiative);
@@ -158,10 +158,18 @@ export default class Fight {
   }
 
   public async finish(winner: Client): Promise<void> {
-    const rating = this.isRating ? await Matchmaker.addRating(winner) : 0;
-    
-    this.clients.forEach((client) => {
+    this.clients.forEach(async (client) => {
       const isWinner = client === winner;
+
+      let rating = 0;
+      if (this.isRating) {
+          if (isWinner) {
+            rating = await Matchmaker.addRating(client);
+          } else {
+            rating = await Matchmaker.removeRating(client);
+          }
+      }
+
       client?.fight.unit();
       client?.setState(clientState.inMenu);
       client?.sendFightFinished(isWinner ? rating : -rating, isWinner);
@@ -173,7 +181,6 @@ export default class Fight {
     this.clients.forEach((client) => {
       client?.fight.unit();
       client?.setState(clientState.inMenu);
-      Matchmaker.returnRating(client);
       client?.sendFightFinished(0, false);
     });
     this.destroy();

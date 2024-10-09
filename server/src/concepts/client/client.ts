@@ -40,7 +40,6 @@ export default class Client extends SendStuff {
   public verificationCodeTimeout: NodeJS.Timeout;
   public verificationCodeCallback: Function;
 
-  public removedRating: number;
   public resultingRating: number = 0;
 
   protected _state: state;
@@ -69,6 +68,9 @@ export default class Client extends SendStuff {
 
   static async remove(client: Client): Promise<void> {
     await client.onDisconnect(statusCode.serverSocketClosed);
+    if (client.state === state.inFight) {
+      await client.removeRating(client.resultingRating);
+    }
     App.clients.splice(App.clients.indexOf(client), 1);
   }
 
@@ -199,21 +201,18 @@ export default class Client extends SendStuff {
 
   public async addRating(rating: number): Promise<void> {
     if (this.hasProfile) {
-      this.profile.rating += Math.abs(rating);
+      if (rating < 0) return;
+      this.profile.rating += rating;
       this.update();
       await this.save();
     }
   }
 
   public async removeRating(rating: number): Promise<void> {
-    this.removedRating = 0;
     if (this.hasProfile) {
+      if (rating < 0) return;
       this.profile.rating -= rating;
-      this.removedRating = rating;
-      if (this.profile.rating <= 0) {
-        this.removedRating = this.profile.rating + rating;
-        this.profile.rating = 0;
-      }
+      this.profile.rating = this.profile.rating < 0 ? 0 : this.profile.rating;
       this.update();
       await this.save();
     }
