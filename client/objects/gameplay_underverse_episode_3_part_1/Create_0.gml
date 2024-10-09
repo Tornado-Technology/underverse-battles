@@ -11,10 +11,6 @@ dream = obj_character_dream;
 // Soul
 soul_sans_half = noone;
 
-// Backgrounds
-var layer_background_current = layer_get_id("Background");
-var background_id = layer_background_get_id(layer_background_current);
-
 // Cutscenes
 cutscenes = [
 	[	// X Chara with Sans's soul (Index: 0)
@@ -101,9 +97,9 @@ cutscenes = [
 		[cutscene_execute, function () {
 			instance_destroy(cross);
 			instance_destroy(xchara);
+			layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_background_black);
+			audio_stop_sound(snd_dark_dream);
 		}],
-		[layer_background_sprite, background_id, spr_background_black],
-		[audio_stop_sound, snd_dark_dream],
 		[cutscene_wait, 1],
 		[cutscene_execute, function () {
 			cross = instance_create_depth(obj_camera.x + obj_camera.view_width, obj_camera.y + obj_camera.view_height,
@@ -114,12 +110,13 @@ cutscenes = [
 			audio_play_sound(snd_jumpscare, 1, true);
 		}],
 		[cutscene_dialog, episode + "Dialog11"],
-		[audio_stop_sound, snd_jumpscare],
 		// Cross and Nightmare
-		[layer_background_sprite, background_id, spr_background_empty_xtale_evening],
-		[audio_play_soundtrack, snd_dark_dream],
 		[cutscene_execute, function () {
+			layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_background_empty_xtale_evening);
+			audio_play_soundtrack(snd_dark_dream);
 			effect_shake(2, 0);
+			audio_stop_sound(snd_jumpscare);
+			
 			instance_destroy(cross);
 			cross = instance_create_depth(240, 176, fight_depth.player, obj_character_cross, {
 				sprite_index: spr_cross_xevent_down_looking_left

@@ -1321,7 +1321,7 @@
       "Dialog13": [
         "{CrossXEvent:normal}...你跟Ink和Error有什么\n关系吗？",
         "{Nightmare:normal}真粗鲁！\n我是来帮忙的，而你却用蠢问题\n来伤我的心。",
-        "{Nightmare:normal不，我和他们无关。\n多亏了你的负面情绪才能找到你。",
+        "{Nightmare:normal}不，我和他们无关。\n多亏了你的负面情绪才能找到你。",
         "{CrossXEvent:normal}你也能应付正面情绪吗？",
         "{Nightmare:normal}哈！我干嘛要这么做？开心是别人的事！\n而你需要的是我的帮助。"
       ],
