@@ -24,7 +24,7 @@ mana = 50;
 max_mana = 100;
 
 // Soul
-soul = spr_battle_soul;
+soul = spr_soul_dream;
 
 // Skin
 skin_name = translate_get("CharactersStyles.Standard");
