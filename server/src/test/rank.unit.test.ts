@@ -23,10 +23,10 @@ describe('Rank', () => {
       expect(rank.belongs(128)).true;
     });
 
-    it('Testing clamp', () => {
+    it('Testing min', () => {
       const rank = new Rank(68, 128, 10, 5);
-      expect(rank.clamp(10, 10)).equals(10);
-      expect(rank.clamp(69, 12)).equals(5);
+      expect(rank.min(10)).equals(10);
+      expect(rank.min(12)).equals(5);
     });
   });
 
@@ -39,9 +39,9 @@ describe('Rank', () => {
     });
 
     it('Testing detecting + clamping', () => {
-      expect(getRank(0).clamp(0, 10)).equals(2);
-      expect(getRank(14).clamp(14, 54)).equals(2);
-      expect(getRank(360).clamp(360, 102)).equals(18);
+      expect(getRank(0).min(10)).equals(2);
+      expect(getRank(14).min(54)).equals(2);
+      expect(getRank(360).min(102)).equals(18);
     });
   });
 });

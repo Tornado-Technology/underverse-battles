@@ -148,9 +148,7 @@ export default class Matchmaker {
       return 0;
     }
     
-    const rating = client?.resultingRating;
-    await client?.addRating(rating);
-    return rating;
+    return await client.addRating(client.resultingRating);
   }
 
   public static ratingCalculation(val1: number, val2: number): number {
@@ -163,9 +161,7 @@ export default class Matchmaker {
       return 0;
     }
     
-    const rating = client?.resultingRating;
-    await client?.removeRating(rating);
-    return rating;
+    return await client.removeRating(client.resultingRating);
   }
 
   protected static createMatch(type: matchType, client1: Client, client2: Client) {

@@ -1,21 +1,25 @@
 export default class Rank {
-  public readonly min: number;
-  public readonly max: number;
   public readonly minLimit: number;
   public readonly maxLimit: number;
+  public readonly minReceivedPoints: number;
+  public readonly maxTakenPoints: number;
 
-  constructor(min: number, max: number, minLimit: number, maxLimit: number) {
-    this.min = min;
-    this.max = max;
+  constructor(minLimit: number, maxLimit: number, minReceivedPoints: number, maxTakenPoints: number) {
     this.minLimit = minLimit;
     this.maxLimit = maxLimit;
+    this.minReceivedPoints = minReceivedPoints;
+    this.maxTakenPoints = maxTakenPoints;
   }
 
   public belongs(x: number): boolean {
-    return x >= this.min && x <= this.max;
+    return x >= this.minLimit && x <= this.maxLimit;
   }
 
-  public clamp(x: number, points: number): number {
-    return this.belongs(x) ? (Math.clamp(points, this.minLimit, this.maxLimit)) : 0;
+  public min(points: number): number {
+    return Math.min(points, this.minReceivedPoints);
+  }
+
+  public max(points: number): number {
+    return Math.max(points, this.maxTakenPoints);
   }
 }
