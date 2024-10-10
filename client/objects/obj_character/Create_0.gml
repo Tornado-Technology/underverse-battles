@@ -38,7 +38,7 @@ mana_cooldown = 13;
 soul = spr_battle_soul;
 has_soul_changeable_parameters = false;
 soul_custom_speed = 0;
-soul_custom_jump_time = 0;
+soul_custom_fly_time = 0;
 
 // Skin
 skin_name = "The Char!";

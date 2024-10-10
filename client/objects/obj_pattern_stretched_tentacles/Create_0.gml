@@ -1,4 +1,4 @@
-//Arguments: tentacles, custom_repeats (optional)
+//Arguments: tentacle, custom_repeats (optional)
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);

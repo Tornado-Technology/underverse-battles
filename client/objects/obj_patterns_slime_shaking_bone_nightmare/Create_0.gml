@@ -79,12 +79,12 @@ var coord =
 ];
 
 	tentacles_instance = [
-		instance_create_depth(coord[0], border_up_down, fight_depth.bullet_outside_hight, tentacles, {
+		instance_create_depth(coord[0], border_up_down, fight_depth.bullet_outside_hight, tentacle, {
 				image_xscale: 0,
 				image_angle: point_direction(coord[0], border_up_down, coord[0], border_instance.y)
 			}),
 			 
-		instance_create_depth(border_left_right, coord[1], fight_depth.bullet_outside_hight, tentacles, {
+		instance_create_depth(border_left_right, coord[1], fight_depth.bullet_outside_hight, tentacle, {
 			image_xscale: 0,
 			image_angle: point_direction(border_left_right, coord[1], border_instance.x, coord[1])
 		})

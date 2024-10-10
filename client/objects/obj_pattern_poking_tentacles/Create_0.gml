@@ -1,4 +1,4 @@
-//Arguments: tentacles, custom_repeats (optional)
+//Arguments: tentacle, custom_repeats (optional)
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
@@ -10,7 +10,7 @@ callback = function () {
 
 update = function () {
 	var position = rand_side_from(border_instance.x - border_instance.left - 10, border_instance.y - border_instance.up - 10, border_instance.x + border_instance.right + 10, border_instance.y + border_instance.down + 10);
-	var tentacles_instance = instance_create_depth(position[0], position[1], fight_depth.bullet_outside_hight, tentacles, {
+	var tentacles_instance = instance_create_depth(position[0], position[1], fight_depth.bullet_outside_hight, tentacle, {
 		image_xscale: 0,
 		image_angle: point_direction(position[0], position[1], border_instance.x, border_instance.y)
 	 });
