@@ -1,6 +1,7 @@
 import { Document, ObjectId, Model } from 'mongoose';
 import { createRequire } from 'module';
 import { accountModelName, IAccount } from './account.js';
+import CharacterInfo from '../../data/characterInfo.js';
 
 const require = createRequire(import.meta.url);
 const mongoose = require('mongoose');
@@ -14,18 +15,20 @@ export interface IProfile extends Document {
   online: boolean,
   lastOnline: Date,
   friends: ObjectId[],
-  unlockingCharacters: number[],
+  unlockingCharacters: {
+    characterId: Number,
+    skinId: Number
+  }[],
   rating: number,
   gold: number,
   badge: number | null,
   fight: {
     id: string | null,
     index: number | null,
+    characterInfo: CharacterInfo | null,
     hp: number | null,
     mana: number | null,
     stamina: number | null,
-    characterId: number | null,
-    characterSkinId: number | null,
     specialActionCharge: number | null,
   }
 }
@@ -35,17 +38,20 @@ const schema = new Schema({
   online: { type: Boolean, default: false },
   lastOnline: { type: Date, default: Date.now },
   friends: [{ type: Schema.Types.ObjectId, ref: accountModelName }],
+  unlockingCharacters: [{
+    characterId: { type: Number, default: null },
+    skinId: { type: Number, default: null }
+  }],
   rating: { type: Number, default: 0 },
   gold: { type: Number, default: 0 },
   badge: { type: Number, default: null },
   fight: {
     id: { type: String, default: null },
     index: { type: Number, default: null },
+    characterInfo: { type: CharacterInfo, default: null },
     hp: { type: Number, default: null },
     mana: { type: Number, default: null },
     stamina: { type: Number, default: null },
-    characterId: { type: Number, default: null },
-    characterSkinId: { type: Number, default: null },
     specialActionCharge: { type: Number, default: null },
   },
 }, {

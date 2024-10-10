@@ -1,6 +1,5 @@
 event_inherited();
 // Base
-index = CHARACTER_ID.SWAP_PAPYRUS;
 name	    = translate_get("Character.SwapPapyrus.Name");
 description = translate_get("Character.SwapPapyrus.Description");
 bio			= translate_get("Character.SwapPapyrus.Bio");

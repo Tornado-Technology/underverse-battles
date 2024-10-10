@@ -1,8 +1,6 @@
 /// @desc Main character parameters
 #region Base
 
-index = 0;
-
 name = "Char";
 description = "Base character class (Oh no, GML haven't normal OOP).";
 bio = "Written by TornadoTech, hears for the benefit of all who want it.";

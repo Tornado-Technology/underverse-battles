@@ -1,6 +1,5 @@
 import Client from './client.js';
 import Fight, { actionType, state, target } from '../../game/fight/fight.js';
-import { characterInfoGetById } from '../../content/chracterInfoList.js';
 import CharacterInfo from '../../data/characterInfo.js';
 import ClientFightInfo from './fight/clientFightInfo.js';
 import SoulData from '../../game/fight/soulData.js';
@@ -75,11 +74,10 @@ export default class ClientFight {
     const fightInfo = this.client.profile.fight;
     fightInfo.id = this.id;
     fightInfo.index = this.index;
+    fightInfo.characterInfo = this.characterInfo;
     fightInfo.hp = this.hp;
     fightInfo.mana = this.mana;
     fightInfo.stamina = this.stamina;
-    fightInfo.characterId = this.characterId;
-    fightInfo.characterSkinId = this.characterSkinId;
     fightInfo.specialActionCharge = this.specialActionCharge;
     await this.client.save();
   }
@@ -89,7 +87,7 @@ export default class ClientFight {
     const fightInfo = this.client.profile.fight;
     this.id = fightInfo.id;
     this.index = fightInfo.index;
-    this.setCharacter(fightInfo.characterId, fightInfo.characterSkinId);
+    this.setCharacter(fightInfo.characterInfo);
     this.setHp(fightInfo.hp);
     this.setMana(fightInfo.mana);
     this.setStamina(fightInfo.stamina);
@@ -101,19 +99,14 @@ export default class ClientFight {
     this.instance?.leavePlayer(this.client);
   }
 
-  public setCharacter(characterId: number, skinId: number): void {
-    this.characterId = characterId;
-    this.characterSkinId = skinId;
-    this.characterInfo = characterInfoGetById(characterId);
-
-    if (!this.characterInfo) {
-      Logger.warn(`Character loading failed, reason: client ${this.client.username} set wrong CharacterId (${this.characterId}); Set defaultCharacterId: ${defaultCharacterId}`);
-      this.characterInfo = characterInfoGetById(defaultCharacterId);
-    }
-
-    this.hpMax = this.characterInfo.hpMax;
-    this.manaMax = this.characterInfo.manaMax;
-    this.staminaMax = this.characterInfo.staminaMax;
+  public setCharacter(characterInfo: CharacterInfo): void {
+    this.characterInfo = characterInfo;
+    
+    this.characterId = characterInfo.characterId;
+    this.characterSkinId = characterInfo.characterSkinId;
+    this.hpMax = characterInfo.hpMax;
+    this.manaMax = characterInfo.manaMax;
+    this.staminaMax = characterInfo.staminaMax;
   }
 
   public setAction(action: actionType) {

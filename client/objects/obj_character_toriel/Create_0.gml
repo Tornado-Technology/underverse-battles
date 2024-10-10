@@ -1,6 +1,5 @@
 event_inherited();
 // Base
-index = 2;
 name	    = translate_get("Character.Toriel.Name");
 description = translate_get("Character.Toriel.Description");
 bio			= translate_get("Character.Toriel.Bio");

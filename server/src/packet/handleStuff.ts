@@ -320,7 +320,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
           break;
         }
 
-        client.fight.setCharacter(data.characterId, data.skinId);
+        client.fight.setCharacter(data.characterInfo);
         
         await Matchmaker.tryMakeMatch(matchType);
       } catch (error) {
@@ -351,7 +351,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
           break;
         }
 
-        client.fight.setCharacter(data.characterId, data.skinId);
+        client.fight.setCharacter(data.characterInfo);
         
         await MatchmakerPrivate.makeMatch(data.privateKey);
       } catch (error) {

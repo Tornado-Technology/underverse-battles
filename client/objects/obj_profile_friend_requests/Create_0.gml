@@ -15,11 +15,13 @@ list_middle = 3;
 
 is_loading = true;
 
+send_friend_request_get_all();
+
 /* Show */
 show = true;
 menu_switch_pause(true);
 
-request_count = array_length(global.friend_requests);
+request_count = 0;
 request_id = 0;
 
 request_text_x = width / 2;
@@ -100,6 +102,10 @@ tab_count = 2;
 tab = 0;
 
 input_mouse = 0;
+
+update = function () {
+	request_count = array_length(global.friend_requests);
+}
 
 focus_button = function() {
 	if (tab == 1) {

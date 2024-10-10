@@ -9,6 +9,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
 
   const account = await this.getAccountByFinder(finder);
   const profile = await this.getProfileByAccountId(account._id);
+  const client = await this.getClientByAccountFinder(finder);
 
   const index = this.profile.friends.indexOf(profile._id);
   if (index === -1)
@@ -20,5 +21,13 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
   await this.profile.save();
   await profile.save();
 
-  this.sendCode(statusCode.success);
+  this.send({
+    code: statusCode.success,
+    account: account
+  });
+  client.send('friendListRemove', {
+    code: statusCode.success,
+    account: account
+  });
+
 }).setFlags(handlerFlags.requireLogging));

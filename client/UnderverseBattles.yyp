@@ -1490,7 +1490,6 @@
     {"id":{"name":"room_underverse_episode_3_surface","path":"rooms/room_underverse_episode_3_surface/room_underverse_episode_3_surface.yy",},},
     {"id":{"name":"room_underverse_episode2","path":"rooms/room_underverse_episode2/room_underverse_episode2.yy",},},
     {"id":{"name":"__Achivements","path":"scripts/__Achivements/__Achivements.yy",},},
-    {"id":{"name":"__CharacterId__","path":"scripts/__CharacterId__/__CharacterId__.yy",},},
     {"id":{"name":"__Colors","path":"scripts/__Colors/__Colors.yy",},},
     {"id":{"name":"__Constants","path":"scripts/__Constants/__Constants.yy",},},
     {"id":{"name":"__ContentConfig","path":"scripts/__ContentConfig/__ContentConfig.yy",},},

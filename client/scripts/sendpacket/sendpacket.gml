@@ -132,21 +132,19 @@ function send_password_retrieval(identifier, password) {
 /// @param {Real} type
 /// @param {Real} character_id
 /// @param {Real} skin_id
-function send_fight_join(type, character_id, skin_id) { 
+function send_fight_join(type, character_info) { 
     send("fightJoin", {
 		matchType: type,
-		characterId: character_id,
-		skinId: skin_id,
+		characterInfo: character_info
 	});
 }
 
 /// @param {Real} character_id
 /// @param {Real} skin_id
-function send_private_fight_join(character_id, skin_id) { 
+function send_private_fight_join(character_info) { 
     send("fightPrivateJoin", {
 		privateKey: global.fight_key,
-		characterId: character_id,
-		skinId: skin_id,
+		characterInfo: character_info
 	});
 }
 

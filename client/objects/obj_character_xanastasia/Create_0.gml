@@ -1,5 +1,4 @@
 event_inherited();
-index = 12;
 name	    = translate_get("Character.XAnastasia.Name");
 description = translate_get("Character.XAnastasia.Description");
 bio			= translate_get("Character.XAnastasia.Bio");

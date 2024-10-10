@@ -1,5 +1,4 @@
 event_inherited();
-index = 10;
 name	    = translate_get("Character.Nightmare.Name");
 description = translate_get("Character.Nightmare.Description");
 bio			= translate_get("Character.Nightmare.Bio");

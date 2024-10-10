@@ -48,7 +48,6 @@ packet_handler_register("login", function(data) {
 		network_account = data.account;
 		on_network_login.invoke(data.status);
 		send_get_accounts_info(network_profile.friends);
-		send_friend_request_get_all();
 		achievement_give(achievement_id.a_cybers_world);
 		logger.info("Login success");
 		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
@@ -116,6 +115,7 @@ packet_handler_register("getAccountsInfo", function(data) {
 
 packet_handler_register("friendRequestGetAll", function(data) {
 	global.friend_requests = struct_get_values(data.requests);
+	with (obj_profile_friend_requests) update();
 });
 
 packet_handler_register("friendRequest", function(data) {
@@ -134,9 +134,7 @@ packet_handler_register("friendFightRequest", function(data) {
 	display_show_message_info(translate_get("Menu.Notifications.Error." + string(data.code)), c_red);
 });
 
-packet_handler_register("friendRequestInvite", function(data) {
-	array_push(global.friend_requests, data.request);
-	
+packet_handler_register("friendRequestInvite", function(data) {	
 	if (data.code == status_code.success && global.fight_instance == noone) {
 		instance_create(obj_ui_request, {
 			request_id: data.request._id,
@@ -157,15 +155,19 @@ packet_handler_register("friendRequestAccept", function(data) {
 			is_private_fight: true
 		});
 	}
-	display_show_message_info("Menu.Notifications.RequestAccepted", c_lime);
+	display_show_message_info(translate_get("Menu.Notifications.RequestAccepted"), c_lime);
 });
 
 packet_handler_register("friendRequestReject", function(data) {
-	display_show_message_info("Menu.Notifications.RequestRejected", c_red);
+	display_show_message_info(translate_get("Menu.Notifications.RequestRejected"), c_red);
 });
 
 packet_handler_register("friendListRemove", function(data) {
 	if (data.code == status_code.success) {
+		global.friend_accounts = array_filter(global.friend_accounts, function(friend) {
+			if (friend._id == data.friend._id) return false;
+			return true;
+		})
 		display_show_message_info(translate_get("Menu.Notifications.FriendDeletedSuccessful"), c_lime);
 		return;
 	}

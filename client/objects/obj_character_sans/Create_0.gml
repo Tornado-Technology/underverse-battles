@@ -1,6 +1,5 @@
 event_inherited();
 // Base
-index = CHARACTER_ID.SANS;
 name	    = translate_get("Character.ClassicSans.Name");
 description = translate_get("Character.ClassicSans.Description");
 bio			= translate_get("Character.ClassicSans.Bio");
