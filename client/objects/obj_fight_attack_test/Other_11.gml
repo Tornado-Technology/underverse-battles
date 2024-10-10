@@ -16,6 +16,3 @@ fight_flip_player(1);
 
 // Time source
 end_battle_timesource = time_source_create(time_source_game, 1.5, time_source_units_seconds, goto_ending_room);
-
-// Statiscics
-instance_create_one(obj_statistics);
