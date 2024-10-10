@@ -48,7 +48,17 @@ const schema = new Schema({
   fight: {
     id: { type: String, default: null },
     index: { type: Number, default: null },
-    characterInfo: { type: CharacterInfo, default: null },
+    characterInfo: {
+      characterId: { type: Number, default: null },
+      characterSkinId: { type: Number, default: null },
+      hpMax: { type: Number, default: null },
+      staminaMax: { type: Number, default: null },
+      manaMax: { type: Number, default: null },
+      staminaRegen: { type: Number, default: null },
+      staminaCost: [{ type: Number, default: null }],
+      manaCost: [{ type: Number, default: null }],
+      specialActionChargePerTurn: { type: Number, default: null },
+    },
     hp: { type: Number, default: null },
     mana: { type: Number, default: null },
     stamina: { type: Number, default: null },
