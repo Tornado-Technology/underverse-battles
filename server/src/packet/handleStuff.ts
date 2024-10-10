@@ -432,7 +432,7 @@ export const handlePacket = async (client: Client, data: any): Promise<void> => 
 
         await fight?.removeHp(client, damage);
         fight?.addMana(source, damage);
-        fight?.addSpecialActionCharge(source, damage * source?.fight.characterInfo.specialActionChargePerDamage);
+        fight?.addSpecialActionCharge(source, damage);
       }
       break;
 
