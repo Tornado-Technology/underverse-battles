@@ -46,11 +46,11 @@ arrow_x = width - 20;
 arrow_vertical = {
 	up: new UIImageButton(0, spr_ui_arrow)
 		.set_on_press(function() {
-			change_button_up();
+			change_friend_up();
 		}),
 	down: new UIImageButton(1, spr_ui_arrow)
 		.set_on_press(function() {
-			change_button_down();
+			change_friend_down();
 		}),
 }
 arrow_vertical.up.padding = 5;
@@ -130,14 +130,14 @@ change_tab_down = function() {
 	audio_play_sound_plugging(snd_click);
 }
 
-change_background_up = function() {
+change_friend_up = function() {
 	if (friend_id > 0)
 		friend_id --;
 	
 	audio_play_sound_plugging(snd_click);
 }
 
-change_background_down = function() {
+change_friend_down = function() {
 	if (friend_id < friend_count - 1)
 		friend_id ++;
 	

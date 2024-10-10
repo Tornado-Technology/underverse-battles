@@ -5,11 +5,11 @@ input_mouse = mouse_check_button_pressed(mb_any);
 
 /* Menu control */
 if (mouse_wheel_up()) {
-	change_background_up();
+	change_friend_up();
 }
 
 if (mouse_wheel_down()) {
-	change_background_down();
+	change_friend_down();
 }
 
 if (input_check_pressed(input.action)) {
@@ -35,7 +35,7 @@ if (input_check_pressed(input.right)) {
 
 if (input_check_pressed(input.up)) {
 	if (tab == 0) {
-		change_background_up();
+		change_friend_up();
 	} else {
 		change_button_up();
 	}
@@ -43,7 +43,7 @@ if (input_check_pressed(input.up)) {
 
 if (input_check_pressed(input.down)) {
 	if (tab == 0) {
-		change_background_down();
+		change_friend_down();
 	} else {
 		change_button_down();
 	}
