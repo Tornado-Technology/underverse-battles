@@ -22,8 +22,8 @@ pattern_instances = [
 		bone: obj_bone_sharp_error_sans,
 		sides: [dir.left, dir.right, dir.down, dir.up],
 		is_aiming: false,
-		custom_period: 5,
-		custom_repeats: 100
+		custom_period: 6,
+		custom_repeats: 80
 	}, start_next_pattern), 
 	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 6, {
 		soul_type: battle_soul_type.red,

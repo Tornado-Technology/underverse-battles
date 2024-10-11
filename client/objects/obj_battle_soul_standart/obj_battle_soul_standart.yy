@@ -17,7 +17,7 @@
     "name":"obj_battle_soul",
     "path":"objects/obj_battle_soul/obj_battle_soul.yy",
   },
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
