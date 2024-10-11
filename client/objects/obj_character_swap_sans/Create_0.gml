@@ -1,5 +1,6 @@
 event_inherited();
 // Base
+index = 4;
 name	    = translate_get("Character.SwapSans.Name");
 description = translate_get("Character.SwapSans.Description");
 bio			= translate_get("Character.SwapSans.Bio");

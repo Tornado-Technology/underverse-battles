@@ -38,8 +38,8 @@ head_jevil_sprite = spr_voodoo_head_jevil;
 
 head_sprites = [
 	head_ink_sprite, head_error_sprite, head_sans_sprite, head_fell_sans_sprite, head_swap_sans_sprite,
-	head_swap_papyrus_sprite, head_xchara_sprite, head_cross_sprite, head_green_sprite, head_dream_sprite,
-	head_nightmare_sprite, head_papyrus_sprite, head_xanastasia_sprite, head_jevil_sprite
+	head_swap_papyrus_sprite, head_xchara_sprite, head_cross_sprite, head_dream_sprite, head_nightmare_sprite,
+	head_papyrus_sprite, head_green_sprite, head_xanastasia_sprite, head_jevil_sprite
 ];
 current_head_sprite = spr_empty;
 

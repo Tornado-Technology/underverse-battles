@@ -1,5 +1,5 @@
 event_inherited();
-
+index = 10;
 name	    = translate_get("Character.Papyrus.Name");
 description = translate_get("Character.Papyrus.Description");
 bio			= translate_get("Character.Papyrus.Bio");

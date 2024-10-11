@@ -1,5 +1,6 @@
 event_inherited();
 // Base
+index = 6;
 name	    = translate_get("Character.XtaleChara.Name");
 description = translate_get("Character.XtaleChara.Description");
 bio			= translate_get("Character.XtaleChara.Bio");
