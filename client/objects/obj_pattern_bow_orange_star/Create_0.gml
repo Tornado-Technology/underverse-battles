@@ -34,9 +34,9 @@ update_orange = function() {
 	create_bow(bow, arrows_orange, speed_bow, can_ricochet, position_x, position_y,  target, 1 / 6,  0.6 - _power * 0.1,  0.5 - _power * 0.1);
 }
 
-var period = 40 - (3 + (_power));
+var period = 40;
 var period_orange = 45 - (_power * 2);
-var repeats = 17 + (_power * 2);
+var repeats = 12 + (_power * 3);
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();	
