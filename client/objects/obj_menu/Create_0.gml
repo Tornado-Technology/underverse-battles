@@ -530,7 +530,7 @@ create_page([
 
 // Statistics
 create_page([
-	Transfer("Leaderboard", menu_page.leaderboard, function() {
+	Transfer("Account.Leaderboard", menu_page.leaderboard, function() {
 		instance_destroy(obj_profile_statistics);
 		instance_create(obj_leaderboard);
 	}),
@@ -545,7 +545,7 @@ create_page([
 		instance_destroy(obj_leaderboard);
 		instance_create(obj_profile_statistics);
 	}),
-], menu_page.leaderboard, "Leaderboard", true);
+], menu_page.leaderboard, "Account.Leaderboard", true);
 
 // Account settings
 account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");
