@@ -21,6 +21,7 @@ enum menu_page {
 	find_friend,
 	friend_profile,
 	statistics,
+	leaderboard,
 	account_settings,
     account_change_nickname,
     account_change_password,
@@ -282,6 +283,7 @@ disconnect_callback = on_network_disconnect.connect(function() {
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
 		goto_page(menu_page.multiplayer);
 		instance_destroy(obj_profile_statistics);
+		instance_destroy(obj_leaderboard);
 	}
 });
 
@@ -528,10 +530,22 @@ create_page([
 
 // Statistics
 create_page([
-	Transfer("StandardButtons.Back", menu_page.account, function() {
+	Transfer("Leaderboard", menu_page.leaderboard, function() {
+		instance_destroy(obj_profile_statistics);
+		instance_create(obj_leaderboard);
+	}),
+	Transfer("StandardButtons.Back", menu_page.multiplayer_account, function() {
 		instance_destroy(obj_profile_statistics);
 	}),
 ], menu_page.statistics, "Statistics.Title", true);
+
+// Leaderboard
+create_page([
+	Transfer("StandardButtons.Back", menu_page.statistics, function() {
+		instance_destroy(obj_leaderboard);
+		instance_create(obj_profile_statistics);
+	}),
+], menu_page.leaderboard, "Leaderboard", true);
 
 // Account settings
 account_settings_inputbox_change_nickname = InputBox("AccountOptions.ChangeNickname");

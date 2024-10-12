@@ -231,6 +231,10 @@ packet_handler_register("matchmakerPlayerCount", function(data) {
 	}
 });
 
+packet_handler_register("leaderboard", function(data) {
+	obj_leaderboard.list = data.leaderboard;
+});
+
 packet_handler_register("fightJoin", function(data) {
 	var status = data.status;
 	

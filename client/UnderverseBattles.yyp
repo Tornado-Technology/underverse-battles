@@ -1124,6 +1124,7 @@
     {"id":{"name":"obj_lamp_left","path":"objects/obj_lamp_left/obj_lamp_left.yy",},},
     {"id":{"name":"obj_lamp_right","path":"objects/obj_lamp_right/obj_lamp_right.yy",},},
     {"id":{"name":"obj_lamp_up","path":"objects/obj_lamp_up/obj_lamp_up.yy",},},
+    {"id":{"name":"obj_leaderboard","path":"objects/obj_leaderboard/obj_leaderboard.yy",},},
     {"id":{"name":"obj_little_star_dream","path":"objects/obj_little_star_dream/obj_little_star_dream.yy",},},
     {"id":{"name":"obj_menu_achivements","path":"objects/obj_menu_achivements/obj_menu_achivements.yy",},},
     {"id":{"name":"obj_menu_custom_battle_characters","path":"objects/obj_menu_custom_battle_characters/obj_menu_custom_battle_characters.yy",},},

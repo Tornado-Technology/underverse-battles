@@ -129,9 +129,12 @@ function send_password_retrieval(identifier, password) {
 	});
 }
 
+function send_leaderboard_request() {
+	send("leaderboard");
+}
+
 /// @param {Real} type
-/// @param {Real} character_id
-/// @param {Real} skin_id
+/// @param {Struct} character_info
 function send_fight_join(type, character_info) { 
     send("fightJoin", {
 		matchType: type,
@@ -140,7 +143,7 @@ function send_fight_join(type, character_info) {
 }
 
 /// @param {Real} character_id
-/// @param {Real} skin_id
+/// @param {Struct} character_info
 function send_private_fight_join(character_info) { 
     send("fightPrivateJoin", {
 		privateKey: global.fight_key,
