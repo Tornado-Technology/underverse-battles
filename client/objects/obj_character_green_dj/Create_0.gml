@@ -15,6 +15,6 @@ defeated_last_image =  spr_green_dj_defeated_last_image;
 
 actions = [
 	Action("Character.Green.Attack0", green_attack0),
-	Action("Character.Green.Attack1", green_attack1),
+	Action("Character.Green.Attack1", green_dj_attack1),
 	Action("Character.Green.Attack2", green_dj_attack2)
 ];
