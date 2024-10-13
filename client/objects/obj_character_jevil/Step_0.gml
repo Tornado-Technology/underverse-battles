@@ -18,5 +18,12 @@ if (sprite_index == idle_animation && fight_get_initiative() == player_num &&
 	sprite_index = fight_2_finish_animation;
 }
 
+if (sprite_index == idle_animation && fight_get_initiative() == player_num && 
+	fight_get_state() == fight_state.battle && (player_action == 0 || player_action == 1)) {
+	sprite_index = after_battle_animation;
+} else if (sprite_index == idle_animation && fight_get_initiative() != player_num) {
+	sprite_index = idle_animation;
+}
+
 
 
