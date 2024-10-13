@@ -1683,6 +1683,7 @@
     {"id":{"name":"effect_shake","path":"scripts/effect_shake/effect_shake.yy",},},
     {"id":{"name":"enable_all_constructor_ui_buttons","path":"scripts/enable_all_constructor_ui_buttons/enable_all_constructor_ui_buttons.yy",},},
     {"id":{"name":"enum_device","path":"scripts/enum_device/enum_device.yy",},},
+    {"id":{"name":"episode_end","path":"scripts/episode_end/episode_end.yy",},},
     {"id":{"name":"Event","path":"scripts/Event/Event.yy",},},
     {"id":{"name":"Exceptions","path":"scripts/Exceptions/Exceptions.yy",},},
     {"id":{"name":"failed_registration_reason_second_password","path":"scripts/failed_registration_reason_second_password/failed_registration_reason_second_password.yy",},},

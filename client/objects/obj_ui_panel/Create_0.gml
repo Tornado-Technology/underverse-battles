@@ -11,6 +11,7 @@ free_index = 0;
 add_button = function(name, callback) {
 	var button = new UITextButton(free_index, name)
 		.set_padding(5)
+		.set_bind_input(input.action)
 		.set_can_be_on_pause(false)
 		.set_on_press(callback)
 		.set_on_hover(function(self_button) {

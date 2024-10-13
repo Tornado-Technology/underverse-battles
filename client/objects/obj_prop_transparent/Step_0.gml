@@ -1,5 +1,3 @@
-depth = -y;
-
 image_alpha = approach(image_alpha, target_alpha, 0.02);
 
 if (!instance_exists(target_character)) exit;

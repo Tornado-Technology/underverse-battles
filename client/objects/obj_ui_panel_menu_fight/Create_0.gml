@@ -25,6 +25,8 @@ if (fight_exists) {
 	add_button(text_giveup, function() {
 		if (to_close) exit;
 		
+		instance_destroy(obj_ui_pause_button);
+		
 		var damage = fight_get_player_hp(0);
 		if (damage > 0) {
 			fight_set_player_hp(0, 0);

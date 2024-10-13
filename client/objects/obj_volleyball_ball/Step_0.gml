@@ -1,4 +1,4 @@
-event_inherited();
+depth = -y;
 
 if (is_holding) exit;
 

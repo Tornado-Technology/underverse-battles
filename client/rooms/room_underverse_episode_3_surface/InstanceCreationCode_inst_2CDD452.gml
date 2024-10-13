@@ -163,6 +163,6 @@ cutscenes = [
 		[audio_sound_gain, snd_omen, 0, 2000],
 		[audio_sound_gain, snd_park, 0, 2000],
 		[cutscene_wait, 3],
-		[room_goto, room_menu]
+		[episode_end]
 	],
 ];

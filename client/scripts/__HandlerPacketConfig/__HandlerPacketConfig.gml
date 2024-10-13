@@ -47,7 +47,10 @@ packet_handler_register("login", function(data) {
 		network_profile = data.profile;
 		network_account = data.account;
 		on_network_login.invoke(data.status);
+		
+		global.friend_accounts = [];
 		send_get_accounts_info(network_profile.friends);
+		
 		achievement_give(achievement_id.a_cybers_world);
 		logger.info("Login success");
 		display_show_message_info(translate_get("Menu.Notifications.LoginSuccessful"), c_lime);
@@ -145,6 +148,7 @@ packet_handler_register("friendRequestInvite", function(data) {
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
+	display_show_message_info(translate_get("Menu.Notifications.RequestAccepted"), c_blue);
 	if (data.request.type == request_type.friend) {
 		send_get_accounts_info([data.accountId]);
 	}

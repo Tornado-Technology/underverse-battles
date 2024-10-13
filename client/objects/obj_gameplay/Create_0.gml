@@ -1,4 +1,4 @@
-global.gameplay_instance = id;
+global.gameplay_instance = self;
 
 on_into_story_mode.invoke("Tutorial");
 

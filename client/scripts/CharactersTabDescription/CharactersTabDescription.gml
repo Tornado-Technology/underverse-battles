@@ -17,7 +17,7 @@ function ClassCharactersTabDescription(menu_instance) : ClassCharactersTab(menu_
 	static offset_from_buttons = 10;
 	static color_selected = c_yellow;
 	static scroll_width = 300;
-	static scroll_height = 130;
+	static scroll_height = 160;
 	static scroll_wheel_speed = 10;
 	static char_height = char_get_height("W", global._font_main_determination);
 	activated_button_id = -1;

@@ -31,13 +31,13 @@ string_rp = translate_get("Gameover.RatingPoint");
 arrows = {
 	up: new UIImageButton(0, spr_ui_arrow)
 		.set_padding(5)
-		.set_on_press(function() {
-			scroll_up();
+		.set_on_held(function() {
+			scroll_up(3);
 		}),
 	down: new UIImageButton(1, spr_ui_arrow)
 		.set_padding(5)
-		.set_on_press(function() {
-			scroll_down();
+		.set_on_held(function() {
+			scroll_down(3);
 		})
 }
 
