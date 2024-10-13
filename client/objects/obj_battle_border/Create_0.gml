@@ -10,6 +10,11 @@ down  = battle_border.down;
 left  = battle_border.left;
 right = battle_border.right;
 
+up_start	= battle_border.up;
+down_start  = battle_border.down;
+left_start  = battle_border.left;
+right_start = battle_border.right;
+
 wave_ane = false;
 
 wave_y = 2;
@@ -23,7 +28,7 @@ angle = 0;
 
 alpha	 = 1;
 alpha_bg = 1;
-alpha_frame=1;
+alpha_frame = 1;
 
 color    = c_white;
 color_bg = c_black;

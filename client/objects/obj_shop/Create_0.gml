@@ -9,6 +9,9 @@ text_indent = 15;
 padding = 20;
 border_sprite = spr_bg_border;
 
+shift_for_item_counter = 0;
+shift_for_money_counter = 0;
+
 // NPC
 npc = noone;
 

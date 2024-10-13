@@ -1,6 +1,5 @@
 event_inherited();
 
-
 is_bonb = false;
 
 alpha = 1;

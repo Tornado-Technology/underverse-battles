@@ -1466,7 +1466,11 @@
       ],
       "FicusLicker_Found_3": [
         "{Frisk:normal}第三个找到了。",
-        "{NPC:none}帅！感谢帮助！这就是奖励 - 12G。"
+        "{NPC:none}帅！感谢帮助！这就是奖励 - 15G。"
+      ],
+      "FicusLicker_3": [
+        "{NPC:none}Did you want something?",
+        "{NPC:none}There is no more money. Sorry."
       ],
       "MushroomLicker_1": [
         "快走，不然我会被看到的。\n我在玩捉迷藏。"

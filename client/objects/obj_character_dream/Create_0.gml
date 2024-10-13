@@ -66,7 +66,7 @@ on_battle_end = function(damage) {
 	if (damage > 0)
 		return;
 		
-	var _player_id = fight_get_initiative();
+	var _player_id = fight_get_next_initiative()
 	fight_player_add_special_action_percent_custom(_player_id, 10);
 }
 

@@ -5,8 +5,10 @@ depth = fight_depth.soul;
 color_type = battle_soul_type.white;
 
 // Size
-half_width = sprite_width / 2;
-half_height = sprite_height / 2;
+half_up = sprite_xoffset;
+half_down =  sprite_height - sprite_xoffset;
+half_left = sprite_yoffset;
+half_right = sprite_width - sprite_yoffset;
 
 // Movement
 moveable = true;
@@ -52,7 +54,7 @@ pusher_instance = noone;
 is_inside_border_x = true;
 is_inside_border_y = true;
 
-update_push_damage = function () {
+update_push_damage = function() {
 	if (has_collision && is_pushed && instance_exists(pusher_instance)) {
 		fight_soul_damage(pusher_instance.damage, pusher_instance.destructible, pusher_instance);
 	}

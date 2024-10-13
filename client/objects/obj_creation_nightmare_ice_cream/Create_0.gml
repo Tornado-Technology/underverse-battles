@@ -1,3 +1,3 @@
 event_inherited();
 
-bullets = obj_bullets_nightmare_ice_cream;
+drop = obj_bullets_nightmare_ice_cream;

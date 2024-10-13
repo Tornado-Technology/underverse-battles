@@ -1,10 +1,9 @@
 if (image_alpha <= 1) {
-	image_alpha += 0.1;	
-	if(image_alpha >= 0.4) {
+	image_alpha += 0.1;
+	if (image_alpha >= 0.4) {
 		exit;	
-	};
-};
-
+	}
+}
 
 motion_set(direction,  speed_const * dtime);
 

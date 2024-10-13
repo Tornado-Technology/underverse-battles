@@ -1,3 +1,3 @@
 event_inherited();
 
-bullets = obj_bullets_nightmare_mecha;
+drop = obj_bullets_nightmare_mecha;

@@ -15,6 +15,8 @@ interact_callback = function() {
 	set_dialog_by_lickers_found();
 	cutscene_create(cutscenes[index]);
 	
+	if (founded_lickers_count < 3 && index == 1) return;
+	
 	if (!is_last_cutscene()) {
 		index++;
 	}
@@ -38,6 +40,14 @@ cutscenes = [
 			if (founded_lickers_count == 3) {
 				obj_inventory.money += 15;
 			}
+			npc.stop_speaking();
+			target_character.set_controlled();
+		}]
+	],
+	[
+		[cutscene_execute, npc.speak],
+		[cutscene_dialog, "Underverse_Episode3.FicusLicker_3", dir.down],
+		[cutscene_execute, function() {
 			npc.stop_speaking();
 			target_character.set_controlled();
 		}]

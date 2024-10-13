@@ -51,7 +51,7 @@ actions = [
 special_action = SpecialAction("Character.Nightmare.SpecialAttack", spr_special_attack_nightmare, spr_special_attack_nightmare_locked, call_attack_nightmare_special);
 
 on_taking_damage = function(damage) {
-	var _player_id = fight_get_initiative();
+	var _player_id = fight_get_next_initiative();
 	fight_player_add_special_action_percent_custom(_player_id, damage);
 	return damage;
 }

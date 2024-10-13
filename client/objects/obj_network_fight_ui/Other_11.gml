@@ -37,7 +37,7 @@ draw_sprite(player_frame, 0, frame_x, frame_y);
 draw_set_font(global._font_main_mini);
 draw_set_halign(fa_left);
 
-var color = your_rp_values[1];
+var color = your_rp_values.color;
 if (account.type == account_type.developer) {
 	color = c_rainbow;
 }
@@ -57,7 +57,7 @@ if (account != undefined && profile != undefined) {
 
 draw_sprite(opp_frame, 0, size.x - frame_x - frame_w, frame_y);
 
-color = opp_rp_values[1];
+color = opp_rp_values.color;
 if (opponent_get_type(player_id) == account_type.developer) {
 	color = c_rainbow;
 }

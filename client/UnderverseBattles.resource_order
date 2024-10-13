@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"spr_alphys_picnic_standing_right_sad","order":1,"path":"sprites/spr_alphys_picnic_standing_right_sad/spr_alphys_picnic_standing_right_sad.yy",},
+  ],
 }

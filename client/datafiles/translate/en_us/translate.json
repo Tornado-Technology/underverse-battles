@@ -1466,7 +1466,11 @@
       ],
       "FicusLicker_Found_3": [
         "{Frisk:normal}Found three.",
-        "{NPC:none}Awesome! Thanks for your help! Here's your share - 12G."
+        "{NPC:none}Awesome! Thanks for your help! Here's your share - 15G."
+      ],
+      "FicusLicker_3": [
+        "{NPC:none}Did you want something?",
+        "{NPC:none}There is no more money. Sorry."
       ],
       "MushroomLicker_1": [
         "Move or you'll get me seen. I'm hide-and-seeking."

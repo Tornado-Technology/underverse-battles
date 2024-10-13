@@ -11,6 +11,12 @@ function battle_border_create(up, down, left, right) {
 	var inst_border = instance_create_depth(0, 0, 0, border);
 	battle_border_set_size(up, down, left, right);
 	battle_border_start_animation("Create");
+	
+	border.up_start = up;
+	border.down_start = down;
+	border.left_start = left;
+	border.right_start = right;
+	
 	return inst_border;
 }
 function battle_border_set_postion(x, y) {
@@ -51,12 +57,12 @@ function battle_border_add_size(up, down, left, right) {
 	if(!is_bool(right)) border.right += right;
 	return true;
 }
-function battle_border_reset_size(up, down, left, right) {
+function battle_border_reset_size() {
 	var border = obj_battle_border; if(!instance_exists(border)) return false;
-	if(!is_bool(up)) border.up = battle_border.up;
-	if(!is_bool(down)) border.down = battle_border.down;
-	if(!is_bool(left)) border.left = battle_border.left;
-	if(!is_bool(right)) border.right = battle_border.right;
+	border.up = border.up_start;
+	border.down = border.down_start;
+	border.left  = border.left_start;
+	border.right  = border.right_start;
 	return true;
 }
 function battle_border_set_color(color, color_bg, color_fm) {

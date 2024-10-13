@@ -59,14 +59,22 @@ function UIShop(main_dialog, greeting_dialog, item_dialog, sell_dialog, talk_dia
 		item_button.button[i].on_press = function(_self) {
 			var cost = item_button_struct[_self.index].cost;
 			
-			if (cost <= obj_inventory.money) {
-				obj_inventory.add_item(item_button_struct[_self.index]);
-				obj_inventory.money -= cost;
-				dialog.set_new_dialog(gratitude_dialog);
-				audio_play_sound_plugging(snd_purchase);
+			if (cost > obj_inventory.money) {
+				with (obj_shop) shift_for_money_counter = 3;
+				audio_play_sound_plugging(snd_cant_select);
 				return;
 			}
-			audio_play_sound_plugging(snd_cant_select);
+			if (obj_inventory.ui.item_count >= obj_inventory.max_item_count) {
+				with (obj_shop) shift_for_item_counter = 3;
+				audio_play_sound_plugging(snd_cant_select);
+				return;
+			}
+			
+			obj_inventory.add_item(item_button_struct[_self.index]);
+			obj_inventory.money -= cost;
+			dialog.set_new_dialog(gratitude_dialog);
+			audio_play_sound_plugging(snd_purchase);
+			return;
 		}
 	}
 	item_button.button[item_button_count - 1].set_on_press(function(_self) {

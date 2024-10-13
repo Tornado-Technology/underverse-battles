@@ -12,8 +12,7 @@ if (place_meeting(x, y, pusher)) {
 	var cos_blast_angle = dcos(blast_angle);
 	var sin_blast_angle = dsin(blast_angle);
 	
-	
-	var outside_force_speed = pusher_instance.outside_force_speed  * dtime;
+	var outside_force_speed = pusher_instance.outside_force_speed * dtime;
 	outside_force_x = outside_force_speed * cos_blast_angle;
 	outside_force_y = -outside_force_speed * sin_blast_angle;
 	

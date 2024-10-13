@@ -253,7 +253,7 @@ cutscenes = [
 		[cutscene_object_set_position, undyne, 206, 3039],
 		[cutscene_object_set_sprite, undyne, spr_undyne_picnic_standing_up],
 		[cutscene_object_set_position, alphys, 241, 3010],
-		[cutscene_object_set_sprite, alphys, spr_alphys_picnic_standing_right],
+		[cutscene_object_set_sprite, alphys, spr_alphys_picnic_standing_right_sad],
 		[cutscene_execute, function() {
 			frisk.sprite_index = spr_frisk_standing_right;
 			camera_set_overwrite_position(frisk.x - display_get_gui_width() / 2, frisk.y - display_get_gui_height() / 2);

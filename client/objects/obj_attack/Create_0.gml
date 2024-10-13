@@ -6,6 +6,10 @@ time_border_delay = 0.6;
 on_border_created = function() {}
 
 create_border = function(up, down, left, right) {
+	border_up = up;
+	border_down = down;
+	border_left = left;
+	border_right = right;
 	border_instance = battle_border_create(up, down, left, right);
 	time_source_start(time_source_border_delay);
 }
@@ -42,5 +46,7 @@ create_pattern_custom_power = function(pattern, custom_power, var_struct = {}, f
 }
 
 time_source_border_delay = time_source_create(time_source_game, time_border_delay, time_source_units_seconds, function() {
+	instance_destroy(obj_battle_border_anim);
+	battle_border_reset_size();
 	on_border_created();
 });
