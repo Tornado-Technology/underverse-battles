@@ -22,5 +22,5 @@ draw_text_outlined(width_center, 120, c_white, c_black, translate_get("Menu.Stat
 
 // Rank
 var value = set_rank(rp);
-draw_text_outlined(width_center, 140, value.color, c_black, translate_get("Menu.Statistics.Rank") + ": " + value[0]);
+draw_text_outlined(width_center, 140, value.color, c_black, translate_get("Menu.Statistics.Rank") + ": " + value.rank);
 draw_text_outlined(width_center, 160, c_yellow, c_black, translate_get("Menu.Statistics.Gold") + ": " + string(friend.gold));
