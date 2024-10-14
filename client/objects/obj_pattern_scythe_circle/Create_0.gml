@@ -16,7 +16,7 @@ callback = function() {
 				center_y: border_instance.y
 			});
 			
-			scythe_instance.step_radius = 2 + _power * 0.1;
+			scythe_instance.step_radius = 2 + _power * 0.08;
 			scythe_instance.rotation_speed_const = 2 + _power * 0.1;
 			i += angle;
 		}

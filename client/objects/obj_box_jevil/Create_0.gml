@@ -96,7 +96,6 @@ bomb = function () {
 		break;
 		
 		default:
-		case spr_jevil_clubs_box: 
 			spwan_clubs();
 		break;	
 	}

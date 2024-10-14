@@ -12,7 +12,7 @@ update = function() {
 	var position_x;
 	var position_y;
 	var direction_bullet;
-	var speed_bullet = _power > 4 ? 3.5 :  3 + _power * 0.1;
+	var speed_bullet = _power > 4 ? 3.3 :  3 + _power * 0.1;
 	var vertical = fight_random_integer(0, 1);
 	var offset = 40;
 	var box_instance;
@@ -62,7 +62,7 @@ update = function() {
 }
 
 var period = 40 - _power * 2;
-var repeats = 5 + _power;
+var repeats = 6 + _power;
 
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();

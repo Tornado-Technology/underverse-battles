@@ -37,7 +37,7 @@
   ],
   "name":"spr_jevil_scythe_finish",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Scythe",
     "path":"folders/Characteres/Jevil/Sprites/Character/Scythe.yy",
@@ -131,7 +131,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
+    "xorigin":31,
     "yorigin":97,
   },
   "swatchColours":null,

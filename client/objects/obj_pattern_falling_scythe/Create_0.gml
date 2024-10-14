@@ -9,7 +9,7 @@ callback = function() {
 }
 
 update = function() {
-	var position_x = fight_random_integer(border_instance.x - border_instance.left - 20, border_instance.x + border_instance.right + 20);
+	var position_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
 
 	var scythe_instance = instance_create_depth(position_x, border_instance.y - border_instance.up - 75, fight_depth.bullet_outside_hight, scythe_falling, {
 		angle: 270,

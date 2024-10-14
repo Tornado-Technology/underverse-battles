@@ -31,7 +31,7 @@
   ],
   "name":"spr_xanastasia_scythe_idle",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"scythe",
     "path":"folders/Characteres/X Anastasia/Sprites/Char/scythe.yy",
@@ -92,7 +92,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":48,
+    "xorigin":45,
     "yorigin":58,
   },
   "swatchColours":null,
