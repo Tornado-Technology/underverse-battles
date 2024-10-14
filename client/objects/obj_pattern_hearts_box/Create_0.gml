@@ -34,12 +34,11 @@ update = function () {
 				var target = (instance_exists(soul) ? new Vector2(soul.x, soul.y) : new Vector2(0, 0));
 				var  angle = point_direction(x, y, target.x, target.y);
 		
-				var box_instance = instance_create_depth(x, y, 0, obj_jevil_hearts_bullet, {	
+				instance_create_depth(x, y, 0, obj_jevil_hearts_bullet, {	
 					sprite_hearts: spr_jevil_hearts,	
 					angle: angle,
 					speed_count: speed_count
 				});	
-				box_instance.radius = fight_random_integer(10, 40);
 			}	
 		}
 		
@@ -62,7 +61,6 @@ update = function () {
 		if (fight_random_integer(0, 1)) {
 			start_x = fight_random_integer(border_instance.x - border_instance.left - 150,  border_instance.x - border_instance.left - 70);
 			finish_x = fight_random_integer(start_x + 30, start_x + 90);
-		
 		} else {
 			start_x = fight_random_integer(border_instance.x + border_instance.right + 150,  border_instance.x + border_instance.right + 50);
 			finish_x = fight_random_integer(start_x - 120, start_x - 200);
@@ -80,12 +78,11 @@ update = function () {
 				var target = (instance_exists(soul) ? new Vector2(soul.x, soul.y) : new Vector2(0, 0));
 				var  angle = point_direction(x, y, target.x, target.y);
 		
-				var box_instance = instance_create_depth(x, y, 0, obj_jevil_hearts_bullet, {	
+				 instance_create_depth(x, y, 0, obj_jevil_hearts_bullet, {	
 					sprite_hearts: spr_jevil_hearts,			
 					angle: angle,
 					speed_count: speed_count + 0.4
 				});	
-				box_instance.radius = fight_random_integer(15, 30);
 			}
 		}
 		box_hearts.speed_count = 3 + _power * 0.1;
