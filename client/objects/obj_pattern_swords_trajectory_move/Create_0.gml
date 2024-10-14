@@ -15,7 +15,7 @@ update = function() {
 	var position_x = fight_random_choose(border_instance.x - border_instance.left - 20, border_instance.x + border_instance.right + 20);
 	
 	var swords_instance = instance_create_depth(position_x, border_instance.y - border_instance.up - offset, fight_depth.bullet_outside_hight, swords, {
-		speed_const: 1 + _power * 0.08,
+		speed_const: 0.7 + _power * 0.1,
 		image_xscale: position_x > border_instance.x ? 1 : -1
 	});
 	
@@ -35,14 +35,14 @@ update_ = function () {
 
 	var position = new Vector2(position_x, -room_height);
 
-	swords_instance.step = 0.08 + _power * 0.01;
+	swords_instance.step = 0.06;
 	swords_instance.gradually_appearing();
 	swords_instance.disable_surface = true;
 	swords_instance.target_places(position, true);
 	
 }
 
-var period = (50 - _power); 
+var period = (65 - _power); 
 var period_swodrs = 65;
 var repeats = 5 + (_power * 2);
 
