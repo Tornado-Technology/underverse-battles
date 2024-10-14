@@ -24,14 +24,14 @@ update = function() {
 
 }
 
-var period = 40 - (_power * 2);
+var period = 41 - (_power * 2);
 var repeats = 5 + _power * 2; 
 
-time_source_update = time_source_create(time_source_game, period/ 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period * repeats / 60 + 1, time_source_units_seconds, function () {
 	character_instance.is_teleportation = false;
 	instance_destroy();
 });
