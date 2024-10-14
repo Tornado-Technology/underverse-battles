@@ -17,7 +17,7 @@ if (touching_walls && !be_ricochet) {
 	collision();
 }
 
-if(is_bonb) {
+if(is_bomb) {
 	speed_const = 0;
 	alpha = approach(alpha, 0, alpha_time);
 	radius++;

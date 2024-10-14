@@ -14,7 +14,7 @@ if (moving) {
 	}
 }
 
-if(attack && !is_bonb) {
+if(attack && !is_bomb) {
 	sides_scythe = x > obj_battle_border.x ? 1 : -1;
 		
 	if (!backwards) {
@@ -36,12 +36,12 @@ if(attack && !is_bonb) {
 
 if (backwards_count <= 0 && attack) {
 	attack = false;
-	is_bonb = true;
+	is_bomb = true;
 	spwan_diamonds();	
 	vspeed = 0;
 }
 
-if (is_bonb) {
+if (is_bomb) {
 	alpha = approach(alpha, 0, alpha_time * dtime);
 	radius += 2 * dtime;
 	

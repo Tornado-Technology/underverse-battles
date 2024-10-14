@@ -32,7 +32,7 @@ update = function() {
 		angle = point_direction(position_x, position_y, border_instance.x, position_y);
 		
 		start_position_x = position_x;
-		start_position_y = position_x == border_instance.x - border_instance.left - offset  ? border_instance.y - border_instance.up - 100 : border_instance.y + border_instance.down + 100;
+		start_position_y = position_x == border_instance.x - border_instance.left - offset ? border_instance.y - border_instance.up - offset : border_instance.y + border_instance.down + offset;
 	}
 	
 	var swords_instance = instance_create_depth(start_position_x, start_position_y, fight_depth.bullet_outside, swords, {

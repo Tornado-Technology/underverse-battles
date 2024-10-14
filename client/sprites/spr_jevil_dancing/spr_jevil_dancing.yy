@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_jevil_after_battle",
+  "%Name":"spr_jevil_dancing",
   "bboxMode":0,
   "bbox_bottom":53,
   "bbox_left":0,
@@ -28,7 +28,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"c49d770a-2de0-4604-8e2d-abdf7070a3ef","blendMode":0,"displayName":"default","isLocked":false,"name":"c49d770a-2de0-4604-8e2d-abdf7070a3ef","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_jevil_after_battle",
+  "name":"spr_jevil_dancing",
   "nineSlice":null,
   "origin":7,
   "parent":{
@@ -40,7 +40,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_jevil_after_battle",
+    "%Name":"spr_jevil_dancing",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -64,7 +64,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_jevil_after_battle",
+    "name":"spr_jevil_dancing",
     "playback":1,
     "playbackSpeed":10.0,
     "playbackSpeedType":0,
@@ -76,28 +76,28 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"58c761df-ee38-48eb-a314-422ec317c6e5","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"58c761df-ee38-48eb-a314-422ec317c6e5","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"37640182-d6af-4885-97aa-8fb1ef3d0a74","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"eb8a7fb3-44e0-468f-9654-00c0ce5fcafc","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"eb8a7fb3-44e0-468f-9654-00c0ce5fcafc","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9d7ed8bb-6159-4046-88c0-aac5e1324c11","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d7e7e6f-bbd9-4778-b809-9884ce4c03ea","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d7e7e6f-bbd9-4778-b809-9884ce4c03ea","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"75d8df49-ab51-430e-88c2-69fd84200951","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ab9ca3e-73d7-4544-a5a1-7f8d10cdc250","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ab9ca3e-73d7-4544-a5a1-7f8d10cdc250","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"597ef62b-7c13-4605-90e1-ec50bfc9b254","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"391a975b-25d8-459a-9e8f-2b7efc77a86b","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"391a975b-25d8-459a-9e8f-2b7efc77a86b","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e6235612-a86d-4b46-8382-3d095b6c46e0","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"249e674b-9667-4d8f-ba96-bb3fb7651d89","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"249e674b-9667-4d8f-ba96-bb3fb7651d89","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"147ae395-2695-4034-a744-65530e47486e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a257805d-19cd-49f5-9c6d-49e356c0d199","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a257805d-19cd-49f5-9c6d-49e356c0d199","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"67ee8651-2e19-43bd-b996-f1f2943bc4c8","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6fe79b81-f99e-48b2-b240-d6fc8b6ae6f7","path":"sprites/spr_jevil_after_battle/spr_jevil_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6fe79b81-f99e-48b2-b240-d6fc8b6ae6f7","path":"sprites/spr_jevil_dancing/spr_jevil_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"2f8156af-7d31-450f-ba20-f91676b4038f","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

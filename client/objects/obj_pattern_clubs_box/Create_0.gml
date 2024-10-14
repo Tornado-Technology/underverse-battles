@@ -1,6 +1,6 @@
 /// Arguments: box
 
-callback = function () {
+callback = function() {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.red);
 		
 	update();
@@ -9,8 +9,8 @@ callback = function () {
 	
 };
 
-update = function () { 		
-	var spwan_clubs = function () {	
+update = function() { 		
+	var spwan_clubs = function() {	
 		var border = border_instance;
 			var random_position = new Vector2(0, -10);
 		if (fight_random_integer(0, 1)) {
@@ -27,11 +27,11 @@ update = function () {
 			sprite_index:  sprite_clubs
 		});
 		box_instance.speed_count = 3 + _power * 0.1;
-		box_instance.target = new Vector2(box_instance.x, border.y + border.down + fight_random_integer(-125, 50));
+		box_instance.target = new Vector2(box_instance.x, border.y + border.down + fight_random_integer(-100, 50));
 		box_instance.step = fight_random_float(2, 2.7);
 	}
 	
-	var spwan_spades = function () {
+	var spwan_spades = function() {
 		var position_finish;
 		var random_position;
 		var start_x;
@@ -42,12 +42,12 @@ update = function () {
 		var start_y = choose(border_instance.y - border_instance.up - offset, border_instance.y + border_instance.down + offset);
 	
 		if (fight_random_integer(0, 1)) {
-			start_x = fight_random_integer(border_instance.x - border_instance.left - 150,  border_instance.x - border_instance.left - 70);
-			finish_x = fight_random_integer(start_x + 30, start_x + 90);
+			start_x = fight_random_integer(border_instance.x - border_instance.left - 150, border_instance.x - border_instance.left - 70);
+			finish_x = fight_random_integer(start_x + 60, start_x + 120);
 		} else {
-			start_x = fight_random_integer(border_instance.x + border_instance.right + 150,  border_instance.x + border_instance.right + 50);
-			finish_x = fight_random_integer(start_x - 120, start_x - 200);
-		};
+			start_x = fight_random_integer(border_instance.x + border_instance.right + 150, border_instance.x + border_instance.right + 50);
+			finish_x = fight_random_integer(start_x - 120, start_x - 150);
+		}
 
 		random_position = new Vector2(start_x, start_y);	
 		position_finish = new Vector2(finish_x, start_y);
@@ -61,11 +61,11 @@ update = function () {
 		box_instance.step = fight_random_float(2, 2.7);
 	}
 	
-	if(fight_random_integer(0, 1)) {
+	if (fight_random_integer(0, 1)) {
 		spwan_clubs();	
 	} else {
 		spwan_spades();	
-	};
+	}
 	
 };
 
@@ -76,7 +76,7 @@ if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
 }
 
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], repeats - 1);
 

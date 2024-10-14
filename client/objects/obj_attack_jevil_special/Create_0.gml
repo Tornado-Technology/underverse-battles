@@ -18,14 +18,14 @@ on_border_created = function() {
 
 create_border(battle_border.up - 10, battle_border.down - 10, battle_border.left - 10, battle_border.right - 10);
 pattern_instances = [
-	create_pattern_custom_power(obj_pattern_carousel, 2, {
+	create_pattern_custom_power(obj_pattern_carousel, 1, {
 		carousel: obj_carousel_jevil
 	}, start_next_pattern),
-	create_pattern_custom_power(obj_pattern_falling_scythe_teleport, 3, {
+	create_pattern_custom_power(obj_pattern_falling_scythe_teleport, 2, {
 		teleport: obj_teleport_jevil,
 		scythe: obj_scythe_falling_jevil
 	}, start_next_pattern),
-	create_pattern_custom_power(obj_pattern_scythe_small_box, 4, {
+	create_pattern_custom_power(obj_pattern_scythe_small_box, 3, {
 		box: obj_box_jevil,
 		sprite_spades_box: spr_jevil_spades_box,
 		sprite_clubs_box: spr_jevil_clubs_box,

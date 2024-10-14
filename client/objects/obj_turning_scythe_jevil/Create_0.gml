@@ -11,7 +11,7 @@ gradually_appearing = function () {
 soul_invulnerability = 20;
 moving = true;
 attack = false;
-is_bonb = false;
+is_bomb = false;
 backwards = false;
 
 moving_y = 1;

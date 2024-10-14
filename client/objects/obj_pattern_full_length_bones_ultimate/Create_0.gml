@@ -11,7 +11,7 @@ callback = function () {
 }
 
 update = function() {
-	var bone_speed = 1.5;
+	var bone_speed = 1.2;
 	var bone_size = 8.3;
 	var random_side = fight_random_choose(dir.up, dir.down, dir.left, dir.right);
 		
@@ -34,7 +34,7 @@ update = function() {
 }
 	
 update_sharp = function() {
-	var bone_speed = 2.2;
+	var bone_speed = 2;
 	var bone_size = 1;
 	var rand_side = fight_random_integer(0, 3);
 	var bone_x = border_instance.x - border_instance.left - 10;
@@ -56,20 +56,23 @@ update_sharp = function() {
 	audio_play_sound_plugging(snd_projectile);
 }
 
-var period = 100;
-time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+var period = 120;
+var final_time = period * 6 - 60;
+
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update();
 }, [], -1);
-period = 40;
-time_source_update_sharp = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
+
+period = 60;
+time_source_update_sharp = time_source_create(time_source_game, period / 60, time_source_units_seconds, function() {
 	update_sharp();
 }, [], -1);
-var final_time = 450;
-time_source_update_stop = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function () {
+
+time_source_update_stop = time_source_create(time_source_game, final_time / 60, time_source_units_seconds, function() {
 	time_source_stop(time_source_update);
-	time_source_stop(time_source_update);
+	time_source_stop(time_source_update_sharp);
 	time_source_start(time_source_update_destroy);
 });
-time_source_update_destroy = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, 1, time_source_units_seconds, function() {
 	instance_destroy();
 });

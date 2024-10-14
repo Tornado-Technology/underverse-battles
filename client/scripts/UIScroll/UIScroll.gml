@@ -14,7 +14,7 @@ function ClassUIScroll(width, height, callback) constructor {
 	width = surface_width;
 	surface = surface_create(width, height);
 	arrows = {}
-	speed_scroll = 5;
+	speed_scroll = 4;
 	static arrow_offset_x = 10;
 	static arrow_offset_y = 10;
 	static arrow_width = sprite_get_width(spr_ui_arrow);

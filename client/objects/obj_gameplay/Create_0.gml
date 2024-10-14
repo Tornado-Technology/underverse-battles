@@ -1,4 +1,5 @@
 global.gameplay_instance = self;
+fight_network_mode = false;
 
 on_into_story_mode.invoke("Tutorial");
 

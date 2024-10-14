@@ -26,7 +26,7 @@ update = function () {
 		}; 
 	
 		var box_hearts = instance_create_depth(random_position.x, random_position.y, 0, box, {
-			sprite_index:  sprite_box
+			sprite_index: sprite_box
 		});
 		
 		with(box_hearts) {

@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_jevil_harlequin_after_battle",
+  "%Name":"spr_jevil_harlequin_dancing",
   "bboxMode":0,
   "bbox_bottom":53,
   "bbox_left":0,
@@ -28,7 +28,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"18094e85-42f0-466d-8739-209cbbf4f10e","blendMode":0,"displayName":"default","isLocked":false,"name":"18094e85-42f0-466d-8739-209cbbf4f10e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_jevil_harlequin_after_battle",
+  "name":"spr_jevil_harlequin_dancing",
   "nineSlice":null,
   "origin":7,
   "parent":{
@@ -40,7 +40,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_jevil_harlequin_after_battle",
+    "%Name":"spr_jevil_harlequin_dancing",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -64,7 +64,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_jevil_harlequin_after_battle",
+    "name":"spr_jevil_harlequin_dancing",
     "playback":1,
     "playbackSpeed":10.0,
     "playbackSpeedType":0,
@@ -76,28 +76,28 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"164a2201-302b-4ed4-a784-8e1ce271faea","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"164a2201-302b-4ed4-a784-8e1ce271faea","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"620eaa88-0017-4670-95ab-b37713a9059f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7228a8eb-280f-43f8-a646-00991c5a9536","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7228a8eb-280f-43f8-a646-00991c5a9536","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b186447e-a62a-47d9-a730-47353cd9f352","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cef69cf-0df6-4f04-8fca-b660346ba3a0","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cef69cf-0df6-4f04-8fca-b660346ba3a0","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"eb2de657-6c49-42eb-9828-ae888e1b9d8d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"32b20070-6d69-4d30-86b5-d826996be6f4","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"32b20070-6d69-4d30-86b5-d826996be6f4","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"58c6d360-c1f8-430f-b9d9-b6c57a73027c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0595805d-32d6-4726-b17a-1f7d57fcc676","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0595805d-32d6-4726-b17a-1f7d57fcc676","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"3afa2fd1-0246-44e6-9bbd-bc67c265b1b6","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c4e22fb-faf1-4868-bbba-b87a46c57e56","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c4e22fb-faf1-4868-bbba-b87a46c57e56","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ac7146d8-80e0-4734-82f2-95611a0bffab","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae392871-ed6e-4cbb-9544-e09c5d3fa4e5","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae392871-ed6e-4cbb-9544-e09c5d3fa4e5","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"5f17b2c5-002f-4f55-8403-92fb40dd65c6","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0513ce26-1139-4a5f-b536-ee9278a47dd8","path":"sprites/spr_jevil_harlequin_after_battle/spr_jevil_harlequin_after_battle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0513ce26-1139-4a5f-b536-ee9278a47dd8","path":"sprites/spr_jevil_harlequin_dancing/spr_jevil_harlequin_dancing.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"18e26de0-5a05-4a26-940b-fd6e5f7da295","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

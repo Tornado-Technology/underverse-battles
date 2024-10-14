@@ -1,6 +1,6 @@
 event_inherited();
 
-is_bonb = false;
+is_bomb = false;
 
 alpha = 1;
 radius = 10;
@@ -56,7 +56,7 @@ collision = function () {
 	if (collision_line(x + (half_width), y , x, room_width, obj_solid, false, false) == noone) {
 		result_ricochet();	
 		be_ricochet = true;
-		is_bonb = true;
+		is_bomb = true;
 	};	
 }
 
