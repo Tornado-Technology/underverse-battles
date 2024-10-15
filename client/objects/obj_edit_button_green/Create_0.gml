@@ -30,7 +30,7 @@ cooldown = time_source_create(time_source_game, 1, time_source_units_seconds, fu
 });
 
 press = function(attack_index) {
-	edit_attack_number = attack_index;
+	edit_attack_number = get_random_attack_type();
 	edit_objects();
 	
 	obj_pattern_edit.change_time_source_update();
