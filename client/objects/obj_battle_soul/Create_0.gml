@@ -5,10 +5,10 @@ depth = fight_depth.soul;
 color_type = battle_soul_type.white;
 
 // Size
-half_up = sprite_xoffset;
-half_down =  sprite_height - sprite_xoffset;
-half_left = sprite_yoffset;
-half_right = sprite_width - sprite_yoffset;
+half_up = sprite_xoffset + 1;
+half_down =  sprite_height - sprite_xoffset + 1;
+half_left = sprite_yoffset + 1;
+half_right = sprite_width - sprite_yoffset + 1;
 
 // Movement
 moveable = true;
