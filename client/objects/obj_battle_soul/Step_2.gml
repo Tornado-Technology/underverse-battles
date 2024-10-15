@@ -17,36 +17,48 @@ border_force_x = 0;
 border_force_y = 0;
 
 has_collision = false;
-has_collision_up = false;
-has_collision_down = false;
-has_collision_left = false;
-has_collision_right = false;
+has_collision_up = collision_line(x, y - half_up, x, 0, obj_solid, false, false) == noone;
+has_collision_down = collision_line(x, y + half_down, x, room_height, obj_solid, false, false) == noone;
+has_collision_left = collision_line(x - half_left, y, 0, y, obj_solid, false, false) == noone;
+has_collision_right = collision_line(x + half_right, y, room_width, y, obj_solid, false, false) == noone;
 
-if (collision_line(x - half_left, y, 0, y, obj_solid, false, false) == noone) {
-	x = xprevious;
+if (has_collision_left && !has_collision_right) {
+	while (collision_line(x - half_left, y, 0, y, obj_solid, false, false) == noone) {
+		x += 0.1;
+	}
 	has_collision = true;
-	has_collision_left = true;
 	border_force_x = border_delta_x;
 }
 	
-if (collision_line(x + half_right, y, room_width, y, obj_solid, false, false) == noone) {
-	x = xprevious;
+if (has_collision_right && !has_collision_left) {
+	while (collision_line(x + half_right, y, room_width, y, obj_solid, false, false) == noone) {
+		x -= 0.1;
+	}
 	has_collision = true;
-	has_collision_right = true;
 	border_force_x = border_delta_x;
 }
 	
-if (collision_line(x, y - half_up, x, 0, obj_solid, false, false) == noone) {
-	y = yprevious;
+if (has_collision_up && !has_collision_down) {
+	while (collision_line(x, y - half_up, x, 0, obj_solid, false, false) == noone) {
+		y += 0.1;
+	}
 	has_collision = true;
-	has_collision_up = true;
 	border_force_y = border_delta_y;
 }
 	
-if (collision_line(x, y + half_down, x, room_height, obj_solid, false, false) == noone) {
+if (has_collision_down && !has_collision_up) {
+	while (collision_line(x, y + half_down, x, room_height, obj_solid, false, false) == noone) {
+		y -= 0.1;
+	}
+	has_collision = true;
+	border_force_y = border_delta_y;
+}
+
+if (has_collision_left && has_collision_right && has_collision_down && has_collision_up) {
+	x = xprevious;
 	y = yprevious;
 	has_collision = true;
-	has_collision_down = true;
+	border_force_x = border_delta_x;
 	border_force_y = border_delta_y;
 }
 
