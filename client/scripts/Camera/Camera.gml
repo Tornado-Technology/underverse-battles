@@ -21,10 +21,6 @@ function camera_change_room_border(value) {
 	obj_camera.is_room_border = value;
 }
 
-function camera_reset_size() {
-	if (!instance_exists(obj_camera)) return;
-}
-
 function camera_set_overwrite_position(x, y) {
 	var camera = global.camera_instance;
 	camera.is_overwrite = true;
@@ -50,12 +46,6 @@ function camera_set_target(obj) {
 	obj_camera.is_using_speed = false;
 	obj_camera.following_traget = true;
 	obj_camera.is_overwrite = false;
-}
-
-function camera_resize() {    
-    with (obj_camera) {
-        event_user(0);
-    }
 }
 
 function camera_set_zoom(zoom_size, zoom_target_x, zoom_target_y) {

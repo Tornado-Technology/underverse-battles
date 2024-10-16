@@ -41,7 +41,9 @@ punch = function() {
 	sprite_index = punch_sprite;
 	time_source_start(time_source_cooldown);
 	
-	audio_play_sound_at(snd_ball_punch, x, y, 0, 180, 600, 1, false, 2);
+	if (audio_is_playing(!snd_ball_punch)) {
+		audio_play_sound_at(snd_ball_punch, x, y, 0, 180, 600, 1, false, 2);
+	}
 }
 
 calculate_punch_direction = function() {

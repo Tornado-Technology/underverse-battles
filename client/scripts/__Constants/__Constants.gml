@@ -10,6 +10,7 @@
 #macro url_discord_ru "https://discord.gg/3GVTJWuPxa"
 #macro url_discord_en "https://discord.gg/2Nuas5NKj8"
 #macro url_gamejolt "https://gamejolt.com/games/underversebattles/647938"
+#macro url_itchio "https://tornadoteam.itch.io/underverse-battles"
 #macro url_youtube "https://www.youtube.com/@UnderverseBattles"
 #macro url_boosty "https://boosty.to/underverse_battles"
 

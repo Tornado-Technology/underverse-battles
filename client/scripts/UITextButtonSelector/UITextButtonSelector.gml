@@ -9,11 +9,11 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 	repeat (count) {
 		button[i] = new UITextButton(i, button_texts[i])
 			.set_padding(5)
+			.set_needs_focus(true)
 			.set_on_hover(function(self_button) {
 				button[current_option].set_focus(false);
 				current_option = self_button.index;
 			});
-		button[i].needs_focus = true;
 		i++;
 	}
 	

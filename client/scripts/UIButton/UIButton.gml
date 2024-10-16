@@ -62,6 +62,11 @@ function UIButton() constructor {
 		return self;
 	}
 	
+	static set_needs_focus = function(value) {
+		self.needs_focus = value;
+		return self;
+	}
+	
 	static set_can_be_on_pause = function(value) {
 		can_be_on_pause = value;
 		return self;
@@ -160,7 +165,6 @@ function UIButton() constructor {
 	
 	/// @param {Bool} value
 	static set_focus = function(value) {
-		if (value == is_focus) return;
 		is_focus = value;
 	}
 	

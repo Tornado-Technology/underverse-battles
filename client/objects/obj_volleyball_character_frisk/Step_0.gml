@@ -10,7 +10,7 @@ if (is_punching && !is_punched) {
 		ball.punch(calculate_punch_direction(), punch_speed, punch_force);
 		is_punched = true;
 		
-		audio_play_sound_plugging(snd_ball_punch);
+		audio_play_sound_once(snd_ball_punch);
 	}
 	exit;
 }

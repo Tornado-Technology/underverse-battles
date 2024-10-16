@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"camera_reset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camera_reset",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Scripts/Local/System/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

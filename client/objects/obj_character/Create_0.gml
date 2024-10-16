@@ -82,6 +82,7 @@ follow_distance = 32;
 unfollow_distance = 30;
 movement_x = 0;
 movement_y = 0;
+direction = -1;
 following = false;
 follow_x = 0;
 follow_y = 0;

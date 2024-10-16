@@ -22,7 +22,7 @@ if (fight_player_using_special_action(0)) {
 }
 else {
 	if (irandom_range(0, att + pow + 1) > 0) {
-		_hits = choose(pow + 1, pow + hp_att + 1);
+		_hits = choose(1, pow + 1);
 		_damage = (inv) ? _hits * dam : _hits * dam * irandom_range(2, 8);
 	}
 	else

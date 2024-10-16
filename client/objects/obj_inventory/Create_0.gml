@@ -12,6 +12,7 @@ sprite_index = spr_empty;
 
 is_open = false;
 can_closing = true;
+has_return_character_controlled = true;
 
 searching_name = "";
 
@@ -41,7 +42,9 @@ open = function() {
 
 close = function() {
 	is_open = false;
-	character.set_controlled();
+	if (has_return_character_controlled) {
+		character.set_controlled();
+	}
 	audio_play_sound_plugging(snd_selection);
 }
 

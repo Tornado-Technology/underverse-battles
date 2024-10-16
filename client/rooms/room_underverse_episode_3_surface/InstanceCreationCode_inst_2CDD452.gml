@@ -94,6 +94,7 @@ cutscenes = [
 		[cutscene_object_set_sprite, ink_sans, spr_ink_sans_sitting_drawing],
 		[cutscene_wait, 1.5],
 		[cutscene_execute, function() {
+			obj_inventory.has_return_character_controlled = false;
 			cutscene_create(obj_inventory.ui.item_count > 1 ? cutscenes[1] : cutscenes[4]);
 		}],
 	],

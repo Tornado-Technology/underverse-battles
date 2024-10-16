@@ -14,8 +14,8 @@ if (page_index >= menu_page.settings && page_index <= menu_page.settings_beta) {
 // User Data
 var account = network_account;
 var profile = network_profile;
-if (account != undefined && profile != undefined) {
-	if (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings) {
+if (account != undefined && profile != undefined && !pause) {
+	if (page_index == menu_page.multiplayer_account || page_index == menu_page.account_settings || page_index == menu_page.account) {
 		draw_set_font(font_console_mini);
 		draw_set_halign(fa_left);
 		draw_text_outlined(4, height - 20, c_grey, c_black, $"Current Account: {account.username}");

@@ -23,7 +23,7 @@ time_source_move_next = time_source_create(time_source_game, (30 + max_acc) / 60
 	stage = 2;
 });
 
-time_source_move_finish = time_source_create(time_source_game, (31 + 2 * max_acc) / 60, time_source_units_seconds, function () {
+time_source_move_finish = time_source_create(time_source_game, (36 + 2 * max_acc) / 60, time_source_units_seconds, function () {
 	stage = 3;
 });
 

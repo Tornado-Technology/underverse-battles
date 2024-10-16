@@ -39,7 +39,7 @@ if (stage == 1 || stage == 2) {
 
 if (stage == 3) {
 	if (image_alpha > 0)
-		image_alpha -= 0.05 * dtime;
+		image_alpha -= 0.1 * dtime;
 	else
 		instance_destroy();
 }

@@ -51,7 +51,7 @@ if (!fight_network_mode) {
 		if (instance_exists(obj_inventory)) {
 			instance_destroy(obj_inventory);
 		}
-		camera_resize();
+		camera_reset();
 		instance_destroy();
 		room_goto(room_menu);
 	});
@@ -60,3 +60,5 @@ if (!fight_network_mode) {
 		timer_pause();
 	}
 }
+
+buttons[0].set_focus(true);

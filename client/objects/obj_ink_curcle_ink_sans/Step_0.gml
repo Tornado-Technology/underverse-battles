@@ -1,5 +1,5 @@
 if (is_disappearing) {
-	image_alpha -= 0.05 * dtime;
+	image_alpha -= 0.1 * dtime;
 }
 if (image_alpha <= 0)
 	instance_destroy();

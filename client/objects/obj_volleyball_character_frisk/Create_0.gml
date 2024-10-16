@@ -23,11 +23,22 @@ punch_sprite = spr_frisk_volleyball_punch;
 control = function(_speed = speed_const) {
 	is_controlled = true;
 	speed_const = _speed;
+	
+	toggle_mobile_controls(true);
 }
 
 set_uncontrolled = function() {
 	is_controlled = false;
 	sprite_index = init_sprite;
+	
+	toggle_mobile_controls(false);
+}
+
+toggle_mobile_controls = function(enable) {
+	if (is_mobile || mobile_mode) {
+		global.__ui_controls_instance.enable = enable;
+		global.__ui_walk_virtual_buttons_instance.is_enable = enable;
+	}
 }
 
 punch = function() {

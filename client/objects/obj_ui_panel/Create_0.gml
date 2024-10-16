@@ -13,13 +13,13 @@ add_button = function(name, callback) {
 		.set_padding(5)
 		.set_bind_input(input.action)
 		.set_can_be_on_pause(false)
+		.set_needs_focus(true)
 		.set_on_press(callback)
 		.set_on_hover(function(self_button) {
 			buttons[index].set_focus(false);
 			index = self_button.index;
 		});
 	free_index ++;
-	
 	array_push(buttons, button);
 };
 
@@ -39,7 +39,7 @@ input_update = function() {
 	if (input_check_pressed(input.up) && index > 0) {
 		input_on_press(-1);
 	}
-};
+}
 
 input_on_press = function(amout) {
 	if (!buttons[index].focus) {
@@ -51,4 +51,4 @@ input_on_press = function(amout) {
 	index += amout;
 	buttons[index].set_focus(true);
 	audio_play_sound_once(snd_click);
-};
+}

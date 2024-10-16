@@ -1,7 +1,6 @@
 y0 = y;
-anim_shift = 5;
+animation_shift = 2;
 
-stage = 0;
 time = 0;
 
 speed_const = 0;

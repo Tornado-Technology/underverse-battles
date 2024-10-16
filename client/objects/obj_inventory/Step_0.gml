@@ -1,10 +1,10 @@
 if (!instance_exists(character)) exit;
 
 if (can_closing) {
-	if (character.is_controlled && input_check_pressed(input.special)) {
+	if (character.is_controlled && !global.pause_game && input_check_pressed(input.special)) {
 		open();
 	}
-	else if (is_open && input_check_pressed(input.special)) {
+	else if (is_open && !global.pause_game && input_check_pressed(input.special)) {
 		close();
 	}
 }

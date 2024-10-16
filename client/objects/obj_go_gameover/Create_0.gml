@@ -18,6 +18,7 @@ buttons = {
 	menu: new UITextButton(0, text_menu)
 		.set_padding(5)
 		.set_bind_input(input.action)
+		.set_needs_focus(true)
 		.set_on_press(function() {
 			room_goto(room_menu);
 			instance_destroy(obj_statistics);
@@ -27,6 +28,7 @@ buttons = {
 	restart: new UITextButton(1, text_restart)
 		.set_padding(5)
 		.set_bind_input(input.action)
+		.set_needs_focus(true)
 		.set_on_press(function() {
 			room_goto(room_fight);
 			instance_destroy(obj_statistics);

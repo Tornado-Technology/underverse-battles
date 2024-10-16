@@ -14,7 +14,7 @@ if (is_moving) {
 }
 
 // Player control
-if (is_controlled) {
+if (is_controlled && !global.pause_game) {
 	image_speed =  1;
 	is_running = false;
 	if (can_run && input_check_held(input.skip)) {
@@ -74,11 +74,6 @@ if (is_following) {
 }
 
 if (!is_controlled && !is_following) exit;
-
-if (global.pause_game) {
-	movement_x = 0;
-	movement_y = 0;
-}
 
 change_sprite_by_condition(movement_x > 0, walking_right_animation);
 change_sprite_by_condition(movement_x < 0, walking_left_animation);

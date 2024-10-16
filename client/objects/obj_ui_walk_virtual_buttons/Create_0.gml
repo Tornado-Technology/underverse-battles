@@ -29,6 +29,6 @@ disable = function() {
 }
 
 // Initilization buttons
-add_button(0, "X", spr_ui_virtual_button_X, vk_shift);
+add_button(0, "X", spr_ui_virtual_button_run, vk_shift);
 add_button(1, "Action", spr_ui_virtual_button_Action, vk_enter);
 add_button(2, "SpecialAction", spr_ui_virtual_button_inventory, ord("C"));
