@@ -21,14 +21,14 @@ update = function() {
 		spike_direction = 180;
 	}
 	var y_rand = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 10);
-	create_spike(x_rand, y_rand, spike, 2 + _power * 0.2, spike_direction);
-	create_spike(x_rand, y_rand + 10, spike, 2 + _power * 0.2, spike_direction);
+	create_spike(x_rand, y_rand, spike, 2.1 + _power * 0.1, spike_direction);
+	create_spike(x_rand, y_rand + 10, spike, 2.1 + _power * 0.1, spike_direction);
 }
 
 var period = 22 - _power * 3;
 time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
 }, [], -1);
-time_source_update_destroy = time_source_create(time_source_game, (340 + 20 * _power) / 60, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, (340 + 30 * _power) / 60, time_source_units_seconds, function () {
 	instance_destroy();
 });
