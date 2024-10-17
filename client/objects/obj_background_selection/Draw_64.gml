@@ -11,7 +11,7 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 
 var custom = memory_get(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.BACKGROUND_CUSTOM);
-var _string = background_get(background_info.name, custom);
+var _string = custom == undefined ? translate_get("Menu.CustomSound.Undefined") : background_get(background_info.name, custom);
 draw_text_outlined(line_x, line_y - line_height / 2 - 30 - wave(3, -3, 1, 0), c_white, c_black, translate_get("Menu.Background.SelectedLocation") + _string);
 
 draw_reset();
