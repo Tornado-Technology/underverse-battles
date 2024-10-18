@@ -9,6 +9,6 @@ spaw_wave = function () {
 	
 	wave_instance.speed_const = speed_const;
 	wave_instance.speed_feathers = speed_const;
-	wave_instance.image_angle = image_angle - 290;
+	wave_instance.image_angle = image_angle - 280;
 	return wave_instance;
 }

@@ -138,7 +138,10 @@ packet_handler_register("friendFightRequest", function(data) {
 });
 
 packet_handler_register("friendRequestInvite", function(data) {	
-	if (data.code == status_code.success && global.fight_instance == noone) {
+	if (data.code == status_code.success && instance_exists(obj_menu)) {
+		if (instance_exists(obj_ui_request)) {
+			instance_destroy(obj_ui_request);
+		}
 		instance_create(obj_ui_request, {
 			request_id: data.request._id,
 			username_sender: data.request.sender.username,
@@ -148,7 +151,6 @@ packet_handler_register("friendRequestInvite", function(data) {
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
-	display_show_message_info(translate_get("Menu.Notifications.RequestAccepted"), c_blue);
 	if (data.request.type == request_type.friend) {
 		send_get_accounts_info([data.accountId]);
 	}

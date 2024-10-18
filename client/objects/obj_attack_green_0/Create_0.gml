@@ -13,7 +13,7 @@ switch (type) {
 		});
 		break;
 	case 1:
-		create_border(battle_border.up - 25, battle_border.down - 25, battle_border.left, battle_border.right);
+		create_border(battle_border.up - 15, battle_border.down - 15, battle_border.left + 10, battle_border.right + 10);
 		pattern_instance = create_pattern(obj_pattern_duplet_spikes, {
 			spike: obj_spear_green
 		});

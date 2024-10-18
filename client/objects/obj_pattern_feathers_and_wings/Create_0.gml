@@ -17,12 +17,12 @@ update = function() {
 }
 
 update_feathers = function () {
-	var offset = 24;
+	var offset = 60;
 	
 	repeat(2) {
-		var position_x = border_instance.x - border_instance.left - offset;
-		var position_y = fight_random_integer(border_instance.y - border_instance.up + offset, border_instance.y + border_instance.down - offset);	
-		var direction_feathers = 0;
+		var direction_feathers = choose(dir.right, dir.left);
+		var position_x = direction_feathers == dir.right ? border_instance.x - border_instance.left - offset : border_instance.x + border_instance.right + offset;
+		var position_y = fight_random_integer(border_instance.y - border_instance.up + 15, border_instance.y + border_instance.down - 15);
 			
 		var feathers_instnace = instance_create_depth(position_x, position_y, fight_depth.bullet_outside_hight, feathers, {
 			_target_angle: direction_feathers
@@ -30,21 +30,20 @@ update_feathers = function () {
 	
 		feathers_instnace._speed = 3 + _power * 0.2;
 	}
-	
 }
 
-var period = 40 - _power * 2;
-var period_feathers = 35 - _power;
+var period = 60 - _power * 2;
+var period_feathers = 42 - _power * 2;
 var repeats = 8 + _power * 2;
 
-time_source_update = time_source_create(time_source_game, (period) / 60, time_source_units_seconds, function () {
+time_source_update = time_source_create(time_source_game, period / 60, time_source_units_seconds, function () {
 	update();
-}, [], repeats - 1);
+}, [], -1);
 
-time_source_update_feathers = time_source_create(time_source_game, (period_feathers) / 60, time_source_units_seconds, function () {
+time_source_update_feathers = time_source_create(time_source_game, period_feathers / 60, time_source_units_seconds, function () {
 	update_feathers();
 }, [], repeats - 1);
 
-time_source_update_destroy = time_source_create(time_source_game, (period * repeats) / 60 + 1, time_source_units_seconds, function () {
+time_source_update_destroy = time_source_create(time_source_game, period_feathers * repeats / 60 + 1, time_source_units_seconds, function () {
 	instance_destroy();
 });

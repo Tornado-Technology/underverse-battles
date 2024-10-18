@@ -9,7 +9,7 @@ else if (disappearance) {
 	image_alpha -= 0.1;	
 };
 
-image_angle = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y) + 290;
+image_angle = point_direction(x, y, obj_battle_soul.x, obj_battle_soul.y) + 280;
 
 if (!image_alpha) {
 	instance_destroy();	

@@ -1,20 +1,13 @@
-image_alpha = alpha;
+if (image_alpha < max_alpha && !disappearance) {
+	image_alpha += step * dtime;	
+} else if (image_alpha > 0 && disappearance) {
+	image_alpha -= step * dtime;
+}
 
-if (!alpha && !disappearance) {
-	alpha += step * dtime;	
-} else if (disappearance) {
-	alpha -= step * dtime;	
-};
-
-if (!alpha && disappearance) {
+if (image_alpha <= 0 && disappearance) {
 	instance_destroy();
-};
+}
 
 motion_set(image_angle, speed_const * dtime);
-
-
-if (time_source_get_state(time_source_life) == time_source_state_stopped) {
-	disappearance = true;
-};
 
 

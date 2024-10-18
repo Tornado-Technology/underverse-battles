@@ -5,10 +5,11 @@ image_angle += sin(time/5)*10;
 
 if (image_alpha < 1) {
 	image_alpha += alpha_step * dtime;
-};
+}
 
 motion_set(image_angle, _speed/(1+(time/100)) * dtime);
 
-if (place_meeting(x, y, wave_obj) && !wave_obj.disappearance) {
-	_target_angle = wave_obj.image_angle;
-};
+var wave_instance = instance_place(x, y, wave_obj);
+if (wave_instance != noone) {
+	_target_angle = wave_instance.image_angle;
+}
