@@ -104,3 +104,9 @@ enum match_type {
 	rating_2vs2,
 	tournament_2vs2
 }
+
+enum request_type {
+	undefined,
+	friend,
+	fight,
+}

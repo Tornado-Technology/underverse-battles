@@ -1,10 +1,5 @@
-enum request_type {
-	undefined,
-	friend,
-	fight,
-}
-
 sprite_index = noone;
+
 width = display_get_gui_width();
 heigth = display_get_gui_height();
 shift_x = 10;
