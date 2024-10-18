@@ -1647,6 +1647,7 @@
     {"id":{"name":"data_load","path":"scripts/data_load/data_load.yy",},},
     {"id":{"name":"data_open","path":"scripts/data_open/data_open.yy",},},
     {"id":{"name":"data_reset_achievements","path":"scripts/data_reset_achievements/data_reset_achievements.yy",},},
+    {"id":{"name":"data_reset_all_settings","path":"scripts/data_reset_all_settings/data_reset_all_settings.yy",},},
     {"id":{"name":"data_reset_controls","path":"scripts/data_reset_controls/data_reset_controls.yy",},},
     {"id":{"name":"data_reset_protected","path":"scripts/data_reset_protected/data_reset_protected.yy",},},
     {"id":{"name":"data_reset_settings","path":"scripts/data_reset_settings/data_reset_settings.yy",},},

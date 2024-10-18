@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"data_reset_all_settings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"data_reset_all_settings",
+  "parent":{
+    "name":"Data",
+    "path":"folders/Scripts/Local/System/Data.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

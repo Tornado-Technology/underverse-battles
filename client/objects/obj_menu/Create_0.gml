@@ -694,7 +694,7 @@ create_page([
 		data_set("Settings.Data.SaveBackground", value);
 	}),
 	Execute("Settings.Data.Reset.All", [], function() {
-		data_reset();
+		data_reset_all_settings();
 	}),
 	Execute("Settings.Data.Reset.Achivments", [], function() {
 		data_reset_achievements();
