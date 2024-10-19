@@ -43,6 +43,7 @@ cutscenes = [
 		[cutscene_execute, function() {
 			npc.stop_speaking();
 			target_character.set_controlled();
+			instance_destroy();
 		}]
 	],
 	[	// Sans wants a limited edition ketchup

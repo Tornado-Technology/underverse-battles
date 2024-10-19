@@ -138,7 +138,7 @@ packet_handler_register("friendFightRequest", function(data) {
 });
 
 packet_handler_register("friendRequestInvite", function(data) {	
-	if (data.code == status_code.success && instance_exists(obj_menu)) {
+	if (data.code == status_code.success && instance_exists(obj_menu) && !instance_exists(obj_menu_matchmaking)) {
 		if (instance_exists(obj_ui_request)) {
 			instance_destroy(obj_ui_request);
 		}

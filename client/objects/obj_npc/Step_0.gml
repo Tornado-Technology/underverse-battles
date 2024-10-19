@@ -8,3 +8,5 @@ if (is_moving) {
 		is_moving = false;
 	}
 }
+
+depth = -y;

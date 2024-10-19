@@ -13,8 +13,8 @@
     "path":"folders/Objects/Fight/Story Mode.yy",
   },
   "parentObjectId":{
-    "name":"obj_prop",
-    "path":"objects/obj_prop/obj_prop.yy",
+    "name":"obj_wall",
+    "path":"objects/obj_wall/obj_wall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
