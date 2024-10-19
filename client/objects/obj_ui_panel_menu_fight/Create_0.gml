@@ -60,5 +60,3 @@ if (!fight_network_mode) {
 		timer_pause();
 	}
 }
-
-buttons[0].set_focus(true);

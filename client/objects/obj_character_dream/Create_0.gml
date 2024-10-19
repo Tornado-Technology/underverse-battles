@@ -53,15 +53,6 @@ actions = [
 ];
 special_action = SpecialAction("Character.Dream.SpecialAttack", spr_special_attack_dream, spr_special_attack_dream_locked, call_attack_dream_special);
 
-on_taking_damage = function(damage) {
-	if (damage > dtime)
-		return damage;
-	
-	special_action.percent += damage;
-	special_action.percent = clamp(special_action.percent, 0, 100);
-	return damage;
-}
-
 on_battle_end = function(damage) {
 	if (damage > 0)
 		return;

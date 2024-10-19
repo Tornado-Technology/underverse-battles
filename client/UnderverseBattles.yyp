@@ -1182,6 +1182,7 @@
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"obj_openworld_character","path":"objects/obj_openworld_character/obj_openworld_character.yy",},},
     {"id":{"name":"obj_opponent","path":"objects/obj_opponent/obj_opponent.yy",},},
+    {"id":{"name":"obj_outside_border","path":"objects/obj_outside_border/obj_outside_border.yy",},},
     {"id":{"name":"obj_papyrus_car","path":"objects/obj_papyrus_car/obj_papyrus_car.yy",},},
     {"id":{"name":"obj_park_fence_1","path":"objects/obj_park_fence_1/obj_park_fence_1.yy",},},
     {"id":{"name":"obj_park_fence_2","path":"objects/obj_park_fence_2/obj_park_fence_2.yy",},},
