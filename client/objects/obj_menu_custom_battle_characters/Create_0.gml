@@ -47,4 +47,6 @@ tabSkin.on_click_on_character = function() {
 	audio_stop_sound(obj_menu.menu_soundtrack_current);
 
 	is_switch_menu_pause = true;
+	
+	tabSkin.on_click_on_character = function() {}
 }
