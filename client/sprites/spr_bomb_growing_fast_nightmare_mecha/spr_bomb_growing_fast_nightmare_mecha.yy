@@ -17,21 +17,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a5635ca1-3875-40a3-9b4f-ce91ed73316b","name":"a5635ca1-3875-40a3-9b4f-ce91ed73316b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7b63782a-7ade-489b-bca6-975e3d7ef7b4","name":"7b63782a-7ade-489b-bca6-975e3d7ef7b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cab9df55-f258-4d5d-9aac-3a184bb718e0","name":"cab9df55-f258-4d5d-9aac-3a184bb718e0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b1085926-899a-42ea-8620-123e3315fad1","name":"b1085926-899a-42ea-8620-123e3315fad1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"90812919-b77e-4d25-962f-911639e61f02","name":"90812919-b77e-4d25-962f-911639e61f02","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"13443b2a-4cdb-4af0-9d49-4e313c91e563","name":"13443b2a-4cdb-4af0-9d49-4e313c91e563","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a6f249df-648b-4270-9d95-34ef7fef6e2b","name":"a6f249df-648b-4270-9d95-34ef7fef6e2b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"188eae95-7539-4045-993c-c585f861a412","name":"188eae95-7539-4045-993c-c585f861a412","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"ad93042c-cf37-4fa0-8651-35c6b3090b2e","name":"ad93042c-cf37-4fa0-8651-35c6b3090b2e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"87b89201-d676-463f-9239-7e787a6bd193","name":"87b89201-d676-463f-9239-7e787a6bd193","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"76794bbc-80a5-4b24-a3a5-da88bb32bf80","name":"76794bbc-80a5-4b24-a3a5-da88bb32bf80","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"c85c7494-133b-4388-b66c-b3b6539948fa","name":"c85c7494-133b-4388-b66c-b3b6539948fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1921dfac-c1db-4b56-9892-3eaa4e3e7a19","name":"1921dfac-c1db-4b56-9892-3eaa4e3e7a19","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"9b7973d5-bceb-4d6d-ad16-6f4700572b73","name":"9b7973d5-bceb-4d6d-ad16-6f4700572b73","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"141f5a6e-d807-4772-acf3-19ec24e2f3c2","name":"141f5a6e-d807-4772-acf3-19ec24e2f3c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f20d1bdf-8963-4182-bf3e-77fdf57631be","name":"f20d1bdf-8963-4182-bf3e-77fdf57631be","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":118,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1f42c85a-ec65-4e3c-868d-2dd6e35fb8cc","blendMode":0,"displayName":"default","isLocked":false,"name":"1f42c85a-ec65-4e3c-868d-2dd6e35fb8cc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d61afd80-c5b3-4f0f-99cf-3e88114d6f66","blendMode":0,"displayName":"default","isLocked":false,"name":"d61afd80-c5b3-4f0f-99cf-3e88114d6f66","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_bomb_growing_fast_nightmare_mecha",
   "nineSlice":{
@@ -100,29 +100,29 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a5635ca1-3875-40a3-9b4f-ce91ed73316b","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3e162476-2d8e-45ea-b744-864025749645","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad93042c-cf37-4fa0-8651-35c6b3090b2e","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a35053ef-ecba-437f-9b85-8fc590c6de29","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7b63782a-7ade-489b-bca6-975e3d7ef7b4","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bb679566-b812-47b0-9c15-bdafd8d422a9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"87b89201-d676-463f-9239-7e787a6bd193","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e6fa01cf-125d-41f8-92e9-872636c3e502","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cab9df55-f258-4d5d-9aac-3a184bb718e0","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f92039c0-3658-4688-8b72-1a02035567e2","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76794bbc-80a5-4b24-a3a5-da88bb32bf80","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"64539d81-1a8b-4942-8ee9-74adee8629c9","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b1085926-899a-42ea-8620-123e3315fad1","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"86620825-7bb7-4797-9483-8e95e8aba748","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c85c7494-133b-4388-b66c-b3b6539948fa","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8aad63ff-1cd5-4be6-a4f5-1fa0d61c1521","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"90812919-b77e-4d25-962f-911639e61f02","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e211ba55-5032-4ad6-8b69-9e82fb0112d1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1921dfac-c1db-4b56-9892-3eaa4e3e7a19","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e452dc1c-51bd-4773-8528-b5fee4dcbfab","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"13443b2a-4cdb-4af0-9d49-4e313c91e563","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"01de38c8-d365-40d9-95fc-b4a6104f7418","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9b7973d5-bceb-4d6d-ad16-6f4700572b73","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ad9b80db-c74e-4035-90cc-3f89685589e0","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a6f249df-648b-4270-9d95-34ef7fef6e2b","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ae11af2f-785b-4c9e-84d3-c9a39ba19c91","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"141f5a6e-d807-4772-acf3-19ec24e2f3c2","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8e07eba3-f9bc-4081-85a7-16b6aba4d083","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"188eae95-7539-4045-993c-c585f861a412","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d9c86972-df0b-476d-886f-35539684a149","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f20d1bdf-8963-4182-bf3e-77fdf57631be","path":"sprites/spr_bomb_growing_fast_nightmare_mecha/spr_bomb_growing_fast_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7d656795-81da-4504-8b07-d211de070321","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

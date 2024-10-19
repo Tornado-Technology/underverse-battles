@@ -4,8 +4,8 @@
   "bboxMode":0,
   "bbox_bottom":61,
   "bbox_left":0,
-  "bbox_right":68,
-  "bbox_top":1,
+  "bbox_right":71,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "ConfigValues":{
@@ -17,17 +17,17 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9f2f8e7c-3f12-4fd3-a5b8-7bdb937b5d84","name":"9f2f8e7c-3f12-4fd3-a5b8-7bdb937b5d84","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2c004837-7940-42a6-81f7-586b4ed96343","name":"2c004837-7940-42a6-81f7-586b4ed96343","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f5c6b26c-b96e-4250-b46f-ce46e32970b5","name":"f5c6b26c-b96e-4250-b46f-ce46e32970b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fde71487-4fd2-4ab3-82de-ee4106990548","name":"fde71487-4fd2-4ab3-82de-ee4106990548","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"9a3ef4a1-81fc-4fc7-be36-243ef98ff016","name":"9a3ef4a1-81fc-4fc7-be36-243ef98ff016","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b9a8d4a8-cc5c-405d-a042-35cd7d1fe5b3","name":"b9a8d4a8-cc5c-405d-a042-35cd7d1fe5b3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"5624cc9a-e3e1-4057-aa12-432c0a89a58a","name":"5624cc9a-e3e1-4057-aa12-432c0a89a58a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"44ab794b-88e1-4630-9d77-96cb69f1b9be","name":"44ab794b-88e1-4630-9d77-96cb69f1b9be","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":62,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"0c82f626-2f90-4368-8bef-9d0bd1f941d9","blendMode":0,"displayName":"default","isLocked":false,"name":"0c82f626-2f90-4368-8bef-9d0bd1f941d9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2304dbb0-0722-4bca-b0b4-f79d180e0722","blendMode":0,"displayName":"default","isLocked":false,"name":"2304dbb0-0722-4bca-b0b4-f79d180e0722","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_fist_capture_nightmare_mecha",
   "nineSlice":{
@@ -96,22 +96,22 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9f2f8e7c-3f12-4fd3-a5b8-7bdb937b5d84","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e5d0676c-b8a1-4038-9e10-7c1eadfa3571","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a3ef4a1-81fc-4fc7-be36-243ef98ff016","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"112be0ba-7e1e-4cd0-8dd3-3c86868d7703","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2c004837-7940-42a6-81f7-586b4ed96343","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3716fca7-5511-48bb-bfa2-2f7a10e0d8cc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9a8d4a8-cc5c-405d-a042-35cd7d1fe5b3","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ac9f4ec4-2214-417b-91e6-0f43d788b79f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f5c6b26c-b96e-4250-b46f-ce46e32970b5","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5e4862ea-8cdc-4084-ad3c-31da7f5302d9","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5624cc9a-e3e1-4057-aa12-432c0a89a58a","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"88ebc870-72c8-40bd-84b3-1281d298819b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fde71487-4fd2-4ab3-82de-ee4106990548","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b40d26ba-6c17-47b7-9e80-555eea2c6844","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"44ab794b-88e1-4630-9d77-96cb69f1b9be","path":"sprites/spr_fist_capture_nightmare_mecha/spr_fist_capture_nightmare_mecha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"92b0e1a5-95dc-4511-b8e9-32eeaeb795a5","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":17,
+    "xorigin":16,
     "yorigin":43,
   },
   "swatchColours":null,
