@@ -1,4 +1,3 @@
-y0 = y;
 animation_shift = 2;
 
 time = 0;
