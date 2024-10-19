@@ -31,7 +31,7 @@ tabSkin.on_click_on_character = function() {
 	
 	selected_characters[1] = selected_character.object;
 	
-	//input_lock = true;
+	input_lock = true;
 	
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER1, selected_characters[0]);
 	memory_set(MEMORY_TYPE.LOCAL, MEMORY_LOCAL.CHARACTER2, selected_characters[1]);
