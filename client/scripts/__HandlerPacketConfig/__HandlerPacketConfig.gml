@@ -171,7 +171,7 @@ packet_handler_register("friendRequestReject", function(data) {
 packet_handler_register("friendListRemove", function(data) {
 	if (data.code == status_code.success) {
 		global.friend_accounts = array_filter(global.friend_accounts, function(friend) {
-			if (friend._id == data.friend._id) return false;
+			if (friend._id == data.account._id) return false;
 			return true;
 		})
 		display_show_message_info(translate_get("Menu.Notifications.FriendDeletedSuccessful"), c_lime);
