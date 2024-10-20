@@ -6,7 +6,7 @@ callback = function() {
 		
 	slime_yscale = 20;
 	
-	slime_instnace = instance_create_depth(border_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside, slime, {
+	slime_instnace = instance_create_depth(border_instance.x, border_instance.y + border_instance.down, fight_depth.bullet_outside_hight, slime, {
 		image_xscale: 15
 	});
 	
@@ -17,7 +17,7 @@ callback = function() {
 	time_source_start(time_source_update);
 	time_source_start(time_source_update_drops);
 	time_source_start(time_source_update_destroy);
-};
+}
 
 update = function() {
 	slime_instnace.scale_const = fight_random_integer(10, 17);
@@ -32,10 +32,10 @@ update = function() {
 	
 	if (random_hand == fist) {
 		fist_instance.step = 0.2;
-	};
+	}
 	
 	audio_play_sound_plugging(snd_wing);
-};
+}
 
 update_drops = function() {
 	var drop_x = fight_random_integer(border_instance.x - border_instance.left, border_instance.x + border_instance.right);
@@ -50,7 +50,7 @@ var repeats = 9 + (_power * 2);
 
 if (variable_instance_exists(id, "custom_repeats")) {
 	repeats = custom_repeats;
-};
+}
 
 time_source_update = time_source_create(time_source_game, fist_period / 60, time_source_units_seconds, function () {
 	update();
