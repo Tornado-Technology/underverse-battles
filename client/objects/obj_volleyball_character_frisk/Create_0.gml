@@ -12,7 +12,7 @@ punch_inaccuracy = 5;
 punch_speed = random_range(1.4, 1.8);
 punch_force = random_range(4, 5);
 
-init_sprite = spr_frisk_standing_down;
+init_sprite = spr_frisk_standing_down;	
 standing_sprite = spr_frisk_volleyball_standing;
 walking_up_sprite = spr_frisk_volleyball_walking_up;
 walking_down_sprite = spr_frisk_volleyball_walking_down;
@@ -30,14 +30,12 @@ control = function(_speed = speed_const) {
 set_uncontrolled = function() {
 	is_controlled = false;
 	sprite_index = init_sprite;
-	
-	toggle_mobile_controls(false);
 }
 
 toggle_mobile_controls = function(enable) {
 	if (is_mobile || mobile_mode) {
 		global.__ui_controls_instance.enable = enable;
-		global.__ui_walk_virtual_buttons_instance.is_enable = enable;
+		global.__ui_virtual_buttons_instance.is_enable = enable;
 	}
 }
 
@@ -46,6 +44,7 @@ punch = function() {
 	is_punching = true;
 	is_punched = false;
 	sprite_index = punch_sprite;
+	
 	time_source_start(time_source_cooldown);
 }
 

@@ -1,3 +1,16 @@
+if (!variable_global_exists("__ui_virtual_buttons_instance") || global.__ui_virtual_buttons_instance == noone) {
+	global.__ui_virtual_buttons_instance = id;
+	
+} else {
+	instance_destroy();
+}
+
+if (is_desktop && !mobile_mode) {
+	instance_destroy();
+	global.__ui_virtual_buttons_instance = noone;
+	
+}
+
 is_enable = false;
 buttons = {};
 

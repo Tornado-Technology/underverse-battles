@@ -1,3 +1,20 @@
+toggle_mobile_controls = function(enable) {
+	if (is_mobile || mobile_mode) {
+		global.__ui_controls_instance.enable = enable;
+		global.__ui_virtual_buttons_instance.is_enable = enable;
+	}
+}
+
+mobile_controls = function(enable) {
+	if (is_mobile || mobile_mode) {
+		global.__ui_virtual_buttons_instance.buttons[$ "X"].instance.ui.is_enable_interaction = enable;
+		global.__ui_virtual_buttons_instance.buttons[$ "SpecialAction"].instance.ui.is_enable_interaction = enable;
+	}
+	
+}
+
+mobile_controls(false);
+
 score_team_1 = 0;
 score_team_2 = 0;
 last_puncher = noone;
@@ -81,6 +98,8 @@ set_new_round = function(team_index) {
 	});
 	
 	if (score_team_1 == 9 || score_team_2 == 9) {
+		toggle_mobile_controls(false);
+
 		instance_destroy(ball);
 		instance_destroy(obj_cutscene);
 		gameplay_underverse_episode_3_surface.create_final_volleyball_cutscene();
@@ -114,6 +133,7 @@ set_new_round(1);
 team_1_goal = function() {
 	var cutscene = [
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, false],
 		[cutscene_dialog, function() {
 			if (last_puncher == papyrus && !papyrus.is_scored_ball) {
 				papyrus.is_scored_ball = true;
@@ -131,6 +151,7 @@ team_1_goal = function() {
 		}(), dir.down],
 		[effect_fade, 0.5, 0.5, 0.5, c_black],
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, true],
 		[cutscene_execute, function() {
 			score_team_1++;
 			set_new_round(1);
@@ -151,6 +172,7 @@ team_1_goal = function() {
 team_2_goal = function() {
 	var cutscene = [
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, false],
 		[cutscene_dialog, function() {
 			if (last_puncher == asgore && !asgore.is_scored_ball) {
 				asgore.is_scored_ball = true;
@@ -168,6 +190,7 @@ team_2_goal = function() {
 		}(), dir.up],
 		[effect_fade, 0.5, 0.5, 0.5, c_black],
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, true],
 		[cutscene_execute, function() {
 			score_team_2++;
 			set_new_round(2);
@@ -184,6 +207,7 @@ team_2_goal = function() {
 team_1_out = function() {
 	var cutscene = [
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, false],
 		[cutscene_dialog, function() {
 			if (!first_out_was) {
 				first_out_was = true;
@@ -193,6 +217,7 @@ team_1_out = function() {
 		}(), dir.up],
 		[effect_fade, 0.5, 0.5, 0.5, c_black],
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, true],
 		[cutscene_execute, function() {
 			score_team_2++;
 			set_new_round(2);
@@ -209,10 +234,12 @@ team_1_out = function() {
 team_2_out = function(is_alphys_fail = false) {
 	var cutscene = [
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, false],
 		[cutscene_dialog, is_alphys_fail ? "Underverse_Episode3.AlphysLose" : "Underverse_Episode3.PapyrusOut",
 			is_alphys_fail ? dir.up : dir.down],
 		[effect_fade, 0.5, 0.5, 0.5, c_black],
 		[cutscene_wait, 1],
+		[toggle_mobile_controls, true],
 		[cutscene_execute, function() {
 			score_team_1++;
 			set_new_round(1);
