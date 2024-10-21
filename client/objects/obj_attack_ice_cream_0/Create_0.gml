@@ -22,7 +22,7 @@ switch (type) {
 	default:
 		create_border(battle_border.up - 20, battle_border.down - 20, battle_border.left - 20, battle_border.right - 20);
 		pattern_instance = create_pattern(obj_pattern_tentacles_explosion, {
-			bomb: obj_bomb_tentacles_nightmare
+			bomb: obj_bomb_tentacles_nightmare_ice_cream
 		});
 	break;
 	
