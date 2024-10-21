@@ -5,10 +5,9 @@ callback = function () {
 	var time = 0.01 + (_power > 2 ? 0.01 : 0);
 	var border_down = border_instance.y + border_instance.down;
 	
-	var slime_instnace = instance_create_depth(border_instance.x, border_down, fight_depth.bullet_outside, slime, {
+	var slime_instnace = instance_create_depth(border_instance.x, border_down, fight_depth.bullet_outside_hight, slime, {
 		image_xscale: 10
 	});
-	
 	slime_instnace.change_scale(border_instance.y - border_instance.up, time);
 
 	update();

@@ -26,8 +26,9 @@ switch (type) {
 	case 2:
 	create_border(battle_border.up, battle_border.down, battle_border.left , battle_border.right);
 		pattern_instance = create_pattern(obj_pattern_bone_nightmare, {
-			bone:  obj_bone_nightmare_ice_cream,
-			bone_spinning: obj_bone_spinning_nightmare_ice_cream
+			bone: obj_bone_nightmare_ice_cream,
+			bone_spinning: obj_bone_spinning_nightmare_ice_cream,
+			slime: obj_slime_nightmare_ice_cream,
 		});
 	break;
 	

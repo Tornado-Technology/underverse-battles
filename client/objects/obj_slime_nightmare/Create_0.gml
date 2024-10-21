@@ -1,16 +1,11 @@
 event_inherited();
-depth = fight_depth.bullet;
-
 
 damage = get_char_damage(obj_character_nightmare);
-
 soul_invulnerability = 60;
-
 
 bullets = obj_drop_nightmare;
 
 keep_bullets = false;
-
 
 scale_const = 0;
 scale_time = 0;
