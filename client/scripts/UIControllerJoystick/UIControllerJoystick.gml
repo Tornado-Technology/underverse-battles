@@ -41,8 +41,8 @@ function ClassUIControllerJoystick() constructor {
 	
 	radius = 0;
 	
-	scale_x = 1.5;
-	scale_y = 1.5;
+	scale_x = data_get("Settings.MobileControls.Controller.Scale");
+	scale_y = data_get("Settings.MobileControls.Controller.Scale");
 	
 	border_scale_x = 1;
 	border_scale_y = 1;
