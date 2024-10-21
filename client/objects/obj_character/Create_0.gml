@@ -167,8 +167,8 @@ change_direction_by_movement = function() {
 toggle_mobile_controls = function(enable) {
 	if (is_mobile || mobile_mode) {
 		global.__ui_controls_instance.enable = enable;
-		global.__ui_walk_virtual_buttons_instance.is_enable = enable;
-		global.__ui_walk_virtual_buttons_instance.is_enable_run_button = can_run;
+		global.__ui_virtual_buttons_instance.is_enable = enable;
+		global.__ui_virtual_buttons_instance.is_enable_run_button = can_run;
 	}
 }
 

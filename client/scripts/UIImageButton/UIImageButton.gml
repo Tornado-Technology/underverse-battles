@@ -39,6 +39,7 @@ function UIImageButton(index, sprite) : UIButton() constructor {
 	/// @param {Real} x
 	/// @param {Real} y
 	static draw = function(position_x, position_y, alpha = image_default_alpha, image_rotation = 0, update_position_x = position_x, update_position_y = position_y) {
+		if(!is_enable_interaction) exit;
 		update(update_position_x, update_position_y);
 		
 		draw_reset();

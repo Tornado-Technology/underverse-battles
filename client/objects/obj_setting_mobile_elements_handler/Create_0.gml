@@ -36,7 +36,7 @@ var controller = global.__ui_controls_instance;
 	};
 
 	
-	var buttons = global.__ui_fight_virtual_buttons_instance.get_customizable_buttons();
+	var buttons = global.__ui_virtual_buttons_instance.get_customizable_buttons();
 	for (var i = 0; i < array_length(buttons); i++) {
 		array_push(controls, SettingsMobileButton(id, buttons[i].instance.ui.image, buttons[i].name));
 	}

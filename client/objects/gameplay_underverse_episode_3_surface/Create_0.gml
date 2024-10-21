@@ -1,5 +1,17 @@
 event_inherited();
 
+if (is_mobile || mobile_mode) {
+	global.__ui_virtual_buttons_instance.is_enable = false;
+}
+
+mobile_controls = function(enable) {
+	if (is_mobile || mobile_mode) {
+		global.__ui_virtual_buttons_instance.buttons[$ "X"].instance.ui.is_enable_interaction = enable;
+		global.__ui_virtual_buttons_instance.buttons[$ "SpecialAction"].instance.ui.is_enable_interaction = enable;
+	}
+	
+}
+
 episode = "Underverse_Episode3.";
 
 // Fight
@@ -271,6 +283,7 @@ cutscenes = [
 				sprite_index: spr_nice_cream_truck_fell
 			});
 			frisk.control(true);
+			mobile_controls(true);
 		}],
 	]
 ];

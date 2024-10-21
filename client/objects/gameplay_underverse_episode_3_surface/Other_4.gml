@@ -1,4 +1,12 @@
 // Room transition
+
+if (is_mobile || mobile_mode) {
+	var controller = global.__ui_virtual_buttons_instance;
+	
+	 controller.add_button(2, "SpecialAction", spr_ui_virtual_button_inventory, ord("C"));
+	 controller.buttons[$ "X"].instance.ui.image = spr_ui_virtual_button_run;
+}
+
 if (is_first_appearance) {
 	instance_create(obj_inventory);
 	
