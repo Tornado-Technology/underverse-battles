@@ -48,7 +48,7 @@
   ],
   "name":"spr_swap_papyrus_candy_after_battle",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Candy",
     "path":"folders/Characteres/Swap Papyrus/Sprites/Char/Candy.yy",
@@ -175,7 +175,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":14,
+    "xorigin":16,
     "yorigin":71,
   },
   "swatchColours":null,
