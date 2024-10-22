@@ -49,19 +49,21 @@ part_type_orientation(particle_pencil, 0, 0, 10, 0, false);
 
 // Methods
 restart = function() {
+	effect_blackout_start(c_black, false, fight_depth.ui);
+	camera_reset();
 	cutscene_create(cutscenes[4]);
 }
 
 cutscene_after_death = function() {
-	effect_blackout_start(c_black, false, fight_depth.ui);
+	instance_destroy(obj_ui_panel_menu_fight);
 	
 	instance_destroy(obj_cutscene);
 	instance_destroy(ink_sans);
 	instance_destroy(cross);
 	instance_destroy(error_sans);
 	instance_destroy_array(string_cross);
-	instance_create(obj_soul_destroyed);
-	time_source_start(time_source_restart);
+	
+	create_destroying_soul(restart);
 }
 
 cutscene_special_attack = function() {

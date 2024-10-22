@@ -1,14 +1,20 @@
 function camera_reset() {
 	with (obj_camera) {
-        zoom = 1;
-		view_width = 480;
-		view_height = 270;
+		view_width = default_view_width;
+		view_height = default_view_height;
+		
+		zoom = 1;
+		zoom_required = 1;
+		zoom_speed = 1;
 
-		camera_position = new Vector2(0, 0);
-		overwrite_position = new Vector2(0, 0);
-		target_position = new Vector2(0, 0);
+		camera_position = new Point(0, 0);
+		overwrite_position = new Point(0, 0);
+		target_position = new Point(0, 0);
+		
+		mode = camera_mode.moving;
+		target = noone;
 
-		shake_position = new Vector2(0, 0);
+		shake_position = new Point(0, 0);
 		shake_power = 0;
 		shake_time = 0;
 

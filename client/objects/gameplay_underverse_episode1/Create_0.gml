@@ -16,22 +16,16 @@ _delay = 0
 dlg = noone; //Объект диалога
 episode = "Underverse_Episode1.";
 
-// Time sources
-time_source_restart = time_source_create(time_source_game, 5, time_source_units_seconds, function () {
-	room_restart();
-});
-
 // Methods
 cutscene_after_death = function () {
-	effect_blackout_start(c_black, false, fight_depth.ui);
+	instance_destroy(obj_ui_panel_menu_fight);
 	
 	scenario = -1;
 	instance_destroy(dlg);
 	instance_destroy(player_);
 	instance_destroy(ink_sans_);
 	instance_destroy(xchara_);
-	instance_create(obj_soul_destroyed);
-	time_source_start(time_source_restart);
+	create_destroying_soul(room_restart);
 }
 
 enable_mobile_ui = function() {

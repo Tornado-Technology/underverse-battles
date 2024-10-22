@@ -6,4 +6,5 @@ camera_set_overwrite_position(0, 0);
 effect_fade(0, 0, 3, c_black);
 
 // First cutscene
-cutscene_create(cutscenes[0]);
+create_destroying_soul(function () {});
+//cutscene_create(cutscenes[0]);

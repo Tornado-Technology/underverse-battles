@@ -15,16 +15,12 @@ room_start_callback = function(_previous_room, new_room = room, callback = funct
 }
 
 cutscene_after_death = function() {
+	instance_destroy(obj_ui_panel_menu_fight);
+	
 	room_instance_clear(room);
 	effect_fill(c_black, 1, false, fight_depth.ui);
 	
-	instance_create(obj_soul_destroyed);
-	time_source_start(time_source_restart);
+	create_destroying_soul(restart);
 }
 
 restart = function() {}
-
-// Time sources
-time_source_restart = time_source_create(time_source_game, restart_time, time_source_units_seconds, function() {
-	restart();
-});

@@ -1,5 +1,8 @@
-camera_position = new Vector2(camera_get_view_x(_camera), camera_get_view_y(_camera));
+camera_position = new Point(camera_get_view_x(_camera), camera_get_view_y(_camera));
 camera_angle = camera_get_view_angle(_camera);
+
+// Zoom
+event_user(3);
 
 // Target
 event_user(1);
@@ -7,25 +10,22 @@ event_user(1);
 // Overwrite
 event_user(2);
 
-// Zoom
-event_user(3);
-
-var new_position = camera_position.copy();
+var new_position = camera_position;
 
 // Following
-if (following_traget) {
-	if (!is_using_speed) {
-		new_position.x = target_position.x;
-		new_position.y = target_position.y;
-	}
-	else {
-		new_position.x = round(approach(new_position.x, target_position.x, _speed.x));
-		new_position.y = round(approach(new_position.y, target_position.y, _speed.y));
-	}
+if (!is_using_speed) {
+	new_position.x = target_position.x;
+	new_position.y = target_position.y;
+}
+else {
+	new_position.x = round(approach(new_position.x, target_position.x, _speed.x));
+	new_position.y = round(approach(new_position.y, target_position.y, _speed.y));
 }
 
-// Zoom
-new_position = new Vector2(new_position.x + (zoom_target.x - new_position.x) * (zoom - 1) / zoom, new_position.y + (zoom_target.y - new_position.y) * (zoom - 1) / zoom);
+if (is_room_border) {
+	new_position.x = clamp(new_position.x, 0, room_width - view_width);
+	new_position.y = clamp(new_position.y, 0, room_height - view_height);
+}
 
 // Shake
 shake_position.x = 0;

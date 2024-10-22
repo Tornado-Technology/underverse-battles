@@ -1,5 +1,9 @@
 /// @description Zoom
-zoom = approach(zoom, zoom_required, zoom_speed);
+if (has_smooth_zoom) {
+	zoom = lerp(zoom, zoom_required, zoom_speed);
+} else {
+	zoom = approach(zoom, zoom_required, zoom_speed);
+}
 	
-view_width = 480 / zoom;
-view_height = 270 / zoom;
+view_width = default_view_width / zoom;
+view_height = default_view_height / zoom;

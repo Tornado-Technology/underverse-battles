@@ -1,5 +1,3 @@
-time_source_destroy(time_source_restart);
-
 global.gameplay_instance = noone;
 
 if (is_mobile || mobile_mode) {

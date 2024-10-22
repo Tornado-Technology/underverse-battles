@@ -1,0 +1,3 @@
+time_source_destroy(time_source_break);
+time_source_destroy(time_source_death);
+time_source_destroy(time_source_end);

@@ -12,7 +12,10 @@
     "name":"Test",
     "path":"folders/Objects/Test.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_gameplay",
+    "path":"objects/obj_gameplay/obj_gameplay.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
