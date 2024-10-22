@@ -30,7 +30,7 @@
   ],
   "name":"spr_jevil_harlequin_dancing",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Harlequinel",
     "path":"folders/Characteres/Jevil/Sprites/Character/Harlequinel.yy",
@@ -103,7 +103,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":27,
+    "xorigin":26,
     "yorigin":54,
   },
   "swatchColours":null,
