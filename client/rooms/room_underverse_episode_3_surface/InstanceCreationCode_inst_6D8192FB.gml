@@ -79,7 +79,7 @@ cutscenes = [
 			effect_filler = effect_fill(c_black);
 			reset_characters_and_npc();
 			instance_create_depth(128, 2848, 0, obj_volleyball_minigame);
-			camera_set_target(obj_volleyball_character_frisk);
+			camera_set_object_target(obj_volleyball_character_frisk);
 			audio_stop_sound(snd_surface);
 		}],
 		[cutscene_wait, 0.5],

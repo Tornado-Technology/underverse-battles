@@ -10,7 +10,7 @@ if (is_mobile || mobile_mode) {
 if (is_first_appearance) {
 	instance_create(obj_inventory);
 	
-	camera_set_target(frisk);
+	camera_set_object_target(frisk);
 	cutscene_create(cutscenes[0]);
 	effect_fade(0, 0, 2, c_black, true);
 	

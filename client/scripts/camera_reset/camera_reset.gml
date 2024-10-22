@@ -6,13 +6,16 @@ function camera_reset() {
 		zoom = 1;
 		zoom_required = 1;
 		zoom_speed = 1;
+		zoom_target = new Point(0, 0);
 
 		camera_position = new Point(0, 0);
 		overwrite_position = new Point(0, 0);
 		target_position = new Point(0, 0);
 		
 		mode = camera_mode.moving;
-		target = noone;
+		target = new Point(0, 0);
+		
+		_speed = new Point(2, 2);
 
 		shake_position = new Point(0, 0);
 		shake_power = 0;

@@ -37,7 +37,7 @@ _speed_rotate = 2;
 
 // Mode
 mode = camera_mode.moving;
-target = noone;
+target = new Point(0, 0);
 overwrite_position = new Point(0, 0);
 
 // Setup

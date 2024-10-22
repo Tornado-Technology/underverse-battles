@@ -1,6 +1,7 @@
 sides = [dir.up];
 
+npc = obj_npc_dog_bigger;
+
 interact_callback = function() {
-	audio_play_sound_once(snd_dog_barking);
-	image_index = 1;
+	npc.woff();
 }

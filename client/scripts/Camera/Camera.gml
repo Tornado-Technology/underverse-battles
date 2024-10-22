@@ -22,45 +22,38 @@ function camera_set_overwrite_position(x, y) {
 	camera.overwrite_position = new Point(x, y);
 }
 
-function camera_set_speed(vector){
+function camera_set_speed(x, y) {
 	var camera = global.camera_instance;
-	
-	if (argument_count > 1) {
-		var _x = argument[0];
-		var _y = argument[1];
-		vector = new Point(_x, _y);
-	}
-	
-	camera._speed = vector;
+	camera._speed = new Point(x, y);
 }
 
-function camera_set_target(obj) {
+function camera_set_target(x, y, is_using_speed = false) {
 	with (obj_camera) {
 		mode = camera_mode.target;
-		target = obj;
-		is_using_speed = false;
+		target = new Point(x, y);
+		self.is_using_speed = is_using_speed;
 	}
 }
 
-function camera_set_zoom(zoom_size, zoom_target_x, zoom_target_y) {
+function camera_set_object_target(object, is_using_speed = false) {
+	with (obj_camera) {
+		mode = camera_mode.target;
+		target = object;
+		self.is_using_speed = is_using_speed;
+	}
+}
+
+function camera_set_zoom(zoom_size) {
 	with (obj_camera) {
 		zoom = zoom_size;
 		zoom_required = zoom_size;
-		
-		mode = camera_mode.target;
-		target = new Point(zoom_target_x, zoom_target_x);
-		is_using_speed = false;
 	}
 }
 
-function camera_change_zoom(num, time, zoom_target_x, zoom_target_y, has_smooth_zoom = false) {
+function camera_change_zoom(num, time, has_smooth_zoom = false) {
 	with (obj_camera) {
 		zoom_required = num;
 		zoom_speed = 1 / convert_seconds_to_steps(time);
 		self.has_smooth_zoom = has_smooth_zoom;
-		
-		mode = camera_mode.target;
-		target = new Point(zoom_target_x, zoom_target_y);
-		is_using_speed = false;
 	}
 }

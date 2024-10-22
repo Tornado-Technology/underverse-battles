@@ -127,7 +127,7 @@ skip_moving = function() {
 }
 
 control = function(is_showing_arrows = false, can_run = self.can_run, _speed = speed_const) {
-	camera_set_target(self);
+	camera_set_object_target(self);
 	is_controlled = true;
 	self.can_run = can_run;
 	speed_const = _speed;

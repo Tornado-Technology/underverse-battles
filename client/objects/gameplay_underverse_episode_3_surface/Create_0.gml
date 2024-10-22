@@ -9,7 +9,6 @@ mobile_controls = function(enable) {
 		global.__ui_virtual_buttons_instance.buttons[$ "X"].instance.ui.is_enable_interaction = enable;
 		global.__ui_virtual_buttons_instance.buttons[$ "SpecialAction"].instance.ui.is_enable_interaction = enable;
 	}
-	
 }
 
 episode = "Underverse_Episode3.";
@@ -88,11 +87,19 @@ cutscenes = [
 		[cutscene_wait_by_dialog, 2],
 		[cutscene_object_set_sprite, sans, spr_sans_sitting_eating_steak_up],
 		[cutscene_wait_dialog_end],
-		[cutscene_camera_change_zoom, 2, 0.2, 543, 2892],
+		[cutscene_execute, function() {
+			camera_set_target(543, 2892, true);
+			camera_set_speed(12, 5);
+			camera_change_zoom(2, 0.2);
+		}],
 		[cutscene_object_set_sprite, sans, spr_sans_sitting_eating_joking],
 		[audio_play_sound_once, snd_ba_dum_tss],
 		[cutscene_wait, 1],
-		[cutscene_camera_change_zoom, 1, 0.2, 543, 2892],
+		[cutscene_execute, function() {
+			camera_set_object_target(frisk, true);
+			camera_set_speed(12, 5);
+			camera_change_zoom(1, 0.2);
+		}],
 		[cutscene_wait, 1],
 		[cutscene_object_set_sprite, toriel, spr_toriel_picnic_sitting_laughing],
 		[cutscene_dialog_async, episode + "Dialog20", dir.down],

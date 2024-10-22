@@ -18,7 +18,8 @@ part_type_direction(part_peace, 0, 359, 0, 0);
 part_type_gravity(part_peace, 0.1, -90);
 
 // Camera
-camera_change_zoom(2, 1, x, y, true);
+camera_set_target(x, y);
+camera_change_zoom(2, 1, true);
 
 // Time sources
 time_source_break = time_source_create(time_source_game, 0.5, time_source_units_seconds, function () {

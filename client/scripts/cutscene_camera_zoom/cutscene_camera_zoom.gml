@@ -1,4 +1,4 @@
-function cutscene_camera_change_zoom(zoom_size, time, zoom_target_x, zoom_target_y) {
-	camera_change_zoom(zoom_size, time, zoom_target_x, zoom_target_y);
+function cutscene_camera_change_zoom(zoom_size, time) {
+	camera_change_zoom(zoom_size, time);
 	return true;
 }

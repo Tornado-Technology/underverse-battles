@@ -1,5 +1,3 @@
-sides = [dir.up];
-
 interact_callback = function() {	
 	if (!gameplay_underverse_episode_3_surface.frisk_played_volleyball) exit;
 		

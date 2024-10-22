@@ -1,4 +1,4 @@
-sides = [dir.up, dir.left];
+sides = [dir.up, dir.left, dir.right];
 
 cutscenes = [
 	[
