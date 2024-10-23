@@ -26,15 +26,15 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
 
   this.send({
     code: statusCode.success,
-    account: account
+    accountId: account._id
   });
 
   const client = await this.getClientByAccountFinder(finder);
   if (!client) return;
-  
+
   client.send('friendListRemove', {
     code: statusCode.success,
-    account: this.account
+    accountId: this.account._id
   });
 
 }).setFlags(handlerFlags.requireLogging));

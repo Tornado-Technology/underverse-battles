@@ -171,7 +171,7 @@ packet_handler_register("friendRequestReject", function(data) {
 packet_handler_register("friendListRemove", function(data) {
 	if (data.code == status_code.success) {
 		for (var i = 0; i < array_length(global.friend_accounts); i++) {
-			if (global.friend_accounts[i].accountId == data.account._id) {
+			if (global.friend_accounts[i].accountId == data.accountId) {
 				array_delete(global.friend_accounts, i, 1);
 				break;
 			}
