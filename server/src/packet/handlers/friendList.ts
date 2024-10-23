@@ -1,3 +1,4 @@
+import App from '../../app.js';
 import { statusCode } from '../../status.js';
 import { Handler, handlerFlags, IHandlerContext } from '../handler.js';
 import { addHandler } from '../handleStuff.js';
@@ -5,7 +6,7 @@ import { addHandler } from '../handleStuff.js';
 addHandler(new Handler('friendListRemove', async function(this: IHandlerContext) {
   const finder = this.data.targetFinder;
   if (!finder)
-    throw statusCode.databaseProfileNotExists;
+    throw statusCode.databaseAccountNotExists;
 
   const account = await this.getAccountByFinder(finder);
   if (!account)
@@ -29,7 +30,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     accountId: account._id
   });
 
-  const client = await this.getClientByAccountFinder(finder);
+  const client = App.clients.find(client => client.profile?._id.toString() === profile._id.toString());
   if (!client) return;
 
   client.send('friendListRemove', {
