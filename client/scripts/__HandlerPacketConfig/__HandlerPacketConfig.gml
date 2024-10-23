@@ -170,10 +170,12 @@ packet_handler_register("friendRequestReject", function(data) {
 
 packet_handler_register("friendListRemove", function(data) {
 	if (data.code == status_code.success) {
-		global.friend_accounts = array_filter(global.friend_accounts, function(friend) {
-			if (friend._id == data.account._id) return false;
-			return true;
-		})
+		for (var i = 0; i < array_length(global.friend_accounts); i++) {
+			if (global.friend_accounts[i].accountId == data.account._id) {
+				array_delete(global.friend_accounts, i, 1);
+				break;
+			}
+		}
 		display_show_message_info(translate_get("Menu.Notifications.FriendDeletedSuccessful"), c_lime);
 		return;
 	}

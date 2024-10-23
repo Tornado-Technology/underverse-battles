@@ -8,8 +8,11 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     throw statusCode.databaseProfileNotExists;
 
   const account = await this.getAccountByFinder(finder);
+  if (!account)
+    throw statusCode.databaseAccountNotExists;
   const profile = await this.getProfileByAccountId(account._id);
-  const client = await this.getClientByAccountFinder(finder);
+  if (!profile)
+    throw statusCode.databaseProfileNotExists;
 
   const index = this.profile.friends.indexOf(profile._id);
   if (index === -1)
@@ -25,9 +28,13 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     code: statusCode.success,
     account: account
   });
+
+  const client = await this.getClientByAccountFinder(finder);
+  if (!client) return;
+  
   client.send('friendListRemove', {
     code: statusCode.success,
-    account: account
+    account: this.account
   });
 
 }).setFlags(handlerFlags.requireLogging));
