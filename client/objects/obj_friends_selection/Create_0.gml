@@ -19,18 +19,17 @@ is_return_to_menu = true;
 show = true;
 menu_switch_pause(true);
 friends = global.friend_accounts;
-friend_count = array_length(friends);
 friend_id = 0;
 
 friend_text_x = width / 2;
 friend_text_y = height / 2;
 
-for (var i = 0; i < friend_count; i++) {
+for (var i = 0; i < array_length(friends); i++) {
 	friends[i].name_width = string_real_width(friends[i].username, global._font_main_determination);
 }
 
 // Strings
-title_text = friend_count == 0 ? translate_get("Menu.Friends.NoFriends") : translate_get("Menu.Friends.Title");
+title_text = array_length(friends) == 0 ? translate_get("Menu.Friends.NoFriends") : translate_get("Menu.Friends.Title");
 
 /* Line */
 line_x = width / 2 - 20;
@@ -138,7 +137,7 @@ change_friend_up = function() {
 }
 
 change_friend_down = function() {
-	if (friend_id < friend_count - 1)
+	if (friend_id < array_length(friends) - 1)
 		friend_id ++;
 	
 	audio_play_sound_plugging(snd_click);
@@ -178,7 +177,7 @@ open_friend_profile = function() {
 }
 
 draw_name_button = function(_x, _y, color, _id) {
-	if (friend_count <= _id) return;
+	if (array_length(friends) <= _id) return;
 	
 	var friend = friends[_id];
 	color = friend_id == _id ? text_color_selecting : color;
