@@ -73,10 +73,16 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
     await removeRequest(this.data.requestId);
   }
 
+  this.client.update();
+  await this.client.save();
+
   const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
     return;
   }
+
+  client.update();
+  await client.save();
 
   this.send({
     code: statusCode.success,

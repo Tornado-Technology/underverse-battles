@@ -169,8 +169,9 @@ packet_handler_register("friendRequestReject", function(data) {
 });
 
 packet_handler_register("friendListRemove", function(data) {
-	logger.debug($"GET friendListRemove: {data.accountId}");
+	logger.debug($"GET(1/2) friendListRemove: {data.code}");
 	if (data.code == status_code.success) {
+		logger.debug($"GET(2/2) friendListRemove: {data.accountId}");
 		for (var i = 0; i < array_length(global.friend_accounts); i++) {
 			if (global.friend_accounts[i].accountId == data.accountId) {
 				array_delete(global.friend_accounts, i, 1);

@@ -111,8 +111,7 @@ export const requestExists = async function(senderId: string, receiverId: string
 }
 
 export const friendRequestAccept = async function(_id: ObjectId | string): Promise<void> {
-  const
-    req: IFriendRequest = await FriendRequest.findById(_id);
+  const req: IFriendRequest = await FriendRequest.findById(_id);
   await Profile.findByIdAndUpdate(req.senderId, { $push: { friends: req.receiverId } });
   await Profile.findByIdAndUpdate(req.receiverId, { $push: { friends: req.senderId  } });
   await req.deleteOne();
