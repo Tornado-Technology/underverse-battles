@@ -44,9 +44,6 @@ end_battle_timesource = 0;
 // Other
 x_shift = 1;
 
-// Discord
-discord_set_info_action(discord_action.in_fight);
-
 // State
 state = fight_state.choosing;
 

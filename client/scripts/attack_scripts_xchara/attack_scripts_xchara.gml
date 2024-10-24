@@ -14,7 +14,7 @@ function xchara_attack1(player, _power, type = fight_random_integer(0, 2)) {
 	});
 }
 
-function xchara_attack2(player, _power, type = fight_random_integer(0, 1)) {
+function xchara_attack2(player, _power, type = fight_random_integer(0, 3)) {
 	instance_create(obj_attack_xchara_2, {
 		character_instance: player,
 		_power: _power,

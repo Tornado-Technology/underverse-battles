@@ -15,7 +15,11 @@ switch (type) {
 		break;
 		
 	case 1:
-		create_border(battle_border.up - 30, battle_border.down, battle_border.left + 20, battle_border.right + 10);
+		if (use_gravity_attack) {
+			create_border(battle_border.up - 30, battle_border.down, battle_border.left + 20, battle_border.right + 20);
+		} else {
+			create_border(battle_border.up - 60, battle_border.down - 30, battle_border.left + 20, battle_border.right + 20);
+		}
 		pattern_instance = create_pattern(obj_patten_two_bone_holes_two_type, {
 			bone: obj_bone_sans,
 			use_gravity_attack: use_gravity_attack
