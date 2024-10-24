@@ -54,6 +54,7 @@ function send_verification(code) {
 
 // @param {Array} account_ids
 function send_get_accounts_info(account_ids) {
+	logger.debug($"SEND getAccountsInfo: {account_ids}");
 	send("getAccountsInfo", {
 		accountIds: account_ids,
 	});
@@ -61,6 +62,7 @@ function send_get_accounts_info(account_ids) {
 
 // @param {String} username
 function send_friend_request(username, type) {
+	logger.debug($"SEND friendRequest: {username}, Type: {type}");
 	send("friendRequest", {
 		accountFinder: {username: username},
 		type: type
@@ -68,11 +70,13 @@ function send_friend_request(username, type) {
 }
 
 function send_friend_request_get_all() {
+	logger.debug($"SEND friendRequestGetAll");
 	send("friendRequestGetAll");
 }
 
 // @param {Real} request_id
 function send_friend_request_accept(request_id) {
+	logger.debug($"SEND friendRequestAccept: {request_id}");
 	send("friendRequestAccept", {
 		requestId: request_id,
 	});
@@ -80,6 +84,7 @@ function send_friend_request_accept(request_id) {
 
 // @param {Real} request_id
 function send_friend_request_reject(request_id) {
+	logger.debug($"SEND friendRequestReject: {request_id}");
 	send("friendRequestReject", {
 		requestId: request_id,
 	});
@@ -87,6 +92,7 @@ function send_friend_request_reject(request_id) {
 
 // @param {Real} account_id
 function send_remove_friend(account_id) {
+	logger.debug($"SEND friendListRemove: {account_id}");
 	send("friendListRemove", {
 		targetFinder: { id: account_id }
 	});

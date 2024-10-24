@@ -110,7 +110,7 @@ packet_handler_register("verification", function(data) {
 });
 
 packet_handler_register("getAccountsInfo", function(data) {
-	logger.debug($"getAccountsInfo: {data.profiles}");
+	logger.debug($"GET getAccountsInfo: {data.profiles}");
 	if (data.status == status_code.success) {
 		global.friend_accounts = array_union(global.friend_accounts, struct_get_values(data.profiles));
 		logger.debug($"getAccountsInfo: {global.friend_accounts}");
@@ -119,13 +119,13 @@ packet_handler_register("getAccountsInfo", function(data) {
 });
 
 packet_handler_register("friendRequestGetAll", function(data) {
-	logger.debug($"getAccountsInfo: {data.requests}");
+	logger.debug($"GET getAccountsInfo: {data.requests}");
 	global.friend_requests = struct_get_values(data.requests);
 	with (obj_profile_friend_requests) update();
 });
 
 packet_handler_register("friendRequest", function(data) {
-	logger.debug($"friendRequest: {data.code}");
+	logger.debug($"GET friendRequest: {data.code}");
 	if (data.code == status_code.success) {
 		display_show_message_info(translate_get("Menu.Notifications.RequestSuccessful"), c_lime);
 		return;
@@ -134,9 +134,9 @@ packet_handler_register("friendRequest", function(data) {
 });
 
 packet_handler_register("friendRequestInvite", function(data) {
-	logger.debug($"friendRequestInvite: {data.code}");
+	logger.debug($"GET(1/2) friendRequestInvite: {data.code}");
 	if (data.code == status_code.success && instance_exists(obj_menu) && !instance_exists(obj_menu_matchmaking)) {
-		logger.debug($"friendRequestInvite: {data.request._id}, Type: {data.request.type}");
+		logger.debug($"GET(2/2) friendRequestInvite: {data.request._id}, Type: {data.request.type}");
 		if (instance_exists(obj_ui_request)) {
 			instance_destroy(obj_ui_request);
 		}
@@ -149,7 +149,7 @@ packet_handler_register("friendRequestInvite", function(data) {
 });
 
 packet_handler_register("friendRequestAccept", function(data) {
-	logger.debug($"friendRequestAccept: {data.request.type}");
+	logger.debug($"GET friendRequestAccept: {data.request.type}");
 	if (data.request.type == request_type.friend) {
 		send_get_accounts_info([data.accountId]);
 	}
@@ -164,12 +164,12 @@ packet_handler_register("friendRequestAccept", function(data) {
 });
 
 packet_handler_register("friendRequestReject", function(data) {
-	logger.debug($"friendRequestReject");
+	logger.debug($"GET friendRequestReject");
 	display_show_message_info(translate_get("Menu.Notifications.RequestRejected"), c_red);
 });
 
 packet_handler_register("friendListRemove", function(data) {
-	logger.debug($"friendListRemove: {data.accountId}, Name: {data.username}");
+	logger.debug($"GET friendListRemove: {data.accountId}");
 	if (data.code == status_code.success) {
 		for (var i = 0; i < array_length(global.friend_accounts); i++) {
 			if (global.friend_accounts[i].accountId == data.accountId) {

@@ -281,9 +281,8 @@ login_callback = on_network_login.connect(function() {
 
 disconnect_callback = on_network_disconnect.connect(function() {
 	if (page_index >= menu_page.multiplayer_account && page_index <= menu_page.account_change_email) {
+		delete_multiplayer_auxiliary_menu_objects();
 		goto_page(menu_page.multiplayer);
-		instance_destroy(obj_profile_statistics);
-		instance_destroy(obj_leaderboard);
 	}
 });
 

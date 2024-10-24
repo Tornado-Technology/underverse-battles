@@ -59,6 +59,7 @@
     {"name":"obj_ui_resource_usage","order":8,"path":"objects/obj_ui_resource_usage/obj_ui_resource_usage.yy",},
     {"name":"obj_ui_text_button","order":4,"path":"objects/obj_ui_text_button/obj_ui_text_button.yy",},
     {"name":"camera_reset","order":1,"path":"scripts/camera_reset/camera_reset.yy",},
+    {"name":"delete_multiplayer_auxiliary_menu_objects","order":1,"path":"scripts/delete_multiplayer_auxiliary_menu_objects/delete_multiplayer_auxiliary_menu_objects.yy",},
     {"name":"episode_end","order":1,"path":"scripts/episode_end/episode_end.yy",},
     {"name":"spr_alphys_picnic_standing_right_sad","order":1,"path":"sprites/spr_alphys_picnic_standing_right_sad/spr_alphys_picnic_standing_right_sad.yy",},
     {"name":"spr_special_attack_nightmare_locked","order":1,"path":"sprites/spr_special_attack_nightmare_locked/spr_special_attack_nightmare_locked.yy",},

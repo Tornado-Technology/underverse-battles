@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"delete_multiplayer_auxiliary_menu_objects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"delete_multiplayer_auxiliary_menu_objects",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Scripts/Local/UI/Menu.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
