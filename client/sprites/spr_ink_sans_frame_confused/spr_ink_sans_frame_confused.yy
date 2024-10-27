@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Frames",
-    "path":"folders/Characteres/Ink Sans/Sprites/Frames.yy",
+    "name":"Emotions",
+    "path":"folders/Characteres/Ink Sans/Sprites/Frames/Emotions.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

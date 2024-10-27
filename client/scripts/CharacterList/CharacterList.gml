@@ -43,7 +43,8 @@ function CharacterList() {
 			new Character(obj_character_ink_sans_christmas, "InkSans", "Christmas", spr_ink_sans_christmas_frame),
 			new Character(obj_character_ink_sans_blob, "InkSans", "Blob", spr_ink_sans_blob_frame),
 			new Character(obj_character_ink_sans_galactic, "InkSans", "TON618", spr_ink_sans_galactic_frame),
-			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IceBlood", spr_ink_sans_ice_blood_frame)
+			new Character(obj_character_ink_sans_ice_blood, "InkSans", "IceBlood", spr_ink_sans_ice_blood_frame),
+			new Character(obj_character_ink_sans_witch, "InkSans", "Witch", spr_ink_sans_witch_frame)
 		],
 		[
 			new Character(obj_character_error_sans, "ErrorSans", "Standard", spr_error_sans_frame),
