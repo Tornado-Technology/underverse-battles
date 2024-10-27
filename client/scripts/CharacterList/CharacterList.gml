@@ -107,6 +107,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
+			new Character(obj_character_papyrus_carecrow, "Papyrus", "Carecrow", spr_papyrus_carecrow_frame),
 		],
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
