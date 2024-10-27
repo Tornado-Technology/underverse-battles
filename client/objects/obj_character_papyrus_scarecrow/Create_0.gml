@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-idle_animation = spr_papyrus_carecrow_idle;
+idle_animation = spr_papyrus_scarecrow_idle;
 after_battle_animation = idle_animation;
 defeated_animation = spr_papyrus_scarecrow_defeated;
 defeated_animation_last_image = spr_papyrus_scarecrow_defeated_last_image;

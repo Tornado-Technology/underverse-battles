@@ -911,7 +911,7 @@
     "Murderer": "Murderer",
     "PumpkinHell": "Pumpkin hell",
     "CodeHacker": "Code hacker",
-	  "ChristmasTree": "Christmas tree",
+    "ChristmasTree": "Christmas tree",
     "Promised": "Promised",
     "Saness": "Saness",
     "Puppet": "Puppet",
@@ -924,7 +924,7 @@
     "Hallowtide": "Hallowtide",
     "Witch": "Witch",
     "Steampunk": "Steampunk",
-	  "Garland": "Garland",
+    "Garland": "Garland",
     "AntiPiracy": "Anti piracy",
     "NoTextures": "No textures",
     "Samurai": "Samurai",
@@ -945,7 +945,8 @@
     "Harlequin": "Harlequin",
     "DreamKeeper": "Dream keeper",
     "Candy": "Candy",
-    "Scorpion": "Scorpion"
+    "Scorpion": "Scorpion",
+    "Scarecrow": "Scarecrow"
   },
   "Battle": {
     "Target": "Target",

@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_character_papyrus_carecrow",
+  "%Name":"obj_character_papyrus_scarecrow",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_character_papyrus_carecrow",
+  "name":"obj_character_papyrus_scarecrow",
   "overriddenProperties":[],
   "parent":{
     "name":"Papyrus",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_papyrus_carecrow_idle",
-    "path":"sprites/spr_papyrus_carecrow_idle/spr_papyrus_carecrow_idle.yy",
+    "name":"spr_papyrus_scarecrow_idle",
+    "path":"sprites/spr_papyrus_scarecrow_idle/spr_papyrus_scarecrow_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

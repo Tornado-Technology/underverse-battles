@@ -130,8 +130,8 @@
       "Name": "一个赛博世界？",
       "Description": "登录游戏账号"
     },
-    "NoScretches": {
-      "Name": "毫无尖叫的胜利",
+    "NoHit": {
+      "Name": "无伤",
       "Description": "不受伤情况下击败任一敌人"
     },
     "Immortality": {
@@ -139,8 +139,8 @@
       "Description": "击败恢复的HP总量超过最大HP的任一敌人"
     },
     "DefeatDream": {
-    "Name": "暗终笼罩一切",
-    "Description": "击败Dream"
+      "Name": "暗终笼罩一切",
+      "Description": "击败Dream"
     },
     "DefeatNightmare": {
       "Name": "与光明同在！",
@@ -297,7 +297,7 @@
       "Account": "账户",
       "SuccessfulLogOut": "您已成功登出",
       "Matchmaking": "Chara祈祷中...",
-      "ReadyPlayers": "准备就绪的球员",
+      "ReadyPlayers": "准备好的玩家",
       "NoPlayers": "没有玩家在寻找比赛。你可以等待或取消搜索。"
     },
     "SignUp": {
@@ -945,7 +945,8 @@
     "Harlequin": "Harlequin",
     "DreamKeeper": "梦想守护者",
     "Candy": "缤纷糖装扮",
-    "Scorpion": "毒蝎"
+    "Scorpion": "毒蝎",
+    "Scarecrow": "稻草人"
   },
   "Battle": {
     "Target": "目标",
@@ -1328,7 +1329,7 @@
       ],
       "Dialog14": [
         "{CrossXEvent:normal}和平世界也不值得拥有快乐...",
-        "{Nightmare:glad}啊！我喜欢你的意向...\n我想我可以让你拥有随心所欲去往任何AU的能力...\n但我想要一个东西作为交换。",
+        "{Nightmare:glad}啊！我喜欢你的意向...\n我想我可以让你拥有随心所欲去往\n任何AU的能力...\n但我想要一个东西作为交换。",
         "{Nightmare:glad}无论你去哪里，我都想让你伤害一些人，\n但不是身体上的。 你懂我意思吧。"
       ],
       "Dialog15": [
@@ -1365,7 +1366,7 @@
         "{PapyrusPicnic:angry}不行！如果你又在路上睡着了，\n我们不会再去找你了。",
         "{UndynePicnic:normal}那为什么不叫Frisk和他一起？\n我们的大使肯定会让他睡不着觉。",
         "{PapyrusPicnic:tired}那还可以我觉得。",
-        "{UndynePicnic:normal}Frisk，你能和Sans去商店\n买些番茄酱吗？"
+        "{UndynePicnic:normal}Frisk，你能和Sans去商店买些番茄酱吗？"
       ],
       "Dialog21": [
         "{Sans:normal}在你身后。"
@@ -1406,7 +1407,7 @@
         "这种气味让人想起了什么。\n我赌我知道。",
         "哦，你就是那个人类。\n又见面了。",
         "这地方真不错。",
-        "很高兴我们从蜜月中抽出一天时间\n去公园散步。"
+        "很高兴我们从蜜月中抽出一天时间去公园散步。"
       ],
       "DogsFamily_2": [
         "我们很享受。"
@@ -1469,8 +1470,8 @@
         "{NPC:none}帅！感谢帮助！这就是奖励 - 15G。"
       ],
       "FicusLicker_3": [
-        "{NPC:none}Did you want something?",
-        "{NPC:none}There is no more money. Sorry."
+        "{NPC:none}你想要什么嗎？",
+        "{NPC:none}没有钱了。抱歉。"
       ],
       "MushroomLicker_1": [
         "快走，不然我会被看到的。\n我在玩捉迷藏。"
@@ -1950,7 +1951,7 @@
         "之后见啦。"
       ],
       "Gratitude": [
-        "谢谢你！蜘蛛们不会忘记你的恩情。"
+        "谢谢你！蜘蛛们\n不会忘记你的恩情。"
       ],
       "TalkButton": {
         "AboutBakery": "关于这面包店",

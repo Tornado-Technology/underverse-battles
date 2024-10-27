@@ -108,7 +108,7 @@ function CharacterList() {
 		],
 		[
 			new Character(obj_character_papyrus, "Papyrus", "Standard", spr_papyrus_frame),
-			new Character(obj_character_papyrus_carecrow, "Papyrus", "Carecrow", spr_papyrus_carecrow_frame),
+			new Character(obj_character_papyrus_scarecrow, "Papyrus", "Scarecrow", spr_papyrus_scarecrow_frame),
 		],
 		[
 			new Character(obj_character_green, "Green", "Standard", spr_green_frame),
@@ -125,13 +125,14 @@ function CharacterList() {
 			new Character(obj_character_jevil_harlequin, "Jevil", "Harlequin", spr_jevil_harlequin_frame),
 		]
 	];
+	
 	// Unfinished characters
 	if (development_mode) {
 		//array_push(global.characters, 
 		//[
 			
 		//]);
-	};
+	}
 }
 
 function init_characters() {

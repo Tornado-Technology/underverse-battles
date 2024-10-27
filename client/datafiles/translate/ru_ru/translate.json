@@ -910,7 +910,7 @@
     "Lord": "Лорд",
     "Murderer": "Убийца",
     "PumpkinHell": "Тыквенный ад",
-	  "ChristmasTree": "Рождественская ёлка",
+    "ChristmasTree": "Рождественская ёлка",
     "CodeHacker": "Взломщик кода",
     "Promised": "Промисед",
     "Saness": "Санесс",
@@ -924,7 +924,7 @@
     "Hallowtide": "Хэллоутайд",
     "Witch": "Колдун",
     "Steampunk": "Стимпанк",
-	  "Garland": "Гирлянда",
+    "Garland": "Гирлянда",
     "AntiPiracy": "Анти пиратство",
     "NoTextures": "Без текстур",
     "Samurai": "Самурай",
@@ -945,7 +945,8 @@
     "Harlequin": "Арлекин",
     "DreamKeeper": "Хранитель снов",
     "Candy": "Конфета",
-    "Scorpion": "Скорпион"
+    "Scorpion": "Скорпион",
+    "Scarecrow": "Пугало"
   },
   "Battle": {
     "Target": "Цель",
