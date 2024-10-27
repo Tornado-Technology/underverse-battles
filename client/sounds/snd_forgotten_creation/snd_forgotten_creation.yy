@@ -1,0 +1,26 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_forgotten_creation",
+  "audioGroupId":{
+    "name":"music",
+    "path":"audiogroups/music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "ConfigValues":{},
+  "conversionMode":0,
+  "duration":102.33952,
+  "name":"snd_forgotten_creation",
+  "parent":{
+    "name":"Special",
+    "path":"folders/Sounds/Soundtracks/Special.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_forgotten_creation.ogg",
+  "type":1,
+  "volume":1.0,
+}

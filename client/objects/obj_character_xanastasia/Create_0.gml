@@ -70,5 +70,5 @@ on_taking_soul_damage = function(soul, damage) {
 }
 
 // Soundtrack
-soundtrack_name = "Rude Buster"; 
-soundtrack = snd_rude_buster;
+soundtrack_name = "Forgotten Creation"; 
+soundtrack = snd_forgotten_creation;

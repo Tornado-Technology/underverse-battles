@@ -26,5 +26,6 @@ function load_all_soundtracks() {
 	
 	// Misc
 	Soundtrack(snd_burning_in_hell, "Burning in Hell", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.no);
+	Soundtrack(snd_forgotten_creation, "Forgotten Creation", "Marsilies", "Original Underverse OST", universe.no);
 	Soundtrack(snd_triple_the_threat, "Triple The Threat", "NyxTheShield OFFICIAL", "Metal Remix by NyxTheShield", universe.badtimetrio);
 }
