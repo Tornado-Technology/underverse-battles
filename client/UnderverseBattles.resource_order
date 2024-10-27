@@ -43,6 +43,7 @@
     {"name":"Rooms","order":8,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":9,"path":"folders/Scripts.yy",},
     {"name":"Story Mode","order":1,"path":"folders/Scripts/Local/Story Mode.yy",},
+    {"name":"Fight","order":1,"path":"folders/Scripts/Local/UI/Fight.yy",},
     {"name":"Point","order":1,"path":"folders/Scripts/Local/Utilities/Point.yy",},
     {"name":"Shaders","order":10,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":11,"path":"folders/Sounds.yy",},

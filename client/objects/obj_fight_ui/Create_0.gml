@@ -68,7 +68,6 @@ text_tired_color  = c_ltgrey;
 low_stamina_message_alpha = 0;
 low_mana_message_alpha = 0;
 
-
 shift = 100;
 
 // Name action

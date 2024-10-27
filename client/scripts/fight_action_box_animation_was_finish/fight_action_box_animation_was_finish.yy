@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"fight_action_box_animation_was_finish",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"fight_action_box_animation_was_finish",
+  "parent":{
+    "name":"Fight",
+    "path":"folders/Scripts/Local/UI/Fight.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
