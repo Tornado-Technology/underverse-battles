@@ -64,6 +64,7 @@
     {"name":"episode_end","order":1,"path":"scripts/episode_end/episode_end.yy",},
     {"name":"snd_forgotten_creation","order":1,"path":"sounds/snd_forgotten_creation/snd_forgotten_creation.yy",},
     {"name":"spr_alphys_picnic_standing_right_sad","order":1,"path":"sprites/spr_alphys_picnic_standing_right_sad/spr_alphys_picnic_standing_right_sad.yy",},
+    {"name":"spr_nightmare_teleporting","order":1,"path":"sprites/spr_nightmare_teleporting/spr_nightmare_teleporting.yy",},
     {"name":"spr_special_attack_nightmare_locked","order":1,"path":"sprites/spr_special_attack_nightmare_locked/spr_special_attack_nightmare_locked.yy",},
     {"name":"spr_ui_itchio","order":1,"path":"sprites/spr_ui_itchio/spr_ui_itchio.yy",},
     {"name":"spr_ui_virtual_button_run","order":1,"path":"sprites/spr_ui_virtual_button_run/spr_ui_virtual_button_run.yy",},

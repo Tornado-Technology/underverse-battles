@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_ngihtmare_ice_cream_tentacles_finish",
+  "%Name":"spr_nightmare_ice_cream_tentacles_finish",
   "bboxMode":0,
   "bbox_bottom":60,
   "bbox_left":0,
@@ -32,7 +32,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"9f11b94b-e734-4e36-88a1-b712379c1358","blendMode":0,"displayName":"default","isLocked":false,"name":"9f11b94b-e734-4e36-88a1-b712379c1358","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_ngihtmare_ice_cream_tentacles_finish",
+  "name":"spr_nightmare_ice_cream_tentacles_finish",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -44,7 +44,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_ngihtmare_ice_cream_tentacles_finish",
+    "%Name":"spr_nightmare_ice_cream_tentacles_finish",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -68,7 +68,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_ngihtmare_ice_cream_tentacles_finish",
+    "name":"spr_nightmare_ice_cream_tentacles_finish",
     "playback":1,
     "playbackSpeed":9.0,
     "playbackSpeedType":0,
@@ -80,40 +80,40 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c46d910-9c8d-4af3-9d20-409ccb75b110","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c46d910-9c8d-4af3-9d20-409ccb75b110","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"be03530b-5cca-4c8c-9bdc-d4b64b173d96","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b45f7c98-194c-4b59-87d7-3159f7acdbc7","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b45f7c98-194c-4b59-87d7-3159f7acdbc7","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"874c826f-db2c-423a-b701-fdcf6df443a3","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c521c4fc-e1db-47ac-8779-33caf2547e28","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c521c4fc-e1db-47ac-8779-33caf2547e28","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0d053e33-4c8c-44be-a470-fc546d697732","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"013778b3-a524-4483-9f16-7182c225b7af","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"013778b3-a524-4483-9f16-7182c225b7af","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"94817bcd-c8fd-426a-a91a-182aea22278e","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c55c0cbf-f8c6-4fa4-b78a-f2ddb5d0bfbf","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c55c0cbf-f8c6-4fa4-b78a-f2ddb5d0bfbf","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"1a27b7ef-038f-4d45-b5d3-7883bb95090c","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cac064e-f9d2-49b2-9b7a-17fdac50c962","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0cac064e-f9d2-49b2-9b7a-17fdac50c962","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"071d9ab6-bc9e-4513-b58e-cc33b0ee7969","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca336e38-2397-4f0b-8ca3-b2779647b218","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca336e38-2397-4f0b-8ca3-b2779647b218","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6a8c91e2-ee6a-45ed-ae28-b6b339b5f6bf","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c30a6fc-f4d4-4fee-b374-ea44fe737338","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c30a6fc-f4d4-4fee-b374-ea44fe737338","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"3ff1e1f8-9f20-4103-9751-17c512422c7a","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa2c1167-20c7-4b43-98f9-a9b2ee2e0f1e","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa2c1167-20c7-4b43-98f9-a9b2ee2e0f1e","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"907d439f-392f-4b9a-996f-49b9fbfe2cfa","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e5e2d8d-6638-479e-a98c-09ceb3f387b0","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e5e2d8d-6638-479e-a98c-09ceb3f387b0","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a9bdad24-352a-4e20-b854-cdc0fcfc0df8","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"84e2a395-c0f6-4e92-9e3c-369cc82cd139","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"84e2a395-c0f6-4e92-9e3c-369cc82cd139","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"cfd83853-f96c-4275-a803-8c356880b16c","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"386a20e5-ddfe-4e5e-8aad-d0fbcc323fed","path":"sprites/spr_ngihtmare_ice_cream_tentacles_finish/spr_ngihtmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"386a20e5-ddfe-4e5e-8aad-d0fbcc323fed","path":"sprites/spr_nightmare_ice_cream_tentacles_finish/spr_nightmare_ice_cream_tentacles_finish.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e0ce3557-b17e-417a-94d6-cfabcdbd7173","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ngihtmare_ice_cream_idle",
-    "path":"sprites/spr_ngihtmare_ice_cream_idle/spr_ngihtmare_ice_cream_idle.yy",
+    "name":"spr_nightmare_ice_cream_idle",
+    "path":"sprites/spr_nightmare_ice_cream_idle/spr_nightmare_ice_cream_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

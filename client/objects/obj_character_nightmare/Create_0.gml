@@ -39,6 +39,9 @@ defeated_animation_last_image = spr_nightmare_defeated_last_image;
 fight_1_start_animation = spr_nightmare_start1;
 fight_1_idle_animation = spr_nightmare_fight1;
 fight_1_finish_animation = spr_nightmare_end1;
+special_attack_start_animation = spr_nightmare_teleporting;
+special_attack_idle_animation = spr_empty;
+special_attack_finish_animation = spr_nightmare_idle;
 
 // Actions
 passive_skill = PassiveSkill("Character.Nightmare.PassiveSkill");

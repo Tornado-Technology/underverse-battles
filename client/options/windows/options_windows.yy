@@ -9,7 +9,7 @@
       "option_windows_version":"2.1.4.0",
     },
     "Development":{
-      "option_windows_version":"2.1.6.0",
+      "option_windows_version":"2.2.0.0",
       "option_windows_borderless":"false",
     },
     "Tournament":{

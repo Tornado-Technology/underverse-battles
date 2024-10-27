@@ -12,6 +12,10 @@ fight_1_start_animation = spr_nightmare_mecha_tentacles_start;
 fight_1_idle_animation = spr_nightmare_mecha_tentacles_idle;
 fight_1_finish_animation = spr_nightmare_mecha_tentacles_finish;
 
+special_attack_start_animation = spr_nightmare_mecha_idle;
+special_attack_idle_animation = spr_nightmare_mecha_idle;
+special_attack_finish_animation = spr_nightmare_mecha_idle;
+
 actions = [
 	Action("Character.Nightmare.Attack0",  call_attack_nightmare_mecha_0),
 	Action("Character.Nightmare.Attack1",  call_attack_nightmare_mecha_1),
