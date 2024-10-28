@@ -1,5 +1,7 @@
 /// @description Use for step-by-step load/initialization
 /// If your initilization does not need it, declare an empty script
+gc_enable(false);
+
 if (netlog_enabled) {
 	instance_create(obj_netlog);
 }
