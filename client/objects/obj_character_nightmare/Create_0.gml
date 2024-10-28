@@ -6,6 +6,7 @@ bio			= translate_get("Character.Nightmare.Bio");
 universe	= "Dreamtale";
 creator		= "Joku";
 
+
 max_hp = 120;
 hp = max_hp;
 
@@ -41,7 +42,9 @@ fight_1_idle_animation = spr_nightmare_fight1;
 fight_1_finish_animation = spr_nightmare_end1;
 special_attack_start_animation = spr_nightmare_teleporting;
 special_attack_idle_animation = spr_empty;
-special_attack_finish_animation = spr_nightmare_idle;
+special_attack_finish_animation = spr_nightmare_teleporting_back;
+
+transition_animation = true;
 
 // Actions
 passive_skill = PassiveSkill("Character.Nightmare.PassiveSkill");
@@ -52,6 +55,7 @@ actions = [
 ];
 
 special_action = SpecialAction("Character.Nightmare.SpecialAttack", spr_special_attack_nightmare, spr_special_attack_nightmare_locked, call_attack_nightmare_special);
+special_action.percent = 100;
 
 on_taking_damage = function(damage) {
 	var _player_id = fight_get_next_initiative();

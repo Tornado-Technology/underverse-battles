@@ -83,3 +83,10 @@ function call_attack_nightmare_mecha_2(player, _power, type = fight_random_integ
 		type: type,
 	});	
 }
+
+function call_attack_nightmare_mecha_special(player) {
+	instance_create(obj_attack_nightmare_mecha_special, {
+		character_instance: player
+	});
+}
+

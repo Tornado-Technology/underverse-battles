@@ -12,6 +12,8 @@ callback = function() {
 	
 	var position_x = !nightmare_side ? border_instance.x - border_instance.left - offset_x  : border_instance.x + border_instance.right + offset_x;
 	var position_x_end = !nightmare_side ? border_instance.x - border_instance.left - offset_end_x : border_instance.x + border_instance.right + offset_end_x;
+		
+	
 	instance_create_depth(position_x, border_instance.y - 30, fight_depth.bullet_outside_hight, monster, {
 		speed_count: 3,
 		position_opponent: nightmare_side,

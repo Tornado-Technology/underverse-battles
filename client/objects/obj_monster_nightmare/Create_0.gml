@@ -1,4 +1,7 @@
 event_inherited();
+on_soul_touch = function () {};
+	
+
 depth = fight_depth.bullet_outside_hight;
 
 
@@ -44,6 +47,7 @@ position_y = y;
 hand_down = false;
 
 image_xscale = position_opponent ? -1 : 1;
+
 
 
 

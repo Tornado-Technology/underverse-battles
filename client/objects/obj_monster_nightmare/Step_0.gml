@@ -10,7 +10,6 @@ if(!start_attack_fist) {
 	if (x == position_head_x && y == position_head_y) {
 		time_source_start(time_source_attack);
 		time_source_start(time_source_hand_donw);
-		
 		start_attack_fist = true;	
 	}
 }

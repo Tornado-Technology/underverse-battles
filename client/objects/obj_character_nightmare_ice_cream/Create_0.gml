@@ -11,9 +11,8 @@ fight_1_start_animation = spr_nightmare_ice_cream_tentacles_start;
 fight_1_idle_animation = spr_nightmare_ice_cream_tentacles_idle;
 fight_1_finish_animation = spr_nightmare_ice_cream_tentacles_finish;
 
-special_attack_start_animation = spr_nightmare_ice_cream_idle;
-special_attack_idle_animation = spr_nightmare_ice_cream_idle;
-special_attack_finish_animation = spr_nightmare_ice_cream_idle;
+
+transition_animation = false;
 
 actions = [
 	Action("Character.Nightmare.Attack0", call_attack_nightmare_ice_cream_0),
