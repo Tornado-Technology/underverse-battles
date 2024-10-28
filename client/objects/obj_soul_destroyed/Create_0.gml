@@ -6,6 +6,9 @@ gui_height = display_get_gui_height();
 is_shaking = true;
 
 // Particle
+part_system = part_system_create();
+part_system_depth(part_system, fight_depth.soul);
+
 part_peace = part_type_create();
 part_type_sprite(part_peace, spr_pixel, false, false, false);
 part_type_color1(part_peace, c_red);
@@ -31,7 +34,7 @@ time_source_break = time_source_create(time_source_game, 0.5, time_source_units_
 
 time_source_death = time_source_create(time_source_game, 1, time_source_units_seconds, function () {
 	sprite_index = spr_empty;
-	repeat(5) part_particles_create(global.part_system_soul, x + irandom_range(-7, 7), y + irandom_range(-7, 7), part_peace, 1);
+	repeat(5) part_particles_create(part_system, x + irandom_range(-7, 7), y + irandom_range(-7, 7), part_peace, 1);
 	audio_play_sound_once(snd_soul_death);
 	time_source_start(time_source_end);
 });
