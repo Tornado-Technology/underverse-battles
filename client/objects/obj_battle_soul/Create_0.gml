@@ -111,6 +111,9 @@ tremble_update = function() {
 }
 
 // Particle
+part_system = part_system_create();
+part_system_depth(part_system, fight_depth.soul);
+
 part_type_tail = part_type_create();
 part_type_sprite(part_type_tail, sprite_index, false, false, false);
 part_type_alpha2(part_type_tail, 1, 0);
@@ -123,7 +126,7 @@ change_effect = function () {
 	part_type_life(part_type_change, 20, 20);
 	part_type_orientation(part_type_change, image_angle, image_angle, 0, 0, false);
 	part_type_size(part_type_change, 1, 1, 0.1, 0);
-	part_particles_create(global.part_system_soul, x, y, part_type_change, 1);
+	part_particles_create(part_system, x, y, part_type_change, 1);
 }
 
 // Time source

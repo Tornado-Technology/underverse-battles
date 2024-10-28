@@ -42,7 +42,7 @@ if (ability_pressed && can_dash) {
 // Dash particle
 if (is_dashing) {
 	part_type_orientation(part_type_tail, image_angle, image_angle, 0, 0, false);
-	part_particles_create(global.part_system_soul, x, y, part_type_tail, 1);
+	part_particles_create(part_system, x, y, part_type_tail, 1);
 }
 
 x += movement_speed_x + outside_force_x + tremble_force_x + border_force_x;
