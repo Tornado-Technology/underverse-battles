@@ -1,6 +1,9 @@
 // Arguments: bone
 
-bone_size = 8.3;
+bone_size = new Point(
+	(border_instance.left + border_instance.right) / object_get_sprite_max_size(bone),
+	(border_instance.up + border_instance.down) / object_get_sprite_max_size(bone)
+);
 
 callback = function () {
 	soul_instance = create_soul(border_instance.x, border_instance.y, battle_soul_type.orange);
@@ -15,19 +18,19 @@ update = function () {
 	var bone_speed = fight_random_float(2 - _power * 0.1, 2 + _power * 0.1);
 	if (rand_side == dir.left) {
 		var bone_instance = create_bone(border_instance.x - border_instance.left - 4, border_instance.y + border_instance.down, bone,
-		bone_speed, bone_size, 0, 0);
+		bone_speed, bone_size.x, 0, 0);
 	}
 	else if (rand_side == dir.right) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right + 4, border_instance.y + border_instance.down, bone,
-		bone_speed, bone_size, 180, 0);
+		bone_speed, bone_size.x, 180, 0);
 	}
 	else if (rand_side == dir.down) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right, border_instance.y + border_instance.down + 4, bone,
-		bone_speed, bone_size, 90, 90);
+		bone_speed, bone_size.y, 90, 90);
 	}
 	else if (rand_side == dir.up) {
 		var bone_instance = create_bone(border_instance.x + border_instance.right, border_instance.y - border_instance.up - 4, bone,
-		bone_speed, bone_size, 270, 90);
+		bone_speed, bone_size.y, 270, 90);
 	}
 }
 

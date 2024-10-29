@@ -10,7 +10,6 @@ mobile_controls = function(enable) {
 		global.__ui_virtual_buttons_instance.buttons[$ "X"].instance.ui.is_enable_interaction = enable;
 		global.__ui_virtual_buttons_instance.buttons[$ "SpecialAction"].instance.ui.is_enable_interaction = enable;
 	}
-	
 }
 
 mobile_controls(false);
