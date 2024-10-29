@@ -1,6 +1,7 @@
 enum camera_mode {
 	moving,
 	target,
+	target_object
 }
 
 global.camera_instance = id;
@@ -37,7 +38,8 @@ _speed_rotate = 2;
 
 // Mode
 mode = camera_mode.moving;
-target = noone;
+target_object = noone;
+target = new Point(0, 0);
 overwrite_position = new Point(0, 0);
 
 // Setup

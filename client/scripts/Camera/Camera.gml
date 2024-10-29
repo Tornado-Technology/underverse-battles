@@ -37,8 +37,8 @@ function camera_set_target(x, y, is_using_speed = false) {
 
 function camera_set_object_target(object, is_using_speed = false) {
 	with (obj_camera) {
-		mode = camera_mode.target;
-		target = object;
+		mode = camera_mode.target_object;
+		target_object = object;
 		self.is_using_speed = is_using_speed;
 	}
 }
