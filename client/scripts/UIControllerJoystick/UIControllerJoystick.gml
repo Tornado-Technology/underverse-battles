@@ -75,7 +75,9 @@ function ClassUIControllerJoystick() constructor {
 		self.input[$ vk_right].foreach(delegate);
 		self.input[$ vk_left].foreach(delegate);
 		
-		if (!is_active || !is_enable) return;
+		if (!is_active || !is_enable) {
+			return;		
+		}
 		
 		// Right
 		if ((270 + delta_angle <= _angle && _angle <= 360) || (0 <= _angle && _angle <= 90 - delta_angle)) {
@@ -193,5 +195,12 @@ function ClassUIControllerJoystick() constructor {
 	
 	static change_alpha = function(value) {
 		alpha = value;
+	}
+	
+	static reset = function () {
+		input_vector = new Vector2(0, 0);
+		handle = new UIImageButton(0, handle_image);
+		border = new UIImageButton(1, border_image);
+		
 	}
 }
