@@ -20,8 +20,8 @@ callback = function () {
 		var small_bone_y = [border_instance.y - border_instance.up - 10, border_instance.y + border_instance.down + 10];
 	
 		repeat(2) {
-			bone_instance[j++] = create_bone(bone_x[i], bone_y, bone, 0, 7.1, 0, angle);
-			bone_instance[j++] = create_bone(small_bone_x, small_bone_y[i], bone, 0, 3.4, 0, angle);
+			bone_instance[j++] = create_bone(bone_x[i], bone_y, bone, 0, 7.3, 0, angle);
+			bone_instance[j++] = create_bone(small_bone_x, small_bone_y[i], bone, 0, 4.1, 0, angle);
 			angle += 90;
 		}
 		

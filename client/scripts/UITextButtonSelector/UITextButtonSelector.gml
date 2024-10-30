@@ -94,6 +94,8 @@ function UITextButtonSelector(button_texts, scroll_up_input = input.up, scroll_d
 	}
 	
 	static set_focus = function(index = 0) {
+		if (!is_desktop) exit;
+		
 		current_option = index;
 		button[index].focus();
 		return self;

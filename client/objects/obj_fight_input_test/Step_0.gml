@@ -52,22 +52,22 @@ with(global.fight_instance) {
 	}
 
 	// Change attack type
-	if (keyboard_check_pressed(vk_numpad0)) {
+	if (keyboard_check_pressed(vk_numpad0) || keyboard_check_pressed(ord("0"))) {
 		type = 0;
 	}
-	if (keyboard_check_pressed(vk_numpad1)) {
+	if (keyboard_check_pressed(vk_numpad1) || keyboard_check_pressed(ord("1"))) {
 		type = 1;
 	}
-	if (keyboard_check_pressed(vk_numpad2)) {
+	if (keyboard_check_pressed(vk_numpad2) || keyboard_check_pressed(ord("2"))) {
 		type = 2;
 	}
-	if (keyboard_check_pressed(vk_numpad3)) {
+	if (keyboard_check_pressed(vk_numpad3) || keyboard_check_pressed(ord("3"))) {
 		type = 3;
 	}
-	if (keyboard_check_pressed(vk_numpad4)) {
+	if (keyboard_check_pressed(vk_numpad4) || keyboard_check_pressed(ord("4"))) {
 		type = 4;
 	}
-	if (keyboard_check_pressed(vk_numpad5)) {
+	if (keyboard_check_pressed(vk_numpad5) || keyboard_check_pressed(ord("5"))) {
 		type = 5;
 	}
 }
