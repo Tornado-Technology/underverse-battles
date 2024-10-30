@@ -18,17 +18,17 @@ on_border_created = function() {
 
 create_border(battle_border.up, battle_border.down, battle_border.left, battle_border.right);
 pattern_instances = [
-	create_pattern_custom_power(obj_pattern_flying_bones, 6, {
+	create_pattern_custom_power(obj_pattern_flying_bones, 3, {
 		bone: obj_bone_sharp_error_sans_anti_piracy,
 		sides: [dir.left, dir.right],
 		is_aiming: false,
-		custom_period: 5,
-		custom_repeats: 75
+		custom_period: 6,
+		custom_repeats: 80
 	}, start_next_pattern),
-	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 3, {
+	create_pattern_custom_power(obj_pattern_aiming_gasterblasters, 5, {
 		soul_type: battle_soul_type.red,
 		gasterblaster_aiming: obj_gasterblaster_aiming_error_sans_anti_piracy,
-		count: 3,
-		custom_repeats: 6
+		count: 5,
+		custom_repeats: 5
 	})
 ];
