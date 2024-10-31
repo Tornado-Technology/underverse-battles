@@ -203,6 +203,7 @@ export default class Client extends SendStuff {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
       let receivedRating = this.rank.min(rating);
+      receivedRating = rating < receivedRating ? rating : receivedRating;
       this.profile.rating += receivedRating;
 
       this.update();
@@ -217,7 +218,7 @@ export default class Client extends SendStuff {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
       let takenRating = this.rank.max(rating);
-      takenRating = this.profile.rating < takenRating ? this.profile.rating : takenRating;
+      takenRating = rating < takenRating ? rating : takenRating;
       this.profile.rating -= takenRating;
 
       this.update();
