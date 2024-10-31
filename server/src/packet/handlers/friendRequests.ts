@@ -7,7 +7,7 @@ import { Handler, IHandlerContext, handlerFlags } from '../handler.js';
 
 addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
   const profileSender = this.profile;
-  const profileReceiver = await this.getProfileByAccountFinder(this.data.accountFinder);
+  const profileReceiver = await this.getProfileByUsername(this.data.username);
 
   if (this.data.type === RequestType.friend && profileSender._id.toString() === profileReceiver._id.toString()) {
     throw statusCode.canNotAddYourselfAsFriend;
@@ -30,8 +30,9 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
 
   this.sendCode(statusCode.success);
 
-  const client = App.clients.find(client => client.profile?._id.toString() === profileReceiver._id.toString());
+  const client = App.clients.find(client => client.profile._id.toString() === profileReceiver._id.toString());
   if (!client) {
+    Logger.info(`Client with profile \"${profileReceiver._id}\" not online`);
     return;
   }
   
@@ -78,6 +79,7 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
 
   const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
+    Logger.info(`Client with profile \"${requestData.senderId}\" not online`);
     return;
   }
 

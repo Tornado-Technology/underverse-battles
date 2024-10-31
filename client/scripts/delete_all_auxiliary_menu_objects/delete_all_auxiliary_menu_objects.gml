@@ -11,4 +11,5 @@ function delete_all_auxiliary_menu_objects() {
 	instance_destroy(obj_friends_selection);
 	instance_destroy(obj_profile_friend_requests);
 	instance_destroy(obj_profile_statistics);
+	instance_destroy(obj_leaderboard);
 }

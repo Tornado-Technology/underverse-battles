@@ -64,7 +64,7 @@ function send_get_accounts_info(account_ids) {
 function send_friend_request(username, type) {
 	logger.debug($"SEND friendRequest: {username}, Type: {type}");
 	send("friendRequest", {
-		accountFinder: {username: username},
+		username: username,
 		type: type
 	});
 }
@@ -91,10 +91,10 @@ function send_friend_request_reject(request_id) {
 }
 
 // @param {Real} account_id
-function send_remove_friend(account_id) {
-	logger.debug($"SEND friendListRemove: {account_id}");
+function send_remove_friend(username) {
+	logger.debug($"SEND friendListRemove: {username}");
 	send("friendListRemove", {
-		targetFinder: { id: account_id }
+		username: username
 	});
 }
 

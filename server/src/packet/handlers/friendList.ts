@@ -1,14 +1,15 @@
 import App from '../../app.js';
 import { statusCode } from '../../status.js';
+import Logger from '../../util/logging.js';
 import { Handler, handlerFlags, IHandlerContext } from '../handler.js';
 import { addHandler } from '../handleStuff.js';
 
 addHandler(new Handler('friendListRemove', async function(this: IHandlerContext) {
-  const finder = this.data.targetFinder;
-  if (!finder)
+  const username = this.data.username;
+  if (!username)
     throw statusCode.error;
 
-  const account = await this.getAccountByFinder(finder);
+  const account = await this.getAccountByUsername(username);
   if (!account)
     throw statusCode.databaseAccountNotExists;
   const profile = await this.getProfileByAccountId(account._id);
@@ -31,7 +32,10 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
   });
 
   const client = App.clients.find(client => client.profile?._id.toString() === profile._id.toString());
-  if (!client) return;
+  if (!client) {
+    Logger.info(`Client with profile \"${profile._id}\" not online`);
+    return;
+  }
 
   client.update();
   await client.save();
