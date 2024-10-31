@@ -8,7 +8,7 @@ export const rankList = {
   royalGuard: new Rank(100, 139, 12, 8),
   royalOfficer: new Rank(140, 189, 14, 10),
   veteran: new Rank(190, 249, 16, 12),
-  king: new Rank(250, 344, 18, 14),
+  king: new Rank(250, 334, 18, 14),
   godOfHyperDeath: new Rank(335, Infinity, 20, 16),
 };
 
