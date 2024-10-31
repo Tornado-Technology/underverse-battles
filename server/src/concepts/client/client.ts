@@ -41,6 +41,7 @@ export default class Client extends SendStuff {
   public verificationCodeCallback: Function;
 
   public resultingRating: number = 0;
+  public hasLowRating: boolean = false;
 
   protected _state: state;
 
@@ -231,6 +232,10 @@ export default class Client extends SendStuff {
       takenRating = rating < takenRating ? rating : takenRating;
       this.profile.rating -= takenRating;
 
+      if (this.profile.rating < 0) {
+        this.profile.rating = 0;
+      }
+
       this.update();
       await this.save();
 
@@ -239,8 +244,9 @@ export default class Client extends SendStuff {
     return 0;
   }
 
-  public setResultingRating(rating: number): void {
+  public setResultingRating(rating: number, hasLowRating: boolean): void {
     this.resultingRating = rating;
+    this.hasLowRating = hasLowRating;
   }
 
   public addGold(gold: number): void {

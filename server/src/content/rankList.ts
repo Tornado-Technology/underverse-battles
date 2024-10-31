@@ -1,7 +1,7 @@
 import Rank from '../data/rank.js';
 
 export const rankList = {
-  not: new Rank(0, 14, 4, 0),
+  not: new Rank(-Infinity, 14, 4, 0),
   newcomer: new Rank(15, 34, 6, 2),
   candidate: new Rank(35, 69, 8, 4),
   warrior: new Rank(70, 99, 10, 6),

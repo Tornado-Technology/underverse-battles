@@ -68,7 +68,7 @@ export default class Fight {
     this.clients.forEach((client, index) => {
       client.fight.init(this, index);
       client.sendFightJoin(statusCode.success, this.getOtherClient(client).fight.info);
-      client.setResultingRating(client.rating < this.getOtherClient(client).rating ? rating : 1);
+      client.setResultingRating(rating, client.rating < this.getOtherClient(client).rating);
       client.fight.startResponceTimeout();
     });
 

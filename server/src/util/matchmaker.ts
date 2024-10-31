@@ -148,7 +148,7 @@ export default class Matchmaker {
       return 0;
     }
     
-    return await client.addRating(client.resultingRating);
+    return await client.addRating(client.hasLowRating ? client.resultingRating : 1);
   }
 
   public static ratingCalculation(val1: number, val2: number): number {
@@ -161,7 +161,7 @@ export default class Matchmaker {
       return 0;
     }
     
-    return await client.removeRating(client.resultingRating);
+    return await client.removeRating(!client.hasLowRating ? client.resultingRating : 1);
   }
 
   protected static createMatch(type: matchType, client1: Client, client2: Client) {
