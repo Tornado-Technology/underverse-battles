@@ -39,3 +39,9 @@ function jevil_special_attack(player) {
 		character_instance: player
 	});
 }
+
+function jevil_harlequin_special_attack(player) {
+	instance_create(obj_attack_jevil_harlequin_special, {
+		character_instance: player
+	});
+}

@@ -8,8 +8,8 @@
   "name":"obj_attack_jevil_harlequin_special",
   "overriddenProperties":[],
   "parent":{
-    "name":"Attacks",
-    "path":"folders/Characteres/Jevil/Attacks.yy",
+    "name":"harlequin",
+    "path":"folders/Characteres/Jevil/Attacks/harlequin.yy",
   },
   "parentObjectId":{
     "name":"obj_attack",
