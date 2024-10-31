@@ -202,9 +202,10 @@ export default class Client extends SendStuff {
   public async addRating(rating: number): Promise<number> {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
-      let receivedRating = this.rank.min(rating);
-      if (typeof receivedRating === "undefined") {
-        receivedRating = 0;
+
+      let receivedRating = 0;
+      if (typeof this.rank !== "undefined") {
+        receivedRating = this.rank.min(rating);
       }
 
       receivedRating = rating < receivedRating ? rating : receivedRating;
@@ -221,9 +222,10 @@ export default class Client extends SendStuff {
   public async removeRating(rating: number): Promise<number> {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
-      let takenRating = this.rank.max(rating);
-      if (typeof takenRating === "undefined") {
-        takenRating = Infinity;
+
+      let takenRating = Infinity;
+      if (typeof this.rank !== "undefined") {
+        takenRating = this.rank.max(rating);
       }
 
       takenRating = rating < takenRating ? rating : takenRating;
