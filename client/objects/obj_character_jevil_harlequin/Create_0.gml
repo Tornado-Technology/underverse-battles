@@ -20,3 +20,5 @@ actions = [
 	Action("Character.Jevil.Attack1", jevil_harlequin_attack1),
 	Action("Character.Jevil.Attack2", jevil_attack2)
 ];
+
+special_action = SpecialAction("Character.Jevil.SpecialAttack", spr_special_attack_jevil, spr_special_attack_jevil_locked, jevil_harlequin_special_attack);
