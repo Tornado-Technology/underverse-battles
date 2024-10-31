@@ -10,8 +10,8 @@ defeated_animation = spr_nightmare_mecha_defeated;
 defeated_animation_last_image = spr_nightmare_mecha_defeated_last_image;
 
 fight_1_start_animation = spr_nightmare_mecha_tentacles_start;
-fight_1_idle_animation = spr_nightmare_mecha_tentacles_start;
-fight_1_finish_animation = spr_nightmare_mecha_tentacles_start;
+fight_1_idle_animation = spr_nightmare_mecha_tentacles_idle;
+fight_1_finish_animation = spr_nightmare_mecha_tentacles_finish;
 
 transition_animation = false; 
 
