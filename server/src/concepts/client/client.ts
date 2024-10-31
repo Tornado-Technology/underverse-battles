@@ -203,7 +203,7 @@ export default class Client extends SendStuff {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
       let receivedRating = this.rank.min(rating);
-      if (typeof receivedRating !== "undefined") {
+      if (typeof receivedRating === "undefined") {
         receivedRating = 0;
       }
 
@@ -222,7 +222,7 @@ export default class Client extends SendStuff {
     if (this.hasProfile) {
       if (rating <= 0) return 0;
       let takenRating = this.rank.max(rating);
-      if (typeof takenRating !== "undefined") {
+      if (typeof takenRating === "undefined") {
         takenRating = Infinity;
       }
 
