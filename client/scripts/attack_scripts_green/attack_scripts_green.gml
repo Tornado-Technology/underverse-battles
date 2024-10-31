@@ -53,3 +53,9 @@ function green_dj_attack2(player, _power, type = fight_random_integer(0, 2)) {
 		type: type,
 	});
 }
+
+function green_dj_special_attack(player) {
+	instance_create(obj_attack_green_dj_special, {
+		character_instance: player
+	});
+}

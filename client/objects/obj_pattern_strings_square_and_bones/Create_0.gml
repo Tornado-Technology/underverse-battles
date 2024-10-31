@@ -4,7 +4,7 @@ callback = function () {
 	soul_instance = create_soul(obj_battle_border.x, obj_battle_border.y, battle_soul_type.red);
 	var random_position_x = fight_random_integer(border_instance.x - border_instance.left - 10,  border_instance.x + border_instance.right - 20);
 	var random_position_y = fight_random_integer(border_instance.y - border_instance.up, border_instance.y + border_instance.down - 20);
-	var choose_position_x = fight_random_choose(border_instance.x - border_instance.left - 100, border_instance.x + border_instance.right + 100);
+	var choose_position_x = fight_random_choose(room_width / room_width - 1, room_width);
 	
 	var position_x = [(random_position_x), border_instance.x - border_instance.left - 100];
 	var position_y = [border_instance.y - border_instance.up - 50, random_position_y];

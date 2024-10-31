@@ -18,3 +18,5 @@ actions = [
 	Action("Character.Green.Attack1", green_dj_attack1),
 	Action("Character.Green.Attack2", green_dj_attack2)
 ];
+
+special_action = SpecialAction("Character.Green.SpecialAttack", spr_special_attack_green, spr_special_attack_green_locked, green_dj_special_attack);
