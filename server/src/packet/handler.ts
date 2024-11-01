@@ -24,7 +24,6 @@ export interface IHandlerContext {
   getAccountById(id: string): Promise<IAccount>,
   getAccountByFinder(finder: IAccountFinder): Promise<IAccount>,
   getAccountByProfileId(id: string): Promise<IAccount>,
-  getAccountByUsername(username: string): Promise<IAccount>,
   getProfileById(id: string): Promise<IProfile>,
   getProfileByAccountId(id: string): Promise<IProfile>,
   getProfileByUsername(username: string): Promise<IProfile>,
@@ -163,10 +162,6 @@ export class HandlerContext implements IHandlerContext {
     return await this.getAccountById(profile.accountId.toString());
   }
 
-  public async getAccountByUsername(username: string): Promise<IAccount> {
-    return await Account.findOne({ username: username });
-  }
-
   public async getProfileById(id: string): Promise<IProfile> {
     if (this.__stashProfiles.has(id))
       return this.__stashProfiles.get(id);
@@ -186,8 +181,7 @@ export class HandlerContext implements IHandlerContext {
   }
 
   public async getProfileByUsername(username: string): Promise<IProfile> {
-    const account = await this.getAccountByUsername(username);
-    return await this.getProfileByAccountId(account._id);
+    return Profile.findOne({ username: username });
   }
 
   public async getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile> {

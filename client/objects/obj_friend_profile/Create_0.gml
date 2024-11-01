@@ -8,5 +8,5 @@ create_fight_request = function() {
 }
 
 delete_friend = function() {
-	send_remove_friend(friend.username);
+	send_remove_friend(friend.accountId);
 }
