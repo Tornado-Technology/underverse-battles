@@ -22,6 +22,8 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
 
   this.profile.friends.splice(index, 1);
   profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
+  
+  await this.client.update();
 
   this.send({
     code: statusCode.success,
@@ -33,6 +35,8 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     Logger.info(`Client with profile \"${profile._id}\" not online`);
     return;
   }
+
+  await client.update();
 
   client.send('friendListRemove', {
     code: statusCode.success,
