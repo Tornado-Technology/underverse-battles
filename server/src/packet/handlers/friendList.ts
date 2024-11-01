@@ -9,7 +9,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
   if (!accountId)
     throw statusCode.error;
 
-  const account = await this.getAccountById(accountId.toString());
+  const account = await this.getAccountById(accountId);
   if (!account)
     throw statusCode.databaseAccountNotExists;
   const profile = await this.getProfileByAccountId(accountId);

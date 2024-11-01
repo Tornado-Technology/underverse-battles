@@ -75,7 +75,7 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
   }
 
   this.client.update();
-  await this.client.save();
+  this.profile.update();
 
   const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
@@ -84,7 +84,7 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
   }
 
   client.update();
-  await client.save();
+  client.profile.update();
 
   this.send({
     code: statusCode.success,
