@@ -34,6 +34,7 @@ tabSkin.on_click_on_character = function() {
 		};
 		
 		if (is_private_fight) {
+			global.rating_mode = false;
 			send_private_fight_join(chaarcter_info);
 			instance_create(obj_menu_matchmaking, {
 				is_private: is_private_fight
@@ -59,5 +60,6 @@ get_match_type = function() {
 	if (tournament_mode) {
 		return match_type.tournament_1vs1;
 	}
-	return data_get("Game.RatingMode") ? match_type.rating_1vs1 : match_type.common_1vs1;
+	global.rating_mode = data_get("Game.RatingMode");
+	return global.rating_mode ? match_type.rating_1vs1 : match_type.common_1vs1;
 }

@@ -1,6 +1,6 @@
 // Main game information
 #macro game_name "UnderverseBattles"
-#macro game_version "v2.2.0"
+#macro game_version "v2.2.1"
 #macro game_base_fps 60
 
 // Builds
@@ -37,5 +37,6 @@
 global.__data_save = undefined;
 global.fight_instance = noone;
 global.gameplay_instance = noone;
+global.rating_mode = false;
 global.pause_game = false;
 fight_network_mode = false;

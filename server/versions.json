@@ -1,8 +1,12 @@
 {
   "Windows x64": {
-    "v2.2.0": true
+    "v2.1.8": false,
+    "v2.2.0": false,
+    "v2.2.1": true
   },
   "Android": {
-    "v2.2.0": true
+    "v2.1.8": false,
+    "v2.2.0": false,
+    "v2.2.1": true
   }
 }

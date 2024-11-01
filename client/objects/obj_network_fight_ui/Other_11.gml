@@ -6,8 +6,8 @@ var player_id = 0;
 var player = fight_get_player(player_id);
 var player_frame = player.frame;
 
-var player_id = 1;
-var player = fight_get_player(player_id);
+var opp_id = 1;
+var opp = fight_get_player(opp_id);
 var opp_x = player.x;
 var opp_y = player.y;
 var opp_h = player.sprite_height;
@@ -37,14 +37,14 @@ draw_sprite(player_frame, 0, frame_x, frame_y);
 draw_set_font(global._font_main_mini);
 draw_set_halign(fa_left);
 
-var color = your_rp_values.color;
+var color = global.rating_mode ? your_rp_values.color : c_white;
 if (account.type == account_type.developer) {
 	color = c_rainbow;
 }
 
 if (account != undefined && profile != undefined) {
 	draw_text_outlined(frame_x, frame_y + frame_w + 5, color, color_text_outline_opp, account.username);
-	draw_text_outlined(frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, string(your_rp) + " " + translate_get("Battle.Rating"));
+	draw_rp(frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, your_rp);
 
 	if (profile.badge != undefined && opp_badge != pointer_null) {
 		draw_sprite(spr_badges, profile.badge, chr_x - string_width(account.username) / 2 - 10, chr_y - chr_h - 14);
@@ -57,15 +57,15 @@ if (account != undefined && profile != undefined) {
 
 draw_sprite(opp_frame, 0, size.x - frame_x - frame_w, frame_y);
 
-color = opp_rp_values.color;
-if (opponent_get_type(player_id) == account_type.developer) {
+color = global.rating_mode ? opp_rp_values.color : c_white;
+if (opponent_get_type(opp_id) == account_type.developer) {
 	color = c_rainbow;
 }
 
 draw_set_font(global._font_main_mini);
 draw_set_halign(fa_right);
 draw_text_outlined(size.x - frame_x, frame_y + frame_w + 5, color, color_text_outline_opp, opp_name);
-draw_text_outlined(size.x - frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, string(opp_rp) + " " + translate_get("Battle.Rating"));
+draw_rp(size.x - frame_x, frame_y + frame_w + 18, color_text_opp, color_text_outline_opp, opp_rp);
 
 // Opponent name
 draw_set_font(font_console_mini);

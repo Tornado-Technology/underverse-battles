@@ -16,3 +16,9 @@ shift = 100;
 set_action = function(value) {
 	obj_network_fight_input.send_attack();
 }
+
+draw_rp = function(text_x, text_y, str_color, outline_color, rp) {
+	if (global.rating_mode) {
+		draw_text_outlined(text_x, text_y, str_color, outline_color, string(rp) + " " + translate_get("Battle.Rating"));
+	}
+}
