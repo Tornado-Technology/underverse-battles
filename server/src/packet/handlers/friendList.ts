@@ -1,4 +1,5 @@
 import App from '../../app.js';
+import { removeFriend } from '../../database/schemas/friendRequest.js';
 import { statusCode } from '../../status.js';
 import Logger from '../../util/logging.js';
 import { Handler, handlerFlags, IHandlerContext } from '../handler.js';
@@ -20,10 +21,9 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
   if (index === -1)
     throw statusCode.databaseFriendNotExists;
 
+  removeFriend(this.profile._id, profile._id);
+
   this.profile.friends.splice(index, 1);
-  profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
-  
-  await this.client.save();
 
   this.send({
     code: statusCode.success,
@@ -36,7 +36,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     return;
   }
 
-  await client.save();
+  client.profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
 
   client.send('friendListRemove', {
     code: statusCode.success,

@@ -125,4 +125,9 @@ export const cancel = async function(requestId: ObjectId | string): Promise<void
   await FriendRequest.findByIdAndDelete(requestId);
 }
 
+export const removeFriend = async function(senderId: string, receiverId: string): Promise<void> {
+  await Profile.findByIdAndUpdate(senderId, { $pop: { friends: receiverId } });
+  await Profile.findByIdAndUpdate(receiverId, { $pop: { friends: senderId  } });
+}
+
 export const FriendRequest: Model<IFriendRequest> = new model('FriendRequest', schema);
