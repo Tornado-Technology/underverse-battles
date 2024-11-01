@@ -91,10 +91,10 @@ function send_friend_request_reject(request_id) {
 }
 
 // @param {Real} account_id
-function send_remove_friend(username) {
-	logger.debug($"SEND friendListRemove: {username}");
+function send_remove_friend(account_id) {
+	logger.debug($"SEND friendListRemove: {account_id}");
 	send("friendListRemove", {
-		username: username
+		accountId: account_id
 	});
 }
 
