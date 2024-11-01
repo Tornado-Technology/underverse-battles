@@ -13,7 +13,7 @@ addHandler(new Handler('friendRequest', async function(this: IHandlerContext) {
     throw statusCode.canNotAddYourselfAsFriend;
   }
 
-  if (this.data.type === RequestType.friend && profileSender.friends.includes(profileReceiver._id))
+  if (this.data.type === RequestType.friend && (await this.getProfileById(profileReceiver._id)).friends.includes(profileSender._id))
     throw statusCode.userIsFriendAlready;
 
   if (await requestExists(profileSender._id, profileReceiver._id) || await requestExists(profileReceiver._id, profileSender._id))
