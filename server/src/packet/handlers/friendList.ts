@@ -1,18 +1,17 @@
 import App from '../../app.js';
 import { statusCode } from '../../status.js';
-import Logger from '../../util/logging.js';
 import { Handler, handlerFlags, IHandlerContext } from '../handler.js';
 import { addHandler } from '../handleStuff.js';
 
 addHandler(new Handler('friendListRemove', async function(this: IHandlerContext) {
-  const accountId = this.data.accountId;
-  if (!accountId)
+  const profileId = this.data.profileId;
+  if (!profileId)
     throw statusCode.error;
 
-  const account = await this.getAccountById(accountId);
+  const account = await this.getAccountByProfileId(profileId);
   if (!account)
     throw statusCode.databaseAccountNotExists;
-  const profile = await this.getProfileByAccountId(accountId);
+  const profile = await this.getProfileByAccountId(account._id);
   if (!profile)
     throw statusCode.databaseProfileNotExists;
 
@@ -23,20 +22,19 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
   this.profile.friends.splice(index, 1);
   profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
   
-  await this.client.update();
+  this.client.update();
+  await this.client.save();
 
   this.send({
     code: statusCode.success,
-    accountId: accountId
+    accountId: account._id
   });
 
   const client = App.clients.find(client => client.profile?._id.toString() === profile._id.toString());
-  if (!client) {
-    Logger.info(`Client with profile \"${profile._id}\" not online`);
-    return;
-  }
+  if (!client) return;
 
-  await client.update();
+  client.update();
+  await client.save();
 
   client.send('friendListRemove', {
     code: statusCode.success,
