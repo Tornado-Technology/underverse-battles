@@ -125,7 +125,7 @@ export const cancel = async function(requestId: ObjectId | string): Promise<void
   await FriendRequest.findByIdAndDelete(requestId);
 }
 
-export const removeFriend = async function(senderId: string, receiverId: string): Promise<void> {
+export const removeFriend = async function(senderId: ObjectId, receiverId: ObjectId): Promise<void> {
   await Profile.findByIdAndUpdate(senderId, { $pop: { friends: receiverId } });
   await Profile.findByIdAndUpdate(receiverId, { $pop: { friends: senderId  } });
 }
