@@ -39,6 +39,21 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 		return false;
 	}
 	
+	static __check___moving_joystick = function(callback) {
+		if (working_key != undefined) {
+			if (callback(working_key)) return true;
+		}
+		
+		for (var i = 0; i < array_length(default_keys); i++) {
+			if (callback(default_keys[i]) != 0) {
+				return callback(default_keys[i]);
+			}
+		}
+		
+		return false;
+	}
+	
+	
 	/// @return {Bool}
 	static check_pressed = function() {
 		if (is_locked) return false;
@@ -65,6 +80,16 @@ function InputKeyClass(target, keys, rebinding, data_key) constructor {
 			return key.device.check_released(key.value);
 		});
 	}
+	
+	static moving_joystick = function () {
+			if (is_locked) return false;
+		
+		return __check___moving_joystick(function(key) {
+			return key.device.moving_joystick(key.value);
+		});
+		
+	}
+	
 	
 	/// @param {struct.Key} key
 	static has_key = function(key) {

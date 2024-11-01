@@ -27,10 +27,10 @@ if (is_desktop && !mobile_mode) {
 }
 
 if (gamepad_is_connected(0)) {
-	var hrv = input_moving_joytek(input.joytek_vertical_movements) * main_speed;
-	var vrv = input_moving_joytek(input.joytek_horizontal_movements) * main_speed;
+	var hrv = input_moving_joystick(input.joytek_vertical_movements) * main_speed;
+	var vrv = input_moving_joystick(input.joytek_horizontal_movements) * main_speed;
 	
-	movement_speed_x = vrv;
+	movement_speed_x = vrv;	
 	movement_speed_y = hrv;
 }
 
