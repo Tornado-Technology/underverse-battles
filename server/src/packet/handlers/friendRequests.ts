@@ -70,10 +70,16 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
 
   if (requestData.type === RequestType.friend) {
     await friendRequestAccept(this.data.requestId);
-    this.profile.friends.push(requestData.senderId);
+    this.client.save();
   } else {
     await removeRequest(this.data.requestId);
   }
+
+  this.send({
+    code: statusCode.success,
+    request: requestData,
+    accountId: requestData.senderId
+  });
 
   const client = App.clients.find(client => client.profile?._id.toString() === requestData.senderId.toString());
   if (!client) {
@@ -82,14 +88,8 @@ addHandler(new Handler('friendRequestAccept', async function(this: IHandlerConte
   }
 
   if (requestData.type === RequestType.friend) {
-    client.profile.friends.push(requestData.receiverId);
+    client.save();
   }
-
-  this.send({
-    code: statusCode.success,
-    request: requestData,
-    accountId: requestData.senderId
-  });
   
   client.send('friendRequestAccept', {
     code: statusCode.success,
