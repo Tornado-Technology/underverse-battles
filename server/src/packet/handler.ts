@@ -181,7 +181,10 @@ export class HandlerContext implements IHandlerContext {
   }
 
   public async getProfileByUsername(username: string): Promise<IProfile> {
-    return Profile.findOne({ username: username });
+    const profile = await Profile.findOne({ username: username });
+    if (!profile) throw statusCode.databaseProfileNotExists;
+
+    return profile;
   }
 
   public async getProfileByAccountFinder(finder: IAccountFinder): Promise<IProfile> {
