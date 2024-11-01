@@ -23,7 +23,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
 
   removeFriend(this.profile._id, profile._id);
 
-  this.profile.friends.splice(index, 1);
+  this.client.save();
 
   this.send({
     code: statusCode.success,
@@ -36,7 +36,7 @@ addHandler(new Handler('friendListRemove', async function(this: IHandlerContext)
     return;
   }
 
-  client.profile.friends.splice(profile.friends.indexOf(this.profile._id), 1);
+  client.save();
 
   client.send('friendListRemove', {
     code: statusCode.success,
